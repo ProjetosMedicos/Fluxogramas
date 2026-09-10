@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="920" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">MANEJO CIRÚRGICO DA TORÇÃO DE PEDÍCULO ANEXIAL</text>
+  <text x="890" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 37 • Emergência Ginecológica</text>
+
+  <!-- Content -->
+  
+    <rect x="260" y="95" width="400" height="60" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="120" font-size="14" font-weight="800" fill="#78350f" text-anchor="middle">SUSPEITA DE TORÇÃO ANEXIAL / OVARIANA</text>
+    <text x="460" y="140" font-size="11" fill="#92400e" text-anchor="middle">Dor pélvica paroxística súbita unilateral + náuseas/vômitos (70%) + cisto prévio</text>
+
+    <path d="M 460 155 L 460 195" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="285" y="195" width="350" height="55" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="220" font-size="13" font-weight="800" fill="#1e3a8a" text-anchor="middle">ULTRASSONOGRAFIA COM DOPPLER COLORIDO</text>
+    <text x="460" y="238" font-size="11" fill="#1d4ed8" text-anchor="middle">Aumento ovariano (&gt; 4 cm), folículos periféricos em colar, Sinal do Redemoinho</text>
+
+    <path d="M 460 250 L 460 290" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="260" y="290" width="400" height="55" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="315" font-size="14" font-weight="800" fill="#991b1b" text-anchor="middle">LAPAROSCOPIA DIAGNÓSTICA E TERAPÊUTICA IMEDIATA</text>
+    <text x="460" y="333" font-size="11" fill="#b91c1c" text-anchor="middle">Tempo é parênquima: cada hora reduz o risco de necrose folicular definitiva</text>
+
+    <!-- Conduta Conservadora vs Ooforectomia -->
+    <path d="M 360 345 L 200 405" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 560 345 L 720 405" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="50" y="415" width="300" height="160" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="200" y="440" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">DESTORÇÃO COM PRESERVAÇÃO ANEXIAL</text>
+    <text x="65" y="465" font-size="11" fill="#15803d">• <tspan font-weight="bold">Padrão-ouro em idade reprodutiva:</tspan></text>
+    <text x="75" y="483" font-size="11" fill="#166534">Realizar destorção mesmo com ovário</text>
+    <text x="75" y="500" font-size="11" fill="#166534">arroxeado/isquêmico (recupera função folicular)</text>
+    <text x="65" y="525" font-size="11" fill="#15803d">• <tspan font-weight="bold">NÃO ressecar cisto agudamente:</tspan></text>
+    <text x="75" y="543" font-size="11" fill="#166534">Cistectomia postergada (após 6-8 semanas)</text>
+    <text x="75" y="560" font-size="11" fill="#166534">Risco de tromboembolismo comprovadamente mínimo</text>
+
+    <rect x="570" y="415" width="300" height="160" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+    <text x="720" y="440" font-size="13" font-weight="800" fill="#9f1239" text-anchor="middle">SALPINGO-OOFORECTOMIA</text>
+    <text x="585" y="465" font-size="11" fill="#881337">• <tspan font-weight="bold">Indicações Estritas:</tspan></text>
+    <text x="595" y="483" font-size="11" fill="#9f1239">- Paciente na pós-menopausa</text>
+    <text x="595" y="500" font-size="11" fill="#9f1239">- Necrose tecidual gangrenosa irreversível</text>
+    <text x="595" y="518" font-size="11" fill="#9f1239">- Suspeita macroscópica de malignidade ovariana</text>
+    <text x="585" y="545" font-size="11" fill="#881337">• Em caso de anexectomia, ligar o pedículo</text>
+    <text x="595" y="563" font-size="11" fill="#9f1239">sem destorcer previamente (evitar êmbolos)</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="585" x2="890" y2="585" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="602" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • FIGO • IOTA • OMS</text>
+  <text x="890" y="602" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

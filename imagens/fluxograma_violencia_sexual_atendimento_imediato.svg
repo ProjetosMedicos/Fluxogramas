@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#fda4af" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • PROTOCOLO NACIONAL</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ATENDIMENTO MÉDICO IMEDIATO À VÍTIMA DE VIOLÊNCIA SEXUAL</text>
+  <text x="970" y="45" fill="#cbd5e1" font-size="13" font-weight="500" text-anchor="end">Cap. 40 e 88 FEBRASGO • PCDT / Min. da Saúde</text>
+
+  <!-- Node Topo: Acolhimento e Princípios Legais -->
+  <rect x="150" y="88" width="700" height="60" rx="8" fill="#ffe4e6" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="112" font-size="13" font-weight="800" fill="#9f1239" text-anchor="middle">ACOLHIMENTO IMEDIATO HUMANIZADO &amp; GARANTIAS LEGAIS</text>
+  <text x="500" y="132" font-size="11" fill="#be123c" text-anchor="middle">Privacidade estrita • NÃO exige Boletim de Ocorrência policial ou laudo do IML • Notificação SINAN compulsória em 24h</text>
+
+  <!-- Linha para Janela Temporal -->
+  <line x1="500" y1="148" x2="500" y2="175" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Nó Decisão: Janela Temporal -->
+  <rect x="250" y="178" width="500" height="42" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="500" y="204" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">ESTRATIFICAÇÃO PELO TEMPO DECORRIDO DESDE O AGRAVO</text>
+
+  <!-- 3 Ramificações -->
+  <path d="M 330 220 L 190 248" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 500 220 L 500 248" stroke="#d97706" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 670 220 L 810 248" stroke="#64748b" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coluna 1: Até 72 Horas (Janela Crítica) -->
+  <rect x="30" y="255" width="320" height="340" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+  <rect x="30" y="255" width="320" height="30" rx="8" fill="#e11d48"/>
+  <text x="190" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">≤ 72 HORAS (JANELA DE OURO)</text>
+
+  <text x="45" y="306" font-size="11" font-weight="800" fill="#9f1239">1. Testagem Rápida Imediata (TRI):</text>
+  <text x="45" y="322" font-size="10" fill="#475569">• Teste rápido HIV (antes da PEP), HBsAg, Sífilis e β-hCG</text>
+  <text x="45" y="336" font-size="10" fill="#475569">• Coleta de vestígios forenses com cadeia de custódia</text>
+
+  <text x="45" y="360" font-size="11" font-weight="800" fill="#9f1239">2. PEP HIV (início imediato, ideal &lt; 2h):</text>
+  <text x="45" y="376" font-size="10" font-weight="700" fill="#0f172a">• TDF 300mg + 3TC 300mg (1x/dia)</text>
+  <text x="45" y="392" font-size="10" font-weight="700" fill="#0f172a">• Dolutegravir (DTG) 50mg (1x/dia)</text>
+  <text x="45" y="406" font-size="10" fill="#e11d48">Duração ininterrupta: 28 dias</text>
+
+  <text x="45" y="428" font-size="11" font-weight="800" fill="#9f1239">3. Profilaxia ISTs Não-Virais:</text>
+  <text x="45" y="444" font-size="10" fill="#475569">• Gonococo: Ceftriaxona 500mg IM dose única</text>
+  <text x="45" y="458" font-size="10" fill="#475569">• Clamídia: Azitromicina 1g VO dose única</text>
+  <text x="45" y="472" font-size="10" fill="#475569">• Tricomoníase: Metronidazol 2g VO dose única</text>
+
+  <text x="45" y="494" font-size="11" font-weight="800" fill="#9f1239">4. Hepatite B &amp; Anticoncepção:</text>
+  <text x="45" y="510" font-size="10" fill="#475569">• Vacina HB + IGHAB 0,06 mL/kg se suscetível</text>
+  <text x="45" y="524" font-size="10" fill="#475569">• Levonorgestrel 1,5mg VO se mulher fértil</text>
+  <text x="45" y="538" font-size="10" fill="#475569">• Reforço dT ± IGHAT conforme ferimentos</text>
+
+  <rect x="42" y="552" width="296" height="30" rx="5" fill="#fecdd3"/>
+  <text x="190" y="572" font-size="10" font-weight="800" fill="#9f1239" text-anchor="middle">Máxima eficácia na prevenção de ISTs e gravidez</text>
+
+  <!-- Coluna 2: 73 a 120 Horas -->
+  <rect x="370" y="255" width="280" height="340" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="370" y="255" width="280" height="30" rx="8" fill="#d97706"/>
+  <text x="510" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">73 A 120 HORAS (JANELA TARDIA)</text>
+
+  <text x="385" y="306" font-size="11" font-weight="800" fill="#b45309">1. PEP HIV Não Mais Indicada:</text>
+  <text x="385" y="322" font-size="10" fill="#475569">• Limite de 72h expirado; eficácia nula</text>
+  <text x="385" y="336" font-size="10" fill="#475569">• Realizar sorologia basal e orientar seguimento</text>
+
+  <text x="385" y="362" font-size="11" font-weight="800" fill="#b45309">2. Anticoncepção de Emergência:</text>
+  <text x="385" y="378" font-size="10" font-weight="700" fill="#0f172a">• Levonorgestrel 1,5mg VO (até 120h)</text>
+  <text x="385" y="394" font-size="10" fill="#475569">• Opção altamente eficaz: DIU de Cobre</text>
+
+  <text x="385" y="420" font-size="11" font-weight="800" fill="#b45309">3. Profilaxia ISTs &amp; Hepatite B:</text>
+  <text x="385" y="436" font-size="10" fill="#475569">• Profilaxia não-viral ainda indicada</text>
+  <text x="385" y="450" font-size="10" fill="#475569">• Vacina Hepatite B + IGHAB (até 14 dias)</text>
+  <text x="385" y="464" font-size="10" fill="#475569">• Avaliação de profilaxia antitetânica</text>
+
+  <text x="385" y="492" font-size="11" font-weight="800" fill="#b45309">4. Suporte Multidisciplinar:</text>
+  <text x="385" y="508" font-size="10" fill="#475569">• Atendimento psicológico e social imediato</text>
+  <text x="385" y="522" font-size="10" fill="#475569">• Retorno em 15 dias para verificar adesão</text>
+
+  <!-- Coluna 3: > 120 Horas / Crônico -->
+  <rect x="670" y="255" width="300" height="340" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="670" y="255" width="300" height="30" rx="8" fill="#64748b"/>
+  <text x="820" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">&gt; 120 HORAS OU ATENDIMENTO CRÔNICO</text>
+
+  <text x="685" y="306" font-size="11" font-weight="800" fill="#334155">1. Investigação Diagnóstica (Não Profilaxia):</text>
+  <text x="685" y="322" font-size="10" fill="#475569">• Coleta de sorologias completas (HIV, VDRL,</text>
+  <text x="685" y="336" font-size="10" fill="#475569">  Hepatite B e C) e PCR para clamídia/gonococo</text>
+  <text x="685" y="350" font-size="10" fill="#475569">• Tratar infecções confirmadas laboratorialmente</text>
+
+  <text x="685" y="378" font-size="11" font-weight="800" fill="#334155">2. Investigação de Gravidez:</text>
+  <text x="685" y="394" font-size="10" fill="#475569">• Teste de gravidez / USG transvaginal</text>
+  <text x="685" y="410" font-size="10" font-weight="700" fill="#b91c1c">• Se gestação decorrente da violência:</text>
+  <text x="685" y="426" font-size="10" fill="#475569">  Garantido abortamento legal previsto em lei</text>
+  <text x="685" y="440" font-size="10" fill="#475569">  (Código Penal art. 128, II - sem BO exigido)</text>
+
+  <text x="685" y="468" font-size="11" font-weight="800" fill="#334155">3. Acompanhamento Contínuo:</text>
+  <text x="685" y="484" font-size="10" fill="#475569">• Psicoterapia especializada longitudinal</text>
+  <text x="685" y="498" font-size="10" fill="#475569">• Rede de apoio e assistência jurídica/social</text>
+
+  <!-- Rodapé: Cronograma de Seguimento -->
+  <rect x="30" y="610" width="940" height="52" rx="8" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="500" y="630" font-size="11" font-weight="800" fill="#38bdf8" text-anchor="middle">CRONOGRAMA DE SEGUIMENTO AMBULATORIAL OBRIGATÓRIO</text>
+  <text x="500" y="648" font-size="10" fill="#f8fafc" text-anchor="middle">Semana 2: Adesão &amp; Tolerância da PEP • Semana 6: Teste rápido HIV e VDRL • Mês 3: Sorologias de controle • Mês 6: Sorologia final de alta</text>
+</svg>

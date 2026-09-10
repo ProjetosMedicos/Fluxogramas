@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • ANATOMIA &amp; CIRURGIA GINECOLÓGICA</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ANATOMIA CIRÚRGICA PÉLVICA, ESPAÇOS AVASCULARES &amp; MALFORMAÇÕES MÜLLERIANAS</text>
+  <text x="970" y="45" fill="#cbd5e1" font-size="13" font-weight="500" text-anchor="end">Cap. 1-3, 5, 15-18, 69 FEBRASGO • ESHRE / ESGE</text>
+
+  <!-- 4 Quadrantes Estruturais -->
+
+  <!-- Quadrante 1: Espaços Avasculares da Pelve -->
+  <rect x="30" y="90" width="455" height="245" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="90" width="455" height="26" rx="8" fill="#475569"/>
+  <text x="257" y="108" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">1. ESPAÇOS AVASCULARES DA PELVE FEMININA</text>
+
+  <text x="45" y="134" font-size="10" font-weight="800" fill="#0f172a">• Espaço Pré-Vesical de Retzius:</text>
+  <text x="45" y="148" font-size="9" fill="#475569">Entre a sínfise púbica e a bexiga; acesso a slings retropúbicos e cirurgia de Burch.</text>
+
+  <text x="45" y="168" font-size="10" font-weight="800" fill="#0f172a">• Espaço Vesicouterino / Vesicovaginal:</text>
+  <text x="45" y="182" font-size="9" fill="#475569">Entre a parede posterior da bexiga e o colo/vagina; plano de dissecção na histerectomia.</text>
+
+  <text x="45" y="202" font-size="10" font-weight="800" fill="#0f172a">• Espaço Retovaginal:</text>
+  <text x="45" y="216" font-size="9" fill="#475569">Entre a fáscia retovaginal e o reto anterior; dissecção de nódulos de endometriose profunda.</text>
+
+  <text x="45" y="236" font-size="10" font-weight="800" fill="#0f172a">• Espaços Paravesicais e Pararretais (Okabayashi / Latzko):</text>
+  <text x="45" y="250" font-size="9" fill="#475569">Delimitados pela artéria umbilical obliterada, artéria ilíaca interna e ureter.</text>
+  <text x="45" y="264" font-size="9" font-weight="700" fill="#0284c7">Fundamentais para linfadenectomia pélvica e histerectomia radical de Wertheim-Meigs.</text>
+
+  <!-- Quadrante 2: O Ureter &amp; "Água sob a Ponte" -->
+  <rect x="515" y="90" width="455" height="245" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="515" y="90" width="455" height="26" rx="8" fill="#e11d48"/>
+  <text x="742" y="108" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">2. O TRAJETO DO URETER &amp; "ÁGUA SOB A PONTE"</text>
+
+  <text x="530" y="134" font-size="10" font-weight="800" fill="#9f1239">• Estreito Superior da Pelve:</text>
+  <text x="530" y="148" font-size="9" fill="#475569">Ureter cruza a bifurcação da Artéria Ilíaca Comum (lado direito) ou Externa (lado esquerdo).</text>
+
+  <text x="530" y="168" font-size="10" font-weight="800" fill="#9f1239">• Parede Lateral da Pelve:</text>
+  <text x="530" y="182" font-size="9" fill="#475569">Desce medialmente aos vasos ilíacos internos, formando o limite medial do triângulo de Marcille.</text>
+
+  <text x="530" y="202" font-size="10" font-weight="800" fill="#9f1239">• Cruzamento Crítico ("Água sob a Ponte"):</text>
+  <text x="530" y="216" font-size="9" font-weight="700" fill="#0f172a">O ureter passa POR BAIXO da Artéria Uterina ("água sob a ponte")</text>
+  <text x="530" y="230" font-size="9" fill="#475569">a cerca de 1,5 a 2 cm lateralmente ao colo uterino.</text>
+  <text x="530" y="244" font-size="9" font-weight="700" fill="#e11d48">Zona de maior risco de clampeamento e lesão iatrogênica em histerectomias!</text>
+
+  <!-- Quadrante 3: Malformações Müllerianas (ESHRE / ESGE) -->
+  <rect x="30" y="355" width="455" height="235" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="355" width="455" height="26" rx="8" fill="#8b5cf6"/>
+  <text x="257" y="373" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">3. ANOMALIAS MÜLLERIANAS CONGÊNITAS (ESHRE / ESGE)</text>
+
+  <text x="45" y="398" font-size="10" font-weight="800" fill="#6d28d9">• Classe U2: Útero Septado (Falha de Reabsorção):</text>
+  <text x="45" y="412" font-size="9" fill="#475569">Cavidade dividida com contorno externo fúndico NORMAL/plano.</text>
+  <text x="45" y="426" font-size="9" font-weight="700" fill="#0f172a">Tratamento: Septoplastia histeroscópica ambulatorial.</text>
+
+  <text x="45" y="446" font-size="10" font-weight="800" fill="#6d28d9">• Classe U3: Útero Bicorno (Falha de Fusão Parcial):</text>
+  <text x="45" y="460" font-size="9" fill="#475569">Reentrância externa na serosa fúndica &gt; 1 cm dividindo dois cornos.</text>
+
+  <text x="45" y="480" font-size="10" font-weight="800" fill="#6d28d9">• Classe U4: Útero Didelfo (Falha de Fusão Total):</text>
+  <text x="45" y="494" font-size="9" fill="#475569">Duplicação completa: 2 corpos uterinos, 2 colos e septo vaginal.</text>
+
+  <text x="45" y="514" font-size="10" font-weight="800" fill="#6d28d9">• Classe U5: Agenesia Mülleriana (Síndrome de Rokitansky - MRKH):</text>
+  <text x="45" y="528" font-size="9" fill="#475569">Cariótipo 46,XX, ausência de útero e 2/3 superiores da vagina com ovários normais.</text>
+
+  <!-- Quadrante 4: Meios de Distensão e Segurança em Endoscopia -->
+  <rect x="515" y="355" width="455" height="235" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="515" y="355" width="455" height="26" rx="8" fill="#16a34a"/>
+  <text x="742" y="373" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">4. SEGURANÇA EM CIRURGIA ENDOSCÓPICA GINECOLÓGICA</text>
+
+  <text x="530" y="398" font-size="10" font-weight="800" fill="#15803d">• Histeroscopia Cirúrgica &amp; Sobrecarga de Fluidos:</text>
+  <text x="530" y="412" font-size="9" font-weight="700" fill="#0f172a">Glicina 1,5% / Manitol (Monopolar):</text>
+  <text x="530" y="426" font-size="9" fill="#475569">Soluções não eletrolíticas. Risco de intoxicação hídrica e hiponatremia.</text>
+  <text x="530" y="440" font-size="9" font-weight="700" fill="#b91c1c">Déficit máximo permitido: 1.000 mL (interromper o procedimento!).</text>
+
+  <text x="530" y="460" font-size="9" font-weight="700" fill="#0f172a">Soro Fisiológico 0,9% (Bipolar):</text>
+  <text x="530" y="474" font-size="9" fill="#475569">Solução isotônica eletrolítica. Não causa hiponatremia aguda.</text>
+  <text x="530" y="488" font-size="9" font-weight="700" fill="#15803d">Déficit máximo tolerado: 2.500 mL em pacientes hígidas (1.500 mL idosas).</text>
+
+  <text x="530" y="508" font-size="10" font-weight="800" fill="#15803d">• Laparoscopia: Pressão de Insuflação com CO2:</text>
+  <text x="530" y="522" font-size="9" fill="#475569">Pressão intra-abdominal de trabalho: 12 a 15 mmHg. Teste de Palmer na Veress.</text>
+
+  <!-- Rodapé -->
+  <rect x="30" y="610" width="940" height="52" rx="8" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="500" y="630" font-size="11" font-weight="800" fill="#38bdf8" text-anchor="middle">PRINCIPIO DA PRESERVAÇÃO ANATÔMICA NA CIRURGIA PÉLVICA</text>
+  <text x="500" y="648" font-size="10" fill="#f8fafc" text-anchor="middle">A dissecção sistemática dos espaços avasculares e a identificação visual formal do ureter antes da ligadura de pedículos é a garantia primária de segurança operatória</text>
+</svg>

@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • NEUROENDOCRINOLOGIA GINECOLÓGICA</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ALGORITMO DE INVESTIGAÇÃO DA HIPERPROLACTINEMIA &amp; PROLACTINOMAS</text>
+  <text x="970" y="45" fill="#cbd5e1" font-size="13" font-weight="500" text-anchor="end">Cap. 44 FEBRASGO • The Endocrine Society</text>
+
+  <!-- Top Node -->
+  <rect x="180" y="85" width="640" height="55" rx="8" fill="#fae8ff" stroke="#c026d3" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="108" font-size="13" font-weight="800" fill="#86198f" text-anchor="middle">SUSPEITA CLÍNICA: GALACTORREIA, OLIGO/AMENORREIA OU INFERTILIDADE</text>
+  <text x="500" y="127" font-size="11" fill="#c026d3" text-anchor="middle">Dosagem de Prolactina Sérica Basal em Repouso (VR: &lt; 25 ng/mL em não gestantes)</text>
+
+  <!-- Linha -->
+  <line x1="500" y1="140" x2="500" y2="168" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 1: Causas Fisiológicas e Sistêmicas -->
+  <rect x="200" y="170" width="600" height="48" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="500" y="192" font-size="12" font-weight="800" fill="#0f172a" text-anchor="middle">1. EXCLUSÃO MANDATÓRIA DE CAUSAS FISIOLÓGICAS, FARMACOLÓGICAS E SISTÊMICAS</text>
+  <text x="500" y="208" font-size="10" fill="#475569" text-anchor="middle">Descartar Gestação (β-hCG), Hipotireoidismo primário (TSH/T4L), Insuficiência Renal/Hepática e Medicamentos D2</text>
+
+  <!-- 3 Colunas Diagnósticas -->
+  <path d="M 330 218 L 180 248" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 500 218 L 500 248" stroke="#d97706" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 670 218 L 820 248" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coluna 1: Medicamentosa -->
+  <rect x="30" y="255" width="300" height="340" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="255" width="300" height="28" rx="8" fill="#0284c7"/>
+  <text x="180" y="274" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">HIPERPROLACTINEMIA FARMACOLÓGICA</text>
+
+  <text x="45" y="304" font-size="10" font-weight="800" fill="#0369a1">Fármacos com Bloqueio Dopaminérgico:</text>
+  <text x="45" y="320" font-size="10" font-weight="700" fill="#0f172a">• Antipsicóticos / Neurolépticos:</text>
+  <text x="45" y="334" font-size="9" fill="#475569">  Risperidona, Haloperidol, Clorpromazina</text>
+  <text x="45" y="348" font-size="10" font-weight="700" fill="#0f172a">• Antieméticos pró-cinéticos:</text>
+  <text x="45" y="362" font-size="9" fill="#475569">  Metoclopramida, Domperidona (antag D2)</text>
+  <text x="45" y="376" font-size="10" font-weight="700" fill="#0f172a">• Antidepressivos:</text>
+  <text x="45" y="390" font-size="9" fill="#475569">  Tricíclicos, Fluoxetina, Sertralina, Venlafaxina</text>
+
+  <text x="45" y="415" font-size="10" font-weight="800" fill="#0369a1">Perfil Laboratorial Típico:</text>
+  <text x="45" y="430" font-size="10" fill="#475569">• Prolactina entre 25 e 100 ng/mL</text>
+  <text x="45" y="444" font-size="10" fill="#475569">  (raramente &gt; 100 ng/mL, exceto Risperidona)</text>
+
+  <text x="45" y="470" font-size="10" font-weight="800" fill="#0369a1">Conduta Consensual:</text>
+  <text x="45" y="486" font-size="9" fill="#475569">• Suspender ou trocar fármaco por 72h</text>
+  <text x="45" y="500" font-size="9" fill="#475569">  (com anuência do psiquiatra/clínico)</text>
+  <text x="45" y="514" font-size="9" fill="#475569">• Redosar prolactina após 3 dias sem a droga</text>
+  <text x="45" y="528" font-size="9" fill="#475569">• Se normalizar = Causa medicamentosa</text>
+
+  <!-- Coluna 2: Macroprolactina &amp; Efeito Gancho -->
+  <rect x="350" y="255" width="300" height="340" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="350" y="255" width="300" height="28" rx="8" fill="#d97706"/>
+  <text x="500" y="274" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">ARMADILHAS LABORATORIAIS CRÍTICAS</text>
+
+  <text x="365" y="304" font-size="10" font-weight="800" fill="#b45309">1. Pesquisa de Macroprolactina (PEG):</text>
+  <text x="365" y="320" font-size="9" fill="#475569">• Indicada quando a paciente é ASSINTOMÁTICA</text>
+  <text x="365" y="334" font-size="9" fill="#475569">  ou com elevação discordante (25-60 ng/mL)</text>
+  <text x="365" y="348" font-size="9" fill="#475569">• Formação de complexos de alto peso com IgG</text>
+  <text x="365" y="362" font-size="9" font-weight="700" fill="#0f172a">• Teste com Polietilenoglicol (PEG):</text>
+  <text x="365" y="376" font-size="9" fill="#475569">  Se recuperação &lt; 40% = Macroprolactina!</text>
+  <text x="365" y="390" font-size="9" font-weight="700" fill="#15803d">  Variante inerte biologicamente: NÃO tratar!</text>
+
+  <text x="365" y="420" font-size="10" font-weight="800" fill="#b45309">2. Efeito Gancho (Hook Effect):</text>
+  <text x="365" y="436" font-size="9" fill="#475569">• Ocorre em volumosos macroadenomas (&gt; 3 cm)</text>
+  <text x="365" y="450" font-size="9" fill="#475569">• Níveis monstruosos de prolactina saturam os</text>
+  <text x="365" y="464" font-size="9" fill="#475569">  anticorpos do imunoensaio, gerando resultado</text>
+  <text x="365" y="478" font-size="9" font-weight="700" fill="#dc2626">  falsamente baixo ou quase normal!</text>
+  <text x="365" y="494" font-size="9" font-weight="700" fill="#b45309">• Conduta obrigatória:</text>
+  <text x="365" y="508" font-size="9" fill="#475569">  Solicitar dosagem com DILUIÇÃO da amostra a 1:100</text>
+  <text x="365" y="522" font-size="9" fill="#475569">  O valor real revelado supera 1.000 a 5.000 ng/mL</text>
+
+  <!-- Coluna 3: Prolactinomas &amp; Tratamento -->
+  <rect x="670" y="255" width="300" height="340" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="670" y="255" width="300" height="28" rx="8" fill="#e11d48"/>
+  <text x="820" y="274" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">PROLACTINOMAS HIPOFISÁRIOS &amp; CONDUTA</text>
+
+  <text x="685" y="304" font-size="10" font-weight="800" fill="#9f1239">Ressonância Magnética de Sela Túrcica:</text>
+  <text x="685" y="320" font-size="10" font-weight="700" fill="#0f172a">• Microprolactinoma (&lt; 10 mm):</text>
+  <text x="685" y="334" font-size="9" fill="#475569">  Prolactina geralmente entre 100 e 200 ng/mL</text>
+  <text x="685" y="348" font-size="10" font-weight="700" fill="#0f172a">• Macroprolactinoma (≥ 10 mm):</text>
+  <text x="685" y="362" font-size="9" fill="#475569">  Prolactina frequentemente &gt; 250 a 500 ng/mL</text>
+  <text x="685" y="376" font-size="9" fill="#e11d48">  Risco de compressão do quiasma óptico</text>
+
+  <text x="685" y="405" font-size="10" font-weight="800" fill="#9f1239">Tratamento Clínico de 1ª Linha:</text>
+  <text x="685" y="420" font-size="10" font-weight="700" fill="#0f172a">• CABERGOLINA 0,5 mg (1ª Escolha):</text>
+  <text x="685" y="434" font-size="9" fill="#475569">  Dose: 0,5 mg 1 a 2x/semana VO</text>
+  <text x="685" y="448" font-size="9" fill="#475569">  Normaliza prolactina e reduz &gt; 85% dos tumores</text>
+  <text x="685" y="462" font-size="10" font-weight="700" fill="#0f172a">• BROMOCRIPTINA 2,5 mg:</text>
+  <text x="685" y="476" font-size="9" fill="#475569">  Opção clássica se gestação imediata desejada</text>
+
+  <text x="685" y="500" font-size="10" font-weight="800" fill="#9f1239">Indicação Cirúrgica Transesfenoidal:</text>
+  <text x="685" y="516" font-size="9" fill="#475569">• Resistência ou intolerância grave à Cabergolina</text>
+  <text x="685" y="530" font-size="9" fill="#475569">• Apoplexia tumoral com perda visual aguda</text>
+
+  <!-- Rodapé -->
+  <rect x="30" y="610" width="940" height="52" rx="8" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="500" y="630" font-size="11" font-weight="800" fill="#38bdf8" text-anchor="middle">REGRA DE OURO TERAPÊUTICA DA ENDOCRINE SOCIETY</text>
+  <text x="500" y="648" font-size="10" fill="#f8fafc" text-anchor="middle">Mesmo em macroprolactinomas volumosos com déficit de campo visual, o tratamento inicial é CLÍNICO com Cabergolina (rápida descompressão quiasmática)</text>
+</svg>

@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 660" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="960" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">SISTEMA IOTA (REGRAS SIMPLES) NA AVALIAÇÃO DE MASSAS ANEXIAIS</text>
+  <text x="930" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">IOTA Group &amp; FEBRASGO Cap. 37/81</text>
+
+  <!-- Content -->
+  
+    <rect x="280" y="95" width="400" height="60" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    <text x="480" y="120" font-size="15" font-weight="800" fill="#0f172a" text-anchor="middle">MASSA ANEXIAL / OVARIANA AO ULTRASSOM</text>
+    <text x="480" y="140" font-size="12" fill="#475569" text-anchor="middle">Aplicação das Regras Simples IOTA (Simple Rules)</text>
+
+    <!-- Duas Colunas: B-features vs M-features -->
+    <rect x="40" y="180" width="420" height="250" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="250" y="210" font-size="15" font-weight="800" fill="#166534" text-anchor="middle">CARACTERÍSTICAS B (BENIGNIDADE)</text>
+    <text x="60" y="240" font-size="12" fill="#15803d"><tspan font-weight="bold">B1:</tspan> Cisto unilocular simples</text>
+    <text x="60" y="270" font-size="12" fill="#15803d"><tspan font-weight="bold">B2:</tspan> Presença de componentes sólidos com maior diâmetro &lt; 7 mm</text>
+    <text x="60" y="300" font-size="12" fill="#15803d"><tspan font-weight="bold">B3:</tspan> Presença de sombra acústica posterior</text>
+    <text x="60" y="330" font-size="12" fill="#15803d"><tspan font-weight="bold">B4:</tspan> Tumor multilocular liso com diâmetro total &lt; 100 mm</text>
+    <text x="60" y="360" font-size="12" fill="#15803d"><tspan font-weight="bold">B5:</tspan> Ausência de fluxo vascular ao Doppler colorido (Score 1)</text>
+
+    <rect x="500" y="180" width="420" height="250" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+    <text x="710" y="210" font-size="15" font-weight="800" fill="#991b1b" text-anchor="middle">CARACTERÍSTICAS M (MALIGNIDADE)</text>
+    <text x="520" y="240" font-size="12" fill="#b91c1c"><tspan font-weight="bold">M1:</tspan> Tumor sólido irregular</text>
+    <text x="520" y="270" font-size="12" fill="#b91c1c"><tspan font-weight="bold">M2:</tspan> Presença de ascite peritoneal</text>
+    <text x="520" y="300" font-size="12" fill="#b91c1c"><tspan font-weight="bold">M3:</tspan> Pelo menos 4 estruturas papilares intracísticas</text>
+    <text x="520" y="330" font-size="12" fill="#b91c1c"><tspan font-weight="bold">M4:</tspan> Tumor multilocular sólido irregular com diâmetro &#8805; 100 mm</text>
+    <text x="520" y="360" font-size="12" fill="#b91c1c"><tspan font-weight="bold">M5:</tspan> Fluxo vascular muito intenso ao Doppler (Score 4 - alto fluxo)</text>
+
+    <!-- Conclusoes -->
+    <rect x="40" y="460" width="270" height="150" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="175" y="490" font-size="13" font-weight="800" fill="#166534" text-anchor="middle">BENIGNO (IOTA-B)</text>
+    <text x="55" y="520" font-size="11" fill="#15803d">• &#8805; 1 característica B</text>
+    <text x="55" y="540" font-size="11" fill="#15803d">• 0 características M</text>
+    <text x="55" y="570" font-size="12" font-weight="700" fill="#14532d">Conduta: Conservadora /</text>
+    <text x="55" y="588" font-size="12" fill="#14532d">Cistectomia laparoscópica</text>
+
+    <rect x="345" y="460" width="270" height="150" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2" filter="url(#shadow)"/>
+    <text x="480" y="490" font-size="13" font-weight="800" fill="#991b1b" text-anchor="middle">MALIGNO (IOTA-M)</text>
+    <text x="360" y="520" font-size="11" fill="#b91c1c">• &#8805; 1 característica M</text>
+    <text x="360" y="540" font-size="11" fill="#b91c1c">• 0 características B</text>
+    <text x="360" y="570" font-size="12" font-weight="700" fill="#7f1d1d">Conduta: Oncologia Ginecológica</text>
+    <text x="360" y="588" font-size="12" fill="#7f1d1d">(Laparotomia com estadiamento)</text>
+
+    <rect x="650" y="460" width="270" height="150" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+    <text x="785" y="490" font-size="13" font-weight="800" fill="#78350f" text-anchor="middle">INDETERMINADO</text>
+    <text x="665" y="520" font-size="11" fill="#92400e">• Tanto características B quanto M</text>
+    <text x="665" y="540" font-size="11" fill="#92400e">• OU nenhuma característica B ou M</text>
+    <text x="665" y="570" font-size="12" font-weight="700" fill="#b45309">Conduta: USG Especializado /</text>
+    <text x="665" y="588" font-size="12" fill="#b45309">Ressonância Magnética Pélvica</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="625" x2="930" y2="625" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="642" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • FIGO • IOTA • OMS</text>
+  <text x="930" y="642" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

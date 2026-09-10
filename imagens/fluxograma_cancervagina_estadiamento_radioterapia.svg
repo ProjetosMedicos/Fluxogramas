@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 620" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="940" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ESTADIAMENTO CLÍNICO &amp; TRATAMENTO DO CÂNCER DE VAGINA</text>
+  <text x="910" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FIGO &amp; FEBRASGO Cap. 78</text>
+
+  <!-- Content -->
+  
+    <rect x="270" y="95" width="400" height="60" rx="8" fill="#fdf4ff" stroke="#c026d3" stroke-width="2" filter="url(#shadow)"/>
+    <text x="470" y="120" font-size="14" font-weight="800" fill="#86198f" text-anchor="middle">CARCINOMA PRIMÁRIO DE VAGINA (CEC &gt; 85%)</text>
+    <text x="470" y="140" font-size="11" fill="#a21caf" text-anchor="middle">Critério Diagnóstico: Ausência de envolvimento do colo ou da vulva</text>
+
+    <!-- Bifurcação Estádios -->
+    <path d="M 370 155 L 230 205" stroke="#16a34a" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 570 155 L 710 205" stroke="#c026d3" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="50" y="215" width="360" height="360" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="230" y="245" font-size="14" font-weight="800" fill="#166534" text-anchor="middle">ESTÁDIO I (TERÇO SUPERIOR)</text>
+    <text x="70" y="275" font-size="12" fill="#15803d">• Tumor restrito à parede vaginal (&lt; 2 cm)</text>
+    <text x="70" y="295" font-size="12" fill="#15803d">• Localização restrita ao terço proximal superior.</text>
+
+    <text x="70" y="335" font-size="12" font-weight="700" fill="#14532d">Opção Cirúrgica Curativa Exclusiva:</text>
+    <text x="80" y="355" font-size="11" font-weight="800" fill="#15803d">HISTERECTOMIA RADICAL</text>
+    <text x="80" y="373" font-size="11" font-weight="800" fill="#15803d">+ VAGINECTOMIA SUPERIOR</text>
+    <text x="80" y="391" font-size="11" font-weight="800" fill="#15803d">+ LINFADENECTOMIA PÉLVICA</text>
+    <text x="80" y="415" font-size="11" fill="#166534">Permite preservar a função do restante da vagina</text>
+    <text x="80" y="433" font-size="11" fill="#166534">em pacientes selecionadas jovens sem radioterapia.</text>
+
+    <rect x="530" y="215" width="360" height="360" rx="8" fill="#faf5ff" stroke="#c026d3" stroke-width="2" filter="url(#shadow)"/>
+    <text x="710" y="245" font-size="14" font-weight="800" fill="#86198f" text-anchor="middle">ESTÁDIOS II, III E IV (PADRÃO-OURO)</text>
+    <text x="550" y="275" font-size="12" fill="#a21caf">• <tspan font-weight="bold">Estádio II:</tspan> Invasão subvaginal sem parede pélvica;</text>
+    <text x="550" y="295" font-size="12" fill="#a21caf">• <tspan font-weight="bold">Estádio III:</tspan> Atinge parede pélvica ou linfonodos (+);</text>
+    <text x="550" y="315" font-size="12" fill="#a21caf">• <tspan font-weight="bold">Estádio IV:</tspan> Invasão de mucosa vesical/retal ou metástase.</text>
+
+    <text x="550" y="355" font-size="12" font-weight="700" fill="#86198f">Tratamento Padrão-Ouro:</text>
+    <text x="560" y="375" font-size="11" font-weight="800" fill="#701a75">QUIMIORRADIOTERAPIA DEFINITIVA:</text>
+    <text x="570" y="395" font-size="11" fill="#86198f">• Radioterapia Externa Pélvica (EBRT)</text>
+    <text x="570" y="413" font-size="11" fill="#86198f">+ Quimioterapia com <tspan font-weight="bold">Cisplatina semanal</tspan></text>
+    <text x="570" y="431" font-size="11" fill="#86198f">• Complementação obrigatória com</text>
+    <text x="580" y="449" font-size="11" font-weight="800" fill="#701a75">BRAQUITERAPIA DE ALTA TAXA (HDR)</text>
+    <text x="580" y="467" font-size="11" fill="#86198f">cilíndro vaginal intracavitário ou intersticial.</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="585" x2="910" y2="585" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="602" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • SBM • FIGO • ISSVD</text>
+  <text x="910" y="602" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

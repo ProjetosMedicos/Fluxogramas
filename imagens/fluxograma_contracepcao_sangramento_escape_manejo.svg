@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 660" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">MANEJO DO SANGRAMENTO DE ESCAPE (SPOTTING) SOB PROGESTAGÊNIOS</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 71 e 74 • ACOG / FSRH Clinical Guidance</text>
+
+  <!-- Content -->
+  
+    <rect x="250" y="90" width="500" height="60" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#9f1239" text-anchor="middle">SANGRAMENTO DE ESCAPE / IRREGULAR (SPOTTING)</text>
+    <text x="500" y="135" font-size="11" fill="#be123c" text-anchor="middle">Em usuárias de DIU-LNG, Implante de Etonogestrel, Desogestrel ou AMPD trimestral</text>
+
+    <!-- Linha para Investigação Inicial -->
+    <line x1="500" y1="150" x2="500" y2="185" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <rect x="180" y="185" width="640" height="55" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="500" y="208" font-size="12" font-weight="800" fill="#1e293b" text-anchor="middle">PASSO 1: EXCLUSÃO DE CAUSAS ORGÂNICAS &amp; INTERCORRÊNCIAS</text>
+    <text x="500" y="228" font-size="11" fill="#475569" text-anchor="middle">Excluir gravidez (β-hCG) • ISTs/Cervicites (Clamídia/Gonococo) • Mau posicionamento/expulsão do DIU • Pólipos</text>
+
+    <!-- Bifurcação Tempo de Uso -->
+    <path d="M 380 240 L 250 280" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 620 240 L 750 280" stroke="#d97706" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna Adaptação Inicial -->
+    <rect x="50" y="290" width="410" height="150" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="255" y="318" font-size="13" font-weight="800" fill="#065f46" text-anchor="middle">TEMPO DE USO &lt; 3 A 6 MESES</text>
+    <text x="70" y="343" font-size="11" font-weight="700" fill="#047857">• Padrão Fisiológico Esperado:</text>
+    <text x="70" y="363" font-size="10.5" fill="#065f46">Atrofia endometrial progressiva e instabilidade microvascular transitória.</text>
+    <text x="70" y="383" font-size="10.5" fill="#065f46"><tspan font-weight="bold">Conduta:</tspan> Aconselhamento reforçado, tranquilização e manutenção do método.</text>
+    <text x="70" y="403" font-size="10.5" fill="#065f46">Até 80% das pacientes apresentam redução expressiva após o 6º mês.</text>
+
+    <!-- Coluna Persistência -->
+    <rect x="540" y="290" width="410" height="150" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+    <text x="745" y="318" font-size="13" font-weight="800" fill="#b45309" text-anchor="middle">PERSISTÊNCIA &gt; 6 MESES OU INCÔMODO SEVERO</text>
+    <text x="560" y="343" font-size="11" font-weight="700" fill="#92400e">• Indicação de Intervenção Farmacológica:</text>
+    <text x="560" y="363" font-size="10.5" fill="#92400e">Reduzir o escape irregular e evitar descontinuação prematura indesejada.</text>
+    <text x="560" y="383" font-size="10.5" fill="#92400e">Aplicar terapia farmacológica escalonada em ciclos curtos.</text>
+
+    <!-- Linha para as Opções Farmacológicas -->
+    <line x1="745" y1="440" x2="745" y2="465" stroke="#d97706" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 255 440 L 255 465 L 745 465" stroke="#64748b" stroke-width="1.5"/>
+
+    <!-- Terapia Farmacológica Escalonada (Container) -->
+    <rect x="50" y="465" width="900" height="155" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="492" font-size="13" font-weight="800" fill="#0f172a" text-anchor="middle">ESQUEMAS FARMACOLÓGICOS DE ALÍVIO DO SPOTTING (CICLOS CURTOS)</text>
+
+    <!-- 3 caixas de opções -->
+    <rect x="70" y="505" width="265" height="100" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="202" y="525" font-size="11" font-weight="800" fill="#0369a1" text-anchor="middle">OPÇÃO 1: AINEs (5 A 7 DIAS)</text>
+    <text x="80" y="545" font-size="10" fill="#334155">• Ibuprofeno 600-800 mg VO 8/8h</text>
+    <text x="80" y="563" font-size="10" fill="#334155">• Ácido Mefenâmico 500 mg VO 8/8h</text>
+    <text x="80" y="583" font-size="9.5" fill="#64748b">Inibe síntese de prostaglandinas e diminui a permeabilidade vascular.</text>
+
+    <rect x="365" y="505" width="270" height="100" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="500" y="525" font-size="11" font-weight="800" fill="#059669" text-anchor="middle">OPÇÃO 2: ANTIFIBRINOLÍTICO</text>
+    <text x="375" y="545" font-size="10" fill="#334155">• Ácido Tranexâmico 500-1000 mg</text>
+    <text x="375" y="563" font-size="10" fill="#334155">VO de 8/8h por 3 a 5 dias durante fluxo.</text>
+    <text x="375" y="583" font-size="9.5" fill="#64748b">Hemostático local sem ação hormonal. Alta taxa de alívio rápido.</text>
+
+    <rect x="665" y="505" width="265" height="100" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1"/>
+    <text x="797" y="525" font-size="11" font-weight="800" fill="#b45309" text-anchor="middle">OPÇÃO 3: ESTROGÊNIO TRANSITÓRIO</text>
+    <text x="675" y="545" font-size="10" fill="#334155">• Valerato de Estradiol 2 mg/dia VO</text>
+    <text x="675" y="563" font-size="10" fill="#334155">ou ACO Combinado por 10 a 20 dias.</text>
+    <text x="675" y="583" font-size="9.5" fill="#64748b">Promove proliferação e estabilização do endométrio atrófico friável.</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="625" x2="970" y2="625" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="642" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • ESHRE • OMS</text>
+  <text x="970" y="642" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

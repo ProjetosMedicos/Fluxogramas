@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">DIAGNÓSTICO PROSPECTIVO DA SPM E DO TDPM</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 32 • DSM-5 / ACOG</text>
+
+  <!-- Content -->
+  
+    <rect x="280" y="90" width="440" height="60" rx="8" fill="#fdf4ff" stroke="#a855f7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#7e22ce" text-anchor="middle">SUSPEITA DE TRANSTORNO PRÉ-MENSTRUAL</text>
+    <text x="500" y="135" font-size="11" fill="#9333ea" text-anchor="middle">Sintomas somáticos e/ou emocionais na fase lútea com remissão pós-menstruação</text>
+
+    <!-- Passo 1: Diário Prospectivo -->
+    <path d="M 500 150 L 500 190" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <rect x="200" y="190" width="600" height="75" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="500" y="213" font-size="13" font-weight="800" fill="#0f172a" text-anchor="middle">PASSO OBRIGATÓRIO: DIÁRIO PROSPECTIVO DE SINTOMAS (DRSP)</text>
+    <text x="500" y="233" font-size="11" fill="#475569" text-anchor="middle">Registro diário rigoroso por pelo menos 2 CICLOS MENSTRUAIS CONSECUTIVOS</text>
+    <text x="500" y="251" font-size="10" font-weight="700" fill="#b91c1c" text-anchor="middle">⚠️ Diagnóstico retrospectivo NÃO é aceito (risco de superdiagnóstico &gt; 50%)</text>
+
+    <!-- Bifurcação SPM vs TDPM vs Exacerbação -->
+    <path d="M 320 265 L 200 315" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 500 265 L 500 315" stroke="#7e22ce" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 680 265 L 800 315" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Caixa 1: SPM Clássica (ACOG) -->
+    <rect x="40" y="325" width="280" height="310" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="180" y="352" font-size="13" font-weight="800" fill="#0369a1" text-anchor="middle">SÍNDROME PRÉ-MENSTRUAL</text>
+    <text x="180" y="370" font-size="11" font-weight="700" fill="#075985" text-anchor="middle">(Critérios ACOG - 3 a 8% das mulheres)</text>
+    <text x="55" y="398" font-size="11" font-weight="700" fill="#0284c7">Critérios Mínimos:</text>
+    <text x="55" y="418" font-size="10" fill="#334155">• Pelo menos 1 sintoma somático ou afetivo</text>
+    <text x="55" y="434" font-size="10" fill="#334155">  nos 5 dias que antecedem a menstruação</text>
+    <text x="55" y="450" font-size="10" fill="#334155">• Alívio completo dentro de 4 dias pós-início</text>
+    <text x="55" y="466" font-size="10" fill="#334155">• Ausência de sintomas até o dia 12 do ciclo</text>
+    <text x="55" y="490" font-size="11" font-weight="700" fill="#0284c7">Sintomas Típicos:</text>
+    <text x="55" y="508" font-size="10" fill="#334155">- Mastalgia, cefaleia, distensão abdominal</text>
+    <text x="55" y="524" font-size="10" fill="#334155">- Irritabilidade leve e labilidade emocional</text>
+    <text x="55" y="540" font-size="10" fill="#334155">- Interferência social leve a moderada</text>
+    <text x="55" y="570" font-size="11" font-weight="700" fill="#059669">Manejo Inicial: Dieta, atividade física,</text>
+    <text x="55" y="588" font-size="10" fill="#059669">Cálcio 1200mg e ACO se contracepção.</text>
+
+    <!-- Caixa 2: TDPM (DSM-5) -->
+    <rect x="340" y="325" width="320" height="310" rx="8" fill="#faf5ff" stroke="#7e22ce" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="352" font-size="13" font-weight="800" fill="#6b21a8" text-anchor="middle">TRANSTORNO DISFÓRICO (TDPM)</text>
+    <text x="500" y="370" font-size="11" font-weight="700" fill="#7e22ce" text-anchor="middle">(Critérios Formais DSM-5 - ~2% prevalência)</text>
+    <text x="355" y="398" font-size="11" font-weight="700" fill="#6b21a8">Regra 5 de 11 Sintomas (≥ 1 Nuclear):</text>
+    <text x="355" y="418" font-size="10" font-weight="700" fill="#9333ea">Sintomas Nucleares Obrigatórios (≥ 1):</text>
+    <text x="365" y="434" font-size="10" fill="#334155">1. Labilidade afetiva acentuada (crises de choro)</text>
+    <text x="365" y="450" font-size="10" fill="#334155">2. Irritabilidade marcante / raiva / conflitos</text>
+    <text x="365" y="466" font-size="10" fill="#334155">3. Humor deprimido grave / desespero</text>
+    <text x="365" y="482" font-size="10" fill="#334155">4. Ansiedade acentuada / tensão à flor da pele</text>
+    <text x="355" y="504" font-size="10" font-weight="700" fill="#6b21a8">Sintomas Secundários Adicionais:</text>
+    <text x="365" y="520" font-size="10" fill="#334155">- Anedonia, fadiga extrema, alteração sono,</text>
+    <text x="365" y="536" font-size="10" fill="#334155">  dificuldade de concentração, mastalgia/edema.</text>
+    <text x="355" y="562" font-size="11" font-weight="700" fill="#b91c1c">Impacto Funcional Grave em trabalho/família</text>
+    <text x="355" y="582" font-size="11" font-weight="700" fill="#059669">1ª Linha: ISRS (Fluoxetina/Sertralina)</text>
+    <text x="355" y="600" font-size="10" fill="#059669">Uso contínuo ou intermitente na fase lútea!</text>
+
+    <!-- Caixa 3: Diagnóstico Diferencial / PME -->
+    <rect x="680" y="325" width="280" height="310" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="820" y="352" font-size="13" font-weight="800" fill="#991b1b" text-anchor="middle">EXACERBAÇÃO PRÉ-MENSTRUAL</text>
+    <text x="820" y="370" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">(PME - Não é TDPM Primário)</text>
+    <text x="695" y="398" font-size="11" font-weight="700" fill="#991b1b">Padrão Diferencial:</text>
+    <text x="695" y="418" font-size="10" fill="#334155">• Sintomas presentes durante TODO o ciclo,</text>
+    <text x="695" y="434" font-size="10" fill="#334155">  com piora na fase lútea (sem intervalo livre)</text>
+    <text x="695" y="450" font-size="10" font-weight="700" fill="#b91c1c">• Condições Psiquiátricas / Clínicas:</text>
+    <text x="705" y="468" font-size="10" fill="#334155">- Transtorno Depressivo Maior crônico</text>
+    <text x="705" y="484" font-size="10" fill="#334155">- Transtorno de Ansiedade Generalizada</text>
+    <text x="705" y="500" font-size="10" fill="#334155">- Transtorno Afetivo Bipolar</text>
+    <text x="705" y="516" font-size="10" fill="#334155">- Hipotireoidismo / Hipertireoidismo</text>
+    <text x="705" y="532" font-size="10" fill="#334155">- Perimenopausa / Transição Menopáusica</text>
+    <text x="695" y="562" font-size="11" font-weight="700" fill="#991b1b">Conduta Obrigatória:</text>
+    <text x="695" y="582" font-size="10" fill="#7f1d1d">Tratar o distúrbio de base prioritariamente</text>
+    <text x="695" y="600" font-size="10" fill="#7f1d1d">e encaminhar à psiquiatria/endócrino.</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="645" x2="970" y2="645" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="662" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • FIGO • OMS (MEC 5ª Ed)</text>
+  <text x="970" y="662" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

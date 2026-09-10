@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 980 660" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="980" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">DISMENORREIA PRIMÁRIA VS SECUNDÁRIA: ABORDAGEM CLÍNICA</text>
+  <text x="950" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 30 e 36 • ACOG Practice Bulletin</text>
+
+  <!-- Content -->
+  
+    <rect x="290" y="90" width="400" height="60" rx="8" fill="#fdf4ff" stroke="#c026d3" stroke-width="2" filter="url(#shadow)"/>
+    <text x="490" y="115" font-size="14" font-weight="800" fill="#86198f" text-anchor="middle">PACIENTE COM DISMENORREIA</text>
+    <text x="490" y="135" font-size="11" fill="#a21caf" text-anchor="middle">Dor pélvica cíclica espástica em cólica associada à menstruação</text>
+
+    <!-- Bifurcação -->
+    <path d="M 390 150 L 250 190" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 590 150 L 730 190" stroke="#e11d48" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna Primária -->
+    <rect x="40" y="200" width="420" height="420" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="250" y="230" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle">DISMENORREIA PRIMÁRIA (FUNCIONAL)</text>
+
+    <text x="60" y="260" font-size="12" font-weight="700" fill="#075985">• Características Clínicas Clássicas:</text>
+    <text x="70" y="278" font-size="11" fill="#0369a1">Início 1 a 2 anos após a menarca (estabelecimento de ciclos ovulatórios).</text>
+    <text x="70" y="296" font-size="11" fill="#0369a1">Inicia horas antes ou no início do fluxo; duração de 48-72 horas.</text>
+    <text x="70" y="314" font-size="11" fill="#0369a1">Exame físico e ginecológico estritamente normais.</text>
+    <text x="70" y="332" font-size="11" fill="#0369a1">Fisiopatologia: Hiperprodução miometrial de PGF2α e PGE2.</text>
+
+    <line x1="60" y1="350" x2="440" y2="350" stroke="#bae6fd" stroke-width="1"/>
+    <text x="60" y="375" font-size="12" font-weight="800" fill="#15803d">1ª LINHA DE TRATAMENTO:</text>
+    <text x="70" y="395" font-size="11" fill="#166534"><tspan font-weight="bold">AINEs:</tspan> Ibuprofeno 400-600 mg 8/8h ou Ácido Mefenâmico 500 mg 8/8h</text>
+    <text x="70" y="413" font-size="11" fill="#166534">Iniciar 24 a 48h antes da menstruação ou aos primeiros sinais de cólica.</text>
+
+    <text x="60" y="445" font-size="12" font-weight="800" fill="#0369a1">SE DESEJO CONTRACEPTIVO OU REFRATARIEDADE:</text>
+    <text x="70" y="465" font-size="11" fill="#075985"><tspan font-weight="bold">Supressão Ovulatória:</tspan> ACO Combinado Contínuo ou Progestagênio isolado</text>
+    <text x="70" y="483" font-size="11" fill="#075985">(DIU-LNG 52 mg, Implante de Etonogestrel ou Desogestrel 75 mcg).</text>
+
+    <rect x="60" y="515" width="380" height="85" rx="6" fill="#fff7ed" stroke="#ea580c" stroke-width="1"/>
+    <text x="250" y="538" font-size="11" font-weight="800" fill="#9a3412" text-anchor="middle">ALERTA DE REAVALIAÇÃO EM 3 A 6 MESES</text>
+    <text x="75" y="558" font-size="10.5" fill="#7c2d12">Se ausência de resposta terapêutica adequada a AINEs + ACO:</text>
+    <text x="75" y="576" font-size="10.5" font-weight="700" fill="#c2410c">Migrar suspeita para Dismenorreia Secundária (Investigar Endometriose!)</text>
+
+    <!-- Coluna Secundária -->
+    <rect x="520" y="200" width="420" height="420" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+    <text x="730" y="230" font-size="14" font-weight="800" fill="#9f1239" text-anchor="middle">DISMENORREIA SECUNDÁRIA (ORGÂNICA)</text>
+
+    <text x="540" y="260" font-size="12" font-weight="700" fill="#9f1239">• Características Clínicas &amp; Red Flags:</text>
+    <text x="550" y="278" font-size="11" fill="#be123c">Início tardio (qualquer fase do menacme, frequentemente > 25 anos).</text>
+    <text x="550" y="296" font-size="11" fill="#be123c">Dor progressiva, com piora ao longo dos anos, persistindo após o fluxo.</text>
+    <text x="550" y="314" font-size="11" fill="#be123c">Sintomas associados: Dispareunia de profundidade, disúria/disquezia catamenial.</text>
+    <text x="550" y="332" font-size="11" fill="#be123c">Infertilidade conjugal associada e/ou sangramento uterino volumoso (SUA).</text>
+
+    <line x1="540" y1="350" x2="920" y2="350" stroke="#fecdd3" stroke-width="1"/>
+    <text x="540" y="375" font-size="12" font-weight="800" fill="#9f1239">ETIOLOGIAS ORGÂNICAS PRINCIPAIS:</text>
+    <text x="550" y="395" font-size="11" fill="#475569">1. <tspan font-weight="bold">Endometriose Pélvica / Profunda:</tspan> implantes, nódulos uterossacros.</text>
+    <text x="550" y="413" font-size="11" fill="#475569">2. <tspan font-weight="bold">Adenomiose:</tspan> útero globular amolecido, espessamento juncional.</text>
+    <text x="550" y="431" font-size="11" fill="#475569">3. <tspan font-weight="bold">Miomatose Submucosa:</tspan> cólicas expulsivas mecânicas.</text>
+    <text x="550" y="449" font-size="11" fill="#475569">4. <tspan font-weight="bold">Estenose Cervical / Malformações Müllerianas Obstrutivas.</tspan></text>
+
+    <rect x="540" y="475" width="380" height="125" rx="6" fill="#f8fafc" stroke="#64748b" stroke-width="1"/>
+    <text x="730" y="498" font-size="11" font-weight="800" fill="#1e293b" text-anchor="middle">CONDUTA DIAGNÓSTICA &amp; TERAPÊUTICA</text>
+    <text x="555" y="520" font-size="10.5" fill="#334155">• USG-TV com mapeamento especializado para endometriose / RM.</text>
+    <text x="555" y="538" font-size="10.5" fill="#334155">• Histeroscopia diagnóstica se suspeita intrauterina (pólipo/mioma).</text>
+    <text x="555" y="556" font-size="10.5" fill="#334155">• Tratamento etiológico: Dienogeste 2 mg/d, DIU-LNG 52 mg,</text>
+    <text x="555" y="574" font-size="10.5" font-weight="700" fill="#0f172a">• Videolaparoscopia cirúrgica indicada nos casos refratários ou lesões avançadas.</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="625" x2="950" y2="625" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="642" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • ESHRE • OMS</text>
+  <text x="950" y="642" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

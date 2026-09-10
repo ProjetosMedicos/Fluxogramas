@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1040" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">INVESTIGAÇÃO DA DOR PÉLVICA CRÔNICA (DPC)</text>
+  <text x="1010" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 35 • ACOG Practice Bulletin</text>
+
+  <!-- Content -->
+  
+    <!-- Top Box -->
+    <rect x="300" y="90" width="440" height="60" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    <text x="520" y="115" font-size="14" font-weight="800" fill="#0f172a" text-anchor="middle">DOR EM ANDAR INFERIOR DO ABDOME / PELVE ≥ 6 MESES</text>
+    <text x="520" y="135" font-size="11" fill="#475569" text-anchor="middle">Acíclica, não gravídica, com impacto funcional e sofrimento clínico</text>
+
+    <!-- Linhas descendentes para 4 eixos -->
+    <path d="M 520 150 L 520 180" stroke="#475569" stroke-width="2"/>
+    <path d="M 160 180 L 880 180" stroke="#475569" stroke-width="2"/>
+    <path d="M 160 180 L 160 210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 400 180 L 400 210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 640 180 L 640 210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 880 180 L 880 210" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna 1: Ginecológica -->
+    <rect x="50" y="215" width="220" height="340" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="160" y="240" font-size="13" font-weight="800" fill="#9d174d" text-anchor="middle">1. EIXO GINECOLÓGICO</text>
+    <text x="65" y="270" font-size="11" font-weight="700" fill="#be185d">• Endometriose profunda</text>
+    <text x="65" y="290" font-size="11" font-weight="700" fill="#be185d">• Adenomiose difusa</text>
+    <text x="65" y="310" font-size="11" font-weight="700" fill="#be185d">• Aderências pós-DIP / cirurgia</text>
+    <text x="65" y="330" font-size="11" font-weight="700" fill="#be185d">• Congestão Pélvica (Varizes)</text>
+    <text x="65" y="350" font-size="11" font-weight="700" fill="#be185d">• Remanescente Ovariano</text>
+    <rect x="60" y="375" width="200" height="165" rx="6" fill="#ffffff" stroke="#fbcfe8"/>
+    <text x="70" y="395" font-size="11" font-weight="700" fill="#831843">Propedêutica Inicial:</text>
+    <text x="70" y="415" font-size="10" fill="#475569">- USG TV com preparo intestinal</text>
+    <text x="70" y="433" font-size="10" fill="#475569">- RM de pelve com protocolo de endo</text>
+    <text x="70" y="451" font-size="10" fill="#475569">- Doppler venoso gonadal/ilíaco</text>
+    <text x="70" y="475" font-size="11" font-weight="700" fill="#831843">1ª Linha Terapêutica:</text>
+    <text x="70" y="495" font-size="10" fill="#059669">- Progestagênios contínuos / DIU-LNG</text>
+    <text x="70" y="513" font-size="10" fill="#059669">- AINEs seletivos e analgesia</text>
+
+    <!-- Coluna 2: Urológica -->
+    <rect x="290" y="215" width="220" height="340" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="400" y="240" font-size="13" font-weight="800" fill="#15803d" text-anchor="middle">2. EIXO UROLÓGICO</text>
+    <text x="305" y="270" font-size="11" font-weight="700" fill="#166534">• Cistite Intersticial</text>
+    <text x="305" y="290" font-size="11" fill="#166534">  (Síndrome da Bexiga Dolorosa)</text>
+    <text x="305" y="310" font-size="11" font-weight="700" fill="#166534">• Dor pior com bexiga cheia</text>
+    <text x="305" y="330" font-size="11" font-weight="700" fill="#166534">• Polaciúria e noctúria estéreis</text>
+    <text x="305" y="350" font-size="11" font-weight="700" fill="#166534">• Úlceras de Hunner / Glomerulações</text>
+    <rect x="300" y="375" width="200" height="165" rx="6" fill="#ffffff" stroke="#bbf7d0"/>
+    <text x="310" y="395" font-size="11" font-weight="700" fill="#14532d">Propedêutica &amp; Testes:</text>
+    <text x="310" y="415" font-size="10" fill="#475569">- EAS + Urocultura (excluir ITU)</text>
+    <text x="310" y="433" font-size="10" fill="#475569">- Cistoscopia com hidrodistensão</text>
+    <text x="310" y="451" font-size="10" fill="#475569">- Diário miccional de 3 dias</text>
+    <text x="310" y="475" font-size="11" font-weight="700" fill="#14532d">Conduta Direcionada:</text>
+    <text x="310" y="495" font-size="10" fill="#059669">- Polissulfato de Pentosana / Amitriptilina</text>
+    <text x="310" y="513" font-size="10" fill="#059669">- Instilações vesicais (DMSO, lidocaína)</text>
+
+    <!-- Coluna 3: Gastrointestinal -->
+    <rect x="530" y="215" width="220" height="340" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="640" y="240" font-size="13" font-weight="800" fill="#b45309" text-anchor="middle">3. EIXO GASTROINTESTINAL</text>
+    <text x="545" y="270" font-size="11" font-weight="700" fill="#92400e">• Síndrome do Intestino Irritável</text>
+    <text x="545" y="290" font-size="11" fill="#92400e">  (Critérios de Roma IV)</text>
+    <text x="545" y="310" font-size="11" font-weight="700" fill="#92400e">• Dor aliviada ou pior na defecação</text>
+    <text x="545" y="330" font-size="11" font-weight="700" fill="#92400e">• Alternância diarreia e constipação</text>
+    <text x="545" y="350" font-size="11" font-weight="700" fill="#92400e">• Doença Inflamatória Intestinal</text>
+    <rect x="540" y="375" width="200" height="165" rx="6" fill="#ffffff" stroke="#fde68a"/>
+    <text x="550" y="395" font-size="11" font-weight="700" fill="#78350f">Propedêutica &amp; Exames:</text>
+    <text x="550" y="415" font-size="10" fill="#475569">- Calprotectina fecal e hemograma</text>
+    <text x="550" y="433" font-size="10" fill="#475569">- Colonoscopia se sinais de alarme</text>
+    <text x="550" y="451" font-size="10" fill="#475569">- Teste de exclusão alimentar (FODMAPs)</text>
+    <text x="550" y="475" font-size="11" font-weight="700" fill="#78350f">Conduta Direcionada:</text>
+    <text x="550" y="495" font-size="10" fill="#059669">- Dieta Low-FODMAP orientada</text>
+    <text x="550" y="513" font-size="10" fill="#059669">- Antiespasmódicos e probióticos</text>
+
+    <!-- Coluna 4: Musculoesquelético / Neuropático -->
+    <rect x="770" y="215" width="220" height="340" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="880" y="240" font-size="13" font-weight="800" fill="#6d28d9" text-anchor="middle">4. MIOFASCIAL / NEURAL</text>
+    <text x="785" y="270" font-size="11" font-weight="700" fill="#5b21b6">• Síndrome Miofascial Pélvica</text>
+    <text x="785" y="290" font-size="11" fill="#5b21b6">  (Levator ani, Obturador interno)</text>
+    <text x="785" y="310" font-size="11" font-weight="700" fill="#5b21b6">• Sinal de Carnett positivo (parede)</text>
+    <text x="785" y="330" font-size="11" font-weight="700" fill="#5b21b6">• Aprisionamento Nervoso</text>
+    <text x="785" y="350" font-size="11" fill="#5b21b6">  (Pudendo, Ilioinguinal, Genitofemoral)</text>
+    <rect x="780" y="375" width="200" height="165" rx="6" fill="#ffffff" stroke="#ddd6fe"/>
+    <text x="790" y="395" font-size="11" font-weight="700" fill="#4c1d95">Propedêutica &amp; Exame:</text>
+    <text x="790" y="415" font-size="10" fill="#475569">- Palpação de pontos-gatilho (trigger)</text>
+    <text x="790" y="433" font-size="10" fill="#475569">- Teste de dor à flexão abdominal</text>
+    <text x="790" y="451" font-size="10" fill="#475569">- Avaliação fisioterápica pélvica</text>
+    <text x="790" y="475" font-size="11" font-weight="700" fill="#4c1d95">Conduta Direcionada:</text>
+    <text x="790" y="495" font-size="10" fill="#059669">- Fisioterapia do assoalho pélvico</text>
+    <text x="790" y="513" font-size="10" fill="#059669">- Bloqueio anestésico de pontos-gatilho</text>
+
+    <!-- Bottom Sensibilização Central Box -->
+    <rect x="150" y="580" width="740" height="85" rx="8" fill="#e0e7ff" stroke="#4338ca" stroke-width="2" filter="url(#shadow)"/>
+    <text x="520" y="605" font-size="13" font-weight="800" fill="#312e81" text-anchor="middle">SENSIBILIZAÇÃO CENTRAL &amp; TERAPÊUTICA NEUROMODULADORA INTEGRADA</text>
+    <text x="520" y="625" font-size="11" fill="#1e1b4b" text-anchor="middle">Disfunção neuroplástica persistente: Alodinia, Hiperalgesia e Cross-sensitization viscerovisceral</text>
+    <text x="520" y="645" font-size="11" font-weight="700" fill="#4338ca" text-anchor="middle">Gabapentina (300-1800 mg/dia) • Pregabalina (75-300 mg/dia) • Duloxetina (30-60 mg/dia) • Psicoterapia TCC</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="685" x2="1010" y2="685" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="702" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • FIGO • OMS (MEC 5ª Ed)</text>
+  <text x="1010" y="702" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

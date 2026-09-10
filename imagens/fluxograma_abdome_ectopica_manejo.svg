@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 640" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="920" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">MANEJO CLÍNICO VS CIRÚRGICO DA PRENHEZ ECTÓPICA</text>
+  <text x="890" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">Tratado FEBRASGO &amp; Consenso ACOG</text>
+
+  <!-- Content -->
+  
+    <!-- Box Entrada -->
+    <rect x="260" y="95" width="400" height="60" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="120" font-size="15" font-weight="800" fill="#1e3a8a" text-anchor="middle">DIAGNÓSTICO DE PRENHEZ ECTÓPICA ÍNTEGRA</text>
+    <text x="460" y="140" font-size="12" fill="#1d4ed8" text-anchor="middle">Paciente clinicamente e hemodinamicamente estável</text>
+
+    <path d="M 460 155 L 460 195" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Decisao Criterios MTX -->
+    <polygon points="460,195 670,255 460,315 250,255" fill="#fef3c7" stroke="#d97706" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="245" font-size="13" font-weight="800" fill="#78350f" text-anchor="middle">CRITÉRIOS PARA METOTREXATO (MTX)?</text>
+    <text x="460" y="265" font-size="11" fill="#92400e" text-anchor="middle">Massa &lt; 3,5-4,0 cm • hCG &lt; 5.000 mUI/mL • BCF negativo • Desejo fertilidade</text>
+
+    <!-- Ramo SIM MTX -->
+    <path d="M 250 255 L 140 255 L 140 345" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="180" y="245" font-size="13" font-weight="800" fill="#16a34a">SIM (Todos presentes)</text>
+
+    <rect x="30" y="350" width="220" height="230" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
+    <text x="140" y="375" font-size="14" font-weight="800" fill="#166534" text-anchor="middle">TRATAMENTO MEDICAMENTOSO</text>
+    <text x="45" y="405" font-size="12" font-weight="700" fill="#14532d">• Metotrexato (Dose Única):</text>
+    <text x="55" y="425" font-size="12" font-weight="800" fill="#15803d">50 mg/m² IM profundo</text>
+    <text x="45" y="455" font-size="12" font-weight="700" fill="#14532d">• Monitoramento de hCG:</text>
+    <text x="55" y="475" font-size="11" fill="#166534">- Dosar nos Dias D4 e D7</text>
+    <text x="55" y="495" font-size="11" fill="#166534">- Queda &#8805; 15% entre D4 e D7:</text>
+    <text x="65" y="513" font-size="11" fill="#15803d">Sucesso! hCG semanal até zero</text>
+    <text x="55" y="533" font-size="11" fill="#b91c1c">- Queda &lt; 15%: 2ª dose ou cirurgia</text>
+    <text x="45" y="560" font-size="10" fill="#64748b">*Suspender folato e evitar relações</text>
+
+    <!-- Ramo NAO MTX -->
+    <path d="M 670 255 L 770 255 L 770 345" stroke="#dc2626" stroke-width="2.5" marker-end="url(#arrow)"/>
+    <text x="685" y="245" font-size="13" font-weight="800" fill="#dc2626">NÃO (Contraindicações)</text>
+
+    <rect x="660" y="350" width="230" height="230" rx="8" fill="#fff1f2" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+    <text x="775" y="375" font-size="14" font-weight="800" fill="#9f1239" text-anchor="middle">TRATAMENTO CIRÚRGICO</text>
+    <text x="675" y="405" font-size="12" font-weight="700" fill="#881337">• Via Preferencial: Laparoscopia</text>
+    <text x="675" y="435" font-size="12" font-weight="700" fill="#881337">• Decisão da Técnica Tubária:</text>
+    <text x="685" y="455" font-size="11" fill="#9f1239"><tspan font-weight="bold">Salpingostomia Linear:</tspan></text>
+    <text x="695" y="473" font-size="10" fill="#9f1239">Preserva trompa se desejo reprodutivo</text>
+    <text x="695" y="490" font-size="10" fill="#b91c1c">Exige hCG semanal (trofoblasto persistente)</text>
+    <text x="685" y="515" font-size="11" fill="#9f1239"><tspan font-weight="bold">Salpingectomia Total:</tspan></text>
+    <text x="695" y="533" font-size="10" fill="#9f1239">Lesão tubária extensa, trompa rota,</text>
+    <text x="695" y="550" font-size="10" fill="#9f1239">paridade concluída ou ectópica prévia</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="605" x2="890" y2="605" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="622" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • FIGO • IOTA • OMS</text>
+  <text x="890" y="622" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

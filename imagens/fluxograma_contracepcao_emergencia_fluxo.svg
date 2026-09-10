@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ALGORITMO DE CONTRACEPÇÃO DE EMERGÊNCIA (CE)</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 21 • Protocolo de Escolha por Janela de Tempo</text>
+
+  <!-- Content -->
+  
+    <rect x="290" y="90" width="420" height="60" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#9d174d" text-anchor="middle">COITO DESPROTEGIDO OU FALHA DO MÉTODO CONTRACEPTIVO</text>
+    <text x="500" y="135" font-size="11" fill="#be185d" text-anchor="middle">Ruptura de preservativo, esquecimento de pílulas, violência sexual</text>
+
+    <!-- Bifurcação pelo Tempo Decorrido -->
+    <path d="M 400 150 L 260 200" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 600 150 L 740 200" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna 1: Levonorgestrel Oral -->
+    <rect x="60" y="210" width="410" height="420" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="265" y="238" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle">LEVONORGESTREL ORAL (MÉTODO MAIS DISPONÍVEL)</text>
+    <text x="80" y="265" font-size="11" font-weight="700" fill="#075985">• Janela de Eficácia e Posologia:</text>
+    <text x="90" y="285" font-size="11" font-weight="700" fill="#15803d">Tomar o mais rápido possível (idealmente em &lt; 72 horas):</text>
+    <text x="90" y="305" font-size="10" fill="#334155">• Dose Única: Levonorgestrel 1,5 mg VO (preferencial)</text>
+    <text x="90" y="323" font-size="10" fill="#334155">• Ou 2 comprimidos de 0,75 mg juntos ou com intervalo de 12h</text>
+    <text x="90" y="341" font-size="10" fill="#334155">• Eficácia diminui com o tempo: 95% nas primeiras 24h, 85% em 48h, 58% em 72h</text>
+    <text x="90" y="359" font-size="10" fill="#475569">(Pode ser utilizado até 120 horas se sem outra alternativa disponível)</text>
+
+    <text x="80" y="390" font-size="11" font-weight="700" fill="#075985">• Mecanismo de Ação Estrito (NÃO É ABORTIVO):</text>
+    <text x="90" y="410" font-size="10" fill="#334155">- Bloqueia ou atrasa o pico de LH e a ovulação</text>
+    <text x="90" y="428" font-size="10" fill="#334155">- Aumenta a viscosidade do muco cervical (impede progressão espermática)</text>
+    <text x="90" y="446" font-size="10" font-weight="700" fill="#b91c1c">- SE A OVULAÇÃO JÁ OCORREU: NÃO IMPEDE A FECUNDAÇÃO/NIDAÇÃO!</text>
+
+    <text x="80" y="475" font-size="11" font-weight="700" fill="#075985">• Condutas Pós-Uso:</text>
+    <text x="90" y="495" font-size="10" fill="#334155">- Vômito até 2 horas pós-ingestão: repetir a dose completa</text>
+    <text x="90" y="513" font-size="10" fill="#334155">- Iniciar anticoncepção regular IMEDIATAMENTE ("Quick Start")</text>
+    <text x="90" y="531" font-size="10" fill="#334155">- Usar preservativo de barreira adicional por 7 dias</text>
+    <text x="90" y="549" font-size="10" fill="#b91c1c">- Teste de gravidez se menstruação atrasar &gt; 7 dias da data esperada</text>
+
+    <!-- Coluna 2: DIU de Cobre de Emergência -->
+    <rect x="530" y="210" width="410" height="420" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+    <text x="735" y="238" font-size="14" font-weight="800" fill="#6d28d9" text-anchor="middle">DIU DE COBRE (O MÉTODO MAIS EFICAZ - &gt; 99%)</text>
+    <text x="550" y="265" font-size="11" font-weight="700" fill="#4c1d95">• Janela de Ouro: Até 5 Dias (120 Horas):</text>
+    <text x="560" y="285" font-size="11" font-weight="700" fill="#15803d">Inserção intrauterina até 5 dias após o coito desprotegido</text>
+    <text x="560" y="305" font-size="10" fill="#334155">• Eficácia superior a 99,5% (taxa de falha &lt; 0,1%)</text>
+    <text x="560" y="323" font-size="10" fill="#334155">• Não perde eficácia pelo tempo decorrido dentro da janela de 5 dias</text>
+    <text x="560" y="341" font-size="10" fill="#334155">• Eficácia independente do peso corporal / IMC da paciente</text>
+    <text x="560" y="359" font-size="10" fill="#4c1d95">(Levonorgestrel oral tem eficácia reduzida em mulheres com IMC &gt; 25-30 kg/m²)</text>
+
+    <text x="550" y="390" font-size="11" font-weight="700" fill="#4c1d95">• Benefício Duplo Extraordinário:</text>
+    <text x="560" y="410" font-size="10" fill="#334155">1. Atua como Contracepção de Emergência de altíssima eficácia</text>
+    <text x="560" y="428" font-size="10" fill="#334155">2. Permanece como Contraceptivo de Longa Duração (LARC) por até 10 anos!</text>
+
+    <text x="550" y="460" font-size="11" font-weight="700" fill="#4c1d95">• Mecanismo de Ação:</text>
+    <text x="560" y="480" font-size="10" fill="#334155">- Ação espermicida tóxica direta pelos íons de cobre</text>
+    <text x="560" y="498" font-size="10" fill="#334155">- Reação inflamatória estéril endometrial que impede fertilização</text>
+
+    <text x="550" y="530" font-size="11" font-weight="700" fill="#b91c1c">• Contraindicações Estritas:</text>
+    <text x="560" y="550" font-size="10" fill="#7f1d1d">- Suspeita de gestação pré-existente já estabelecida</text>
+    <text x="560" y="568" font-size="10" fill="#7f1d1d">- Infecção pélvica / DIP ativa ou suspeita imediata</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="645" x2="970" y2="645" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="662" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • FIGO • OMS (MEC 5ª Ed)</text>
+  <text x="970" y="662" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

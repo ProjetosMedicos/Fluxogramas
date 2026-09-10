@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">MANEJO DE PÓLIPOS UTERINOS: ENDOMETRIAIS E CERVICAIS</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 33 e 76 • AAGL / FIGO</text>
+
+  <!-- Content -->
+  
+    <rect x="290" y="90" width="420" height="60" rx="8" fill="#d1fae5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#065f46" text-anchor="middle">PÓLIPOS UTERINOS IDENTIFICADOS</text>
+    <text x="500" y="135" font-size="11" fill="#047857" text-anchor="middle">Hipertrofia focal estromal e glandular vascularizada (SUA-P / FIGO)</text>
+
+    <!-- Bifurcação Cervical vs Endometrial -->
+    <path d="M 400 150 L 240 190" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 600 150 L 760 190" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna 1: Pólipo Cervical -->
+    <rect x="40" y="200" width="420" height="420" rx="8" fill="#f0fdf4" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="250" y="230" font-size="14" font-weight="800" fill="#065f46" text-anchor="middle">PÓLIPO CERVICAL (ECTO / ENDOCERVICAL)</text>
+
+    <text x="60" y="260" font-size="12" font-weight="700" fill="#065f46">• Apresentação Clínica:</text>
+    <text x="70" y="280" font-size="11" fill="#047857">Frequentemente assintomático ou sinusorragia (sangramento pós-coito).</text>
+    <text x="70" y="298" font-size="11" fill="#047857">Lesão avermelhada/violácea friável exteriorizada pelo OCE ao exame especular.</text>
+    <text x="70" y="316" font-size="11" fill="#047857">Risco de malignidade muito baixo (~ 1,0% a 1,5%).</text>
+
+    <line x1="60" y1="335" x2="440" y2="335" stroke="#a7f3d0" stroke-width="1"/>
+    <text x="60" y="360" font-size="12" font-weight="800" fill="#065f46">CONDUTA TERAPÊUTICA POR TAMANHO &amp; BASE:</text>
+
+    <rect x="60" y="375" width="380" height="90" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1"/>
+    <text x="75" y="398" font-size="11" font-weight="800" fill="#065f46">Pólipo Visível, Pediculado e &lt; 3 cm:</text>
+    <text x="75" y="418" font-size="10.5" fill="#334155">• Exérese ambulatorial por preensão e torção com pinça de Foerster/Kelly.</text>
+    <text x="75" y="436" font-size="10.5" fill="#334155">• Cauterização química (Monsel / nitrato de prata) ou elétrica da base.</text>
+    <text x="75" y="454" font-size="10.5" font-weight="700" fill="#047857">• Envio mandatório para exame anatomopatológico (AP).</text>
+
+    <rect x="60" y="480" width="380" height="70" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="1"/>
+    <text x="75" y="503" font-size="11" font-weight="800" fill="#065f46">Pólipo Séssil, &gt; 3 cm ou Inserção Endocervical Alta:</text>
+    <text x="75" y="523" font-size="10.5" fill="#334155">• Ressecção Histeroscópica sob visão direta (evita sangramento incoercível).</text>
+
+    <rect x="60" y="560" width="380" height="45" rx="6" fill="#fef3c7" stroke="#f59e0b" stroke-width="1"/>
+    <text x="250" y="582" font-size="10.5" font-weight="700" fill="#92400e" text-anchor="middle">ATENÇÃO: Até 25% têm pólipo endometrial sincrônico (Avaliar endométrio!)</text>
+
+    <!-- Coluna 2: Pólipo Endometrial -->
+    <rect x="520" y="200" width="440" height="420" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="740" y="230" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle">PÓLIPO ENDOMETRIAL (CAVIDADE UTERINA)</text>
+
+    <text x="540" y="260" font-size="12" font-weight="700" fill="#0369a1">• Diagnóstico:</text>
+    <text x="550" y="280" font-size="11" fill="#075985">USG-TV (espessamento focal, pedículo único ao Doppler) / Histerossonografia.</text>
+    <text x="550" y="298" font-size="11" fill="#075985"><tspan font-weight="bold">Padrão-Ouro:</tspan> Histeroscopia diagnóstica e cirúrgica.</text>
+
+    <line x1="540" y1="315" x2="940" y2="315" stroke="#bae6fd" stroke-width="1"/>
+    <text x="540" y="338" font-size="12" font-weight="800" fill="#0369a1">CONDUTA BASEADA NO STATUS MENOPAUSAL &amp; RISCO:</text>
+
+    <rect x="540" y="350" width="400" height="110" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="1"/>
+    <text x="555" y="372" font-size="11" font-weight="800" fill="#0369a1">MULHERES NA PRÉ-MENOPAUZA:</text>
+    <text x="555" y="392" font-size="10.5" fill="#334155">• <tspan font-weight="bold">Assintomática, &lt; 10-15 mm, sem fatores de risco:</tspan> Conduta Expectante</text>
+    <text x="570" y="410" font-size="10" fill="#64748b">(Taxa de regressão espontânea de até 25% a 30% em 12 meses).</text>
+    <text x="555" y="428" font-size="10.5" fill="#0369a1">• <tspan font-weight="bold">Sintomática (SUA, spotting), infertilidade, múltiplos ou &gt; 15 mm:</tspan></text>
+    <text x="570" y="446" font-size="10.5" font-weight="700" fill="#15803d">Indicação Formal de Polipectomia Histeroscópica com AP.</text>
+
+    <rect x="540" y="470" width="400" height="95" rx="6" fill="#fff1f2" stroke="#e11d48" stroke-width="1"/>
+    <text x="555" y="492" font-size="11" font-weight="800" fill="#9f1239">MULHERES NA PÓS-MENOPAUZA (ALTO RISCO):</text>
+    <text x="555" y="512" font-size="10.5" font-weight="700" fill="#be123c">• Todos os pólipos (sintomáticos ou assintomáticos) devem ser ressecados!</text>
+    <text x="555" y="530" font-size="10" fill="#7f1d1d">Risco de atipia / adenocarcinoma sincrônico de 4,5% a 6,0%.</text>
+    <text x="555" y="548" font-size="10" fill="#7f1d1d">Usuárias de Tamoxifeno: Polipectomia histeroscópica imediata.</text>
+
+    <text x="740" y="590" font-size="11" font-weight="800" fill="#b91c1c" text-anchor="middle">PROSCRIÇÃO ABSOLUTA DA CURETAGEM UTERINA ÀS CEGAS (FALHA > 50%)</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="645" x2="970" y2="645" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="662" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • ESHRE • OMS</text>
+  <text x="970" y="662" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

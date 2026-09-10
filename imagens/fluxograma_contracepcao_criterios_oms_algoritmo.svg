@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 720" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1040" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">SELEÇÃO CONTRACEPTIVA &amp; CRITÉRIOS DE ELEGIBILIDADE DA OMS</text>
+  <text x="1010" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 18 a 21 • WHO MEC 5ª Edição</text>
+
+  <!-- Content -->
+  
+    <rect x="290" y="90" width="460" height="60" rx="8" fill="#f8fafc" stroke="#334155" stroke-width="2" filter="url(#shadow)"/>
+    <text x="520" y="115" font-size="14" font-weight="800" fill="#0f172a" text-anchor="middle">ESCOLHA DO MÉTODO CONTRACEPTIVO PERSONALIZADO</text>
+    <text x="520" y="135" font-size="11" fill="#475569" text-anchor="middle">Triagem de contraindicações médicas segundo as Categorias da OMS</text>
+
+    <!-- Legenda Categorias OMS -->
+    <rect x="80" y="165" width="880" height="40" rx="6" fill="#f1f5f9" stroke="#cbd5e1"/>
+    <text x="140" y="190" font-size="11" font-weight="800" fill="#15803d">Cat 1: Sem restrição</text>
+    <text x="350" y="190" font-size="11" font-weight="800" fill="#0369a1">Cat 2: Vantagens &gt; Riscos</text>
+    <text x="580" y="190" font-size="11" font-weight="800" fill="#d97706">Cat 3: Riscos &gt; Vantagens</text>
+    <text x="810" y="190" font-size="11" font-weight="800" fill="#b91c1c">Cat 4: Contraindicação Absoluta</text>
+
+    <!-- Linha descendo -->
+    <path d="M 520 205 L 520 235" stroke="#475569" stroke-width="2"/>
+
+    <!-- Divisão em 3 Grupos de Condições Clínicas -->
+    <path d="M 200 235 L 840 235" stroke="#475569" stroke-width="2"/>
+    <path d="M 200 235 L 200 260" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 520 235 L 520 260" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 840 235 L 840 260" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna 1: Contraindicações Absolutas a Estrogênio (MEC 4 para Métodos Combinados) -->
+    <rect x="50" y="265" width="300" height="400" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="200" y="290" font-size="12" font-weight="800" fill="#991b1b" text-anchor="middle">CONTRAINDICAÇÃO A ESTROGÊNIO</text>
+    <text x="200" y="308" font-size="11" font-weight="700" fill="#b91c1c" text-anchor="middle">(MEC 4 para ACO, Adesivo, Anel, Injetável)</text>
+    <text x="65" y="335" font-size="10" font-weight="700" fill="#7f1d1d">• Tabagismo ≥ 35 anos com ≥ 15 cig/dia</text>
+    <text x="65" y="353" font-size="10" font-weight="700" fill="#7f1d1d">• Enxaqueca com aura (qualquer idade!)</text>
+    <text x="65" y="371" font-size="10" font-weight="700" fill="#7f1d1d">• TVP / TEP prévia ou ativa</text>
+    <text x="65" y="389" font-size="10" font-weight="700" fill="#7f1d1d">• Trombofilias hereditárias conhecidas</text>
+    <text x="65" y="407" font-size="10" font-weight="700" fill="#7f1d1d">• Hipertensão grave (PAS ≥ 160 / PAD ≥ 100)</text>
+    <text x="65" y="425" font-size="10" font-weight="700" fill="#7f1d1d">• Câncer de mama atual ou últimos 5 anos</text>
+    <text x="65" y="443" font-size="10" font-weight="700" fill="#7f1d1d">• DM com vasculopatia ou &gt; 20 anos</text>
+    <text x="65" y="461" font-size="10" font-weight="700" fill="#7f1d1d">• Puerpério &lt; 6 semanas se amamentando</text>
+
+    <rect x="60" y="485" width="280" height="165" rx="6" fill="#f0fdf4" stroke="#86efac"/>
+    <text x="200" y="508" font-size="11" font-weight="800" fill="#15803d" text-anchor="middle">ALTERNATIVA SEGURA (MEC 1 ou 2):</text>
+    <text x="75" y="530" font-size="10" font-weight="700" fill="#166534">✓ DIU de Cobre (T380A) ou Prata</text>
+    <text x="75" y="548" font-size="10" font-weight="700" fill="#166534">✓ DIU-LNG (Mirena / Kyleena)*</text>
+    <text x="75" y="566" font-size="10" font-weight="700" fill="#166534">✓ Implante de Etonogestrel (Implanon)</text>
+    <text x="75" y="584" font-size="10" font-weight="700" fill="#166534">✓ Desogestrel 75mcg / Drospirenona 4mg</text>
+    <text x="75" y="604" font-size="9" fill="#475569">*Exceto câncer de mama atual (MEC 4 para todos os hormonais)</text>
+
+    <!-- Coluna 2: Contraindicações aos DIUs (Cobre e Hormonal) -->
+    <rect x="370" y="265" width="300" height="400" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="520" y="290" font-size="12" font-weight="800" fill="#b45309" text-anchor="middle">CONTRAINDICAÇÕES AOS DIUs</text>
+    <text x="520" y="308" font-size="11" font-weight="700" fill="#92400e" text-anchor="middle">(MEC 4 Comum aos Dispositivos)</text>
+    <text x="385" y="335" font-size="10" font-weight="700" fill="#78350f">• Gestação conhecida ou suspeita</text>
+    <text x="385" y="353" font-size="10" font-weight="700" fill="#78350f">• Sangramento uterino sem causa esclarecida</text>
+    <text x="385" y="371" font-size="10" font-weight="700" fill="#78350f">• Sepse puerperal / aborto séptico recente</text>
+    <text x="385" y="389" font-size="10" font-weight="700" fill="#78350f">• DIP ativa ou tratada há menos de 3 meses</text>
+    <text x="385" y="407" font-size="10" font-weight="700" fill="#78350f">• Câncer de colo / endométrio ativo</text>
+    <text x="385" y="425" font-size="10" font-weight="700" fill="#78350f">• Distorção grave da cavidade por miomas</text>
+    <text x="385" y="443" font-size="10" font-weight="700" fill="#78350f">• Doença de Wilson (apenas DIU de cobre)</text>
+
+    <rect x="380" y="485" width="280" height="165" rx="6" fill="#f0f9ff" stroke="#7dd3fc"/>
+    <text x="520" y="508" font-size="11" font-weight="800" fill="#0369a1" text-anchor="middle">ALTERNATIVA SEGURA:</text>
+    <text x="395" y="530" font-size="10" font-weight="700" fill="#0284c7">✓ Implante Subdérmico de Etonogestrel</text>
+    <text x="395" y="548" font-size="10" font-weight="700" fill="#0284c7">✓ Pílulas de progestagênio isolado</text>
+    <text x="395" y="566" font-size="10" font-weight="700" fill="#0284c7">✓ Métodos combinados (se sem contraindicação)</text>
+    <text x="395" y="584" font-size="10" font-weight="700" fill="#0284c7">✓ Preservativos e métodos de barreira</text>
+    <text x="395" y="604" font-size="9" fill="#475569">Tratar DIP ou sangramento antes de reinserir DIU</text>
+
+    <!-- Coluna 3: Interações Medicamentosas Críticas -->
+    <rect x="690" y="265" width="300" height="400" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="1.5" filter="url(#shadow)"/>
+    <text x="840" y="290" font-size="12" font-weight="800" fill="#6d28d9" text-anchor="middle">INTERAÇÕES MEDICAMENTOSAS</text>
+    <text x="840" y="308" font-size="11" font-weight="700" fill="#7c3aed" text-anchor="middle">(Indutores Hepáticos do CYP3A4)</text>
+    <text x="705" y="335" font-size="10" font-weight="700" fill="#4c1d95">• Anticonvulsivantes Indutores:</text>
+    <text x="715" y="353" font-size="10" fill="#334155">Carbamazepina, Fenitoína, Fenobarbital,</text>
+    <text x="715" y="369" font-size="10" fill="#334155">Oxcarbazepina, Topiramato (&gt; 200mg/d)</text>
+    <text x="705" y="393" font-size="10" font-weight="700" fill="#4c1d95">• Antibióticos Indutores:</text>
+    <text x="715" y="411" font-size="10" fill="#334155">Rifampicina e Rifabutina</text>
+    <text x="705" y="435" font-size="10" font-weight="700" fill="#b91c1c">EFEITO: Perda drástica de eficácia de</text>
+    <text x="705" y="451" font-size="10" fill="#b91c1c">pílulas, anéis, adesivos e implantes (MEC 3)!</text>
+
+    <rect x="700" y="485" width="280" height="165" rx="6" fill="#fdf2f8" stroke="#f472b6"/>
+    <text x="840" y="508" font-size="11" font-weight="800" fill="#9d174d" text-anchor="middle">PADRÃO-OURO NA INTERAÇÃO:</text>
+    <text x="715" y="530" font-size="10" font-weight="700" fill="#db2777">✓ DIU de Cobre (T380A) - MEC 1</text>
+    <text x="715" y="548" font-size="10" font-weight="700" fill="#db2777">✓ DIU-LNG 52mg (Mirena) - MEC 1</text>
+    <text x="715" y="566" font-size="10" fill="#334155">(Ação local intrauterina sem clearance hepático)</text>
+    <text x="715" y="586" font-size="10" font-weight="700" fill="#db2777">✓ AMPD Injetável Trimestral - MEC 1</text>
+    <text x="715" y="604" font-size="9" fill="#475569">(Dose suprafisiológica de 150mg supera a indução)</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="685" x2="1010" y2="685" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="702" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • FIGO • OMS (MEC 5ª Ed)</text>
+  <text x="1010" y="702" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

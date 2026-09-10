@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#c084fc" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • CONSULTA GINECOLÓGICA INTEGRAL</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">CALENDÁRIO VACINAL DA MULHER &amp; ESPECIFICIDADES LGBTQIAPN+</text>
+  <text x="970" y="45" fill="#cbd5e1" font-size="13" font-weight="500" text-anchor="end">Diretrizes SBIm / FEBRASGO 2024 • MS</text>
+
+  <!-- Node Topo -->
+  <rect x="150" y="88" width="700" height="55" rx="8" fill="#f5f3ff" stroke="#8b5cf6" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="112" font-size="13" font-weight="800" fill="#6d28d9" text-anchor="middle">IMUNIZAÇÃO SISTEMATIZADA &amp; ATENÇÃO À DIVERSIDADE</text>
+  <text x="500" y="131" font-size="11" fill="#7c3aed" text-anchor="middle">Prevenção quaternária • Acolhimento livre de estigma • Rastreamento oncológico baseado em anatomia e práticas sexuais</text>
+
+  <!-- 4 Colunas de Vacinas e Diretrizes -->
+  
+  <!-- Coluna 1: HPV (Atualização SUS / Privado) -->
+  <rect x="25" y="160" width="225" height="435" rx="8" fill="#faf5ff" stroke="#8b5cf6" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="25" y="160" width="225" height="28" rx="8" fill="#8b5cf6"/>
+  <text x="137" y="179" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">1. VACINAÇÃO HPV</text>
+
+  <text x="35" y="206" font-size="10" font-weight="800" fill="#6d28d9">SUS (9 a 14 anos):</text>
+  <text x="35" y="222" font-size="10" font-weight="700" fill="#0f172a">• DOSE ÚNICA (Quadrivalente)</text>
+  <text x="35" y="236" font-size="9" fill="#475569">Subtipos 6, 11, 16 e 18</text>
+  <text x="35" y="250" font-size="9" fill="#475569">Atualização Ministério da Saúde</text>
+
+  <text x="35" y="276" font-size="10" font-weight="800" fill="#6d28d9">Imunossuprimidos (9-45a):</text>
+  <text x="35" y="292" font-size="9" font-weight="700" fill="#0f172a">• Esquema em 3 DOSES</text>
+  <text x="35" y="306" font-size="9" fill="#475569">Intervalos: 0, 2 e 6 meses</text>
+  <text x="35" y="320" font-size="9" fill="#475569">Pessoas com HIV, transplante,</text>
+  <text x="35" y="334" font-size="9" fill="#475569">câncer ou violência sexual</text>
+
+  <text x="35" y="360" font-size="10" font-weight="800" fill="#6d28d9">Vacina Nonavalente (Privado):</text>
+  <text x="35" y="376" font-size="9" fill="#475569">+ Subtipos 31, 33, 45, 52, 58</text>
+  <text x="35" y="390" font-size="9" fill="#475569">• 9-14 anos: 2 doses (0, 6m)</text>
+  <text x="35" y="404" font-size="9" fill="#475569">• ≥ 15 anos: 3 doses (0, 2, 6m)</text>
+
+  <rect x="33" y="430" width="209" height="150" rx="6" fill="#ede9fe"/>
+  <text x="137" y="450" font-size="10" font-weight="800" fill="#5b21b6" text-anchor="middle">Regra de Ouro:</text>
+  <text x="42" y="468" font-size="9" fill="#475569">• Mulheres já expostas ou</text>
+  <text x="42" y="482" font-size="9" fill="#475569">  tratadas de lesão precursora</text>
+  <text x="42" y="496" font-size="9" fill="#475569">  TAMBÉM se beneficiam</text>
+  <text x="42" y="510" font-size="9" fill="#475569">  (redução de recidivas)</text>
+  <text x="42" y="528" font-size="9" font-weight="700" fill="#5b21b6">• Rastreamento mantido</text>
+  <text x="42" y="542" font-size="9" fill="#475569">  independente da vacina</text>
+
+  <!-- Coluna 2: Vacinas da Mulher Adulta &amp; Gestação -->
+  <rect x="265" y="160" width="225" height="435" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="265" y="160" width="225" height="28" rx="8" fill="#16a34a"/>
+  <text x="377" y="179" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">2. ADULTA &amp; GESTANTE</text>
+
+  <text x="275" y="206" font-size="10" font-weight="800" fill="#15803d">dTpa / Dupla Adulto (dT):</text>
+  <text x="275" y="222" font-size="9" fill="#475569">• Reforço decenal com dT</text>
+  <text x="275" y="238" font-size="10" font-weight="800" fill="#b91c1c">• NA GESTAÇÃO: 1 dose dTpa</text>
+  <text x="275" y="252" font-size="9" fill="#475569">  A CADA gravidez a partir</text>
+  <text x="275" y="266" font-size="9" fill="#475569">  da 20ª sem (ideal 27-36 sem)</text>
+  <text x="275" y="280" font-size="9" fill="#475569">  Passagem de Acs anti-coqueluche</text>
+
+  <text x="275" y="306" font-size="10" font-weight="800" fill="#15803d">Hepatite B:</text>
+  <text x="275" y="322" font-size="9" fill="#475569">• 3 doses (0, 1 e 6 meses)</text>
+  <text x="275" y="336" font-size="9" fill="#475569">• Titular anti-HBs (≥ 10 mUI/mL)</text>
+
+  <text x="275" y="360" font-size="10" font-weight="800" fill="#15803d">Tríplice Viral (SRC):</text>
+  <text x="275" y="376" font-size="9" fill="#475569">• Pré-concepcional (2 doses até 29a)</text>
+  <text x="275" y="390" font-size="9" font-weight="700" fill="#dc2626">• CONTRAINDICADA na gestação</text>
+  <text x="275" y="404" font-size="9" fill="#475569">  Vírus vivo; aguardar 30d p/ engravidar</text>
+
+  <text x="275" y="430" font-size="10" font-weight="800" fill="#15803d">Influenza &amp; Covid-19:</text>
+  <text x="275" y="446" font-size="9" fill="#475569">• Dose anual / atualizada</text>
+  <text x="275" y="460" font-size="9" fill="#475569">• Seguras na gestação e lactação</text>
+
+  <!-- Coluna 3: Senescência &amp; Herpes Zóster -->
+  <rect x="505" y="160" width="225" height="435" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="505" y="160" width="225" height="28" rx="8" fill="#d97706"/>
+  <text x="617" y="179" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">3. CLIMATÉRIO &amp; IDOSA</text>
+
+  <text x="515" y="206" font-size="10" font-weight="800" fill="#b45309">Herpes Zóster Recombinante:</text>
+  <text x="515" y="222" font-size="10" font-weight="700" fill="#0f172a">• Shingrix (Inativada)</text>
+  <text x="515" y="236" font-size="9" fill="#475569">• Esquema: 2 doses (0 e 2 meses)</text>
+  <text x="515" y="250" font-size="9" fill="#475569">• Indicação: ≥ 50 anos</text>
+  <text x="515" y="264" font-size="9" fill="#475569">  (ou ≥ 18a se imunossuprimida)</text>
+  <text x="515" y="278" font-size="9" fill="#b45309">Eficácia &gt; 90% contra nevralgia</text>
+
+  <text x="515" y="306" font-size="10" font-weight="800" fill="#b45309">Pneumocócicas:</text>
+  <text x="515" y="322" font-size="9" fill="#475569">• VPC13 ou VPC15 conjugada</text>
+  <text x="515" y="336" font-size="9" fill="#475569">• VPP23 após 6-12 meses</text>
+  <text x="515" y="350" font-size="9" fill="#475569">• Indicação: ≥ 60 anos ou comorbidades</text>
+
+  <text x="515" y="378" font-size="10" font-weight="800" fill="#b45309">Hepatite A &amp; Meningite:</text>
+  <text x="515" y="394" font-size="9" fill="#475569">• Grupos de risco e imunodepressão</text>
+  <text x="515" y="408" font-size="9" fill="#475569">• Hepatopatias crônicas</text>
+
+  <!-- Coluna 4: Saúde LGBTQIAPN+ &amp; Homens Trans -->
+  <rect x="745" y="160" width="230" height="435" rx="8" fill="#fdf4ff" stroke="#c026d3" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="745" y="160" width="230" height="28" rx="8" fill="#c026d3"/>
+  <text x="860" y="179" font-size="11" font-weight="800" fill="#ffffff" text-anchor="middle">4. SAÚDE LGBTQIAPN+</text>
+
+  <text x="755" y="206" font-size="10" font-weight="800" fill="#86198f">Mulheres Lésbicas / Bissexuais:</text>
+  <text x="755" y="222" font-size="9" font-weight="700" fill="#0f172a">• Rastreamento Cervical MANTIDO</text>
+  <text x="755" y="236" font-size="9" fill="#475569">Transmissão de HPV comprovada</text>
+  <text x="755" y="250" font-size="9" fill="#475569">Prevenção de ISTs (filme látex)</text>
+
+  <text x="755" y="276" font-size="10" font-weight="800" fill="#86198f">Homens Trans (em Testosterona):</text>
+  <text x="755" y="292" font-size="9" font-weight="700" fill="#0f172a">• Colo Uterino Preservado:</text>
+  <text x="755" y="306" font-size="9" fill="#475569">  Manter coleta de citopatológico/HPV</text>
+  <text x="755" y="320" font-size="9" font-weight="700" fill="#c026d3">• Atrofia Vaginal Severa:</text>
+  <text x="755" y="334" font-size="9" fill="#475569">  Uso de estrogênio tópico pré-exame</text>
+  <text x="755" y="348" font-size="9" fill="#475569">  (10-14 dias) reduz dor e melhora amostra</text>
+  <text x="755" y="362" font-size="9" fill="#475569">  Espéculo virgem/pediátrico</text>
+
+  <text x="755" y="386" font-size="9" font-weight="700" fill="#0f172a">• Rastreamento Mamário:</text>
+  <text x="755" y="400" font-size="9" fill="#475569">  Pós-mastectomia: exame físico anual</text>
+  <text x="755" y="414" font-size="9" fill="#475569">  Sem cirurgia: mamografia padrão</text>
+
+  <text x="755" y="438" font-size="9" font-weight="700" fill="#b91c1c">• Contracepção em Homens Trans:</text>
+  <text x="755" y="452" font-size="9" fill="#475569">  Testosterona NÃO é método contraceptivo!</text>
+  <text x="755" y="466" font-size="9" fill="#475569">  Indicar DIU Cobre, DIU-LNG ou Implante</text>
+
+  <!-- Rodapé -->
+  <rect x="25" y="610" width="950" height="52" rx="8" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="500" y="630" font-size="11" font-weight="800" fill="#c084fc" text-anchor="middle">PREVENÇÃO QUATERNÁRIA: PRIMUM NON NOCERE</text>
+  <text x="500" y="648" font-size="10" fill="#f8fafc" text-anchor="middle">Evitar intervenções médicas excessivas: NÃO solicitar USG transvaginal ou CA-125 de rotina em mulheres jovens assintomáticas • Respeitar nome social e autonomia</text>
+</svg>

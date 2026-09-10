@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • GINECOLOGIA DA INFÂNCIA</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ABORDAGEM DE VULVOVAGINITES E SANGRAMENTO GENITAL NA INFÂNCIA</text>
+  <text x="970" y="45" fill="#cbd5e1" font-size="13" font-weight="500" text-anchor="end">Cap. 15 e 20 FEBRASGO • SBP</text>
+
+  <!-- Node Topo -->
+  <rect x="180" y="88" width="640" height="55" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="112" font-size="13" font-weight="800" fill="#0369a1" text-anchor="middle">CRIANÇA PRÉ-PÚBERE COM QUEIXA GENITAL</text>
+  <text x="500" y="131" font-size="11" fill="#0284c7" text-anchor="middle">Exame delicado em posição genupeitoral / "em rã" no colo materno • Tração dos lábios • Não usar espéculo de adulto</text>
+
+  <!-- Linha divisória -->
+  <line x1="500" y1="143" x2="500" y2="170" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Nó Decisão Principal: Sintoma Dominante -->
+  <rect x="270" y="172" width="460" height="42" rx="8" fill="#f8fafc" stroke="#475569" stroke-width="1.5" filter="url(#shadow)"/>
+  <text x="500" y="198" font-size="12" font-weight="700" fill="#0f172a" text-anchor="middle">DIAGNOSE POR CARACTERÍSTICA DO SINTOMA PRINCIPAL</text>
+
+  <!-- 3 Ramificações -->
+  <path d="M 330 214 L 180 248" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 500 214 L 500 248" stroke="#d97706" stroke-width="2" marker-end="url(#arrow)"/>
+  <path d="M 670 214 L 820 248" stroke="#dc2626" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Coluna 1: Vulvovaginite Inespecífica / Higiene -->
+  <rect x="30" y="255" width="300" height="340" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="30" y="255" width="300" height="30" rx="8" fill="#0284c7"/>
+  <text x="180" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">1. CORRIMENTO INESPECÍFICO (75%)</text>
+
+  <text x="45" y="306" font-size="11" font-weight="800" fill="#0369a1">Causas Fisiopatológicas:</text>
+  <text x="45" y="322" font-size="10" fill="#475569">• Hipoestrogenismo basal (mucosa atrófica, pH 7)</text>
+  <text x="45" y="336" font-size="10" fill="#475569">• Proximidade anal, contaminação fecal</text>
+  <text x="45" y="350" font-size="10" fill="#475569">• Roupas sintéticas, sabão perfumado</text>
+
+  <text x="45" y="378" font-size="11" font-weight="800" fill="#0369a1">Quadro Clínico:</text>
+  <text x="45" y="394" font-size="10" fill="#475569">• Corrimento escasso, esbranquiçado/amarelado</text>
+  <text x="45" y="408" font-size="10" fill="#475569">• Disúria externa, eritema vulvar leve</text>
+
+  <text x="45" y="436" font-size="11" font-weight="800" fill="#0369a1">Conduta Consensual:</text>
+  <text x="45" y="452" font-size="10" font-weight="700" fill="#0f172a">• Educação de higiene (limpar frente-trás)</text>
+  <text x="45" y="468" font-size="10" fill="#475569">• Banhos de assento mornos com camomila</text>
+  <text x="45" y="482" font-size="10" fill="#475569">• Calcinha 100% algodão, sem amaciante</text>
+  <text x="45" y="496" font-size="10" font-weight="700" fill="#dc2626">• NÃO USAR antibióticos ou antifúngicos orais</text>
+
+  <!-- Coluna 2: Infecciosa Específica &amp; Corpo Estranho -->
+  <rect x="350" y="255" width="300" height="340" rx="8" fill="#fffbeb" stroke="#d97706" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="350" y="255" width="300" height="30" rx="8" fill="#d97706"/>
+  <text x="500" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">2. ESPECÍFICA &amp; CORPO ESTRANHO</text>
+
+  <text x="365" y="306" font-size="11" font-weight="800" fill="#b45309">Streptococcus pyogenes:</text>
+  <text x="365" y="322" font-size="10" fill="#475569">• Pós-faringite; eritema vermelho-vivo intenso</text>
+  <text x="365" y="336" font-size="10" font-weight="700" fill="#0f172a">→ Amoxicilina VO por 10 dias</text>
+
+  <text x="365" y="360" font-size="11" font-weight="800" fill="#b45309">Shigella flexneri:</text>
+  <text x="365" y="376" font-size="10" fill="#475569">• Corrimento mucossanguinolento pós-diarreia</text>
+  <text x="365" y="390" font-size="10" font-weight="700" fill="#0f172a">→ Coprocultura + Antibiótico específico</text>
+
+  <text x="365" y="414" font-size="11" font-weight="800" fill="#b45309">Oxiuríase (Enterobius):</text>
+  <text x="365" y="430" font-size="10" fill="#475569">• Prurido vulvo-anal noturno, insônia</text>
+  <text x="365" y="444" font-size="10" font-weight="700" fill="#0f172a">→ Fita gomada → Mebendazol ou Albendazol</text>
+
+  <text x="365" y="470" font-size="11" font-weight="800" fill="#b45309">Corpo Estranho Vaginal:</text>
+  <text x="365" y="486" font-size="10" fill="#475569">• Corrimento purulento crônico e muito fétido</text>
+  <text x="365" y="500" font-size="10" font-weight="700" fill="#0f172a">→ Vaginoscopia infantil / USG + remoção</text>
+
+  <!-- Coluna 3: Sangramento Genital na Infância -->
+  <rect x="670" y="255" width="300" height="340" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5" filter="url(#shadow)"/>
+  <rect x="670" y="255" width="300" height="30" rx="8" fill="#dc2626"/>
+  <text x="820" y="275" font-size="12" font-weight="800" fill="#ffffff" text-anchor="middle">3. SANGRAMENTO GENITAL INFANTIL</text>
+
+  <text x="685" y="306" font-size="11" font-weight="800" fill="#991b1b">Descartar Fontes Extragenitais:</text>
+  <text x="685" y="322" font-size="10" fill="#475569">• Hematúria / ITU hemorrágica</text>
+  <text x="685" y="336" font-size="10" fill="#475569">• Fissura anal, constipação crônica</text>
+
+  <text x="685" y="362" font-size="11" font-weight="800" fill="#991b1b">Causas Ginecológicas Locais:</text>
+  <text x="685" y="378" font-size="10" fill="#475569">• Trauma acidental (queda a cavaleiro)</text>
+  <text x="685" y="392" font-size="10" fill="#475569">• Prolapso de mucosa uretral (massa anular violácea)</text>
+  <text x="685" y="406" font-size="10" fill="#475569">• Corpo estranho de longa data com ulceração</text>
+
+  <text x="685" y="432" font-size="11" font-weight="800" fill="#991b1b">Causas Sistêmicas e Neoplásicas:</text>
+  <text x="685" y="448" font-size="10" fill="#475569">• Puberdade precoce (investigar telarca e USG)</text>
+  <text x="685" y="462" font-size="10" fill="#475569">• Sarcoma botrioide (rabdomiossarcoma em cacho)</text>
+  <text x="685" y="480" font-size="10" font-weight="800" fill="#dc2626">• Suspeita de Abuso Sexual:</text>
+  <text x="685" y="496" font-size="10" fill="#475569">  Laceração himenal/perineal, IST confirmada</text>
+
+  <!-- Rodapé -->
+  <rect x="30" y="610" width="940" height="52" rx="8" fill="#0f172a" filter="url(#shadow)"/>
+  <text x="500" y="630" font-size="11" font-weight="800" fill="#38bdf8" text-anchor="middle">ALERTA ÉTICO-LEGAL FEBRASGO • NOTIFICAÇÃO COMPULSÓRIA</text>
+  <text x="500" y="648" font-size="10" fill="#f8fafc" text-anchor="middle">Isolamento de Gonococo, Clamídia, Tricomoníase ou Sífilis na infância é prova presuntiva de abuso sexual: Notificação imediata ao Conselho Tutelar</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ALGORITMO DE MANEJO DOS PÓLIPOS ENDOMETRIAIS</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 76 • AAGL Practice Guidelines</text>
+
+  <!-- Content -->
+  
+    <rect x="300" y="90" width="400" height="60" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#9d174d" text-anchor="middle">DIAGNÓSTICO DE PÓLIPO ENDOMETRIAL (USG / HISTERO)</text>
+    <text x="500" y="135" font-size="11" fill="#be185d" text-anchor="middle">Engrossamento ecogênico focal com pedículo vascular único ao Doppler</text>
+
+    <!-- Bifurcação Pré-Menopausa vs Pós-Menopausa -->
+    <path d="M 400 150 L 260 200" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 600 150 L 740 200" stroke="#b91c1c" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna Pré-Menopausa -->
+    <rect x="60" y="210" width="410" height="420" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="265" y="238" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle">MULHER NA PRÉ-MENOPAUSA</text>
+
+    <text x="80" y="270" font-size="12" font-weight="700" fill="#075985">Avaliação de Sintomas e Dimensões:</text>
+
+    <!-- Subdivisão Pré-menopausa -->
+    <rect x="75" y="290" width="380" height="150" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+    <text x="90" y="312" font-size="11" font-weight="700" fill="#0284c7">A. Sintomática (SUA, Spotting, Infertilidade) OU &gt; 1,5 cm:</text>
+    <text x="90" y="332" font-size="11" font-weight="700" fill="#b91c1c">CONDUTA: POLIPECTOMIA HISTEROSCÓPICA</text>
+    <text x="90" y="352" font-size="10" fill="#334155">• Ressecção sob visão direta (ressectoscópio / shaver histeroscópico)</text>
+    <text x="90" y="370" font-size="10" fill="#334155">• Melhora das taxas de fertilidade em até 50-60% na FIV</text>
+    <text x="90" y="388" font-size="10" fill="#334155">• Resolução imediata do sangramento uterino anormal</text>
+    <text x="90" y="406" font-size="10" font-weight="700" fill="#15803d">• Análise histopatológica obrigatória de toda a peça</text>
+
+    <rect x="75" y="460" width="380" height="150" rx="6" fill="#ffffff" stroke="#bae6fd"/>
+    <text x="90" y="482" font-size="11" font-weight="700" fill="#0284c7">B. Assintomática E &lt; 1,0 cm E Sem Fatores de Risco:</text>
+    <text x="90" y="502" font-size="11" font-weight="700" fill="#15803d">CONDUTA: CONDUTA EXPECTANTE / VIGILÂNCIA</text>
+    <text x="90" y="522" font-size="10" fill="#334155">• Taxa de regressão espontânea documentada em até 25%</text>
+    <text x="90" y="540" font-size="10" fill="#334155">• Risco de malignidade na pré-menopausa assintomática &lt; 1%</text>
+    <text x="90" y="558" font-size="10" fill="#334155">• Reavaliação ultrassonográfica seriada a cada 6 a 12 meses</text>
+    <text x="90" y="576" font-size="10" fill="#b91c1c">• Se crescer &gt; 1,5 cm ou surgir sangramento: intervir com histeroscopia</text>
+
+    <!-- Coluna Pós-Menopausa -->
+    <rect x="530" y="210" width="410" height="420" rx="8" fill="#fef2f2" stroke="#b91c1c" stroke-width="2" filter="url(#shadow)"/>
+    <text x="735" y="238" font-size="14" font-weight="800" fill="#991b1b" text-anchor="middle">MULHER NA PÓS-MENOPAUSA / TAMOXIFENO</text>
+
+    <rect x="545" y="265" width="380" height="345" rx="6" fill="#ffffff" stroke="#fecaca"/>
+    <text x="560" y="290" font-size="12" font-weight="800" fill="#7f1d1d">INDICAÇÃO MANDATÓRIA DE POLIPECTOMIA CIRÚRGICA</text>
+    <text x="560" y="315" font-size="11" font-weight="700" fill="#b91c1c">• Risco de Neoplasia / Hiperplasia com Atipia:</text>
+    <text x="570" y="335" font-size="10" fill="#334155">- Risco de malignidade sobe para 4,5% a 10% na pós-menopausa</text>
+    <text x="570" y="353" font-size="10" fill="#334155">- Pólipos em usuárias de Tamoxifeno: risco aumentado de atipia</text>
+    <text x="570" y="371" font-size="10" fill="#334155">- Mesmo lesões pequenas assintomáticas têm indicação cirúrgica</text>
+
+    <text x="560" y="405" font-size="11" font-weight="700" fill="#7f1d1d">• Padrão-Ouro de Técnica Cirúrgica:</text>
+    <text x="570" y="425" font-size="10" font-weight="700" fill="#059669">POLIPECTOMIA HISTEROSCÓPICA COM RESSECÇÃO DA BASE</text>
+    <text x="570" y="445" font-size="10" fill="#334155">- Ressecção monopolar ou bipolar incluindo a base de implantação</text>
+    <text x="570" y="463" font-size="10" fill="#334155">- Avaliação histológica de toda a mucosa circundante</text>
+
+    <text x="560" y="500" font-size="11" font-weight="800" fill="#991b1b">⚠️ CONDUTAS PROSCRITAS (NUNCA REALIZAR):</text>
+    <text x="570" y="520" font-size="10" fill="#7f1d1d">• Curetagem uterina às cegas (taxa de falha/fragmentação &gt; 60%)</text>
+    <text x="570" y="538" font-size="10" fill="#7f1d1d">• Biópsia ambulatorial com Pipelle isolada (alta taxa de falso-negativo</text>
+    <text x="580" y="554" font-size="10" fill="#7f1d1d">  por escorregamento da ponta da cânula no pólipo móvel)</text>
+    <text x="570" y="574" font-size="10" fill="#7f1d1d">• Histerectomia profilática como 1ª escolha sem diagnóstico histológico</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="645" x2="970" y2="645" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="662" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • FIGO • OMS (MEC 5ª Ed)</text>
+  <text x="970" y="662" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>

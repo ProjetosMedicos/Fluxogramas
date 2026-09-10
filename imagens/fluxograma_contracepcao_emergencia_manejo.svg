@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#475569"/>
+    </marker>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1000" height="70" fill="#0f172a"/>
+  <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
+  <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">ANTICONCEPÇÃO DE EMERGÊNCIA (AE) E ESQUECIMENTO DE PÍLULA</text>
+  <text x="970" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 70 e 75 • OMS Guidelines</text>
+
+  <!-- Content -->
+  
+    <rect x="280" y="90" width="440" height="60" rx="8" fill="#eff6ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="115" font-size="14" font-weight="800" fill="#0369a1" text-anchor="middle">COITO DESPROTEGIDO / FALHA DO MÉTODO</text>
+    <text x="500" y="135" font-size="11" fill="#0284c7" text-anchor="middle">Ruptura de preservativo, violência sexual ou esquecimento de anticoncepcional</text>
+
+    <!-- Bifurcação em Janelas de Tempo -->
+    <path d="M 380 150 L 180 195" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 500 150 L 500 195" stroke="#0284c7" stroke-width="2" marker-end="url(#arrow)"/>
+    <path d="M 620 150 L 820 195" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Coluna 1: Até 72 horas (LNG) -->
+    <rect x="40" y="205" width="280" height="230" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2" filter="url(#shadow)"/>
+    <text x="180" y="232" font-size="13" font-weight="800" fill="#065f46" text-anchor="middle">ATÉ 72 HORAS (0 A 3 DIAS)</text>
+    <text x="180" y="250" font-size="11" font-weight="700" fill="#047857" text-anchor="middle">LEVONORGESTREL 1,5 MG VO</text>
+    <text x="55" y="275" font-size="10.5" fill="#065f46">• Dose única oral de 1,5 mg (ou 0,75mg 12/12h).</text>
+    <text x="55" y="295" font-size="10.5" fill="#065f46">• Mais eficaz quanto mais precoce o uso.</text>
+    <text x="55" y="315" font-size="10.5" fill="#065f46">• Retarda ou inibe o pico de LH e ovulação.</text>
+    <text x="55" y="335" font-size="10.5" fill="#065f46">• NÃO é abortivo; não impede nidação.</text>
+    <text x="55" y="355" font-size="10.5" fill="#065f46">• Sem contraindicações médicas formais.</text>
+    <text x="55" y="375" font-size="10.5" fill="#065f46">• Pode ser repetido no mesmo ciclo se nova relação.</text>
+    <text x="55" y="405" font-size="10" font-weight="700" fill="#b91c1c">Eficácia reduzida se IMC &gt; 30 kg/m².</text>
+
+    <!-- Coluna 2: 72 a 120 horas (Ulipristal) -->
+    <rect x="360" y="205" width="280" height="230" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="500" y="232" font-size="13" font-weight="800" fill="#0369a1" text-anchor="middle">72 A 120 HORAS (3 A 5 DIAS)</text>
+    <text x="500" y="250" font-size="11" font-weight="700" fill="#075985" text-anchor="middle">ACETATO DE ULIPRISTAL 30 MG</text>
+    <text x="375" y="275" font-size="10.5" fill="#075985">• Modulador Seletivo do Receptor de Progesterona.</text>
+    <text x="375" y="295" font-size="10.5" fill="#075985">• Mantém alta eficácia constante até 120h.</text>
+    <text x="375" y="315" font-size="10.5" fill="#075985">• Capaz de inibir ovulação mesmo com LH em ascensão.</text>
+    <text x="375" y="335" font-size="10.5" fill="#075985">• <tspan font-weight="bold">Método oral de escolha se IMC &gt; 30 kg/m².</tspan></text>
+    <text x="375" y="355" font-size="10.5" fill="#075985">• Retomar método de rotina apenas após 5 dias.</text>
+    <text x="375" y="375" font-size="10.5" fill="#075985">• Preservativo obrigatório até o próximo fluxo.</text>
+    <text x="375" y="405" font-size="10" fill="#64748b">(Disponibilidade restrita no Brasil).</text>
+
+    <!-- Coluna 3: Até 120 horas (DIU de Cobre) -->
+    <rect x="680" y="205" width="280" height="230" rx="8" fill="#f5f3ff" stroke="#7c3aed" stroke-width="2" filter="url(#shadow)"/>
+    <text x="820" y="232" font-size="13" font-weight="800" fill="#5b21b6" text-anchor="middle">ATÉ 120 HORAS (MÁXIMA EFICÁCIA)</text>
+    <text x="820" y="250" font-size="11" font-weight="700" fill="#6d28d9" text-anchor="middle">DIU DE COBRE DE EMERGÊNCIA</text>
+    <text x="695" y="275" font-size="10.5" fill="#5b21b6">• Inserção intrauterina até 5 dias pós-coito.</text>
+    <text x="695" y="295" font-size="10.5" fill="#5b21b6">• <tspan font-weight="bold">Método mais eficaz existente (&gt; 99,8%).</tspan></text>
+    <text x="695" y="315" font-size="10.5" fill="#5b21b6">• Ação espermicida e endometrial estéril.</text>
+    <text x="695" y="335" font-size="10.5" fill="#5b21b6">• Eficaz independente do IMC ou peso corporal.</text>
+    <text x="695" y="355" font-size="10.5" fill="#5b21b6">• <tspan font-weight="bold">Vantagem dupla:</tspan> Confere contracepção contínua de alta eficácia por até 10 anos!</text>
+    <text x="695" y="385" font-size="10" fill="#6d28d9">Contraindicado apenas se infecção pélvica ativa.</text>
+
+    <!-- Linha para Manejo de Esquecimento -->
+    <line x1="500" y1="445" x2="500" y2="475" stroke="#475569" stroke-width="2" marker-end="url(#arrow)"/>
+
+    <!-- Bottom Container: Regras de Esquecimento de Pílula Combinada -->
+    <rect x="40" y="475" width="920" height="155" rx="8" fill="#1e293b" filter="url(#shadow)"/>
+    <text x="500" y="502" font-size="13" font-weight="800" fill="#38bdf8" text-anchor="middle">ALGORITMO PRÁTICO PARA ESQUECIMENTO DE PÍLULA HORMONAL COMBINADA</text>
+
+    <text x="65" y="530" font-size="11" font-weight="700" fill="#4ade80">• 1 Comprimido Esquecido (&lt; 24 a 48h de atraso):</text>
+    <text x="75" y="548" font-size="10.5" fill="#cbd5e1">Tomar o comprimido esquecido imediatamente (mesmo que 2 no mesmo dia) e seguir a cartela normalmente. <tspan font-weight="bold">Não necessita método barreira ou AE.</tspan></text>
+
+    <text x="65" y="575" font-size="11" font-weight="700" fill="#f87171">• ≥ 2 Comprimidos Esquecidos (≥ 48h de atraso):</text>
+    <text x="75" y="593" font-size="10.5" fill="#cbd5e1">Tomar o último comprimido esquecido imediatamente, descartar os anteriores, continuar a cartela normalmente e <tspan font-weight="bold">USAR PRESERVATIVO POR 7 DIAS.</tspan></text>
+    <text x="75" y="611" font-size="10" fill="#fca5a5">Se esquecimento na 1ª Semana com coito nos últimos 5 dias: Tomar Anticoncepção de Emergência (Levonorgestrel 1,5 mg). Se na 3ª semana: Emendar a próxima cartela sem intervalo de pausa.</text>
+    
+
+  <!-- Footer -->
+  <line x1="30" y1="645" x2="970" y2="645" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="30" y="662" fill="#64748b" font-size="11" font-weight="600">Fonte: Tratado de Ginecologia FEBRASGO (2ª Edição) • ACOG • ESHRE • OMS</text>
+  <text x="970" y="662" fill="#94a3b8" font-size="11" text-anchor="end">Uso exclusivo para tomada de decisão clínica fundamentada</text>
+</svg>
