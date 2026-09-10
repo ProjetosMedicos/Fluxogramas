@@ -1,6 +1,6 @@
-# 🩺 Portal de Fluxogramas Clínicos & Roteiro Semiológico - Ginecologia FEBRASGO
+# 🩺 Fluxogramas Médicos | Portal de Algoritmos & Decisão Clínica
 
-Portal interativo de alta performance para tomada de decisão clínica, propedêutica, semiologia ginecológica e prescrição médica, fundamentado no **Tratado de Ginecologia FEBRASGO (2ª Edição)**, nos **31 Resumos Temáticos Especializados** e nos consensos nacionais e internacionais de referência (**Ministério da Saúde PCDT, SBIm 2024, FIGO 2023, OMS, IOTA, IMS, The Menopause Society / NAMS 2023-2024, ESHRE, ASRM, IUGA, ICS, INCA, SBM, ISSVD, CDC, IFCPC, Endocrine Society, WPATH e NCCN**).
+Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular de alta densidade para expansão contínua em **múltiplas especialidades médicas**, tendo como primeiro grande módulo de referência a **Ginecologia & Obstetrícia** fundamentada no **Tratado de Ginecologia FEBRASGO (2ª Edição)**, nos **31 Resumos Temáticos Especializados** e nos principais consensos nacionais e internacionais de referência (**Ministério da Saúde PCDT, SBIm 2024, FIGO 2023, OMS, IOTA, IMS, The Menopause Society / NAMS 2023-2024, ESHRE, ASRM, IUGA, ICS, INCA, SBM, ISSVD, CDC, IFCPC, Endocrine Society, WPATH e NCCN**).
 
 ---
 
@@ -91,19 +91,43 @@ O portal contempla atualmente **37 especialidades e módulos temáticos**, distr
 ---
 
 ## 📁 Estrutura de Arquivos
-
+ 
 ```
 ├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.71 MB)
+├── manifest.webmanifest                     # Manifesto PWA (nome, tema, modo standalone e metadados de instalação)
+├── sw.js                                    # Service Worker com estratégia de cache e suporte offline completo
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual do Framework Clínico-Visual em 5 Etapas
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
 ├── Resumos Ginecologia/                     # Diretório com os 31 PDFs temáticos renomeados oficialmente
-└── imagens/                                 # 127 fluxogramas vetoriais em SVG de alta resolução
+└── imagens/                                 # 127 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
 ```
 
 ---
 
-## 🚀 Como Executar
+## 📲 Instalação como Aplicativo (PWA)
+
+O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo:
+
+1. **📱 No Celular (Android / Chrome):**
+   - Acesse o portal pelo navegador.
+   - Toque no botão **"📲 Instalar Aplicativo"** na barra lateral ou no menu do Chrome em **"Instalar aplicativo"** / **"Adicionar à tela inicial"**.
+   - O aplicativo ganha um ícone próprio e passa a abrir em tela cheia com experiência nativa.
+
+2. **🍎 No iPhone / iPad (iOS / Safari):**
+   - Abra o link no Safari.
+   - Toque no botão **Compartilhar** (ícone do quadrado com a seta para cima).
+   - Selecione **"Adicionar à Tela de Início"**.
+
+3. **💻 No Computador (Chrome / Edge / Windows / Mac):**
+   - Clique no ícone de instalação na barra de endereços do navegador ou no botão na barra lateral do app.
+
+4. **📶 Suporte 100% Offline:**
+   - O *Service Worker* integrado armazena em cache o aplicativo e os 127 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
+
+---
+
+## 🚀 Como Executar Localmente
 
 O portal foi construído em arquitetura estática pura de altíssima velocidade (*zero dependencies*):
 1. Dê um duplo clique no arquivo `index.html` ou abra-o em qualquer navegador moderno.
@@ -112,4 +136,4 @@ O portal foi construído em arquitetura estática pura de altíssima velocidade 
 ---
 
 **Equipe de Desenvolvimento & Curadoria Científica**  
-*Baseado no Tratado de Ginecologia da Federação Brasileira das Associações de Ginecologia e Obstetrícia (FEBRASGO).*
+*Módulo Ginecológico baseado no Tratado de Ginecologia da FEBRASGO.*

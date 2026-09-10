@@ -1,0 +1,40 @@
+{
+  "name": "Fluxogramas Médicos - Algoritmos de Decisão Clínica",
+  "short_name": "Fluxo Med",
+  "description": "Portal interativo e aplicativo clínico para tomada de decisão médica, fluxogramas diagnósticos e algoritmos terapêuticos baseados em evidências.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#090d16",
+  "theme_color": "#0f172a",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["medical", "education", "productivity"],
+  "icons": [
+    {
+      "src": "imagens/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imagens/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "imagens/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "imagens/icon-512.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
