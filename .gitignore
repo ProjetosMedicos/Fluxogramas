@@ -1,0 +1,11 @@
+# Arquivos de referência pesados (PDFs)
+*.pdf
+Resumos Ginecologia/
+
+# Backups temporários
+*.bak
+index.html.bak
+
+# Arquivos de sistema
+.DS_Store
+Thumbs.db
