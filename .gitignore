@@ -9,3 +9,6 @@ index.html.bak
 # Arquivos de sistema
 .DS_Store
 Thumbs.db
+
+# Bibliotecas externas desnecessárias (diagramas já estão em SVG)
+mermaid*.js

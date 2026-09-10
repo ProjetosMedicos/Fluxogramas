@@ -98,8 +98,6 @@ O portal contempla atualmente **37 especialidades e módulos temáticos**, distr
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual do Framework Clínico-Visual em 5 Etapas
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
-├── Tratado de Ginecologica, 2ed - Febrasgo.pdf # Obra de referência científica principal
-├── mermaid.min.js                           # Biblioteca de suporte a diagramas
 ├── Resumos Ginecologia/                     # Diretório com os 31 PDFs temáticos renomeados oficialmente
 └── imagens/                                 # 127 fluxogramas vetoriais em SVG de alta resolução
 ```
