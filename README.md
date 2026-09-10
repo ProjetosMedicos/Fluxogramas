@@ -93,8 +93,7 @@ O portal contempla atualmente **37 especialidades e módulos temáticos**, distr
 ## 📁 Estrutura de Arquivos
 
 ```
-├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.64 MB)
-├── index.html.bak                           # Backup consolidado sincronizado (~1.64 MB)
+├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.71 MB)
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual do Framework Clínico-Visual em 5 Etapas
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
