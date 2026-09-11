@@ -1314,8 +1314,12 @@
         overflow-x: hidden !important;
       }
 
-      /* Barra Superior Fixa e Padronizada no iPhone */
+      /* Barra Superior Fixa / Sticky no Topo (Nunca Some na Rolagem) */
       .top-bar {
+        position: sticky !important;
+        top: 0 !important;
+        z-index: 90 !important;
+        background-color: var(--bg-body) !important;
         display: flex !important;
         align-items: center !important;
         justify-content: space-between !important;
@@ -2229,30 +2233,11 @@
       text-wrap: pretty;
     }
 
-    /* Modern Standard Scrollbars (scrollbar-color & scrollbar-width) */
+    /* Stable Hardware Scrollbar */
     #sidebar,
     .module-picker-dropdown {
       scrollbar-width: thin;
       scrollbar-color: #243044 #090d16;
-    }
-
-    /* Defer Layout & Paint for Below-the-fold Cards (content-visibility: auto) */
-    @supports (content-visibility: auto) {
-      .content-section .card ~ .card,
-      .flowchart-img-container,
-      .case-box ~ .case-box {
-        content-visibility: auto;
-        contain-intrinsic-size: auto none auto 350px;
-      }
-    }
-
-    /* Smooth Native View Transitions */
-    @media (prefers-reduced-motion: no-preference) {
-      ::view-transition-old(root),
-      ::view-transition-new(root) {
-        animation-duration: 0.2s;
-        animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-      }
     }
 
   </style>
@@ -24313,6 +24298,10 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
     }
 
     // --- Global Improvements JS ---
+    function isMobileMode() {
+      return window.innerWidth <= 900 || (window.matchMedia && window.matchMedia('(max-width: 900px)').matches);
+    }
+
     function closeMobileSidebar() {
       const sidebar = document.getElementById('sidebar');
       const overlay = document.getElementById('mobile-overlay');
@@ -24324,20 +24313,21 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
     }
 
     function toggleSidebar() {
-      const isMobile = window.innerWidth <= 900;
+      const isMobile = isMobileMode();
       const sidebar = document.getElementById('sidebar');
       const overlay = document.getElementById('mobile-overlay');
       const menuBtn = document.getElementById('topbar-hamburger-btn');
 
       if (isMobile) {
         if (!sidebar) return;
-        const isOpen = sidebar.classList.toggle('open');
-        if (overlay) overlay.classList.toggle('active', isOpen);
-        if (menuBtn) menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        if (isOpen) {
+        const willOpen = !sidebar.classList.contains('open');
+        if (willOpen) {
+          sidebar.classList.add('open');
+          if (overlay) overlay.classList.add('active');
+          if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
           document.body.classList.add('mobile-menu-open');
         } else {
-          document.body.classList.remove('mobile-menu-open');
+          closeMobileSidebar();
         }
       } else {
         const isCollapsed = document.body.classList.toggle('sidebar-collapsed');
@@ -24399,7 +24389,7 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
     const sidebarElement = document.getElementById('sidebar');
     if (sidebarElement) {
       sidebarElement.addEventListener('click', (e) => {
-        if (window.innerWidth <= 900) {
+        if (isMobileMode()) {
           if (e.target.closest('.nav-item a') || e.target.closest('.module-picker-item')) {
             closeMobileSidebar();
           }
@@ -24505,22 +24495,18 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
         document.getElementById('current-crumb').textContent = text;
       }
 
-      // Rolar para o topo suavemente
       };
 
-      if (document.startViewTransition && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        document.startViewTransition(() => updateDOM());
-      } else {
-        updateDOM();
-      }
+      // Executar atualização direta e instantânea no DOM (sem travar touch no Safari)
+      updateDOM();
 
       // Fechar barra lateral automaticamente em telas móveis ao navegar
-      if (window.innerWidth <= 900) {
+      if (isMobileMode()) {
         closeMobileSidebar();
       }
 
-      // Rolar para o topo suavemente
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Rolar para o topo da seção imediatamente sem congelar thread
+      window.scrollTo(0, 0);
     }
 
     // Zoom nos fluxogramas
