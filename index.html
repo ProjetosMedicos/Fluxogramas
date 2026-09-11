@@ -1267,13 +1267,19 @@
         display: block !important;
       }
       #sidebar { 
-        transform: translateX(-100%);
-        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        width: 300px; 
-        box-shadow: 4px 0 24px rgba(0, 0, 0, 0.5);
+        -webkit-transform: translate3d(-100%, 0, 0);
+        transform: translate3d(-100%, 0, 0);
+        transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        will-change: transform;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        width: min(320px, 85vw); 
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+        contain: layout style;
       }
       #sidebar.open {
-        transform: translateX(0);
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
       }
       .sidebar-close-btn {
         display: inline-flex;
@@ -1551,17 +1557,29 @@
       color: #7dd3fc;
     }
 
-    /* Mobile Overlay */
+    /* Mobile Overlay & Scroll Lock */
+    body.mobile-menu-open {
+      overflow: hidden !important;
+      touch-action: none !important;
+    }
+
     #mobile-overlay {
-      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.65); 
-      backdrop-filter: blur(2px);
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.65);
       z-index: 95;
-      display: none; opacity: 0; transition: opacity 0.3s ease;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.25s;
     }
     #mobile-overlay.active { 
-      display: block; 
-      opacity: 1; 
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
     }
 
     /* Back to Top Floating Button */
@@ -2241,7 +2259,7 @@
 </head>
 <body>
   <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
-  <div id="mobile-overlay" onclick="toggleSidebar()"></div>
+  <div id="mobile-overlay" onclick="closeMobileSidebar()"></div>
 
   <!-- Sidebar Navigation -->
   <aside id="sidebar">
@@ -24295,6 +24313,16 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
     }
 
     // --- Global Improvements JS ---
+    function closeMobileSidebar() {
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('mobile-overlay');
+      const menuBtn = document.getElementById('topbar-hamburger-btn');
+      if (sidebar) sidebar.classList.remove('open');
+      if (overlay) overlay.classList.remove('active');
+      if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+      document.body.classList.remove('mobile-menu-open');
+    }
+
     function toggleSidebar() {
       const isMobile = window.innerWidth <= 900;
       const sidebar = document.getElementById('sidebar');
@@ -24306,6 +24334,11 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
         const isOpen = sidebar.classList.toggle('open');
         if (overlay) overlay.classList.toggle('active', isOpen);
         if (menuBtn) menuBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) {
+          document.body.classList.add('mobile-menu-open');
+        } else {
+          document.body.classList.remove('mobile-menu-open');
+        }
       } else {
         const isCollapsed = document.body.classList.toggle('sidebar-collapsed');
         if (menuBtn) menuBtn.setAttribute('aria-expanded', isCollapsed ? 'false' : 'true');
@@ -24362,17 +24395,17 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
       }
     }, { passive: true });
 
-    // Close mobile menu on clicking any navigation link or module button
-    document.querySelectorAll('.nav-item a, .module-tab-btn').forEach(el => {
-      el.addEventListener('click', () => {
+    // Delegated listener to close mobile menu on navigation without main thread lag
+    const sidebarElement = document.getElementById('sidebar');
+    if (sidebarElement) {
+      sidebarElement.addEventListener('click', (e) => {
         if (window.innerWidth <= 900) {
-          const sidebar = document.getElementById('sidebar');
-          const overlay = document.getElementById('mobile-overlay');
-          if (sidebar) sidebar.classList.remove('open');
-          if (overlay) overlay.classList.remove('active');
+          if (e.target.closest('.nav-item a') || e.target.closest('.module-picker-item')) {
+            closeMobileSidebar();
+          }
         }
-      });
-    });
+      }, { passive: true });
+    }
     // -----------------------------
 
         function switchSection(sectionId) {
@@ -24483,14 +24516,7 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
 
       // Fechar barra lateral automaticamente em telas móveis ao navegar
       if (window.innerWidth <= 900) {
-        const sidebar = document.getElementById('sidebar');
-        const overlay = document.getElementById('mobile-overlay');
-        const menuBtn = document.getElementById('topbar-hamburger-btn');
-        if (sidebar && sidebar.classList.contains('open')) {
-          sidebar.classList.remove('open');
-          if (overlay) overlay.classList.remove('active');
-          if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
-        }
+        closeMobileSidebar();
       }
 
       // Rolar para o topo suavemente
