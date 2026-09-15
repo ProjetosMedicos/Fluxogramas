@@ -1293,12 +1293,23 @@
         min-height: 38px;
         min-width: 38px;
       }
+      .sidebar-header {
+        padding-top: calc(16px + env(safe-area-inset-top, 0px)) !important;
+        padding-left: max(16px, env(safe-area-inset-left, 0px)) !important;
+      }
+      .sidebar-footer {
+        padding-bottom: calc(16px + env(safe-area-inset-bottom, 0px)) !important;
+        padding-left: max(14px, env(safe-area-inset-left, 0px)) !important;
+      }
       #main-content { 
         margin-left: 0 !important; 
         width: 100% !important;
         max-width: 100vw !important;
         min-width: 0 !important;
-        padding: 12px 10px 60px !important;
+        padding-top: 0 !important;
+        padding-left: max(10px, env(safe-area-inset-left, 0px)) !important;
+        padding-right: max(10px, env(safe-area-inset-right, 0px)) !important;
+        padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px)) !important;
         box-sizing: border-box !important;
         overflow-x: hidden !important;
       }
@@ -1319,7 +1330,7 @@
         overflow-x: hidden !important;
       }
 
-      /* Barra Superior Fixa / Sticky no Topo (Nunca Some na Rolagem) */
+      /* Barra Superior Fixa / Sticky no Topo com Proteção Safe Area para iPhone Notch & Dynamic Island */
       .top-bar {
         position: sticky !important;
         top: 0 !important;
@@ -1330,10 +1341,13 @@
         justify-content: space-between !important;
         width: 100% !important;
         max-width: 100% !important;
-        height: 52px !important;
-        min-height: 52px !important;
-        max-height: 52px !important;
-        padding: 0 0 10px !important;
+        height: auto !important;
+        min-height: calc(52px + env(safe-area-inset-top, 0px)) !important;
+        max-height: none !important;
+        padding-top: max(env(safe-area-inset-top, 0px), 8px) !important;
+        padding-bottom: 8px !important;
+        padding-left: max(10px, env(safe-area-inset-left, 0px)) !important;
+        padding-right: max(10px, env(safe-area-inset-right, 0px)) !important;
         margin-bottom: 14px !important;
         border-bottom: 1px solid var(--border) !important;
         box-sizing: border-box !important;
@@ -1366,7 +1380,7 @@
         overflow: hidden !important;
         text-overflow: ellipsis !important;
         display: block !important;
-        max-width: calc(100vw - 115px) !important;
+        max-width: calc(100vw - 115px - env(safe-area-inset-left, 0px) - env(safe-area-inset-right, 0px)) !important;
       }
 
       .top-bar-right {
@@ -1395,6 +1409,11 @@
         min-width: 38px !important;
         min-height: 38px !important;
         flex: 0 0 38px !important;
+      }
+
+      #back-to-top {
+        bottom: calc(20px + env(safe-area-inset-bottom, 0px)) !important;
+        right: calc(20px + env(safe-area-inset-right, 0px)) !important;
       }
 
       /* Mobile Uniform Typography - 100% Uniforme e Legível no iPhone */
@@ -24227,19 +24246,6 @@
 
     <!-- SEÇÃO 1: PRINCÍPIOS GERAIS, ÉTICA & POSICIONAMENTOS -->
     <section id="examefisico-visao-geral" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Princípios Gerais &amp; Posicionamentos</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>🩺 Exame Físico Ginecológico: Princípios Gerais, Ética &amp; Acolhimento</h1>
@@ -24306,19 +24312,6 @@
 
     <!-- SEÇÃO 2: EXAME DAS MAMAS & LINFONODOS -->
     <section id="examefisico-mamas" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Exame Clínico das Mamas</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>🎀 Exame Clínico das Mamas (ECM) &amp; Cadeias Ganglionares</h1>
@@ -24403,19 +24396,6 @@
 
     <!-- SEÇÃO 3: EXAME DO ABDOME EM GINECOLOGIA -->
     <section id="examefisico-abdome" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Exame do Abdome</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>🔍 Exame do Abdome Aplicado à Ginecologia</h1>
@@ -24470,19 +24450,6 @@
 
     <!-- SEÇÃO 4: GENITAIS EXTERNOS & PERÍNEO -->
     <section id="examefisico-genitais-externos" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Genitais Externos &amp; Períneo</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>🌸 Inspeção dos Genitais Externos, Glândulas &amp; Períneo</h1>
@@ -24550,19 +24517,6 @@
 
     <!-- SEÇÃO 5: EXAME ESPECULAR COMPLETO -->
     <section id="examefisico-especular" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Exame Especular</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>🔬 Exame Especular Completo &amp; Coletas Propedêuticas</h1>
@@ -24644,19 +24598,6 @@
 
     <!-- SEÇÃO 6: TOQUE BIMANUAL & RETOVAGINAL -->
     <section id="examefisico-toque-bimanual" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Toque Bimanual &amp; Retovaginal</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>👐 Toque Vaginal Bimanual &amp; Toque Retovaginal</h1>
@@ -24744,19 +24685,6 @@
 
     <!-- SEÇÃO 7: FLUXOGRAMAS & ALGORITMOS DE DECISÃO -->
     <section id="examefisico-fluxogramas" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Fluxogramas &amp; Algoritmos</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>📊 Fluxogramas &amp; Algoritmos de Exame Físico Ginecológico</h1>
@@ -24798,19 +24726,6 @@
 
     <!-- SEÇÃO 8: TABELAS SEMIOLÓGICAS & CASOS CLÍNICOS -->
     <section id="examefisico-tabelas-casos" class="content-section">
-      <div class="top-bar">
-        <div class="top-bar-left">
-          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
-          <div class="breadcrumbs">
-            <span>Exame Físico Ginecológico</span>
-            <span class="breadcrumb-separator">/</span>
-            <span class="breadcrumb-current" id="current-crumb">Tabelas &amp; Casos Clínicos</span>
-          </div>
-        </div>
-        <div class="top-bar-actions">
-          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
-        </div>
-      </div>
 
       <div class="section-header">
         <h1>📋 Tabelas Semiológicas, Roteiro de Prontuário &amp; Casos Clínicos</h1>
