@@ -141,6 +141,9 @@
       --cirurgia-color: #6366f1;
       --cirurgia-light: #eef2ff;
       --cirurgia-dark: #4338ca;
+      --examefisico-color: #0d9488;
+      --examefisico-light: #ccfbf1;
+      --examefisico-dark: #0f766e;
       --accent: #f59e0b;
       --accent-light: #fef3c7;
       --danger: #e11d48;
@@ -497,6 +500,8 @@
     .step-number.urocomplexa { background-color: var(--urocomplexa-color); }
     .nav-item a.active.cirurgia-active { background-color: var(--cirurgia-color); }
     .step-number.cirurgia { background-color: var(--cirurgia-color); }
+    .nav-item a.active.examefisico-active { background-color: var(--examefisico-color); }
+    .step-number.examefisico { background-color: var(--examefisico-color); }
     .nav-icon {
       font-size: 1.05rem;
       display: inline-flex;
@@ -2253,7 +2258,7 @@
       <div class="sidebar-brand">
         <span class="brand-badge">CLÍNICO</span>
         <h2>⚕️ Fluxogramas Médicos</h2>
-        <p>37 Módulos • 127 Fluxogramas</p>
+        <p>38 Módulos • 129 Fluxogramas</p>
       </div>
       <div class="sidebar-header-actions">
         <button id="pwa-install-btn" class="btn-theme-toggle" onclick="installPWA()" title="Instalar Aplicativo no Dispositivo" style="display: none; background: rgba(2, 132, 199, 0.2); border-color: var(--primary); color: #38bdf8;">📲</button>
@@ -2300,6 +2305,7 @@
       <option value="pgr">🌱 Perda Gestacional Recorrente & Trombofilias</option>
       <option value="urocomplexa">💧 Uroginecologia Complexa & ITUR</option>
       <option value="cirurgia">🔬 Anatomia Cirúrgica, Embriologia & CMI</option>
+      <option value="examefisico">🩺 Exame Físico Ginecológico Completo</option>
       <option value="metodologia">📘 Método do Fluxograma</option>
     </select>
 
@@ -2578,6 +2584,13 @@
           <div class="module-picker-item-info">
             <div class="module-picker-item-title">Consulta Ginecológica, Vacinação & LGBTQIAPN+</div>
             <div class="module-picker-item-sub">Capítulos 4-9 & 44 FEBRASGO • SBIm • 8 tópicos</div>
+          </div>
+        </div>
+        <div class="module-picker-item" data-mod="examefisico" onclick="selectModule('examefisico')">
+          <div class="module-picker-item-icon">🩺</div>
+          <div class="module-picker-item-info">
+            <div class="module-picker-item-title">Exame Físico Ginecológico Completo</div>
+            <div class="module-picker-item-sub">Capítulo 4 Tratado FEBRASGO • 8 tópicos</div>
           </div>
         </div>
 
@@ -4734,6 +4747,58 @@
         <a href="#cirurgia-casos" class="nav-link" onclick="switchSection('cirurgia-casos')">
           <span class="nav-icon">🧪</span>
           <span>Casos Clínicos & Conduta Perioperatória</span>
+        </a>
+      </li>
+    </ul>
+
+    <!-- MÓDULO 38: EXAME FÍSICO GINECOLÓGICO COMPLETO -->
+    <ul id="nav-group-examefisico" class="nav-list" style="display: none;">
+      <li class="nav-item">
+        <a href="#examefisico-visao-geral" class="nav-link" onclick="switchSection('examefisico-visao-geral')">
+          <span class="nav-icon">🩺</span>
+          <span>Princípios Gerais, Ética & Acolhimento</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-mamas" class="nav-link" onclick="switchSection('examefisico-mamas')">
+          <span class="nav-icon">🎀</span>
+          <span>Exame Clínico das Mamas & Linfonodos</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-abdome" class="nav-link" onclick="switchSection('examefisico-abdome')">
+          <span class="nav-icon">🔍</span>
+          <span>Exame do Abdome em Ginecologia</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-genitais-externos" class="nav-link" onclick="switchSection('examefisico-genitais-externos')">
+          <span class="nav-icon">🌸</span>
+          <span>Genitais Externos, Glândulas & Períneo</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-especular" class="nav-link" onclick="switchSection('examefisico-especular')">
+          <span class="nav-icon">🔬</span>
+          <span>Exame Especular & Coletas Propedêuticas</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-toque-bimanual" class="nav-link" onclick="switchSection('examefisico-toque-bimanual')">
+          <span class="nav-icon">👐</span>
+          <span>Toque Bimanual & Toque Retovaginal</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-fluxogramas" class="nav-link" onclick="switchSection('examefisico-fluxogramas')">
+          <span class="nav-icon">📊</span>
+          <span>Fluxogramas & Algoritmos de Decisão</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#examefisico-tabelas-casos" class="nav-link" onclick="switchSection('examefisico-tabelas-casos')">
+          <span class="nav-icon">📋</span>
+          <span>Tabelas Semiológicas & Casos Clínicos</span>
         </a>
       </li>
     </ul>
@@ -24168,6 +24233,750 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
         </div>
       </div>
     </section>
+
+    <!-- =================================================================== -->
+    <!-- MÓDULO 38: EXAME FÍSICO GINECOLÓGICO COMPLETO (FEBRASGO CAPÍTULO 4)  -->
+    <!-- =================================================================== -->
+
+    <!-- SEÇÃO 1: PRINCÍPIOS GERAIS, ÉTICA & POSICIONAMENTOS -->
+    <section id="examefisico-visao-geral" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Princípios Gerais &amp; Posicionamentos</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>🩺 Exame Físico Ginecológico: Princípios Gerais, Ética &amp; Acolhimento</h1>
+        <p>Fundamentação semiológica, infraestrutura, aspectos ético-legais e posicionamentos do exame baseados no Tratado FEBRASGO (2ª Edição, Capítulo 4).</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Relação Médico-Paciente, Ética &amp; Consentimento Esclarecido</h2>
+        <p>A consulta ginecológica apresenta características muito singulares na prática médica, pois adentra aspectos profundamente íntimos, corporais e emocionais da mulher. Para muitas pacientes, o exame físico ginecológico é acompanhado de sentimentos de ansiedade, constrangimento ou experiências traumáticas pregressas. Por isso, a atitude médica deve ser pautada em escuta ativa, empatia, respeito e absoluto rigor técnico.</p>
+        
+        <div class="step-card" style="margin-top: 14px;">
+          <div class="step-title">Pilares Éticos Obrigatórios (CFM &amp; FEBRASGO):</div>
+          <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+            <li><strong>Consentimento Esclarecido Prévio:</strong> Nenhuma etapa do exame deve ser iniciada sem que a paciente compreenda exatamente o que será feito, o instrumento que será utilizado e a finalidade diagnóstica.</li>
+            <li><strong>Explicação Passo a Passo:</strong> Durante a realização, avise verbalmente cada toque ou introdução antes de realizá-lo (ex.: "vou tocar suavemente na sua coxa", "vou introduzir o espéculo agora, você sentirá uma leve pressão").</li>
+            <li><strong>Presença de Acompanhante / Chaperone:</strong> A paciente tem o direito garantido por lei federal de ser acompanhada por pessoa de sua escolha. Além disso, a presença de uma auxiliar de enfermagem ou assistente de sala (chaperone) confere segurança emocional à paciente e respaldo legal ao examinador.</li>
+            <li><strong>Interrupção Imediata se Solicitada:</strong> Caso a paciente refira dor intolerável ou solicite a interrupção do procedimento, o exame deve ser pausado imediatamente para reavaliação.</li>
+          </ul>
+        </div>
+
+        <div class="alert-box info" style="margin-top: 14px;">
+          <strong>Infraestrutura &amp; Ambiência do Consultório:</strong>
+          A sala de exame deve garantir total privacidade visual e acústica (tranca na porta ou sinalização de "Em Exame"). Deve dispor de biombo ou banheiro privativo com vestimenta adequada (avental com abertura posterior e lençol descartável para cobrir a bacia e membros inferiores), temperatura ambiente agradável e foco de luz ginecológico de alta intensidade e direcionamento preciso.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Regra Fundamental de Ouro: Esvaziamento Vesical Prévio</h2>
+        <p>Antes de subir à mesa ginecológica, a paciente deve ser orientada a <strong>esvaziar completamente a bexiga</strong>. Esta é uma das regras mais enfáticas do Tratado de Ginecologia da FEBRASGO:</p>
+        <div class="step-card" style="margin-top: 10px;">
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Conforto da Paciente:</strong> A palpação abdominal e o toque bimanual sobre uma bexiga repleta causam dor intensa e sensação iminente de micção involuntária.</li>
+            <li><strong>Eliminação de Falso-Positivos:</strong> Uma bexiga distendida pode ser confundida à palpação ou percussão com um cisto ovariano, massa anexial ou mioma uterino volumoso em hipogástrio.</li>
+            <li><strong>Qualidade do Toque Bimanual:</strong> A bexiga vazia permite que a mão abdominal desça profundamente em direção à cavidade pélvica, encontrando os dedos vaginais para delimitar com precisão o fundo, corpo e volume uterinos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Posicionamentos Semiológicos em Ginecologia</h2>
+        <p>A escolha do posicionamento depende da infraestrutura disponível e das condições clínicas e articulares da paciente:</p>
+        
+        <div class="step-card" style="margin-top: 12px;">
+          <div class="step-title">1. Posição Ginecológica Clássica de Litotomia (Posição Padrão)</div>
+          <p>Paciente em decúbito dorsal com as nádegas posicionadas rigorosamente no bordo inferior da mesa ginecológica. As coxas e os joelhos são fletidos em aproximadamente 90° e apoiados nos estribos/perneiras acolchoadas. As pernas devem ficar relaxadas em abdução moderada. Esta posição oferece a melhor exposição anatômica da vulva, períneo, intróito e colo uterino.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 12px;">
+          <div class="step-title">2. Decúbito Dorsal com Joelhos Fletidos e Afastados (Posição Modificada)</div>
+          <p>Utilizada quando não se dispõe de mesa ginecológica com perneiras (atendimento domiciliar, leitos de enfermaria clínica ou consultórios básicos). A paciente posiciona-se em decúbito dorsal, junta os calcanhares próximos aos glúteos e afasta amplamente os joelhos. Permite boa inspeção e toque bimanual.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 12px;">
+          <div class="step-title">3. Posição Lateral de Sims (Decúbito Lateral Esquerdo)</div>
+          <p>A paciente deita-se sobre o lado esquerdo com a perna esquerda estendida e a perna direita fletida no quadril e joelho. Indicada para puérperas imediatas, gestantes em trabalho de parto, idosas com artrose coxofemoral grave ou pacientes cadeirantes/acamadas com restrição motora.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 12px;">
+          <div class="step-title">4. Posição Genupeitoral / Prece Maometana</div>
+          <p>A paciente apoia os joelhos e o tórax sobre a maca, mantendo as nádegas elevadas. Reservada para situações muito específicas, como na inspeção e reparo de fístulas vesicovaginais altas ou na pesquisa de prolapsos ocultos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 2: EXAME DAS MAMAS & LINFONODOS -->
+    <section id="examefisico-mamas" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Exame Clínico das Mamas</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>🎀 Exame Clínico das Mamas (ECM) &amp; Cadeias Ganglionares</h1>
+        <p>Semiologia mamária completa: inspeção estática, manobras dinâmicas, palpação metódica de Bloodgood, expressão papilar e palpação de linfonodos axilares e cervicais.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">1. Inspeção Estática (Paciente Sentada)</h2>
+        <p>A paciente deve permanecer sentada à frente do examinador com os braços relaxados ao lado do tronco, tórax completamente desnudo e iluminação tangencial adequada. Observam-se os seguintes aspectos anatômicos:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Simetria &amp; Volume:</strong> Assimetrias leves são extremamente frequentes e fisiológicas. Aumentos súbitos ou deformidades localizadas devem ser investigados.</li>
+          <li><strong>Pele e Contorno Mamário:</strong> Pesquisa de abaulamentos nodulares, retrações de pele, cicatrizes prévias de biópsia ou mamoplastia e circulação colateral superficial.</li>
+          <li><strong>Aspecto em "Casca de Laranja" (Peau d'orange):</strong> Espessamento cutâneo edematoso com orifícios foliculares aprofundados, típico de bloqueio linfático dérmico pelo Carcinoma Inflamatório da mama.</li>
+          <li><strong>Complexo Aréolo-Papilar:</strong> Morfologia dos mamilos, desvios no direcionamento papilar, inversão congênita (habitual e protrátil à estimulação) versus retração recente adquirida (sinal de alerta de neoplasia retroareolar infiltrante). Lesões eczematosas ou crostosas que não cicatrizam no mamilo sugerem <em>Doença de Paget</em>.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">2. Inspeção Dinâmica (Manobras Musculares)</h2>
+        <p>As manobras dinâmicas tensionam os ligamentos suspensores de Cooper e contraem a fáscia do músculo peitoral maior, evidenciando retrações subclínicas:</p>
+        
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Manobra 1: Elevação dos Braços Acima da Cabeça</div>
+          <p>A paciente eleva lentamente ambos os braços estendidos. Essa manobra traciona a glândula superiormente e permite examinar os sulcos submamários e as porções inferiores das mamas, revelando abaulamentos ou retrações ocultas.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Manobra 2: Contração Forçada do Músculo Peitoral Maior</div>
+          <p>A paciente apoia as mãos nos quadris (cintura) e comprime vigorosamente para dentro, contraindo os músculos grandes peitorais. Qualquer tumor maligno aderido aos ligamentos de Cooper ou à fáscia peitoral tracionará a pele, gerando retração ou covinha evidente.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Manobra 3: Inclinação Anterior do Tronco</div>
+          <p>A paciente inclina o tronco para a frente, permitindo que mamas volumosas e pêndulas caiam livremente para a frente, evidenciando áreas fixadas à grade costal.</p>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">3. Palpação Mamária Metódica (Decúbito Dorsal)</h2>
+        <p>Com a paciente deitada em decúbito dorsal, solicita-se que ela coloque a mão do lado a ser examinado sob a nuca ou cabeça. Essa postura espalha e achata o parênquima mamário uniformemente contra o gradil costal, facilitando a detecção de pequenos nódulos:</p>
+        
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Técnica Dedilhante de Bloodgood:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li>Utilizam-se as polpas digitais do 2º, 3º e 4º dedos da mão do examinador, realizando movimentos circulares suaves e progressivos comprimindo o tecido contra as costelas.</li>
+            <li><strong>Padronização de Rastreio:</strong> Realizar a palpação em faixas verticais paralelas (de cima para baixo), círculos concêntricos (da periferia até a aréola) ou raios de roda. O fundamental é cobrir 100% da superfície mamária.</li>
+            <li><strong>Prolongamento Axilar de Spence:</strong> Palpar obrigatoriamente a projeção superior e lateral da glândula em direção à axila, local onde incide mais de 50% dos carcinomas mamários.</li>
+          </ul>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Caracterização Semiológica de Nódulos Palpáveis:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Localização:</strong> Identificar o quadrante (QSE, QSI, QIE, QII) ou a posição no mostrador de relógio e a distância do bordo aréolar em centímetros.</li>
+            <li><strong>Tamanho:</strong> Mensurar em dois eixos perpendiculares em milímetros ou centímetros com auxílio de régua ou paquímetro.</li>
+            <li><strong>Consistência:</strong> Fibroelástica regular (sugestiva de fibroadenoma ou cisto tenso) versus pétrea e endurecida (altamente suspeita de malignidade).</li>
+            <li><strong>Mobilidade:</strong> Altamente móvel e deslizante (benigno) versus fixo à pele ou à fáscia muscular profunda (maligno).</li>
+            <li><strong>Limites &amp; Superfície:</strong> Bordas lisas e precisas (benigno) versus margens irregulares, espiculadas e mal delimitadas (maligno).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">4. Expressão Papilar &amp; Análise da Descarga</h2>
+        <p>Realiza-se compressão suave e radial com os dedos indicador e polegar a partir da base da aréola em direção à base do mamilo:</p>
+        <div class="alert-box warning" style="margin-top: 10px;">
+          <strong>Diferenciação Semiológica Crítica de Descarga Papilar:</strong>
+          <br>• <strong>Descarga Fisiológica / Benigna:</strong> Bilateral, multiductal (sai de múltiplos poros), provocada somente sob expressão vigorosa, de aspecto leitoso (galactorreia por prolactina), seroso, amarelado ou esverdeado (ectasia ductal).
+          <br>• <strong>Descarga Suspeita / Patológica:</strong> Unilateral, uniductal (exterioriza-se por um único poro papilar), espontânea (mancha a roupa sem compressão) e de aspecto hemático (sanguinolento) ou límpido incolor ("água de rocha"). Indica mamografia, ultrassonografia e biópsia/exérese de ductos (papiloma intraductal ou carcinoma).
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">5. Palpação das Cadeias Ganglionares</h2>
+        <p>A palpação linfonodal é realizada com a paciente sentada ereta:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Cadeias Axilares:</strong> Para examinar a axila direita, o examinador sustenta o antebraço direito da paciente com seu próprio braço direito. Isso relaxa totalmente a musculatura do peitoral maior. Com a mão esquerda livre e espalmada, palpam-se metódicamente os grupos anterior (peitoral), posterior (subescapular), lateral (braquial), central e apical (infraclavicular).</li>
+          <li><strong>Fossas Supraclaviculares &amp; Cervicais:</strong> O examinador posta-se atrás ou à frente da paciente, palpando com as polpas digitais a fossa supraclavicular bilateralmente. Linfonodo endurecido e fixo na fossa supraclavicular esquerda é denominado <em>Linfonodo de Virchow (Sinal de Troisier)</em>, sugerindo metástase de neoplasia abdominal ou pélvica.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 3: EXAME DO ABDOME EM GINECOLOGIA -->
+    <section id="examefisico-abdome" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Exame do Abdome</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>🔍 Exame do Abdome Aplicado à Ginecologia</h1>
+        <p>Propedêutica abdominal com foco em ginecologia: semiologia do útero e anexos, diferenciação de ascite por Skoda, delimitação de massas e manobras de alarme peritonial.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">1. Inspeção &amp; Ausculta Abdominal</h2>
+        <p>A paciente deve estar em decúbito dorsal com as pernas esticadas, cabeça apoiada em travesseiro baixo e musculatura da parede abdominal completamente relaxada:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Inspeção Estática e Dinâmica:</strong> Observar a forma do abdome (plano, globoso ou abaulado). Distensão simétrica generalizada sugere meteorismo por íleo paralítico ou ascite volumosa. Abaulamento assimétrico restrito ao hipogástrio ou fossas ilíacas sugere útero miomatoso volumoso ou cistoadenoma ovariano. Avaliar cicatrizes cirúrgicas prévias (Pfannenstiel, laparoscopia, cesáreas prévias) e circulação colateral.</li>
+          <li><strong>Ausculta Abdominal:</strong> Deve ser realizada <em>obrigatoriamente antes</em> da palpação ou percussão para não interferir nos ruídos intestinais. A diminuição acentuada ou abolição dos Ruídos Hidroaéreos (RHA) é sinal clássico de íleo paralítico por irritação peritoneal química ou infecciosa (peritonite ginecológica).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">2. Percussão Abdominal: Ascite versus Tumorações Pélvicas</h2>
+        <p>A percussão identifica se o aumento de volume abdominal é gasoso, líquido ou tumoral sólido:</p>
+        
+        <div class="step-card" style="margin-top: 12px;">
+          <div class="step-title">Diferencial Semiológico Clássico de Skoda:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Semicírculo de Skoda na Tumoração Pélvica Volumosa (Mioma ou Cisto Ovariano Gigante):</strong> A massa origina-se da pelve e cresce superiormente, empurrando as alças intestinais gasosas para cima e para os lados. Portanto, a zona de macicez tem <strong>convexidade superior</strong> (hipogástrio maciço) e o timpanismo tem concavidade voltada para baixo.</li>
+            <li><strong>Semicírculo de Skoda na Ascite Livre:</strong> O líquido livre escorre para as regiões mais baixas (flancos e pelve), enquanto as alças intestinais cheias de ar flutuam no centro (mesogástrio). Portanto, a zona de timpanismo central apresenta <strong>concavidade inferior</strong> e os flancos apresentam macicez.</li>
+            <li><strong>Pesquisa de Macicez Móvel:</strong> Percute-se o abdome em decúbito dorsal e, em seguida, vira-se a paciente em decúbito lateral. O líquido livre declina para o flanco apoiado, transformando a área anteriormente timpânica em maciça.</li>
+            <li><strong>Sinal do Piparote:</strong> Presente em ascites volumosas. A percussão com peteleco em um flanco transmite uma onda fluida percebida pela mão contralateral, bloqueando-se o impulso pela linha média com a mão de um auxiliar.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">3. Palpação Superficial &amp; Profunda de Massas</h2>
+        <p>Inicia-se sempre pela palpação superficial nas regiões menos dolorosas, progredindo para a palpação profunda:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Palpação Superficial:</strong> Avalia hiperestesia cutânea, tônus muscular e presença de defesa voluntária ou contratura involuntária da parede.</li>
+          <li><strong>Palpação Profunda de Massas:</strong> Determina se a massa tem limites superiores acessíveis, se ultrapassa a sínfise púbica, sua mobilidade em relação ao plano posterior e sua consistência (cística com flutuação, fibroelástica móvel ou sólida pétrea).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">4. Manobras Semiológicas de Alarme Peritoneal</h2>
+        <div class="alert-box danger" style="margin-top: 10px;">
+          <strong>Manobras Semiológicas Decisivas no Abdome Agudo:</strong>
+          <ul style="margin-left: 18px; line-height: 1.65; margin-top: 6px;">
+            <li><strong>Sinal de Blumberg (Descompressão Brusca Dolorosa Positiva):</strong> A descompressão rápida da parede abdominal causa dor lancinante decorrente do atrito de folhetos peritoneais inflamados. Indica peritonite aguda em DIP grave (abscesso tubo-ovariano), gravidez ectópica rota com hemoperitônio ou torção anexial isquêmica.</li>
+            <li><strong>Ponto de McBurney &amp; Sinal de Rovsing:</strong> Dor localizada no terço distal entre a espinha ilíaca ântero-superior direita e o umbigo, essencial para o diagnóstico diferencial de apendicite aguda.</li>
+            <li><strong>Sinal de Giordano (Punho-Percussão Lombar Positiva):</strong> Dor aguda à percussão com o bordo ulnar na loja renal posterior, apontando para pielonefrite aguda.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 4: GENITAIS EXTERNOS & PERÍNEO -->
+    <section id="examefisico-genitais-externos" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Genitais Externos &amp; Períneo</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>🌸 Inspeção dos Genitais Externos, Glândulas &amp; Períneo</h1>
+        <p>Semiologia da vulva, ordenha de glândulas de Skene e Bartholin, avaliação do tônus muscular perineal (Escala de Oxford) e manobra de Valsalva para prolapsos.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">1. Inspeção Vulvar Sistemática</h2>
+        <p>Com a paciente na posição de litotomia e boa iluminação focal, realiza-se o exame metódico de todas as estruturas externas:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Pilosidade &amp; Monte de Vênus:</strong> Disposição do triângulo piloso ginecoide com base superior. Dispersão de pelos em direção à cicatriz umbilical (linha alba) ou coxas sugere hiperandrogenismo (avaliar escore de Ferriman-Gallwey).</li>
+          <li><strong>Grandes &amp; Pequenos Lábios:</strong> Avaliação do trofismo, simetria, coloração, presença de fissuras, úlceras ou lesões verrucosas (condilomas acuminados por HPV). No hipoestrogenismo atrófico (climatério), há retração dos pequenos lábios e palidez cutaneomucosa.</li>
+          <li><strong>Clitóris:</strong> Avaliar glande e prepúcio clitoridiano. As dimensões normais são comprimento longitudinal de 4 a 10 mm e largura transversa de 3 a 5 mm. O <em>Índice Clitoridiano</em> é calculado pela multiplicação dos dois eixos (normal &lt; 35 mm²). Valores &gt; 35 mm² configuram clitoromegalia, sinal de hiperandrogenismo grave.</li>
+          <li><strong>Meato Uretral &amp; Hímen:</strong> Verificar aspecto do meato (carúnculas uretrais, hiperemia ou eversão) e do intróito vaginal (hímen íntegro versus anel roto com carúnculas mirtiformes pós-parto).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">2. Palpação &amp; Ordenha das Glândulas Anexas</h2>
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Glândulas Parauretrais de Skene:</div>
+          <p>Localizam-se lateralmente e abaixo da uretra distal. Introduz-se o dedo indicador enluvado cerca de 2 cm na vagina com a polpa voltada para cima, comprimindo e ordenhando a parede anterior contra o bordo inferior da sínfise púbica de dentro para fora. A saída de exsudato purulento pelo meato uretral é patognomônica de uretrite infecciosa ativa (gonococo ou clamídia).</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Glândulas Vestibulares Maiores de Bartholin:</div>
+          <p>Localizam-se na porção póstero-lateral do intróito vaginal, nas posições de 4 e 8 horas do mostrador do relógio, profundamente nos grandes lábios. São normalmente impalpáveis e indolores.</p>
+          <ul style="margin-left: 20px; line-height: 1.65; margin-top: 6px;">
+            <li><strong>Técnica de Palpação:</strong> Pinçamento bidigital com o dedo indicador na vagina e o polegar na face externa cutânea do grande lábio.</li>
+            <li><strong>Cisto de Bartholin:</strong> Tumefação arredondada, elástica e indolor no terço inferior vulvar, sem calor ou rubor cutâneo (obstrução do ducto).</li>
+            <li><strong>Abscesso de Bartholin:</strong> Tumefação unilateral de início agudo, extremamente dolorosa, eritematosa, quente e flutuante, frequentemente impedindo a paciente de sentar ou caminhar. <em>Conduta:</em> Drenagem sob anestesia local com inserção de Cateter de Word por 4 a 6 semanas ou marsupialização cirúrgica.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">3. Avaliação Perineal &amp; Tônus do Assoalho Pélvico</h2>
+        <p>Inspeciona-se a distância anovulvar (corpo perineal, normal &gt; 2,5 cm) e a presença de cicatrizes cirúrgicas de episiotomia prévia ou lacerações perineais de parto:</p>
+        
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Graduação de Força Muscular (Escala de Oxford Modificada):</div>
+          <p>Introduzem-se os dedos indicador e médio no terço inferior da vagina e solicita-se que a paciente aperte com força máxima, como se segurasse a urina:</p>
+          <ul style="margin-left: 20px; line-height: 1.65; margin-top: 6px;">
+            <li><strong>Grau 0:</strong> Ausência total de contração perceptível.</li>
+            <li><strong>Grau 1:</strong> Fasciculação ou contração tênue sem sustentação.</li>
+            <li><strong>Grau 2:</strong> Contração fraca sem elevação dos dedos do examinador.</li>
+            <li><strong>Grau 3:</strong> Contração moderada com elevação das polpas digitais contra a sínfise.</li>
+            <li><strong>Grau 4:</strong> Contração boa com pressão firme e resistência mantida.</li>
+            <li><strong>Grau 5:</strong> Contração potente com compressão forte sustentada por mais de 5 segundos.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">4. Inspeção Dinâmica com Manobra de Valsalva (Prolapsos)</h2>
+        <p>Solicita-se à paciente que realize esforço expulsivo máximo (Manobra de Valsalva) ou tussa vigorosamente várias vezes:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Prolapso da Parede Vaginal Anterior:</strong> Descida e abaulamento sacular da parede anterior (Cistocele / prolapso vesical).</li>
+          <li><strong>Prolapso Apical:</strong> Descida do colo uterino e fundo uterino (Histerocele) ou da cúpula vaginal pós-histerectomia.</li>
+          <li><strong>Prolapso da Parede Vaginal Posterior:</strong> Protrusão sacular da parede posterior (Retocele) ou de alças intestinais no fundo de saco de Douglas (Enterocele).</li>
+          <li><strong>Teste de Esforço Urinário:</strong> Observação de perda involuntária de urina sincrônica aos episódios de tosse na presença de bexiga parcialmente repleta (confirmação clínica de Incontinência Urinária de Esforço).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 5: EXAME ESPECULAR COMPLETO -->
+    <section id="examefisico-especular" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Exame Especular</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>🔬 Exame Especular Completo &amp; Coletas Propedêuticas</h1>
+        <p>Técnica semiológica de introdução sem gel nocivo, exposição cervical, colpocitologia oncótica (Papanicolaou), teste de Schiller com Lugol e bacterioscopia a fresco.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">1. Escolha do Espéculo &amp; Cuidados Críticos de Lubrificação</h2>
+        <p>O exame especular deve ser realizado <strong>sempre antes do toque vaginal bimanual</strong>, pois o toque digital prévio introduz lubrificante e descama mecanicamente as células cervicais, prejudicando a interpretação citológica:</p>
+        
+        <div class="step-card" style="margin-top: 10px;">
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Espéculo de Collins (Valvas Largas):</strong> Modelo padrão para a maioria das mulheres adultas e multíparas com paredes vaginais complacentes.</li>
+            <li><strong>Espéculo de Pederson (Valvas Estreitas e Planas):</strong> Indicado para pacientes nulíparas, mulheres idosas com atrofia vaginal acentuada ou intróito estenosado.</li>
+            <li><strong>Regra de Ouro da Lubrificação:</strong> <em>JAMAIS utilizar géis lubrificantes</em> (à base de óleo, glicerina ou antissépticos) caso haja coleta citológica ou bacteriológica programada. Os géis alteram a morfologia celular, causam artefatos de coloração e lise celular no Papanicolaou. O espéculo deve ser lubrificado apenas com soro fisiológico a 0,9% morno ou água destilada.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">2. Técnica de Introdução Especular Passo a Passo</h2>
+        <div class="step-card" style="margin-top: 10px;">
+          <ul style="margin-left: 20px; line-height: 1.7;">
+            <li><strong>Passo 1 (Exposição do Intróito):</strong> Com o polegar e o dedo indicador da mão não dominante, afastam-se suavemente os pequenos lábios, expondo a fúrcula posterior.</li>
+            <li><strong>Passo 2 (Posicionamento Oblíquo Inicial):</strong> Com o espéculo mantido completamente fechado na mão dominante, apoia-se a ponta das valvas sobre a fúrcula vulvar em uma angulação de aproximadamente 45° oblíqua. Esta inclinação evita o contato doloroso com a uretra anterior.</li>
+            <li><strong>Passo 3 (Introdução na Concavidade Sacral):</strong> Empurra-se delicadamente a fúrcula para baixo (direção posterior) e introduz-se o espéculo lentamente, direcionando-o para trás e para baixo, no sentido da concavidade sacral e do cóccix.</li>
+            <li><strong>Passo 4 (Rotação Horizontal):</strong> Ao atingir o terço médio da vagina, realiza-se uma rotação suave de 45° no instrumento, posicionando as valvas paralelamente às paredes anterior e posterior da vagina.</li>
+            <li><strong>Passo 5 (Abertura e Exposição Cervical):</strong> Progredir até o fundo de saco posterior. Abrem-se lentamente as valvas girando a borboleta/parafuso no sentido horário, até expor e abraçar o colo uterino. Fixa-se a trava do instrumento.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">3. Avaliação Macroscópica do Colo Uterino &amp; Paredes Vaginais</h2>
+        <p>Com o colo exposto sob boa iluminação, examinam-se a anatomia, o epitélio e as secreções:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Orifício Externo do Colo:</strong> Puntiforme e arredondado em nulíparas; em fenda transversa estrelada em multíparas.</li>
+          <li><strong>Ectopia / Ectrópio Glandular:</strong> Eversão fisiológica do epitélio colunar endocervical para a ectocérvice, comum em jovens, grávidas e usuárias de ACO, com aspecto avermelhado brilhante e aveludado na Junção Escamocolunar (JEC).</li>
+          <li><strong>Cistos de Naboth:</strong> Cistos de retenção esbranquiçados ou amarelados causados pela oclusão dos ductos glandulares pelo epitélio metaplásico escamoso normal; achado benigno fisiológico.</li>
+          <li><strong>Pólipos Cervicais:</strong> Formações carnosas digitiformes ou pediculadas avermelhadas projetando-se pelo canal endocervical.</li>
+        </ul>
+        <div class="alert-box danger" style="margin-top: 12px;">
+          <strong>Sinais de Alarme no Colo Uterino:</strong>
+          Lesões vegetantes em couve-flor, áreas ulceradas escavadas ou colo com tecido friável que sangra com extrema facilidade ao toque. <em>Conduta Obrigatória:</em> Não esperar pelo resultado do Papanicolaou (que frequentemente dá falso-negativo por necrose tumoral). Indicar imediatamente biópsia cervical sob visão colposcópica.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">4. Coletas Citopatológicas &amp; Testes Diagnósticos</h2>
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">A. Colpocitologia Oncótica (Teste de Papanicolaou):</div>
+          <p>Realiza-se a coleta dupla ectocervical e endocervical para amostrar representativamente a Junção Escamocolunar (JEC):</p>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Espátula de Ayre (Ectocérvice):</strong> Encaixa-se a extremidade bilobada com a ponta mais longa no orifício externo e gira-se 360° raspando uniformemente todo o epitélio ectocervical.</li>
+            <li><strong>Escova Endocervical / Cytobrush (Endocérvice):</strong> Introduz-se suavemente no canal cervical e gira-se 360°, colhendo células glandulares e da zona de transição.</li>
+            <li><strong>Fixação Imediata:</strong> Transferir para a lâmina e fixar em menos de 15 segundos em álcool a 96% ou spray fixador de polietilenoglicol para evitar dessecação celular.</li>
+          </ul>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">B. Teste de Schiller (Solução de Lugol a 2%):</div>
+          <p>Pincela-se solução iodada de Lugol sobre todo o colo e terço superior da vagina:</p>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Schiller Negativo / Iodo-Positivo (Normal):</strong> O epitélio escamoso maduro normal contém abundantes vacúolos de glicogênio citoplasmático, que absorvem o iodo e coram-se uniformemente em castanho-escuro (cor de mogno).</li>
+            <li><strong>Schiller Positivo / Iodo-Negativo (Patológico):</strong> O epitélio atrófico, metaplásico imaturo ou lesões pré-neoplásicas (NIC) e neoplásicas são desprovidos de glicogênio, resultando em áreas que não absorvem o iodo e ficam amareladas/claras. Essas áreas devem ser biopsiadas sob visão colposcópica dirigida.</li>
+          </ul>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">C. Exame a Fresco &amp; Teste das Aminas (Whiff Test):</div>
+          <p>Coleta-se uma gota da secreção do fundo de saco vaginal posterior:</p>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Gota com SF 0,9%:</strong> Pesquisa imediata em microscópio à beira do leito de trofozoítos flagelados móveis (<em>Trichomonas vaginalis</em>), pseudo-hifas (<em>Candida</em>) ou células-guia recobertas de cocobacilos (<em>Clue cells</em> na Vaginose).</li>
+            <li><strong>Gota com KOH a 10%:</strong> Teste das aminas positivo com liberação imediata de odor fétido volátil ("odor de peixe"), confirmando Vaginose por <em>Gardnerella vaginalis</em> e anaeróbios.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 6: TOQUE BIMANUAL & RETOVAGINAL -->
+    <section id="examefisico-toque-bimanual" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Toque Bimanual &amp; Retovaginal</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>👐 Toque Vaginal Bimanual &amp; Toque Retovaginal</h1>
+        <p>Semiologia do colo e sinal de Frenkel, palpação do corpo uterino (AVF/RVF/MVF), avaliação das lojas anexiais e ovários, e toque retovaginal em tesoura (indicações FEBRASGO).</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">1. Técnica Semiológica do Toque Bimanual Combinado</h2>
+        <p>Realizado após a retirada do espéculo. O examinador calça luvas novas lubrificadas na mão dominante:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Introdução Digital:</strong> Afastam-se os pequenos lábios e introduzem-se suavemente os dedos indicador e médio lubrificados (toque bidigital) ou apenas o indicador (unidigital em pacientes com atrofia acentuada ou estenose).</li>
+          <li><strong>Coordenação Bimanual:</strong> A mão interna na vagina apoia e eleva as vísceras pélvicas em direção à parede abdominal. Simultaneamente, a mão externa espalmada no hipogástrio comprime para baixo e para trás, sentindo o útero e os ovários entre as duas mãos.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">2. Palpação do Colo Uterino &amp; Sinal de Frenkel</h2>
+        <p>Avalia-se consistência, mobilidade, permeabilidade e resposta dolorosa:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Consistência Normal:</strong> Cartilaginosa e firme, assemelhando-se à consistência da cartilagem da ponta do nariz.</li>
+          <li><strong>Consistência na Gravidez (Sinal de Goodell):</strong> Amolecida e túrgida, com consistência similar à mucosa dos lábios orais.</li>
+          <li><strong>Consistência no Câncer Invasor:</strong> Endurecida, pétrea, irregular e friável.</li>
+          <li><strong>Permeabilidade do Orifício Externo:</strong> Fechado/impérvio na mulher não gravídica normal; pérvio para uma polpa digital em incompetência cervical ou abortamento em curso.</li>
+        </ul>
+        <div class="alert-box danger" style="margin-top: 10px;">
+          <strong>Sinal de Frenkel / Proust Positivo (Grito de Douglas):</strong>
+          Dor aguda e lancinante desencadeada pela rápida mobilização do colo uterino de um lado para o outro. Traduz tração do peritônio pélvico inflamado e é um dos <strong>critérios maiores obrigatórios para Doença Inflamatória Pélvica (DIP)</strong>, além de estar presente na gravidez ectópica rota com hemoperitônio.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">3. Palpação Bimanual do Corpo Uterino</h2>
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Posição Uterina no Espaço Pélvico:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Anteversoflexão (AVF):</strong> Posição anatômica mais prevalente (80% a 85% das mulheres). O corpo uterino repousa sobre a face superior da bexiga urinária. Ao toque bimanual, o fundo e o corpo uterino são facilmente palpados entre a mão interna e a mão abdominal.</li>
+            <li><strong>Retroversoflexão (RVF):</strong> Presente em 15% a 20% das mulheres sem significar patologia. O fundo uterino volta-se posteriormente para a concavidade sacral. A mão abdominal não palpa o útero; os dedos vaginais sentem o fundo uterino através do fundo de saco posterior de Douglas.</li>
+            <li><strong>Medioversoflexão (MVF):</strong> O útero encontra-se no eixo mediano alinhado ao canal vaginal.</li>
+          </ul>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Volume, Contorno &amp; Consistência do Útero:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>Volume Normal:</strong> Dimensões piriformes de 30 a 90 cm³ (peso aproximado de 40 a 90 gramas, similar a um pequeno limão).</li>
+            <li><strong>Aumento de Volume:</strong> Estimar em semanas gestacionais equivalentes (12 semanas atinge a sínfise púbica; 16 semanas meia distância; 20 semanas cicatriz umbilical). Sugere Miomatose Uterina, Adenomiose, Gestação ou Sarcoma.</li>
+            <li><strong>Contorno &amp; Superfície:</strong> Liso e homogêneo habitual versus nodular, irregular e bocelado (típico da leiomiomatose subserosa e intramural múltipla).</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">4. Palpação das Lojas Anexiais &amp; Fundo de Saco de Douglas</h2>
+        <p>Deslocam-se os dedos vaginais para o fundo de saco lateral (direito ou esquerdo), enquanto a mão abdominal comprime profundamente a fossa ilíaca correspondente:</p>
+        <ul style="margin-left: 20px; line-height: 1.65; margin-top: 8px;">
+          <li><strong>Ovários Normais:</strong> Estruturas móveis, ovoides, medindo 2 a 3 cm, discretamente sensíveis à compressão suave. São palpáveis em cerca de metade das mulheres jovens não obesas. As tubas uterinas normais são completamente impalpáveis.</li>
+          <li><strong>Fundo de Saco de Douglas:</strong> Palpado através do fundo de saco posterior da vagina. Deve ser livre, elástico e indolor. A presença de nodularidade rugosa endurecida nos ligamentos uterossacros associada a dor intensa é altamente sugestiva de <em>Endometriose Profunda</em>. O abaulamento tenso e flutuante sugere coleção líquida (pus ou sangue).</li>
+        </ul>
+        <div class="alert-box warning" style="margin-top: 12px;">
+          <strong>🚨 Regra de Ouro Semiológica na Pós-Menopausa:</strong>
+          Na mulher após a menopausa, com o cessar da função hormonal e involução fisiológica gonadal, <strong>os ovários devem ser rigorosamente IMPALPÁVEIS</strong>. A palpação de massa ovariana na pós-menopausa é sempre considerada anormal e impõe investigação imediata com ultrassonografia transvaginal com Doppler e dosagem sérica de CA-125 para descartar Câncer de Ovário.
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">5. Toque Retal &amp; Toque Retovaginal em Tesoura</h2>
+        <p>O toque retal e o toque retovaginal combinado não são realizados rotineiramente, mas possuem indicações semiológicas precisas e indispensáveis segundo o Tratado da FEBRASGO:</p>
+        
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Técnica em Tesoura (Manobra de Chrobak):</div>
+          <p>O examinador calça luva estéril nova e lubrifica ambos os dedos. Introduz-se o dedo indicador na vagina e o dedo médio no ânus/reto. Os dois dedos aproximam-se em movimento horizontal de tesoura, permitindo pinçar e examinar o septo retovaginal em toda a sua extensão.</p>
+        </div>
+
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">As 4 Indicações Formais segundo a FEBRASGO:</div>
+          <ul style="margin-left: 20px; line-height: 1.65;">
+            <li><strong>1. Pacientes com Hímen Íntegro (Virgens):</strong> Permite avaliar o tamanho do útero e anexos através da abordagem bimanual abdome-reto sem traumatizar ou romper a membrana himenal.</li>
+            <li><strong>2. Estadiamento Clínico do Câncer de Colo Uterino (FIGO):</strong> O toque retovaginal é o único método do exame físico capaz de avaliar com precisão a infiltração neoplásica dos paramétrios até a parede pélvica lateral (diferenciação entre Estádio IIB e IIIB).</li>
+            <li><strong>3. Endometriose Profunda do Septo Retovaginal:</strong> Palpação bimanual de nódulos infiltrantes no septo, ligamentos uterossacros e parede retal anterior.</li>
+            <li><strong>4. Diferenciação de Massas Pélvicas Retroperitoneais:</strong> Esclarece se tumorações originam-se do trato genital feminino ou do reto e espaço pré-sacral.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 7: FLUXOGRAMAS & ALGORITMOS DE DECISÃO -->
+    <section id="examefisico-fluxogramas" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Fluxogramas &amp; Algoritmos</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>📊 Fluxogramas &amp; Algoritmos de Exame Físico Ginecológico</h1>
+        <p>Fluxogramas oficiais de semiotécnica sequencial passo a passo e tomada de conduta rápida diante de achados clínicos anormais.</p>
+      </div>
+
+      <!-- Fluxograma 1 -->
+      <div class="card">
+        <h2 class="card-title">1. Roteiro Sequencial do Exame Físico Ginecológico Completo</h2>
+        <p>Algoritmo semiológico normatizado pela FEBRASGO cobrindo todas as etapas: Acolhimento $ightarrow$ Esvaziamento Vesical $ightarrow$ Mamas $ightarrow$ Abdome $ightarrow$ Posição $ightarrow$ Genitais Externos $ightarrow$ Espéculo $ightarrow$ Toque Bimanual $ightarrow$ Retovaginal:</p>
+        
+        <div class="flowchart-controls" style="margin-top: 12px; margin-bottom: 12px; display: flex; gap: 8px;">
+          <button class="btn-action" onclick="zoomFlowchart(this, 0.15)">🔍+ Zoom In</button>
+          <button class="btn-action" onclick="zoomFlowchart(this, -0.15)">🔍- Zoom Out</button>
+          <button class="btn-action" onclick="resetZoom(this)">↺ Reset</button>
+        </div>
+
+        <div class="flowchart-img-container" style="display: block; text-align: center; contain: paint; max-width: 100%; overflow: auto;">
+          <img src="imagens/fluxograma_exame_fisico_passo_a_passo.svg" alt="Roteiro Sequencial do Exame Físico Ginecológico Completo" class="flowchart-img" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+
+      <!-- Fluxograma 2 -->
+      <div class="card" style="margin-top: 24px;">
+        <h2 class="card-title">2. Conduta Clínica Diante de Achados Anormais ao Exame Físico</h2>
+        <p>Árvore de decisão rápida para estratificação de sinais de alerta: nódulo mamário pétreo, descarga papilar patológica, tumefação de Bartholin, sinal de Frenkel positivo, lesões cervicais e massa anexial na pós-menopausa:</p>
+        
+        <div class="flowchart-controls" style="margin-top: 12px; margin-bottom: 12px; display: flex; gap: 8px;">
+          <button class="btn-action" onclick="zoomFlowchart(this, 0.15)">🔍+ Zoom In</button>
+          <button class="btn-action" onclick="zoomFlowchart(this, -0.15)">🔍- Zoom Out</button>
+          <button class="btn-action" onclick="resetZoom(this)">↺ Reset</button>
+        </div>
+
+        <div class="flowchart-img-container" style="display: block; text-align: center; contain: paint; max-width: 100%; overflow: auto;">
+          <img src="imagens/fluxograma_exame_fisico_achados_anormais.svg" alt="Conduta em Achados Anormais no Exame Físico Ginecológico" class="flowchart-img" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
+        </div>
+      </div>
+    </section>
+
+    <!-- SEÇÃO 8: TABELAS SEMIOLÓGICAS & CASOS CLÍNICOS -->
+    <section id="examefisico-tabelas-casos" class="content-section">
+      <div class="top-bar">
+        <div class="top-bar-left">
+          <button class="menu-toggle-btn" id="topbar-hamburger-btn" onclick="toggleSidebar()" aria-label="Abrir Menu de Navegação" aria-expanded="false">☰</button>
+          <div class="breadcrumbs">
+            <span>Exame Físico Ginecológico</span>
+            <span class="breadcrumb-separator">/</span>
+            <span class="breadcrumb-current" id="current-crumb">Tabelas &amp; Casos Clínicos</span>
+          </div>
+        </div>
+        <div class="top-bar-actions">
+          <button class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <h1>📋 Tabelas Semiológicas, Roteiro de Prontuário &amp; Casos Clínicos</h1>
+        <p>Tabela comparativa de semiotécnica normal versus patológica, checklist de prontuário e 3 simulações clínicas interativas.</p>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Tabela 1: Semiotécnica Ginecológica - Achados Fisiológicos vs. Sinais de Alarme</h2>
+        <div class="table-responsive" style="overflow-x: auto; margin-top: 14px;">
+          <table class="clinical-table" style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="background: var(--bg-card-header); border-bottom: 2px solid var(--border);">
+                <th scope="col" style="padding: 10px; text-align: left;">Etapa / Estrutura</th>
+                <th scope="col" style="padding: 10px; text-align: left;">Manobra Semiológica</th>
+                <th scope="col" style="padding: 10px; text-align: left;">Achado Normal / Fisiológico</th>
+                <th scope="col" style="padding: 10px; text-align: left;">Sinal de Alarme / Patologia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Mamas (Pele/Mamilo)</strong></td>
+                <td style="padding: 10px;">Inspeção estática e dinâmica</td>
+                <td style="padding: 10px;">Simetria preservada, mamilos protráteis e pele lisa</td>
+                <td style="padding: 10px; color: #b91c1c;">Retração cutânea, aspecto em casca de laranja, retração recente ou Paget</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Mamas (Descarga)</strong></td>
+                <td style="padding: 10px;">Expressão radial suave</td>
+                <td style="padding: 10px;">Ausente ou multiductal leitosa/esverdeada</td>
+                <td style="padding: 10px; color: #b91c1c;">Uniductal unilateral espontânea serossanguinolenta ou água de rocha</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Abdome (Percussão)</strong></td>
+                <td style="padding: 10px;">Percussão e manobra de Skoda</td>
+                <td style="padding: 10px;">Timpanismo difuso e sonoridade normal</td>
+                <td style="padding: 10px; color: #b91c1c;">Macicez de concavidade superior (massa pélvica) ou macicez móvel (ascite)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Glândula de Bartholin</strong></td>
+                <td style="padding: 10px;">Palpação bidigital póstero-lateral</td>
+                <td style="padding: 10px;">Impalpável e indolor</td>
+                <td style="padding: 10px; color: #b91c1c;">Tumefação cística indolor (cisto) ou tumefação flutuante dolorosa (abscesso)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Uretra / Skene</strong></td>
+                <td style="padding: 10px;">Ordenha da parede anterior</td>
+                <td style="padding: 10px;">Sem saída de secreções</td>
+                <td style="padding: 10px; color: #b91c1c;">Saída de exsudato purulento pelo meato (uretrite gonocócica / clamídia)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Colo (Especular)</strong></td>
+                <td style="padding: 10px;">Exposição e visualização direta</td>
+                <td style="padding: 10px;">Colo róseo, orifício puntiforme ou em fenda</td>
+                <td style="padding: 10px; color: #b91c1c;">Lesão exofítica vegetante, úlcera friável sangrante ou secreção mucopurulenta</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Colo (Teste de Schiller)</strong></td>
+                <td style="padding: 10px;">Pincelamento com Lugol a 2%</td>
+                <td style="padding: 10px;">Iodo-positivo homogêneo (Schiller negativo)</td>
+                <td style="padding: 10px; color: #b91c1c;">Áreas Iodo-negativas amarelo-claras (Schiller positivo $ightarrow$ Biópsia)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Mobilidade Cervical</strong></td>
+                <td style="padding: 10px;">Mobilização lateral ao toque vaginal</td>
+                <td style="padding: 10px;">Colo móvel e completamente indolor</td>
+                <td style="padding: 10px; color: #b91c1c;">Sinal de Frenkel positivo (dor excruciante $ightarrow$ DIP aguda ou ectópica rota)</td>
+              </tr>
+              <tr style="border-bottom: 1px solid var(--border);">
+                <td style="padding: 10px;"><strong>Ovários (Pós-Menopausa)</strong></td>
+                <td style="padding: 10px;">Palpação bimanual nas fossas ilíacas</td>
+                <td style="padding: 10px;">Impalpáveis</td>
+                <td style="padding: 10px; color: #b91c1c;">Ovário palpável na pós-menopausa (investigação imediata de Ca de Ovário)</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><strong>Fundo de Saco de Douglas</strong></td>
+                <td style="padding: 10px;">Palpação no fundo vaginal posterior</td>
+                <td style="padding: 10px;">Livre, elástico e indolor</td>
+                <td style="padding: 10px; color: #b91c1c;">Nodulações rugosas dolorosas (endometriose profunda) ou abaulamento flutuante</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Checklist / Roteiro Prático de Prontuário Médico FEBRASGO</h2>
+        <div class="step-card" style="margin-top: 10px;">
+          <div class="step-title">Modelo Estruturado de Registro em Prontuário Clínico:</div>
+          <div style="background: #0f172a; color: #f8fafc; padding: 14px; border-radius: 6px; font-family: monospace; font-size: 0.85rem; line-height: 1.6; margin-top: 8px;">
+            <strong>MAMAS:</strong> Mamas simétricas, sem retrações ou abaulamentos às inspeções estática e dinâmica. Ausência de nódulos palpáveis em todos os quadrantes e prolongamentos axilares. Expressão papilar negativa bilateralmente. Linfonodos axilares e supraclaviculares impalpáveis.<br>
+            <strong>ABDOME:</strong> Abdome plano, flácido, RHA presentes e normais. Timpânico à percussão, sem visceromegalias ou massas palpáveis. Fossa ilíaca e hipogástrio indolores à palpação profunda; descompressão brusca negativa (Blumberg ausente).<br>
+            <strong>GENITAIS EXTERNOS:</strong> Pilosidade ginecoide típica. Grandes e pequenos lábios tróficos e íntegros. Meato uretral e intróito sem lesões ou secreções. Glândulas de Skene e Bartholin impalpáveis e indolores. Períneo íntegro, tônus muscular grau 4/5 (Oxford). Valsalva sem distopias ou perdas urinárias.<br>
+            <strong>EXAME ESPECULAR:</strong> Vagina ampla com mucosa trófica e rugosa, conteúdo vaginal fisiológico translúcido. Colo uterino epitelizado com orifício em fenda transversa/puntiforme, sem lesões vegetantes ou sangramentos. Teste de Schiller homogêneo (Iodo-positivo).<br>
+            <strong>TOQUE BIMANUAL:</strong> Colo cartilaginoso, fechado, móvel e indolor à mobilização (Frenkel negativo). Útero em AVF, volume normal (~60 cm³), superfície lisa, consistência fibroelástica e indolor. Regiões anexiais livres e indolores à palpação bimanual. Fundo de saco de Douglas elástico e sem nodulações.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2 class="card-title">Casos Clínicos Simulados Interativos</h2>
+        <p>Aplicação imediata do raciocínio semiológico à beira do leito:</p>
+
+        <!-- Caso 1 -->
+        <div class="case-box" style="margin-top: 16px; border-left: 4px solid var(--examefisico-color); padding: 16px; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Caso 1: Dor Pélvica Aguda e Febre na Jovem</h3>
+          <p style="margin-top: 8px; line-height: 1.6;"><strong>Paciente:</strong> L.G.S., 23 anos, nuligesta, sexualmente ativa, procura a emergência com dor contínua em hipogástrio há 4 dias, com piora aguda após o término da menstruação, febre medida de 38,5°C e calafrios. Ao exame físico geral: descorada +/4+, febril, taquicárdica (FC 104 bpm). Abdome: dor à palpação profunda em ambas as fossas ilíacas, com discreta defesa voluntária em hipogástrio e descompressão brusca duvidosa. Exame especular: hiperemia cervical difusa, com saída de secreção mucopurulenta espessa pelo orifício externo do colo. Toque bimanual: útero em AVF, volume normal, porém a tentativa de lateralização do colo uterino desencadeia dor lancinante imediata (sinal de Frenkel intensamente positivo), além de espessamento doloroso bilateral dos anexos.</p>
+          
+          <button class="btn-action" onclick="toggleCaseFeedback('feedback-examefisico-1')" aria-expanded="false" style="margin-top: 10px;">💡 Ver Diagnóstico &amp; Conduta Imediata</button>
+          
+          <div id="feedback-examefisico-1" class="case-feedback" aria-live="polite" style="display: none; margin-top: 12px; padding: 12px; background: var(--examefisico-light); border-radius: 6px; border-left: 4px solid var(--examefisico-dark);">
+            <strong style="color: var(--examefisico-dark);">Diagnóstico Semiológico &amp; Conduta Imediata:</strong>
+            <p style="margin-top: 6px; line-height: 1.6; color: #0f172a;">
+              • <strong>Diagnóstico:</strong> Doença Inflamatória Pélvica Aguda (DIP) - Estágio II de Monif (Endometrite + Salpingite com peritonite pélvica). A paciente preenche com louvor os 3 critérios maiores obrigatórios da FEBRASGO/CDC: (1) Dor em hipogástrio/anexial, (2) Dor anexial à palpação bimanual e (3) Dor excruciante à mobilização do colo uterino (Sinal de Frenkel positivo), somado a critérios menores (febre &gt; 38,3°C e secreção cervical purulenta).
+              <br>• <strong>Conduta:</strong> Internação hospitalar imediata, solicitação de Beta-hCG (excluir gestação ectópica concomitante), hemograma, PCR e ultrassonografia transvaginal para descartar Abscesso Tubo-Ovariano (Monif III). Iniciar antibioticoterapia parenteral venosa: <strong>Ceftriaxona 1g IV a cada 24h + Doxiciclina 100mg VO 12/12h + Metronidazol 400mg IV 12/12h</strong>.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caso 2 -->
+        <div class="case-box" style="margin-top: 20px; border-left: 4px solid #f59e0b; padding: 16px; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Caso 2: Consulta Preventiva na Pós-Menopausa</h3>
+          <p style="margin-top: 8px; line-height: 1.6;"><strong>Paciente:</strong> M.H.C., 57 anos, menopausa há 6 anos, sem terapia hormonal, comparece à consulta ambulatorial para realização de exames de rotina preventiva. Nega dores pélvicas, sangramentos ou queixas urinárias. Mamas sem alterações ao ECM. Abdome flácido, indolor e sem massas. Exame especular: mucosa vaginal discretamente atrófica, colo puntiforme e liso sem lesões. Ao toque bimanual: útero atrófico em AVF de volume reduzido (~35 cm³); na fossa ilíaca direita, palpa-se com nitidez uma estrutura ovoide de consistência elástica, bem delimitada, medindo cerca de 4,5 cm no maior diâmetro, móvel e pouco sensível.</p>
+          
+          <button class="btn-action" onclick="toggleCaseFeedback('feedback-examefisico-2')" aria-expanded="false" style="margin-top: 10px;">💡 Ver Diagnóstico &amp; Conduta Imediata</button>
+          
+          <div id="feedback-examefisico-2" class="case-feedback" aria-live="polite" style="display: none; margin-top: 12px; padding: 12px; background: #fef3c7; border-radius: 6px; border-left: 4px solid #b45309;">
+            <strong style="color: #b45309;">Diagnóstico Semiológico &amp; Conduta Imediata:</strong>
+            <p style="margin-top: 6px; line-height: 1.6; color: #451a03;">
+              • <strong>Raciocínio Semiológico:</strong> Aplicação direta da regra de ouro: <em>"Ovário palpável na pós-menopausa é patológico até prova em contrário"</em>. Em mulheres na menopausa, a atrofia gonadal torna os ovários normalmente inacessíveis ao toque bimanual. A palpação de uma massa anexial de 4,5 cm exige estratificação formal de malignidade.
+              <br>• <strong>Conduta:</strong> Não tranquilizar a paciente com falsa segurança. Solicitar com prioridade Ultrassonografia Pélvica Transvaginal com Doppler colorido (aplicando critérios IOTA / Simple Rules) e dosagem de biomarcadores séricos (<strong>CA-125, HE4 e cálculo do escore ROMA</strong>). Se características suspeitas (vegetações, componente sólido vascularizado), solicitar Ressonância Magnética de pelve e encaminhar para cirurgia oncológica.
+            </p>
+          </div>
+        </div>
+
+        <!-- Caso 3 -->
+        <div class="case-box" style="margin-top: 20px; border-left: 4px solid #6366f1; padding: 16px; background: var(--bg-card); border-radius: 8px; box-shadow: var(--shadow-sm);">
+          <h3 style="font-size: 1.1rem; color: var(--text-main); font-weight: 700;">Caso 3: Sensação de Peso Genital e Esforço</h3>
+          <p style="margin-top: 8px; line-height: 1.6;"><strong>Paciente:</strong> D.A.F., 34 anos, multípara (G3P3 vaginais, o último há 2 anos pesando 4.100g), procura o consultório queixando-se de sensação de "peso e abaulamento na vagina" que piora no fim da tarde após passar o dia em pé cuidando dos filhos. Nega perda urinária franca, mas relata sensação de esvaziamento incompleto ocasional. Ao exame em litotomia: genitália externa em repouso sem prolapso evidente, com hímen roto. À solicitação de Manobra de Valsalva máxima: eversão da parede vaginal anterior atingindo exatamente o plano do anel himenal (ponto Ba no nível 0 cm) e descida do colo uterino até o plano himenal (ponto C no nível 0 cm). Ao toque bimanual: tônus perineal grau 2/5 (Oxford), útero em AVF de tamanho normal.</p>
+          
+          <button class="btn-action" onclick="toggleCaseFeedback('feedback-examefisico-3')" aria-expanded="false" style="margin-top: 10px;">💡 Ver Diagnóstico &amp; Conduta Imediata</button>
+          
+          <div id="feedback-examefisico-3" class="case-feedback" aria-live="polite" style="display: none; margin-top: 12px; padding: 12px; background: #e0e7ff; border-radius: 6px; border-left: 4px solid #4338ca;">
+            <strong style="color: #4338ca;">Diagnóstico Semiológico &amp; Conduta Imediata:</strong>
+            <p style="margin-top: 6px; line-height: 1.6; color: #1e1b4b;">
+              • <strong>Diagnóstico:</strong> Prolapso de Órgãos Pélvicos Estádio II (Classificação POP-Q: Ba = 0 cm e C = 0 cm, atingindo a fenda genital himenal) associado a hipotonia da musculatura do assoalho pélvico (Grau 2 de Oxford) pós-partos vaginais com macrossomia fetal.
+              <br>• <strong>Conduta:</strong> Tratamento conservador de primeira linha. Indicar Treinamento da Musculatura do Assoalho Pélvico (TMAP) supervisionado por fisioterapia pélvica especializada com biofeedback e cones vaginais por no mínimo 12 a 16 semanas. Orientar medidas comportamentais (evitar constipação com dieta rica em fibras, cessar tabagismo se houver e controle de carga de peso). Reavaliação clínica em 3 a 6 meses.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
     </main>
 
   <script>
@@ -24210,7 +25019,7 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
       'pgr': { icon: '🌱', name: 'Perda Gestacional Recorrente & Trombofilias', sub: 'Capítulos 53 & 61 FEBRASGO • ASRM/Sydney • 8 tópicos', firstSection: 'pgr-visao-geral', ref: 'Capítulos 53 e 61 — Perda Gestacional Recorrente, SAAF e Trombofilias' },
       'urocomplexa': { icon: '💧', name: 'Uroginecologia Complexa & ITUR', sub: 'Capítulos 66, 67 & 69 FEBRASGO • IUGA/ICS • 8 tópicos', firstSection: 'urocomplexa-visao-geral', ref: 'Capítulos 66, 67 e 69 — ITU Recorrente, Fístulas Urogenitais e Dor Vesical' },
       'cirurgia': { icon: '🔬', name: 'Anatomia Cirúrgica, Embriologia & CMI', sub: 'Capítulos 1-3, 5, 15-18 & 69 FEBRASGO • ESHRE • 8 tópicos', firstSection: 'cirurgia-visao-geral', ref: 'Capítulos 1 a 3, 5, 15 a 18 e 69 — Anatomia Cirúrgica, Espaços Pélvicos, Malformações Müllerianas e Cirurgia Minimamente Invasiva' },
-
+      'examefisico': { icon: '🩺', name: 'Exame Físico Ginecológico Completo', sub: 'Capítulo 4 Tratado FEBRASGO • 8 tópicos', firstSection: 'examefisico-visao-geral', ref: 'Capítulo 4 — Consulta Ginecológica, Propedêutica & Semiotécnica (FEBRASGO)' },
     };
 
     // Interactive Module Picker Dropdown
@@ -24242,7 +25051,7 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
     });
 
         function switchModule(moduleId) {
-      const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia'];
+      const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia', 'examefisico'];
       
       // Reset all buttons and hide all nav groups
       moduleIds.forEach(id => {
@@ -24489,6 +25298,8 @@ ightarrow$ linfonodos pélvicos (ilíacos externos).<br>
           activeLink.classList.add('urocomplexa-active');
         } else if (sectionId.startsWith('cirurgia-')) {
           activeLink.classList.add('cirurgia-active');
+        } else if (sectionId.startsWith('examefisico-')) {
+          activeLink.classList.add('examefisico-active');
         }
         // Atualizar breadcrumbs
         const text = activeLink.querySelector('span:last-child')?.textContent || 'Tópico';

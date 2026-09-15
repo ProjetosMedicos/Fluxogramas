@@ -15,9 +15,9 @@ O portal foi concebido para estudantes de medicina, médicos residentes e genera
 
 ---
 
-## 📚 Estrutura dos 37 Módulos Clínicos Ativos
+## 📚 Estrutura dos 38 Módulos Clínicos Ativos
 
-O portal contempla atualmente **37 especialidades e módulos temáticos**, distribuídos em **292 seções clínicas estruturadas**, **150+ tabelas diagnósticas**, **127 fluxogramas vetoriais SVG** e **99 casos clínicos simulados interativos**:
+O portal contempla atualmente **38 especialidades e módulos temáticos**, distribuídos em **300 seções clínicas estruturadas**, **150+ tabelas diagnósticas**, **129 fluxogramas vetoriais SVG** e **102 casos clínicos simulados interativos**:
 
 | # | Módulo / Especialidade | Capítulos Tratado FEBRASGO | Destaques Propedêuticos, Tabelas & Algoritmos |
 | :-: | :--- | :--- | :--- |
@@ -57,7 +57,8 @@ O portal contempla atualmente **37 especialidades e módulos temáticos**, distr
 | **34** | **🌱 Perda Gestacional Recorrente (PGR)** | Cap. 53 e 61 | Definição ASRM/ESHRE (≥ 2 perdas), critérios de Sydney para SAAF obstétrica (LAC, aCL e anti-β2-GPI com confirmação ≥ 12 sem) -> AAS + Enoxaparina até 6 sem pós-parto; septoplastia histeroscópica e FIV c/ PGT-SR. |
 | **35** | **💧 Uroginecologia Complexa & ITUR** | Cap. 66, 67 e 69 | ITU recorrente (estrogênio tópico vaginal, D-manose, vacina OM-89); diferenciação de fístulas vesicovaginal vs ureterovaginal pelo teste do tampão com azul de metileno; cistite intersticial (úlceras de Hunner e amitriptilina). |
 | **36** | **🔬 Anatomia Cirúrgica, Embriologia & CMI** | Cap. 1-3, 5, 15-18, 69 | Espaços avasculares pélvicos (Retzius, vesicouterino, retovaginal, paravesicais, pararretais), trajeto ureteral ("água sob a ponte"), classificação ESHRE/ESGE de anomalias müllerianas e meios de distensão histeroscópica (risco de sobrecarga volêmica e hiponatremia dilucional). |
-| **37** | **📘 Método do Fluxograma Clínico** | Framework FEBRASGO | Metodologia ativa de raciocínio clínico visual em 5 etapas para estudantes de medicina e residentes. |
+| **37** | **🩺 Exame Físico Ginecológico Completo** | Cap. 4 | Semiotécnica completa passo a passo: mamas (Bloodgood e expressão), abdome (Skoda e Blumberg), genitália externa (Skene/Bartholin e Oxford), exame especular sem gel prejudicial, toque bimanual (Frenkel e volume AVF/RVF/MVF) e toque retovaginal em tesoura (indicações formais). |
+| **38** | **📘 Método do Fluxograma Clínico** | Framework FEBRASGO | Metodologia ativa de raciocínio clínico visual em 5 etapas para estudantes de medicina e residentes. |
 
 ---
 

@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1060 780" width="100%" height="100%" class="flowchart" style="background:#ffffff; font-family:Inter, system-ui, -apple-system, sans-serif;">
+  <defs>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1.5 L 8 5 L 0 8.5 z" fill="#dc2626"/>
+    </marker>
+    <filter id="shadow2" x="-4%" y="-4%" width="108%" height="112%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Header -->
+  <rect x="0" y="0" width="1060" height="72" fill="#0f172a"/>
+  <text x="30" y="30" fill="#f87171" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • CONDUTA DIANTE DE SINAIS DE ALARME</text>
+  <text x="30" y="55" fill="#ffffff" font-size="18" font-weight="800">CONDUTA EM ACHADOS ANORMAIS AO EXAME FÍSICO GINECOLÓGICO</text>
+  <text x="1030" y="44" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">Tratado FEBRASGO • Raciocínio Clínico Semiológico Imediato</text>
+
+  <!-- Top Alert Box -->
+  <rect x="30" y="88" width="1000" height="54" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="1.8" filter="url(#shadow2)"/>
+  <text x="50" y="112" font-size="13" font-weight="800" fill="#991b1b">IDENTIFICAÇÃO DE ACHADOS CLÍNICOS CRÍTICOS À BEIRA DO LEITO</text>
+  <text x="50" y="130" font-size="11.5" fill="#7f1d1d">O exame físico direciona a estratificação de gravidade imediata e a indicação de exames complementares de urgência vs. ambulatoriais.</text>
+
+  <!-- 4 Columns Grid for Abnormal Findings -->
+  <!-- Column 1: Mamas & Descarga -->
+  <rect x="30" y="158" width="238" height="600" rx="8" fill="#fdf2f8" stroke="#db2777" stroke-width="1.5" filter="url(#shadow2)"/>
+  <rect x="40" y="170" width="218" height="36" rx="6" fill="#fce7f3"/>
+  <text x="149" y="186" font-size="11.5" font-weight="800" fill="#9d174d" text-anchor="middle">1. ACHADOS MAMÁRIOS</text>
+  <text x="149" y="200" font-size="10" font-weight="700" fill="#be185d" text-anchor="middle">Inspeção, Palpação &amp; Descarga</text>
+
+  <!-- Inner Box 1A -->
+  <rect x="42" y="218" width="214" height="155" rx="6" fill="#ffffff" stroke="#fbcfe8"/>
+  <text x="50" y="235" font-size="10.5" font-weight="800" fill="#831843">Nódulo Palpável Suspeito:</text>
+  <text x="50" y="253" font-size="10" fill="#475569">• Consistência pétrea, fixo</text>
+  <text x="50" y="269" font-size="10" fill="#475569">• Bordas irregulares, espiculado</text>
+  <text x="50" y="285" font-size="10" fill="#475569">• Retração cutânea associada</text>
+  <text x="50" y="301" font-size="10" fill="#475569">• Linfonodomegalia axilar dura</text>
+  <rect x="50" y="315" width="198" height="48" rx="4" fill="#fff1f2" stroke="#f43f5e"/>
+  <text x="56" y="331" font-size="10" font-weight="800" fill="#be123c">Conduta Imediata:</text>
+  <text x="56" y="347" font-size="9.5" fill="#9f1239">Mamografia + USG + Core Biopsy</text>
+
+  <!-- Inner Box 1B -->
+  <rect x="42" y="388" width="214" height="175" rx="6" fill="#ffffff" stroke="#fbcfe8"/>
+  <text x="50" y="405" font-size="10.5" font-weight="800" fill="#831843">Descarga Papilar:</text>
+  <text x="50" y="423" font-size="10" fill="#15803d">✔️ Fisiológica / Benigna:</text>
+  <text x="50" y="439" font-size="9.5" fill="#475569">Multiductal, bilateral, amarelada/</text>
+  <text x="50" y="453" font-size="9.5" fill="#475569">esverdeada ou leitosa sob expressão</text>
+  <text x="50" y="475" font-size="10" fill="#b91c1c">⚠️ Suspeita / Patológica:</text>
+  <text x="50" y="491" font-size="9.5" fill="#991b1b">Unilateral, uniductal, espontânea,</text>
+  <text x="50" y="505" font-size="9.5" fill="#991b1b">sanguinolenta ou em água de rocha</text>
+  <rect x="50" y="518" width="198" height="38" rx="4" fill="#fdf4ff" stroke="#c084fc"/>
+  <text x="56" y="534" font-size="9.5" font-weight="700" fill="#6b21a8">Conduta: USG + Ductografia/RM</text>
+  <text x="56" y="548" font-size="9.5" fill="#6b21a8">Exérese de ductos (Papiloma? Ca?)</text>
+
+  <!-- Column 2: Vulva & Genitais Externos -->
+  <rect x="284" y="158" width="238" height="600" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="1.5" filter="url(#shadow2)"/>
+  <rect x="294" y="170" width="218" height="36" rx="6" fill="#fef9c3"/>
+  <text x="403" y="186" font-size="11.5" font-weight="800" fill="#854d0e" text-anchor="middle">2. VULVA &amp; PERÍNEO</text>
+  <text x="403" y="200" font-size="10" font-weight="700" fill="#a16207" text-anchor="middle">Glândulas, Úlceras &amp; Prolapsos</text>
+
+  <!-- Inner Box 2A -->
+  <rect x="296" y="218" width="214" height="155" rx="6" fill="#ffffff" stroke="#fef08a"/>
+  <text x="304" y="235" font-size="10.5" font-weight="800" fill="#713f12">Tumefação de Bartholin:</text>
+  <text x="304" y="253" font-size="10" fill="#475569">• Terço inferior póstero-lateral</text>
+  <text x="304" y="269" font-size="10" fill="#475569">• Cisto: indolor, sem flogose</text>
+  <text x="304" y="285" font-size="10" fill="#b91c1c">• Abscesso: dor excruciante, calor,</text>
+  <text x="304" y="301" font-size="10" fill="#b91c1c">  eritema e flutuação purulenta</text>
+  <rect x="304" y="315" width="198" height="48" rx="4" fill="#fffbeb" stroke="#f59e0b"/>
+  <text x="310" y="331" font-size="10" font-weight="800" fill="#b45309">Conduta: Drenagem + Word</text>
+  <text x="310" y="347" font-size="9.5" fill="#92400e">Marsupialização / Cefalexina se celulite</text>
+
+  <!-- Inner Box 2B -->
+  <rect x="296" y="388" width="214" height="175" rx="6" fill="#ffffff" stroke="#fef08a"/>
+  <text x="304" y="405" font-size="10.5" font-weight="800" fill="#713f12">Úlceras Genitais:</text>
+  <text x="304" y="423" font-size="10" fill="#475569">• Úlcera única indolor limpa: Sífilis</text>
+  <text x="304" y="439" font-size="10" fill="#475569">  (Penicilina Benzatina 2,4 mi UI)</text>
+  <text x="304" y="457" font-size="10" fill="#475569">• Vesículas dolorosas: Herpes simples</text>
+  <text x="304" y="473" font-size="10" fill="#475569">  (Aciclovir 400mg 3x/dia 7-10d)</text>
+  <text x="304" y="491" font-size="10" fill="#475569">• Úlceras múltiplas purulentas dolorosas:</text>
+  <text x="304" y="505" font-size="10" fill="#475569">  Cancro mole (Azitromicina 1g)</text>
+  <rect x="304" y="518" width="198" height="38" rx="4" fill="#fff7ed" stroke="#fb923c"/>
+  <text x="310" y="534" font-size="9.5" font-weight="700" fill="#c2410c">Biópsia: se &gt; 4 semanas sem cicatrizar</text>
+  <text x="310" y="548" font-size="9.5" fill="#c2410c">Regra obrigatória p/ descartar Câncer</text>
+
+  <!-- Column 3: Especular & Colo Uterino -->
+  <rect x="538" y="158" width="238" height="600" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5" filter="url(#shadow2)"/>
+  <rect x="548" y="170" width="218" height="36" rx="6" fill="#ccfbf1"/>
+  <text x="657" y="186" font-size="11.5" font-weight="800" fill="#0f766e" text-anchor="middle">3. EXAME ESPECULAR</text>
+  <text x="657" y="200" font-size="10" font-weight="700" fill="#115e59" text-anchor="middle">Colo, Secreção &amp; Schiller</text>
+
+  <!-- Inner Box 3A -->
+  <rect x="550" y="218" width="214" height="155" rx="6" fill="#ffffff" stroke="#99f6e4"/>
+  <text x="558" y="235" font-size="10.5" font-weight="800" fill="#115e59">Lesão Vegetante / Ulcerada:</text>
+  <text x="558" y="253" font-size="10" fill="#475569">• Tecido friável, sangrante ao toque</text>
+  <text x="558" y="269" font-size="10" fill="#475569">• Superfície irregular em couve-flor</text>
+  <text x="558" y="285" font-size="10" fill="#b91c1c">⚠️ NÃO AGUARDAR PAPANICOLAOU!</text>
+  <text x="558" y="301" font-size="10" fill="#475569">• Citologia tem falso-negativo por necrose</text>
+  <rect x="558" y="315" width="198" height="48" rx="4" fill="#f0fdfa" stroke="#14b8a6"/>
+  <text x="564" y="331" font-size="10" font-weight="800" fill="#0f766e">Conduta: Biópsia Imediata</text>
+  <text x="564" y="347" font-size="9.5" fill="#115e59">Exame anatomopatológico direto (Ca Colo)</text>
+
+  <!-- Inner Box 3B -->
+  <rect x="550" y="388" width="214" height="175" rx="6" fill="#ffffff" stroke="#99f6e4"/>
+  <text x="558" y="405" font-size="10.5" font-weight="800" fill="#115e59">Secreção Cervical / Schiller:</text>
+  <text x="558" y="423" font-size="10" fill="#b91c1c">• Secreção mucopurulenta saindo pelo</text>
+  <text x="558" y="439" font-size="10" fill="#b91c1c">  orifício externo + colo hiperemiado:</text>
+  <text x="558" y="453" font-size="9.5" fill="#475569">  Cervicite (Gonococo / Clamídia)</text>
+  <text x="558" y="475" font-size="10" fill="#475569">• Schiller Positivo (Área Iodo-Negativa):</text>
+  <text x="558" y="489" font-size="9.5" fill="#475569">  Não cora com Lugol (sem glicogênio)</text>
+  <rect x="558" y="518" width="198" height="38" rx="4" fill="#ecfeff" stroke="#06b6d4"/>
+  <text x="564" y="534" font-size="9.5" font-weight="700" fill="#0891b2">Conduta: Coleta molecular +</text>
+  <text x="564" y="548" font-size="9.5" fill="#0891b2">Colposcopia com biópsia dirigida</text>
+
+  <!-- Column 4: Toque Bimanual & Anexos -->
+  <rect x="792" y="158" width="238" height="600" rx="8" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5" filter="url(#shadow2)"/>
+  <rect x="802" y="170" width="218" height="36" rx="6" fill="#dbeafe"/>
+  <text x="911" y="186" font-size="11.5" font-weight="800" fill="#1e40af" text-anchor="middle">4. TOQUE BIMANUAL</text>
+  <text x="911" y="200" font-size="10" font-weight="700" fill="#1d4ed8" text-anchor="middle">Útero, Anexos &amp; Douglas</text>
+
+  <!-- Inner Box 4A -->
+  <rect x="804" y="218" width="214" height="155" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="812" y="235" font-size="10.5" font-weight="800" fill="#1e3a8a">Mobilização Dolorosa Cervical:</text>
+  <text x="812" y="253" font-size="10" fill="#b91c1c">⚠️ Sinal de Frenkel / Proust Positivo:</text>
+  <text x="812" y="269" font-size="9.5" fill="#475569">• Dor excruciante ao mover o colo</text>
+  <text x="812" y="285" font-size="9.5" fill="#475569">• Tríade de alarme: Febre + Dor anexial</text>
+  <text x="812" y="301" font-size="9.5" fill="#475569">• Hipótese: DIP Aguda ou Ectópica Rota</text>
+  <rect x="812" y="315" width="198" height="48" rx="4" fill="#eff6ff" stroke="#3b82f6"/>
+  <text x="818" y="331" font-size="10" font-weight="800" fill="#1d4ed8">Conduta Imediata:</text>
+  <text x="818" y="347" font-size="9.5" fill="#1e40af">Beta-hCG + POCUS + ATB venoso (DIP)</text>
+
+  <!-- Inner Box 4B -->
+  <rect x="804" y="388" width="214" height="175" rx="6" fill="#ffffff" stroke="#bfdbfe"/>
+  <text x="812" y="405" font-size="10.5" font-weight="800" fill="#1e3a8a">Massa Anexial na Pós-Menopausa:</text>
+  <text x="812" y="423" font-size="10" fill="#b91c1c">🚨 REGRA CRÍTICA DE OURO:</text>
+  <text x="812" y="439" font-size="9.5" fill="#991b1b">Ovário palpável na pós-menopausa</text>
+  <text x="812" y="453" font-size="9.5" fill="#991b1b">é SEMPRE ANORMAL até prova em contrário</text>
+  <text x="812" y="475" font-size="10" fill="#475569">• Nódulos no fundo de saco de Douglas:</text>
+  <text x="812" y="491" font-size="9.5" fill="#475569">  Endometriose profunda ou carcinomatose</text>
+  <rect x="812" y="518" width="198" height="38" rx="4" fill="#fef2f2" stroke="#ef4444"/>
+  <text x="818" y="534" font-size="9.5" font-weight="700" fill="#b91c1c">Conduta: USTV c/ Doppler (IOTA)</text>
+  <text x="818" y="548" font-size="9.5" fill="#b91c1c">CA-125 sérico + RM de pelve urgente</text>
+
+</svg>
