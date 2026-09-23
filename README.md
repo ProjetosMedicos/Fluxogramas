@@ -9,9 +9,9 @@ Portal interativo e **Web App (PWA)** de alta performance para tomada de decisã
 O portal foi concebido para estudantes de medicina, médicos residentes e generalistas, com o objetivo de reduzir a sobrecarga cognitiva e acelerar o raciocínio clínico à beira do leito e no ambulatório. Cada tema do tratado foi desconstruído em:
 1. **Visão Geral Teórica & Fundamentos (FEBRASGO):** Conceituação oficial, dados epidemiológicos nacionais, fisiopatologia celular/molecular e endocrinologia reprodutiva.
 2. **Roteiro Semiológico Completo em 4 Eixos:** Sinais, sintomas e caracterização estrita da queixa clínica (Frequência, Intensidade, Duração e Sintomas Associados / *Red Flags*).
-3. **Fluxogramas Clínicos Interativos (127 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
+3. **Fluxogramas Clínicos Interativos (129 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
 4. **Tabelas Comparativas & Guias de Bolso (150+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
-5. **Casos Clínicos Simulados (*Stress Testing* - 99 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
+5. **Casos Clínicos Simulados (*Stress Testing* - 102 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
 
 ---
 
@@ -88,20 +88,43 @@ O portal contempla atualmente **38 especialidades e módulos temáticos**, distr
   * `pgr` (Perda Gestacional Recorrente & Trombofilias • Cap. 53 e 61)
   * `urocomplexa` (Uroginecologia Complexa: ITU Recorrente, Fístulas & Cistite Intersticial • Cap. 66, 67, 69)
   * `cirurgia` (Anatomia Cirúrgica, Embriologia Mülleriana & Laparoscopia/Histeroscopia • Cap. 1-3, 5, 15-18, 69)
+* **Etapa 6: Propedêutica & Semiotécnica Ginecológica Completa** ✅ **CONCLUÍDA**
+  * `examefisico` (Exame Físico Ginecológico Completo • Cap. 4 Tratado FEBRASGO)
+* **Etapa 7: Engenharia Mobile-First & Conformidade iOS Safe Areas** ✅ **CONCLUÍDA**
+  * Integração de `env(safe-area-inset-*)` dinâmico para suporte nativo ao iPhone Notch e Dynamic Island
+  * Padronização tipográfica mobile a 16px (`1rem !important`) e contenção estrita de viewport contra auto-zoom
+  * Rolagem horizontal isolada nas 150+ tabelas clínicas e aceleração gráfica 3D no drawer de navegação
+
+---
+
+## 📘 Metodologia Adotada (Framework Clínico-Visual)
+
+O projeto fundamenta-se no **Framework Clínico-Visual e Engenharia de Decisão Médica**, concebido para acelerar a transição do conhecimento declarativo para o procedimental à beira do leito:
+
+1. **Desconstrução Estruturada (Matriz P.A.T.O.L.O.G.I.A):**
+   * **P**orta de Entrada, **A**namnese Dirigida (4 Eixos Semiológicos: Frequência, Intensidade, Duração e Red Flags), **T**riagem Extrínseca (Critérios OMS Cat. 1-4), **O**bjetivação no Exame Físico, **L**aboratório & Imagem Racional, **O**rganização Diagnóstica Oficial (FIGO PALM-COEIN, POP-Q, BI-RADS, STRAW+10), **G**raduação Terapêutica (1ª Linha, 2ª Linha, Cirurgia), **I**nterações e Contraindicações Absolutas e **A**valiação de Resposta (Follow-up).
+2. **Padrão Homogêneo em 8 Seções Clínicas:**
+   * Todos os 38 módulos compartilham rigorosamente a mesma sequência estrutural: Fundamentos/Fisiopatologia, Semiotécnica, Classificações/Diagnóstico, Farmacoterapia Escalonada, Cirurgia/Urgência, Fluxogramas Vetoriais SVG com Zoom e Tabelas Clínicas com Casos Simulados.
+3. **Validação por Stress Testing Clínico (Tríade de Casos):**
+   * Todo módulo é validado clinicamente por 3 cenários simulados da vida real (Caso Típico, Caso com Comorbidade/Confundidor e Caso de Intercorrência/Falha), acompanhados de justificativa e conduta recomendada interativa.
+4. **Engenharia de Software de Alto Rendimento:**
+   * Single-page application pura (*Zero Dependencies*), conformidade total com iOS Safe Areas (Notch & Dynamic Island), suporte 100% offline via PWA Service Worker e bateria automatizada de testes de integridade em Python.
+
+> Para consultar o manual metodológico aprofundado, acesse o documento completo em [`metodo_fluxograma.md`](file:///home/candida/Área%20de%20Trabalho/Antigravity/Fluxogramas/metodo_fluxograma.md).
 
 ---
 
 ## 📁 Estrutura de Arquivos
  
 ```
-├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.71 MB)
+├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.78 MB)
 ├── manifest.webmanifest                     # Manifesto PWA (nome, tema, modo standalone e metadados de instalação)
 ├── sw.js                                    # Service Worker com estratégia de cache e suporte offline completo
 ├── README.md                                # Documentação completa e guia de referência do projeto
-├── metodo_fluxograma.md                     # Manual do Framework Clínico-Visual em 5 Etapas
+├── metodo_fluxograma.md                     # Manual Metodológico Completo do Framework Clínico-Visual
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
 ├── Resumos Ginecologia/                     # Diretório com os 31 PDFs temáticos renomeados oficialmente
-└── imagens/                                 # 127 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
+└── imagens/                                 # 129 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
 ```
 
 ---
@@ -124,7 +147,7 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
    - Clique no ícone de instalação na barra de endereços do navegador ou no botão na barra lateral do app.
 
 4. **📶 Suporte 100% Offline:**
-   - O *Service Worker* integrado armazena em cache o aplicativo e os 127 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
+   - O *Service Worker* integrado armazena em cache o aplicativo e os 129 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
 
 ---
 
@@ -132,7 +155,7 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
 
 O portal foi construído em arquitetura estática pura de altíssima velocidade (*zero dependencies*):
 1. Dê um duplo clique no arquivo `index.html` ou abra-o em qualquer navegador moderno.
-2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 127 SVGs e 99 casos clínicos simulados com feedback imediato.
+2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 129 SVGs e 102 casos clínicos simulados com feedback imediato.
 
 ---
 
