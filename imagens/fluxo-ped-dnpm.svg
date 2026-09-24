@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#fdf4ff" stroke="#d946ef" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE VIGILÂNCIA DO DESENVOLVIMENTO NEUROPSICOMOTOR (DNPM)</text>
+  <text x="50" y="78" class="subtitle">Triagem Sistemática, Sinais de Alerta e Rastreio de TEA (M-CHAT-R/F) • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#a21caf" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PUERICULTURA</text>
+
+  <!-- 4 Domains of Development -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="215" height="120" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="2" />
+    <text x="147" y="140" text-anchor="middle" class="node-bold" fill="#1d4ed8">1. Motor Grosseiro</text>
+    <text x="147" y="160" text-anchor="middle" class="node-text">• 2m: Sustenta a cabeça</text>
+    <text x="147" y="180" text-anchor="middle" class="node-text">• 6-7m: Senta sem apoio</text>
+    <text x="147" y="200" text-anchor="middle" class="node-text">• 9-10m: Fica em pé com apoio</text>
+    <text x="147" y="220" text-anchor="middle" class="node-text">• 12m: Anda com apoio / primeiros passos</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="275" y="115" width="215" height="120" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" />
+    <text x="382" y="140" text-anchor="middle" class="node-bold" fill="#047857">2. Fino-Adaptativo</text>
+    <text x="382" y="160" text-anchor="middle" class="node-text">• 3m: Mãos abertas / linha média</text>
+    <text x="382" y="180" text-anchor="middle" class="node-text">• 6m: Passa objeto entre as mãos</text>
+    <text x="382" y="200" text-anchor="middle" class="node-text">• 9m: Movimento de pinça inferior</text>
+    <text x="382" y="220" text-anchor="middle" class="node-text">• 12m: Pinça superior fina (polegar-indicador)</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="510" y="115" width="215" height="120" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" />
+    <text x="617" y="140" text-anchor="middle" class="node-bold" fill="#b45309">3. Linguagem & Audição</text>
+    <text x="617" y="160" text-anchor="middle" class="node-text">• 2m: Vocaliza sons guturais (aaa, ggg)</text>
+    <text x="617" y="180" text-anchor="middle" class="node-text">• 6m: Balbucio polissilábico (da-da, ma-ma)</text>
+    <text x="617" y="200" text-anchor="middle" class="node-text">• 12m: Palavras com significado (pai, mãe)</text>
+    <text x="617" y="220" text-anchor="middle" class="node-text">• 18-24m: Combina 2 palavras ("dá água")</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="745" y="115" width="215" height="120" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="2" />
+    <text x="852" y="140" text-anchor="middle" class="node-bold" fill="#6d28d9">4. Pessoal-Social</text>
+    <text x="852" y="160" text-anchor="middle" class="node-text">• 2m: Sorriso social responsivo</text>
+    <text x="852" y="180" text-anchor="middle" class="node-text">• 6m: Estranha pessoas desconhecidas</text>
+    <text x="852" y="200" text-anchor="middle" class="node-text">• 9m: Bate palminhas, dá tchau</text>
+    <text x="852" y="220" text-anchor="middle" class="node-text">• 12-15m: Aponta com dedo indicador</text>
+  </g>
+
+  <!-- Flowchart Decision -->
+  <g class="card-shadow">
+    <rect x="250" y="265" width="500" height="60" rx="10" fill="#f1f5f9" stroke="#64748b" stroke-width="2" />
+    <text x="500" y="290" text-anchor="middle" class="node-bold">AVALIAÇÃO EM CONSULTA DE PUERICULTURA</text>
+    <text x="500" y="310" text-anchor="middle" class="node-text">Todos os marcos adequados para a idade corrigida? Presença de reflexos primitivos anormais?</text>
+  </g>
+
+  <path d="M 350 325 L 200 375" class="edge" />
+  <path d="M 650 325 L 800 375" class="edge" />
+
+  <!-- Left: Adequado -->
+  <g class="card-shadow">
+    <rect x="50" y="375" width="300" height="90" rx="8" fill="#f0fdf4" stroke="#22c55e" stroke-width="2" />
+    <text x="200" y="400" text-anchor="middle" class="node-bold" fill="#15803d">DESENVOLVIMENTO ADEQUADO</text>
+    <text x="200" y="420" text-anchor="middle" class="node-text">• Elogiar os cuidadores e estimular brincadeiras</text>
+    <text x="200" y="440" text-anchor="middle" class="node-text">• Orientar marcos da próxima consulta</text>
+    <text x="200" y="455" text-anchor="middle" class="node-text">• Manter vigilância regular pelo calendário SBP</text>
+  </g>
+
+  <!-- Right: Atraso ou Fator de Risco -->
+  <g class="card-shadow">
+    <rect x="650" y="375" width="300" height="90" rx="8" fill="#fef2f2" stroke="#ef4444" stroke-width="2" />
+    <text x="800" y="400" text-anchor="middle" class="node-bold" fill="#b91c1c">SUSPEITA DE ATRASO / RED FLAGS</text>
+    <text x="800" y="420" text-anchor="middle" class="node-text">• Perda de marco previamente adquirido (regressão)</text>
+    <text x="800" y="440" text-anchor="middle" class="node-text">• Assimetria de tônus ou postura anormal</text>
+    <text x="800" y="455" text-anchor="middle" class="node-bold" fill="#b91c1c">Encaminhar IMEDIATO para Estimulação Precoce</text>
+  </g>
+
+  <!-- M-CHAT-R Section -->
+  <g class="card-shadow">
+    <rect x="50" y="490" width="900" height="235" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="70" y="520" class="node-bold" fill="#0f172a">RASTREIO UNIVERSAL DE AUTISMO (M-CHAT-R/F) ENTRE 18 E 24 MESES (LEI FEDERAL & SBP 2024)</text>
+    <text x="70" y="545" class="node-text">Questionário de 20 perguntas respondido pelos pais para identificar risco de Transtorno do Espectro Autista (TEA).</text>
+
+    <!-- Score Blocks -->
+    <rect x="70" y="560" width="260" height="60" rx="6" fill="#ecfdf5" stroke="#10b981" />
+    <text x="200" y="582" text-anchor="middle" class="node-bold" fill="#047857">Baixo Risco (Escore 0 a 2)</text>
+    <text x="200" y="605" text-anchor="middle" class="node-text">Se &lt; 24m, reavaliar aos 24m.</text>
+
+    <rect x="370" y="560" width="260" height="60" rx="6" fill="#fffbeb" stroke="#f59e0b" />
+    <text x="500" y="582" text-anchor="middle" class="node-bold" fill="#b45309">Médio Risco (Escore 3 a 7)</text>
+    <text x="500" y="605" text-anchor="middle" class="node-text">Aplicar Entrevista de Seguimento (Follow-Up).</text>
+
+    <rect x="670" y="560" width="260" height="60" rx="6" fill="#fef2f2" stroke="#ef4444" />
+    <text x="800" y="582" text-anchor="middle" class="node-bold" fill="#b91c1c">Alto Risco (Escore 8 a 20)</text>
+    <text x="800" y="605" text-anchor="middle" class="node-text">Encaminhar direto para Neuropediatra/Psiquiatra.</text>
+
+    <text x="70" y="645" class="node-bold" fill="#0f172a">SINAIS PRECOCES DE ALERTA DE TEA (&lt; 18 MESES):</text>
+    <text x="70" y="670" class="node-text">• Pouco contato visual sustentado | Não atende quando chamado pelo nome aos 12 meses.</text>
+    <text x="70" y="690" class="node-text">• Ausência de atenção compartilhada (não aponta para mostrar interesse ou não segue o apontar do adulto).</text>
+    <text x="70" y="710" class="node-text">• Movimentos estereotipados (flapping, andar nas pontas dos pés), rigidez com rotinas ou hipersensibilidade sensorial.</text>
+  </g>
+</svg>

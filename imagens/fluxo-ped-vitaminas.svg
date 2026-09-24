@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE SUPLEMENTAÇÃO PROFILÁTICA DE MICRONUTRIENTES & VITAMINAS</text>
+  <text x="50" y="78" class="subtitle">Diretrizes Nacionais de Ferro, Vitamina D, Vitamina A e Zinco • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#1d4ed8" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PROFILAXIAS</text>
+
+  <!-- Iron Profilaxis (SBP 2024) -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="920" height="205" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+    <text x="60" y="140" class="node-bold" fill="#b91c1c">PROFILAXIA UNIVERSAL DE ANEMIA FERROPRIVA (SBP 2024 / MS)</text>
+
+    <!-- Category 1 -->
+    <rect x="60" y="155" width="270" height="150" rx="6" fill="#fef2f2" stroke="#fca5a5" />
+    <text x="195" y="175" text-anchor="middle" class="node-bold" fill="#991b1b">RN a Termo e Peso &gt; 2500g</text>
+    <text x="75" y="195" class="node-text">• <tspan font-weight="700">Em AME ou Misto:</tspan></text>
+    <text x="75" y="215" class="node-text">  Iniciar aos <tspan font-weight="700">3 MESES</tspan> até 24 meses.</text>
+    <text x="75" y="235" class="node-text">• <tspan font-weight="700">Dose:</tspan> <tspan font-weight="700" fill="#b91c1c">1 mg/kg/dia</tspan> de ferro elementar.</text>
+    <text x="75" y="255" class="node-text">• <tspan font-weight="700">Se Fórmula Infantil &gt; 500 mL/dia:</tspan></text>
+    <text x="75" y="275" class="node-text">  Não necessita suplementação oral</text>
+    <text x="75" y="295" class="node-text">  (a fórmula já é fortificada).</text>
+
+    <!-- Category 2 -->
+    <rect x="365" y="155" width="270" height="150" rx="6" fill="#fef2f2" stroke="#fca5a5" />
+    <text x="500" y="175" text-anchor="middle" class="node-bold" fill="#991b1b">Prematuro ou Baixo Peso (&lt;2500g)</text>
+    <text x="380" y="195" class="node-text">• <tspan font-weight="700">Iniciar com 30 DIAS DE VIDA</tspan>.</text>
+    <text x="380" y="215" class="node-text">• Manter até completar 1 ano de vida.</text>
+    <text x="380" y="235" class="node-text">• <tspan font-weight="700">Dose por peso ao nascer:</tspan></text>
+    <text x="380" y="255" class="node-text">  - 1500g a 2499g: <tspan font-weight="700">2 mg/kg/dia</tspan>.</text>
+    <text x="380" y="275" class="node-text">  - 1000g a 1499g: <tspan font-weight="700">3 mg/kg/dia</tspan>.</text>
+    <text x="380" y="295" class="node-text">  - &lt; 1000g (extremo): <tspan font-weight="700">4 mg/kg/dia</tspan>.</text>
+
+    <!-- Category 3 -->
+    <rect x="670" y="155" width="270" height="150" rx="6" fill="#fef2f2" stroke="#fca5a5" />
+    <text x="805" y="175" text-anchor="middle" class="node-bold" fill="#991b1b">2º Ano de Vida dos Prematuros</text>
+    <text x="685" y="200" class="node-text">• Ao completar 1 ano de vida:</text>
+    <text x="685" y="225" class="node-text">  Reduzir a dose para <tspan font-weight="700" fill="#b91c1c">1 mg/kg/dia</tspan>.</text>
+    <text x="685" y="250" class="node-text">• Manter dos 12 aos 24 meses</text>
+    <text x="685" y="275" class="node-text">  de idade cronológica.</text>
+  </g>
+
+  <!-- Vitamin D & Vitamin A & Zinc -->
+  <g class="card-shadow">
+    <rect x="40" y="340" width="280" height="200" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="180" y="365" text-anchor="middle" class="node-bold" fill="#b45309">VITAMINA D (SBP 2024)</text>
+    <text x="55" y="390" class="node-text">• <tspan font-weight="700">Início:</tspan> Primeira semana de vida.</text>
+    <text x="55" y="415" class="node-text">• <tspan font-weight="700">0 a 12 meses:</tspan> <tspan font-weight="700" fill="#b45309">400 UI/dia</tspan>.</text>
+    <text x="55" y="440" class="node-text">• <tspan font-weight="700">12 a 24 meses:</tspan> <tspan font-weight="700" fill="#b45309">600 UI/dia</tspan>.</text>
+    <text x="55" y="465" class="node-text">• Universal: Para todos os lactentes,</text>
+    <text x="70" y="485" class="node-text">em AME ou fórmula &lt; 1000 mL/dia.</text>
+    <text x="55" y="510" class="node-text">• <tspan font-weight="700">Prevenção:</tspan> Raquitismo carencial e</text>
+    <text x="70" y="525" class="node-text">otimização da imunidade inata.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="360" y="340" width="280" height="200" rx="8" fill="#ffffff" stroke="#8b5cf6" stroke-width="1.5" />
+    <text x="500" y="365" text-anchor="middle" class="node-bold" fill="#6d28d9">VITAMINA A (Programa MS)</text>
+    <text x="375" y="390" class="node-text">• Áreas de risco (Nordeste, Norte, Jequitinhonha).</text>
+    <text x="375" y="415" class="node-text">• <tspan font-weight="700">6 a 11 meses:</tspan> 1 dose de <tspan font-weight="700">100.000 UI</tspan> VO.</text>
+    <text x="375" y="440" class="node-text">• <tspan font-weight="700">12 a 59 meses:</tspan> <tspan font-weight="700">200.000 UI</tspan> a cada 6 meses.</text>
+    <text x="375" y="465" class="node-text">• Prevenção de <tspan font-weight="700">Xeroftalmia</tspan>, manchas</text>
+    <text x="390" y="485" class="node-text">de Bitot, cegueira noturna e melhora</text>
+    <text x="390" y="505" class="node-text">da integridade epitelial e imunológica.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="680" y="340" width="280" height="200" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5" />
+    <text x="820" y="365" text-anchor="middle" class="node-bold" fill="#047857">ZINCO & OUTROS</text>
+    <text x="695" y="390" class="node-text">• <tspan font-weight="700">Na Diarreia Aguda (OMS/SBP):</tspan></text>
+    <text x="710" y="410" class="node-text">&lt; 6 meses: <tspan font-weight="700">10 mg/dia</tspan> por 10 a 14 dias.</text>
+    <text x="710" y="430" class="node-text">&gt; 6 meses: <tspan font-weight="700">20 mg/dia</tspan> por 10 a 14 dias.</text>
+    <text x="695" y="455" class="node-text">• Reduz duração e recorrência da diarreia.</text>
+    <text x="695" y="480" class="node-text">• <tspan font-weight="700">Vitamina C (Ácido Ascórbico):</tspan></text>
+    <text x="710" y="500" class="node-text">Favorece absorção do ferro não-heme;</text>
+    <text x="710" y="520" class="node-text">consumir fruta cítrica junto ao almoço.</text>
+  </g>
+
+  <!-- Treatment of Iron Deficiency Anemia -->
+  <g class="card-shadow">
+    <rect x="40" y="560" width="920" height="160" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="585" class="node-bold" fill="#0f172a">DIAGNÓSTICO E TRATAMENTO DA ANEMIA FERROPRIVA INSTALADA (SBP 2024)</text>
+    <text x="60" y="610" class="node-text">• <tspan font-weight="700">Pontos de corte de Hemoglobina (Hb):</tspan> 6 a 59 meses: <tspan font-weight="700" fill="#dc2626">Hb &lt; 11,0 g/dL</tspan> | 5 a 11 anos: Hb &lt; 11,5 g/dL | Gestantes/Adolescentes: Hb &lt; 12,0 g/dL.</text>
+    <text x="60" y="635" class="node-text">• <tspan font-weight="700">Perfil de Ferro Típico:</tspan> Ferritina sérica baixa (&lt;12 ng/mL), Ferro sérico baixo, Capacidade Total de Ligação do Ferro (TIBC) elevada, Saturação de Transferrina &lt; 16% e RDW elevado (&gt; 14,5% - anisocitose).</text>
+    <text x="60" y="660" class="node-text">• <tspan font-weight="700" fill="#15803d">DOSE TERAPÊUTICA:</tspan> <tspan font-weight="700" fill="#b91c1c">3 a 6 mg/kg/dia</tspan> de ferro elementar em 1 ou 2 tomadas, longe do leite e preferencialmente em jejum ou com suco cítrico.</text>
+    <text x="60" y="685" class="node-text">• <tspan font-weight="700">Duração do Tratamento:</tspan> Manter a dose terapêutica por <tspan font-weight="700">3 MESES APÓS A NORMALIZAÇÃO DA HB</tspan> para repor os estoques medulares (ferritina).</text>
+    <text x="60" y="705" class="node-text">• <tspan font-weight="700">Pico Reticulocitário:</tspan> Ocorre entre o 7º e o 10º dia de tratamento eficaz (melhor indicador de resposta terapêutica precoce).</text>
+  </g>
+</svg>

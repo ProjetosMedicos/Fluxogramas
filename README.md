@@ -1,23 +1,23 @@
 # 🩺 Fluxogramas Médicos | Portal de Algoritmos & Decisão Clínica
 
-Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a especialidade de **Pediatria** em desenvolvimento contínuo (Fase 1 concluída com 6 módulos de Neonatologia & Perinatologia fundamentados exclusivamente no **Tratado de Pediatria SBP 2024 - 6ª Edição**).
+Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a especialidade de **Pediatria** em desenvolvimento contínuo (Fases 1 e 2 concluídas com 16 módulos cobrindo Neonatologia, Perinatologia, Puericultura, Crescimento, Nutrição, Adolescência e Prevenção de Acidentes fundamentados exclusivamente no **Tratado de Pediatria SBP 2024 - 6ª Edição**).
 
 ---
 
 ## 🌟 Visão Geral do Projeto
 
 O portal foi concebido para estudantes de medicina, médicos residentes e generalistas, com o objetivo de reduzir a sobrecarga cognitiva e acelerar o raciocínio clínico à beira do leito e no ambulatório. Cada tema do tratado foi desconstruído em:
-1. **Visão Geral Teórica & Fundamentos (FEBRASGO):** Conceituação oficial, dados epidemiológicos nacionais, fisiopatologia celular/molecular e endocrinologia reprodutiva.
+1. **Visão Geral Teórica & Fundamentos (FEBRASGO / SBP):** Conceituação oficial, dados epidemiológicos nacionais, fisiopatologia celular/molecular e propedêutica especializada.
 2. **Roteiro Semiológico Completo em 4 Eixos:** Sinais, sintomas e caracterização estrita da queixa clínica (Frequência, Intensidade, Duração e Sintomas Associados / *Red Flags*).
-3. **Fluxogramas Clínicos Interativos (135 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
-4. **Tabelas Comparativas & Guias de Bolso (150+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
-5. **Casos Clínicos Simulados (*Stress Testing* - 108 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
+3. **Fluxogramas Clínicos Interativos (145 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
+4. **Tabelas Comparativas & Guias de Bolso (180+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
+5. **Casos Clínicos Simulados (*Stress Testing* - 118 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
 
 ---
 
-## 📚 Estrutura dos 38 Módulos Clínicos Ativos
+## 📚 Estrutura dos Módulos Clínicos Ativos
 
-O portal contempla atualmente **38 especialidades e módulos temáticos**, distribuídos em **382 seções clínicas estruturadas**, **150+ tabelas diagnósticas**, **135 fluxogramas vetoriais SVG** e **108 casos clínicos simulados interativos**:
+O portal contempla atualmente **54 módulos clínicos ativos** (38 de Ginecologia & Obstetrícia e 16 de Pediatria, em um total de 78 módulos na navegação global), distribuídos em **452 seções clínicas estruturadas**, **180+ tabelas diagnósticas**, **145 fluxogramas vetoriais SVG** e **118 casos clínicos simulados interativos**:
 
 | # | Módulo / Especialidade | Capítulos Tratado FEBRASGO | Destaques Propedêuticos, Tabelas & Algoritmos |
 | :-: | :--- | :--- | :--- |
@@ -117,13 +117,13 @@ O projeto fundamenta-se no **Framework Clínico-Visual e Engenharia de Decisão 
 ## 📁 Estrutura de Arquivos
  
 ```
-├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~1.78 MB)
+├── index.html                               # Aplicação completa (HTML5, CSS3 avançado e JavaScript modular - ~2.1 MB)
 ├── manifest.webmanifest                     # Manifesto PWA (nome, tema, modo standalone e metadados de instalação)
 ├── sw.js                                    # Service Worker com estratégia de cache e suporte offline completo
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual Metodológico Completo do Framework Clínico-Visual
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
-└── imagens/                                 # 135 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
+└── imagens/                                 # 145 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
 ```
 
 ---
@@ -146,7 +146,7 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
    - Clique no ícone de instalação na barra de endereços do navegador ou no botão na barra lateral do app.
 
 4. **📶 Suporte 100% Offline:**
-   - O *Service Worker* integrado armazena em cache o aplicativo e os 135 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
+   - O *Service Worker* integrado armazena em cache o aplicativo e os 145 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
 
 ---
 
@@ -154,27 +154,44 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
 
 O portal foi construído em arquitetura estática pura de altíssima velocidade (*zero dependencies*):
 1. Dê um duplo clique no arquivo `index.html` ou abra-o em qualquer navegador moderno.
-2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 135 SVGs e 108 casos clínicos simulados com feedback imediato.
+2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 145 SVGs e 118 casos clínicos simulados com feedback imediato.
 
 ---
 
 **Equipe de Desenvolvimento & Curadoria Científica**  
-*Módulo Ginecológico baseado no Tratado de Ginecologia da FEBRASGO.*
-
+*Módulos Ginecológicos baseados no Tratado de Ginecologia da FEBRASGO.*  
+*Módulos Pediátricos baseados no Tratado de Pediatria da SBP (6ª Edição, 2024).*
 
 ---
 
-## 👶 Especialidade: Pediatria (Fase 1 - Neonatologia & Perinatologia Concluída)
+## 👶 Especialidade: Pediatria (Fases 1 e 2 Concluídas - 16 Módulos Ativos)
 
-A aba de **Pediatria** conta com 40 módulos planejados, estando a **Fase 1 (Neonatologia, Perinatologia & Sala de Parto)** 100% implementada com 48 seções clínicas, 6 fluxogramas SVG exclusivos e 6 simuladores de casos clínicos:
+A especialidade de **Pediatria** conta com 40 módulos mapeados, estando as **Fases 1 e 2 100% implementadas**, totalizando **16 módulos ativos**, **128 seções clínicas estruturadas**, **16 fluxogramas SVG exclusivos** e **16 casos clínicos simulados interativos**, fundamentados estrita e exclusivamente no **Tratado de Pediatria SBP 6ª Edição (2024)**:
+
+### 🌟 Fase 1: Neonatologia, Perinatologia & Sala de Parto (Módulos 1 a 6)
 
 | # | Módulo / Especialidade | Fonte Oficial de Referência | Destaques Propedêuticos, Tabelas & Algoritmos |
 | :-: | :--- | :--- | :--- |
-| **1** | **👶 Reanimação Neonatal em Sala de Parto** | SBP 2024 (Diretrizes 2024) / Tratado SBP 6ª Ed. | Minuto de Ouro, avaliação das 3 perguntas, VPP em 30s com balão autoinflável, técnica IOT com cânula sem cuff, massagem cardíaca 3:1 e adrenalina IV/endotraqueal. |
+| **1** | **👶 Reanimação Neonatal em Sala de Parto** | Tratado SBP 6ª Ed. (2024) | Minuto de Ouro, avaliação das 3 perguntas, VPP em 30s com balão autoinflável, técnica IOT com cânula sem cuff, massagem cardíaca 3:1 e adrenalina IV/endotraqueal. |
 | **2** | **🩺 Cuidados Imediatos & Triagem Neonatal** | Tratado SBP 6ª Ed. (2024) | Determinação de IG (Capurro somático/neurológico vs New Ballard), exame físico sistemático do RN, 4 triagens físicas (Olhinho, Orelhinha, Coraçãozinho, Linguinha) e Teste do Pezinho. |
 | **3** | **🫁 Distúrbios Respiratórios do Recém-Nascido** | Tratado SBP 6ª Ed. (2024) | Boletim de Silverman-Andersen, SDRMH (membrana hialina e surfactante exógeno por LISA/INSURE), Taquipneia Transitória do RN (TTRN), SAM e HPPN com óxido nítrico inalatório (iNO). |
 | **4** | **🟡 Icterícia & Sepse Neonatal** | Tratado SBP 6ª Ed. (2024) | Zonas dérmicas de Kramer, nomograma de Bhutani, fototerapia de alta irradiância, exsanguineotransfusão, critérios de sepse precoce vs tardia e antibióticos empíricos (Ampicilina + Gentamicina). |
 | **5** | **⚡ Distúrbios Metabólicos do Recém-Nascido** | Tratado SBP 6ª Ed. (2024) | Rastreio de hipoglicemia neonatal e cálculo da TIG (mg/kg/min), bolus de SG 10%, hipocalcemia precoce vs tardia, policitemia e Enterocolite Necrosante (Critérios de Bell modificados). |
 | **6** | **🛡️ Infecções Congênitas (TORCH & Sífilis)** | Tratado SBP 6ª Ed. (2024) | Protocolo completo de sífilis congênita (Penicilina Cristalina vs Procaína vs Benzatina), Tríade de Sabin na Toxoplasmose, CMV congênito e Valganciclovir, e diagnóstico laboratorial materno-fetal. |
 
-> As Fases 2 a 6 (Puericultura, Pneumologia, Infectologia, Gastroenterologia, Emergências, Neurologia e Especialidades) já contam com botões, links e seções estruturadas no portal, prontas para as próximas ondas de expansão.
+### 🌟 Fase 2: Puericultura, Crescimento, Nutrição, Adolescência & Prevenção de Acidentes (Módulos 7 a 16)
+
+| # | Módulo / Especialidade | Fonte Oficial de Referência | Destaques Propedêuticos, Tabelas & Algoritmos |
+| :-: | :--- | :--- | :--- |
+| **7** | **📏 Crescimento e Antropometria** | Tratado SBP 6ª Ed. (2024) | Curvas OMS 2006/2007 (E/I, P/I, IMC/I, PC/I), Z-scores e percentis, velocidade de crescimento (cm/ano), Alvo Genético de Tanner e algoritmo de Baixa Estatura (Desaceleração vs RDSM vs Baixa Estatura Familiar). |
+| **8** | **🧠 Desenvolvimento Neuropsicomotor (DNPM)** | Tratado SBP 6ª Ed. (2024) | Os 4 domínios (motor grosseiro, fino-adaptativo, linguagem, pessoal-social), marcos cronológicos de 1 a 24 meses, reflexos primitivos e sua integração, Triagem de Denver II e rastreio de TEA com M-CHAT-R/F aos 18 e 24 meses. |
+| **9** | **🤱 Aleitamento Materno & Lactação** | Tratado SBP 6ª Ed. (2024) | Fisiologia da prolactina e ocitocina, técnica correta de pega e posicionamento, manejo de fissuras mamárias, ingurgitamento patológico e mastite lactacional, contraindicações absolutas (HIV, HTLV) e ordenha/armazenamento na Rede BLH. |
+| **10** | **🥦 Alimentação Complementar & Puericultura** | Tratado SBP 6ª Ed. (2024) | Guia Alimentar MS/SBP 2024, introdução aos 6 meses, métodos Tradicional vs BLW vs BLISS, os 5 grupos alimentares obrigatórios, introdução precoce de alergênicos potenciais e proibições estritas até 2 anos (açúcar, mel, ultraprocessados, telas). |
+| **11** | **📉 Desnutrição Energético-Proteica (DEP)** | Tratado SBP 6ª Ed. (2024) | Classificações de Gomez, Waterlow e OMS, diferenciação Marasmo vs Kwashiorkor, protocolo dos 10 Passos da OMS, reidratação com ReSoMal, dietas F-75 e F-100 e prevenção da Síndrome de Realimentação. |
+| **12** | **💊 Micronutrientes, Vitaminas & Anemias Carenciais** | Tratado SBP 6ª Ed. (2024) | Profilaxia universal de ferro elementar SBP 2024 estratificada por peso de nascimento e IG, profilaxia de Vitamina D (400 UI < 12m, 600 UI > 12m), Raquitismo carencial, Vitamina A em áreas de risco e Zinco na diarreia aguda. |
+| **13** | **⚖️ Obesidade Infantil & Risco Cardiometabólico** | Tratado SBP 6ª Ed. (2024) | Critérios OMS < 5 anos (Risco de Sobrepeso, Sobrepeso, Obesidade) vs ≥ 5 anos (Sobrepeso, Obesidade, Obesidade Grave), Síndrome Metabólica em pediatria (IDF), rastreio de MASLD/esteatose, regra 5-2-1-0 e opções farmacológicas > 12 anos. |
+| **14** | **🌱 Puberdade Normal, Precoce & Atraso Puberal** | Tratado SBP 6ª Ed. (2024) | Estadiamento de Tanner feminino (M1-M5, P1-P5) e masculino (G1-G5, P1-P5) com orquidômetro de Prader, estirão puberal, Telarca/Adrenarca precoce isolada, Puberdade Precoce Central (PPC) vs Periférica (PPP) e investigação de hipogonadismo. |
+| **15** | **🎒 Hebiatria: Medicina do Adolescente** | Tratado SBP 6ª Ed. (2024) | Marco ético-legal do ECA e Resolução CFM/SBP sobre consulta a sós, as 4 exceções estritas da quebra de sigilo médico, mnemônico HEEADSSS, triagem de abuso de substâncias (CRAFFT) e dupla proteção contraceptiva. |
+| **16** | **🦺 Segurança, Prevenção de Acidentes & Injúrias** | Tratado SBP 6ª Ed. (2024) | Epidemiologia dos traumas infantis por faixa etária, dispositivos de retenção veicular (Resolução CONTRAN 14.071/2021), berço seguro e prevenção da SMSL, afogamento e "Regra do Toque", prevenção de queimaduras e manobra de Heimlich / desobstrução de via aérea. |
+
+> As Fases 3 a 5 (Pneumologia, Infectologia, Gastroenterologia, Nefrologia, Emergências e Terapia Intensiva) contam com seções estruturadas no portal, prontas para as próximas ondas de expansão.

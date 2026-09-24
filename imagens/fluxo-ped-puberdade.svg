@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+      .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#faf5ff" stroke="#a855f7" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DIAGNÓSTICO DA PUBERDADE PRECOCE & DESVIOS DO TANNER</text>
+  <text x="50" y="78" class="subtitle">Diferenciação entre Central (GnRH-dependente) vs Periférica e Variantes Benignas • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#7e22ce" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • ENDOCRINO</text>
+
+  <!-- Framework: Normal Puberty -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#ec4899" stroke-width="1.5" />
+    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#be185d">PUBERDADE FEMININA NORMAL (8 A 13 ANOS)</text>
+    <text x="60" y="165" class="node-text">1. <tspan font-weight="700">1º Sinal:</tspan> Telarca (Broto mamário M2 Tanner) - média 9.5-10 anos.</text>
+    <text x="60" y="185" class="node-text">2. <tspan font-weight="700">2º Sinal:</tspan> Pubarca (Pelos pubianos P2) - ocorre ~6 meses após telarca.</text>
+    <text x="60" y="205" class="node-text">3. <tspan font-weight="700">Pico de Crescimento (Estirão):</tspan> Ocorre em Tanner <tspan font-weight="700">M3 / precoce</tspan> (8-9 cm/ano).</text>
+    <text x="60" y="225" class="node-text">4. <tspan font-weight="700">Menarca:</tspan> Evento tardio (Tanner M4), 2 a 2.5 anos após a telarca.</text>
+    <text x="60" y="245" class="node-text">• <tspan font-weight="700" fill="#dc2626">Precoce:</tspan> Telarca antes dos 8 anos | <tspan font-weight="700" fill="#2563eb">Atraso:</tspan> Sem telarca aos 13 anos.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="520" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#1d4ed8">PUBERDADE MASCULINA NORMAL (9 A 14 ANOS)</text>
+    <text x="540" y="165" class="node-text">1. <tspan font-weight="700">1º Sinal:</tspan> Aumento do volume testicular <tspan font-weight="700" fill="#1d4ed8">≥ 4 mL</tspan> (G2 orquidômetro de Prader).</text>
+    <text x="540" y="185" class="node-text">2. <tspan font-weight="700">2º Sinal:</tspan> Pubarca (Pelos pubianos P2) e aumento do pênis em G3.</text>
+    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Pico de Crescimento (Estirão):</tspan> Ocorre em Tanner <tspan font-weight="700">G4 / tardio</tspan> (10-12 cm/ano).</text>
+    <text x="540" y="225" class="node-text">4. Mudança de voz, pelos faciais e espermarca ocorrem em G4-G5.</text>
+    <text x="540" y="245" class="node-text">• <tspan font-weight="700" fill="#dc2626">Precoce:</tspan> Testículos ≥ 4mL &lt; 9 anos | <tspan font-weight="700" fill="#2563eb">Atraso:</tspan> Testículos &lt; 4mL aos 14 anos.</text>
+  </g>
+
+  <!-- Flowchart Decision -->
+  <g class="card-shadow">
+    <rect x="300" y="280" width="400" height="50" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2" />
+    <text x="500" y="305" text-anchor="middle" class="node-bold">AVALIAÇÃO DE IDADE ÓSSEA (MÃO E PUNHO)</text>
+    <text x="500" y="320" text-anchor="middle" class="node-text">Idade Óssea avançada (&gt; 1 a 2 anos) + Aceleração do Crescimento?</text>
+  </g>
+
+  <path d="M 400 330 L 250 375" class="edge" />
+  <path d="M 600 330 L 750 375" class="edge" />
+
+  <!-- Left: Central PP -->
+  <g class="card-shadow">
+    <rect x="50" y="375" width="420" height="150" rx="8" fill="#ffffff" stroke="#7c3aed" stroke-width="2" />
+    <text x="260" y="400" text-anchor="middle" class="node-bold" fill="#6d28d9">PUBERDADE PRECOCE CENTRAL (Verdadeira / GnRH)</text>
+    <text x="70" y="425" class="node-text">• Eixo HHO ativado precocemente (LH basal aumentado ou pico pós-GnRH &gt; 5 UI/L).</text>
+    <text x="70" y="445" class="node-text">• Sequência puberal isossexual e harmoniosa completa.</text>
+    <text x="70" y="465" class="node-text">• <tspan font-weight="700">Meninas:</tspan> 90% idiopática. <tspan font-weight="700">Meninos:</tspan> 50-70% lesão de SNC (Hamartoma).</text>
+    <text x="70" y="485" class="node-text">• <tspan font-weight="700">Exame mandatória:</tspan> RM de Encéfalo/Sela Túrcica em todos os meninos e &lt; 6a.</text>
+    <text x="70" y="505" class="node-text">• <tspan font-weight="700" fill="#15803d">Tratamento:</tspan> Agonista de GnRH de depósito (Leuprorrelina / Triptorrelina).</text>
+  </g>
+
+  <!-- Right: Peripheral PP -->
+  <g class="card-shadow">
+    <rect x="520" y="375" width="440" height="150" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2" />
+    <text x="740" y="400" text-anchor="middle" class="node-bold" fill="#b91c1c">PUBERDADE PRECOCE PERIFÉRICA (Pseudopuberdade)</text>
+    <text x="540" y="425" class="node-text">• Produção gonadal ou adrenal de esteroides independente de GnRH.</text>
+    <text x="540" y="445" class="node-text">• <tspan font-weight="700">LH e FSH suprimidos</tspan> / sem resposta ao estímulo de GnRH.</text>
+    <text x="540" y="465" class="node-text">• Pode ser heterossexual (virilização em meninas, ginecomastia em meninos).</text>
+    <text x="540" y="485" class="node-text">• <tspan font-weight="700">Etiologias:</tspan> Hiperplasia Adrenal Congênita, Tumor de Córtex Adrenal,</text>
+    <text x="560" y="505" class="node-text">Tumores de Células da Granulosa/Leydig, Síndrome de McCune-Albright.</text>
+  </g>
+
+  <!-- Benign Variants Box -->
+  <g class="card-shadow">
+    <rect x="40" y="545" width="920" height="175" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="575" class="node-bold" fill="#0f172a">VARIANTES BENIGNAS DO DESENVOLVIMENTO PUBERAL (CONDUTA EXPECTANTE / SEM TRATAMENTO):</text>
+    <text x="60" y="605" class="node-text">1. <tspan font-weight="700">Telarca Precoce Isolada:</tspan> Surgimento de broto mamário antes dos 8 anos (frequente nos primeiros 2 anos de vida) <tspan font-weight="700" fill="#15803d">SEM outros sinais puberais</tspan>, sem pelos pubianos, sem aceleração de crescimento e com idade óssea compatível com idade cronológica. Conduta: Tranquilizar os pais e acompanhar a cada 3 a 6 meses.</text>
+    <text x="60" y="650" class="node-text">2. <tspan font-weight="700">Adrenarca / Pubarca Precoce Isolada:</tspan> Surgimento de pelos pubianos, odor axilar apócrino adulto ou acne antes dos 8 anos em meninas ou 9 anos em meninos, por maturação precoce da zona reticular da suprarrenal (DHEA-S aumentado para idade, mas 17-OHP normal). Conduta: Afastar HAC de início tardio e acompanhar.</text>
+    <text x="60" y="695" class="node-text">3. <tspan font-weight="700">Menarca Precoce Isolada:</tspan> Um ou dois episódios de sangramento vaginal cíclico sem telarca prévia e sem outros sinais. Afastar corpo estranho e abuso.</text>
+  </g>
+</svg>

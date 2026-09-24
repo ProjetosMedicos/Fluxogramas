@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DA CONSULTA EM HEBIATRIA & CONFIDENCIALIDADE MÉDICA</text>
+  <text x="50" y="78" class="subtitle">Estatuto da Criança e do Adolescente (ECA), Roteiro HEEADSSS e Limites do Sigilo • CFM & SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#0f766e" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • HEBIATRIA</text>
+
+  <!-- Structure of the Adolescent Consultation -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="920" height="150" rx="8" fill="#ffffff" stroke="#0d9488" stroke-width="2" />
+    <text x="500" y="140" text-anchor="middle" class="node-bold" fill="#0f766e">AS 3 ETAPAS ESSENCIAIS DA CONSULTA DO ADOLESCENTE (SBP 2024)</text>
+
+    <!-- Step 1 -->
+    <rect x="60" y="160" width="270" height="90" rx="6" fill="#f0fdfa" stroke="#99f6e4" />
+    <text x="195" y="180" text-anchor="middle" class="node-bold" fill="#115e59">1. Momento Conjunto</text>
+    <text x="75" y="200" class="node-text">• Acolhimento do jovem e família.</text>
+    <text x="75" y="220" class="node-text">• Explicar as regras da consulta.</text>
+    <text x="75" y="235" class="node-text">• Ouvir expectativas dos pais.</text>
+
+    <!-- Step 2 -->
+    <rect x="365" y="160" width="270" height="90" rx="6" fill="#f0fdfa" stroke="#99f6e4" />
+    <text x="500" y="180" text-anchor="middle" class="node-bold" fill="#115e59">2. Momento a Sós (Sigiloso)</text>
+    <text x="380" y="200" class="node-text">• <tspan font-weight="700">Direito garantido pelo ECA/CFM</tspan>.</text>
+    <text x="380" y="220" class="node-text">• Estabelecer pacto de confiança.</text>
+    <text x="380" y="235" class="node-text">• Aplicação da ferramenta HEEADSSS.</text>
+
+    <!-- Step 3 -->
+    <rect x="670" y="160" width="270" height="90" rx="6" fill="#f0fdfa" stroke="#99f6e4" />
+    <text x="805" y="180" text-anchor="middle" class="node-bold" fill="#115e59">3. Retorno com os Pais</text>
+    <text x="685" y="200" class="node-text">• Alinhamento e orientações gerais.</text>
+    <text x="685" y="220" class="node-text">• Preservação estrita dos segredos.</text>
+    <text x="685" y="235" class="node-text">• Compartilhar apenas com anuência.</text>
+  </g>
+
+  <!-- HEEADSSS Box -->
+  <g class="card-shadow">
+    <rect x="40" y="285" width="440" height="190" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="260" y="310" text-anchor="middle" class="node-bold" fill="#1d4ed8">ROTEIRO MNEMÔNICO HEEADSSS</text>
+    <text x="60" y="335" class="node-text"><tspan font-weight="700">H (Home):</tspan> Ambiente familiar, relacionamentos, conflitos.</text>
+    <text x="60" y="355" class="node-text"><tspan font-weight="700">E (Education/Employment):</tspan> Escola, desempenho, bullying.</text>
+    <text x="60" y="375" class="node-text"><tspan font-weight="700">E (Eating):</tspan> Imagem corporal, dietas restritivas, compulsão.</text>
+    <text x="60" y="395" class="node-text"><tspan font-weight="700">A (Activities):</tspan> Lazer, tempo de tela, sono, amigos.</text>
+    <text x="60" y="415" class="node-text"><tspan font-weight="700">D (Drugs):</tspan> Álcool, cigarro/vape, maconha, outras substâncias.</text>
+    <text x="60" y="435" class="node-text"><tspan font-weight="700">S (Sexuality):</tspan> Práticas sexuais, prevenção de ISTs, gravidez.</text>
+    <text x="60" y="455" class="node-text"><tspan font-weight="700">S (Suicide/Depression):</tspan> Humor, automutilação, ideação suicida.</text>
+    <text x="60" y="470" class="node-text"><tspan font-weight="700">S (Safety):</tspan> Violência física/sexual, cinto de segurança, riscos.</text>
+  </g>
+
+  <!-- Limits of Confidentiality -->
+  <g class="card-shadow">
+    <rect x="520" y="285" width="440" height="190" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+    <text x="740" y="310" text-anchor="middle" class="node-bold" fill="#b91c1c">AS 4 EXCEÇÕES PARA QUEBRA DO SIGILO MÉDICO</text>
+    <text x="540" y="335" class="node-text">O sigilo médico do adolescente é a regra e direito assegurado.</text>
+    <text x="540" y="355" class="node-text"><tspan font-weight="700" fill="#dc2626">A QUEBRA É OBRIGATÓRIA SOMENTE DIANTE DE RISCO DE VIDA:</tspan></text>
+    <text x="540" y="380" class="node-text">1. <tspan font-weight="700">Risco Iminente de Suicídio</tspan> ou ideação suicida estruturada.</text>
+    <text x="540" y="405" class="node-text">2. <tspan font-weight="700">Vítima de Violência / Abuso Sexual</tspan> (notificação compulsória).</text>
+    <text x="540" y="430" class="node-text">3. <tspan font-weight="700">Risco a Terceiros</tspan> (ameaça de homicídio ou agressão grave).</text>
+    <text x="540" y="455" class="node-text">4. <tspan font-weight="700">Uso Compulsivo Grave de Drogas</tspan> com overdose ou risco vital.</text>
+  </g>
+
+  <!-- Reproductive & Mental Health Rights -->
+  <g class="card-shadow">
+    <rect x="40" y="495" width="920" height="225" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="525" class="node-bold" fill="#0f172a">DIREITOS SEXUAIS E REPRODUTIVOS DO ADOLESCENTE (PARECER CFM Nº 25/2013 & SBP 2024)</text>
+
+    <text x="60" y="555" class="node-text">• <tspan font-weight="700" fill="#15803d">PRESCRIÇÃO DE CONTRACEPÇÃO INDEPENDENTE DOS PAIS:</tspan> O médico pode e deve prescrever métodos contraceptivos (ACO, injetável, implante, DIU, preservativo) para adolescentes que manifestem vida sexual ativa ou desejo de iniciar, mesmo desacompanhados, desde que tenham discernimento e capacidade de autocompreensão.</text>
+    <text x="60" y="605" class="node-text">• <tspan font-weight="700">SIGILO DA ATIVIDADE SEXUAL:</tspan> A atividade sexual consentida entre adolescentes NÃO configura motivo de quebra de sigilo para os pais. Revelar sem consentimento quebra o vínculo e afasta o jovem da assistência em saúde.</text>
+    <text x="60" y="640" class="node-text">• <tspan font-weight="700" fill="#dc2626">ESTUPRO DE VULNERÁVEL (Art. 217-A do Código Penal):</tspan> Prática sexual com menor de 14 anos é considerada vulnerável perante a legislação brasileira. Havendo suspeita de violência, coação ou discrepância de idade/poder, a proteção do vulnerável e notificação aos órgãos de proteção (Conselho Tutelar) são mandatórias.</text>
+    <text x="60" y="685" class="node-text">• <tspan font-weight="700">SAÚDE MENTAL & TELAS:</tspan> Rastrear Dependência de Telas, Cyberbullying e Transtornos de Imagem Corporal (Vigorexia, Anorexia, Bulimia). Orientar sono reparador (8 a 10h) e higiene do sono sem celular na cama.</text>
+  </g>
+</svg>

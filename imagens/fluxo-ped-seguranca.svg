@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#ecfeff" stroke="#06b6d4" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE PREVENÇÃO DE ACIDENTES & SEGURANÇA INFANTIL</text>
+  <text x="50" y="78" class="subtitle">Dispositivos de Retenção Veicular (CONTRAN/SBP), Berço Seguro e Prevenção de Asfixia • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#0891b2" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • SEGURANÇA</text>
+
+  <!-- Car Seats (CONTRAN 2021 / SBP 2024) -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="920" height="195" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" />
+    <text x="500" y="140" text-anchor="middle" class="node-bold" fill="#0369a1">DISPOSITIVOS DE RETENÇÃO VEICULAR POR FAIXA ETÁRIA & ESTATURA (LEI 14.071/2021 & SBP 2024)</text>
+
+    <!-- Stage 1 -->
+    <rect x="60" y="155" width="200" height="140" rx="6" fill="#f0f9ff" stroke="#bae6fd" />
+    <text x="160" y="175" text-anchor="middle" class="node-bold" fill="#0369a1">1. Bebê-Conforto</text>
+    <text x="75" y="195" class="node-text">• Até 1 ano ou até 13 kg.</text>
+    <text x="75" y="215" class="node-text">• <tspan font-weight="700" fill="#dc2626">VOLTADO PARA TRÁS</tspan></text>
+    <text x="75" y="235" class="node-text">  (sentido contrário ao tráfego).</text>
+    <text x="75" y="255" class="node-text">• Protege coluna cervical e</text>
+    <text x="75" y="275" class="node-text">  evita efeito chicote.</text>
+
+    <!-- Stage 2 -->
+    <rect x="285" y="155" width="200" height="140" rx="6" fill="#f0f9ff" stroke="#bae6fd" />
+    <text x="385" y="175" text-anchor="middle" class="node-bold" fill="#0369a1">2. Cadeirinha</text>
+    <text x="300" y="195" class="node-text">• De 1 a 4 anos (9 a 18 kg).</text>
+    <text x="300" y="215" class="node-text">• Voltada para frente no</text>
+    <text x="300" y="235" class="node-text">  banco traseiro.</text>
+    <text x="300" y="255" class="node-text">• Cinto próprio de 5 pontos</text>
+    <text x="300" y="275" class="node-text">  ajustado ao tórax.</text>
+
+    <!-- Stage 3 -->
+    <rect x="510" y="155" width="200" height="140" rx="6" fill="#f0f9ff" stroke="#bae6fd" />
+    <text x="610" y="175" text-anchor="middle" class="node-bold" fill="#0369a1">3. Assento de Elevação</text>
+    <text x="525" y="195" class="node-text">• De 4 a 10 anos que NÃO</text>
+    <text x="525" y="215" class="node-text">  atingiram 1,45m de altura.</text>
+    <text x="525" y="235" class="node-text">• Usa cinto de 3 pontos do carro</text>
+    <text x="525" y="255" class="node-text">  passando no quadril e centro</text>
+    <text x="525" y="275" class="node-text">  do ombro (sem tocar pescoço).</text>
+
+    <!-- Stage 4 -->
+    <rect x="735" y="155" width="205" height="140" rx="6" fill="#f0f9ff" stroke="#bae6fd" />
+    <text x="837" y="175" text-anchor="middle" class="node-bold" fill="#0369a1">4. Banco Dianteiro</text>
+    <text x="750" y="195" class="node-text">• Permitido apenas aos</text>
+    <text x="750" y="215" class="node-text">  <tspan font-weight="700">10 ANOS COMPLETOS</tspan></text>
+    <text x="750" y="235" class="node-text">  <tspan font-weight="700" fill="#15803d">OU altura &gt; 1,45m</tspan>.</text>
+    <text x="750" y="255" class="node-text">• Sempre com cinto de 3 pontos.</text>
+    <text x="750" y="275" class="node-text">• Banco recuado longe do airbag.</text>
+  </g>
+
+  <!-- Safe Sleep & Choking Prevention -->
+  <g class="card-shadow">
+    <rect x="40" y="330" width="440" height="200" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5" />
+    <text x="260" y="355" text-anchor="middle" class="node-bold" fill="#047857">SONO SEGURO & PREVENÇÃO DA MORTE SÚBITA (SMSL)</text>
+    <text x="60" y="380" class="node-text">✓ <tspan font-weight="700" fill="#15803d">POSIÇÃO SUPINA MANDATÓRIA:</tspan> Dormir de barriga para cima.</text>
+    <text x="60" y="400" class="node-text">  (Reduz em &gt; 70% o risco de asfixia e SMSL; nunca de lado ou bruços).</text>
+    <text x="60" y="420" class="node-text">✓ <tspan font-weight="700">Superfície firme:</tspan> Colchão plano e firme com lençol bem ajustado.</text>
+    <text x="60" y="440" class="node-text">✓ <tspan font-weight="700">Berço livre e limpo:</tspan> Sem travesseiros, cobertores soltos, bichos</text>
+    <text x="75" y="460" class="node-text">de pelúcia ou protetores de berço almofadados (risco de sufocação).</text>
+    <text x="60" y="480" class="node-text">✓ <tspan font-weight="700">Quarto compartilhado, mas berço separado:</tspan> Não praticar cama</text>
+    <text x="75" y="500" class="node-text">compartilhada nos primeiros meses (risco de asfixia por sobreposição).</text>
+    <text x="60" y="520" class="node-text">✓ Ambiente livre de fumaça de tabaco | Temperatura agradável.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="520" y="330" width="440" height="200" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="1.5" />
+    <text x="740" y="355" text-anchor="middle" class="node-bold" fill="#b91c1c">ASFIXIA, CORPO ESTRANHO & MANOBRA DE HEIMLICH</text>
+    <text x="540" y="380" class="node-text">• <tspan font-weight="700">Alimentos e Objetos de Risco (&lt; 4 anos):</tspan> Moedas, baterias botão,</text>
+    <text x="555" y="400" class="node-text">brinquedos com peças &lt; 3cm, bexigas de látex, nozes, uvas inteiras.</text>
+    <text x="540" y="425" class="node-text">• <tspan font-weight="700" fill="#dc2626">DESOBSTRUÇÃO NO LACTENTE (&lt; 1 ANO CONSCIENTE):</tspan></text>
+    <text x="555" y="445" class="node-text">1. Posicionar em prona apoiado no antebraço com cabeça mais baixa.</text>
+    <text x="555" y="465" class="node-text">2. Aplicar <tspan font-weight="700">5 GOLPES DORSAL</tspan> interescapulares firmes.</text>
+    <text x="555" y="485" class="node-text">3. Virar em decúbito dorsal e aplicar <tspan font-weight="700">5 COMPRESSÕES TORÁCICAS</tspan>.</text>
+    <text x="540" y="510" class="node-text">• <tspan font-weight="700">Criança &gt; 1 ano:</tspan> Compressões abdominais subdiafragmáticas (Heimlich).</text>
+  </g>
+
+  <!-- Drowning, Burns and Poisoning -->
+  <g class="card-shadow">
+    <rect x="40" y="550" width="920" height="175" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="580" class="node-bold" fill="#0f172a">PREVENÇÃO DE AFOGAMENTO, QUEIMADURAS & INTOXICAÇÕES DOMICILIARES (SBP 2024)</text>
+
+    <text x="60" y="610" class="node-text">🏊 <tspan font-weight="700">AFOGAMENTO (Regra do Toque):</tspan> Supervisão a uma distância de um braço. Piscinas protegidas com cercas de 1,5m com portão e travas automáticas. <tspan font-weight="700" fill="#dc2626">Atenção em baldes, bacias e vasos sanitários</tspan> (2.5 cm de água é suficiente para afogar um lactente!). Boias de braço não garantem proteção (usar colete salva-vidas homologado).</text>
+    <text x="60" y="650" class="node-text">🔥 <tspan font-weight="700">QUEIMADURAS:</tspan> Panelas nos queimadores traseiros com cabos virados para dentro. Protetores em tomadas elétricas. Testar a temperatura da água do banho com o antebraço (ideal 36-37°C). Proibido o uso de andadores infantis (risco grave de tombamento em escadas e acesso a queimaduras).</text>
+    <text x="60" y="690" class="node-text">🧪 <tspan font-weight="700">INTOXICAÇÕES EXÓGENAS:</tspan> Medicamentos e produtos de limpeza trancados no alto em embalagens originais (nunca reaproveitar garrafas PET). Em caso de ingestão: Ligar para o CIATox (0800 722 6001). <tspan font-weight="700" fill="#dc2626">NÃO PROVOCAR VÔMITO</tspan> (risco de nova queimadura por cáusticos ou aspiração).</text>
+  </g>
+</svg>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE MANEJO DAS INTERCORRÊNCIAS NA LACTAÇÃO & MASTITIS</text>
+  <text x="50" y="78" class="subtitle">Avaliação da Pega, Ingurgitamento, Fissuras e Mastite Lactacional • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#e11d48" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • NUTROLOGIA</text>
+
+  <!-- Pega Correta Box -->
+  <g class="card-shadow">
+    <rect x="50" y="115" width="420" height="150" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" />
+    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#047857">CRITÉRIOS DE PEGA & POSICIONAMENTO CORRETO</text>
+    <text x="70" y="165" class="node-text">✓ <tspan font-weight="700">Boca bem aberta</tspan> (ângulo > 120° / boca de peixinho).</text>
+    <text x="70" y="185" class="node-text">✓ <tspan font-weight="700">Lábio inferior evertido</tspan> cobrindo mais a aréola inferior.</text>
+    <text x="70" y="205" class="node-text">✓ <tspan font-weight="700">Queixo encostado na mama</tspan> da mãe e nariz livre.</text>
+    <text x="70" y="225" class="node-text">✓ <tspan font-weight="700">Bochechas arredondadas</tspan> sem covinhas ou estalos de língua.</text>
+    <text x="70" y="245" class="node-text">✓ <tspan font-weight="700">Barriga com barriga:</tspan> Corpo do bebê alinhado e voltado à mãe.</text>
+  </g>
+
+  <!-- Contraindicações Box -->
+  <g class="card-shadow">
+    <rect x="510" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+    <text x="730" y="140" text-anchor="middle" class="node-bold" fill="#b91c1c">CONTRAINDICAÇÕES FORMAIS AO ALEITAMENTO (SBP 2024)</text>
+    <text x="530" y="165" class="node-text">🚫 <tspan font-weight="700">ABSOLUTAS MATERNAS:</tspan> Infecção por HIV e HTLV-1/2.</text>
+    <text x="530" y="185" class="node-text">🚫 <tspan font-weight="700">ABSOLUTAS DO BEBÊ:</tspan> Galactosemia clássica (deficiência GALT).</text>
+    <text x="530" y="205" class="node-text">⚠️ <tspan font-weight="700">TEMPORÁRIAS:</tspan> Herpes mamário ativo (ordenhar e descartar),</text>
+    <text x="550" y="225" class="node-text">Doença de Chagas aguda, CMV em prematuros extremos (&lt;32s),</text>
+    <text x="550" y="245" class="node-text">quimioterapia/radiofármacos e tuberculose bacilífera (usar máscara).</text>
+  </g>
+
+  <!-- Problem Solving Pathway -->
+  <g class="card-shadow">
+    <rect x="50" y="285" width="280" height="180" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5" />
+    <text x="190" y="310" text-anchor="middle" class="node-bold" fill="#b45309">Fissura Mamilar</text>
+    <text x="70" y="335" class="node-text">• Causa principal: Pega incorreta.</text>
+    <text x="70" y="355" class="node-text">• Conduta prioritária: Corrigir a pega.</text>
+    <text x="70" y="375" class="node-text">• Passar o próprio leite no mamilo.</text>
+    <text x="70" y="395" class="node-text">• Banhos de sol ou luz artificial.</text>
+    <text x="70" y="415" class="node-text">• <tspan font-weight="700" fill="#dc2626">NÃO SUSPENDER A AMAMENTAÇÃO!</tspan></text>
+    <text x="70" y="435" class="node-text">• Iniciar pela mama menos dolorosa.</text>
+    <text x="70" y="455" class="node-text">• Evitar conchas, pomadas espessas.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="360" y="285" width="280" height="180" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
+    <text x="500" y="310" text-anchor="middle" class="node-bold" fill="#1d4ed8">Ingurgitamento Mamário</text>
+    <text x="380" y="335" class="node-text">• Mama túrgida, brilhante e dolorosa.</text>
+    <text x="380" y="355" class="node-text">• <tspan font-weight="700">Massagem circular delicada</tspan>.</text>
+    <text x="380" y="375" class="node-text">• <tspan font-weight="700">Ordenha de alívio</tspan> da aréola pré-mamada</text>
+    <text x="400" y="395" class="node-text">(facilita a pega do lactente).</text>
+    <text x="380" y="415" class="node-text">• Compressas <tspan font-weight="700">FRIAS</tspan> pós-mamada</text>
+    <text x="400" y="435" class="node-text">(vasoconstrição / alívio do edema).</text>
+    <text x="380" y="455" class="node-text">• <tspan font-weight="700" fill="#dc2626">NUNCA compressas quentes!</tspan></text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="670" y="285" width="280" height="180" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5" />
+    <text x="810" y="310" text-anchor="middle" class="node-bold" fill="#b91c1c">Mastite Puerperal</text>
+    <text x="690" y="335" class="node-text">• Febre (>38°C), calafrios, mal-estar.</text>
+    <text x="690" y="355" class="node-text">• Área em cunha avermelhada e quente.</text>
+    <text x="690" y="375" class="node-text">• Agente: <tspan font-weight="700">S. aureus</tspan> (boca do RN).</text>
+    <text x="690" y="395" class="node-text">• <tspan font-weight="700" fill="#15803d">MANTER AMAMENTAÇÃO na mama!</tspan></text>
+    <text x="690" y="415" class="node-text">• Esvaziamento mamário frequente.</text>
+    <text x="690" y="435" class="node-text">• <tspan font-weight="700">Antibioticoterapia:</tspan> Cefalexina 500mg</text>
+    <text x="710" y="455" class="node-text">VO 6/6h por 10 a 14 dias + AINE.</text>
+  </g>
+
+  <!-- BLH Rules Box -->
+  <g class="card-shadow">
+    <rect x="50" y="490" width="900" height="230" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="70" y="520" class="node-bold" fill="#0f172a">NORMAS DE EXTRAÇÃO E CONSERVAÇÃO DO LEITE HUMANO (REDE BRASILEIRA DE BANCOS DE LEITE / SBP 2024)</text>
+    <text x="70" y="550" class="node-text">• <tspan font-weight="700">Recipiente:</tspan> Frasco de vidro com tampa plástica de rosca (tipo café solúvel), previamente fervido por 15 minutos.</text>
+    <text x="70" y="575" class="node-text">• <tspan font-weight="700">Higiene:</tspan> Cabelos presos com touca/lenço, máscara ou pano sobre nariz e boca, lavagem rigorosa das mãos e antebraços com água e sabão.</text>
+    <text x="70" y="605" class="node-text">• <tspan font-weight="700" fill="#0284c7">TEMPOS DE VALIDADE REGULAMENTARES:</tspan></text>
+    <text x="90" y="630" class="node-text">1. <tspan font-weight="700">Temperatura Ambiente:</tspan> Máximo 2 horas (SBP/Ministério da Saúde recomendam resfriar imediatamente).</text>
+    <text x="90" y="655" class="node-text">2. <tspan font-weight="700">Geladeira (temperatura &lt; 5°C):</tspan> Até <tspan font-weight="700" fill="#15803d">12 HORAS</tspan> para uso domiciliar (se doação ao BLH, congelar de imediato).</text>
+    <text x="90" y="680" class="node-text">3. <tspan font-weight="700">Freezer / Congelador (-18°C):</tspan> Até <tspan font-weight="700" fill="#15803d">15 DIAS</tspan>.</text>
+    <text x="70" y="710" class="node-text">• <tspan font-weight="700">Descongelamento & Aquecimento:</tspan> Descongelar em geladeira ou banho-maria desligado (água morna). <tspan font-weight="700" fill="#dc2626">PROIBIDO micro-ondas ou ferver</tspan> (destrói imunoglobulinas).</text>
+  </g>
+</svg>

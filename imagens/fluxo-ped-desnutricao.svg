@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+      .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#fff7ed" stroke="#ea580c" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE MANEJO HOSPITALAR DA DESNUTRIÇÃO GRAVE (DEP)</text>
+  <text x="50" y="78" class="subtitle">Os 10 Passos da OMS/SBP: Estabilização, Transição e Reabilitação Nutricional • SBP 2024</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#c2410c" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • NUTROLOGIA</text>
+
+  <!-- Marasmo vs Kwashiorkor -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
+    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#0f172a">MARASMO (Déficit Calórico Global)</text>
+    <text x="60" y="165" class="node-text">• Privação crônica e severa de energia e nutrientes.</text>
+    <text x="60" y="185" class="node-text">• <tspan font-weight="700">Sem edema</tspan> | Emaciação muscular e perda total da Bola de Bichat.</text>
+    <text x="60" y="205" class="node-text">• Fácies senil ou simiesca, pele enrugada e atrófica.</text>
+    <text x="60" y="225" class="node-text">• Criança frequentemente alerta, faminta e irritadiça.</text>
+    <text x="60" y="245" class="node-text">• Escore Z Peso/Estatura &lt; -3 DP.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="520" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="1.5" />
+    <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#b91c1c">KWASHIORKOR (Déficit Proteico com Edema)</text>
+    <text x="540" y="165" class="node-text">• Ingesta calórica moderada à base de carboidratos com baixa proteína.</text>
+    <text x="540" y="185" class="node-text">• <tspan font-weight="700" fill="#dc2626">EDEMA OBRIGATÓRIO</tspan> bilateral simétrico (pés/pernas, anasarca).</text>
+    <text x="540" y="205" class="node-text">• Fácies de lua cheia, hepatomegalia macia (esteatose hepática grave).</text>
+    <text x="540" y="225" class="node-text">• Cabelo descorado em faixas ("Sinal da Bandeira") e dermatose em mosaico.</text>
+    <text x="540" y="245" class="node-text">• Apatia profunda, tristeza e recusa alimentar.</text>
+  </g>
+
+  <!-- 3 Phases Pathway -->
+  <g class="card-shadow">
+    <rect x="40" y="285" width="290" height="190" rx="8" fill="#ffffff" stroke="#ef4444" stroke-width="2" />
+    <text x="185" y="310" text-anchor="middle" class="node-bold" fill="#b91c1c">FASE 1: ESTABILIZAÇÃO (Dias 1 a 7)</text>
+    <text x="55" y="335" class="node-text">1. Prevenir/tratar <tspan font-weight="700">Hipoglicemia</tspan> (SG 10%).</text>
+    <text x="55" y="355" class="node-text">2. Prevenir/tratar <tspan font-weight="700">Hipotermia</tspan> (agasalhar).</text>
+    <text x="55" y="375" class="node-text">3. Tratar <tspan font-weight="700">Desidratação com ReSoMal</tspan></text>
+    <text x="70" y="395" class="node-text">(baixo sódio, alto potássio e zinco).</text>
+    <text x="55" y="415" class="node-text">4. Dieta inicial com <tspan font-weight="700" fill="#b45309">Fórmula F-75</tspan></text>
+    <text x="70" y="435" class="node-text">(75 kcal/100mL e 0.9g proteína/100mL).</text>
+    <text x="55" y="455" class="node-text">5. Antibióticos empíricos para todos (Amp+Genta).</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="355" y="285" width="290" height="190" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" />
+    <text x="500" y="310" text-anchor="middle" class="node-bold" fill="#b45309">FASE 2: TRANSIÇÃO (Dias 8 a 14)</text>
+    <text x="370" y="335" class="node-text">• Transição gradual de F-75 para <tspan font-weight="700">F-100</tspan></text>
+    <text x="385" y="355" class="node-text">(100 kcal e 2.9g proteína/100mL).</text>
+    <text x="370" y="375" class="node-text">• Iniciar suplementação de Micronutrientes</text>
+    <text x="385" y="395" class="node-text">(Zinco, Cobre, Ácido Fólico, Multivitaminas).</text>
+    <text x="370" y="415" class="node-text">• <tspan font-weight="700" fill="#dc2626">CUIDADO COM REFEEDING:</tspan></text>
+    <text x="385" y="435" class="node-text">Monitorar hipofosfatemia, hipocalemia e</text>
+    <text x="385" y="455" class="node-text">sobrecarga cardíaca congestiva.</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="670" y="285" width="290" height="190" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" />
+    <text x="815" y="310" text-anchor="middle" class="node-bold" fill="#047857">FASE 3: REABILITAÇÃO (Sem. 2 a 6)</text>
+    <text x="685" y="335" class="node-text">• Alimentação irrestrita para recuperação rápida</text>
+    <text x="700" y="355" class="node-text">(ganho ponderal acelerado &gt; 10g/kg/dia).</text>
+    <text x="685" y="375" class="node-text">• <tspan font-weight="700" fill="#15803d">INICIAR FERRO ORAL AGORA</tspan></text>
+    <text x="700" y="395" class="node-text">(somente após estabilização e ganho de peso!).</text>
+    <text x="685" y="415" class="node-text">• Estimulação sensorial, lúdica e afetiva.</text>
+    <text x="685" y="435" class="node-text">• Capacitação da família e preparo de alta.</text>
+    <text x="685" y="455" class="node-text">• Critério de alta: Z P/E &gt; -2 e sem edema.</text>
+  </g>
+
+  <!-- Golden Rules of DEP -->
+  <g class="card-shadow">
+    <rect x="40" y="495" width="920" height="225" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="525" class="node-bold" fill="#0f172a">REGRAS DE OURO & ARMADILHAS CLÍNICAS NA DESNUTRIÇÃO GRAVE (SBP 2024)</text>
+
+    <text x="60" y="555" class="node-text">⚠️ <tspan font-weight="700" fill="#dc2626">PROIBIDO DAR FERRO NA FASE DE ESTABILIZAÇÃO:</tspan> O ferro livre não ligado à transferrina favorece infecções bacterianas graves e sepse fulminante. Iniciar ferro <tspan font-weight="700">apenas na Reabilitação</tspan>!</text>
+    <text x="60" y="585" class="node-text">⚠️ <tspan font-weight="700" fill="#dc2626">PROIBIDO HIDRATAÇÃO VENOSA RÁPIDA / EXPANSÃO COM SF 0,9%:</tspan> O miocárdio desnutrido tem atrofia de miofibrilas; expansões rápidas causam edema agudo de pulmão e morte iatrogênica por ICC. Hidratar preferencialmente por via oral/SNG com ReSoMal.</text>
+    <text x="60" y="615" class="node-text">⚠️ <tspan font-weight="700" fill="#dc2626">DESIDRATAÇÃO SILENCIOSA:</tspan> Na criança com Kwashiorkor ou Marasmo, os sinais clássicos de turgor cutâneo e fontanela são falhos. Priorizar estado de alerta e débito urinário.</text>
+    <text x="60" y="645" class="node-text">⚠️ <tspan font-weight="700">SÍNDROME DE REALIMENTAÇÃO (REFEEDING):</tspan> Ocorre por entrada rápida de glicose nas células que sequestra Fósforo, Potássio e Magnésio. Leva a arritmias e parada cardíaca. Exige aumento calórico lento e progressivo.</text>
+    <text x="60" y="675" class="node-text">✓ <tspan font-weight="700">INFECÇÃO SEM FEBRE:</tspan> Desnutridos graves não fazem febre devido à anergia imunológica. Hipotermia (&lt;35.5°C) é equivalente a choque séptico!</text>
+  </g>
+</svg>

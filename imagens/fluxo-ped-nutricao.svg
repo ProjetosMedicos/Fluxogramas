@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 22px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; fill: #1e293b; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 13px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+  </defs>
+
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DE INTRODUÇÃO ALIMENTAR & PUERICULTURA NUTRICIONAL</text>
+  <text x="50" y="78" class="subtitle">Guia Alimentar para Crianças Brasileiras Menores de 2 Anos (MS) & Tratado de Pediatria SBP 6ª Edição (2024)</text>
+  <rect x="790" y="42" width="160" height="28" rx="6" fill="#059669" />
+  <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PUERICULTURA</text>
+
+  <!-- Signs of Readiness -->
+  <g class="card-shadow">
+    <rect x="40" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#0ea5e9" stroke-width="2" />
+    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#0284c7">SINAIS DE PRONTIDÃO PARA INTRODUÇÃO (AOS 6 MESES)</text>
+    <text x="60" y="165" class="node-text">✓ <tspan font-weight="700">Controle postural e axial:</tspan> Senta sem apoio ou com mínimo apoio.</text>
+    <text x="60" y="185" class="node-text">✓ <tspan font-weight="700">Extinção do reflexo de protrusão da língua</tspan> (não empurra a colher para fora).</text>
+    <text x="60" y="205" class="node-text">✓ <tspan font-weight="700">Coordenação motora:</tspan> Segura objetos e leva intencionalmente à boca.</text>
+    <text x="60" y="225" class="node-text">✓ <tspan font-weight="700">Interesse ativo pela comida</tspan> dos adultos e cuidadores.</text>
+    <text x="60" y="245" class="node-text">✓ <tspan font-weight="700">Idade cronológica:</tspan> 6 meses completos (ou idade corrigida em prematuros).</text>
+  </g>
+
+  <!-- Food Groups on the Plate -->
+  <g class="card-shadow">
+    <rect x="520" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" />
+    <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#b45309">OS 5 GRUPOS ALIMENTARES OBRIGATÓRIOS NO PRATO</text>
+    <text x="540" y="165" class="node-text">1. <tspan font-weight="700">Cereais ou Tubérculos:</tspan> Arroz, batata, mandioca, inhame, milho.</text>
+    <text x="540" y="185" class="node-text">2. <tspan font-weight="700">Leguminosas:</tspan> Feijão (carioca/preto), lentilha, grão-de-bico, ervilha.</text>
+    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Carnes e Ovos:</tspan> Frango, carne bovina, peixe, vísceras (fígado), ovo inteiro.</text>
+    <text x="540" y="225" class="node-text">4. <tspan font-weight="700">Legumes e Verduras:</tspan> Cenoura, abobrinha, chuchu, folhas verdes escuras.</text>
+    <text x="540" y="245" class="node-text">5. <tspan font-weight="700">Frutas Frescas:</tspan> In natura nos lanches (amassadas ou em pedaços).</text>
+  </g>
+
+  <!-- Comparison of Methods -->
+  <g class="card-shadow">
+    <rect x="40" y="285" width="920" height="160" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
+    <text x="500" y="310" text-anchor="middle" class="node-bold" fill="#0f172a">COMPARATIVO DOS MÉTODOS DE INTRODUÇÃO ALIMENTAR (SBP 2024)</text>
+
+    <!-- Column 1 -->
+    <rect x="60" y="325" width="270" height="105" rx="6" fill="#f8fafc" stroke="#94a3b8" />
+    <text x="195" y="345" text-anchor="middle" class="node-bold">Tradicional Participativo</text>
+    <text x="75" y="365" class="node-text">• Alimentos amassados com garfo.</text>
+    <text x="75" y="385" class="node-text">• Oferecido em colher pelo adulto.</text>
+    <text x="75" y="405" class="node-text">• Bebê interage e sinaliza saciedade.</text>
+    <text x="75" y="420" class="node-text">• <tspan font-weight="700" fill="#dc2626">PROIBIDO liquidificar ou peneirar!</tspan></text>
+
+    <!-- Column 2 -->
+    <rect x="365" y="325" width="270" height="105" rx="6" fill="#f8fafc" stroke="#94a3b8" />
+    <text x="500" y="345" text-anchor="middle" class="node-bold">BLW (Baby-Led Weaning)</text>
+    <text x="380" y="365" class="node-text">• Alimentos em tiras/palitos macios.</text>
+    <text x="380" y="385" class="node-text">• Autoalimentação pelo bebê com as mãos.</text>
+    <text x="380" y="405" class="node-text">• Estimula autonomia e mastigação.</text>
+    <text x="380" y="420" class="node-text">• Exige vigilância estrita contra engasgo.</text>
+
+    <!-- Column 3 -->
+    <rect x="670" y="325" width="270" height="105" rx="6" fill="#f8fafc" stroke="#94a3b8" />
+    <text x="805" y="345" text-anchor="middle" class="node-bold">BLISS / Integrado (Recomendado)</text>
+    <text x="685" y="365" class="node-text">• BLW modificado com foco nutricional.</text>
+    <text x="685" y="385" class="node-text">• Garante 1 fonte de ferro em cada refeição.</text>
+    <text x="685" y="405" class="node-text">• Garante alimento denso em energia.</text>
+    <text x="685" y="420" class="node-text">• Combina colher e pedaços com segurança.</text>
+  </g>
+
+  <!-- Prohibitions & Strict Guidance -->
+  <g class="card-shadow">
+    <rect x="40" y="465" width="920" height="255" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+    <text x="60" y="495" class="node-bold" fill="#b91c1c">PROIBIÇÕES & DIRETRIZES MANDATÓRIAS ATÉ 2 ANOS (MS & SBP 2024)</text>
+
+    <text x="60" y="525" class="node-text">🚫 <tspan font-weight="700">AÇÚCAR E PREPARAÇÕES ADAPTADAS:</tspan> Zero açúcar adicionado até 2 anos completos (inclui mascavo, melado, calda, doces, biscoitos e sucos artificiais).</text>
+    <text x="60" y="550" class="node-text">🚫 <tspan font-weight="700">MEL DE ABELHA:</tspan> Contraindicado formalmente antes de 1 ano de vida devido ao risco fatal de <tspan font-weight="700" fill="#dc2626">Botulismo Intestinal Infantil</tspan> (<tspan font-style="italic">Clostridium botulinum</tspan>).</text>
+    <text x="60" y="575" class="node-text">🚫 <tspan font-weight="700">SUCO DE FRUTAS (MESMO NATURAL):</tspan> Não recomendado no 1º ano de vida (perda de fibras, sobrecarga de frutose livre). Priorizar fruta in natura!</text>
+    <text x="60" y="600" class="node-text">🚫 <tspan font-weight="700">LEITE DE VACA INTEGRAL:</tspan> Não recomendado como fonte láctea principal antes de 12 meses (micro-hemorragias digestivas, anemia e sobrecarga renal de solutos).</text>
+    <text x="60" y="625" class="node-text">🚫 <tspan font-weight="700">ALIMENTOS DE ALTO RISCO DE ENGASGO:</tspan> Uva inteira, tomate-cereja, nozes/amendoim inteiros, salsicha cortada em rodelas (devem ser cortados longitudinalmente).</text>
+
+    <text x="60" y="660" class="node-bold" fill="#0f172a">INTRODUÇÃO DE ALERGÊNICOS (OVO, PEIXE, AMENDOIM, GLÚTEN):</text>
+    <text x="60" y="685" class="node-text">• <tspan font-weight="700" fill="#15803d">Janela Imunológica Oportuna:</tspan> Devem ser introduzidos <tspan font-weight="700">ENTRE 6 E 9 MESES</tspan>, mesmo em bebês com história familiar de atopia.</text>
+    <text x="60" y="705" class="node-text">• O atraso na introdução de alergênicos NÃO previne alergias e aumenta o risco de sensibilização (Evidências Consensos EAACI/ASBAI/SBP).</text>
+  </g>
+</svg>
