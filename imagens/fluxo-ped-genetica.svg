@@ -46,7 +46,7 @@
   <text x="485" y="237" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Alta estatura com proporções eunucóides, ginecomastia na puberdade,</text>
   <text x="485" y="251" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  testículos pequenos e endurecidos (&lt; 4 mL), azoospermia e infertilidade.</text>
 
-  <!-- Bloco Inferior: Triagem Neonatal Biológica & Erros Inatos -->
+  <!-- Bloco Inferior: Triagem Neonatal Biológica &amp; Erros Inatos -->
   <rect x="40" y="275" width="840" height="325" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
   <rect x="40" y="275" width="840" height="28" fill="#f1f5f9" rx="6" />
   <text x="55" y="294" fill="#0f172a" font-size="11.5" font-weight="bold" font-family="system-ui, sans-serif">TRIAGEM NEONATAL BIOLÓGICA (TESTE DO PEZINHO) &amp; ERROS INATOS DO METABOLISMO</text>
@@ -76,7 +76,7 @@
   <text x="65" y="470" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Outros Erros Inatos &amp; Doenças Rastreadas no Programa Nacional de Triagem Neonatal (PNTN):</text>
   <text x="65" y="489" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Fenilcetonúria (PKU):</strong> Deficiência da fenilalanina hidroxilase; acúmulo de fenilalanina neurotóxica. Cabelos claros, odor de mofo/camundongo na urina. Tratamento: Dieta isenta de fenilalanina.</text>
   <text x="65" y="507" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Doença Falciforme &amp; Hemoglobinopatias:</strong> Eletroforese de hemoglobina (padrões FS, FAS, FSC). Início imediato de profilaxia com Penicilina oral aos 2 meses e imunização antipneumocócica.</text>
-  <text x="65" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Fibrose Cística:</strong> Dosagem de Tripsina Imunorreativa (IRT) em duas amostras antes dos 30 dias de vida; confirmatório com Teste do Suor de Gibson-Cooke (Cloro &ge; 60 mEq/L).</text>
+  <text x="65" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Fibrose Cística:</strong> Dosagem de Tripsina Imunorreativa (IRT) em duas amostras antes dos 30 dias de vida; confirmatório com Teste do Suor de Gibson-Cooke (Cloro ≥ 60 mEq/L).</text>
   <text x="65" y="543" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Deficiência de Biotinidase:</strong> Convulsões, hipotonia, alopecia e dermatite eczematosa. Tratamento imediato com Biotina oral.</text>
   <text x="65" y="561" fill="#7c3aed" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• <strong>Toxoplasmose Congênita:</strong> IgM específica no papel filtro para início de sulfadiazina + pirimetamina + ácido folínico.</text>
 </svg>

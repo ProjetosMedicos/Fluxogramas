@@ -14,7 +14,7 @@
 
   <!-- Header -->
   <rect x="30" y="25" width="940" height="70" rx="12" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
-  <text x="50" y="55" class="title">ALGORITMO DE SUPLEMENTAÇÃO PROFILÁTICA DE MICRONUTRIENTES & VITAMINAS</text>
+  <text x="50" y="55" class="title">ALGORITMO DE SUPLEMENTAÇÃO PROFILÁTICA DE MICRONUTRIENTES &amp; VITAMINAS</text>
   <text x="50" y="78" class="subtitle">Diretrizes Nacionais de Ferro, Vitamina D, Vitamina A e Zinco • SBP 2024</text>
   <rect x="790" y="42" width="160" height="28" rx="6" fill="#1d4ed8" />
   <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PROFILAXIAS</text>
@@ -53,7 +53,7 @@
     <text x="685" y="275" class="node-text">  de idade cronológica.</text>
   </g>
 
-  <!-- Vitamin D & Vitamin A & Zinc -->
+  <!-- Vitamin D &amp; Vitamin A &amp; Zinc -->
   <g class="card-shadow">
     <rect x="40" y="340" width="280" height="200" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="1.5" />
     <text x="180" y="365" text-anchor="middle" class="node-bold" fill="#b45309">VITAMINA D (SBP 2024)</text>
@@ -79,7 +79,7 @@
 
   <g class="card-shadow">
     <rect x="680" y="340" width="280" height="200" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="1.5" />
-    <text x="820" y="365" text-anchor="middle" class="node-bold" fill="#047857">ZINCO & OUTROS</text>
+    <text x="820" y="365" text-anchor="middle" class="node-bold" fill="#047857">ZINCO &amp; OUTROS</text>
     <text x="695" y="390" class="node-text">• <tspan font-weight="700">Na Diarreia Aguda (OMS/SBP):</tspan></text>
     <text x="710" y="410" class="node-text">&lt; 6 meses: <tspan font-weight="700">10 mg/dia</tspan> por 10 a 14 dias.</text>
     <text x="710" y="430" class="node-text">&gt; 6 meses: <tspan font-weight="700">20 mg/dia</tspan> por 10 a 14 dias.</text>

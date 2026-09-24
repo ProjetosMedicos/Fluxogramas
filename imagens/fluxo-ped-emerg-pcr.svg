@@ -63,8 +63,10 @@
 
   <rect x="645" y="365" width="230" height="215" rx="6" fill="#ffffff" stroke="#fca5a5" stroke-width="1.5" />
   <text x="760" y="388" fill="#dc2626" font-size="11.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">DESFIBRILAÇÃO IMEDIATA:</text>
-  <text x="655" y="410" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">1º Choque: 2 J/kg $ightarrow$ RCP 2 min</text>
-  <text x="655" y="430" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">2º Choque: 4 J/kg $ightarrow$ RCP 2 min</text>
+  <text x="655" y="410" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">1º Choque: 2 J/kg $
+ightarrow$ RCP 2 min</text>
+  <text x="655" y="430" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">2º Choque: 4 J/kg $
+ightarrow$ RCP 2 min</text>
   <text x="655" y="448" fill="#0369a1" font-size="10" font-family="system-ui, sans-serif">• Adrenalina 0,01 mg/kg após 2º choque</text>
   <text x="655" y="468" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">3º Choque: ≥ 4 J/kg (máx 10 J/kg)</text>
   <text x="655" y="488" fill="#15803d" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">• Amiodarona 5 mg/kg IV/IO</text>

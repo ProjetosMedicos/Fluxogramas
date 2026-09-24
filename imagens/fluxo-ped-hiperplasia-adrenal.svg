@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHAC" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <filter id="shadowHAC" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#f8fafc" rx="8" />
+
+  <!-- Cabeçalho -->
+  <rect x="20" y="16" width="880" height="54" rx="6" fill="url(#gradHAC)" filter="url(#shadowHAC)" />
+  <text x="40" y="42" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">ALGORITMO CLÍNICO: HIPERPLASIA ADRENAL CONGÊNITA (HAC)</text>
+  <text x="40" y="58" fill="#ede9fe" font-size="11" font-family="system-ui, -apple-system, sans-serif">Diretrizes Oficiais SBP 2024 • Deficiência da 21-Hidroxilase, Triagem Neonatal por 17-OHP &amp; Crise Adrenal</text>
+
+  <!-- Fisiopatologia e Triagem -->
+  <rect x="40" y="85" width="410" height="235" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#shadowHAC)" />
+  <rect x="40" y="85" width="410" height="26" fill="#7c3aed" rx="6" />
+  <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. FISIOPATOLOGIA &amp; TRIAGEM NEONATAL (17-OHP)</text>
+  <text x="55" y="127" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Bloqueio Enzimático da 21-Hidroxilase (&gt; 90% dos casos):</text>
+  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  Queda de Cortisol e Aldosterona -&gt; Aumento de ACTH -&gt; Hiperplasia Adrenal</text>
+  <text x="55" y="156" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  -&gt; Desvio em cascata para produção excessiva de ANDROGÊNIOS!</text>
+  <text x="55" y="174" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Triagem Neonatal Biológica (17-OH-Progesterona):</text>
+  <text x="55" y="190" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Ponto de corte estratificado rigorosamente por <strong>peso de nascimento</strong></text>
+  <text x="55" y="204" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">    e <strong>idade gestacional</strong> (evitar falso-positivos em prematuros).</text>
+  <text x="55" y="222" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  - Teste confirmatório sérico imediato se 17-OHP elevada!</text>
+
+  <!-- Apresentação Clínica -->
+  <rect x="470" y="85" width="410" height="235" rx="6" fill="#ffffff" stroke="#6d28d9" stroke-width="2" filter="url(#shadowHAC)" />
+  <rect x="470" y="85" width="410" height="26" fill="#6d28d9" rx="6" />
+  <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. APRESENTAÇÃO CLÍNICA &amp; FORMAS</text>
+  <text x="485" y="127" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Genitália Amígua / Atípica em Meninas (46,XX):</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Virilização intrauterina: hipertrofia de clitóris, fusão labial (Prader I a V).</text>
+  <text x="485" y="156" fill="#047857" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  * Causa número 1 de genitália atípica em recém-nascidos 46,XX!</text>
+  <text x="485" y="174" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Crise Perdedora de Sal (2ª a 3ª Semana de Vida):</text>
+  <text x="485" y="190" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Meninos não têm virilização e frequentemente abrem o quadro com choque!</text>
+  <text x="485" y="205" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Desidratação grave, vômitos em jato (confundido com estenose hipertrófica),</text>
+  <text x="485" y="220" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">    HIPONATREMIA marcante + HIPERCALEMIA grave + Hipoglicemia e Choque!</text>
+
+  <!-- Manejo Terapêutico -->
+  <rect x="40" y="335" width="840" height="265" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <rect x="40" y="335" width="840" height="28" fill="#f1f5f9" rx="6" />
+  <text x="55" y="354" fill="#0f172a" font-size="11.5" font-weight="bold" font-family="system-ui, sans-serif">3. MANEJO DA CRISE ADRENAL AGUDA &amp; TERAPIA DE MANUTENÇÃO (SBP 2024)</text>
+
+  <rect x="55" y="375" width="375" height="110" rx="5" fill="#fef2f2" stroke="#fecaca" />
+  <text x="65" y="395" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Emergência: Crise com Perda de Sal &amp; Choque:</text>
+  <text x="65" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Expansão com SF 0,9% 20 mL/kg (SEM POTÁSSIO!) e SG 10% 2-4 mL/kg.</text>
+  <text x="65" y="430" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Hidrocortisona IV em bolus: 50 a 100 mg/m² imediatamente.</text>
+  <text x="65" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Manutenção IV: 50 a 100 mg/m²/dia dividida a cada 6 horas.</text>
+
+  <rect x="450" y="375" width="415" height="110" rx="5" fill="#f0fdf4" stroke="#bbf7d0" />
+  <text x="460" y="395" fill="#166534" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Terapia Crônica de Manutenção:</text>
+  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Glicocorticoide:</strong> Hidrocortisona oral 10 a 15 mg/m²/dia em 3 doses diárias.</text>
+  <text x="460" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Mineralocorticoide:</strong> Fludrocortisona oral 0,05 a 0,2 mg/dia.</text>
+  <text x="460" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Suplementação de NaCl:</strong> 1 a 2 g/dia no primeiro ano de vida.</text>
+
+  <rect x="55" y="500" width="810" height="85" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="65" y="518" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">ORIENTAÇÃO FAMILIAR EM DIAS DE ESTRESSE / INFECÇÃO (DOSE DE ESTRESSE):</text>
+  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Febre / Infecções moderadas:</strong> Triplicar a dose habitual de Hidrocortisona oral durante os dias de doença.</text>
+  <text x="65" y="550" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Vômitos ou diarreia com incapacidade de ingerir VO: Aplicação IM imediata de emergência e procurar pronto-socorro!</text>
+</svg>

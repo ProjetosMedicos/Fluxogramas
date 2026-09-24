@@ -39,7 +39,7 @@
   <text x="500" y="68" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="800" letter-spacing="0.5">FLUXOGRAMA OFICIAL DE REANIMAÇÃO NEONATAL EM SALA DE PARTO</text>
   <text x="500" y="96" text-anchor="middle" fill="#bae6fd" font-size="14" font-weight="600">Diretrizes da Sociedade Brasileira de Pediatria (SBP, 2024) — RN ≥ 34 semanas</text>
 
-  <!-- Bloco 1: Nascimento & Avaliação Imediata -->
+  <!-- Bloco 1: Nascimento &amp; Avaliação Imediata -->
   <rect x="220" y="150" width="560" height="90" rx="10" fill="#1e293b" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
   <text x="500" y="180" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">NASCIMENTO: AVALIAÇÃO RÁPIDA DE VITALIDADE</text>
   <text x="500" y="205" text-anchor="middle" fill="#f8fafc" font-size="13">1. Gestação a Termo?  |  2. Respirando ou Chorando?  |  3. Tônus Muscular em Flexão?</text>
@@ -145,7 +145,7 @@
   <path d="M 500 1075 L 500 1105" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
   <text x="550" y="1092" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="800">FC &lt; 60 bpm</text>
 
-  <!-- Bloco 8: Medicação & Expansor Volêmico -->
+  <!-- Bloco 8: Medicação &amp; Expansor Volêmico -->
   <rect x="220" y="1105" width="560" height="150" rx="10" fill="url(#grad-purple)" filter="url(#shadow)"/>
   <text x="500" y="1132" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">CATETERISMO UMBILICAL DE URGÊNCIA &amp; DROGAS</text>
   <text x="500" y="1155" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="700">1. ADRENALINA IV / IO (Veia Umbilical de Escolha):</text>

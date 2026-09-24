@@ -84,7 +84,7 @@
   <!-- Golden Rules of DEP -->
   <g class="card-shadow">
     <rect x="40" y="495" width="920" height="225" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-    <text x="60" y="525" class="node-bold" fill="#0f172a">REGRAS DE OURO & ARMADILHAS CLÍNICAS NA DESNUTRIÇÃO GRAVE (SBP 2024)</text>
+    <text x="60" y="525" class="node-bold" fill="#0f172a">REGRAS DE OURO &amp; ARMADILHAS CLÍNICAS NA DESNUTRIÇÃO GRAVE (SBP 2024)</text>
 
     <text x="60" y="555" class="node-text">⚠️ <tspan font-weight="700" fill="#dc2626">PROIBIDO DAR FERRO NA FASE DE ESTABILIZAÇÃO:</tspan> O ferro livre não ligado à transferrina favorece infecções bacterianas graves e sepse fulminante. Iniciar ferro <tspan font-weight="700">apenas na Reabilitação</tspan>!</text>
     <text x="60" y="585" class="node-text">⚠️ <tspan font-weight="700" fill="#dc2626">PROIBIDO HIDRATAÇÃO VENOSA RÁPIDA / EXPANSÃO COM SF 0,9%:</tspan> O miocárdio desnutrido tem atrofia de miofibrilas; expansões rápidas causam edema agudo de pulmão e morte iatrogênica por ICC. Hidratar preferencialmente por via oral/SNG com ReSoMal.</text>

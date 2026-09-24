@@ -35,7 +35,7 @@
 
   <g class="card-shadow">
     <rect x="520" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#ca8a04" stroke-width="1.5" />
-    <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#a16207">CRIANÇAS ≥ 5 ANOS & ADOLESCENTES</text>
+    <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#a16207">CRIANÇAS ≥ 5 ANOS &amp; ADOLESCENTES</text>
     <text x="540" y="165" class="node-text">• <tspan font-weight="700" fill="#b45309">Z &gt; +1 (p85 a p97):</tspan> SOBREPESO.</text>
     <text x="540" y="190" class="node-text">• <tspan font-weight="700" fill="#dc2626">Z &gt; +2 (p97 a p99.9):</tspan> OBESIDADE.</text>
     <text x="540" y="215" class="node-text">• <tspan font-weight="700" fill="#7f1d1d">Z &gt; +3 (p &gt; 99.9):</tspan> OBESIDADE GRAVE.</text>
@@ -56,7 +56,7 @@
   <!-- Management Protocol 5-2-1-0 -->
   <g class="card-shadow">
     <rect x="40" y="475" width="920" height="245" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-    <text x="60" y="505" class="node-bold" fill="#047857">ESTRATÉGIA NÃO FARMACOLÓGICA DA SBP: DIRETRIZ 5-2-1-0 & ACOMPANHAMENTO</text>
+    <text x="60" y="505" class="node-bold" fill="#047857">ESTRATÉGIA NÃO FARMACOLÓGICA DA SBP: DIRETRIZ 5-2-1-0 &amp; ACOMPANHAMENTO</text>
 
     <!-- 4 Pills of 5-2-1-0 -->
     <rect x="60" y="525" width="200" height="75" rx="6" fill="#f0fdf4" stroke="#10b981" />
@@ -79,7 +79,7 @@
     <text x="850" y="570" text-anchor="middle" class="node-text">Zero refrigerante, suco de caixa,</text>
     <text x="850" y="585" text-anchor="middle" class="node-text">achocolatados e chás doces.</text>
 
-    <text x="60" y="630" class="node-bold" fill="#0f172a">FARMACOTERAPIA & CONDUTA AVANÇADA NO ADOLESCENTE (SBP 2024):</text>
+    <text x="60" y="630" class="node-bold" fill="#0f172a">FARMACOTERAPIA &amp; CONDUTA AVANÇADA NO ADOLESCENTE (SBP 2024):</text>
     <text x="60" y="655" class="node-text">• Indicada apenas após falha documentada de mudança de estilo de vida intensiva em &gt; 12 anos com Obesidade Grave ou comorbidades graves.</text>
     <text x="60" y="675" class="node-text">• Fármacos aprovados pela ANVISA em adolescentes ≥ 12 anos: <tspan font-weight="700">Liraglutida</tspan> (análogo GLP-1 3.0 mg/dia SC) e <tspan font-weight="700">Orlistate</tspan> (120 mg VO junto às refeições).</text>
     <text x="60" y="695" class="node-text">• <tspan font-weight="700">Cirurgia Bariátrica:</tspan> Apenas para adolescentes com maturidade óssea (Tanner 4-5) e IMC &gt; 35 com comorbidades graves ou IMC &gt; 40 refratários.</text>

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHipo" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <filter id="shadowHipo" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#f8fafc" rx="8" />
+
+  <!-- Cabeçalho -->
+  <rect x="20" y="16" width="880" height="54" rx="6" fill="url(#gradHipo)" filter="url(#shadowHipo)" />
+  <text x="40" y="42" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">ALGORITMO CLÍNICO: HIPOTIREOIDISMO CONGÊNITO</text>
+  <text x="40" y="58" fill="#e0f2fe" font-size="11" font-family="system-ui, -apple-system, sans-serif">Diretrizes SBP 2024 • Triagem Neonatal por TSH, Janela Crítica &lt; 14 Dias &amp; Levotiroxina Precoce</text>
+
+  <!-- Triagem Neonatal -->
+  <rect x="40" y="85" width="410" height="235" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#shadowHipo)" />
+  <rect x="40" y="85" width="410" height="26" fill="#0284c7" rx="6" />
+  <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. TRIAGEM NEONATAL (TESTE DO PEZINHO)</text>
+  <text x="55" y="127" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Coleta Obrigatória em Papel-Filtro:</text>
+  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  - Realizar entre o <strong>3º e 5º dia de vida</strong> (evitar pico fisiológico de TSH nas 24-48h).</text>
+  <text x="55" y="158" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Interpretação do TSH Neonatal:</text>
+  <text x="55" y="174" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• <strong>TSH &lt; 10 mUI/L:</strong> Normal. Não requer recoleta.</text>
+  <text x="55" y="190" fill="#d97706" font-size="9.5" font-family="system-ui, sans-serif">• <strong>TSH 10 a 20 mUI/L:</strong> Suspeito. Recoleta imediata de TSH e T4 livre séricos.</text>
+  <text x="55" y="210" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• TSH &gt;= 20 mUI/L em papel-filtro:</text>
+  <text x="55" y="226" fill="#dc2626" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  EMERGÊNCIA TERAPÊUTICA! Colher soro e INICIAR LEVOTIROXINA SEM ESPERAR!</text>
+
+  <!-- Quadro Clínico e Janela -->
+  <rect x="470" y="85" width="410" height="235" rx="6" fill="#ffffff" stroke="#0369a1" stroke-width="2" filter="url(#shadowHipo)" />
+  <rect x="470" y="85" width="410" height="26" fill="#0369a1" rx="6" />
+  <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. JANELA CRÍTICA DE INTERVENÇÃO &amp; CLÍNICA</text>
+  <text x="485" y="127" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Janela de Ouro do Neurodesenvolvimento:</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  O tratamento com Levotiroxina DEVE ser iniciado até os <strong>14 dias de vida</strong></text>
+  <text x="485" y="156" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  para prevenir qualquer déficit cognitivo e sequela intelectual irreversível!</text>
+  <text x="485" y="174" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Sinais Clínicos Tardios (Não esperar surgirem!):</text>
+  <text x="485" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Icterícia neonatal prolongada (&gt; 14 dias de vida).</text>
+  <text x="485" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - <strong>Fontanela posterior ampla (&gt; 0,5 cm)</strong>.</text>
+  <text x="485" y="218" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Macroglossia, choro rouco, hérnia umbilical e constipação.</text>
+  <text x="485" y="232" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Hipotonia, letargia e dificuldades graves de sucção alimentar.</text>
+
+  <!-- Tratamento e Monitoramento -->
+  <rect x="40" y="335" width="840" height="265" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <rect x="40" y="335" width="840" height="28" fill="#f1f5f9" rx="6" />
+  <text x="55" y="354" fill="#0f172a" font-size="11.5" font-weight="bold" font-family="system-ui, sans-serif">3. ESQUEMA DE REPOSIÇÃO HORMONAL &amp; MONITORAMENTO METABÓLICO</text>
+
+  <rect x="55" y="375" width="375" height="110" rx="5" fill="#f0fdf4" stroke="#bbf7d0" />
+  <text x="65" y="395" fill="#166534" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Dose Inicial Recomendada (SBP 2024):</text>
+  <text x="65" y="415" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Levotiroxina Sódica Oral:</strong> 10 a 15 mcg/kg/dia em dose única.</text>
+  <text x="65" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Administrar em jejum com água ou leite materno (não com soja/ferro!).</text>
+  <text x="65" y="445" fill="#166534" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Esmagar o comprimido e diluir em pequena quantidade de líquido.</text>
+
+  <rect x="450" y="375" width="415" height="110" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
+  <text x="460" y="395" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Alvos Laboratoriais &amp; Monitorização:</text>
+  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Normalizar T4 livre em 1 a 2 semanas e TSH em 1 mês.</text>
+  <text x="460" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Meta terapêutica: Manter T4 livre na metade superior do normal.</text>
+  <text x="460" y="445" fill="#047857" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Coleta de controle: 2 e 4 semanas pós-início, depois a cada 1-2 meses no 1º ano.</text>
+
+  <rect x="55" y="500" width="810" height="85" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
+  <text x="65" y="518" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">INVESTIGAÇÃO ETIOLÓGICA (NÃO ATRASAR O TRATAMENTO!):</text>
+  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Cintilografia tireoidiana e Ultrassonografia de tireoide:</strong> Diferenciar disgenesia (ectopia, atireose) de disormonogênese.</text>
+  <text x="65" y="550" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Se hipotireoidismo transitório suspeito: reavaliação diagnóstica aos 3 anos de idade por tentativa de desmame supervisionado.</text>
+</svg>

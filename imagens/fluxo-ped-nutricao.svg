@@ -14,8 +14,8 @@
 
   <!-- Header -->
   <rect x="30" y="25" width="940" height="70" rx="12" fill="#ecfdf5" stroke="#10b981" stroke-width="1.5" />
-  <text x="50" y="55" class="title">ALGORITMO DE INTRODUÇÃO ALIMENTAR & PUERICULTURA NUTRICIONAL</text>
-  <text x="50" y="78" class="subtitle">Guia Alimentar para Crianças Brasileiras Menores de 2 Anos (MS) & Tratado de Pediatria SBP 6ª Edição (2024)</text>
+  <text x="50" y="55" class="title">ALGORITMO DE INTRODUÇÃO ALIMENTAR &amp; PUERICULTURA NUTRICIONAL</text>
+  <text x="50" y="78" class="subtitle">Guia Alimentar para Crianças Brasileiras Menores de 2 Anos (MS) &amp; Tratado de Pediatria SBP 6ª Edição (2024)</text>
   <rect x="790" y="42" width="160" height="28" rx="6" fill="#059669" />
   <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PUERICULTURA</text>
 
@@ -71,10 +71,10 @@
     <text x="685" y="420" class="node-text">• Combina colher e pedaços com segurança.</text>
   </g>
 
-  <!-- Prohibitions & Strict Guidance -->
+  <!-- Prohibitions &amp; Strict Guidance -->
   <g class="card-shadow">
     <rect x="40" y="465" width="920" height="255" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-    <text x="60" y="495" class="node-bold" fill="#b91c1c">PROIBIÇÕES & DIRETRIZES MANDATÓRIAS ATÉ 2 ANOS (MS & SBP 2024)</text>
+    <text x="60" y="495" class="node-bold" fill="#b91c1c">PROIBIÇÕES &amp; DIRETRIZES MANDATÓRIAS ATÉ 2 ANOS (MS &amp; SBP 2024)</text>
 
     <text x="60" y="525" class="node-text">🚫 <tspan font-weight="700">AÇÚCAR E PREPARAÇÕES ADAPTADAS:</tspan> Zero açúcar adicionado até 2 anos completos (inclui mascavo, melado, calda, doces, biscoitos e sucos artificiais).</text>
     <text x="60" y="550" class="node-text">🚫 <tspan font-weight="700">MEL DE ABELHA:</tspan> Contraindicado formalmente antes de 1 ano de vida devido ao risco fatal de <tspan font-weight="700" fill="#dc2626">Botulismo Intestinal Infantil</tspan> (<tspan font-style="italic">Clostridium botulinum</tspan>).</text>

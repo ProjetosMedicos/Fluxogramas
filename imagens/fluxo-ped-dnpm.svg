@@ -44,7 +44,7 @@
 
   <g class="card-shadow">
     <rect x="510" y="115" width="215" height="120" rx="8" fill="#ffffff" stroke="#f59e0b" stroke-width="2" />
-    <text x="617" y="140" text-anchor="middle" class="node-bold" fill="#b45309">3. Linguagem & Audição</text>
+    <text x="617" y="140" text-anchor="middle" class="node-bold" fill="#b45309">3. Linguagem &amp; Audição</text>
     <text x="617" y="160" text-anchor="middle" class="node-text">• 2m: Vocaliza sons guturais (aaa, ggg)</text>
     <text x="617" y="180" text-anchor="middle" class="node-text">• 6m: Balbucio polissilábico (da-da, ma-ma)</text>
     <text x="617" y="200" text-anchor="middle" class="node-text">• 12m: Palavras com significado (pai, mãe)</text>
@@ -91,7 +91,7 @@
   <!-- M-CHAT-R Section -->
   <g class="card-shadow">
     <rect x="50" y="490" width="900" height="235" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
-    <text x="70" y="520" class="node-bold" fill="#0f172a">RASTREIO UNIVERSAL DE AUTISMO (M-CHAT-R/F) ENTRE 18 E 24 MESES (LEI FEDERAL & SBP 2024)</text>
+    <text x="70" y="520" class="node-bold" fill="#0f172a">RASTREIO UNIVERSAL DE AUTISMO (M-CHAT-R/F) ENTRE 18 E 24 MESES (LEI FEDERAL &amp; SBP 2024)</text>
     <text x="70" y="545" class="node-text">Questionário de 20 perguntas respondido pelos pais para identificar risco de Transtorno do Espectro Autista (TEA).</text>
 
     <!-- Score Blocks -->

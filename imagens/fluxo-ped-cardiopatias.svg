@@ -20,7 +20,7 @@
   <!-- Bloco Central: Teste do Coraçãozinho -->
   <rect x="180" y="85" width="560" height="52" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5" filter="url(#shadowCardio)" />
   <text x="460" y="105" fill="#0369a1" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">TRIAGEM NEONATAL: TESTE DO CORAÇÃOZINHO (OXIMETRIA DE PULSO 24-48H)</text>
-  <text x="460" y="122" fill="#0f172a" font-size="10" text-anchor="middle" font-family="system-ui, sans-serif">Oximetria no Membro Superior Direito (MSD) e em um dos Membros Inferiores (MMII): Normal se SpO2 &ge; 95% e dif &le; 3%</text>
+  <text x="460" y="122" fill="#0f172a" font-size="10" text-anchor="middle" font-family="system-ui, sans-serif">Oximetria no Membro Superior Direito (MSD) e em um dos Membros Inferiores (MMII): Normal se SpO2 ≥ 95% e dif ≤ 3%</text>
 
   <!-- Linha divisória -->
   <line x1="460" y1="137" x2="460" y2="155" stroke="#94a3b8" stroke-width="2" />
@@ -34,7 +34,7 @@
   <!-- Ramo Esquerdo: Cardiopatias Acianogênicas -->
   <rect x="40" y="180" width="400" height="240" rx="6" fill="#ffffff" stroke="#10b981" stroke-width="2" filter="url(#shadowCardio)" />
   <rect x="40" y="180" width="400" height="28" rx="6" fill="#10b981" />
-  <text x="240" y="199" fill="#ffffff" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">CARDIOPATIAS ACIANOGÊNICAS (SHUNT E &rarr; D)</text>
+  <text x="240" y="199" fill="#ffffff" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">CARDIOPATIAS ACIANOGÊNICAS (SHUNT E → D)</text>
 
   <text x="55" y="225" fill="#065f46" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">1. Com Hiperfluxo Pulmonar (Shunt Esquerda-Direita):</text>
   <text x="55" y="242" fill="#0f172a" font-size="10" font-family="system-ui, sans-serif">• <strong>CIV (Comunicação Interventricular):</strong> Mais comum de todas;</text>
@@ -53,7 +53,7 @@
   <!-- Ramo Direito: Cardiopatias Cianogênicas -->
   <rect x="480" y="180" width="400" height="240" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#shadowCardio)" />
   <rect x="480" y="180" width="400" height="28" rx="6" fill="#0284c7" />
-  <text x="680" y="199" fill="#ffffff" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">CARDIOPATIAS CIANOGÊNICAS (SHUNT D &rarr; E)</text>
+  <text x="680" y="199" fill="#ffffff" font-size="11.5" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">CARDIOPATIAS CIANOGÊNICAS (SHUNT D → E)</text>
 
   <text x="495" y="225" fill="#0369a1" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">1. Com Hipofluxo Pulmonar (Coração Oligoêmico no Rx):</text>
   <text x="495" y="242" fill="#0f172a" font-size="10" font-family="system-ui, sans-serif">• <strong>TETRALOGIA DE FALLOT:</strong> Cardiopatia cianogênica mais comum</text>
@@ -76,13 +76,13 @@
 
   <text x="55" y="485" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Classificação por Percentis (Sexo, Idade e Estatura):</text>
   <text x="55" y="502" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>PA Normal:</strong> &lt; Percentil 90.</text>
-  <text x="55" y="518" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>PA Elevada:</strong> &ge; P90 até &lt; P95 (ou 120/80 mmHg).</text>
-  <text x="55" y="534" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>HAS Estágio 1:</strong> &ge; P95 até &lt; P95 + 12 mmHg.</text>
-  <text x="55" y="550" fill="#dc2626" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• <strong>HAS Estágio 2:</strong> &ge; P95 + 12 mmHg (ou &ge; 140/90 mmHg).</text>
+  <text x="55" y="518" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>PA Elevada:</strong> ≥ P90 até &lt; P95 (ou 120/80 mmHg).</text>
+  <text x="55" y="534" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>HAS Estágio 1:</strong> ≥ P95 até &lt; P95 + 12 mmHg.</text>
+  <text x="55" y="550" fill="#dc2626" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• <strong>HAS Estágio 2:</strong> ≥ P95 + 12 mmHg (ou ≥ 140/90 mmHg).</text>
 
   <text x="475" y="485" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Investigação Etiológica &amp; Terapêutica Racional:</text>
   <text x="475" y="502" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Crianças &lt; 6-10 anos: HAS é 90% SECUNDÁRIA!</strong> Investigar parênquima renal</text>
   <text x="475" y="516" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  (USG renal com Doppler), estenose de artéria renal, coarctação de aorta e HAC.</text>
-  <text x="475" y="534" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Adolescentes &ge; 12 anos e obesidade: Predomínio de HAS Primária (essencial).</text>
+  <text x="475" y="534" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Adolescentes ≥ 12 anos e obesidade: Predomínio de HAS Primária (essencial).</text>
   <text x="475" y="550" fill="#059669" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Fármacos de 1ª linha: Enalapril (IECA), Losartana (BRA) ou Anlodipino (BCC).</text>
 </svg>

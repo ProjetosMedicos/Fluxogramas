@@ -18,7 +18,7 @@
 
   <!-- Header -->
   <rect x="30" y="25" width="940" height="70" rx="12" fill="#fff1f2" stroke="#f43f5e" stroke-width="1.5" />
-  <text x="50" y="55" class="title">ALGORITMO DE MANEJO DAS INTERCORRÊNCIAS NA LACTAÇÃO & MASTITIS</text>
+  <text x="50" y="55" class="title">ALGORITMO DE MANEJO DAS INTERCORRÊNCIAS NA LACTAÇÃO &amp; MASTITIS</text>
   <text x="50" y="78" class="subtitle">Avaliação da Pega, Ingurgitamento, Fissuras e Mastite Lactacional • SBP 2024</text>
   <rect x="790" y="42" width="160" height="28" rx="6" fill="#e11d48" />
   <text x="870" y="60" text-anchor="middle" class="badge-text">SBP 2024 • NUTROLOGIA</text>
@@ -26,7 +26,7 @@
   <!-- Pega Correta Box -->
   <g class="card-shadow">
     <rect x="50" y="115" width="420" height="150" rx="8" fill="#ffffff" stroke="#10b981" stroke-width="2" />
-    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#047857">CRITÉRIOS DE PEGA & POSICIONAMENTO CORRETO</text>
+    <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#047857">CRITÉRIOS DE PEGA &amp; POSICIONAMENTO CORRETO</text>
     <text x="70" y="165" class="node-text">✓ <tspan font-weight="700">Boca bem aberta</tspan> (ângulo > 120° / boca de peixinho).</text>
     <text x="70" y="185" class="node-text">✓ <tspan font-weight="700">Lábio inferior evertido</tspan> cobrindo mais a aréola inferior.</text>
     <text x="70" y="205" class="node-text">✓ <tspan font-weight="700">Queixo encostado na mama</tspan> da mãe e nariz livre.</text>
@@ -92,6 +92,6 @@
     <text x="90" y="630" class="node-text">1. <tspan font-weight="700">Temperatura Ambiente:</tspan> Máximo 2 horas (SBP/Ministério da Saúde recomendam resfriar imediatamente).</text>
     <text x="90" y="655" class="node-text">2. <tspan font-weight="700">Geladeira (temperatura &lt; 5°C):</tspan> Até <tspan font-weight="700" fill="#15803d">12 HORAS</tspan> para uso domiciliar (se doação ao BLH, congelar de imediato).</text>
     <text x="90" y="680" class="node-text">3. <tspan font-weight="700">Freezer / Congelador (-18°C):</tspan> Até <tspan font-weight="700" fill="#15803d">15 DIAS</tspan>.</text>
-    <text x="70" y="710" class="node-text">• <tspan font-weight="700">Descongelamento & Aquecimento:</tspan> Descongelar em geladeira ou banho-maria desligado (água morna). <tspan font-weight="700" fill="#dc2626">PROIBIDO micro-ondas ou ferver</tspan> (destrói imunoglobulinas).</text>
+    <text x="70" y="710" class="node-text">• <tspan font-weight="700">Descongelamento &amp; Aquecimento:</tspan> Descongelar em geladeira ou banho-maria desligado (água morna). <tspan font-weight="700" fill="#dc2626">PROIBIDO micro-ondas ou ferver</tspan> (destrói imunoglobulinas).</text>
   </g>
 </svg>
