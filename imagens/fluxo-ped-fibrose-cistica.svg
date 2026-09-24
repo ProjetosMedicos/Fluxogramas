@@ -21,10 +21,10 @@
   <rect x="40" y="85" width="410" height="26" fill="#0d9488" rx="6" />
   <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. TRIAGEM NEONATAL BIOLÓGICA (IRT)</text>
   <text x="55" y="127" fill="#0f766e" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Imunorreatividade Tripsínica (IRT) no Teste do Pezinho:</text>
-  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  - 1ª amostra colhida entre o <strong>3º e 5º dia de vida</strong>.</text>
-  <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  - Ponto de corte alterado: <strong>IRT &gt;= 70 ng/mL</strong>.</text>
+  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  - 1ª amostra colhida entre o <tspan font-weight="bold">3º e 5º dia de vida</tspan>.</text>
+  <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  - Ponto de corte alterado: <tspan font-weight="bold">IRT &gt;= 70 ng/mL</tspan>.</text>
   <text x="55" y="174" fill="#0f766e" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Segunda Amostra de IRT (Obrigatória se 1ª positiva):</text>
-  <text x="55" y="189" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Deve ser colhida rigorosamente até <strong>30 dias de vida</strong>.</text>
+  <text x="55" y="189" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Deve ser colhida rigorosamente até <tspan font-weight="bold">30 dias de vida</tspan>.</text>
   <text x="55" y="203" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  - Se 2ª amostra também &gt;= 70 ng/mL: ENCAMINHAR PARA TESTE DO SUOR!</text>
   <text x="55" y="222" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Obs: Criança com íleo meconial ao nascimento dispensa triagem</text>
   <text x="55" y="236" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  e segue direto para investigação diagnóstica de Fibrose Cística.</text>
@@ -34,8 +34,8 @@
   <rect x="470" y="85" width="410" height="26" fill="#0f766e" rx="6" />
   <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. TESTE DO SUOR: PADRÃO-OURO DIAGNÓSTICO</text>
   <text x="485" y="127" fill="#0f766e" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Método de Gibson &amp; Cooke (Iontoforese com Pilocarpina):</text>
-  <text x="485" y="145" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Cloreto no Suor &lt; 30 mEq/L:</strong> Fibrose Cística improvável / Normal.</text>
-  <text x="485" y="165" fill="#d97706" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Cloreto 30 a 59 mEq/L:</strong> Resultado limítrofe (duvidoso).</text>
+  <text x="485" y="145" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Cloreto no Suor &lt; 30 mEq/L:</tspan> Fibrose Cística improvável / Normal.</text>
+  <text x="485" y="165" fill="#d97706" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Cloreto 30 a 59 mEq/L:</tspan> Resultado limítrofe (duvidoso).</text>
   <text x="485" y="180" fill="#d97706" font-size="9" font-family="system-ui, sans-serif">  Conduta: Repetir o teste do suor e realizar painel genético CFTR.</text>
   <text x="485" y="200" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Cloreto &gt;= 60 mEq/L em 2 amostras independentes:</text>
   <text x="485" y="215" fill="#dc2626" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  DIAGNÓSTICO CONFIRMADO DE FIBROSE CÍSTICA!</text>
@@ -49,19 +49,19 @@
   <rect x="55" y="380" width="260" height="205" rx="5" fill="#f0fdfa" stroke="#ccfbf1" />
   <text x="65" y="400" fill="#0f766e" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Manejo Pulmonar:</text>
   <text x="65" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Fisioterapia respiratória diária.</text>
-  <text x="65" y="438" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Alfa-dornase inalatória:</strong> quebra de DNA de neutrófilos e fluidificação do muco.</text>
-  <text x="65" y="468" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Solução Salina Hipertônica 7%:</strong> hidratação do muco brônquico.</text>
+  <text x="65" y="438" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Alfa-dornase inalatória:</tspan> quebra de DNA de neutrófilos e fluidificação do muco.</text>
+  <text x="65" y="468" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Solução Salina Hipertônica 7%:</tspan> hidratação do muco brônquico.</text>
   <text x="65" y="498" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Vacinação antipneumocócica e influenza.</text>
 
   <rect x="330" y="380" width="260" height="205" rx="5" fill="#eff6ff" stroke="#dbeafe" />
   <text x="340" y="400" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Suporte Gastrointestinal:</text>
-  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Enzimas Pancreáticas:</strong> reposição de lipase oral em todas as refeições.</text>
-  <text x="340" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Vitaminas Lipossolúveis (A, D, E, K):</strong> suplementação contínua diária.</text>
+  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Enzimas Pancreáticas:</tspan> reposição de lipase oral em todas as refeições.</text>
+  <text x="340" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Vitaminas Lipossolúveis (A, D, E, K):</tspan> suplementação contínua diária.</text>
   <text x="340" y="480" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Dieta hipercalórica e hiperlipídica (120% a 150% do VET).</text>
 
   <rect x="605" y="380" width="260" height="205" rx="5" fill="#fef2f2" stroke="#fee2e2" />
   <text x="615" y="400" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Controle Infeccioso:</text>
   <text x="615" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Vigilância ativa para <em>Pseudomonas aeruginosa</em> e <em>Staphylococcus aureus</em>.</text>
-  <text x="615" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Tobramicina inalatória</strong> para erradicação precoce de <em>Pseudomonas</em>.</text>
+  <text x="615" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Tobramicina inalatória</tspan> para erradicação precoce de <em>Pseudomonas</em>.</text>
   <text x="615" y="480" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Exacerbação: internação imediata com antibioticoterapia combinada IV.</text>
 </svg>

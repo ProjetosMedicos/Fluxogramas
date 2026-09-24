@@ -24,10 +24,10 @@
   <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  Artrite em &gt;= 1 articulação com duração &gt;= 6 semanas, início antes dos 16 anos,</text>
   <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  com exclusão de infecções (séptica), neoplasias e outras vasculites.</text>
   <text x="55" y="174" fill="#92400e" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Principais Subtipos Clínicos:</text>
-  <text x="55" y="190" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  1. <strong>Oligoarticular (&lt;= 4 articulações):</strong> 50% dos casos. Joelhos e tornozelos.</text>
+  <text x="55" y="190" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  1. <tspan font-weight="bold">Oligoarticular (&lt;= 4 articulações):</tspan> 50% dos casos. Joelhos e tornozelos.</text>
   <text x="55" y="204" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">     FAN positivo confere alto risco de UVEÍTE ANTERIOR ASSINTOMÁTICA!</text>
-  <text x="55" y="220" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  2. <strong>Poliarticular (&gt;= 5 articulações):</strong> Pequenas e grandes articulações.</text>
-  <text x="55" y="234" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  3. <strong>Sistêmica (Doença de Still infantil):</strong> Febre diária alta em agulhas,</text>
+  <text x="55" y="220" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  2. <tspan font-weight="bold">Poliarticular (&gt;= 5 articulações):</tspan> Pequenas e grandes articulações.</text>
+  <text x="55" y="234" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  3. <tspan font-weight="bold">Sistêmica (Doença de Still infantil):</tspan> Febre diária alta em agulhas,</text>
   <text x="55" y="248" fill="#475569" font-size="8.5" font-family="system-ui, sans-serif">     rash cutâneo cor salmão evanescente, hepatoesplenomegalia e serosite.</text>
 
   <!-- Vigilância Oftalmológica e SAM -->
@@ -35,12 +35,12 @@
   <rect x="470" y="85" width="410" height="26" fill="#92400e" rx="6" />
   <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. VIGILÂNCIA DE UVEÍTE &amp; SÍNDROME DE ATIVAÇÃO MACROFÁGICA</text>
   <text x="485" y="127" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Rastreamento Oftalmológico com Lâmpada de Fenda:</text>
-  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Uveíte na infância é <strong>estritamente assintomática</strong> (olho branco indolor).</text>
-  <text x="485" y="156" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - Se oligoarticular + FAN positivo: exame a cada <strong>3 meses</strong>.</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Uveíte na infância é <tspan font-weight="bold">estritamente assintomática</tspan> (olho branco indolor).</text>
+  <text x="485" y="156" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - Se oligoarticular + FAN positivo: exame a cada <tspan font-weight="bold">3 meses</tspan>.</text>
   <text x="485" y="170" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  - Atraso diagnóstica causa sinéquias, catarata, glaucoma e cegueira irreversível!</text>
   <text x="485" y="190" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Síndrome de Ativação Macrofágica (SAM - Emergência Vital):</text>
   <text x="485" y="205" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Febre contínua, pancitopenia, coagulopatia de consumo e disfunção hepática.</text>
-  <text x="485" y="220" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Marcadores-chave: <strong>Ferritina extremamente elevada (&gt; 5.000 ng/mL)</strong>,</text>
+  <text x="485" y="220" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Marcadores-chave: <tspan font-weight="bold">Ferritina extremamente elevada (&gt; 5.000 ng/mL)</tspan>,</text>
   <text x="485" y="235" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">    triglicerídeos altos, hipofibrinogenemia e queda paradoxal do VHS.</text>
 
   <!-- Escalonamento Terapêutico -->
@@ -50,21 +50,21 @@
 
   <rect x="55" y="380" width="260" height="205" rx="5" fill="#fefce8" stroke="#fef08a" />
   <text x="65" y="400" fill="#854d0e" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Etapa 1: Sintomáticos &amp; Intra-articular</text>
-  <text x="65" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Naproxeno:</strong> 15 a 20 mg/kg/dia 2x/dia.</text>
-  <text x="65" y="440" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Ibuprofeno:</strong> 30 a 40 mg/kg/dia 3x/dia.</text>
+  <text x="65" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Naproxeno:</tspan> 15 a 20 mg/kg/dia 2x/dia.</text>
+  <text x="65" y="440" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Ibuprofeno:</tspan> 30 a 40 mg/kg/dia 3x/dia.</text>
   <text x="65" y="465" fill="#0f172a" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Infiltração Intra-articular:</text>
   <text x="65" y="480" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  Hexacetonida de triancinolona é altamente eficaz na oligoarticular.</text>
 
   <rect x="330" y="380" width="260" height="205" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
   <text x="340" y="400" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Etapa 2: DMARD Sintético</text>
-  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Metotrexato (MTX):</strong> 10 a 15 mg/m²/semana (máx 25 mg) VO ou SC.</text>
+  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Metotrexato (MTX):</tspan> 10 a 15 mg/m²/semana (máx 25 mg) VO ou SC.</text>
   <text x="340" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Droga de escolha na poliarticular e oligoarticular persistente.</text>
   <text x="340" y="480" fill="#166534" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Associar Ácido Fólico (1 mg/dia) para mitigar efeitos adversos.</text>
 
   <rect x="605" y="380" width="260" height="205" rx="5" fill="#fdf2f8" stroke="#fbcfe8" />
   <text x="615" y="400" fill="#9d174d" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Etapa 3: DMARDs Biológicos</text>
   <text x="615" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Falha ao MTX por 3 a 6 meses.</text>
-  <text x="615" y="440" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Anti-TNF:</strong> Adalimumabe, Etanercepte (articular e uveíte).</text>
+  <text x="615" y="440" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Anti-TNF:</tspan> Adalimumabe, Etanercepte (articular e uveíte).</text>
   <text x="615" y="470" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Anti-IL-6 (Tocilizumabe) ou Anti-IL-1 (Anacinra):</text>
   <text x="615" y="490" fill="#334155" font-size="8.5" font-family="system-ui, sans-serif">  Padrão-ouro na forma sistêmica grave.</text>
 </svg>

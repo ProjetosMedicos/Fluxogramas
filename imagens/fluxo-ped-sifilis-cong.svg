@@ -22,8 +22,8 @@
   <rect x="40" y="85" width="410" height="26" fill="#0284c7" rx="6" />
   <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. AVALIAÇÃO MATERNA &amp; CRITÉRIOS DE TRATAMENTO ADEQUADO</text>
   <text x="55" y="127" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Critérios de Tratamento Materno Adequado (TODOS obrigatórios):</text>
-  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  1. Uso exclusivo de <strong>Penicilina Benzatina</strong> na dose para o estágio clínico.</text>
-  <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  2. Início do tratamento até <strong>30 dias antes do parto</strong>.</text>
+  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  1. Uso exclusivo de <tspan font-weight="bold">Penicilina Benzatina</tspan> na dose para o estágio clínico.</text>
+  <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  2. Início do tratamento até <tspan font-weight="bold">30 dias antes do parto</tspan>.</text>
   <text x="55" y="170" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  3. Respeito ao intervalo correto entre as doses (semanal).</text>
   <text x="55" y="184" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  4. Queda documentada do VDRL em pelo menos 2 titulações ou estável baixo.</text>
   <text x="55" y="202" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Tratamento Inadequado / Não Tratada:</text>
@@ -36,12 +36,12 @@
   <rect x="470" y="85" width="410" height="26" fill="#0369a1" rx="6" />
   <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. INVESTIGAÇÃO COMPLETA DO RECÉM-NASCIDO</text>
   <text x="485" y="127" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• VDRL no Sangue Periférico do RN (NUNCA usar sangue do cordão):</text>
-  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>VDRL RN &gt; VDRL materno em &gt;= 2 diluições</strong> (ex: RN 1:16 e mãe 1:4):</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">VDRL RN &gt; VDRL materno em &gt;= 2 diluições</tspan> (ex: RN 1:16 e mãe 1:4):</text>
   <text x="485" y="156" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">    Diagnóstico definitivo de Sífilis Congênita! Investigar e tratar.</text>
   <text x="485" y="174" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Exames Mandatórios na Suspeita / Mãe Inadequadamente Tratada:</text>
-  <text x="485" y="189" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <strong>Líquor (LCR):</strong> VDRL, contagem de células (&gt; 25/mm³) e proteínas (&gt; 150 mg/dL).</text>
-  <text x="485" y="203" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <strong>Radiografia de Ossos Longos:</strong> Periostite, osteocondrite, sinal de Wimberger.</text>
-  <text x="485" y="217" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <strong>Hemograma completo</strong> e plaquetas (anemia hemolítica, plaquetopenia).</text>
+  <text x="485" y="189" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <tspan font-weight="bold">Líquor (LCR):</tspan> VDRL, contagem de células (&gt; 25/mm³) e proteínas (&gt; 150 mg/dL).</text>
+  <text x="485" y="203" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <tspan font-weight="bold">Radiografia de Ossos Longos:</tspan> Periostite, osteocondrite, sinal de Wimberger.</text>
+  <text x="485" y="217" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <tspan font-weight="bold">Hemograma completo</tspan> e plaquetas (anemia hemolítica, plaquetopenia).</text>
   <text x="485" y="231" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  4. Avaliação oftalmológica e auditiva (PEATE).</text>
 
   <!-- Card 3: Esquemas Terapêuticos -->
@@ -52,7 +52,7 @@
   <!-- Esquema 1: Neurossífilis / Alteração Liquórica -->
   <rect x="55" y="375" width="375" height="105" rx="5" fill="#fef2f2" stroke="#fecaca" />
   <text x="65" y="393" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Alteração Liquórica / Neurossífilis Confirmada:</text>
-  <text x="65" y="410" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Penicilina Cristalina IV:</strong> 50.000 UI/kg/dose</text>
+  <text x="65" y="410" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Penicilina Cristalina IV:</tspan> 50.000 UI/kg/dose</text>
   <text x="65" y="424" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  - RN &lt;= 7 dias de vida: a cada 12 horas (100.000 UI/kg/dia).</text>
   <text x="65" y="438" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  - RN &gt; 7 dias de vida: a cada 8 horas (150.000 UI/kg/dia).</text>
   <text x="65" y="452" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Duração exata: 10 dias ininterruptos.</text>
@@ -60,7 +60,7 @@
   <!-- Esquema 2: Sem Alteração Liquórica -->
   <rect x="450" y="375" width="415" height="105" rx="5" fill="#f0fdf4" stroke="#bbf7d0" />
   <text x="460" y="393" fill="#166534" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Líquor Normal / Sem Acometimento SNC:</text>
-  <text x="460" y="410" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Penicilina Procaína IM:</strong> 50.000 UI/kg em dose única diária por 10 dias.</text>
+  <text x="460" y="410" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Penicilina Procaína IM:</tspan> 50.000 UI/kg em dose única diária por 10 dias.</text>
   <text x="460" y="425" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  (Alternativa aceita: Penicilina Cristalina IV por 10 dias).</text>
   <text x="460" y="440" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• Se mãe tratada adequadamente e RN totalmente assintomático com VDRL não reagente:</text>
   <text x="460" y="454" fill="#047857" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  Acompanhamento clínico-sorológico estrito ou Penicilina Benzatina dose única.</text>
@@ -68,7 +68,7 @@
   <!-- Bloco Inferior: Monitoramento -->
   <rect x="55" y="490" width="810" height="95" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
   <text x="65" y="508" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">SEGUIMENTO AMBULATORIAL OBRIGATÓRIO (SBP 2024):</text>
-  <text x="65" y="525" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>VDRL quantitativo:</strong> Aos 1, 3, 6, 12 e 18 meses de vida. Queda aos 3 meses e negativação aos 6 meses esperadas.</text>
-  <text x="65" y="540" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Controle Liquórico:</strong> Punção lombar de controle a cada 6 meses nos casos tratados com neurossífilis até normalização.</text>
+  <text x="65" y="525" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">VDRL quantitativo:</tspan> Aos 1, 3, 6, 12 e 18 meses de vida. Queda aos 3 meses e negativação aos 6 meses esperadas.</text>
+  <text x="65" y="540" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Controle Liquórico:</tspan> Punção lombar de controle a cada 6 meses nos casos tratados com neurossífilis até normalização.</text>
   <text x="65" y="555" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Se aumento de 2 diluições no VDRL ou não negativação após 18 meses: REINVESTIGAR e RETRATAR com Penicilina Cristalina!</text>
 </svg>

@@ -24,19 +24,19 @@
   <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  Perda involuntária de urina durante o sono em criança &gt;= 5 anos,</text>
   <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  com frequência mínima de 1 a 2 vezes por semana por &gt;= 3 meses.</text>
   <text x="55" y="176" fill="#4338ca" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Classificação Fundamental:</text>
-  <text x="55" y="192" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>Monossintomática:</strong> Apenas perda noturna, sem nenhum sintoma diurno.</text>
-  <text x="55" y="208" fill="#b91c1c" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>Não Monossintomática:</strong> Associada a sintomas miccionais diurnos</text>
+  <text x="55" y="192" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">Monossintomática:</tspan> Apenas perda noturna, sem nenhum sintoma diurno.</text>
+  <text x="55" y="208" fill="#b91c1c" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">Não Monossintomática:</tspan> Associada a sintomas miccionais diurnos</text>
   <text x="55" y="222" fill="#475569" font-size="8.5" font-family="system-ui, sans-serif">    (urgência, incontinência diurna, manobras de contenção, disúria).</text>
-  <text x="55" y="238" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>Primária:</strong> Nunca alcançou 6 meses contínuos de continência seca.</text>
-  <text x="55" y="254" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>Secundária:</strong> Retorno da enurese após período seco &gt;= 6 meses.</text>
+  <text x="55" y="238" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">Primária:</tspan> Nunca alcançou 6 meses contínuos de continência seca.</text>
+  <text x="55" y="254" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">Secundária:</tspan> Retorno da enurese após período seco &gt;= 6 meses.</text>
 
   <!-- Propedêutica e Alarme -->
   <rect x="470" y="85" width="410" height="235" rx="6" fill="#ffffff" stroke="#4338ca" stroke-width="2" filter="url(#shadowEnu)" />
   <rect x="470" y="85" width="410" height="26" fill="#4338ca" rx="6" />
   <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. PROPEDÊUTICA MÍNIMA &amp; MEDIDAS INICIAIS</text>
   <text x="485" y="127" fill="#4338ca" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Exames Laboratoriais Iniciais:</text>
-  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>EAS e Urocultura:</strong> Descartar ITU, glicosúria (diabetes) e densidade.</text>
-  <text x="485" y="156" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <strong>Diário Miccional (3 a 7 dias):</strong> Avaliação da capacidade funcional.</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">EAS e Urocultura:</tspan> Descartar ITU, glicosúria (diabetes) e densidade.</text>
+  <text x="485" y="156" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - <tspan font-weight="bold">Diário Miccional (3 a 7 dias):</tspan> Avaliação da capacidade funcional.</text>
   <text x="485" y="174" fill="#047857" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Terapia Comportamental &amp; Uroterapia Padrão:</text>
   <text x="485" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Evitar ingestão de líquidos nas 2 horas antes de dormir.</text>
   <text x="485" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  - Esvaziamento vesical programado logo antes de deitar.</text>

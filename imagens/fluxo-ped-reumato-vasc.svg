@@ -23,19 +23,19 @@
   <text x="245" y="106" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">PÚRPURA DE HENOCH-SCHÖNLEIN (VASCULITE POR IGA)</text>
   
   <text x="55" y="136" fill="#5b21b6" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">Tétrade Clínica Clássica (Vasculite de Pequenos Vasos):</text>
-  <text x="55" y="156" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><strong>1. Púrpura Palpável Obrigatória:</strong> Lesões purpúricas palpáveis,</text>
+  <text x="55" y="156" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><tspan font-weight="bold">1. Púrpura Palpável Obrigatória:</tspan> Lesões purpúricas palpáveis,</text>
   <text x="55" y="171" fill="#4b5563" font-size="9.5" font-family="system-ui, sans-serif">   não trombocitopênicas (plaquetas NORMAIS), em MMII e nádegas.</text>
-  <text x="55" y="190" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><strong>2. Artrite / Artralgia:</strong> Oligoartrite de grandes articulações</text>
+  <text x="55" y="190" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><tspan font-weight="bold">2. Artrite / Artralgia:</tspan> Oligoartrite de grandes articulações</text>
   <text x="55" y="205" fill="#4b5563" font-size="9.5" font-family="system-ui, sans-serif">   (joelhos e tornozelos), dolorosa e sem sequela articular tardia.</text>
-  <text x="55" y="224" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><strong>3. Dor Abdominal em Cólica:</strong> Isquemia de alças intestinais;</text>
+  <text x="55" y="224" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><tspan font-weight="bold">3. Dor Abdominal em Cólica:</tspan> Isquemia de alças intestinais;</text>
   <text x="55" y="239" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">   risco de Invaginação Intestinal íleo-ileal (USG de abdome!).</text>
-  <text x="55" y="258" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><strong>4. Acometimento Renal (Nefrite por IgA):</strong> Hematúria,</text>
+  <text x="55" y="258" fill="#1e1b4b" font-size="10" font-family="system-ui, sans-serif"><tspan font-weight="bold">4. Acometimento Renal (Nefrite por IgA):</tspan> Hematúria,</text>
   <text x="55" y="273" fill="#4b5563" font-size="9.5" font-family="system-ui, sans-serif">   proteinúria e hipertensão; principal determinante do prognóstico a longo prazo.</text>
 
   <rect x="55" y="295" width="380" height="80" rx="5" fill="#f5f3ff" stroke="#ddd6fe" />
   <text x="65" y="313" fill="#5b21b6" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Conduta Terapêutica (SBP 2024):</text>
   <text x="65" y="330" fill="#374151" font-size="9.5" font-family="system-ui, sans-serif">• Suporte e analgesia com paracetamol / dipirona.</text>
-  <text x="65" y="345" fill="#374151" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Corticoide Sistêmico (Prednisolona 1-2 mg/kg/dia):</strong> Indicado para</text>
+  <text x="65" y="345" fill="#374151" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Corticoide Sistêmico (Prednisolona 1-2 mg/kg/dia):</tspan> Indicado para</text>
   <text x="65" y="360" fill="#374151" font-size="9.5" font-family="system-ui, sans-serif">  dor abdominal grave, sangramento digestivo, orquiepididimite ou nefrite.</text>
   <text x="65" y="373" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  *Aviso: Corticoide NÃO previne o surgimento nem a progressão da nefrite!</text>
 
@@ -48,19 +48,19 @@
 
   <text x="485" y="136" fill="#991b1b" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">Critérios Diagnósticos Clássicos (AHA / SBP 2024):</text>
   <text x="485" y="156" fill="#991b1b" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">FEBRE PERSISTENTE POR ≥ 5 DIAS + pelo menos 4 de 5 critérios:</text>
-  <text x="485" y="174" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">1. <strong>Conjuntivite Bulbar Bilateral:</strong> Não exsudativa, poupa o limbo corneal.</text>
-  <text x="485" y="191" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">2. <strong>Alterações Labiais e Orais:</strong> Lábios fissurados e hiperemiados,</text>
+  <text x="485" y="174" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">1. <tspan font-weight="bold">Conjuntivite Bulbar Bilateral:</tspan> Não exsudativa, poupa o limbo corneal.</text>
+  <text x="485" y="191" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">2. <tspan font-weight="bold">Alterações Labiais e Orais:</tspan> Lábios fissurados e hiperemiados,</text>
   <text x="485" y="205" fill="#475569" font-size="9" font-family="system-ui, sans-serif">   língua em framboesa típica e hiperemia difusa de orofaringe.</text>
-  <text x="485" y="222" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">3. <strong>Linfadenopatia Cervical:</strong> ≥ 1,5 cm, geralmente unilateral e indolor.</text>
-  <text x="485" y="239" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">4. <strong>Exantema Polimorfo:</strong> Maculopapular, eritema multiforme ou escarlatiniforme.</text>
-  <text x="485" y="256" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">5. <strong>Alterações de Extremidades:</strong> Eritema e edema indurado de mãos e pés</text>
+  <text x="485" y="222" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">3. <tspan font-weight="bold">Linfadenopatia Cervical:</tspan> ≥ 1,5 cm, geralmente unilateral e indolor.</text>
+  <text x="485" y="239" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">4. <tspan font-weight="bold">Exantema Polimorfo:</tspan> Maculopapular, eritema multiforme ou escarlatiniforme.</text>
+  <text x="485" y="256" fill="#1e293b" font-size="9.5" font-family="system-ui, sans-serif">5. <tspan font-weight="bold">Alterações de Extremidades:</tspan> Eritema e edema indurado de mãos e pés</text>
   <text x="485" y="270" fill="#475569" font-size="9" font-family="system-ui, sans-serif">   na fase aguda; descamação periungueal laminar típica na convalescença.</text>
 
   <rect x="485" y="295" width="380" height="85" rx="5" fill="#fef2f2" stroke="#fecaca" />
   <text x="495" y="313" fill="#991b1b" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Tratamento de Emergência nos Primeiros 10 Dias:</text>
-  <text x="495" y="330" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">• <strong>IMUNOGLOBULINA ENDOVENOSA (IVIG):</strong> <strong>2 g/kg em dose única</strong></text>
+  <text x="495" y="330" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">IMUNOGLOBULINA ENDOVENOSA (IVIG):</tspan> <tspan font-weight="bold">2 g/kg em dose única</tspan></text>
   <text x="495" y="345" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  infundida em 10 a 12 horas. Previne a formação de aneurismas coronarianos!</text>
-  <text x="495" y="360" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">• <strong>AAS em Alta Dose:</strong> 30 a 50 mg/kg/dia VO a cada 6h (fase inflamatória);</text>
+  <text x="495" y="360" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">AAS em Alta Dose:</tspan> 30 a 50 mg/kg/dia VO a cada 6h (fase inflamatória);</text>
   <text x="495" y="374" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  reduzir para dose antiplaquetária (3 a 5 mg/kg/dia) após 48h afebril por 6-8 semanas.</text>
 
   <text x="485" y="445" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Ecocardiograma obrigatório: Na admissão, em 2-3 semanas e em 6-8 semanas.</text>

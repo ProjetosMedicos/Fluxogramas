@@ -24,8 +24,8 @@
   <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  Queda de Cortisol e Aldosterona -&gt; Aumento de ACTH -&gt; Hiperplasia Adrenal</text>
   <text x="55" y="156" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  -&gt; Desvio em cascata para produção excessiva de ANDROGÊNIOS!</text>
   <text x="55" y="174" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Triagem Neonatal Biológica (17-OH-Progesterona):</text>
-  <text x="55" y="190" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Ponto de corte estratificado rigorosamente por <strong>peso de nascimento</strong></text>
-  <text x="55" y="204" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">    e <strong>idade gestacional</strong> (evitar falso-positivos em prematuros).</text>
+  <text x="55" y="190" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Ponto de corte estratificado rigorosamente por <tspan font-weight="bold">peso de nascimento</tspan></text>
+  <text x="55" y="204" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">    e <tspan font-weight="bold">idade gestacional</tspan> (evitar falso-positivos em prematuros).</text>
   <text x="55" y="222" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  - Teste confirmatório sérico imediato se 17-OHP elevada!</text>
 
   <!-- Apresentação Clínica -->
@@ -53,12 +53,12 @@
 
   <rect x="450" y="375" width="415" height="110" rx="5" fill="#f0fdf4" stroke="#bbf7d0" />
   <text x="460" y="395" fill="#166534" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Terapia Crônica de Manutenção:</text>
-  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Glicocorticoide:</strong> Hidrocortisona oral 10 a 15 mg/m²/dia em 3 doses diárias.</text>
-  <text x="460" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Mineralocorticoide:</strong> Fludrocortisona oral 0,05 a 0,2 mg/dia.</text>
-  <text x="460" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Suplementação de NaCl:</strong> 1 a 2 g/dia no primeiro ano de vida.</text>
+  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Glicocorticoide:</tspan> Hidrocortisona oral 10 a 15 mg/m²/dia em 3 doses diárias.</text>
+  <text x="460" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Mineralocorticoide:</tspan> Fludrocortisona oral 0,05 a 0,2 mg/dia.</text>
+  <text x="460" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Suplementação de NaCl:</tspan> 1 a 2 g/dia no primeiro ano de vida.</text>
 
   <rect x="55" y="500" width="810" height="85" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
   <text x="65" y="518" fill="#6d28d9" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">ORIENTAÇÃO FAMILIAR EM DIAS DE ESTRESSE / INFECÇÃO (DOSE DE ESTRESSE):</text>
-  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Febre / Infecções moderadas:</strong> Triplicar a dose habitual de Hidrocortisona oral durante os dias de doença.</text>
+  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Febre / Infecções moderadas:</tspan> Triplicar a dose habitual de Hidrocortisona oral durante os dias de doença.</text>
   <text x="65" y="550" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Vômitos ou diarreia com incapacidade de ingerir VO: Aplicação IM imediata de emergência e procurar pronto-socorro!</text>
 </svg>

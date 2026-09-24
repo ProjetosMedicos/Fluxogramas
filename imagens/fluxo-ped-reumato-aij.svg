@@ -27,19 +27,19 @@
 
   <rect x="55" y="165" width="380" height="115" rx="5" fill="#f0f9ff" stroke="#bae6fd" />
   <text x="65" y="182" fill="#0369a1" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Critérios Maiores (População de Risco Moderado/Alto):</text>
-  <text x="65" y="200" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <strong>Cardite (50-60%):</strong> Valvulite mitral (sopro regurgitativo) ou subclínica no Eco.</text>
-  <text x="65" y="217" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <strong>Artrite:</strong> Poliartrite migratória (ou mono/oligoartrite em populações de risco).</text>
-  <text x="65" y="234" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <strong>Coreia de Sydenham:</strong> Movimentos involuntários (diagnóstico isolado!).</text>
-  <text x="65" y="251" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">4. <strong>Nódulos Subcutâneos:</strong> Indolores sobre superfícies extensoras.</text>
-  <text x="65" y="268" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">5. <strong>Eritema Marginado:</strong> Lesões serpiginosas anulares no tronco, poupa face.</text>
+  <text x="65" y="200" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <tspan font-weight="bold">Cardite (50-60%):</tspan> Valvulite mitral (sopro regurgitativo) ou subclínica no Eco.</text>
+  <text x="65" y="217" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <tspan font-weight="bold">Artrite:</tspan> Poliartrite migratória (ou mono/oligoartrite em populações de risco).</text>
+  <text x="65" y="234" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <tspan font-weight="bold">Coreia de Sydenham:</tspan> Movimentos involuntários (diagnóstico isolado!).</text>
+  <text x="65" y="251" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">4. <tspan font-weight="bold">Nódulos Subcutâneos:</tspan> Indolores sobre superfícies extensoras.</text>
+  <text x="65" y="268" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">5. <tspan font-weight="bold">Eritema Marginado:</tspan> Lesões serpiginosas anulares no tronco, poupa face.</text>
 
-  <text x="55" y="300" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif"><strong>Critérios Menores:</strong> Febre ≥ 38°C, artralgia, VHS ≥ 30 mm/h, PCR elevada, PR longo.</text>
+  <text x="55" y="300" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif"><tspan font-weight="bold">Critérios Menores:</tspan> Febre ≥ 38°C, artralgia, VHS ≥ 30 mm/h, PCR elevada, PR longo.</text>
 
   <rect x="55" y="315" width="380" height="85" rx="5" fill="#ffffff" stroke="#cbd5e1" />
   <text x="65" y="333" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Conduta Farmacológica da Febre Reumática:</text>
-  <text x="65" y="350" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Erradicação: <strong>Penicilina Benzatina</strong> dose única IM.</text>
-  <text x="65" y="365" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Artrite: <strong>AAS</strong> 80-100 mg/kg/dia ou Naproxeno. Cardite: <strong>Prednisona</strong> 1-2 mg/kg/dia.</text>
-  <text x="65" y="380" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Profilaxia Secundária Obrigatória:</strong> Penicilina Benzatina a cada 21 dias.</text>
+  <text x="65" y="350" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Erradicação: <tspan font-weight="bold">Penicilina Benzatina</tspan> dose única IM.</text>
+  <text x="65" y="365" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Artrite: <tspan font-weight="bold">AAS</tspan> 80-100 mg/kg/dia ou Naproxeno. Cardite: <tspan font-weight="bold">Prednisona</tspan> 1-2 mg/kg/dia.</text>
+  <text x="65" y="380" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Profilaxia Secundária Obrigatória:</tspan> Penicilina Benzatina a cada 21 dias.</text>
   <text x="65" y="394" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  (Duração: Sem cardite até 21 anos; com cardite residual até 40 anos/vida).</text>
 
   <!-- Bloco Direito: Artrite Idiopática Juvenil -->
@@ -51,21 +51,21 @@
 
   <rect x="485" y="150" width="380" height="150" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
   <text x="495" y="168" fill="#065f46" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Três Principais Subtipos Clínicos:</text>
-  <text x="495" y="186" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <strong>Oligoarticular (50%):</strong> Até 4 articulações nos primeiros 6 meses.</text>
+  <text x="495" y="186" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <tspan font-weight="bold">Oligoarticular (50%):</tspan> Até 4 articulações nos primeiros 6 meses.</text>
   <text x="495" y="200" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   Meninas pré-escolares (joelhos, tornozelos). FAN (+) em 70-80%.</text>
   <text x="495" y="214" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">   ALTO RISCO DE UVEÍTE ANTERIOR CRÔNICA ASSINTOMÁTICA!</text>
   <text x="495" y="228" fill="#334155" font-size="8.5" font-family="system-ui, sans-serif">   Rastreio oftalmológico com lâmpada de fenda a cada 3 meses obrigatório.</text>
 
-  <text x="495" y="246" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <strong>Poliarticular (20-25%):</strong> ≥ 5 articulações acometidas. FR (-) ou (+).</text>
+  <text x="495" y="246" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <tspan font-weight="bold">Poliarticular (20-25%):</tspan> ≥ 5 articulações acometidas. FR (-) ou (+).</text>
   <text x="495" y="260" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   Grandes e pequenas articulações (simétrica, mãos/punhos).</text>
 
-  <text x="495" y="278" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <strong>Sistêmica / Doença de Still (10-15%):</strong> Febre diária alta em agulha,</text>
+  <text x="495" y="278" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <tspan font-weight="bold">Sistêmica / Doença de Still (10-15%):</tspan> Febre diária alta em agulha,</text>
   <text x="495" y="292" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   exantema salmão evanescente, hepatoesplenomegalia, risco de SAM.</text>
 
   <rect x="485" y="310" width="380" height="90" rx="5" fill="#ffffff" stroke="#cbd5e1" />
   <text x="495" y="328" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Escalonamento Terapêutico na AIJ (SBP 2024):</text>
   <text x="495" y="345" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• 1ª Linha: AINEs (Naproxeno 15-20 mg/kg/dia) + Infiltração intra-articular.</text>
-  <text x="495" y="360" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• DMARD de Escolha: <strong>Metotrexato (MTX)</strong> 10-15 mg/m²/semana SC/VO + Ác. Fólico.</text>
+  <text x="495" y="360" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• DMARD de Escolha: <tspan font-weight="bold">Metotrexato (MTX)</tspan> 10-15 mg/m²/semana SC/VO + Ác. Fólico.</text>
   <text x="495" y="375" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Biológicos: Anti-TNF (Adalimumabe, Etanercepte) ou Anti-IL-6 (Tocilizumabe).</text>
 
   <!-- Rodapé Comparativo Sintético -->

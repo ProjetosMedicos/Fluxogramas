@@ -2345,7 +2345,7 @@
       <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria')" title="Especialidade: Pediatria (SBP 2024)">
         <span>👶</span>
         <span>Pediatria</span>
-        <span class="specialty-tab-badge" id="spec-ped-badge">40</span>
+        <span class="specialty-tab-badge" id="spec-ped-badge">48</span>
       </button>
     </div>
 
@@ -47726,6 +47726,9 @@
         const sourceName = document.getElementById('footer-source-name');
         if (sourceName) sourceName.textContent = 'Tratado de Pediatria SBP (6ª Edição, 2024)';
 
+        const statsCaption = document.getElementById('sidebar-stats-caption');
+        if (statsCaption) statsCaption.textContent = 'Pediatria • 48 Módulos • 48 Fluxos';
+
         // Alternar grupos no Box Picker
         const pickerGineco = document.getElementById('picker-group-ginecologia');
         const pickerPed = document.getElementById('picker-group-pediatria');
@@ -47762,6 +47765,9 @@
 
         const sourceName = document.getElementById('footer-source-name');
         if (sourceName) sourceName.textContent = 'Tratado de Ginecologia FEBRASGO (2ª Edição)';
+
+        const statsCaption = document.getElementById('sidebar-stats-caption');
+        if (statsCaption) statsCaption.textContent = 'Ginecologia • 38 Módulos • 129 Fluxos';
 
         // Alternar grupos no Box Picker
         const pickerGineco = document.getElementById('picker-group-ginecologia');
@@ -47887,6 +47893,8 @@
       'examefisico': { icon: '🩺', name: 'Exame Físico Ginecológico Completo', sub: 'Capítulo 4 Tratado FEBRASGO • 8 tópicos', firstSection: 'examefisico-visao-geral', ref: 'Capítulo 4 — Consulta Ginecológica, Propedêutica & Semiotécnica (FEBRASGO)' },
     };
 
+    const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia', 'examefisico', 'ped-reanima', 'ped-cuidneonat', 'ped-distresp-rn', 'ped-ictericia-sepse', 'ped-disturb-rn', 'ped-infecc-cong', 'ped-crescimento', 'ped-dnpm', 'ped-aleitamento', 'ped-nutricao', 'ped-desnutricao', 'ped-vitaminas', 'ped-obesidade', 'ped-puberdade', 'ped-hebiatria', 'ped-seguranca', 'ped-asma', 'ped-bronquiolite', 'ped-pneumonia', 'ped-anafilaxia', 'ped-alergia-alim', 'ped-coqueluche-fc', 'ped-imunizacoes', 'ped-febre-sem-foco', 'ped-exantematicas', 'ped-tuberculose', 'ped-drge', 'ped-diarreia', 'ped-constipacao', 'ped-celiaca', 'ped-itu-enurese', 'ped-choque', 'ped-emerg-pcr', 'ped-brue-smsl', 'ped-convulsao', 'ped-cefaleias', 'ped-reumato-vasc', 'ped-reumato-aij', 'ped-cardiopatias', 'ped-genetica', 'ped-sifilis-cong', 'ped-fibrose-cistica', 'ped-enurese', 'ped-henoch-schonlein', 'ped-aij', 'ped-hipertensao', 'ped-hipotireoidismo', 'ped-hiperplasia-adrenal'];
+
     // Interactive Module Picker Dropdown
     function toggleModuleDropdown() {
       const dropdown = document.getElementById('module-picker-dropdown');
@@ -47951,7 +47959,6 @@
           if (pickerPed) pickerPed.style.display = 'none';
         }
       }
-      const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia', 'examefisico', 'ped-reanima', 'ped-cuidneonat', 'ped-distresp-rn', 'ped-ictericia-sepse', 'ped-disturb-rn', 'ped-infecc-cong', 'ped-crescimento', 'ped-dnpm', 'ped-aleitamento', 'ped-nutricao', 'ped-desnutricao', 'ped-vitaminas', 'ped-obesidade', 'ped-puberdade', 'ped-hebiatria', 'ped-seguranca', 'ped-asma', 'ped-bronquiolite', 'ped-pneumonia', 'ped-anafilaxia', 'ped-alergia-alim', 'ped-coqueluche-fc', 'ped-imunizacoes', 'ped-febre-sem-foco', 'ped-exantematicas', 'ped-tuberculose', 'ped-drge', 'ped-diarreia', 'ped-constipacao', 'ped-celiaca', 'ped-itu-enurese', 'ped-choque', 'ped-emerg-pcr', 'ped-brue-smsl', 'ped-convulsao', 'ped-cefaleias', 'ped-reumato-vasc', 'ped-reumato-aij', 'ped-cardiopatias', 'ped-genetica', 'ped-sifilis-cong', 'ped-fibrose-cistica', 'ped-enurese', 'ped-henoch-schonlein', 'ped-aij', 'ped-hipertensao', 'ped-hipotireoidismo', 'ped-hiperplasia-adrenal'];
       
       // Reset all buttons and hide all nav groups
       moduleIds.forEach(id => {
@@ -48123,7 +48130,7 @@
         link.className = 'nav-link';
       });
 
-      const activeLink = document.querySelector(`a[href="#"]`);
+      const activeLink = document.querySelector(`a[href="#${sectionId}"]`);
       if (activeLink) {
         activeLink.classList.add('active');
         if (sectionId.startsWith('dsf-') || sectionId.startsWith('fluxograma-')) {
@@ -48228,7 +48235,7 @@
       let currentScale = parseFloat(img.dataset.scale || 1.0);
       currentScale = Math.min(Math.max(currentScale + delta, 0.6), 2.5);
       img.dataset.scale = currentScale;
-      img.style.transform = `scale()`;
+      img.style.transform = `scale(${currentScale})`;
     }
 
     function resetZoom(btn) {

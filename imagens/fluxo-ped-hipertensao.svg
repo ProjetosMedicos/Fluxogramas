@@ -21,8 +21,8 @@
   <rect x="40" y="85" width="410" height="26" fill="#e11d48" rx="6" />
   <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">1. CLASSIFICAÇÃO DA PRESSÃO ARTERIAL (SBP 2024)</text>
   <text x="55" y="127" fill="#be123c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Crianças de 1 a 13 anos (Percentis por Idade, Sexo e Altura):</text>
-  <text x="55" y="145" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• <strong>PA Normal:</strong> PAS e PAD &lt; Percentil 90.</text>
-  <text x="55" y="165" fill="#d97706" font-size="9.5" font-family="system-ui, sans-serif">• <strong>PA Elevada:</strong> &gt;= P90 a &lt; P95 ou 120/80 mmHg (o que for menor).</text>
+  <text x="55" y="145" fill="#166534" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">PA Normal:</tspan> PAS e PAD &lt; Percentil 90.</text>
+  <text x="55" y="165" fill="#d97706" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">PA Elevada:</tspan> &gt;= P90 a &lt; P95 ou 120/80 mmHg (o que for menor).</text>
   <text x="55" y="185" fill="#e11d48" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• HAS Estágio 1: &gt;= P95 a &lt; P95 + 12 mmHg (ou 130/80 a 139/89 mmHg).</text>
   <text x="55" y="205" fill="#9f1239" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• HAS Estágio 2: &gt;= P95 + 12 mmHg (ou &gt;= 140/90 mmHg).</text>
   <text x="55" y="225" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">• Adolescentes &gt;= 13 anos: Seguem pontos de corte de adultos</text>
@@ -36,10 +36,10 @@
   <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  Quanto mais jovem a criança e mais alta a PA, MAIOR a chance</text>
   <text x="485" y="156" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  de tratar-se de hipertensão arterial de causa secundária!</text>
   <text x="485" y="174" fill="#9f1239" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Causas Principais:</text>
-  <text x="485" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <strong>Doença Renal Parenquimatosa (70-80%):</strong> GNPE, refluxo VUR, DPol.</text>
-  <text x="485" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <strong>Renovascular (10%):</strong> Estenose de artéria renal / displasia fibromuscular.</text>
-  <text x="485" y="218" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <strong>Cardiovascular:</strong> Coarctação da Aorta (pulsos e PA em MMII!).</text>
-  <text x="485" y="232" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  4. <strong>Endócrina:</strong> Feocromocitoma, síndrome de Cushing, hiperaldosteronismo.</text>
+  <text x="485" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <tspan font-weight="bold">Doença Renal Parenquimatosa (70-80%):</tspan> GNPE, refluxo VUR, DPol.</text>
+  <text x="485" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <tspan font-weight="bold">Renovascular (10%):</tspan> Estenose de artéria renal / displasia fibromuscular.</text>
+  <text x="485" y="218" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <tspan font-weight="bold">Cardiovascular:</tspan> Coarctação da Aorta (pulsos e PA em MMII!).</text>
+  <text x="485" y="232" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  4. <tspan font-weight="bold">Endócrina:</tspan> Feocromocitoma, síndrome de Cushing, hiperaldosteronismo.</text>
 
   <!-- Conduta e Tratamento -->
   <rect x="40" y="335" width="840" height="265" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
@@ -54,13 +54,13 @@
 
   <rect x="450" y="375" width="415" height="110" rx="5" fill="#fef2f2" stroke="#fecaca" />
   <text x="460" y="395" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Crise Hipertensiva Pediátrica:</text>
-  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Urgência:</strong> PA grave sem lesão aguda de órgão-alvo. Medicação oral em observação.</text>
+  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Urgência:</tspan> PA grave sem lesão aguda de órgão-alvo. Medicação oral em observação.</text>
   <text x="460" y="430" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Emergência: PA grave COM encefalopatia, edema pulmonar ou IRA.</text>
   <text x="460" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  UTI imediata, Nitroprussiato de Sódio IV em bomba contínua.</text>
   <text x="460" y="460" fill="#b91c1c" font-size="8.5" font-weight="bold" font-family="system-ui, sans-serif">  * Reduzir PA em no máximo 25% no 1º dia para evitar isquemia cerebral!</text>
 
   <rect x="55" y="500" width="810" height="85" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
   <text x="65" y="518" fill="#be123c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">RASTREAMENTO DE LESÃO DE ÓRGÃO-ALVO (MANDATÓRIO):</text>
-  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Ecocardiograma bidimensional:</strong> Avaliação do índice de massa do ventrículo esquerdo (HVE).</text>
-  <text x="65" y="550" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <strong>Exame de Fundo de Olho:</strong> Rastrear retinopatia hipertensiva (exsudatos, hemorragias e papiledema).</text>
+  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Ecocardiograma bidimensional:</tspan> Avaliação do índice de massa do ventrículo esquerdo (HVE).</text>
+  <text x="65" y="550" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Exame de Fundo de Olho:</tspan> Rastrear retinopatia hipertensiva (exsudatos, hemorragias e papiledema).</text>
 </svg>

@@ -23,10 +23,10 @@
   <text x="55" y="127" fill="#9d174d" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Critério Obrigatório Mandatório:</text>
   <text x="55" y="142" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Púrpura palpável (não-trombocitopênica) predominantemente em MMII e nádegas.</text>
   <text x="55" y="160" fill="#9d174d" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Mais pelo menos 1 dos 4 critérios a seguir:</text>
-  <text x="55" y="176" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <strong>Dor abdominal difusa:</strong> Em cólica, aguda (isquemia mesentérica transitória).</text>
-  <text x="55" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <strong>Artrite ou Artralgia:</strong> Aguda, não-erosiva, tornozelos e joelhos.</text>
-  <text x="55" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <strong>Comprometimento Renal:</strong> Hematúria (&gt; 5 hemácias/campo) ou proteinúria.</text>
-  <text x="55" y="218" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  4. <strong>Biópsia compatível:</strong> Depósito predominante de IgA em pequenos vasos.</text>
+  <text x="55" y="176" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  1. <tspan font-weight="bold">Dor abdominal difusa:</tspan> Em cólica, aguda (isquemia mesentérica transitória).</text>
+  <text x="55" y="190" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  2. <tspan font-weight="bold">Artrite ou Artralgia:</tspan> Aguda, não-erosiva, tornozelos e joelhos.</text>
+  <text x="55" y="204" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  3. <tspan font-weight="bold">Comprometimento Renal:</tspan> Hematúria (&gt; 5 hemácias/campo) ou proteinúria.</text>
+  <text x="55" y="218" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  4. <tspan font-weight="bold">Biópsia compatível:</tspan> Depósito predominante de IgA em pequenos vasos.</text>
   <text x="55" y="238" fill="#047857" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  * Plaquetometria normal é fundamental para descartar PTI e leucemias.</text>
 
   <!-- Riscos e Complicações -->
@@ -34,7 +34,7 @@
   <rect x="470" y="85" width="410" height="26" fill="#9d174d" rx="6" />
   <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">2. COMPLICAÇÕES GRAVES &amp; SINAIS DE ALARME</text>
   <text x="485" y="127" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Intussuscepção Intestinal (Complicação Cirúrgica Típica):</text>
-  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Geralmente <strong>ileoileal</strong> (diferente da forma idiopática ileocólica).</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">  - Geralmente <tspan font-weight="bold">ileoileal</tspan> (diferente da forma idiopática ileocólica).</text>
   <text x="485" y="156" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - Suspeitar se dor abdominal intensa, vômitos biliosos, fezes em geleia de framboesa.</text>
   <text x="485" y="170" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  - USG abdominal imediato e avaliação cirúrgica urgente!</text>
   <text x="485" y="190" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Glomerulonefrite por IgA Rápido-Progressiva:</text>
@@ -54,13 +54,13 @@
 
   <rect x="450" y="375" width="415" height="110" rx="5" fill="#fef2f2" stroke="#fecaca" />
   <text x="460" y="395" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Indicações Precisas de Corticoterapia Oral:</text>
-  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Prednisolona oral:</strong> 1 a 2 mg/kg/dia (máx 60 mg/dia) por 1 a 2 semanas.</text>
+  <text x="460" y="415" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Prednisolona oral:</tspan> 1 a 2 mg/kg/dia (máx 60 mg/dia) por 1 a 2 semanas.</text>
   <text x="460" y="430" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Indicada se: dor abdominal intensa refratária, hemorragia digestiva,</text>
   <text x="460" y="445" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  edema de bolsa escrotal importante ou nefrite moderada/grave.</text>
   <text x="460" y="460" fill="#475569" font-size="8.5" font-family="system-ui, sans-serif">  * Corticoide NÃO previne nefrite futura, mas alivia sintomas abdominais e articulares.</text>
 
   <rect x="55" y="500" width="810" height="85" rx="5" fill="#f8fafc" stroke="#e2e8f0" />
   <text x="65" y="518" fill="#9d174d" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">SEGUIMENTO RENAL MANDATÓRIO (SBP 2024):</text>
-  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Monitorar <strong>EAS e Pressão Arterial</strong> semanalmente no 1º mês, quinzenalmente no 2º e 3º mês, e mensalmente até 6 meses.</text>
+  <text x="65" y="535" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Monitorar <tspan font-weight="bold">EAS e Pressão Arterial</tspan> semanalmente no 1º mês, quinzenalmente no 2º e 3º mês, e mensalmente até 6 meses.</text>
   <text x="65" y="550" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Quase 90% das complicações renais manifestam-se dentro dos primeiros 6 meses do quadro clínico.</text>
 </svg>
