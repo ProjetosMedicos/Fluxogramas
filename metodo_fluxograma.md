@@ -318,12 +318,12 @@ graph LR
 ```
 
 ### Relatório de Métricas Consolidadas do Portal:
-* **Módulos Clínicos Ativos:** 38 especialidades (100% integradas no menu lateral, seletor de módulos, Box Picker 2.0 e array JS de roteamento).
-* **Seções Clínicas Estruturadas:** 300 seções `<section class="content-section">` ativas com IDs unívocos e sem tags órfãs.
-* **Links de Navegação na Barra Lateral:** 300 links ativos e biunívocos com as seções.
-* **Fluxogramas Vetoriais SVG Integrados:** 129 arquivos vetoriais validados em disco com suporte a zoom dinâmico e visualização em alta resolução.
-* **Casos Clínicos Simulados Interativos:** 102 casos completos com botões de resposta comentada e justificativas clínicas baseadas em diretrizes.
-* **Tabelas Clínicas Especializadas:** 22 tabelas principais comparativas e de prescrição com rolagem independente.
+* **Módulos Clínicos Ativos:** 78 especialidades (38 de Ginecologia & Obstetrícia + 40 de Pediatria, 100% integradas no menu lateral com alternância de especialidades, seletor de módulos, Box Picker 2.0 e array JS de roteamento).
+* **Seções Clínicas Estruturadas:** 620 seções `<section class="content-section">` ativas com IDs unívocos e sem tags órfãs (300 de Ginecologia + 320 de Pediatria).
+* **Links de Navegação na Barra Lateral:** 620 links ativos e biunívocos com as seções (300 de Ginecologia + 320 de Pediatria).
+* **Fluxogramas Vetoriais SVG Integrados:** 169 arquivos vetoriais validados em disco com suporte a zoom dinâmico e visualização em alta resolução (129 de Ginecologia + 40 de Pediatria).
+* **Casos Clínicos Simulados Interativos:** 142 casos completos com botões de resposta comentada e justificativas clínicas baseadas em diretrizes (102 de Ginecologia + 40 de Pediatria).
+* **Tabelas Clínicas Especializadas:** 125+ tabelas comparativas e de prescrição com rolagem independente.
 * **Índice de Erros Estruturais:** **Zero Erros (0 Falhas)** nos testes automatizados.
 
 ---

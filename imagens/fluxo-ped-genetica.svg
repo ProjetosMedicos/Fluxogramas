@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradGen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#5b21b6" />
+    </linearGradient>
+    <filter id="shadowGen" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="920" height="620" fill="#f8fafc" rx="8" />
+
+  <!-- Cabeçalho -->
+  <rect x="20" y="16" width="880" height="54" rx="6" fill="url(#gradGen)" filter="url(#shadowGen)" />
+  <text x="40" y="42" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">ALGORITMO DECISÓRIO: SÍNDROMES GENÉTICAS, ERROS INATOS &amp; TESTE DO PEZINHO</text>
+  <text x="40" y="58" fill="#ede9fe" font-size="11" font-family="system-ui, -apple-system, sans-serif">Diretrizes Oficiais SBP 2024 (6ª Edição) • Trissomia 21, Turner, Klinefelter, Triagem Neonatal &amp; Hiperplasia Adrenal</text>
+
+  <!-- Bloco Superior Esquerdo: Síndrome de Down -->
+  <rect x="40" y="85" width="410" height="175" rx="6" fill="#ffffff" stroke="#7c3aed" stroke-width="2" filter="url(#shadowGen)" />
+  <rect x="40" y="85" width="410" height="26" fill="#7c3aed" rx="6" />
+  <text x="245" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">SÍNDROME DE DOWN (TRISSOMIA DO CROMOSSOMO 21)</text>
+  <text x="55" y="127" fill="#5b21b6" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Fácies e Exame Físico Característico:</text>
+  <text x="55" y="142" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  Hipotonia neonatal marcante, fendas palpebrais oblíquas para cima,</text>
+  <text x="55" y="156" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">  ponte nasal achatada, prega palmar única transversal e clinodactilia do 5º dedo.</text>
+  <text x="55" y="174" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">• Rastreamento Mandatório na Infância (SBP 2024):</text>
+  <text x="55" y="189" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - <strong>Ecocardiograma neonatal precoce:</strong> 50% têm cardiopatia (DSAV e CIV).</text>
+  <text x="55" y="203" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - <strong>TSH e T4 livre:</strong> No nascimento e semestral/anual (alto risco de hipotireoidismo).</text>
+  <text x="55" y="217" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - <strong>Radiografia de coluna cervical (perfil neutro e flexão):</strong> Aos 3 a 5 anos</text>
+  <text x="55" y="231" fill="#475569" font-size="8.5" font-family="system-ui, sans-serif">    para rastrear Instabilidade Atlantoaxial antes de atividades físicas com impacto.</text>
+  <text x="55" y="246" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">  - Avaliação auditiva e oftalmológica precoce; curvas de crescimento específicas Down/OMS.</text>
+
+  <!-- Bloco Superior Direito: Turner e Klinefelter -->
+  <rect x="470" y="85" width="410" height="175" rx="6" fill="#ffffff" stroke="#6366f1" stroke-width="2" filter="url(#shadowGen)" />
+  <rect x="470" y="85" width="410" height="26" fill="#6366f1" rx="6" />
+  <text x="675" y="103" fill="#ffffff" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">SÍNDROMES DE TURNER (45,X) &amp; KLINEFELTER (47,XXY)</text>
+  <text x="485" y="127" fill="#4338ca" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">1. Síndrome de Turner (45,X - Meninas):</text>
+  <text x="485" y="142" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Baixa estatura desproporcional inexplicada</strong> (principal sinal clínico na infância).</text>
+  <text x="485" y="157" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Estigmas: Pescoço alado (*pterygium colli*), tórax em escudo, cúbito valgo.</text>
+  <text x="485" y="172" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Cardiopatias associadas: Coarctação de aorta e válvula aórtica bicúspide (Eco!).</text>
+  <text x="485" y="187" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Disgenesia gonadal em fita: Amenorreia primária, hipogonadismo hipergonadotrófico.</text>
+  <text x="485" y="201" fill="#065f46" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Tratamento: Hormônio de crescimento (rhGH) precoce + Terapia estrogênica na puberdade.</text>
+
+  <text x="485" y="222" fill="#4338ca" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">2. Síndrome de Klinefelter (47,XXY - Meninos):</text>
+  <text x="485" y="237" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Alta estatura com proporções eunucóides, ginecomastia na puberdade,</text>
+  <text x="485" y="251" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  testículos pequenos e endurecidos (&lt; 4 mL), azoospermia e infertilidade.</text>
+
+  <!-- Bloco Inferior: Triagem Neonatal Biológica & Erros Inatos -->
+  <rect x="40" y="275" width="840" height="325" rx="6" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
+  <rect x="40" y="275" width="840" height="28" fill="#f1f5f9" rx="6" />
+  <text x="55" y="294" fill="#0f172a" font-size="11.5" font-weight="bold" font-family="system-ui, sans-serif">TRIAGEM NEONATAL BIOLÓGICA (TESTE DO PEZINHO) &amp; ERROS INATOS DO METABOLISMO</text>
+
+  <!-- Hipotireoidismo Congênito -->
+  <rect x="55" y="315" width="375" height="125" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
+  <text x="65" y="333" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">1. Hipotireoidismo Congênito (Dosagem de TSH Neonatal):</text>
+  <text x="65" y="350" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Causa número 1 de retardo mental prevenível na infância.</text>
+  <text x="65" y="364" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Quadro clínico tardio: Icterícia prolongada, macroglossia, hérnia umbilical,</text>
+  <text x="65" y="377" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">  fontanela posterior ampla (&gt; 0,5 cm), letargia, constipação e hipotonia.</text>
+  <text x="65" y="393" fill="#dc2626" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• EMERGÊNCIA TERAPÊUTICA: Iniciar Levotiroxina oral</text>
+  <text x="65" y="407" fill="#dc2626" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  na dose de 10 a 15 mcg/kg/dia antes de 14 a 28 dias de vida!</text>
+  <text x="65" y="423" fill="#0f172a" font-size="8.5" font-family="system-ui, sans-serif">• Se iniciado precocemente, o QI e desenvolvimento cognitivo são normais.</text>
+
+  <!-- Hiperplasia Adrenal Congênita -->
+  <rect x="450" y="315" width="415" height="125" rx="5" fill="#fef2f2" stroke="#fecaca" />
+  <text x="460" y="333" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">2. Hiperplasia Adrenal Congênita (17-OH-Progesterona):</text>
+  <text x="460" y="350" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• Deficiência da enzima <strong>21-hidroxilase (CYP21A2)</strong> em &gt; 90% dos casos.</text>
+  <text x="460" y="364" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Meninas 46,XX: Genitália Ambígua</strong> por virilização intrauterina (Prader I a V).</text>
+  <text x="460" y="378" fill="#1e293b" font-size="9" font-family="system-ui, sans-serif">• <strong>Meninos 46,XY: Genitália normal</strong> ao nascimento (risco de choque fatal não triado!).</text>
+  <text x="460" y="394" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Crise Perdedora de Sal (2ª a 3ª semana): Desidratação grave,</text>
+  <text x="460" y="408" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  hiponatremia grave, hipercalemia acentuada, acidose metabólica e choque.</text>
+  <text x="460" y="424" fill="#0f172a" font-size="8.5" font-family="system-ui, sans-serif">• Tratamento: Hidrocortisona (glicocorticoide) + Fludrocortisona (mineralocorticoide).</text>
+
+  <!-- Outros Erros Inatos da Triagem -->
+  <rect x="55" y="450" width="810" height="135" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
+  <text x="65" y="470" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Outros Erros Inatos &amp; Doenças Rastreadas no Programa Nacional de Triagem Neonatal (PNTN):</text>
+  <text x="65" y="489" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Fenilcetonúria (PKU):</strong> Deficiência da fenilalanina hidroxilase; acúmulo de fenilalanina neurotóxica. Cabelos claros, odor de mofo/camundongo na urina. Tratamento: Dieta isenta de fenilalanina.</text>
+  <text x="65" y="507" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Doença Falciforme &amp; Hemoglobinopatias:</strong> Eletroforese de hemoglobina (padrões FS, FAS, FSC). Início imediato de profilaxia com Penicilina oral aos 2 meses e imunização antipneumocócica.</text>
+  <text x="65" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Fibrose Cística:</strong> Dosagem de Tripsina Imunorreativa (IRT) em duas amostras antes dos 30 dias de vida; confirmatório com Teste do Suor de Gibson-Cooke (Cloro &ge; 60 mEq/L).</text>
+  <text x="65" y="543" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Deficiência de Biotinidase:</strong> Convulsões, hipotonia, alopecia e dermatite eczematosa. Tratamento imediato com Biotina oral.</text>
+  <text x="65" y="561" fill="#7c3aed" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• <strong>Toxoplasmose Congênita:</strong> IgM específica no papel filtro para início de sulfadiazina + pirimetamina + ácido folínico.</text>
+</svg>

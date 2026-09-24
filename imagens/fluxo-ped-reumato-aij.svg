@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradAIJ" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <filter id="shadowAIJ" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <!-- Fundo -->
+  <rect width="920" height="620" fill="#f8fafc" rx="8" />
+
+  <!-- Cabeçalho -->
+  <rect x="20" y="16" width="880" height="54" rx="6" fill="url(#gradAIJ)" filter="url(#shadowAIJ)" />
+  <text x="40" y="42" fill="#ffffff" font-size="16" font-weight="bold" font-family="system-ui, -apple-system, sans-serif">ALGORITMO DECISÓRIO: ARTRITE IDIOPÁTICA JUVENIL (AIJ) &amp; FEBRE REUMÁTICA</text>
+  <text x="40" y="58" fill="#d1fae5" font-size="11" font-family="system-ui, -apple-system, sans-serif">Diretrizes Oficiais SBP 2024 (6ª Edição) • Critérios de Jones Revisados, Subtipos da AIJ &amp; Rastreamento de Uveíte</text>
+
+  <!-- Bloco Esquerdo: Febre Reumática -->
+  <rect x="40" y="85" width="410" height="380" rx="6" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#shadowAIJ)" />
+  <rect x="40" y="85" width="410" height="32" rx="6" fill="#0284c7" />
+  <text x="245" y="106" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">FEBRE REUMÁTICA AGUDA (CRITÉRIOS DE JONES SBP 2024)</text>
+
+  <text x="55" y="136" fill="#0369a1" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">Evidência de Infecção Estreptocócica Prévia (ASLO / Cultura)</text>
+  <text x="55" y="152" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">+ 2 Critérios Maiores OU 1 Maior + 2 Menores:</text>
+
+  <rect x="55" y="165" width="380" height="115" rx="5" fill="#f0f9ff" stroke="#bae6fd" />
+  <text x="65" y="182" fill="#0369a1" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Critérios Maiores (População de Risco Moderado/Alto):</text>
+  <text x="65" y="200" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <strong>Cardite (50-60%):</strong> Valvulite mitral (sopro regurgitativo) ou subclínica no Eco.</text>
+  <text x="65" y="217" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <strong>Artrite:</strong> Poliartrite migratória (ou mono/oligoartrite em populações de risco).</text>
+  <text x="65" y="234" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <strong>Coreia de Sydenham:</strong> Movimentos involuntários (diagnóstico isolado!).</text>
+  <text x="65" y="251" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">4. <strong>Nódulos Subcutâneos:</strong> Indolores sobre superfícies extensoras.</text>
+  <text x="65" y="268" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">5. <strong>Eritema Marginado:</strong> Lesões serpiginosas anulares no tronco, poupa face.</text>
+
+  <text x="55" y="300" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif"><strong>Critérios Menores:</strong> Febre &ge; 38°C, artralgia, VHS &ge; 30 mm/h, PCR elevada, PR longo.</text>
+
+  <rect x="55" y="315" width="380" height="85" rx="5" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="65" y="333" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Conduta Farmacológica da Febre Reumática:</text>
+  <text x="65" y="350" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Erradicação: <strong>Penicilina Benzatina</strong> dose única IM.</text>
+  <text x="65" y="365" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Artrite: <strong>AAS</strong> 80-100 mg/kg/dia ou Naproxeno. Cardite: <strong>Prednisona</strong> 1-2 mg/kg/dia.</text>
+  <text x="65" y="380" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <strong>Profilaxia Secundária Obrigatória:</strong> Penicilina Benzatina a cada 21 dias.</text>
+  <text x="65" y="394" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">  (Duração: Sem cardite até 21 anos; com cardite residual até 40 anos/vida).</text>
+
+  <!-- Bloco Direito: Artrite Idiopática Juvenil -->
+  <rect x="470" y="85" width="410" height="380" rx="6" fill="#ffffff" stroke="#059669" stroke-width="2" filter="url(#shadowAIJ)" />
+  <rect x="470" y="85" width="410" height="32" rx="6" fill="#059669" />
+  <text x="675" y="106" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">ARTRITE IDIOPÁTICA JUVENIL (AIJ - ILAR)</text>
+
+  <text x="485" y="136" fill="#065f46" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">Definição: Artrite &ge; 6 semanas, início &lt; 16 anos, exclusão de outras causas.</text>
+
+  <rect x="485" y="150" width="380" height="150" rx="5" fill="#ecfdf5" stroke="#a7f3d0" />
+  <text x="495" y="168" fill="#065f46" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Três Principais Subtipos Clínicos:</text>
+  <text x="495" y="186" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">1. <strong>Oligoarticular (50%):</strong> Até 4 articulações nos primeiros 6 meses.</text>
+  <text x="495" y="200" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   Meninas pré-escolares (joelhos, tornozelos). FAN (+) em 70-80%.</text>
+  <text x="495" y="214" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">   ALTO RISCO DE UVEÍTE ANTERIOR CRÔNICA ASSINTOMÁTICA!</text>
+  <text x="495" y="228" fill="#334155" font-size="8.5" font-family="system-ui, sans-serif">   Rastreio oftalmológico com lâmpada de fenda a cada 3 meses obrigatório.</text>
+
+  <text x="495" y="246" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">2. <strong>Poliarticular (20-25%):</strong> &ge; 5 articulações acometidas. FR (-) ou (+).</text>
+  <text x="495" y="260" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   Grandes e pequenas articulações (simétrica, mãos/punhos).</text>
+
+  <text x="495" y="278" fill="#0f172a" font-size="9.5" font-family="system-ui, sans-serif">3. <strong>Sistêmica / Doença de Still (10-15%):</strong> Febre diária alta em agulha,</text>
+  <text x="495" y="292" fill="#334155" font-size="9" font-family="system-ui, sans-serif">   exantema salmão evanescente, hepatoesplenomegalia, risco de SAM.</text>
+
+  <rect x="485" y="310" width="380" height="90" rx="5" fill="#ffffff" stroke="#cbd5e1" />
+  <text x="495" y="328" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Escalonamento Terapêutico na AIJ (SBP 2024):</text>
+  <text x="495" y="345" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• 1ª Linha: AINEs (Naproxeno 15-20 mg/kg/dia) + Infiltração intra-articular.</text>
+  <text x="495" y="360" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• DMARD de Escolha: <strong>Metotrexato (MTX)</strong> 10-15 mg/m²/semana SC/VO + Ác. Fólico.</text>
+  <text x="495" y="375" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Biológicos: Anti-TNF (Adalimumabe, Etanercepte) ou Anti-IL-6 (Tocilizumabe).</text>
+
+  <!-- Rodapé Comparativo Sintético -->
+  <rect x="40" y="480" width="840" height="120" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="1.5" />
+  <text x="460" y="502" fill="#0f172a" font-size="11" font-weight="bold" text-anchor="middle" font-family="system-ui, sans-serif">DIFERENÇAS-CHAVE NO DIAGNÓSTICO DIFERENCIAL ARTICULAR</text>
+  <text x="55" y="525" fill="#0284c7" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">Artrite Reumática:</text>
+  <text x="175" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">Poliartrite aguda, migratória, muito dolorosa, responde espetacularmente ao AAS em 48h, cura sem deformidades.</text>
+  <text x="55" y="545" fill="#059669" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">Artrite da AIJ:</text>
+  <text x="175" y="545" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">Crônica (&gt; 6 semanas), aditiva/persistente, rigidez matinal marcante, dor moderada, risco de anquilose e uveíte oculta.</text>
+  <text x="55" y="570" fill="#0f172a" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">Alerta Fundamental:</text>
+  <text x="175" y="570" fill="#b91c1c" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">Em monoartrite aguda com febre alta e toxemia: sempre afastar Artrite Séptica bacteriana (artrocentese de urgência)!</text>
+</svg>
