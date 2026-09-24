@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradCeliaca" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d97706" />
+      <stop offset="100%" stop-color="#b45309" />
+    </linearGradient>
+    <filter id="shadowCel" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#f8fafc" rx="12" />
+
+  <rect x="20" y="20" width="880" height="55" rx="8" fill="url(#gradCeliaca)" filter="url(#shadowCel)" />
+  <text x="460" y="44" fill="#ffffff" font-size="17" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">DIAGNÓSTICO DA DOENÇA CELÍACA NA INFÂNCIA (SBP / ESPGHAN 2024)</text>
+  <text x="460" y="62" fill="#fef3c7" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Fluxograma Sem Biópsia (No-Biopsy Approach) vs Indicação de Endoscopia com Biópsias</text>
+
+  <!-- Nó Inicial -->
+  <rect x="230" y="95" width="460" height="50" rx="8" fill="#ffffff" stroke="#d97706" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="460" y="116" fill="#0f172a" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Suspeita Clínica de Doença Celíaca ou Grupo de Risco</text>
+  <text x="460" y="133" fill="#475569" font-size="10.5" font-family="system-ui, sans-serif" text-anchor="middle">Diarreia crônica, perda ponderal, distensão, anemia refratária, baixa estatura, DM1, Down</text>
+
+  <line x1="460" y1="145" x2="460" y2="175" stroke="#64748b" stroke-width="2" />
+  <polygon points="455,173 465,173 460,180" fill="#64748b" />
+
+  <!-- Triagem Sorológica Inicial -->
+  <rect x="250" y="180" width="420" height="55" rx="8" fill="#eff6ff" stroke="#0284c7" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="460" y="202" fill="#0369a1" font-size="12.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">EXAMES DE 1ª LINHA (Com Criança em Dieta com Glúten!)</text>
+  <text x="460" y="222" fill="#0f172a" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Anti-Transglutaminase Tecidual IgA (anti-tTG IgA) + IgA Sérica Total</text>
+
+  <!-- Decisão anti-tTG -->
+  <line x1="460" y1="235" x2="460" y2="265" stroke="#64748b" stroke-width="2" />
+  <polygon points="455,263 465,263 460,270" fill="#64748b" />
+
+  <polygon points="460,270 650,315 460,360 270,315" fill="#fef08a" stroke="#ca8a04" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="460" y="308" fill="#854d0e" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Resultado do Anti-tTG IgA (com IgA normal)?</text>
+  <text x="460" y="326" fill="#a16207" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Avaliar título em relação ao limite superior da normalidade (LSN)</text>
+
+  <!-- Ramo 1: ≥ 10x LSN (No-Biopsy) -->
+  <line x1="650" y1="315" x2="770" y2="315" stroke="#16a34a" stroke-width="2" />
+  <line x1="770" y1="315" x2="770" y2="380" stroke="#16a34a" stroke-width="2" />
+  <polygon points="765,378 775,378 770,385" fill="#16a34a" />
+  <text x="690" y="307" fill="#16a34a" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">≥ 10x LSN</text>
+
+  <rect x="640" y="385" width="260" height="215" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="770" y="410" fill="#166534" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">CRITÉRIO SEM BIÓPSIA</text>
+  <text x="770" y="428" fill="#15803d" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">(No-Biopsy ESPGHAN 2020)</text>
+  <text x="770" y="452" fill="#334155" font-size="10.5" font-family="system-ui, sans-serif" text-anchor="middle">1. Colher 2ª amostra de sangue:</text>
+  <text x="770" y="470" fill="#0369a1" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Dosar Anti-Endomísio (EMA-IgA)</text>
+  <text x="770" y="494" fill="#334155" font-size="10.5" font-family="system-ui, sans-serif" text-anchor="middle">2. Se EMA-IgA Positivo:</text>
+  <text x="770" y="512" fill="#15803d" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">DIAGNÓSTICO CONFIRMADO!</text>
+  <text x="770" y="530" fill="#166534" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Dispensa biópsia e teste HLA</text>
+  <text x="770" y="555" fill="#0f172a" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Iniciar Dieta Isenta de Glúten</text>
+  <text x="770" y="572" fill="#475569" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">Excluir trigo, centeio e cevada</text>
+
+  <!-- Ramo 2: Positivo mas < 10x LSN -->
+  <line x1="460" y1="360" x2="460" y2="385" stroke="#ca8a04" stroke-width="2" />
+  <polygon points="455,383 465,383 460,390" fill="#ca8a04" />
+  <text x="470" y="378" fill="#ca8a04" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">&lt; 10x LSN</text>
+
+  <rect x="330" y="390" width="260" height="210" rx="8" fill="#fefce8" stroke="#ca8a04" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="460" y="414" fill="#854d0e" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">BIÓPSIA DUODENAL MANDATÓRIA</text>
+  <text x="460" y="438" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Realizar EDA com múltiplas biópsias:</text>
+  <text x="460" y="454" fill="#713f12" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">  ≥ 1 de bulbo + ≥ 4 de duodeno distal</text>
+  <text x="460" y="474" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Classificação histológica de Marsh:</text>
+  <text x="460" y="490" fill="#b45309" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">  Marsh 2 ou 3 (atrofia vilositária)</text>
+  <text x="460" y="510" fill="#15803d" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Confirmação Diagnóstica</text>
+  <text x="460" y="534" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Iniciar Dieta sem Glúten</text>
+  <text x="460" y="552" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Repetir sorologia após 6 a 12 meses</text>
+  <text x="460" y="570" fill="#475569" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">Negativação sorológica valida adesão</text>
+
+  <!-- Ramo 3: Negativo / Deficiência de IgA -->
+  <line x1="270" y1="315" x2="150" y2="315" stroke="#64748b" stroke-width="2" />
+  <line x1="150" y1="315" x2="150" y2="380" stroke="#64748b" stroke-width="2" />
+  <polygon points="145,378 155,378 150,385" fill="#64748b" />
+  <text x="180" y="307" fill="#dc2626" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">NEGATIVO</text>
+
+  <rect x="30" y="385" width="240" height="215" rx="8" fill="#f8fafc" stroke="#64748b" stroke-width="2" filter="url(#shadowCel)" />
+  <text x="150" y="410" fill="#0f172a" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">SOROLOGIA NEGATIVA</text>
+  <text x="150" y="435" fill="#334155" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Checar IgA Sérica Total:</text>
+  <text x="150" y="454" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Se IgA Baixa (&lt; 20 mg/dL):</text>
+  <text x="150" y="470" fill="#475569" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">Deficiência seletiva de IgA</text>
+  <text x="150" y="486" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Solicitar testes baseados em IgG:</text>
+  <text x="150" y="502" fill="#0369a1" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">• Anti-DGP IgG ou anti-tTG IgG</text>
+  <text x="150" y="528" fill="#334155" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. Se IgA Normal:</text>
+  <text x="150" y="546" fill="#15803d" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Doença Celíaca improvável</text>
+  <text x="150" y="562" fill="#475569" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">Investigar APLV, giardíase, DII</text>
+</svg>

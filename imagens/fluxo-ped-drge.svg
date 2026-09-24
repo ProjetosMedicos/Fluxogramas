@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHeader" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#f8fafc" rx="12" />
+
+  <!-- Título Superior -->
+  <rect x="20" y="20" width="880" height="55" rx="8" fill="url(#gradHeader)" filter="url(#shadow)" />
+  <text x="460" y="44" fill="#ffffff" font-size="17" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">ABORDAGEM DO REFLUXO GASTROESOFÁGICO NO LACTENTE (SBP 2024)</text>
+  <text x="460" y="62" fill="#e0f2fe" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Diferenciação: Refluxador Feliz vs Doença do Refluxo Gastroesofágico (DRGE) &amp; Tratamento</text>
+
+  <!-- Nó Inicial: Apresentação -->
+  <rect x="250" y="95" width="420" height="55" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#shadow)" />
+  <text x="460" y="118" fill="#0f172a" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Lactente com Regurgitações / Vômitos Pós-Alimentares</text>
+  <text x="460" y="137" fill="#475569" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">Avaliação clínica detalhada: ganho ponderal, sinais de esforço e irritabilidade</text>
+
+  <!-- Linha para decisão -->
+  <line x1="460" y1="150" x2="460" y2="180" stroke="#64748b" stroke-width="2" />
+  <polygon points="455,178 465,178 460,185" fill="#64748b" />
+
+  <!-- Pergunta Central: Sinais de Alarme -->
+  <polygon points="460,185 640,230 460,275 280,230" fill="#fef08a" stroke="#ca8a04" stroke-width="2" filter="url(#shadow)" />
+  <text x="460" y="224" fill="#854d0e" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Presença de Sinais de Alarme (Red Flags)?</text>
+  <text x="460" y="240" fill="#a16207" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Perda de peso, choro/Sandifer, hematêmese, apneia ou estridor?</text>
+
+  <!-- Braço NÃO: Refluxador Feliz -->
+  <line x1="280" y1="230" x2="160" y2="230" stroke="#16a34a" stroke-width="2" />
+  <line x1="160" y1="230" x2="160" y2="300" stroke="#16a34a" stroke-width="2" />
+  <polygon points="155,298 165,298 160,305" fill="#16a34a" />
+  <text x="210" y="222" fill="#16a34a" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">NÃO</text>
+
+  <rect x="40" y="305" width="240" height="120" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="160" y="328" fill="#166534" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">RGE Fisiológico</text>
+  <text x="160" y="346" fill="#15803d" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">"Refluxador Feliz"</text>
+  <text x="160" y="370" fill="#14532d" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Ganho ponderal adequado</text>
+  <text x="160" y="386" fill="#14532d" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Afebril, sem irritabilidade</text>
+  <text x="160" y="402" fill="#14532d" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Exame físico inocente</text>
+
+  <line x1="160" y1="425" x2="160" y2="455" stroke="#16a34a" stroke-width="2" />
+  <polygon points="155,453 165,453 160,460" fill="#16a34a" />
+
+  <rect x="40" y="460" width="240" height="130" rx="8" fill="#ffffff" stroke="#16a34a" stroke-width="2" filter="url(#shadow)" />
+  <text x="160" y="482" fill="#15803d" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">CONDUTA CONSERVADORA</text>
+  <text x="160" y="504" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Tranquilizar os pais (evolução benigna)</text>
+  <text x="160" y="520" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Fracionamento de mamadas</text>
+  <text x="160" y="536" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Manter decúbito dorsal ao dormir</text>
+  <text x="160" y="552" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">NÃO prescrever antiácidos/IBP</text>
+  <text x="160" y="568" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">NÃO indicar exames invasivos</text>
+
+  <!-- Braço SIM: DRGE -->
+  <line x1="640" y1="230" x2="760" y2="230" stroke="#dc2626" stroke-width="2" />
+  <line x1="760" y1="230" x2="760" y2="300" stroke="#dc2626" stroke-width="2" />
+  <polygon points="755,298 765,298 760,305" fill="#dc2626" />
+  <text x="690" y="222" fill="#dc2626" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">SIM</text>
+
+  <rect x="630" y="305" width="260" height="120" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="760" y="328" fill="#991b1b" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Doença do Refluxo (DRGE)</text>
+  <text x="760" y="348" fill="#b91c1c" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">• Déficit ponderal / desnutrição</text>
+  <text x="760" y="366" fill="#b91c1c" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">• Esofagite clínica (choro, Sandifer)</text>
+  <text x="760" y="384" fill="#b91c1c" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">• Complicações pulmonares / apneia</text>
+  <text x="760" y="402" fill="#b91c1c" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">• Hematêmese / anemia ferropriva</text>
+
+  <line x1="760" y1="425" x2="760" y2="455" stroke="#dc2626" stroke-width="2" />
+  <polygon points="755,453 765,453 760,460" fill="#dc2626" />
+
+  <rect x="630" y="460" width="260" height="130" rx="8" fill="#ffffff" stroke="#dc2626" stroke-width="2" filter="url(#shadow)" />
+  <text x="760" y="482" fill="#991b1b" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">CONDUTA NA DRGE (SBP 2024)</text>
+  <text x="760" y="502" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Teste terapêutico com IBP 4 a 8 sem:</text>
+  <text x="760" y="518" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">  Omeprazol 1 mg/kg/dia 1x ao dia em jejum</text>
+  <text x="760" y="534" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Espessamento alimentar com amido</text>
+  <text x="760" y="550" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">• Testar exclusão de PLV se suspeita APLV</text>
+  <text x="760" y="568" fill="#7c2d12" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">pHmetria / EDA se refratariedade ou dúvida</text>
+
+  <!-- Caixa Central: Diagnóstico Diferencial de Vômitos -->
+  <rect x="310" y="330" width="290" height="230" rx="8" fill="#f1f5f9" stroke="#64748b" stroke-width="1.5" filter="url(#shadow)" />
+  <text x="455" y="354" fill="#0f172a" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">DIAGNÓSTICOS DIFERENCIAIS MANDATÓRIOS</text>
+  <text x="455" y="378" fill="#334155" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">• Estenose Hipertrófica do Piloro:</text>
+  <text x="455" y="394" fill="#475569" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Vômitos em jato, não biliosos, alcalose hipoclorêmica</text>
+  <text x="455" y="416" fill="#334155" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">• Obstrução Intestinal / Má Rotação:</text>
+  <text x="455" y="432" fill="#475569" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Vômitos biliosos (verde-escuro) = Emergência Cirúrgica!</text>
+  <text x="455" y="454" fill="#334155" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">• Alergia à Proteína do Leite (APLV):</text>
+  <text x="455" y="470" fill="#475569" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Dermatite atópica, fezes sanguinolentas, história familiar</text>
+  <text x="455" y="492" fill="#334155" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">• Erros Inatos / Hiperplasia Adrenal:</text>
+  <text x="455" y="508" fill="#475569" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Crise perdedora de sal, hipoglicemia e letargia grave</text>
+  <text x="455" y="534" fill="#0284c7" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Fonte: Tratado de Pediatria SBP 6ª Ed. (2024)</text>
+</svg>

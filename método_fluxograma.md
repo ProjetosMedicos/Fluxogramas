@@ -3,8 +3,8 @@
 > **Destinado a:** Estudantes de Medicina, Médicos Residentes, Médicos Generalistas e Especialistas.  
 > **Objetivo:** Transformar diretrizes médicas densas e tratados oficiais de referência em algoritmos de decisão clínica rápidos, memorizáveis, seguros e aplicáveis à beira do leito e no ambulatório.  
 > **Especialidade Concluída:** **Ginecologia & Obstetrícia** (38 Módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**).  
-> **Especialidades Integradas:** **Ginecologia & Obstetrícia** (38 módulos - Tratado FEBRASGO 2ª Ed.) e **Pediatria** (Fases 1, 2 e 3 concluídas com 26 módulos de Neonatologia, Perinatologia, Puericultura, Crescimento, Nutrição, Adolescência, Segurança, Pneumologia, Alergia e Infectologia/Imunizações - Tratado de Pediatria SBP 6ª Ed. 2024).  
-> **Status Global:** 64 Módulos Clínicos Ativos (78 na navegação global) | 522 Seções Clínicas Estruturadas | 155 Fluxogramas Vetoriais SVG | 128 Casos Clínicos Simulados Interativos | 200+ Tabelas e Prescrições Especializadas.
+> **Especialidades Integradas:** **Ginecologia & Obstetrícia** (38 módulos - Tratado FEBRASGO 2ª Ed.) e **Pediatria** (Fases 1, 2, 3 e 4 concluídas com 34 módulos de Neonatologia, Perinatologia, Puericultura, Crescimento, Nutrição, Adolescência, Segurança, Pneumologia, Alergia, Infectologia/Imunizações, Gastroenterologia, Nefrologia e Emergências Pediátricas - Tratado de Pediatria SBP 6ª Ed. 2024).  
+> **Status Global:** 72 Módulos Clínicos Ativos (78 na navegação global) | 578 Seções Clínicas Estruturadas | 163 Fluxogramas Vetoriais SVG | 136 Casos Clínicos Simulados Interativos | 200+ Tabelas e Prescrições Especializadas.
 
 ---
 

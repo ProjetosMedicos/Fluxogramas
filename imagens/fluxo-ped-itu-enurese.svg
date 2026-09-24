@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 620" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradItu" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+    <filter id="shadowItu" x="-5%" y="-5%" width="110%" height="115%" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="1" dy="2" stdDeviation="3" flood-opacity="0.12" />
+    </filter>
+  </defs>
+
+  <rect width="920" height="620" fill="#f8fafc" rx="12" />
+
+  <rect x="20" y="20" width="880" height="55" rx="8" fill="url(#gradItu)" filter="url(#shadowItu)" />
+  <text x="460" y="44" fill="#ffffff" font-size="17" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">INFECÇÃO DO TRATO URINÁRIO (ITU) PEDIÁTRICA &amp; IMAGEM (SBP 2024)</text>
+  <text x="460" y="62" fill="#e0e7ff" font-size="12" font-family="system-ui, sans-serif" text-anchor="middle">Métodos de Coleta Estéreis, Cortes de Urocultura, Pielonefrite vs Cistite &amp; Propêutica</text>
+
+  <!-- Nó Inicial -->
+  <rect x="240" y="95" width="440" height="50" rx="8" fill="#ffffff" stroke="#0284c7" stroke-width="2" filter="url(#shadowItu)" />
+  <text x="460" y="116" fill="#0f172a" font-size="13" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Suspeita Clínica de ITU (Febre sem Foco ou Sintomas Urinários)</text>
+  <text x="460" y="133" fill="#475569" font-size="10.5" font-family="system-ui, sans-serif" text-anchor="middle">Lactente com febre isolada, irritabilidade OU escolar com disúria, polaciúria e dor lombar</text>
+
+  <line x1="460" y1="145" x2="460" y2="175" stroke="#64748b" stroke-width="2" />
+  <polygon points="455,173 465,173 460,180" fill="#64748b" />
+
+  <!-- Coleta Estéril Obrigatória -->
+  <rect x="180" y="180" width="560" height="60" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadowItu)" />
+  <text x="460" y="202" fill="#166534" font-size="12.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">MÉTODO DE COLETA MANDATÓRIO (SBP 2024):</text>
+  <text x="460" y="222" fill="#15803d" font-size="11" font-family="system-ui, sans-serif" text-anchor="middle">• Sem controle esfincteriano: Cateterismo Vesical (Sondagem) ou Punção Suprapúbica</text>
+  <text x="460" y="235" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">SACO COLETOR: Apenas triagem se negativo! NUNCA tratar ITU baseado em saco positivo!</text>
+
+  <!-- Decisão: Cortes da Urocultura -->
+  <line x1="460" y1="240" x2="460" y2="265" stroke="#64748b" stroke-width="2" />
+  <polygon points="455,263 465,263 460,270" fill="#64748b" />
+
+  <polygon points="460,270 650,310 460,350 270,310" fill="#fef08a" stroke="#ca8a04" stroke-width="2" filter="url(#shadowItu)" />
+  <text x="460" y="306" fill="#854d0e" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Urocultura Positiva com Leucocitúria?</text>
+  <text x="460" y="322" fill="#a16207" font-size="10.5" font-family="system-ui, sans-serif" text-anchor="middle">Cateterismo: ≥ 50.000 UFC/mL (ou ≥ 10.000) | Jato Médio: ≥ 100.000 UFC/mL</text>
+
+  <!-- 2 Lados: Pielonefrite vs Cistite -->
+  <line x1="270" y1="310" x2="160" y2="310" stroke="#dc2626" stroke-width="2" />
+  <line x1="160" y1="310" x2="160" y2="370" stroke="#dc2626" stroke-width="2" />
+  <polygon points="155,368 165,368 160,375" fill="#dc2626" />
+  <text x="180" y="302" fill="#dc2626" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">PIELONEFRITE (ALTA)</text>
+
+  <rect x="30" y="375" width="260" height="225" rx="8" fill="#fef2f2" stroke="#dc2626" stroke-width="2" filter="url(#shadowItu)" />
+  <text x="160" y="398" fill="#991b1b" font-size="12.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">PIELONEFRITE AGUDA</text>
+  <text x="160" y="416" fill="#b91c1c" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Febre ≥ 38,5°C, toxemia, vômitos, PCR elevada</text>
+  <text x="160" y="438" fill="#0f172a" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Tratamento Antibiótico (7 a 14 dias):</text>
+  <text x="45" y="456" fill="#334155" font-size="10" font-family="system-ui, sans-serif">• Hospitalar (lactentes &lt; 2-3m ou vômitos):</text>
+  <text x="45" y="470" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Ceftriaxona IV 50-75 mg/kg/dia</text>
+  <text x="45" y="484" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Ampicilina + Gentamicina se neonato</text>
+  <text x="45" y="500" fill="#334155" font-size="10" font-family="system-ui, sans-serif">• Ambulatorial (&gt; 3m, estável, tolera oral):</text>
+  <text x="45" y="514" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Cefixima 8 mg/kg/dia ou Cefuroxima oral</text>
+  <text x="45" y="528" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Amoxicilina-Clavulanato 50 mg/kg/dia</text>
+  <text x="160" y="555" fill="#dc2626" font-size="10" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">NÃO usar Nitrofurantoína em Pielonefrite!</text>
+  <text x="160" y="572" fill="#78350f" font-size="9.5" font-family="system-ui, sans-serif" text-anchor="middle">(Não atinge concentração renal parenquimatosa)</text>
+
+  <!-- Cistite -->
+  <line x1="650" y1="310" x2="760" y2="310" stroke="#0284c7" stroke-width="2" />
+  <line x1="760" y1="310" x2="760" y2="370" stroke="#0284c7" stroke-width="2" />
+  <polygon points="755,368 765,368 760,375" fill="#0284c7" />
+  <text x="680" y="302" fill="#0284c7" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">CISTITE (BAIXA)</text>
+
+  <rect x="630" y="375" width="260" height="225" rx="8" fill="#f0f9ff" stroke="#0284c7" stroke-width="2" filter="url(#shadowItu)" />
+  <text x="760" y="398" fill="#0369a1" font-size="12.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">CISTITE AGUDA</text>
+  <text x="760" y="416" fill="#0284c7" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Afebril, disúria, polaciúria, dor suprapúbica</text>
+  <text x="760" y="438" fill="#0f172a" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Tratamento Antibiótico (3 a 5 dias):</text>
+  <text x="645" y="458" fill="#334155" font-size="10" font-family="system-ui, sans-serif">• 1ª Escolha:</text>
+  <text x="645" y="474" fill="#0369a1" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">  Nitrofurantoína 5 a 7 mg/kg/dia</text>
+  <text x="645" y="488" fill="#475569" font-size="9" font-family="system-ui, sans-serif">  (Contraindicada se ClCr &lt; 30 ou neonato)</text>
+  <text x="645" y="508" fill="#334155" font-size="10" font-family="system-ui, sans-serif">• Alternativas:</text>
+  <text x="645" y="524" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Cefalexina 50-100 mg/kg/dia</text>
+  <text x="645" y="538" fill="#0369a1" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">  Sulfametoxazol-Trimetoprima (se sensível)</text>
+  <text x="760" y="565" fill="#15803d" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Excelente resposta clínica oral</text>
+
+  <!-- Caixa Central: Investigação de Imagem -->
+  <rect x="315" y="375" width="290" height="225" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5" filter="url(#shadowItu)" />
+  <text x="460" y="398" fill="#0f172a" font-size="12" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">ROTEIRO DE IMAGEM PÓS-ITU (SBP 2024)</text>
+  <text x="460" y="420" fill="#0369a1" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">1. Ultrassonografia de Rins e Vias (USG):</text>
+  <text x="460" y="436" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Mandatória para todo lactente pós 1º episódio</text>
+
+  <text x="460" y="460" fill="#0369a1" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">2. Uretrocistografia Miccional (UCRM):</text>
+  <text x="460" y="476" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Indicada se: USG alterada (hidronefrose), ITU grave</text>
+  <text x="460" y="492" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">por germe não-E. coli ou na 2ª ITU febril</text>
+  <text x="460" y="508" fill="#b45309" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Diagnostica Refluxo Vesicoureteral (RVU I a V)</text>
+
+  <text x="460" y="532" fill="#0369a1" font-size="11" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">3. Cintilografia Renal DMSA:</text>
+  <text x="460" y="548" fill="#334155" font-size="10" font-family="system-ui, sans-serif" text-anchor="middle">Após 6 meses para avaliar cicatriz renal definitiva</text>
+  <text x="460" y="575" fill="#0284c7" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif" text-anchor="middle">Tratado de Pediatria SBP 6ª Ed. (2024)</text>
+</svg>
