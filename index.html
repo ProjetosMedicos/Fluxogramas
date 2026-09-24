@@ -2337,21 +2337,22 @@
 
     <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->
     <div class="specialty-tabs-bar" role="tablist" aria-label="Especialidades Médicas">
-      <button class="specialty-tab-btn active" role="tab" aria-selected="true" id="spec-tab-ginecologia" onclick="switchSpecialty('ginecologia')" title="Especialidade Ativa: Ginecologia & Obstetrícia (FEBRASGO)">
+      <button class="specialty-tab-btn active" role="tab" aria-selected="true" id="spec-tab-ginecologia" onclick="switchSpecialty('ginecologia')" title="Especialidade: Ginecologia & Obstetrícia (FEBRASGO)">
         <span>🩺</span>
         <span>Ginecologia</span>
         <span class="specialty-tab-badge">38</span>
       </button>
-      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria')" title="Próxima Especialidade: Pediatria (Em Breve)">
+      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria')" title="Especialidade: Pediatria (SBP 2024)">
         <span>👶</span>
         <span>Pediatria</span>
-        <span class="specialty-tab-badge upcoming">Em breve</span>
+        <span class="specialty-tab-badge" id="spec-ped-badge">40</span>
       </button>
     </div>
 
     <!-- Hidden sync select for accessibility & automated tests -->
     <select id="moduleSelect" style="display: none;" onchange="switchModule(this.value)">
-      <option value="dsf">🧠 Disfunção Sexual Feminina</option>
+      <optgroup id="optgroup-ginecologia" label="Ginecologia (FEBRASGO)">
+        <option value="dsf">🧠 Disfunção Sexual Feminina</option>
       <option value="sua">🩸 Sangramento Uterino Anormal</option>
       <option value="larcs">🛡️ Contracepção (LARCs)</option>
       <option value="clim">🔥 Climatério & TRH</option>
@@ -2389,6 +2390,49 @@
       <option value="cirurgia">🔬 Anatomia Cirúrgica, Embriologia & CMI</option>
       <option value="examefisico">🩺 Exame Físico Ginecológico Completo</option>
       <option value="metodologia">📘 Método do Fluxograma</option>
+      </optgroup>
+      <optgroup id="optgroup-pediatria" label="Pediatria (SBP 2024)">
+        <option value="ped-reanima">🫁 Reanimação Neonatal em Sala de Parto</option>
+        <option value="ped-cuidneonat">👶 Cuidados & Triagem Neonatal</option>
+        <option value="ped-distresp-rn">🫁 Distúrbios Respiratórios do RN</option>
+        <option value="ped-ictericia-sepse">🟡 Icterícia & Sepse Neonatal</option>
+        <option value="ped-disturb-rn">⚡ Distúrbios Metabólicos do RN</option>
+        <option value="ped-infecc-cong">🦠 Infecções Congênitas (TORCH & Sífilis)</option>
+        <option value="ped-crescimento">📏 Crescimento & Antropometria</option>
+        <option value="ped-dnpm">🧠 Desenvolvimento Neuropsicomotor</option>
+        <option value="ped-aleitamento">🤱 Aleitamento Materno & Lactação</option>
+        <option value="ped-nutricao">🥣 Alimentação & Puericultura</option>
+        <option value="ped-desnutricao">📉 Desnutrição Infantil (OMS)</option>
+        <option value="ped-vitaminas">💊 Micronutrientes & Vitaminas</option>
+        <option value="ped-obesidade">⚖️ Obesidade Infantil & Metabólica</option>
+        <option value="ped-puberdade">🌱 Puberdade Normal & Desvios</option>
+        <option value="ped-hebiatria">🧑‍⚕️ Hebiatria (Medicina do Adolescente)</option>
+        <option value="ped-seguranca">🛡️ Segurança & Prevenção de Acidentes</option>
+        <option value="ped-asma">🫁 Asma na Infância & Lactente Sibilante</option>
+        <option value="ped-bronquiolite">🫁 Bronquiolite Viral Aguda (BVA)</option>
+        <option value="ped-pneumonia">🩺 Pneumonia Comunitária (PAC)</option>
+        <option value="ped-anafilaxia">🚨 Anafilaxia & Urticária Pediátrica</option>
+        <option value="ped-alergia-alim">🥛 Alergia Alimentar & APLV</option>
+        <option value="ped-coqueluche-fc">🫁 Coqueluche & Fibrose Cística</option>
+        <option value="ped-imunizacoes">💉 Calendário Vacinal (SBP/PNI)</option>
+        <option value="ped-febre-sem-foco">🌡️ Febre sem Foco no Lactente</option>
+        <option value="ped-exantematicas">🔴 Doenças Exantemáticas</option>
+        <option value="ped-tuberculose">🔬 Tuberculose na Infância (SBP)</option>
+        <option value="ped-drge">🥛 Refluxo Gastroesofágico (DRGE)</option>
+        <option value="ped-diarreia">💧 Diarreia Aguda & Reidratação (TRO)</option>
+        <option value="ped-constipacao">🚽 Constipação Intestinal Funcional</option>
+        <option value="ped-celiaca">🌾 Doença Celíaca Pediátrica</option>
+        <option value="ped-itu-enurese">💧 Infecção Urinária & Enurese</option>
+        <option value="ped-choque">🚨 Choque Pediátrico & Manejo</option>
+        <option value="ped-emerg-pcr">⚡ PCR & Algoritmos PALS</option>
+        <option value="ped-brue-smsl">⚠️ BRUE & Sono Seguro do Lactente</option>
+        <option value="ped-convulsao">🧠 Convulsão Febril & Crises</option>
+        <option value="ped-cefaleias">🤕 Cefaleias na Infância</option>
+        <option value="ped-reumato-vasc">🩸 Kawasaki & Vasculite por IgA</option>
+        <option value="ped-reumato-aij">🦴 Febre Reumática & Artrite Juvenil</option>
+        <option value="ped-cardiopatias">❤️ Cardiopatias Congênitas & HAS</option>
+        <option value="ped-genetica">🧬 Síndromes Genéticas & Erros Inatos</option>
+      </optgroup>
     </select>
 
     <!-- The Box: Interactive Module Selector -->
@@ -2406,7 +2450,9 @@
 
       <!-- Dropdown with options styled in the exact same style of the box text -->
       <div id="module-picker-dropdown" class="module-picker-dropdown">
-        <div class="module-picker-category-title">Ginecologia Geral & Ciclo</div>
+        <!-- Grupo Especialidade: Ginecologia (FEBRASGO) -->
+        <div id="picker-group-ginecologia" class="specialty-picker-group">
+          <div class="module-picker-category-title">Ginecologia Geral & Ciclo</div>
         <div class="module-picker-item active" data-mod="dsf" onclick="selectModule('dsf')">
           <div class="module-picker-item-icon">🧠</div>
           <div class="module-picker-item-info">
@@ -2693,8 +2739,301 @@
             <div class="module-picker-item-sub">Framework Estudante-Médico • 1 tópico</div>
           </div>
         </div>
+        <!-- Grupo Especialidade: Pediatria (SBP 2024) -->
+        <div id="picker-group-pediatria" class="specialty-picker-group" style="display: none;">
+          <div class="module-picker-category-title">Neonatologia & Perinatologia</div>
+          <div class="module-picker-item" data-mod="ped-reanima" onclick="selectModule('ped-reanima')">
+            <div class="module-picker-item-icon">🫁</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Reanimação Neonatal em Sala de Parto</div>
+              <div class="module-picker-item-sub">Diretrizes SBP 2024 • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-cuidneonat" onclick="selectModule('ped-cuidneonat')">
+            <div class="module-picker-item-icon">👶</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Cuidados & Triagem Neonatal</div>
+              <div class="module-picker-item-sub">Classificações & Testes de Triagem • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-distresp-rn" onclick="selectModule('ped-distresp-rn')">
+            <div class="module-picker-item-icon">🫁</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Distúrbios Respiratórios do RN</div>
+              <div class="module-picker-item-sub">SDR, TTRN, SAM & HPPN • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-ictericia-sepse" onclick="selectModule('ped-ictericia-sepse')">
+            <div class="module-picker-item-icon">🟡</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Icterícia & Sepse Neonatal</div>
+              <div class="module-picker-item-sub">Fototerapia & Antibioticoterapia • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-disturb-rn" onclick="selectModule('ped-disturb-rn')">
+            <div class="module-picker-item-icon">⚡</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Distúrbios Metabólicos do RN</div>
+              <div class="module-picker-item-sub">Hipoglicemia, Hipocalcemia & ECN • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-infecc-cong" onclick="selectModule('ped-infecc-cong')">
+            <div class="module-picker-item-icon">🦠</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Infecções Congênitas (TORCH & Sífilis)</div>
+              <div class="module-picker-item-sub">Toxoplasmose, CMV & Sífilis • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Crescimento & Puericultura</div>
+          <div class="module-picker-item" data-mod="ped-crescimento" onclick="selectModule('ped-crescimento')">
+            <div class="module-picker-item-icon">📏</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Crescimento & Antropometria</div>
+              <div class="module-picker-item-sub">Curvas OMS & Baixa Estatura • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-dnpm" onclick="selectModule('ped-dnpm')">
+            <div class="module-picker-item-icon">🧠</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Desenvolvimento Neuropsicomotor</div>
+              <div class="module-picker-item-sub">Marcos do DNPM & Triagem M-CHAT • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-aleitamento" onclick="selectModule('ped-aleitamento')">
+            <div class="module-picker-item-icon">🤱</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Aleitamento Materno & Lactação</div>
+              <div class="module-picker-item-sub">Técnica de Pega & Dificuldades • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-nutricao" onclick="selectModule('ped-nutricao')">
+            <div class="module-picker-item-icon">🥣</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Alimentação & Puericultura</div>
+              <div class="module-picker-item-sub">Alimentação Complementar & Rotina • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-desnutricao" onclick="selectModule('ped-desnutricao')">
+            <div class="module-picker-item-icon">📉</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Desnutrição Infantil (OMS)</div>
+              <div class="module-picker-item-sub">Marasmo, Kwashiorkor & Protocolo OMS • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-vitaminas" onclick="selectModule('ped-vitaminas')">
+            <div class="module-picker-item-icon">💊</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Micronutrientes & Vitaminas</div>
+              <div class="module-picker-item-sub">Anemia Ferropriva, Vitamina D & A • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-obesidade" onclick="selectModule('ped-obesidade')">
+            <div class="module-picker-item-icon">⚖️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Obesidade Infantil & Metabólica</div>
+              <div class="module-picker-item-sub">Escore-Z do IMC & Rastreio • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Adolescência & Segurança</div>
+          <div class="module-picker-item" data-mod="ped-puberdade" onclick="selectModule('ped-puberdade')">
+            <div class="module-picker-item-icon">🌱</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Puberdade Normal & Desvios</div>
+              <div class="module-picker-item-sub">Estagiamento de Tanner & Precoce • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-hebiatria" onclick="selectModule('ped-hebiatria')">
+            <div class="module-picker-item-icon">🧑‍⚕️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Hebiatria (Medicina do Adolescente)</div>
+              <div class="module-picker-item-sub">Sigilo, Escala HEEADSSS & Saúde • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-seguranca" onclick="selectModule('ped-seguranca')">
+            <div class="module-picker-item-icon">🛡️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Segurança & Prevenção de Acidentes</div>
+              <div class="module-picker-item-sub">Engasgo, Quedas & Cadeirinhas • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Pneumologia & Alergia</div>
+          <div class="module-picker-item" data-mod="ped-asma" onclick="selectModule('ped-asma')">
+            <div class="module-picker-item-icon">🫁</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Asma na Infância & Lactente Sibilante</div>
+              <div class="module-picker-item-sub">Classificação GINA & Crise Aguda • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-bronquiolite" onclick="selectModule('ped-bronquiolite')">
+            <div class="module-picker-item-icon">🫁</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Bronquiolite Viral Aguda (BVA)</div>
+              <div class="module-picker-item-sub">VSR, Suporte Respiratório & Evidências • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-pneumonia" onclick="selectModule('ped-pneumonia')">
+            <div class="module-picker-item-icon">🩺</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Pneumonia Comunitária (PAC)</div>
+              <div class="module-picker-item-sub">Etiologia, Critérios de Gravidade & Tto • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-anafilaxia" onclick="selectModule('ped-anafilaxia')">
+            <div class="module-picker-item-icon">🚨</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Anafilaxia & Urticária Pediátrica</div>
+              <div class="module-picker-item-sub">Adrenalina IM & Critérios WAO • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-alergia-alim" onclick="selectModule('ped-alergia-alim')">
+            <div class="module-picker-item-icon">🥛</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Alergia Alimentar & APLV</div>
+              <div class="module-picker-item-sub">IgE vs Não-IgE & Fórmulas Especiais • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-coqueluche-fc" onclick="selectModule('ped-coqueluche-fc')">
+            <div class="module-picker-item-icon">🫁</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Coqueluche & Fibrose Cística</div>
+              <div class="module-picker-item-sub">Bordetella pertussis & Teste do Suor • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Infectologia & Imunizações</div>
+          <div class="module-picker-item" data-mod="ped-imunizacoes" onclick="selectModule('ped-imunizacoes')">
+            <div class="module-picker-item-icon">💉</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Calendário Vacinal (SBP/PNI)</div>
+              <div class="module-picker-item-sub">Esquemas, Contraindicações & CRIE • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-febre-sem-foco" onclick="selectModule('ped-febre-sem-foco')">
+            <div class="module-picker-item-icon">🌡️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Febre sem Foco no Lactente</div>
+              <div class="module-picker-item-sub">Rochester, Philadelphia & Conduta • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-exantematicas" onclick="selectModule('ped-exantematicas')">
+            <div class="module-picker-item-icon">🔴</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Doenças Exantemáticas</div>
+              <div class="module-picker-item-sub">Sarampo, Varicela, Roséola & Outras • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-tuberculose" onclick="selectModule('ped-tuberculose')">
+            <div class="module-picker-item-icon">🔬</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Tuberculose na Infância (SBP)</div>
+              <div class="module-picker-item-sub">Sistema de Pontuação MS/SBP & Tto • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Gastro & Nefro Pediátrica</div>
+          <div class="module-picker-item" data-mod="ped-drge" onclick="selectModule('ped-drge')">
+            <div class="module-picker-item-icon">🥛</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Refluxo Gastroesofágico (DRGE)</div>
+              <div class="module-picker-item-sub">Refluxador Feliz vs Doença • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-diarreia" onclick="selectModule('ped-diarreia')">
+            <div class="module-picker-item-icon">💧</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Diarreia Aguda & Reidratação (TRO)</div>
+              <div class="module-picker-item-sub">Planos A, B e C da OMS & Zinco • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-constipacao" onclick="selectModule('ped-constipacao')">
+            <div class="module-picker-item-icon">🚽</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Constipação Intestinal Funcional</div>
+              <div class="module-picker-item-sub">Critérios Roma IV & Desimpactação • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-celiaca" onclick="selectModule('ped-celiaca')">
+            <div class="module-picker-item-icon">🌾</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Doença Celíaca Pediátrica</div>
+              <div class="module-picker-item-sub">Critérios ESPGHAN & Triagem • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-itu-enurese" onclick="selectModule('ped-itu-enurese')">
+            <div class="module-picker-item-icon">💧</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Infecção Urinária & Enurese</div>
+              <div class="module-picker-item-sub">Cortes de Urocultura & Investigação • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Emergências & Terapia Intensiva</div>
+          <div class="module-picker-item" data-mod="ped-choque" onclick="selectModule('ped-choque')">
+            <div class="module-picker-item-icon">🚨</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Choque Pediátrico & Manejo</div>
+              <div class="module-picker-item-sub">Compensado vs Hipotensivo & DVA • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-emerg-pcr" onclick="selectModule('ped-emerg-pcr')">
+            <div class="module-picker-item-icon">⚡</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">PCR & Algoritmos PALS</div>
+              <div class="module-picker-item-sub">Ritmos Chocáveis vs Não-Chocáveis • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-brue-smsl" onclick="selectModule('ped-brue-smsl')">
+            <div class="module-picker-item-icon">⚠️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">BRUE & Sono Seguro do Lactente</div>
+              <div class="module-picker-item-sub">Estratificação de Risco & Prevenção • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Neurologia & Reumatologia</div>
+          <div class="module-picker-item" data-mod="ped-convulsao" onclick="selectModule('ped-convulsao')">
+            <div class="module-picker-item-icon">🧠</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Convulsão Febril & Crises</div>
+              <div class="module-picker-item-sub">Simples vs Complexa & Protocolo • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-cefaleias" onclick="selectModule('ped-cefaleias')">
+            <div class="module-picker-item-icon">🤕</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Cefaleias na Infância</div>
+              <div class="module-picker-item-sub">Enxaqueca, Sinais de Alerta & Tto • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-reumato-vasc" onclick="selectModule('ped-reumato-vasc')">
+            <div class="module-picker-item-icon">🩸</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Kawasaki & Vasculite por IgA</div>
+              <div class="module-picker-item-sub">Critérios Clínicos, IGIV & Púrpura • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-reumato-aij" onclick="selectModule('ped-reumato-aij')">
+            <div class="module-picker-item-icon">🦴</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Febre Reumática & Artrite Juvenil</div>
+              <div class="module-picker-item-sub">Critérios de Jones & Subtipos de AIJ • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-item" data-mod="ped-cardiopatias" onclick="selectModule('ped-cardiopatias')">
+            <div class="module-picker-item-icon">❤️</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Cardiopatias Congênitas & HAS</div>
+              <div class="module-picker-item-sub">Acianóticas, Cianóticas & Pressão • 8 tópicos</div>
+            </div>
+          </div>
+          <div class="module-picker-category-title">Genética & Erros Inatos</div>
+          <div class="module-picker-item" data-mod="ped-genetica" onclick="selectModule('ped-genetica')">
+            <div class="module-picker-item-icon">🧬</div>
+            <div class="module-picker-item-info">
+              <div class="module-picker-item-title">Síndromes Genéticas & Erros Inatos</div>
+              <div class="module-picker-item-sub">Down, Turner & Erros Inatos • 8 tópicos</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
 
     <div class="sidebar-search">
       <div class="search-input-wrapper">
@@ -4881,6 +5220,371 @@
         <a href="#examefisico-tabelas-casos" class="nav-link" onclick="switchSection('examefisico-tabelas-casos')">
           <span class="nav-icon">📋</span>
           <span>Tabelas Semiológicas & Casos Clínicos</span>
+        </a>
+      </li>
+    </ul>
+
+    
+    <!-- ========================================== -->
+    <!-- PEDIATRIA: Nav-Groups da Barra Lateral (40 Módulos) -->
+    <!-- ========================================== -->
+    <ul id="nav-group-ped-reanima" class="nav-list" style="display: none;">
+      <li class="nav-category">Reanimação Neonatal em Sala de Parto</li>
+      <li class="nav-item">
+        <a href="#ped-reanima-definicao" class="nav-link" onclick="switchSection('ped-reanima-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-cuidneonat" class="nav-list" style="display: none;">
+      <li class="nav-category">Cuidados & Triagem Neonatal</li>
+      <li class="nav-item">
+        <a href="#ped-cuidneonat-definicao" class="nav-link" onclick="switchSection('ped-cuidneonat-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-distresp-rn" class="nav-list" style="display: none;">
+      <li class="nav-category">Distúrbios Respiratórios do RN</li>
+      <li class="nav-item">
+        <a href="#ped-distresp-rn-definicao" class="nav-link" onclick="switchSection('ped-distresp-rn-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-ictericia-sepse" class="nav-list" style="display: none;">
+      <li class="nav-category">Icterícia & Sepse Neonatal</li>
+      <li class="nav-item">
+        <a href="#ped-ictericia-sepse-definicao" class="nav-link" onclick="switchSection('ped-ictericia-sepse-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-disturb-rn" class="nav-list" style="display: none;">
+      <li class="nav-category">Distúrbios Metabólicos do RN</li>
+      <li class="nav-item">
+        <a href="#ped-disturb-rn-definicao" class="nav-link" onclick="switchSection('ped-disturb-rn-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-infecc-cong" class="nav-list" style="display: none;">
+      <li class="nav-category">Infecções Congênitas (TORCH & Sífilis)</li>
+      <li class="nav-item">
+        <a href="#ped-infecc-cong-definicao" class="nav-link" onclick="switchSection('ped-infecc-cong-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-crescimento" class="nav-list" style="display: none;">
+      <li class="nav-category">Crescimento & Antropometria</li>
+      <li class="nav-item">
+        <a href="#ped-crescimento-definicao" class="nav-link" onclick="switchSection('ped-crescimento-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-dnpm" class="nav-list" style="display: none;">
+      <li class="nav-category">Desenvolvimento Neuropsicomotor</li>
+      <li class="nav-item">
+        <a href="#ped-dnpm-definicao" class="nav-link" onclick="switchSection('ped-dnpm-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-aleitamento" class="nav-list" style="display: none;">
+      <li class="nav-category">Aleitamento Materno & Lactação</li>
+      <li class="nav-item">
+        <a href="#ped-aleitamento-definicao" class="nav-link" onclick="switchSection('ped-aleitamento-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-nutricao" class="nav-list" style="display: none;">
+      <li class="nav-category">Alimentação & Puericultura</li>
+      <li class="nav-item">
+        <a href="#ped-nutricao-definicao" class="nav-link" onclick="switchSection('ped-nutricao-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-desnutricao" class="nav-list" style="display: none;">
+      <li class="nav-category">Desnutrição Infantil (OMS)</li>
+      <li class="nav-item">
+        <a href="#ped-desnutricao-definicao" class="nav-link" onclick="switchSection('ped-desnutricao-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-vitaminas" class="nav-list" style="display: none;">
+      <li class="nav-category">Micronutrientes & Vitaminas</li>
+      <li class="nav-item">
+        <a href="#ped-vitaminas-definicao" class="nav-link" onclick="switchSection('ped-vitaminas-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-obesidade" class="nav-list" style="display: none;">
+      <li class="nav-category">Obesidade Infantil & Metabólica</li>
+      <li class="nav-item">
+        <a href="#ped-obesidade-definicao" class="nav-link" onclick="switchSection('ped-obesidade-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-puberdade" class="nav-list" style="display: none;">
+      <li class="nav-category">Puberdade Normal & Desvios</li>
+      <li class="nav-item">
+        <a href="#ped-puberdade-definicao" class="nav-link" onclick="switchSection('ped-puberdade-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-hebiatria" class="nav-list" style="display: none;">
+      <li class="nav-category">Hebiatria (Medicina do Adolescente)</li>
+      <li class="nav-item">
+        <a href="#ped-hebiatria-definicao" class="nav-link" onclick="switchSection('ped-hebiatria-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-seguranca" class="nav-list" style="display: none;">
+      <li class="nav-category">Segurança & Prevenção de Acidentes</li>
+      <li class="nav-item">
+        <a href="#ped-seguranca-definicao" class="nav-link" onclick="switchSection('ped-seguranca-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-asma" class="nav-list" style="display: none;">
+      <li class="nav-category">Asma na Infância & Lactente Sibilante</li>
+      <li class="nav-item">
+        <a href="#ped-asma-definicao" class="nav-link" onclick="switchSection('ped-asma-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-bronquiolite" class="nav-list" style="display: none;">
+      <li class="nav-category">Bronquiolite Viral Aguda (BVA)</li>
+      <li class="nav-item">
+        <a href="#ped-bronquiolite-definicao" class="nav-link" onclick="switchSection('ped-bronquiolite-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-pneumonia" class="nav-list" style="display: none;">
+      <li class="nav-category">Pneumonia Comunitária (PAC)</li>
+      <li class="nav-item">
+        <a href="#ped-pneumonia-definicao" class="nav-link" onclick="switchSection('ped-pneumonia-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-anafilaxia" class="nav-list" style="display: none;">
+      <li class="nav-category">Anafilaxia & Urticária Pediátrica</li>
+      <li class="nav-item">
+        <a href="#ped-anafilaxia-definicao" class="nav-link" onclick="switchSection('ped-anafilaxia-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-alergia-alim" class="nav-list" style="display: none;">
+      <li class="nav-category">Alergia Alimentar & APLV</li>
+      <li class="nav-item">
+        <a href="#ped-alergia-alim-definicao" class="nav-link" onclick="switchSection('ped-alergia-alim-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-coqueluche-fc" class="nav-list" style="display: none;">
+      <li class="nav-category">Coqueluche & Fibrose Cística</li>
+      <li class="nav-item">
+        <a href="#ped-coqueluche-fc-definicao" class="nav-link" onclick="switchSection('ped-coqueluche-fc-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-imunizacoes" class="nav-list" style="display: none;">
+      <li class="nav-category">Calendário Vacinal (SBP/PNI)</li>
+      <li class="nav-item">
+        <a href="#ped-imunizacoes-definicao" class="nav-link" onclick="switchSection('ped-imunizacoes-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-febre-sem-foco" class="nav-list" style="display: none;">
+      <li class="nav-category">Febre sem Foco no Lactente</li>
+      <li class="nav-item">
+        <a href="#ped-febre-sem-foco-definicao" class="nav-link" onclick="switchSection('ped-febre-sem-foco-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-exantematicas" class="nav-list" style="display: none;">
+      <li class="nav-category">Doenças Exantemáticas</li>
+      <li class="nav-item">
+        <a href="#ped-exantematicas-definicao" class="nav-link" onclick="switchSection('ped-exantematicas-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-tuberculose" class="nav-list" style="display: none;">
+      <li class="nav-category">Tuberculose na Infância (SBP)</li>
+      <li class="nav-item">
+        <a href="#ped-tuberculose-definicao" class="nav-link" onclick="switchSection('ped-tuberculose-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-drge" class="nav-list" style="display: none;">
+      <li class="nav-category">Refluxo Gastroesofágico (DRGE)</li>
+      <li class="nav-item">
+        <a href="#ped-drge-definicao" class="nav-link" onclick="switchSection('ped-drge-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-diarreia" class="nav-list" style="display: none;">
+      <li class="nav-category">Diarreia Aguda & Reidratação (TRO)</li>
+      <li class="nav-item">
+        <a href="#ped-diarreia-definicao" class="nav-link" onclick="switchSection('ped-diarreia-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-constipacao" class="nav-list" style="display: none;">
+      <li class="nav-category">Constipação Intestinal Funcional</li>
+      <li class="nav-item">
+        <a href="#ped-constipacao-definicao" class="nav-link" onclick="switchSection('ped-constipacao-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-celiaca" class="nav-list" style="display: none;">
+      <li class="nav-category">Doença Celíaca Pediátrica</li>
+      <li class="nav-item">
+        <a href="#ped-celiaca-definicao" class="nav-link" onclick="switchSection('ped-celiaca-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-itu-enurese" class="nav-list" style="display: none;">
+      <li class="nav-category">Infecção Urinária & Enurese</li>
+      <li class="nav-item">
+        <a href="#ped-itu-enurese-definicao" class="nav-link" onclick="switchSection('ped-itu-enurese-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-choque" class="nav-list" style="display: none;">
+      <li class="nav-category">Choque Pediátrico & Manejo</li>
+      <li class="nav-item">
+        <a href="#ped-choque-definicao" class="nav-link" onclick="switchSection('ped-choque-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-emerg-pcr" class="nav-list" style="display: none;">
+      <li class="nav-category">PCR & Algoritmos PALS</li>
+      <li class="nav-item">
+        <a href="#ped-emerg-pcr-definicao" class="nav-link" onclick="switchSection('ped-emerg-pcr-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-brue-smsl" class="nav-list" style="display: none;">
+      <li class="nav-category">BRUE & Sono Seguro do Lactente</li>
+      <li class="nav-item">
+        <a href="#ped-brue-smsl-definicao" class="nav-link" onclick="switchSection('ped-brue-smsl-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-convulsao" class="nav-list" style="display: none;">
+      <li class="nav-category">Convulsão Febril & Crises</li>
+      <li class="nav-item">
+        <a href="#ped-convulsao-definicao" class="nav-link" onclick="switchSection('ped-convulsao-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-cefaleias" class="nav-list" style="display: none;">
+      <li class="nav-category">Cefaleias na Infância</li>
+      <li class="nav-item">
+        <a href="#ped-cefaleias-definicao" class="nav-link" onclick="switchSection('ped-cefaleias-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-reumato-vasc" class="nav-list" style="display: none;">
+      <li class="nav-category">Kawasaki & Vasculite por IgA</li>
+      <li class="nav-item">
+        <a href="#ped-reumato-vasc-definicao" class="nav-link" onclick="switchSection('ped-reumato-vasc-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-reumato-aij" class="nav-list" style="display: none;">
+      <li class="nav-category">Febre Reumática & Artrite Juvenil</li>
+      <li class="nav-item">
+        <a href="#ped-reumato-aij-definicao" class="nav-link" onclick="switchSection('ped-reumato-aij-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-cardiopatias" class="nav-list" style="display: none;">
+      <li class="nav-category">Cardiopatias Congênitas & HAS</li>
+      <li class="nav-item">
+        <a href="#ped-cardiopatias-definicao" class="nav-link" onclick="switchSection('ped-cardiopatias-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
+        </a>
+      </li>
+    </ul>
+    <ul id="nav-group-ped-genetica" class="nav-list" style="display: none;">
+      <li class="nav-category">Síndromes Genéticas & Erros Inatos</li>
+      <li class="nav-item">
+        <a href="#ped-genetica-definicao" class="nav-link" onclick="switchSection('ped-genetica-definicao')">
+          <span class="nav-icon">🧭</span>
+          <span>Visão Geral & Diretrizes SBP</span>
         </a>
       </li>
     </ul>
@@ -25025,23 +25729,1042 @@
       </div>
     </section>
 
+    
+    <!-- ========================================== -->
+    <!-- PEDIATRIA: Seções Iniciais da Especialidade (Fase 0) -->
+    <!-- ========================================== -->
+    <section id="ped-reanima-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">🫁 Reanimação Neonatal em Sala de Parto</h1>
+        <p class="section-subtitle">Seção 10 (Neonatologia), Cap. 1 — Reanimação do Recém-Nascido em Sala de Parto (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-cuidneonat-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">👶 Cuidados & Triagem Neonatal</h1>
+        <p class="section-subtitle">Seção 10 (Neonatologia), Cap. 2 a 5 — Exame Físico e Triagem Neonatal (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-distresp-rn-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">🫁 Distúrbios Respiratórios do RN</h1>
+        <p class="section-subtitle">Seção 10 (Neonatologia), Cap. 12 — Desconforto Respiratório no Período Neonatal (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-ictericia-sepse-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">🟡 Icterícia & Sepse Neonatal</h1>
+        <p class="section-subtitle">Seção 10 (Neonatologia), Cap. 18 e 25 — Hiperbilirrubinemia e Infecção Neonatal (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-disturb-rn-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">⚡ Distúrbios Metabólicos do RN</h1>
+        <p class="section-subtitle">Seção 10 (Neonatologia), Cap. 8 e 22 — Distúrbios Metabólicos do Recém-Nascido (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-infecc-cong-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neonatologia & Perinatologia</span>
+        </div>
+        <h1 class="section-title">🦠 Infecções Congênitas (TORCH & Sífilis)</h1>
+        <p class="section-subtitle">Seção 20 (Infectologia), Cap. 14 — Transmissão Vertical e Infecções Congênitas (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-crescimento-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">📏 Crescimento & Antropometria</h1>
+        <p class="section-subtitle">Seção 24 (Nutrologia), Cap. 1 — Avaliação Nutricional e Crescimento Físico (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-dnpm-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">🧠 Desenvolvimento Neuropsicomotor</h1>
+        <p class="section-subtitle">Seção 4 (Desenvolvimento e Comportamento), Cap. 2 — Vigilância do DNPM (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-aleitamento-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">🤱 Aleitamento Materno & Lactação</h1>
+        <p class="section-subtitle">Seção 9 (Aleitamento Materno), Cap. 1 a 6 — Promoção e Manejo Clínico da Lactação (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-nutricao-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">🥣 Alimentação & Puericultura</h1>
+        <p class="section-subtitle">Seção 2 (Fundamentos da Atenção) & Seção 24 — Guia Prático de Alimentação (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-desnutricao-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">📉 Desnutrição Infantil (OMS)</h1>
+        <p class="section-subtitle">Seção 24 (Nutrologia), Cap. 8 — Desnutrição Energético-Proteica Grave (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-vitaminas-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">💊 Micronutrientes & Vitaminas</h1>
+        <p class="section-subtitle">Seção 24 (Nutrologia), Cap. 5 e 6 — Deficiências de Micronutrientes (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-obesidade-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Crescimento & Puericultura</span>
+        </div>
+        <h1 class="section-title">⚖️ Obesidade Infantil & Metabólica</h1>
+        <p class="section-subtitle">Seção 24 (Nutrologia), Cap. 10 — Obesidade na Infância e Adolescência (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-puberdade-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Adolescência & Segurança</span>
+        </div>
+        <h1 class="section-title">🌱 Puberdade Normal & Desvios</h1>
+        <p class="section-subtitle">Seção 11 (Adolescência) & Seção 16 (Endocrinologia) — Puberdade e Seus Desvios (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-hebiatria-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Adolescência & Segurança</span>
+        </div>
+        <h1 class="section-title">🧑‍⚕️ Hebiatria (Medicina do Adolescente)</h1>
+        <p class="section-subtitle">Seção 11 (Adolescência), Cap. 1 a 4 — Atenção Integral ao Adolescente (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-seguranca-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Adolescência & Segurança</span>
+        </div>
+        <h1 class="section-title">🛡️ Segurança & Prevenção de Acidentes</h1>
+        <p class="section-subtitle">Seção 6 (Causas Externas), Cap. 1 a 5 — Prevenção de Acidentes na Infância (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-asma-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🫁 Asma na Infância & Lactente Sibilante</h1>
+        <p class="section-subtitle">Seção 29 (Pneumologia), Cap. 7 — Asma na Infância e Manejo Escalonado (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-bronquiolite-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🫁 Bronquiolite Viral Aguda (BVA)</h1>
+        <p class="section-subtitle">Seção 29 (Pneumologia), Cap. 5 — Bronquiolite Viral Aguda e Cuidados de Suporte (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-pneumonia-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🩺 Pneumonia Comunitária (PAC)</h1>
+        <p class="section-subtitle">Seção 29 (Pneumologia), Cap. 8 — Pneumonias Adquiridas na Comunidade (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-anafilaxia-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🚨 Anafilaxia & Urticária Pediátrica</h1>
+        <p class="section-subtitle">Seção 12 (Alergia), Cap. 3 e 4 — Anafilaxia e Urticária Aguda (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-alergia-alim-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🥛 Alergia Alimentar & APLV</h1>
+        <p class="section-subtitle">Seção 12 (Alergia), Cap. 6 — Alergia à Proteína do Leite de Vaca (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-coqueluche-fc-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Pneumologia & Alergia</span>
+        </div>
+        <h1 class="section-title">🫁 Coqueluche & Fibrose Cística</h1>
+        <p class="section-subtitle">Seção 20 (Infectologia) & Seção 29 (Pneumologia) — Doenças Respiratórias Específicas (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-imunizacoes-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Infectologia & Imunizações</span>
+        </div>
+        <h1 class="section-title">💉 Calendário Vacinal (SBP/PNI)</h1>
+        <p class="section-subtitle">Seção 21 (Imunizações), Cap. 1 a 4 — Calendário Oficial de Vacinação da SBP (2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-febre-sem-foco-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Infectologia & Imunizações</span>
+        </div>
+        <h1 class="section-title">🌡️ Febre sem Foco no Lactente</h1>
+        <p class="section-subtitle">Seção 3 (Emergências), Cap. 4 — Abordagem da Febre Aguda sem Foco (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-exantematicas-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Infectologia & Imunizações</span>
+        </div>
+        <h1 class="section-title">🔴 Doenças Exantemáticas</h1>
+        <p class="section-subtitle">Seção 20 (Infectologia), Cap. 8 — Diagnóstico Diferencial dos Exantemas (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-tuberculose-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Infectologia & Imunizações</span>
+        </div>
+        <h1 class="section-title">🔬 Tuberculose na Infância (SBP)</h1>
+        <p class="section-subtitle">Seção 20 (Infectologia), Cap. 18 — Tuberculose Pulmonar e Extrapulmonar (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-drge-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Gastro & Nefro Pediátrica</span>
+        </div>
+        <h1 class="section-title">🥛 Refluxo Gastroesofágico (DRGE)</h1>
+        <p class="section-subtitle">Seção 17 (Gastroenterologia), Cap. 3 — Doença do Refluxo Gastroesofágico (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-diarreia-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Gastro & Nefro Pediátrica</span>
+        </div>
+        <h1 class="section-title">💧 Diarreia Aguda & Reidratação (TRO)</h1>
+        <p class="section-subtitle">Seção 17 (Gastroenterologia), Cap. 7 — Terapia de Reidratação e Diarreia Aguda (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-constipacao-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Gastro & Nefro Pediátrica</span>
+        </div>
+        <h1 class="section-title">🚽 Constipação Intestinal Funcional</h1>
+        <p class="section-subtitle">Seção 17 (Gastroenterologia), Cap. 11 — Constipação Intestinal Crônica Funcional (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-celiaca-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Gastro & Nefro Pediátrica</span>
+        </div>
+        <h1 class="section-title">🌾 Doença Celíaca Pediátrica</h1>
+        <p class="section-subtitle">Seção 17 (Gastroenterologia), Cap. 13 — Enteropatia por Glúten / Doença Celíaca (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-itu-enurese-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Gastro & Nefro Pediátrica</span>
+        </div>
+        <h1 class="section-title">💧 Infecção Urinária & Enurese</h1>
+        <p class="section-subtitle">Seção 22 (Nefrologia), Cap. 4 e 9 — Infecção do Trato Urinário e Enurese (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-choque-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Emergências & Terapia Intensiva</span>
+        </div>
+        <h1 class="section-title">🚨 Choque Pediátrico & Manejo</h1>
+        <p class="section-subtitle">Seção 3 (Emergências) & Seção 31 (Terapia Intensiva) — Choque em Pediatria (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-emerg-pcr-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Emergências & Terapia Intensiva</span>
+        </div>
+        <h1 class="section-title">⚡ PCR & Algoritmos PALS</h1>
+        <p class="section-subtitle">Seção 3 (Emergências), Cap. 1 — Reanimação Cardiopulmonar Pediátrica PALS (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-brue-smsl-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Emergências & Terapia Intensiva</span>
+        </div>
+        <h1 class="section-title">⚠️ BRUE & Sono Seguro do Lactente</h1>
+        <p class="section-subtitle">Seção 3 (Emergências), Cap. 15 — Eventos Breves Inexplicados e Morte Súbita (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-convulsao-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neurologia & Reumatologia</span>
+        </div>
+        <h1 class="section-title">🧠 Convulsão Febril & Crises</h1>
+        <p class="section-subtitle">Seção 23 (Neurologia), Cap. 5 — Convulsão Febril e Estado de Mal Epiléptico (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-cefaleias-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neurologia & Reumatologia</span>
+        </div>
+        <h1 class="section-title">🤕 Cefaleias na Infância</h1>
+        <p class="section-subtitle">Seção 23 (Neurologia), Cap. 9 — Abordagem Diagnóstica das Cefaleias (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-reumato-vasc-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neurologia & Reumatologia</span>
+        </div>
+        <h1 class="section-title">🩸 Kawasaki & Vasculite por IgA</h1>
+        <p class="section-subtitle">Seção 30 (Reumatologia), Cap. 6 e 7 — Vasculites Sistêmicas na Infância (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-reumato-aij-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neurologia & Reumatologia</span>
+        </div>
+        <h1 class="section-title">🦴 Febre Reumática & Artrite Juvenil</h1>
+        <p class="section-subtitle">Seção 30 (Reumatologia), Cap. 2 e 4 — Febre Reumática e Artrite Idiopática Juvenil (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-cardiopatias-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Neurologia & Reumatologia</span>
+        </div>
+        <h1 class="section-title">❤️ Cardiopatias Congênitas & HAS</h1>
+        <p class="section-subtitle">Seção 14 (Cardiologia), Cap. 3 e 10 — Cardiopatias Congênitas e Hipertensão (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+    <section id="ped-genetica-definicao" class="content-section">
+      <div class="section-header">
+        <div class="section-badges">
+          <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Genética & Erros Inatos</span>
+        </div>
+        <h1 class="section-title">🧬 Síndromes Genéticas & Erros Inatos</h1>
+        <p class="section-subtitle">Seção 19 (Genética Clínica), Cap. 1 a 6 — Avaliação Diagnóstica e Conduta (SBP 2024)</p>
+      </div>
+
+      <div class="alert-box alert-info" style="margin-top: 20px;">
+        <div class="alert-icon">👶</div>
+        <div class="alert-content">
+          <div class="alert-title">Módulo Pediátrico Integrado ao Fluxomed</div>
+          <div class="alert-text">
+            Este módulo clínico faz parte da nova biblioteca pediátrica de alto rendimento do <strong>Fluxomed</strong>, estruturado integralmente com base nas diretrizes oficiais do <strong>Tratado de Pediatria da SBP (6ª Edição, 2024)</strong>. As seções detalhadas, fluxogramas decisórios em SVG, dosagens posológicas por peso ($	ext{mg/kg}$) e casos clínicos interativos serão ativados nas próximas fases da expansão.
+          </div>
+        </div>
+      </div>
+
+      <div class="source-attribution" style="margin-top: 30px;">
+        Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
+      </div>
+    </section>
+
     </main>
 
   <script>
     // Gestão de Especialidades Médicas (Ginecologia & Pediatria)
     let currentSpecialty = 'ginecologia';
+    let activeGinecologiaMod = 'dsf';
+    let activePediatriaMod = 'ped-reanima';
 
     function switchSpecialty(spec) {
       if (spec === 'pediatria') {
+        currentSpecialty = 'pediatria';
+        document.getElementById('spec-tab-pediatria')?.classList.add('active');
+        document.getElementById('spec-tab-pediatria')?.setAttribute('aria-selected', 'true');
+        document.getElementById('spec-tab-ginecologia')?.classList.remove('active');
+        document.getElementById('spec-tab-ginecologia')?.setAttribute('aria-selected', 'false');
+
+        const crumbSpec = document.getElementById('crumb-specialty');
+        if (crumbSpec) crumbSpec.textContent = 'Pediatria';
+
+        const sourceName = document.getElementById('footer-source-name');
+        if (sourceName) sourceName.textContent = 'Tratado de Pediatria SBP (6ª Edição, 2024)';
+
+        // Alternar grupos no Box Picker
+        const pickerGineco = document.getElementById('picker-group-ginecologia');
+        const pickerPed = document.getElementById('picker-group-pediatria');
+        if (pickerGineco) pickerGineco.style.display = 'none';
+        if (pickerPed) pickerPed.style.display = 'block';
+
+        // Alternar optgroups no #moduleSelect
+        const optGineco = document.getElementById('optgroup-ginecologia');
+        const optPed = document.getElementById('optgroup-pediatria');
+        if (optGineco) optGineco.disabled = true;
+        if (optPed) optPed.disabled = false;
+
+        // Fechar modal de preview se estiver no DOM
         const modal = document.getElementById('pediatria-preview-modal');
-        if (modal) modal.style.display = 'flex';
+        if (modal) modal.style.display = 'none';
+
+        // Alternar para o módulo pediátrico ativo
+        switchModule(activePediatriaMod);
       } else {
         currentSpecialty = 'ginecologia';
         document.getElementById('spec-tab-ginecologia')?.classList.add('active');
+        document.getElementById('spec-tab-ginecologia')?.setAttribute('aria-selected', 'true');
         document.getElementById('spec-tab-pediatria')?.classList.remove('active');
+        document.getElementById('spec-tab-pediatria')?.setAttribute('aria-selected', 'false');
+
         const crumbSpec = document.getElementById('crumb-specialty');
         if (crumbSpec) crumbSpec.textContent = 'Ginecologia';
+
+        const sourceName = document.getElementById('footer-source-name');
+        if (sourceName) sourceName.textContent = 'Tratado de Ginecologia FEBRASGO (2ª Edição)';
+
+        // Alternar grupos no Box Picker
+        const pickerGineco = document.getElementById('picker-group-ginecologia');
+        const pickerPed = document.getElementById('picker-group-pediatria');
+        if (pickerGineco) pickerGineco.style.display = 'block';
+        if (pickerPed) pickerPed.style.display = 'none';
+
+        // Alternar optgroups no #moduleSelect
+        const optGineco = document.getElementById('optgroup-ginecologia');
+        const optPed = document.getElementById('optgroup-pediatria');
+        if (optGineco) optGineco.disabled = false;
+        if (optPed) optPed.disabled = true;
+
+        // Alternar para o módulo ginecológico ativo
+        switchModule(activeGinecologiaMod);
       }
+      try {
+        localStorage.setItem('fluxomed_active_specialty', spec);
+      } catch(e) {}
     }
 
     function closePediatriaModal() {
@@ -25051,6 +26774,48 @@
 
     // Alternador de Módulos (12 Módulos: DSF, SUA, LARCs, Mastologia, Colo Uterino, Infertilidade, SOP, Adenomiose, Endometriose, Prolapso, Incontinência e Climatério)
     const MODULE_META = {
+      // --- Módulos Pediátricos (SBP 2024) ---
+      'ped-reanima': { icon: '🫁', name: 'Reanimação Neonatal em Sala de Parto', sub: 'Diretrizes SBP 2024 • 8 tópicos', firstSection: 'ped-reanima-definicao', ref: 'Seção 10 (Neonatologia), Cap. 1 — Reanimação do Recém-Nascido em Sala de Parto (SBP 2024)', specialty: 'pediatria' },
+      'ped-cuidneonat': { icon: '👶', name: 'Cuidados & Triagem Neonatal', sub: 'Classificações & Testes de Triagem • 8 tópicos', firstSection: 'ped-cuidneonat-definicao', ref: 'Seção 10 (Neonatologia), Cap. 2 a 5 — Exame Físico e Triagem Neonatal (SBP 2024)', specialty: 'pediatria' },
+      'ped-distresp-rn': { icon: '🫁', name: 'Distúrbios Respiratórios do RN', sub: 'SDR, TTRN, SAM & HPPN • 8 tópicos', firstSection: 'ped-distresp-rn-definicao', ref: 'Seção 10 (Neonatologia), Cap. 12 — Desconforto Respiratório no Período Neonatal (SBP 2024)', specialty: 'pediatria' },
+      'ped-ictericia-sepse': { icon: '🟡', name: 'Icterícia & Sepse Neonatal', sub: 'Fototerapia & Antibioticoterapia • 8 tópicos', firstSection: 'ped-ictericia-sepse-definicao', ref: 'Seção 10 (Neonatologia), Cap. 18 e 25 — Hiperbilirrubinemia e Infecção Neonatal (SBP 2024)', specialty: 'pediatria' },
+      'ped-disturb-rn': { icon: '⚡', name: 'Distúrbios Metabólicos do RN', sub: 'Hipoglicemia, Hipocalcemia & ECN • 8 tópicos', firstSection: 'ped-disturb-rn-definicao', ref: 'Seção 10 (Neonatologia), Cap. 8 e 22 — Distúrbios Metabólicos do Recém-Nascido (SBP 2024)', specialty: 'pediatria' },
+      'ped-infecc-cong': { icon: '🦠', name: 'Infecções Congênitas (TORCH & Sífilis)', sub: 'Toxoplasmose, CMV & Sífilis • 8 tópicos', firstSection: 'ped-infecc-cong-definicao', ref: 'Seção 20 (Infectologia), Cap. 14 — Transmissão Vertical e Infecções Congênitas (SBP 2024)', specialty: 'pediatria' },
+      'ped-crescimento': { icon: '📏', name: 'Crescimento & Antropometria', sub: 'Curvas OMS & Baixa Estatura • 8 tópicos', firstSection: 'ped-crescimento-definicao', ref: 'Seção 24 (Nutrologia), Cap. 1 — Avaliação Nutricional e Crescimento Físico (SBP 2024)', specialty: 'pediatria' },
+      'ped-dnpm': { icon: '🧠', name: 'Desenvolvimento Neuropsicomotor', sub: 'Marcos do DNPM & Triagem M-CHAT • 8 tópicos', firstSection: 'ped-dnpm-definicao', ref: 'Seção 4 (Desenvolvimento e Comportamento), Cap. 2 — Vigilância do DNPM (SBP 2024)', specialty: 'pediatria' },
+      'ped-aleitamento': { icon: '🤱', name: 'Aleitamento Materno & Lactação', sub: 'Técnica de Pega & Dificuldades • 8 tópicos', firstSection: 'ped-aleitamento-definicao', ref: 'Seção 9 (Aleitamento Materno), Cap. 1 a 6 — Promoção e Manejo Clínico da Lactação (SBP 2024)', specialty: 'pediatria' },
+      'ped-nutricao': { icon: '🥣', name: 'Alimentação & Puericultura', sub: 'Alimentação Complementar & Rotina • 8 tópicos', firstSection: 'ped-nutricao-definicao', ref: 'Seção 2 (Fundamentos da Atenção) & Seção 24 — Guia Prático de Alimentação (SBP 2024)', specialty: 'pediatria' },
+      'ped-desnutricao': { icon: '📉', name: 'Desnutrição Infantil (OMS)', sub: 'Marasmo, Kwashiorkor & Protocolo OMS • 8 tópicos', firstSection: 'ped-desnutricao-definicao', ref: 'Seção 24 (Nutrologia), Cap. 8 — Desnutrição Energético-Proteica Grave (SBP 2024)', specialty: 'pediatria' },
+      'ped-vitaminas': { icon: '💊', name: 'Micronutrientes & Vitaminas', sub: 'Anemia Ferropriva, Vitamina D & A • 8 tópicos', firstSection: 'ped-vitaminas-definicao', ref: 'Seção 24 (Nutrologia), Cap. 5 e 6 — Deficiências de Micronutrientes (SBP 2024)', specialty: 'pediatria' },
+      'ped-obesidade': { icon: '⚖️', name: 'Obesidade Infantil & Metabólica', sub: 'Escore-Z do IMC & Rastreio • 8 tópicos', firstSection: 'ped-obesidade-definicao', ref: 'Seção 24 (Nutrologia), Cap. 10 — Obesidade na Infância e Adolescência (SBP 2024)', specialty: 'pediatria' },
+      'ped-puberdade': { icon: '🌱', name: 'Puberdade Normal & Desvios', sub: 'Estagiamento de Tanner & Precoce • 8 tópicos', firstSection: 'ped-puberdade-definicao', ref: 'Seção 11 (Adolescência) & Seção 16 (Endocrinologia) — Puberdade e Seus Desvios (SBP 2024)', specialty: 'pediatria' },
+      'ped-hebiatria': { icon: '🧑‍⚕️', name: 'Hebiatria (Medicina do Adolescente)', sub: 'Sigilo, Escala HEEADSSS & Saúde • 8 tópicos', firstSection: 'ped-hebiatria-definicao', ref: 'Seção 11 (Adolescência), Cap. 1 a 4 — Atenção Integral ao Adolescente (SBP 2024)', specialty: 'pediatria' },
+      'ped-seguranca': { icon: '🛡️', name: 'Segurança & Prevenção de Acidentes', sub: 'Engasgo, Quedas & Cadeirinhas • 8 tópicos', firstSection: 'ped-seguranca-definicao', ref: 'Seção 6 (Causas Externas), Cap. 1 a 5 — Prevenção de Acidentes na Infância (SBP 2024)', specialty: 'pediatria' },
+      'ped-asma': { icon: '🫁', name: 'Asma na Infância & Lactente Sibilante', sub: 'Classificação GINA & Crise Aguda • 8 tópicos', firstSection: 'ped-asma-definicao', ref: 'Seção 29 (Pneumologia), Cap. 7 — Asma na Infância e Manejo Escalonado (SBP 2024)', specialty: 'pediatria' },
+      'ped-bronquiolite': { icon: '🫁', name: 'Bronquiolite Viral Aguda (BVA)', sub: 'VSR, Suporte Respiratório & Evidências • 8 tópicos', firstSection: 'ped-bronquiolite-definicao', ref: 'Seção 29 (Pneumologia), Cap. 5 — Bronquiolite Viral Aguda e Cuidados de Suporte (SBP 2024)', specialty: 'pediatria' },
+      'ped-pneumonia': { icon: '🩺', name: 'Pneumonia Comunitária (PAC)', sub: 'Etiologia, Critérios de Gravidade & Tto • 8 tópicos', firstSection: 'ped-pneumonia-definicao', ref: 'Seção 29 (Pneumologia), Cap. 8 — Pneumonias Adquiridas na Comunidade (SBP 2024)', specialty: 'pediatria' },
+      'ped-anafilaxia': { icon: '🚨', name: 'Anafilaxia & Urticária Pediátrica', sub: 'Adrenalina IM & Critérios WAO • 8 tópicos', firstSection: 'ped-anafilaxia-definicao', ref: 'Seção 12 (Alergia), Cap. 3 e 4 — Anafilaxia e Urticária Aguda (SBP 2024)', specialty: 'pediatria' },
+      'ped-alergia-alim': { icon: '🥛', name: 'Alergia Alimentar & APLV', sub: 'IgE vs Não-IgE & Fórmulas Especiais • 8 tópicos', firstSection: 'ped-alergia-alim-definicao', ref: 'Seção 12 (Alergia), Cap. 6 — Alergia à Proteína do Leite de Vaca (SBP 2024)', specialty: 'pediatria' },
+      'ped-coqueluche-fc': { icon: '🫁', name: 'Coqueluche & Fibrose Cística', sub: 'Bordetella pertussis & Teste do Suor • 8 tópicos', firstSection: 'ped-coqueluche-fc-definicao', ref: 'Seção 20 (Infectologia) & Seção 29 (Pneumologia) — Doenças Respiratórias Específicas (SBP 2024)', specialty: 'pediatria' },
+      'ped-imunizacoes': { icon: '💉', name: 'Calendário Vacinal (SBP/PNI)', sub: 'Esquemas, Contraindicações & CRIE • 8 tópicos', firstSection: 'ped-imunizacoes-definicao', ref: 'Seção 21 (Imunizações), Cap. 1 a 4 — Calendário Oficial de Vacinação da SBP (2024)', specialty: 'pediatria' },
+      'ped-febre-sem-foco': { icon: '🌡️', name: 'Febre sem Foco no Lactente', sub: 'Rochester, Philadelphia & Conduta • 8 tópicos', firstSection: 'ped-febre-sem-foco-definicao', ref: 'Seção 3 (Emergências), Cap. 4 — Abordagem da Febre Aguda sem Foco (SBP 2024)', specialty: 'pediatria' },
+      'ped-exantematicas': { icon: '🔴', name: 'Doenças Exantemáticas', sub: 'Sarampo, Varicela, Roséola & Outras • 8 tópicos', firstSection: 'ped-exantematicas-definicao', ref: 'Seção 20 (Infectologia), Cap. 8 — Diagnóstico Diferencial dos Exantemas (SBP 2024)', specialty: 'pediatria' },
+      'ped-tuberculose': { icon: '🔬', name: 'Tuberculose na Infância (SBP)', sub: 'Sistema de Pontuação MS/SBP & Tto • 8 tópicos', firstSection: 'ped-tuberculose-definicao', ref: 'Seção 20 (Infectologia), Cap. 18 — Tuberculose Pulmonar e Extrapulmonar (SBP 2024)', specialty: 'pediatria' },
+      'ped-drge': { icon: '🥛', name: 'Refluxo Gastroesofágico (DRGE)', sub: 'Refluxador Feliz vs Doença • 8 tópicos', firstSection: 'ped-drge-definicao', ref: 'Seção 17 (Gastroenterologia), Cap. 3 — Doença do Refluxo Gastroesofágico (SBP 2024)', specialty: 'pediatria' },
+      'ped-diarreia': { icon: '💧', name: 'Diarreia Aguda & Reidratação (TRO)', sub: 'Planos A, B e C da OMS & Zinco • 8 tópicos', firstSection: 'ped-diarreia-definicao', ref: 'Seção 17 (Gastroenterologia), Cap. 7 — Terapia de Reidratação e Diarreia Aguda (SBP 2024)', specialty: 'pediatria' },
+      'ped-constipacao': { icon: '🚽', name: 'Constipação Intestinal Funcional', sub: 'Critérios Roma IV & Desimpactação • 8 tópicos', firstSection: 'ped-constipacao-definicao', ref: 'Seção 17 (Gastroenterologia), Cap. 11 — Constipação Intestinal Crônica Funcional (SBP 2024)', specialty: 'pediatria' },
+      'ped-celiaca': { icon: '🌾', name: 'Doença Celíaca Pediátrica', sub: 'Critérios ESPGHAN & Triagem • 8 tópicos', firstSection: 'ped-celiaca-definicao', ref: 'Seção 17 (Gastroenterologia), Cap. 13 — Enteropatia por Glúten / Doença Celíaca (SBP 2024)', specialty: 'pediatria' },
+      'ped-itu-enurese': { icon: '💧', name: 'Infecção Urinária & Enurese', sub: 'Cortes de Urocultura & Investigação • 8 tópicos', firstSection: 'ped-itu-enurese-definicao', ref: 'Seção 22 (Nefrologia), Cap. 4 e 9 — Infecção do Trato Urinário e Enurese (SBP 2024)', specialty: 'pediatria' },
+      'ped-choque': { icon: '🚨', name: 'Choque Pediátrico & Manejo', sub: 'Compensado vs Hipotensivo & DVA • 8 tópicos', firstSection: 'ped-choque-definicao', ref: 'Seção 3 (Emergências) & Seção 31 (Terapia Intensiva) — Choque em Pediatria (SBP 2024)', specialty: 'pediatria' },
+      'ped-emerg-pcr': { icon: '⚡', name: 'PCR & Algoritmos PALS', sub: 'Ritmos Chocáveis vs Não-Chocáveis • 8 tópicos', firstSection: 'ped-emerg-pcr-definicao', ref: 'Seção 3 (Emergências), Cap. 1 — Reanimação Cardiopulmonar Pediátrica PALS (SBP 2024)', specialty: 'pediatria' },
+      'ped-brue-smsl': { icon: '⚠️', name: 'BRUE & Sono Seguro do Lactente', sub: 'Estratificação de Risco & Prevenção • 8 tópicos', firstSection: 'ped-brue-smsl-definicao', ref: 'Seção 3 (Emergências), Cap. 15 — Eventos Breves Inexplicados e Morte Súbita (SBP 2024)', specialty: 'pediatria' },
+      'ped-convulsao': { icon: '🧠', name: 'Convulsão Febril & Crises', sub: 'Simples vs Complexa & Protocolo • 8 tópicos', firstSection: 'ped-convulsao-definicao', ref: 'Seção 23 (Neurologia), Cap. 5 — Convulsão Febril e Estado de Mal Epiléptico (SBP 2024)', specialty: 'pediatria' },
+      'ped-cefaleias': { icon: '🤕', name: 'Cefaleias na Infância', sub: 'Enxaqueca, Sinais de Alerta & Tto • 8 tópicos', firstSection: 'ped-cefaleias-definicao', ref: 'Seção 23 (Neurologia), Cap. 9 — Abordagem Diagnóstica das Cefaleias (SBP 2024)', specialty: 'pediatria' },
+      'ped-reumato-vasc': { icon: '🩸', name: 'Kawasaki & Vasculite por IgA', sub: 'Critérios Clínicos, IGIV & Púrpura • 8 tópicos', firstSection: 'ped-reumato-vasc-definicao', ref: 'Seção 30 (Reumatologia), Cap. 6 e 7 — Vasculites Sistêmicas na Infância (SBP 2024)', specialty: 'pediatria' },
+      'ped-reumato-aij': { icon: '🦴', name: 'Febre Reumática & Artrite Juvenil', sub: 'Critérios de Jones & Subtipos de AIJ • 8 tópicos', firstSection: 'ped-reumato-aij-definicao', ref: 'Seção 30 (Reumatologia), Cap. 2 e 4 — Febre Reumática e Artrite Idiopática Juvenil (SBP 2024)', specialty: 'pediatria' },
+      'ped-cardiopatias': { icon: '❤️', name: 'Cardiopatias Congênitas & HAS', sub: 'Acianóticas, Cianóticas & Pressão • 8 tópicos', firstSection: 'ped-cardiopatias-definicao', ref: 'Seção 14 (Cardiologia), Cap. 3 e 10 — Cardiopatias Congênitas e Hipertensão (SBP 2024)', specialty: 'pediatria' },
+      'ped-genetica': { icon: '🧬', name: 'Síndromes Genéticas & Erros Inatos', sub: 'Down, Turner & Erros Inatos • 8 tópicos', firstSection: 'ped-genetica-definicao', ref: 'Seção 19 (Genética Clínica), Cap. 1 a 6 — Avaliação Diagnóstica e Conduta (SBP 2024)', specialty: 'pediatria' },
+
       'dsf': { icon: '🧠', name: 'Disfunção Sexual Feminina', sub: 'Capítulos 10, 11 e 12 • 7 tópicos', firstSection: 'fluxograma-geral', ref: 'Capítulos 10, 11 e 12 — Disfunção Sexual Feminina' },
       'sua': { icon: '🩸', name: 'Sangramento Uterino Anormal', sub: 'Capítulos 20 e 21 • 9 tópicos', firstSection: 'sua-parametros', ref: 'Capítulos 20 e 21 / Cap. 45 — Sangramento Uterino Anormal (FIGO)' },
       'larcs': { icon: '🛡️', name: 'Contracepção Reversível (LARCs)', sub: 'Capítulos 16, 17 e 18 • 8 tópicos', firstSection: 'larcs-visao-geral', ref: 'Capítulos 16, 17 e 18 / Cap. 70 e 74 — Métodos Contraceptivos (LARCs)' },
@@ -25120,7 +26885,42 @@
     });
 
         function switchModule(moduleId) {
-      const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia', 'examefisico'];
+      if (moduleId.startsWith('ped-')) {
+        activePediatriaMod = moduleId;
+        if (currentSpecialty !== 'pediatria') {
+          currentSpecialty = 'pediatria';
+          document.getElementById('spec-tab-pediatria')?.classList.add('active');
+          document.getElementById('spec-tab-pediatria')?.setAttribute('aria-selected', 'true');
+          document.getElementById('spec-tab-ginecologia')?.classList.remove('active');
+          document.getElementById('spec-tab-ginecologia')?.setAttribute('aria-selected', 'false');
+          const crumbSpec = document.getElementById('crumb-specialty');
+          if (crumbSpec) crumbSpec.textContent = 'Pediatria';
+          const sourceName = document.getElementById('footer-source-name');
+          if (sourceName) sourceName.textContent = 'Tratado de Pediatria SBP (6ª Edição, 2024)';
+          const pickerGineco = document.getElementById('picker-group-ginecologia');
+          const pickerPed = document.getElementById('picker-group-pediatria');
+          if (pickerGineco) pickerGineco.style.display = 'none';
+          if (pickerPed) pickerPed.style.display = 'block';
+        }
+      } else {
+        activeGinecologiaMod = moduleId;
+        if (currentSpecialty !== 'ginecologia') {
+          currentSpecialty = 'ginecologia';
+          document.getElementById('spec-tab-ginecologia')?.classList.add('active');
+          document.getElementById('spec-tab-ginecologia')?.setAttribute('aria-selected', 'true');
+          document.getElementById('spec-tab-pediatria')?.classList.remove('active');
+          document.getElementById('spec-tab-pediatria')?.setAttribute('aria-selected', 'false');
+          const crumbSpec = document.getElementById('crumb-specialty');
+          if (crumbSpec) crumbSpec.textContent = 'Ginecologia';
+          const sourceName = document.getElementById('footer-source-name');
+          if (sourceName) sourceName.textContent = 'Tratado de Ginecologia FEBRASGO (2ª Edição)';
+          const pickerGineco = document.getElementById('picker-group-ginecologia');
+          const pickerPed = document.getElementById('picker-group-pediatria');
+          if (pickerGineco) pickerGineco.style.display = 'block';
+          if (pickerPed) pickerPed.style.display = 'none';
+        }
+      }
+      const moduleIds = ['dsf', 'sua', 'larcs', 'mama', 'colo', 'infertil', 'sop', 'adeno', 'endo', 'prolapso', 'incont', 'clim', 'trhav', 'infeccoes', 'dipav', 'mioma', 'amenor', 'metodologia', 'abdome', 'ovario', 'endometrio', 'mamabenigna', 'vulva', 'cancervulva', 'dor', 'spm', 'polipos', 'contracepcao', 'violencia', 'infancia', 'saudeintegral', 'fisiologia', 'prolactina', 'iop', 'pgr', 'urocomplexa', 'cirurgia', 'examefisico', 'ped-reanima', 'ped-cuidneonat', 'ped-distresp-rn', 'ped-ictericia-sepse', 'ped-disturb-rn', 'ped-infecc-cong', 'ped-crescimento', 'ped-dnpm', 'ped-aleitamento', 'ped-nutricao', 'ped-desnutricao', 'ped-vitaminas', 'ped-obesidade', 'ped-puberdade', 'ped-hebiatria', 'ped-seguranca', 'ped-asma', 'ped-bronquiolite', 'ped-pneumonia', 'ped-anafilaxia', 'ped-alergia-alim', 'ped-coqueluche-fc', 'ped-imunizacoes', 'ped-febre-sem-foco', 'ped-exantematicas', 'ped-tuberculose', 'ped-drge', 'ped-diarreia', 'ped-constipacao', 'ped-celiaca', 'ped-itu-enurese', 'ped-choque', 'ped-emerg-pcr', 'ped-brue-smsl', 'ped-convulsao', 'ped-cefaleias', 'ped-reumato-vasc', 'ped-reumato-aij', 'ped-cardiopatias', 'ped-genetica'];
       
       // Reset all buttons and hide all nav groups
       moduleIds.forEach(id => {
@@ -25447,6 +27247,17 @@
       });
 
       if (bestMatchSection && highestCount > 0) {
+        if (bestMatchSection.startsWith('ped-')) {
+          const pParts = bestMatchSection.split('-');
+          const pMod = pParts.length >= 3 ? (pParts[0] + '-' + pParts[1]) : bestMatchSection;
+          // Procurar o módulo pediátrico correto correspondente
+          for (const mId of moduleIds) {
+            if (mId.startsWith('ped-') && bestMatchSection.startsWith(mId)) {
+              switchModule(mId);
+              break;
+            }
+          }
+        } else
         if (bestMatchSection.startsWith('dsf-') || bestMatchSection.startsWith('fluxograma-')) {
           switchModule('dsf');
         } else if (bestMatchSection.startsWith('sua-')) {
