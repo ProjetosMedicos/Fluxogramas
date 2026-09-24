@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="100%" height="100%">
+  <defs>
+    <style>
+      .title { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 800; font-size: 20px; fill: #0f172a; }
+      .subtitle { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 13px; fill: #475569; }
+      .node-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 11px; fill: #1e293b; line-height: 1.3; }
+      .node-bold { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 12px; fill: #0f172a; }
+      .badge-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #ffffff; }
+      .decision-text { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-weight: 700; font-size: 11px; fill: #b45309; }
+      .edge { stroke: #64748b; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+      .edge-yes { stroke: #10b981; stroke-width: 2.2; fill: none; marker-end: url(#arrow-green); }
+      .edge-no { stroke: #ef4444; stroke-width: 2.2; fill: none; marker-end: url(#arrow-red); }
+      .card-shadow { filter: drop-shadow(0 4px 6px rgba(0,0,0,0.06)); }
+    </style>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#64748b" />
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#10b981" />
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#ef4444" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1000" height="750" fill="#f8fafc" rx="16" />
+
+  <!-- Header -->
+  <rect x="30" y="25" width="940" height="70" rx="12" fill="#e0f2fe" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="50" y="55" class="title">ALGORITMO DA PNEUMONIA COMUNITÁRIA PEDIÁTRICA</text>
+  <text x="50" y="78" class="subtitle">Diagnóstico Clínico, Estratificação e Manejo de Complicações • SBP 2024</text>
+  <rect x="750" y="42" width="200" height="28" rx="6" fill="#0284c7" />
+  <text x="850" y="60" text-anchor="middle" class="badge-text">SBP 2024 • PNEUMO / INFECTO</text>
+
+
+  <g class="card-shadow">
+    <rect x="300" y="115" width="400" height="60" rx="10" fill="#ffffff" stroke="#0ea5e9" stroke-width="2" />
+    <text x="500" y="138" text-anchor="middle" class="node-bold">DIAGNÓSTICO DE PNEUMONIA COMUNITÁRIA (PAC)</text>
+    <text x="500" y="158" text-anchor="middle" class="node-text">Tosse + Taquipneia (&lt;2m: ≥60, 2-11m: ≥50, 1-5a: ≥40 irpm) + Febre (SBP 2024)</text>
+  </g>
+
+  <path d="M 400 175 L 230 230" class="edge" />
+  <path d="M 600 175 L 770 230" class="edge" />
+
+  <g class="card-shadow">
+    <rect x="80" y="230" width="300" height="85" rx="10" fill="#f0fdf4" stroke="#22c55e" stroke-width="2" />
+    <text x="230" y="252" text-anchor="middle" class="node-bold" fill="#15803d">PAC NÃO GRAVE (AMBULATÓRIO)</text>
+    <text x="230" y="272" text-anchor="middle" class="node-text">• Sem tiragem subcostal grave ou estridor</text>
+    <text x="230" y="288" text-anchor="middle" class="node-text">• Sem vômitos incoercíveis ou hipoxemia</text>
+    <text x="230" y="304" text-anchor="middle" class="node-text">• Rx de tórax dispensável em casos típicos não complicados</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="620" y="230" width="300" height="85" rx="10" fill="#fef2f2" stroke="#ef4444" stroke-width="2" />
+    <text x="770" y="252" text-anchor="middle" class="node-bold" fill="#b91c1c">PAC GRAVE / MUITO GRAVE (HOSPITAL)</text>
+    <text x="770" y="272" text-anchor="middle" class="node-text">• Tiragem subcostal, gemência, batimento de asa</text>
+    <text x="770" y="288" text-anchor="middle" class="node-text">• SpO2 &lt; 92%, letargia, recusa hídrica, convulsões</text>
+    <text x="770" y="304" text-anchor="middle" class="node-text">• Rx tórax obrigatório: infiltrado lobar, derrame pleural</text>
+  </g>
+
+  <path d="M 230 315 L 230 375" class="edge" />
+  <g class="card-shadow">
+    <rect x="70" y="375" width="320" height="110" rx="10" fill="#ffffff" stroke="#16a34a" stroke-width="1.5" />
+    <text x="230" y="398" text-anchor="middle" class="node-bold">TRATAMENTO AMBULATORIAL (1ª LINHA)</text>
+    <text x="230" y="420" text-anchor="middle" class="node-text">• Amoxicilina 50 mg/kg/dia 8/8h por 7 a 10 dias</text>
+    <text x="230" y="438" text-anchor="middle" class="node-text">• Alternativa em altas doses (risco pneumococo resistente):</text>
+    <text x="230" y="454" text-anchor="middle" class="node-text">  Amoxicilina 80 a 90 mg/kg/dia 8/8h ou 12/12h</text>
+    <text x="230" y="470" text-anchor="middle" class="node-text">• Reavaliação clínica obrigatória em 48 a 72 horas</text>
+  </g>
+
+  <path d="M 770 315 L 770 375" class="edge" />
+  <g class="card-shadow">
+    <rect x="610" y="375" width="320" height="110" rx="10" fill="#ffffff" stroke="#dc2626" stroke-width="1.5" />
+    <text x="770" y="398" text-anchor="middle" class="node-bold">ANTIBIOTICOTERAPIA PARENTERAL</text>
+    <text x="770" y="420" text-anchor="middle" class="node-text">• Ampicilina 150 a 200 mg/kg/dia IV 6/6h OU</text>
+    <text x="770" y="438" text-anchor="middle" class="node-text">  Penicilina Cristalina 100.000 a 200.000 UI/kg/dia IV 4/4h</text>
+    <text x="770" y="454" text-anchor="middle" class="node-text">• Se não vacinado / grave / choque: Ceftriaxona 50-100 mg/kg IV</text>
+    <text x="770" y="470" text-anchor="middle" class="node-text">• Oxigênio para manter SpO2 &gt; 92% e hidratação parenteral</text>
+  </g>
+
+  <path d="M 770 485 L 770 535" class="edge" />
+  <g class="card-shadow">
+    <rect x="480" y="535" width="490" height="135" rx="10" fill="#fdf4ff" stroke="#c026d3" stroke-width="2" />
+    <text x="725" y="558" text-anchor="middle" class="node-bold" fill="#86198f">MANEJO DA COMPLICAÇÃO: DERRAME PLEURAL E EMPIEMA</text>
+    <text x="725" y="580" text-anchor="middle" class="node-text">• Suspeita: Persistência de febre e piora do desconforto após 48-72h de ATB adequado</text>
+    <text x="725" y="598" text-anchor="middle" class="node-text">• Rx tórax (Laurel se &gt; 10 mm) e Ultrassonografia torácica (avaliação de septações)</text>
+    <text x="725" y="616" text-anchor="middle" class="node-text">• Toracocentese diagnóstica imediata (citoquímica, bacterioscopia, cultura, pH e LDH)</text>
+    <text x="725" y="634" text-anchor="middle" class="node-text">• Empiema confirmado (pH &lt; 7,2, Glicose &lt; 40, pus frank ou bactéria):</text>
+    <text x="725" y="652" text-anchor="middle" class="node-text">  Drenagem torácica tubular fechada em selo d'água + Oxacilina + Ceftriaxona</text>
+  </g>
+
+  <g class="card-shadow">
+    <rect x="40" y="535" width="410" height="135" rx="10" fill="#f8fafc" stroke="#64748b" stroke-width="1.5" />
+    <text x="245" y="558" text-anchor="middle" class="node-bold">ETIOLOGIAS ATÍPICAS EM ESCOLARES (≥ 5 ANOS)</text>
+    <text x="245" y="582" text-anchor="middle" class="node-text">• Mycoplasma pneumoniae e Chlamydia pneumoniae</text>
+    <text x="245" y="602" text-anchor="middle" class="node-text">• Quadro insidioso, tosse seca paroxística, cefaleia, mialgia</text>
+    <text x="245" y="622" text-anchor="middle" class="node-text">• Tratamento de escolha: Macrolídeo oral</text>
+    <text x="245" y="642" text-anchor="middle" class="node-text">  Azitromicina 10 mg/kg/dia 1x/dia por 5 dias</text>
+  </g>
+
+
+  <!-- Footer Notice -->
+  <rect x="30" y="700" width="940" height="35" rx="8" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1" />
+  <text x="500" y="722" text-anchor="middle" class="subtitle" style="font-size: 11px;">Diretriz Oficial: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</text>
+</svg>

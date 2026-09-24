@@ -1,6 +1,6 @@
 # 🩺 Fluxogramas Médicos | Portal de Algoritmos & Decisão Clínica
 
-Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a especialidade de **Pediatria** em desenvolvimento contínuo (Fases 1 e 2 concluídas com 16 módulos cobrindo Neonatologia, Perinatologia, Puericultura, Crescimento, Nutrição, Adolescência e Prevenção de Acidentes fundamentados exclusivamente no **Tratado de Pediatria SBP 2024 - 6ª Edição**).
+Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a especialidade de **Pediatria** em desenvolvimento contínuo (Fases 1, 2 e 3 concluídas com 26 módulos cobrindo Neonatologia, Perinatologia, Puericultura, Crescimento, Nutrição, Adolescência, Prevenção de Acidentes, Pneumologia, Alergia e Infectologia/Imunizações fundamentados exclusivamente no **Tratado de Pediatria SBP 2024 - 6ª Edição**).
 
 ---
 
@@ -9,15 +9,15 @@ Portal interativo e **Web App (PWA)** de alta performance para tomada de decisã
 O portal foi concebido para estudantes de medicina, médicos residentes e generalistas, com o objetivo de reduzir a sobrecarga cognitiva e acelerar o raciocínio clínico à beira do leito e no ambulatório. Cada tema do tratado foi desconstruído em:
 1. **Visão Geral Teórica & Fundamentos (FEBRASGO / SBP):** Conceituação oficial, dados epidemiológicos nacionais, fisiopatologia celular/molecular e propedêutica especializada.
 2. **Roteiro Semiológico Completo em 4 Eixos:** Sinais, sintomas e caracterização estrita da queixa clínica (Frequência, Intensidade, Duração e Sintomas Associados / *Red Flags*).
-3. **Fluxogramas Clínicos Interativos (145 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
-4. **Tabelas Comparativas & Guias de Bolso (180+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
-5. **Casos Clínicos Simulados (*Stress Testing* - 118 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
+3. **Fluxogramas Clínicos Interativos (155 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
+4. **Tabelas Comparativas & Guias de Bolso (200+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
+5. **Casos Clínicos Simulados (*Stress Testing* - 128 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
 
 ---
 
 ## 📚 Estrutura dos Módulos Clínicos Ativos
 
-O portal contempla atualmente **54 módulos clínicos ativos** (38 de Ginecologia & Obstetrícia e 16 de Pediatria, em um total de 78 módulos na navegação global), distribuídos em **452 seções clínicas estruturadas**, **180+ tabelas diagnósticas**, **145 fluxogramas vetoriais SVG** e **118 casos clínicos simulados interativos**:
+O portal contempla atualmente **64 módulos clínicos ativos** (38 de Ginecologia & Obstetrícia e 26 de Pediatria, em um total de 78 módulos na navegação global), distribuídos em **522 seções clínicas estruturadas**, **200+ tabelas diagnósticas**, **155 fluxogramas vetoriais SVG** e **128 casos clínicos simulados interativos**:
 
 | # | Módulo / Especialidade | Capítulos Tratado FEBRASGO | Destaques Propedêuticos, Tabelas & Algoritmos |
 | :-: | :--- | :--- | :--- |
@@ -194,4 +194,19 @@ A especialidade de **Pediatria** conta com 40 módulos mapeados, estando as **Fa
 | **15** | **🎒 Hebiatria: Medicina do Adolescente** | Tratado SBP 6ª Ed. (2024) | Marco ético-legal do ECA e Resolução CFM/SBP sobre consulta a sós, as 4 exceções estritas da quebra de sigilo médico, mnemônico HEEADSSS, triagem de abuso de substâncias (CRAFFT) e dupla proteção contraceptiva. |
 | **16** | **🦺 Segurança, Prevenção de Acidentes & Injúrias** | Tratado SBP 6ª Ed. (2024) | Epidemiologia dos traumas infantis por faixa etária, dispositivos de retenção veicular (Resolução CONTRAN 14.071/2021), berço seguro e prevenção da SMSL, afogamento e "Regra do Toque", prevenção de queimaduras e manobra de Heimlich / desobstrução de via aérea. |
 
-> As Fases 3 a 5 (Pneumologia, Infectologia, Gastroenterologia, Nefrologia, Emergências e Terapia Intensiva) contam com seções estruturadas no portal, prontas para as próximas ondas de expansão.
+### 🌟 Fase 3: Pneumologia, Alergia e Infectologia/Imunizações (Módulos 17 a 26)
+
+| # | Módulo / Especialidade | Fonte Oficial de Referência | Destaques Propedêuticos, Tabelas & Algoritmos |
+| :-: | :--- | :--- | :--- |
+| **17** | **🫁 Asma na Infância & Lactente Sibilante** | Tratado SBP 6ª Ed. (2024) | Classificação GINA/SBP 2024, passos de manutenção escalonados (Etapas 1 a 5), estratégia MART, manejo da crise aguda em sala de emergência e fenótipos do Lactente Sibilante (Tucson / PAPI). |
+| **18** | **🫁 Bronquiolite Viral Aguda (BVA)** | Tratado SBP 6ª Ed. (2024) | Escore de Gravidade Wood-Downes modificado, suporte de oxigenoterapia (Cateter Nasal de Alto Fluxo - CNAF), recomendações estritas Choosing Wisely SBP (não fazer beta-2, corticoide ou fisioterapia) e profilaxia com Palivizumabe e Nirsevimabe. |
+| **19** | **🩺 Pneumonia Comunitária (PAC) & Complicações** | Tratado SBP 6ª Ed. (2024) | Critérios de Taquipneia da OMS por faixa etária, sinais de esforço e tiragem subcostal, antibioticoterapia empírica (Amoxicilina 50 mg/kg ambulatorial vs Ampicilina/Penicilina IV), diagnóstico e drenagem de Derrame Pleural Parapneumônico / Empiema e PAC atípica por macrolídeos. |
+| **20** | **🚨 Anafilaxia & Urticária Pediátrica** | Tratado SBP 6ª Ed. (2024) | Critérios diagnósticos WAO 2020 / SBP, Adrenalina intramuscular (IM) 1:1.000 como terapia de 1ª linha imediata (0,01 mg/kg no vasto lateral), choque anafilático refratário, plano de ação domiciliar com autoinjetores e manejo de urticária aguda com anti-H1 de 2ª geração. |
+| **21** | **🥛 Alergia Alimentar & APLV** | Tratado SBP 6ª Ed. (2024) | Classificação fisiopatológica (IgE mediada vs Não-IgE mediada vs Mista), formas clínicas gastrointestinais (Proctocolite Alérgica, FPIES, Enteropatia), fórmulas de substituição (Fórmula Extensamente Hidrolisada - FEH vs Fórmula de Aminoácidos - FAA) e Teste de Provocação Oral (TPO). |
+| **22** | **🫁 Coqueluche & Fibrose Cística (FC)** | Tratado SBP 6ª Ed. (2024) | Fases da Coqueluche (Catarral, Paroxística, Convalescença), tosse guinchante, reação leucemoide com hiperlinfocitose absoluta e profilaxia com Azitromicina; Triagem Neonatal de Fibrose Cística (IRT duplo), Teste do Suor de Gibson-Cooke (Cloro > 60 mEq/L) e moduladores CFTR (Ivacaftor / Elexacaftor / Tezacaftor). |
+| **23** | **💉 Calendário Vacinal SBP/PNI 2024** | Tratado SBP 6ª Ed. (2024) | Calendário vacinal de 0 a 19 anos, esquemas com vacinas acelulares (Hexavalente, DTPa), HPV nonavalente, Meningocócica ACWY e B, esquemas de atraso vacinal / catch-up, imunobiológicos especiais do CRIE, falsas contraindicações e protocolo de ESAVI. |
+| **24** | **🌡️ Febre sem Foco no Lactente** | Tratado SBP 6ª Ed. (2024) | Conduta de alto risco no neonato (< 28 dias), critérios de baixo risco de Rochester e Philadelphia para lactentes de 29 a 90 dias, rastreamento de Infecção do Trato Urinário (ITU Oculta) em lactentes de 3 a 36 meses e papel dos biomarcadores inflamatórios (Procalcitonina e PCR ultrassensível). |
+| **25** | **🔴 Doenças Exantemáticas na Infância** | Tratado SBP 6ª Ed. (2024) | Diagnóstico diferencial em 4 categorias morfológicas: Maculopapulares (Sarampo com manchas de Koplik e suplementação de Vitamina A, Rubéola com linfadenopatia suboccipital, Exantema Súbito / Roséola com crise térmica precedente, Eritema Infeccioso e Escarlatina com língua em framboesa), Vesico-bolhosas (Varicela em pleomorfismo e Síndrome Mão-Pé-Boca), Púrpura de Henoch-Schönlein e Doença de Kawasaki completa/incompleta (Critérios AHA/SBP, Imunoglobulina Humana Endovenosa - IVIG e AAS em altas doses). |
+| **26** | **🔬 Tuberculose na Infância (SBP / MS)** | Tratado SBP 6ª Ed. (2024) | Sistema de Pontuação para Diagnóstico de TB Pulmonar do Ministério da Saúde / SBP 2024 (≥ 40 muito provável, 30-35 possível, < 30 pouco provável), interpretação do PPD (Mantoux) e IGRA, Lavado Gástrico e TRM-TB GeneXpert, esquema terapêutico RHZ para < 10 anos e RHZE para ≥ 10 anos, quimioprofilaxia de ILTB (Esquema 4R) e manejo do neonato exposto à mãe bacilífera. |
+
+> As Fases 4 e 5 (Gastroenterologia, Nefrologia, Hematologia, Emergências e Terapia Intensiva) contam com seções estruturadas no portal, prontas para as próximas ondas de expansão.
