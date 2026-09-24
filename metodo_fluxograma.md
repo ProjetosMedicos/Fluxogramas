@@ -1,8 +1,10 @@
 # Método de Construção de Fluxogramas Clínicos & Engenharia de Decisão Médica (Framework Clínico-Visual)
 
 > **Destinado a:** Estudantes de Medicina, Médicos Residentes, Médicos Generalistas e Especialistas.  
-> **Objetivo:** Transformar diretrizes densas, tratados de referência (Tratado de Ginecologia FEBRASGO - 2ª Edição) e consensos internacionais (OMS, FIGO, ESHRE, ACOG, IUGA, ICS, SBM, CDC, IFCPC, NAMS/IMS, Endocrine Society) em algoritmos de decisão clínica rápidos, memorizáveis, seguros e aplicáveis à beira do leito e no ambulatório.  
-> **Status do Portal:** 38 Módulos Ativos | 300 Seções Clínicas Estruturadas | 129 Fluxogramas Vetoriais SVG | 102 Casos Clínicos Simulados Interativos | 150+ Tabelas e Prescrições Especializadas.
+> **Objetivo:** Transformar diretrizes médicas densas e tratados oficiais de referência em algoritmos de decisão clínica rápidos, memorizáveis, seguros e aplicáveis à beira do leito e no ambulatório.  
+> **Especialidade Concluída:** **Ginecologia & Obstetrícia** (38 Módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**).  
+> **Próxima Especialidade em Expansão:** **Pediatria** (aba já estruturada para recepção dos tópicos pediátricos).  
+> **Status Global:** 38 Módulos Clínicos Ativos | 300 Seções Clínicas Estruturadas | 129 Fluxogramas Vetoriais SVG | 102 Casos Clínicos Simulados Interativos | 150+ Tabelas e Prescrições Especializadas.
 
 ---
 

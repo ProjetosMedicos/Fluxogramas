@@ -1,6 +1,6 @@
 # 🩺 Fluxogramas Médicos | Portal de Algoritmos & Decisão Clínica
 
-Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular de alta densidade para expansão contínua em **múltiplas especialidades médicas**, tendo como primeiro grande módulo de referência a **Ginecologia & Obstetrícia** fundamentada no **Tratado de Ginecologia FEBRASGO (2ª Edição)**, nos **31 Resumos Temáticos Especializados** e nos principais consensos nacionais e internacionais de referência (**Ministério da Saúde PCDT, SBIm 2024, FIGO 2023, OMS, IOTA, IMS, The Menopause Society / NAMS 2023-2024, ESHRE, ASRM, IUGA, ICS, INCA, SBM, ISSVD, CDC, IFCPC, Endocrine Society, WPATH e NCCN**).
+Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a arquitetura preparada para a próxima grande aba de especialidade: **Pediatria**.
 
 ---
 
@@ -123,7 +123,6 @@ O projeto fundamenta-se no **Framework Clínico-Visual e Engenharia de Decisão 
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual Metodológico Completo do Framework Clínico-Visual
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
-├── Resumos Ginecologia/                     # Diretório com os 31 PDFs temáticos renomeados oficialmente
 └── imagens/                                 # 129 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
 ```
 

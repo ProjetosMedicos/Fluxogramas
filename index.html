@@ -229,6 +229,55 @@
       margin-top: 2px;
     }
 
+    /* Specialty Switcher Tabs */
+    .specialty-tabs-bar {
+      display: flex;
+      gap: 6px;
+      padding: 10px 12px;
+      background-color: #0b1120;
+      border-bottom: 1px solid #1e293b;
+    }
+    .specialty-tab-btn {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      padding: 8px 6px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      border-radius: var(--radius-sm);
+      border: 1px solid #334155;
+      background-color: #1e293b;
+      color: #94a3b8;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .specialty-tab-btn.active {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(2, 132, 199, 0.4);
+    }
+    .specialty-tab-btn:hover:not(.active) {
+      background-color: #243044;
+      color: #f1f5f9;
+      border-color: #475569;
+    }
+    .specialty-tab-badge {
+      font-size: 0.65rem;
+      padding: 1px 6px;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #ffffff;
+    }
+    .specialty-tab-btn:not(.active) .specialty-tab-badge.upcoming {
+      background-color: #f59e0b;
+      color: #0f172a;
+      font-weight: 800;
+      font-size: 0.60rem;
+    }
+
     /* Module Switcher in Sidebar (3 Tabs) */
     .module-selector {
       padding: 10px 12px;
@@ -2275,15 +2324,29 @@
     <!-- Sidebar Header -->
     <div class="sidebar-header">
       <div class="sidebar-brand">
-        <span class="brand-badge">CLÍNICO</span>
+        <span class="brand-badge">PORTAL MULTIDISCIPLINAR</span>
         <h2>⚕️ Fluxogramas Médicos</h2>
-        <p>38 Módulos • 129 Fluxogramas</p>
+        <p id="sidebar-stats-caption">Ginecologia • 38 Módulos • 129 Fluxos</p>
       </div>
       <div class="sidebar-header-actions">
         <button id="pwa-install-btn" class="btn-theme-toggle" onclick="installPWA()" title="Instalar Aplicativo no Dispositivo" style="display: none; background: rgba(2, 132, 199, 0.2); border-color: var(--primary); color: #38bdf8;">📲</button>
         <button id="sidebar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
         <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu">✕</button>
       </div>
+    </div>
+
+    <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->
+    <div class="specialty-tabs-bar" role="tablist" aria-label="Especialidades Médicas">
+      <button class="specialty-tab-btn active" role="tab" aria-selected="true" id="spec-tab-ginecologia" onclick="switchSpecialty('ginecologia')" title="Especialidade Ativa: Ginecologia & Obstetrícia (FEBRASGO)">
+        <span>🩺</span>
+        <span>Ginecologia</span>
+        <span class="specialty-tab-badge">38</span>
+      </button>
+      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria')" title="Próxima Especialidade: Pediatria (Em Breve)">
+        <span>👶</span>
+        <span>Pediatria</span>
+        <span class="specialty-tab-badge upcoming">Em breve</span>
+      </button>
     </div>
 
     <!-- Hidden sync select for accessibility & automated tests -->
@@ -4824,9 +4887,9 @@
 
     <div class="sidebar-footer" id="sidebar-footer">
       <div style="font-size: 0.65rem; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2px;">
-        Referência Bibliográfica
+        Fonte Oficial de Referência
       </div>
-      <strong style="color: #38bdf8;">Tratado FEBRASGO (2ª Edição)</strong>
+      <strong style="color: #38bdf8;" id="footer-source-name">Tratado de Ginecologia FEBRASGO (2ª Edição)</strong>
       <div id="footer-chapter-ref" style="color: #cbd5e1; margin-top: 3px; line-height: 1.35; font-size: 0.72rem;">
         Capítulos 10, 11 e 12 (Disfunção Sexual Feminina)
       </div>
@@ -4840,7 +4903,9 @@
       <div class="top-bar-left">
         <button id="topbar-hamburger-btn" class="topbar-menu-btn" onclick="toggleSidebar()" title="Ocultar / Exibir Barra Lateral (☰)" aria-label="Alternar barra lateral" aria-expanded="true">☰</button>
         <div class="breadcrumbs">
-          <span class="crumb-root">Fluxogramas Médicos</span>
+          <span class="crumb-root">Fluxomed</span>
+          <span class="crumb-separator">&gt;</span>
+          <span class="crumb-specialty" id="crumb-specialty" style="color: var(--primary); font-weight: 600;">Ginecologia</span>
           <span class="crumb-separator">&gt;</span>
           <span id="current-crumb" class="crumb-current">Método do Fluxograma</span>
         </div>
@@ -4983,7 +5048,7 @@
     <section id="fluxograma-geral" class="content-section active">
       <div class="section-header">
         <h1>🧭 Algoritmo Geral de Atendimento e Triagem da Queixa Sexual</h1>
-        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª ed., Capítulos 10, 11 e 12), Consensos Internacionais (4th ICSM / DSM-5) e Resumo Temático de Disfunções Sexuais.</p>
+        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª edição, Capítulos 10, 11 e 12).</p>
       </div>
 
       <div class="alert-box info">
@@ -5766,7 +5831,7 @@
     <section id="sua-parametros" class="content-section">
       <div class="section-header">
         <h1>🩸 Sangramento Uterino Anormal (SUA): Parâmetros & Conceitos</h1>
-        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª ed., Cap. 45), Diretrizes FIGO 2018 e Resumo Oficial de SUA.</p>
+        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª edição, Capítulos 20, 21 e 45).</p>
       </div>
 
       <div class="alert-box info">
@@ -6438,7 +6503,7 @@
     <section id="larcs-visao-geral" class="content-section">
       <div class="section-header">
         <h1>🛡️ Métodos Anticoncepcionais Reversíveis de Longa Ação (LARCs)</h1>
-        <p>Diretrizes da FEBRASGO (Tratado 2ª ed., Capítulos 70 e 74), Critérios Médicos de Elegibilidade da OMS/CDC e Resumo de Planejamento Familiar.</p>
+        <p>Diretrizes da FEBRASGO (Tratado de Ginecologia, 2ª edição, Capítulos 70 e 74).</p>
       </div>
 
       <div class="alert-box info">
@@ -16258,7 +16323,7 @@
     <section id="abdome-visao-geral" class="content-section">
       <div class="section-header">
         <h1>🚨 Abdome Agudo em Ginecologia: Visão Geral & Fisiopatologia</h1>
-        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª ed., Capítulos 37 e 39), Consenso ACOG e Resumo Temático Oficial.</p>
+        <p>Baseado no Tratado de Ginecologia FEBRASGO (2ª edição, Capítulos 37 e 39).</p>
       </div>
 
       <div class="alert-box danger">
@@ -24963,6 +25028,27 @@
     </main>
 
   <script>
+    // Gestão de Especialidades Médicas (Ginecologia & Pediatria)
+    let currentSpecialty = 'ginecologia';
+
+    function switchSpecialty(spec) {
+      if (spec === 'pediatria') {
+        const modal = document.getElementById('pediatria-preview-modal');
+        if (modal) modal.style.display = 'flex';
+      } else {
+        currentSpecialty = 'ginecologia';
+        document.getElementById('spec-tab-ginecologia')?.classList.add('active');
+        document.getElementById('spec-tab-pediatria')?.classList.remove('active');
+        const crumbSpec = document.getElementById('crumb-specialty');
+        if (crumbSpec) crumbSpec.textContent = 'Ginecologia';
+      }
+    }
+
+    function closePediatriaModal() {
+      const modal = document.getElementById('pediatria-preview-modal');
+      if (modal) modal.style.display = 'none';
+    }
+
     // Alternador de Módulos (12 Módulos: DSF, SUA, LARCs, Mastologia, Colo Uterino, Infertilidade, SOP, Adenomiose, Endometriose, Prolapso, Incontinência e Climatério)
     const MODULE_META = {
       'dsf': { icon: '🧠', name: 'Disfunção Sexual Feminina', sub: 'Capítulos 10, 11 e 12 • 7 tópicos', firstSection: 'fluxograma-geral', ref: 'Capítulos 10, 11 e 12 — Disfunção Sexual Feminina' },
@@ -25604,5 +25690,18 @@
     }
   </script>
   <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">⬆️</button>
+  <!-- Modal Informativo: Especialidade Pediatria em Preparação -->
+  <div id="pediatria-preview-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); z-index: 9999; align-items: center; justify-content: center; padding: 16px; backdrop-filter: blur(4px);">
+    <div style="background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border); border-radius: 12px; max-width: 480px; width: 100%; padding: 26px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); text-align: center;">
+      <div style="font-size: 2.5rem; margin-bottom: 12px;">👶</div>
+      <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Aba de Pediatria em Preparação</h3>
+      <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">
+        Esta aba está devidamente estruturada e pronta para receber os novos protocolos clínicos, fluxogramas vetoriais e casos simulados de <strong>Pediatria</strong> assim que o conteúdo for enviado.
+      </p>
+      <button onclick="closePediatriaModal()" style="background: var(--primary); color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s;">
+        Entendido, continuar em Ginecologia
+      </button>
+    </div>
+  </div>
 </body>
 </html>
