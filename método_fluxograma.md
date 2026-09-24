@@ -3,7 +3,7 @@
 > **Destinado a:** Estudantes de Medicina, Médicos Residentes, Médicos Generalistas e Especialistas.  
 > **Objetivo:** Transformar diretrizes médicas densas e tratados oficiais de referência em algoritmos de decisão clínica rápidos, memorizáveis, seguros e aplicáveis à beira do leito e no ambulatório.  
 > **Especialidade Concluída:** **Ginecologia & Obstetrícia** (38 Módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**).  
-> **Próxima Especialidade em Expansão:** **Pediatria** (aba já estruturada para recepção dos tópicos pediátricos).  
+> **Especialidades Integradas:** **Ginecologia & Obstetrícia** (38 módulos - Tratado FEBRASGO 2ª Ed.) e **Pediatria** (Fase 1 com 6 módulos de Neonatologia & Perinatologia concluída - Tratado de Pediatria SBP 6ª Ed. 2024).  
 > **Status Global:** 38 Módulos Clínicos Ativos | 300 Seções Clínicas Estruturadas | 129 Fluxogramas Vetoriais SVG | 102 Casos Clínicos Simulados Interativos | 150+ Tabelas e Prescrições Especializadas.
 
 ---

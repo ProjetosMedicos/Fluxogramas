@@ -1,6 +1,6 @@
 # 🩺 Fluxogramas Médicos | Portal de Algoritmos & Decisão Clínica
 
-Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a arquitetura preparada para a próxima grande aba de especialidade: **Pediatria**.
+Portal interativo e **Web App (PWA)** de alta performance para tomada de decisão clínica, propedêutica, semiologia e prescrição médica baseada em evidências. Concebido com arquitetura modular escalável para **múltiplas especialidades médicas**, estruturado atualmente com a especialidade completa de **Ginecologia & Obstetrícia** (38 módulos fundamentados exclusivamente no **Tratado de Ginecologia FEBRASGO - 2ª Edição**) e com a especialidade de **Pediatria** em desenvolvimento contínuo (Fase 1 concluída com 6 módulos de Neonatologia & Perinatologia fundamentados exclusivamente no **Tratado de Pediatria SBP 2024 - 6ª Edição**).
 
 ---
 
@@ -9,15 +9,15 @@ Portal interativo e **Web App (PWA)** de alta performance para tomada de decisã
 O portal foi concebido para estudantes de medicina, médicos residentes e generalistas, com o objetivo de reduzir a sobrecarga cognitiva e acelerar o raciocínio clínico à beira do leito e no ambulatório. Cada tema do tratado foi desconstruído em:
 1. **Visão Geral Teórica & Fundamentos (FEBRASGO):** Conceituação oficial, dados epidemiológicos nacionais, fisiopatologia celular/molecular e endocrinologia reprodutiva.
 2. **Roteiro Semiológico Completo em 4 Eixos:** Sinais, sintomas e caracterização estrita da queixa clínica (Frequência, Intensidade, Duração e Sintomas Associados / *Red Flags*).
-3. **Fluxogramas Clínicos Interativos (129 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
+3. **Fluxogramas Clínicos Interativos (135 SVGs):** Árvores de decisão sequenciais e lógicas em alta resolução vetorial com controles de zoom dinâmico.
 4. **Tabelas Comparativas & Guias de Bolso (150+ Tabelas):** Posologias práticas, esquemas farmacológicos, critérios de elegibilidade, escores de risco e contraindicações.
-5. **Casos Clínicos Simulados (*Stress Testing* - 102 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
+5. **Casos Clínicos Simulados (*Stress Testing* - 108 Casos):** Simulações da vida real com revelação interativa da conduta recomendada e justificativa fundamentada.
 
 ---
 
 ## 📚 Estrutura dos 38 Módulos Clínicos Ativos
 
-O portal contempla atualmente **38 especialidades e módulos temáticos**, distribuídos em **300 seções clínicas estruturadas**, **150+ tabelas diagnósticas**, **129 fluxogramas vetoriais SVG** e **102 casos clínicos simulados interativos**:
+O portal contempla atualmente **38 especialidades e módulos temáticos**, distribuídos em **382 seções clínicas estruturadas**, **150+ tabelas diagnósticas**, **135 fluxogramas vetoriais SVG** e **108 casos clínicos simulados interativos**:
 
 | # | Módulo / Especialidade | Capítulos Tratado FEBRASGO | Destaques Propedêuticos, Tabelas & Algoritmos |
 | :-: | :--- | :--- | :--- |
@@ -123,7 +123,7 @@ O projeto fundamenta-se no **Framework Clínico-Visual e Engenharia de Decisão 
 ├── README.md                                # Documentação completa e guia de referência do projeto
 ├── metodo_fluxograma.md                     # Manual Metodológico Completo do Framework Clínico-Visual
 ├── método_fluxograma.md                     # Cópia acentuada de compatibilidade para sistemas operacionais
-└── imagens/                                 # 129 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
+└── imagens/                                 # 135 fluxogramas vetoriais SVG e ícones de aplicativo (192px e 512px)
 ```
 
 ---
@@ -146,7 +146,7 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
    - Clique no ícone de instalação na barra de endereços do navegador ou no botão na barra lateral do app.
 
 4. **📶 Suporte 100% Offline:**
-   - O *Service Worker* integrado armazena em cache o aplicativo e os 129 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
+   - O *Service Worker* integrado armazena em cache o aplicativo e os 135 fluxogramas. Você pode consultar condutas médicas mesmo em enfermarias, elevadores, plantões ou postos de saúde sem conexão com a internet.
 
 ---
 
@@ -154,9 +154,27 @@ O portal é um **Progressive Web App (PWA)** instalável em qualquer dispositivo
 
 O portal foi construído em arquitetura estática pura de altíssima velocidade (*zero dependencies*):
 1. Dê um duplo clique no arquivo `index.html` ou abra-o em qualquer navegador moderno.
-2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 129 SVGs e 102 casos clínicos simulados com feedback imediato.
+2. O portal funcionará instantaneamente com todas as suas funcionalidades: alternador de modo escuro, busca em tempo real com auto-troca de módulo, zoom dinâmico em 135 SVGs e 108 casos clínicos simulados com feedback imediato.
 
 ---
 
 **Equipe de Desenvolvimento & Curadoria Científica**  
 *Módulo Ginecológico baseado no Tratado de Ginecologia da FEBRASGO.*
+
+
+---
+
+## 👶 Especialidade: Pediatria (Fase 1 - Neonatologia & Perinatologia Concluída)
+
+A aba de **Pediatria** conta com 40 módulos planejados, estando a **Fase 1 (Neonatologia, Perinatologia & Sala de Parto)** 100% implementada com 48 seções clínicas, 6 fluxogramas SVG exclusivos e 6 simuladores de casos clínicos:
+
+| # | Módulo / Especialidade | Fonte Oficial de Referência | Destaques Propedêuticos, Tabelas & Algoritmos |
+| :-: | :--- | :--- | :--- |
+| **1** | **👶 Reanimação Neonatal em Sala de Parto** | SBP 2024 (Diretrizes 2024) / Tratado SBP 6ª Ed. | Minuto de Ouro, avaliação das 3 perguntas, VPP em 30s com balão autoinflável, técnica IOT com cânula sem cuff, massagem cardíaca 3:1 e adrenalina IV/endotraqueal. |
+| **2** | **🩺 Cuidados Imediatos & Triagem Neonatal** | Tratado SBP 6ª Ed. (2024) | Determinação de IG (Capurro somático/neurológico vs New Ballard), exame físico sistemático do RN, 4 triagens físicas (Olhinho, Orelhinha, Coraçãozinho, Linguinha) e Teste do Pezinho. |
+| **3** | **🫁 Distúrbios Respiratórios do Recém-Nascido** | Tratado SBP 6ª Ed. (2024) | Boletim de Silverman-Andersen, SDRMH (membrana hialina e surfactante exógeno por LISA/INSURE), Taquipneia Transitória do RN (TTRN), SAM e HPPN com óxido nítrico inalatório (iNO). |
+| **4** | **🟡 Icterícia & Sepse Neonatal** | Tratado SBP 6ª Ed. (2024) | Zonas dérmicas de Kramer, nomograma de Bhutani, fototerapia de alta irradiância, exsanguineotransfusão, critérios de sepse precoce vs tardia e antibióticos empíricos (Ampicilina + Gentamicina). |
+| **5** | **⚡ Distúrbios Metabólicos do Recém-Nascido** | Tratado SBP 6ª Ed. (2024) | Rastreio de hipoglicemia neonatal e cálculo da TIG (mg/kg/min), bolus de SG 10%, hipocalcemia precoce vs tardia, policitemia e Enterocolite Necrosante (Critérios de Bell modificados). |
+| **6** | **🛡️ Infecções Congênitas (TORCH & Sífilis)** | Tratado SBP 6ª Ed. (2024) | Protocolo completo de sífilis congênita (Penicilina Cristalina vs Procaína vs Benzatina), Tríade de Sabin na Toxoplasmose, CMV congênito e Valganciclovir, e diagnóstico laboratorial materno-fetal. |
+
+> As Fases 2 a 6 (Puericultura, Pneumologia, Infectologia, Gastroenterologia, Emergências, Neurologia e Especialidades) já contam com botões, links e seções estruturadas no portal, prontas para as próximas ondas de expansão.

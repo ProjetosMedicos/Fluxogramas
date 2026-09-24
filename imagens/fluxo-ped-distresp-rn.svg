@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1250" width="100%" height="100%" style="background-color: #0b1120; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Cabeçalho -->
+  <rect x="40" y="30" width="920" height="90" rx="12" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="500" y="68" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="800">DIAGNÓSTICO DIFERENCIAL DOS DISTÚRBIOS RESPIRATÓRIOS DO RN</text>
+  <text x="500" y="96" text-anchor="middle" fill="#bae6fd" font-size="14" font-weight="600">Diretrizes da Sociedade Brasileira de Pediatria (SBP, 2024) — Seção 10 (Neonatologia)</text>
+
+  <!-- Avaliação Inicial: Silverman-Andersen -->
+  <rect x="180" y="150" width="640" height="80" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="180" text-anchor="middle" fill="#38bdf8" font-size="14" font-weight="800">AVALIAÇÃO DA GRAVIDADE: BOLETIM DE SILVERMAN-ANDERSEN</text>
+  <text x="500" y="202" text-anchor="middle" fill="#f8fafc" font-size="12">5 parâmetros (0 a 2 pts cada): Movimento toracoabdominal, Tiragem intercostal, Retração xifoide, Batimento de asa de nariz, Gemido</text>
+  <text x="500" y="220" text-anchor="middle" fill="#fde047" font-size="12" font-weight="700">0 pts = Sem desconforto | 1-5 pts = Desconforto leve a moderado | ≥ 6 pts = Desconforto grave (UTIN Imediata)</text>
+
+  <!-- Comparativo das 4 Entidades Principais -->
+  <!-- 1. Membrana Hialina (SDR) -->
+  <g transform="translate(40, 260)">
+    <rect x="0" y="0" width="215" height="520" rx="10" fill="#1e293b" stroke="#ef4444" stroke-width="2" filter="url(#shadow)"/>
+    <text x="107" y="30" text-anchor="middle" fill="#f87171" font-size="13" font-weight="800">SDR / MEMBRANA HIALINA</text>
+    <text x="107" y="50" text-anchor="middle" fill="#cbd5e1" font-size="11">Deficiência de Surfactante</text>
+    
+    <text x="12" y="80" fill="#fca5a5" font-size="11" font-weight="700">População Típica:</text>
+    <text x="12" y="98" fill="#f8fafc" font-size="11">• Pré-termo (&lt; 34 semanas)</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="11">• Filho de mãe diabética</text>
+    <text x="12" y="132" fill="#f8fafc" font-size="11">• Sexo masculino, cesárea sem TdP</text>
+
+    <text x="12" y="160" fill="#fca5a5" font-size="11" font-weight="700">Início &amp; Clínica:</text>
+    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Início precoce (&lt; 4-6h de vida)</text>
+    <text x="12" y="195" fill="#cbd5e1" font-size="11">• Taquipneia, gemido expiratório,</text>
+    <text x="12" y="212" fill="#cbd5e1" font-size="11">retrações graves e cianose</text>
+
+    <text x="12" y="240" fill="#fca5a5" font-size="11" font-weight="700">Radiografia de Tórax:</text>
+    <text x="12" y="258" fill="#fef08a" font-size="11" font-weight="700">• Infiltrado reticulogranular difuso ("vidro moído")</text>
+    <text x="12" y="285" fill="#fef08a" font-size="11" font-weight="700">• Broncogramas aéreos</text>
+    <text x="12" y="305" fill="#cbd5e1" font-size="11">• Hipoinsuflação (volume baixo)</text>
+
+    <text x="12" y="340" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
+    <text x="12" y="360" fill="#f8fafc" font-size="11">• CPAP nasal precoce (PEEP 5-6)</text>
+    <text x="12" y="380" fill="#38bdf8" font-size="11" font-weight="700">• SURFACTANTE EXÓGENO:</text>
+    <text x="12" y="398" fill="#cbd5e1" font-size="10">100 a 200 mg/kg endotraqueal</text>
+    <text x="12" y="415" fill="#cbd5e1" font-size="10">(Técnica LISA ou InSurE se FiO2 &gt; 30% em CPAP)</text>
+    <text x="12" y="445" fill="#94a3b8" font-size="10">• Ampicilina + Gentamicina até descartar sepse</text>
+  </g>
+
+  <!-- 2. Taquipneia Transitória do RN (TTRN) -->
+  <g transform="translate(275, 260)">
+    <rect x="0" y="0" width="215" height="520" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    <text x="107" y="30" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">TAQUIPNEIA TRANSITÓRIA</text>
+    <text x="107" y="50" text-anchor="middle" fill="#cbd5e1" font-size="11">Pulmão Úmido (TTRN)</text>
+    
+    <text x="12" y="80" fill="#7dd3fc" font-size="11" font-weight="700">População Típica:</text>
+    <text x="12" y="98" fill="#f8fafc" font-size="11">• Termo ou pré-termo tardio</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="11">• Cesariana eletiva sem trabalho de parto (ausência de catecolaminas)</text>
+
+    <text x="12" y="160" fill="#7dd3fc" font-size="11" font-weight="700">Início &amp; Clínica:</text>
+    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Início nas primeiras horas</text>
+    <text x="12" y="195" fill="#cbd5e1" font-size="11">• Taquipneia marcante (&gt; 60 rpm)</text>
+    <text x="12" y="212" fill="#cbd5e1" font-size="11">• Bom estado geral, pouco esforço</text>
+    <text x="12" y="230" fill="#cbd5e1" font-size="11">• Resolução rápida em 24 a 72h</text>
+
+    <text x="12" y="255" fill="#7dd3fc" font-size="11" font-weight="700">Radiografia de Tórax:</text>
+    <text x="12" y="275" fill="#fef08a" font-size="11" font-weight="700">• Congestão peri-hilar ("coração peludo")</text>
+    <text x="12" y="295" fill="#fef08a" font-size="11" font-weight="700">• Líquido cisural (cisurite)</text>
+    <text x="12" y="315" fill="#cbd5e1" font-size="11">• Hiperinsuflação leve a moderada</text>
+
+    <text x="12" y="340" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
+    <text x="12" y="360" fill="#f8fafc" font-size="11">• Suporte com O2 sob demanda (FiO2 baixa &lt; 40%)</text>
+    <text x="12" y="385" fill="#f8fafc" font-size="11">• CPAP nasal se desconforto</text>
+    <text x="12" y="410" fill="#f87171" font-size="11" font-weight="700">NÃO USAR diuréticos, NÃO usar restrição hídrica</text>
+    <text x="12" y="445" fill="#94a3b8" font-size="10">• Doença autolimitada benigna</text>
+  </g>
+
+  <!-- 3. Síndrome de Aspiração Meconial (SAM) -->
+  <g transform="translate(510, 260)">
+    <rect x="0" y="0" width="215" height="520" rx="10" fill="#1e293b" stroke="#eab308" stroke-width="2" filter="url(#shadow)"/>
+    <text x="107" y="30" text-anchor="middle" fill="#facc15" font-size="13" font-weight="800">ASPIRAÇÃO MECONIAL (SAM)</text>
+    <text x="107" y="50" text-anchor="middle" fill="#cbd5e1" font-size="11">Pneumonite Química &amp; Obstrução</text>
+    
+    <text x="12" y="80" fill="#fde047" font-size="11" font-weight="700">População Típica:</text>
+    <text x="12" y="98" fill="#f8fafc" font-size="11">• Termo e Pós-termo (≥ 41 sem)</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="11">• Asfixia perinatal / sofrimento fetal com mecônio intrauterino espesso</text>
+
+    <text x="12" y="160" fill="#fde047" font-size="11" font-weight="700">Início &amp; Clínica:</text>
+    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Desconforto respiratório grave logo ao nascer</text>
+    <text x="12" y="205" fill="#cbd5e1" font-size="11">• Tórax em barril (aprisionamento)</text>
+    <text x="12" y="225" fill="#cbd5e1" font-size="11">• Roncos, estertores difusos</text>
+
+    <text x="12" y="255" fill="#fde047" font-size="11" font-weight="700">Radiografia de Tórax:</text>
+    <text x="12" y="275" fill="#fef08a" font-size="11" font-weight="700">• Infiltrado nodular grosseiro e heterogêneo ("flocos de algodão")</text>
+    <text x="12" y="305" fill="#fef08a" font-size="11" font-weight="700">• Áreas de atelectasia alternadas com hiperinsuflação</text>
+    <text x="12" y="330" fill="#f87171" font-size="10">• Alto risco de Pneumotórax</text>
+
+    <text x="12" y="355" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
+    <text x="12" y="375" fill="#f8fafc" font-size="11">• Oxigenoterapia / VM com PEEP</text>
+    <text x="12" y="395" fill="#f8fafc" font-size="11">• Surfactante se inativação secundária</text>
+    <text x="12" y="420" fill="#f8fafc" font-size="11">• Antibióticos (Ampicilina + Gentamicina)</text>
+  </g>
+
+  <!-- 4. Hipertensão Pulmonar Persistente (HPPN) -->
+  <g transform="translate(745, 260)">
+    <rect x="0" y="0" width="215" height="520" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="2" filter="url(#shadow)"/>
+    <text x="107" y="30" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="800">HIPERTENSÃO PULMONAR</text>
+    <text x="107" y="50" text-anchor="middle" fill="#cbd5e1" font-size="11">HPPN Neonatal</text>
+    
+    <text x="12" y="80" fill="#d8b4fe" font-size="11" font-weight="700">População Típica:</text>
+    <text x="12" y="98" fill="#f8fafc" font-size="11">• RN a termo / pós-termo</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="11">• Secundária a SAM, sepse ou hipoplasia pulmonar (hérnia diafragmática)</text>
+
+    <text x="12" y="160" fill="#d8b4fe" font-size="11" font-weight="700">Início &amp; Clínica:</text>
+    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Hipoxemia grave e refratária desproporcional ao RX</text>
+    <text x="12" y="205" fill="#f87171" font-size="11" font-weight="700">• Diferença de SatO2 pré e pós-ductal &gt; 5% a 10% (Shunt D-E pelo CA)</text>
+
+    <text x="12" y="240" fill="#d8b4fe" font-size="11" font-weight="700">Diagnóstico:</text>
+    <text x="12" y="258" fill="#fef08a" font-size="11" font-weight="700">• Teste da Hiperóxia negativo (pO2 não sobe &gt; 150 com FiO2 100%)</text>
+    <text x="12" y="295" fill="#fef08a" font-size="11" font-weight="700">• ECOCARDIOGRAMA: Padrão-ouro (pressão de artéria pulmonar elevada)</text>
+
+    <text x="12" y="340" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
+    <text x="12" y="360" fill="#38bdf8" font-size="11" font-weight="700">• ÓXIDO NÍTRICO INALATÓRIO (iNO): 20 ppm</text>
+    <text x="12" y="390" fill="#f8fafc" font-size="11">• Sedação, analgesia e suporte inotrópico (Milrinona / Dobutamina)</text>
+    <text x="12" y="425" fill="#cbd5e1" font-size="10">• Se falha refratária: ECMO</text>
+  </g>
+
+  <!-- Síntese Prática de Conduta Escalonada -->
+  <rect x="40" y="810" width="920" height="360" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="845" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="800">ALGORITMO ESCALONADO DE SUPORTE VENTILATÓRIO NEONATAL (SBP 2024)</text>
+
+  <g transform="translate(60, 870)">
+    <rect x="0" y="0" width="200" height="110" rx="8" fill="#0c4a6e" stroke="#0284c7" stroke-width="1.5"/>
+    <text x="100" y="25" text-anchor="middle" fill="#7dd3fc" font-size="12" font-weight="800">1. ETAPA NÃO INVASIVA</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• CPAP Nasal precoce:</text>
+    <text x="15" y="70" fill="#cbd5e1" font-size="10">PEEP 5 a 6 cmH2O</text>
+    <text x="10" y="90" fill="#ffffff" font-size="11">• Alternativa: CNAF</text>
+  </g>
+
+  <path d="M 270 925 L 305 925" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(315, 870)">
+    <rect x="0" y="0" width="230" height="110" rx="8" fill="#78350f" stroke="#d97706" stroke-width="1.5"/>
+    <text x="115" y="25" text-anchor="middle" fill="#fde047" font-size="12" font-weight="800">2. CRITÉRIO DE FALHA</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• FiO2 &gt; 30% a 40% em CPAP</text>
+    <text x="10" y="70" fill="#ffffff" font-size="11">• Acidose respiratória (pH &lt; 7,20)</text>
+    <text x="10" y="90" fill="#ffffff" font-size="11">• Apneias recorrentes frequentes</text>
+  </g>
+
+  <path d="M 555 925 L 590 925" fill="none" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <g transform="translate(600, 870)">
+    <rect x="0" y="0" width="340" height="110" rx="8" fill="#4c0519" stroke="#e11d48" stroke-width="1.5"/>
+    <text x="170" y="25" text-anchor="middle" fill="#fda4af" font-size="12" font-weight="800">3. RESGATE COM SURFACTANTE / VM</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• Técnica LISA (sem intubação) ou InSurE (Intuba-Surfacta-Extuba)</text>
+    <text x="10" y="70" fill="#ffffff" font-size="11">• Se falha de extubação: Ventilação Mecânica Protetora (Volume garantido 4-5 mL/kg)</text>
+    <text x="10" y="92" fill="#fecdd3" font-size="10">Meta de SatO2: 90% a 95% para prematuros (evitar hiperóxia e retinopatia)</text>
+  </g>
+
+  <g transform="translate(60, 1000)">
+    <rect x="0" y="0" width="880" height="145" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <text x="440" y="25" text-anchor="middle" fill="#e2e8f0" font-size="13" font-weight="700">DICAS DE EXAME &amp; PRÁTICA CLÍNICA DE ALTO RENDIMENTO</text>
+    <text x="20" y="52" fill="#38bdf8" font-size="11" font-weight="700">1. Prematuro com esforço precoce e RX em vidro moído = SDR/Membrana Hialina → Surfactante + CPAP precoce.</text>
+    <text x="20" y="74" fill="#38bdf8" font-size="11" font-weight="700">2. Termo nascido de cesárea eletiva com taquipneia rápida e RX com líquido cisural = Taquipneia Transitória → O2 suporte, resolução rápida.</text>
+    <text x="20" y="96" fill="#38bdf8" font-size="11" font-weight="700">3. Pós-termo banhado em mecônio com tórax em barril e RX em flocos de algodão = SAM → Risco alto de HPPN e Pneumotórax.</text>
+    <text x="20" y="118" fill="#38bdf8" font-size="11" font-weight="700">4. Hipoxemia grave refratária com SatO2 MSD &gt;&gt; MI = Hipertensão Pulmonar Persistente → Ecocardiograma + Óxido Nítrico Inalatório (iNO).</text>
+  </g>
+
+  <text x="500" y="1200" text-anchor="middle" fill="#64748b" font-size="12">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</text>
+</svg>

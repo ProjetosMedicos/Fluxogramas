@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1350" width="100%" height="100%" style="background-color: #0b1120; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0369a1"/>
+    </linearGradient>
+    <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#b91c1c"/>
+    </linearGradient>
+    <linearGradient id="grad-purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrow-green" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+    <marker id="arrow-red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#ef4444"/>
+    </marker>
+  </defs>
+
+  <!-- Cabeçalho -->
+  <rect x="40" y="30" width="920" height="90" rx="12" fill="url(#grad-blue)" filter="url(#shadow)"/>
+  <text x="500" y="68" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="800" letter-spacing="0.5">FLUXOGRAMA OFICIAL DE REANIMAÇÃO NEONATAL EM SALA DE PARTO</text>
+  <text x="500" y="96" text-anchor="middle" fill="#bae6fd" font-size="14" font-weight="600">Diretrizes da Sociedade Brasileira de Pediatria (SBP, 2024) — RN ≥ 34 semanas</text>
+
+  <!-- Bloco 1: Nascimento & Avaliação Imediata -->
+  <rect x="220" y="150" width="560" height="90" rx="10" fill="#1e293b" stroke="#0284c7" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="180" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="700">NASCIMENTO: AVALIAÇÃO RÁPIDA DE VITALIDADE</text>
+  <text x="500" y="205" text-anchor="middle" fill="#f8fafc" font-size="13">1. Gestação a Termo?  |  2. Respirando ou Chorando?  |  3. Tônus Muscular em Flexão?</text>
+  <text x="500" y="225" text-anchor="middle" fill="#94a3b8" font-size="12">Decisão imediata nos primeiros 5 a 10 segundos de vida</text>
+
+  <!-- Linha Sim (Verde) -->
+  <path d="M 220 195 L 120 195 L 120 280" fill="none" stroke="#10b981" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+  <rect x="75" y="215" width="80" height="24" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="1"/>
+  <text x="115" y="231" text-anchor="middle" fill="#a7f3d0" font-size="11" font-weight="800">SIM (3x SIM)</text>
+
+  <!-- Linha Não (Vermelho) -->
+  <path d="M 500 240 L 500 280" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <rect x="510" y="248" width="85" height="24" rx="4" fill="#7f1d1d" stroke="#ef4444" stroke-width="1"/>
+  <text x="552" y="264" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="800">NÃO (≥ 1 NÃO)</text>
+
+  <!-- Caixa Boa Vitalidade: Cuidados de Rotina -->
+  <rect x="40" y="280" width="220" height="150" rx="10" fill="#064e3b" stroke="#10b981" stroke-width="2" filter="url(#shadow)"/>
+  <text x="150" y="308" text-anchor="middle" fill="#a7f3d0" font-size="13" font-weight="800">BOA VITALIDADE</text>
+  <text x="150" y="332" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">• Clampeamento tardio do cordão</text>
+  <text x="150" y="352" text-anchor="middle" fill="#d1fae5" font-size="11">(1 a 3 minutos pós-parto)</text>
+  <text x="150" y="375" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">• Contato pele a pele imediato</text>
+  <text x="150" y="395" text-anchor="middle" fill="#ffffff" font-size="12" font-weight="700">• Amamentação na 1ª hora</text>
+  <text x="150" y="415" text-anchor="middle" fill="#d1fae5" font-size="11">• Avaliação contínua no colo</text>
+
+  <!-- Bloco 2: Passos Iniciais na Mesa de Reanimação (Minuto de Ouro) -->
+  <rect x="310" y="280" width="380" height="150" rx="10" fill="#1e293b" stroke="#eab308" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="306" text-anchor="middle" fill="#facc15" font-size="14" font-weight="800">PASSOS INICIAIS (MESA DE REANIMAÇÃO)</text>
+  <text x="500" y="326" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="700">Completar em até 30 segundos (Minuto de Ouro)</text>
+  <text x="500" y="350" text-anchor="middle" fill="#f8fafc" font-size="12">• Clampeamento imediato do cordão umbilical</text>
+  <text x="500" y="370" text-anchor="middle" fill="#f8fafc" font-size="12">• Prover calor (berço aquecido radiante 36,5 - 37,5°C)</text>
+  <text x="500" y="390" text-anchor="middle" fill="#f8fafc" font-size="12">• Posicionar a cabeça em leve extensão (coxim sob ombros)</text>
+  <text x="500" y="410" text-anchor="middle" fill="#f8fafc" font-size="12">• Aspirar boca e narinas SOMENTE se obstrução evidente</text>
+  <text x="500" y="425" text-anchor="middle" fill="#f8fafc" font-size="12">• Secar corpo e trocar campos úmidos</text>
+
+  <!-- Seta para Reavaliação 1 -->
+  <path d="M 500 430 L 500 470" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Bloco 3: Reavaliação FC e Respiração aos 60s -->
+  <rect x="330" y="470" width="340" height="75" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="495" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">AVALIAR FREQUÊNCIA CARDÍACA &amp; RESPIRAÇÃO</text>
+  <text x="500" y="515" text-anchor="middle" fill="#f8fafc" font-size="12">Ausculta precordial por 6s x 10 + Monitor cardíaco / Oximetria</text>
+  <text x="500" y="533" text-anchor="middle" fill="#cbd5e1" font-size="11">FC &lt; 100 bpm, apneia ou respiração irregular?</text>
+
+  <!-- Decisão FC < 100 ou Não -->
+  <path d="M 330 507 L 150 507 L 150 580" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="230" y="500" text-anchor="middle" fill="#a7f3d0" font-size="11" font-weight="700">FC ≥ 100 &amp; Resp Regular</text>
+
+  <rect x="40" y="580" width="220" height="90" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="150" y="605" text-anchor="middle" fill="#a7f3d0" font-size="12" font-weight="700">ESTABILIZAÇÃO</text>
+  <text x="150" y="625" text-anchor="middle" fill="#f8fafc" font-size="11">• Se desconforto ou SatO2 baixa:</text>
+  <text x="150" y="642" text-anchor="middle" fill="#f8fafc" font-size="11">CPAP em sala de parto (PEEP 5 cmH2O)</text>
+  <text x="150" y="658" text-anchor="middle" fill="#94a3b8" font-size="10">Monitorar em alojamento conjunto/UTIN</text>
+
+  <path d="M 500 545 L 500 580" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="550" y="565" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="800">FC &lt; 100 ou Apneia</text>
+
+  <!-- Bloco 4: VPP com Máscara Facial (Golden Minute) -->
+  <rect x="290" y="580" width="420" height="135" rx="10" fill="url(#grad-amber)" filter="url(#shadow)"/>
+  <text x="500" y="605" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="800">INICIAR VENTILAÇÃO COM PRESSÃO POSITIVA (VPP)</text>
+  <text x="500" y="625" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="700">Máscara Facial + Balão Autoinflável ou Ventilador Mecânico em T</text>
+  <text x="500" y="648" text-anchor="middle" fill="#ffffff" font-size="12">• Frequência: 40 a 60 movimentos por minuto ("Aperta - Solta - Solta")</text>
+  <text x="500" y="668" text-anchor="middle" fill="#ffffff" font-size="12">• Concentração O2: Ar ambiente (21% O2) para RN ≥ 34 sem (30% se &lt; 34 sem)</text>
+  <text x="500" y="688" text-anchor="middle" fill="#ffffff" font-size="12">• Monitorização com Oximetria de Pulso em MSD (Pré-ductal) + ECG</text>
+  <text x="500" y="705" text-anchor="middle" fill="#fef08a" font-size="11">Realizar por 30 segundos com técnica correta e expansão torácica</text>
+
+  <!-- Seta para Reavaliação pós-VPP -->
+  <path d="M 500 715 L 500 750" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Bloco 5: Reavaliação da VPP aos 30s -->
+  <rect x="330" y="750" width="340" height="65" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="773" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">REAVALIAR FREQUÊNCIA CARDÍACA</text>
+  <text x="500" y="793" text-anchor="middle" fill="#f8fafc" font-size="12">Se tórax não expande: Ajustar máscara, reposicionar, aspirar, abrir boca</text>
+
+  <!-- Decisão FC < 60 ou FC 60-100 ou FC > 100 -->
+  <path d="M 670 782 L 820 782 L 820 840" fill="none" stroke="#10b981" stroke-width="2" marker-end="url(#arrow-green)"/>
+  <text x="760" y="774" text-anchor="middle" fill="#a7f3d0" font-size="11" font-weight="700">FC &gt; 100 bpm</text>
+
+  <rect x="710" y="840" width="220" height="75" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+  <text x="820" y="865" text-anchor="middle" fill="#a7f3d0" font-size="12" font-weight="700">MELHORA CLÍNICA</text>
+  <text x="820" y="885" text-anchor="middle" fill="#f8fafc" font-size="11">Suspender VPP gradualmente</text>
+  <text x="820" y="902" text-anchor="middle" fill="#cbd5e1" font-size="10">Manter vigilância em UTIN</text>
+
+  <path d="M 500 815 L 500 850" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="545" y="834" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="800">FC &lt; 60 bpm</text>
+
+  <!-- Bloco 6: Intubação Orotraqueal + Massagem Cardíaca (3:1) -->
+  <rect x="250" y="850" width="500" height="135" rx="10" fill="url(#grad-red)" filter="url(#shadow)"/>
+  <text x="500" y="876" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="800">INTUBAÇÃO OROTRAQUEAL (IOT) &amp; MASSAGEM CARDÍACA</text>
+  <text x="500" y="898" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="700">Técnica dos Dois Polegares sobrepostos no terço inferior do esterno</text>
+  <text x="500" y="920" text-anchor="middle" fill="#ffffff" font-size="12">• Relação Massagem/Ventilação = 3 : 1 (3 compressões para 1 ventilação)</text>
+  <text x="500" y="940" text-anchor="middle" fill="#ffffff" font-size="12">• Ritmo: 90 compressões + 30 ventilações = 120 eventos/minuto</text>
+  <text x="500" y="960" text-anchor="middle" fill="#ffffff" font-size="12">• Aumentar FiO2 para 100% durante as compressões cardíacas</text>
+  <text x="500" y="976" text-anchor="middle" fill="#fef08a" font-size="11">Executar ciclo ininterrupto por 60 segundos antes de reavaliar FC</text>
+
+  <!-- Seta para Reavaliação pós-Massagem -->
+  <path d="M 500 985 L 500 1020" fill="none" stroke="#38bdf8" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Bloco 7: Reavaliação da Massagem -->
+  <rect x="330" y="1020" width="340" height="55" rx="8" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="1043" text-anchor="middle" fill="#38bdf8" font-size="13" font-weight="800">REAVALIAR FREQUÊNCIA CARDÍACA</text>
+  <text x="500" y="1062" text-anchor="middle" fill="#cbd5e1" font-size="11">FC permanece abaixo de 60 bpm após 60s de massagem coordenada?</text>
+
+  <path d="M 500 1075 L 500 1105" fill="none" stroke="#ef4444" stroke-width="2.5" marker-end="url(#arrow-red)"/>
+  <text x="550" y="1092" text-anchor="middle" fill="#fecaca" font-size="11" font-weight="800">FC &lt; 60 bpm</text>
+
+  <!-- Bloco 8: Medicação & Expansor Volêmico -->
+  <rect x="220" y="1105" width="560" height="150" rx="10" fill="url(#grad-purple)" filter="url(#shadow)"/>
+  <text x="500" y="1132" text-anchor="middle" fill="#ffffff" font-size="15" font-weight="800">CATETERISMO UMBILICAL DE URGÊNCIA &amp; DROGAS</text>
+  <text x="500" y="1155" text-anchor="middle" fill="#e9d5ff" font-size="13" font-weight="700">1. ADRENALINA IV / IO (Veia Umbilical de Escolha):</text>
+  <text x="500" y="1175" text-anchor="middle" fill="#ffffff" font-size="12">Diluição 1:10.000 (1 mL Adrenalina 1:1.000 + 9 mL SF 0,9%)</text>
+  <text x="500" y="1195" text-anchor="middle" fill="#fef08a" font-size="12" font-weight="700">Dose IV/IO: 0,02 mg/kg (0,2 mL/kg) em bolus rápido + flush de SF 0,9% (3 mL)</text>
+  <text x="500" y="1215" text-anchor="middle" fill="#ffffff" font-size="12">Se via traqueal transitória (enquanto obtém acesso): 0,1 mg/kg (1 mL/kg)</text>
+  <text x="500" y="1235" text-anchor="middle" fill="#e9d5ff" font-size="12" font-weight="700">2. EXPANSORES DE VOLUME (Se hipovolemia, sangramento ou palidez persistente):</text>
+  <text x="500" y="1250" text-anchor="middle" fill="#ffffff" font-size="12">Soro Fisiológico 0,9% na dose de 10 mL/kg IV lento em 5 a 10 minutos</text>
+
+  <!-- Rodapé com Citação Oficial -->
+  <text x="500" y="1310" text-anchor="middle" fill="#64748b" font-size="12">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</text>
+</svg>

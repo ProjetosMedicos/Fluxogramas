@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1300" width="100%" height="100%" style="background-color: #0b1120; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <linearGradient id="grad-rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#9f1239"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+  </defs>
+
+  <!-- Cabeçalho -->
+  <rect x="40" y="30" width="920" height="90" rx="12" fill="url(#grad-rose)" filter="url(#shadow)"/>
+  <text x="500" y="68" text-anchor="middle" fill="#ffffff" font-size="20" font-weight="800">INFECÇÕES CONGÊNITAS: PROTOCOLO TORCH E SÍFILIS (SBP 2024)</text>
+  <text x="500" y="96" text-anchor="middle" fill="#fecdd3" font-size="14" font-weight="600">Diretrizes da Sociedade Brasileira de Pediatria &amp; Ministério da Saúde do Brasil</text>
+
+  <!-- Seção 1: Sífilis Congênita (O Grande Tema das Provas e da Prática) -->
+  <rect x="40" y="150" width="920" height="520" rx="10" fill="#1e293b" stroke="#e11d48" stroke-width="2" filter="url(#shadow)"/>
+  <text x="500" y="180" text-anchor="middle" fill="#fda4af" font-size="16" font-weight="800">ALGORITMO DECISÓRIO DE SÍFILIS NA GESTAÇÃO E CONGÊNITA</text>
+
+  <!-- Avaliação do Tratamento Materno -->
+  <g transform="translate(60, 205)">
+    <rect x="0" y="0" width="410" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="205" y="24" text-anchor="middle" fill="#fde047" font-size="12" font-weight="800">TRATAMENTO MATERNO FOI ADEQUADO?</text>
+    <text x="15" y="48" fill="#cbd5e1" font-size="11">Critérios CUMULATIVOS de Tratamento Adequado:</text>
+    <text x="15" y="68" fill="#a7f3d0" font-size="11">1. Penicilina Benzatina iniciada até 30 dias antes do parto</text>
+    <text x="15" y="88" fill="#a7f3d0" font-size="11">2. Esquema posológico correto para o estágio da sífilis</text>
+    <text x="25" y="106" fill="#94a3b8" font-size="10">(Primária/Secundária: 2,4 mi UI | Latente tardia: 7,2 mi UI)</text>
+    <text x="15" y="125" fill="#a7f3d0" font-size="11">3. Queda documentada do VDRL materno</text>
+    <text x="15" y="142" fill="#f87171" font-size="10">*Tratamento do parceiro NÃO é mais critério de inadequação</text>
+  </g>
+
+  <!-- Comparação VDRL RN vs Materno -->
+  <g transform="translate(500, 205)">
+    <rect x="0" y="0" width="440" height="150" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1.5"/>
+    <text x="220" y="24" text-anchor="middle" fill="#38bdf8" font-size="12" font-weight="800">AVALIAÇÃO DO VDRL DO RECÉM-NASCIDO</text>
+    <text x="15" y="48" fill="#cbd5e1" font-size="11">• Realizar VDRL em sangue periférico do RN (NUNCA do cordão)</text>
+    <text x="15" y="72" fill="#f87171" font-size="11" font-weight="800">• VDRL do RN Reagente &gt; Materno em ≥ 2 diluições (ex: 1:16 vs 1:4):</text>
+    <text x="25" y="92" fill="#ffffff" font-size="11">Diagnóstico definitivo de Sífilis Congênita!</text>
+    <text x="15" y="116" fill="#fde047" font-size="11" font-weight="700">• Investigação Complementar Obrigatória:</text>
+    <text x="25" y="134" fill="#cbd5e1" font-size="11">1. Punção Lombar (LCR: celularidade, proteínas e VDRL)</text>
+    <text x="25" y="150" fill="#cbd5e1" font-size="11">2. RX de Ossos Longos | 3. Hemograma | 4. Avaliação visual e auditiva</text>
+  </g>
+
+  <!-- 3 Condutas de Tratamento da Sífilis Congênita -->
+  <g transform="translate(60, 375)">
+    <rect x="0" y="0" width="280" height="270" rx="8" fill="#4c0519" stroke="#ef4444" stroke-width="1.5"/>
+    <text x="140" y="25" text-anchor="middle" fill="#fca5a5" font-size="12" font-weight="800">NEUROSSÍFILIS COMPROVADA/SUSPEITA</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• VDRL no LCR reagente OU</text>
+    <text x="10" y="68" fill="#ffffff" font-size="11">• Proteínas &gt; 150 mg/dL ou Células &gt; 25/mm³</text>
+    <text x="10" y="98" fill="#fde047" font-size="11" font-weight="700">ESQUEMA DE ESCOLHA:</text>
+    <text x="10" y="120" fill="#38bdf8" font-size="12" font-weight="800">PENICILINA G CRISTALINA IV</text>
+    <text x="10" y="142" fill="#ffffff" font-size="11">• 50.000 UI/kg/dose</text>
+    <text x="10" y="162" fill="#cbd5e1" font-size="11">- 12/12h nos primeiros 7 dias de vida</text>
+    <text x="10" y="180" fill="#cbd5e1" font-size="11">- 8/8h após 7 dias de vida</text>
+    <text x="10" y="200" fill="#fef08a" font-size="11" font-weight="700">Duração: 10 dias completos</text>
+    <text x="10" y="225" fill="#fca5a5" font-size="10">Se interrupção &gt; 24h: REINICIAR esquema</text>
+  </g>
+
+  <g transform="translate(360, 375)">
+    <rect x="0" y="0" width="260" height="270" rx="8" fill="#78350f" stroke="#d97706" stroke-width="1.5"/>
+    <text x="130" y="25" text-anchor="middle" fill="#fde047" font-size="12" font-weight="800">SÍFILIS CONGÊNITA SEM NEUROSSÍFILIS</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• RN sintomático OU exames alterados</text>
+    <text x="10" y="68" fill="#ffffff" font-size="11">• LCR normal (sem neurossífilis)</text>
+    <text x="10" y="98" fill="#fde047" font-size="11" font-weight="700">ESQUEMA DE ESCOLHA:</text>
+    <text x="10" y="120" fill="#38bdf8" font-size="12" font-weight="800">PENICILINA G CRISTALINA IV</text>
+    <text x="10" y="140" fill="#cbd5e1" font-size="11">50.000 UI/kg/dose por 10 dias</text>
+    <text x="10" y="168" fill="#fde047" font-size="11" font-weight="700">ALTERNATIVA SE SEM ACESSO IV:</text>
+    <text x="10" y="190" fill="#a7f3d0" font-size="11" font-weight="800">Penicilina G Procaína IM:</text>
+    <text x="10" y="210" fill="#ffffff" font-size="11">50.000 UI/kg/dia IM em dose única</text>
+    <text x="10" y="230" fill="#cbd5e1" font-size="11">Duração: 10 dias completos</text>
+  </g>
+
+  <g transform="translate(640, 375)">
+    <rect x="0" y="0" width="300" height="270" rx="8" fill="#064e3b" stroke="#10b981" stroke-width="1.5"/>
+    <text x="150" y="25" text-anchor="middle" fill="#34d399" font-size="12" font-weight="800">ASSINTOMÁTICO / BAIXO RISCO</text>
+    <text x="10" y="50" fill="#ffffff" font-size="11">• Mãe adequadamente tratada E</text>
+    <text x="10" y="68" fill="#ffffff" font-size="11">• RN assintomático com VDRL não reagente</text>
+    <text x="10" y="98" fill="#a7f3d0" font-size="11" font-weight="700">CONDUTA PRECONIZADA:</text>
+    <text x="10" y="120" fill="#a7f3d0" font-size="11" font-weight="800">• Se seguimento ambulatorial garantido:</text>
+    <text x="20" y="138" fill="#cbd5e1" font-size="11">Apenas seguimento clínico e VDRL no 1º, 3º, 6º, 12º e 18º mês</text>
+    <text x="10" y="170" fill="#fde047" font-size="11" font-weight="800">• Se seguimento incerto / mãe tratada inadequada:</text>
+    <text x="20" y="192" fill="#ffffff" font-size="11" font-weight="800">Penicilina Benzatina IM 50.000 UI/kg</text>
+    <text x="20" y="210" fill="#cbd5e1" font-size="11">em dose única (após triagem negativa)</text>
+  </g>
+
+  <!-- Seção 2: Complexo TORCH (Toxo, CMV, Rubéola, Herpes) -->
+  <g transform="translate(40, 690)">
+    <rect x="0" y="0" width="920" height="520" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
+    <text x="460" y="30" text-anchor="middle" fill="#38bdf8" font-size="15" font-weight="800">DIAGNÓSTICO DIFERENCIAL DO COMPLEXO TORCH (SBP 2024)</text>
+
+    <!-- 1. Toxoplasmose -->
+    <g transform="translate(20, 50)">
+      <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#ec4899" stroke-width="1.5"/>
+      <text x="102" y="24" text-anchor="middle" fill="#f472b6" font-size="12" font-weight="800">TOXOPLASMOSE</text>
+      <text x="10" y="50" fill="#fca5a5" font-size="11" font-weight="700">Tríade de Sabin Clássica:</text>
+      <text x="10" y="70" fill="#ffffff" font-size="11">1. Coriorretinite (80%)</text>
+      <text x="10" y="88" fill="#ffffff" font-size="11">2. Hidrocefalia obstrutiva</text>
+      <text x="10" y="106" fill="#fef08a" font-size="11" font-weight="700">3. Calcificações cerebrais DIFUSAS no parênquima</text>
+      <text x="10" y="130" fill="#94a3b8" font-size="10">(+ convulsões e retardo mental)</text>
+      <text x="10" y="155" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
+      <text x="10" y="173" fill="#cbd5e1" font-size="11">IgM e IgA específicos positivos no RN (IgG materno atravessa)</text>
+      <text x="10" y="205" fill="#a7f3d0" font-size="11" font-weight="800">TRATAMENTO (1 ANO):</text>
+      <text x="10" y="225" fill="#ffffff" font-size="11">• Sulfadiazina 100 mg/kg/dia</text>
+      <text x="10" y="245" fill="#ffffff" font-size="11">• Pirimetamina 1 mg/kg/dia</text>
+      <text x="10" y="265" fill="#ffffff" font-size="11">• Ácido Folínico 10 mg 3x/sem</text>
+      <text x="10" y="288" fill="#cbd5e1" font-size="10">+ Corticoide (Prednisona 1 mg/kg/dia) se coriorretinite em atividade ou PT no LCR &gt; 1 g/dL</text>
+    </g>
+
+    <!-- 2. Citomegalovírus (CMV) -->
+    <g transform="translate(245, 50)">
+      <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5"/>
+      <text x="102" y="24" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="800">CITOMEGALOVÍRUS (CMV)</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Causa mais comum de infecção congênita e surdez neurossensorial</text>
+      <text x="10" y="90" fill="#fde047" font-size="11" font-weight="700">Quadro Clínico:</text>
+      <text x="10" y="108" fill="#ffffff" font-size="11">• Microcefalia</text>
+      <text x="10" y="126" fill="#fef08a" font-size="11" font-weight="800">• Calcificações cerebrais PERIVENTRICULARES</text>
+      <text x="10" y="150" fill="#ffffff" font-size="11">• Petéquias / Púrpura "muffin de mirtilo" (hematopoiese dérmica)</text>
+      <text x="10" y="185" fill="#cbd5e1" font-size="11">• Hepatoesplenomegalia e icterícia</text>
+      <text x="10" y="215" fill="#fde047" font-size="11" font-weight="700">Diagnóstico Padrão-Ouro:</text>
+      <text x="10" y="233" fill="#ffffff" font-size="11">PCR na urina ou saliva nas primeiras 2 a 3 semanas</text>
+      <text x="10" y="265" fill="#a7f3d0" font-size="11" font-weight="800">TRATAMENTO (6 MESES):</text>
+      <text x="10" y="285" fill="#ffffff" font-size="11">Valganciclovir Oral (16 mg/kg 12/12h) se acometimento de SNC/auditivo</text>
+    </g>
+
+    <!-- 3. Rubéola Congênita -->
+    <g transform="translate(470, 50)">
+      <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
+      <text x="102" y="24" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="800">RUBÉOLA CONGÊNITA</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Rara devido à vacinação com Tríplice Viral</text>
+      <text x="10" y="85" fill="#fde047" font-size="11" font-weight="700">Tríade de Gregg Clássica:</text>
+      <text x="10" y="105" fill="#ffffff" font-size="11">1. Catarata congênita / Microftalmia / Glaucoma</text>
+      <text x="10" y="135" fill="#fef08a" font-size="11" font-weight="700">2. Cardiopatia Congênita:</text>
+      <text x="20" y="153" fill="#ffffff" font-size="11">Persistência do Canal Arterial (PCA) e Estenose de Artéria Pulmonar</text>
+      <text x="10" y="190" fill="#ffffff" font-size="11">3. Surdez neurossensorial (mais frequente)</text>
+      <text x="10" y="225" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
+      <text x="10" y="243" fill="#cbd5e1" font-size="11">IgM específico no RN ou IgG persistente</text>
+      <text x="10" y="275" fill="#f87171" font-size="11" font-weight="700">Tratamento:</text>
+      <text x="10" y="293" fill="#ffffff" font-size="11">Suporte e reabilitação auditiva/cirúrgica</text>
+    </g>
+
+    <!-- 4. Herpes Simples (HSV) -->
+    <g transform="translate(695, 50)">
+      <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="102" y="24" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="800">HERPES NEONATAL (HSV)</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Transmissão no canal de parto (HSV-2 &gt;&gt; HSV-1)</text>
+      <text x="10" y="85" fill="#fde047" font-size="11" font-weight="700">3 Formas Clínicas:</text>
+      <text x="10" y="105" fill="#ffffff" font-size="11">1. Pele, Olhos e Boca (SEM): vesículas agrupadas</text>
+      <text x="10" y="135" fill="#fef08a" font-size="11">2. Encefalite (SNC): convulsões, letargia, LCR hemorrágico</text>
+      <text x="10" y="170" fill="#fca5a5" font-size="11">3. Doença Disseminada: choque séptico, CIVD, hepatite grave</text>
+      <text x="10" y="210" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
+      <text x="10" y="228" fill="#cbd5e1" font-size="11">PCR para HSV no LCR, sangue e lesões</text>
+      <text x="10" y="260" fill="#a7f3d0" font-size="11" font-weight="800">TRATAMENTO DE EMERGÊNCIA:</text>
+      <text x="10" y="280" fill="#ffffff" font-size="11" font-weight="800">ACICLOVIR IV ALTA DOSE</text>
+      <text x="10" y="300" fill="#fef08a" font-size="11">60 mg/kg/dia dividido 8/8h</text>
+      <text x="10" y="320" fill="#cbd5e1" font-size="10">Duração: 14 dias (SEM) ou 21 dias (SNC/Disseminada)</text>
+    </g>
+  </g>
+
+  <text x="500" y="1255" text-anchor="middle" fill="#64748b" font-size="12">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</text>
+</svg>
