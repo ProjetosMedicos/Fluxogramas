@@ -49,19 +49,22 @@
   <rect x="55" y="380" width="260" height="205" rx="5" fill="#f0fdfa" stroke="#ccfbf1" />
   <text x="65" y="400" fill="#0f766e" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Manejo Pulmonar:</text>
   <text x="65" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Fisioterapia respiratória diária.</text>
-  <text x="65" y="438" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Alfa-dornase inalatória:</tspan> quebra de DNA de neutrófilos e fluidificação do muco.</text>
-  <text x="65" y="468" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Solução Salina Hipertônica 7%:</tspan> hidratação do muco brônquico.</text>
-  <text x="65" y="498" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Vacinação antipneumocócica e influenza.</text>
+  <text x="65" y="438" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Alfa-dornase:</tspan> fluidificação do muco.</text>
+  <text x="65" y="456" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Salina Hipertônica 7%:</tspan> hidratação ciliar.</text>
+  <text x="65" y="474" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• Vacinação antipneumo e influenza.</text>
 
   <rect x="330" y="380" width="260" height="205" rx="5" fill="#eff6ff" stroke="#dbeafe" />
   <text x="340" y="400" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Suporte Gastrointestinal:</text>
-  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Enzimas Pancreáticas:</tspan> reposição de lipase oral em todas as refeições.</text>
-  <text x="340" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Vitaminas Lipossolúveis (A, D, E, K):</tspan> suplementação contínua diária.</text>
-  <text x="340" y="480" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Dieta hipercalórica e hiperlipídica (120% a 150% do VET).</text>
+  <text x="340" y="420" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Enzimas Pancreáticas:</tspan> lipase oral</text>
+  <text x="348" y="435" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">  em todas as refeições e lanches.</text>
+  <text x="340" y="455" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Vitaminas Lipossolúveis (A, D, E, K):</tspan></text>
+  <text x="348" y="470" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">  suplementação contínua diária.</text>
+  <text x="340" y="490" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• Dieta hipercalórica (120-150% VET).</text>
 
   <rect x="605" y="380" width="260" height="205" rx="5" fill="#fef2f2" stroke="#fee2e2" />
   <text x="615" y="400" fill="#b91c1c" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Controle Infeccioso:</text>
-  <text x="615" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Vigilância ativa para <em>Pseudomonas aeruginosa</em> e <em>Staphylococcus aureus</em>.</text>
-  <text x="615" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Tobramicina inalatória</tspan> para erradicação precoce de <em>Pseudomonas</em>.</text>
-  <text x="615" y="480" fill="#b91c1c" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Exacerbação: internação imediata com antibioticoterapia combinada IV.</text>
+  <text x="615" y="420" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• Rastreio: P. aeruginosa e S. aureus.</text>
+  <text x="615" y="440" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Tobramicina inalatória</tspan> para erradicação</text>
+  <text x="623" y="455" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">  precoce de Pseudomonas.</text>
+  <text x="615" y="475" fill="#b91c1c" font-size="8.5" font-weight="bold" font-family="system-ui, sans-serif">• Exacerbação: internação e ATB IV dupla.</text>
 </svg>

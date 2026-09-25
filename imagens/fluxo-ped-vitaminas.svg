@@ -93,9 +93,9 @@
   <g class="card-shadow">
     <rect x="40" y="560" width="920" height="160" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="60" y="585" class="node-bold" fill="#0f172a">DIAGNÓSTICO E TRATAMENTO DA ANEMIA FERROPRIVA INSTALADA (SBP 2024)</text>
-    <text x="60" y="610" class="node-text">• <tspan font-weight="700">Pontos de corte de Hemoglobina (Hb):</tspan> 6 a 59 meses: <tspan font-weight="700" fill="#dc2626">Hb &lt; 11,0 g/dL</tspan> | 5 a 11 anos: Hb &lt; 11,5 g/dL | Gestantes/Adolescentes: Hb &lt; 12,0 g/dL.</text>
-    <text x="60" y="635" class="node-text">• <tspan font-weight="700">Perfil de Ferro Típico:</tspan> Ferritina sérica baixa (&lt;12 ng/mL), Ferro sérico baixo, Capacidade Total de Ligação do Ferro (TIBC) elevada, Saturação de Transferrina &lt; 16% e RDW elevado (&gt; 14,5% - anisocitose).</text>
-    <text x="60" y="660" class="node-text">• <tspan font-weight="700" fill="#15803d">DOSE TERAPÊUTICA:</tspan> <tspan font-weight="700" fill="#b91c1c">3 a 6 mg/kg/dia</tspan> de ferro elementar em 1 ou 2 tomadas, longe do leite e preferencialmente em jejum ou com suco cítrico.</text>
+    <text x="60" y="610" class="node-text">• <tspan font-weight="700">Pontos de corte de Hb:</tspan> 6-59 meses: <tspan font-weight="700" fill="#dc2626">Hb &lt; 11,0 g/dL</tspan> | 5-11 anos: Hb &lt; 11,5 g/dL | Gestantes/Adolescentes: Hb &lt; 12,0 g/dL.</text>
+    <text x="60" y="630" class="node-text">• <tspan font-weight="700">Perfil Típico:</tspan> Ferritina &lt; 12 ng/mL, Ferro sérico baixo, TIBC elevada, Sat. Transferrina &lt; 16% e RDW &gt; 14,5% (anisocitose).</text>
+    <text x="60" y="655" class="node-text">• <tspan font-weight="700" fill="#15803d">DOSE TERAPÊUTICA:</tspan> <tspan font-weight="700" fill="#b91c1c">3 a 6 mg/kg/dia</tspan> de Fe elementar em 1-2 tomadas, longe de leite (em jejum ou com suco cítrico).</text>
     <text x="60" y="685" class="node-text">• <tspan font-weight="700">Duração do Tratamento:</tspan> Manter a dose terapêutica por <tspan font-weight="700">3 MESES APÓS A NORMALIZAÇÃO DA HB</tspan> para repor os estoques medulares (ferritina).</text>
     <text x="60" y="705" class="node-text">• <tspan font-weight="700">Pico Reticulocitário:</tspan> Ocorre entre o 7º e o 10º dia de tratamento eficaz (melhor indicador de resposta terapêutica precoce).</text>
   </g>

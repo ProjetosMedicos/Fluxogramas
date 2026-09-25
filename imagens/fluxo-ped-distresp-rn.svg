@@ -41,7 +41,7 @@
     <text x="12" y="212" fill="#cbd5e1" font-size="11">retrações graves e cianose</text>
 
     <text x="12" y="240" fill="#fca5a5" font-size="11" font-weight="700">Radiografia de Tórax:</text>
-    <text x="12" y="258" fill="#fef08a" font-size="11" font-weight="700">• Infiltrado reticulogranular difuso ("vidro moído")</text>
+    <text x="12" y="258" fill="#fef08a" font-size="9.5" font-weight="700">• Infiltrado ("vidro moído")</text>
     <text x="12" y="285" fill="#fef08a" font-size="11" font-weight="700">• Broncogramas aéreos</text>
     <text x="12" y="305" fill="#cbd5e1" font-size="11">• Hipoinsuflação (volume baixo)</text>
 
@@ -49,7 +49,7 @@
     <text x="12" y="360" fill="#f8fafc" font-size="11">• CPAP nasal precoce (PEEP 5-6)</text>
     <text x="12" y="380" fill="#38bdf8" font-size="11" font-weight="700">• SURFACTANTE EXÓGENO:</text>
     <text x="12" y="398" fill="#cbd5e1" font-size="10">100 a 200 mg/kg endotraqueal</text>
-    <text x="12" y="415" fill="#cbd5e1" font-size="10">(Técnica LISA ou InSurE se FiO2 &gt; 30% em CPAP)</text>
+    <text x="12" y="415" fill="#cbd5e1" font-size="10">(LISA/InSurE se FiO2 &gt; 30%)</text>
     <text x="12" y="445" fill="#94a3b8" font-size="10">• Ampicilina + Gentamicina até descartar sepse</text>
   </g>
 
@@ -61,7 +61,7 @@
     
     <text x="12" y="80" fill="#7dd3fc" font-size="11" font-weight="700">População Típica:</text>
     <text x="12" y="98" fill="#f8fafc" font-size="11">• Termo ou pré-termo tardio</text>
-    <text x="12" y="115" fill="#f8fafc" font-size="11">• Cesariana eletiva sem trabalho de parto (ausência de catecolaminas)</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="9.5">• Cesárea eletiva sem TP (sem catecolaminas)</text>
 
     <text x="12" y="160" fill="#7dd3fc" font-size="11" font-weight="700">Início &amp; Clínica:</text>
     <text x="12" y="178" fill="#cbd5e1" font-size="11">• Início nas primeiras horas</text>
@@ -75,7 +75,7 @@
     <text x="12" y="315" fill="#cbd5e1" font-size="11">• Hiperinsuflação leve a moderada</text>
 
     <text x="12" y="340" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
-    <text x="12" y="360" fill="#f8fafc" font-size="11">• Suporte com O2 sob demanda (FiO2 baixa &lt; 40%)</text>
+    <text x="12" y="360" fill="#f8fafc" font-size="9.5">• Suporte de O2 (FiO2 &lt; 40%)</text>
     <text x="12" y="385" fill="#f8fafc" font-size="11">• CPAP nasal se desconforto</text>
     <text x="12" y="410" fill="#f87171" font-size="11" font-weight="700">NÃO USAR diuréticos, NÃO usar restrição hídrica</text>
     <text x="12" y="445" fill="#94a3b8" font-size="10">• Doença autolimitada benigna</text>
@@ -89,10 +89,10 @@
     
     <text x="12" y="80" fill="#fde047" font-size="11" font-weight="700">População Típica:</text>
     <text x="12" y="98" fill="#f8fafc" font-size="11">• Termo e Pós-termo (≥ 41 sem)</text>
-    <text x="12" y="115" fill="#f8fafc" font-size="11">• Asfixia perinatal / sofrimento fetal com mecônio intrauterino espesso</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="9.5">• Asfixia / mecônio intrauterino</text>
 
     <text x="12" y="160" fill="#fde047" font-size="11" font-weight="700">Início &amp; Clínica:</text>
-    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Desconforto respiratório grave logo ao nascer</text>
+    <text x="12" y="178" fill="#cbd5e1" font-size="9.5">• Desconforto precoce grave</text>
     <text x="12" y="205" fill="#cbd5e1" font-size="11">• Tórax em barril (aprisionamento)</text>
     <text x="12" y="225" fill="#cbd5e1" font-size="11">• Roncos, estertores difusos</text>
 
@@ -115,19 +115,19 @@
     
     <text x="12" y="80" fill="#d8b4fe" font-size="11" font-weight="700">População Típica:</text>
     <text x="12" y="98" fill="#f8fafc" font-size="11">• RN a termo / pós-termo</text>
-    <text x="12" y="115" fill="#f8fafc" font-size="11">• Secundária a SAM, sepse ou hipoplasia pulmonar (hérnia diafragmática)</text>
+    <text x="12" y="115" fill="#f8fafc" font-size="9.5">• Pós-SAM, sepse ou hipoplasia pulmonar</text>
 
-    <text x="12" y="160" fill="#d8b4fe" font-size="11" font-weight="700">Início &amp; Clínica:</text>
-    <text x="12" y="178" fill="#cbd5e1" font-size="11">• Hipoxemia grave e refratária desproporcional ao RX</text>
-    <text x="12" y="205" fill="#f87171" font-size="11" font-weight="700">• Diferença de SatO2 pré e pós-ductal &gt; 5% a 10% (Shunt D-E pelo CA)</text>
+    <text x="12" y="155" fill="#d8b4fe" font-size="10.5" font-weight="700">Início &amp; Clínica:</text>
+    <text x="12" y="172" fill="#cbd5e1" font-size="9.5">• Hipoxemia desproporcional ao RX</text>
+    <text x="12" y="195" fill="#f87171" font-size="9.5" font-weight="700">• SatO2 pré/pós-ductal &gt; 5-10% (Shunt D-E)</text>
 
-    <text x="12" y="240" fill="#d8b4fe" font-size="11" font-weight="700">Diagnóstico:</text>
-    <text x="12" y="258" fill="#fef08a" font-size="11" font-weight="700">• Teste da Hiperóxia negativo (pO2 não sobe &gt; 150 com FiO2 100%)</text>
-    <text x="12" y="295" fill="#fef08a" font-size="11" font-weight="700">• ECOCARDIOGRAMA: Padrão-ouro (pressão de artéria pulmonar elevada)</text>
+    <text x="12" y="235" fill="#d8b4fe" font-size="10.5" font-weight="700">Diagnóstico:</text>
+    <text x="12" y="252" fill="#fef08a" font-size="9.5" font-weight="700">• Teste Hiperóxia negativo (pO2 &lt; 150)</text>
+    <text x="12" y="285" fill="#fef08a" font-size="9.5" font-weight="700">• Ecocardiograma: Padrão-ouro</text>
 
-    <text x="12" y="340" fill="#a7f3d0" font-size="11" font-weight="700">Conduta Terapêutica:</text>
-    <text x="12" y="360" fill="#38bdf8" font-size="11" font-weight="700">• ÓXIDO NÍTRICO INALATÓRIO (iNO): 20 ppm</text>
-    <text x="12" y="390" fill="#f8fafc" font-size="11">• Sedação, analgesia e suporte inotrópico (Milrinona / Dobutamina)</text>
+    <text x="12" y="330" fill="#a7f3d0" font-size="10.5" font-weight="700">Conduta Terapêutica:</text>
+    <text x="12" y="350" fill="#38bdf8" font-size="9.5" font-weight="700">• ÓXIDO NÍTRICO (iNO): 20 ppm</text>
+    <text x="12" y="375" fill="#f8fafc" font-size="9.5">• Sedação e suporte inotrópico</text>
     <text x="12" y="425" fill="#cbd5e1" font-size="10">• Se falha refratária: ECMO</text>
   </g>
 
@@ -158,9 +158,9 @@
   <g transform="translate(600, 870)">
     <rect x="0" y="0" width="340" height="110" rx="8" fill="#4c0519" stroke="#e11d48" stroke-width="1.5"/>
     <text x="170" y="25" text-anchor="middle" fill="#fda4af" font-size="12" font-weight="800">3. RESGATE COM SURFACTANTE / VM</text>
-    <text x="10" y="50" fill="#ffffff" font-size="11">• Técnica LISA (sem intubação) ou InSurE (Intuba-Surfacta-Extuba)</text>
-    <text x="10" y="70" fill="#ffffff" font-size="11">• Se falha de extubação: Ventilação Mecânica Protetora (Volume garantido 4-5 mL/kg)</text>
-    <text x="10" y="92" fill="#fecdd3" font-size="10">Meta de SatO2: 90% a 95% para prematuros (evitar hiperóxia e retinopatia)</text>
+    <text x="10" y="50" fill="#ffffff" font-size="10.5">• Técnica LISA (sem intubação) ou InSurE</text>
+    <text x="10" y="70" fill="#ffffff" font-size="11">• Falha: Ventilação Protetora (VG 4-5 mL/kg)</text>
+    <text x="10" y="92" fill="#fecdd3" font-size="9.5">Meta SatO2: 90-95% (evitar retinopatia/hiperóxia)</text>
   </g>
 
   <g transform="translate(60, 1000)">

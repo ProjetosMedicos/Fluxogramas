@@ -53,11 +53,11 @@
   <text x="65" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Naproxeno:</tspan> 15 a 20 mg/kg/dia 2x/dia.</text>
   <text x="65" y="440" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Ibuprofeno:</tspan> 30 a 40 mg/kg/dia 3x/dia.</text>
   <text x="65" y="465" fill="#0f172a" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Infiltração Intra-articular:</text>
-  <text x="65" y="480" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  Hexacetonida de triancinolona é altamente eficaz na oligoarticular.</text>
+  <text x="65" y="480" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">  Triancinolona hexacetonida é padrão na oligoarticular.</text>
 
   <rect x="330" y="380" width="260" height="205" rx="5" fill="#eff6ff" stroke="#bfdbfe" />
   <text x="340" y="400" fill="#1d4ed8" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">Etapa 2: DMARD Sintético</text>
-  <text x="340" y="420" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Metotrexato (MTX):</tspan> 10 a 15 mg/m²/semana (máx 25 mg) VO ou SC.</text>
+  <text x="340" y="420" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">MTX:</tspan> 10-15 mg/m²/sem (máx 25mg) VO/SC.</text>
   <text x="340" y="450" fill="#334155" font-size="9" font-family="system-ui, sans-serif">• Droga de escolha na poliarticular e oligoarticular persistente.</text>
   <text x="340" y="480" fill="#166534" font-size="9" font-weight="bold" font-family="system-ui, sans-serif">• Associar Ácido Fólico (1 mg/dia) para mitigar efeitos adversos.</text>
 

@@ -92,8 +92,11 @@
     <rect x="40" y="550" width="920" height="175" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="60" y="580" class="node-bold" fill="#0f172a">PREVENÇÃO DE AFOGAMENTO, QUEIMADURAS &amp; INTOXICAÇÕES DOMICILIARES (SBP 2024)</text>
 
-    <text x="60" y="610" class="node-text">🏊 <tspan font-weight="700">AFOGAMENTO (Regra do Toque):</tspan> Supervisão a uma distância de um braço. Piscinas protegidas com cercas de 1,5m com portão e travas automáticas. <tspan font-weight="700" fill="#dc2626">Atenção em baldes, bacias e vasos sanitários</tspan> (2.5 cm de água é suficiente para afogar um lactente!). Boias de braço não garantem proteção (usar colete salva-vidas homologado).</text>
-    <text x="60" y="650" class="node-text">🔥 <tspan font-weight="700">QUEIMADURAS:</tspan> Panelas nos queimadores traseiros com cabos virados para dentro. Protetores em tomadas elétricas. Testar a temperatura da água do banho com o antebraço (ideal 36-37°C). Proibido o uso de andadores infantis (risco grave de tombamento em escadas e acesso a queimaduras).</text>
-    <text x="60" y="690" class="node-text">🧪 <tspan font-weight="700">INTOXICAÇÕES EXÓGENAS:</tspan> Medicamentos e produtos de limpeza trancados no alto em embalagens originais (nunca reaproveitar garrafas PET). Em caso de ingestão: Ligar para o CIATox (0800 722 6001). <tspan font-weight="700" fill="#dc2626">NÃO PROVOCAR VÔMITO</tspan> (risco de nova queimadura por cáusticos ou aspiração).</text>
+    <text x="60" y="605" class="node-text">🏊 <tspan font-weight="700">AFOGAMENTO (Regra do Toque):</tspan> Supervisão a uma distância de um braço. Piscinas com cercas de 1,5m e portão travado.</text>
+    <text x="75" y="622" class="node-text"><tspan font-weight="700" fill="#dc2626">Atenção em baldes, bacias e vasos</tspan> (2.5 cm de água afoga um lactente!). Boias de braço não protegem (usar colete).</text>
+    <text x="60" y="645" class="node-text">🔥 <tspan font-weight="700">QUEIMADURAS:</tspan> Panelas nos queimadores traseiros com cabos para dentro. Protetores em tomadas elétricas.</text>
+    <text x="75" y="662" class="node-text">Testar temperatura da água do banho com antebraço (36-37°C). Proibido andador (risco de quedas e queimaduras).</text>
+    <text x="60" y="685" class="node-text">🧪 <tspan font-weight="700">INTOXICAÇÕES:</tspan> Medicamentos e limpeza trancados no alto em frascos originais (nunca reaproveitar garrafas PET).</text>
+    <text x="75" y="702" class="node-text">Ingestão: Ligar CIATox (0800 722 6001). <tspan font-weight="700" fill="#dc2626">NÃO PROVOCAR VÔMITO</tspan> (risco de lesão cáustica ou aspiração).</text>
   </g>
 </svg>

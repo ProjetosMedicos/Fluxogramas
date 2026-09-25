@@ -45,24 +45,24 @@
   <path d="M 720 175 L 820 230" class="edge" />
 
   <g class="card-shadow">
-    <rect x="40" y="230" width="280" height="150" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
+    <rect x="40" y="230" width="280" height="155" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
     <text x="180" y="252" text-anchor="middle" class="node-bold" fill="#1e40af">PRIMEIRO SEMESTRE (1-6 MESES)</text>
-    <text x="180" y="272" text-anchor="middle" class="node-text">• Ao nascer: BCG (dose única) + Hepatite B</text>
-    <text x="180" y="290" text-anchor="middle" class="node-text">• 2 meses: Penta (DTP/Hib/HepB) + VIP (polio inativada) + Pneumocócica 10/13 + Rotavírus</text>
-    <text x="180" y="312" text-anchor="middle" class="node-text">• 3 meses: Meningocócica C ou ACWY (1ª dose)</text>
-    <text x="180" y="330" text-anchor="middle" class="node-text">• 4 meses: 2ª dose das vacinas de 2 meses</text>
-    <text x="180" y="348" text-anchor="middle" class="node-text">• 5 meses: 2ª dose de Meningo C ou ACWY</text>
-    <text x="180" y="366" text-anchor="middle" class="node-text">• 6 meses: 3ª dose de Penta e VIP + Covid-19</text>
+    <text x="55" y="272" class="node-text">• Ao nascer: BCG (dose única) + Hep B</text>
+    <text x="55" y="290" class="node-text">• 2m: Penta + VIP + Pneumo 10 + Rotavírus</text>
+    <text x="55" y="308" class="node-text">• 3m: Meningo C / ACWY (1ª dose)</text>
+    <text x="55" y="326" class="node-text">• 4m: 2ª dose das vacinas de 2 meses</text>
+    <text x="55" y="344" class="node-text">• 5m: 2ª dose de Meningo C / ACWY</text>
+    <text x="55" y="362" class="node-text">• 6m: 3ª dose de Penta e VIP + Covid-19</text>
   </g>
 
   <g class="card-shadow">
-    <rect x="360" y="230" width="280" height="150" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
+    <rect x="360" y="230" width="280" height="155" rx="10" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5" />
     <text x="500" y="252" text-anchor="middle" class="node-bold" fill="#15803d">SEGUNDO ANO (9-24 MESES)</text>
-    <text x="500" y="272" text-anchor="middle" class="node-text">• 9 meses: Febre Amarela (dose inicial)</text>
-    <text x="500" y="290" text-anchor="middle" class="node-text">• 12 meses: Tríplice Viral (Sarampo/Caxumba/Rubéola) + Reforço Pneumo + Reforço Meningo ACWY</text>
-    <text x="500" y="318" text-anchor="middle" class="node-text">• 15 meses: DTP (1º reforço) + VIP (reforço)</text>
-    <text x="500" y="334" text-anchor="middle" class="node-text">  Hepatite A (dose única no PNI / 2 doses SBP)</text>
-    <text x="500" y="350" text-anchor="middle" class="node-text">  Tetraviral (SCR + Varicela)</text>
+    <text x="375" y="272" class="node-text">• 9m: Febre Amarela (dose inicial)</text>
+    <text x="375" y="290" class="node-text">• 12m: Tríplice Viral (SCR) + Reforço Pneumo</text>
+    <text x="375" y="306" class="node-text">  + Reforço Meningo C/ACWY</text>
+    <text x="375" y="324" class="node-text">• 15m: DTP (1º ref) + VIP (ref) + Hep A</text>
+    <text x="375" y="342" class="node-text">  + Tetraviral (SCR + Varicela)</text>
     <text x="500" y="366" text-anchor="middle" class="node-text">• CRIE: Indicação para prematuros e cardiopatas</text>
   </g>
 

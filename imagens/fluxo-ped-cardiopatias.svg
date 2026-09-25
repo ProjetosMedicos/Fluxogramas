@@ -43,7 +43,7 @@
   <text x="55" y="286" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  geralmente assintomática na infância.</text>
   <text x="55" y="302" fill="#0f172a" font-size="10" font-family="system-ui, sans-serif">• <tspan font-weight="bold">PCA (Persistência do Canal Arterial):</tspan> Típico do prematuro;</text>
   <text x="55" y="316" fill="#334155" font-size="9" font-family="system-ui, sans-serif">  sopro contínuo em maquinaria (Gibson) e pulsos amplos. Fechamento com ibuprofeno IV.</text>
-  <text x="55" y="332" fill="#0f172a" font-size="10" font-family="system-ui, sans-serif">• <tspan font-weight="bold">DSAV (Defeito do Septo Atrioventricular):</tspan> Associação marcante com Síndrome de Down.</text>
+  <text x="55" y="348" fill="#0f172a" font-size="9" font-family="system-ui, sans-serif">• <tspan font-weight="bold">DSAV:</tspan> Associação marcante com Síndrome de Down.</text>
 
   <text x="55" y="355" fill="#065f46" font-size="10.5" font-weight="bold" font-family="system-ui, sans-serif">2. Com Fluxo Pulmonar Normal (Lesões Obstrutivas):</text>
   <text x="55" y="372" fill="#0f172a" font-size="10" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Coarctação da Aorta:</tspan> Hipertensão em MMSS e pulsos femorais</text>

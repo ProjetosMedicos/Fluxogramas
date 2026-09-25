@@ -69,14 +69,15 @@
   <rect x="40" y="450" width="840" height="26" fill="#f1f5f9" rx="6" />
   <text x="55" y="468" fill="#0f172a" font-size="11" font-weight="bold" font-family="system-ui, sans-serif">CRITÉRIOS FORMAIS PARA PUNÇÃO LOMBAR &amp; AVISOS CHOOSING WISELY SBP 2024</text>
 
-  <text x="55" y="494" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Indicações Mandatórias de Punção Lombar (Líquor):</text>
-  <text x="55" y="510" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">1. Sinais clínicos meníngeos (rigidez de nuca, Kernig/Brudzinski, fontanela abaulada) ou toxemia/letargia persistente.</text>
-  <text x="55" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">2. Lactente entre 6 e 12 meses com imunização incompleta para Hib ou Pneumococo, ou histórico vacinal desconhecido.</text>
-  <text x="55" y="540" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">3. Uso prévio de antimicrobianos que possam mascarar os sintomas clínicos clássicos de meningite bacteriana.</text>
+  <text x="55" y="494" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Indicações de Punção Lombar (LCR):</text>
+  <text x="55" y="510" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">1. Sinais meníngeos (rigidez de nuca, fontanela abaulada, toxemia).</text>
+  <text x="55" y="525" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">2. Lactente 6-12m com vacinação incompleta para Hib/Pneumococo.</text>
+  <text x="55" y="540" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">3. Uso prévio de antibiótico que possa mascarar meningite.</text>
+  <text x="55" y="555" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">4. Estado de Mal Febril ou déficit neurológico pós-crise.</text>
 
-  <text x="495" y="494" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Choosing Wisely &amp; O que NÃO Fazer na Febril Simples:</text>
-  <text x="495" y="510" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• NÃO realizar punção lombar rotineira na febril simples com exame neurológico normal.</text>
-  <text x="495" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• NÃO prescrever anticonvulsivantes profiláticos contínuos (fenobarbital, valproato).</text>
-  <text x="495" y="540" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• Antitérmicos promovem conforto térmico, mas NÃO previnem a recorrência da crise.</text>
-  <text x="495" y="555" fill="#0284c7" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• Risco de epilepsia futura após febril simples é de apenas 1% a 2% (quase igual à população geral).</text>
+  <text x="495" y="494" fill="#b91c1c" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Choosing Wisely SBP (O que NÃO Fazer):</text>
+  <text x="495" y="510" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• NÃO realizar punção lombar na febril simples com exame normal.</text>
+  <text x="495" y="525" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• NÃO prescrever anticonvulsivantes profiláticos contínuos.</text>
+  <text x="495" y="540" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• Antitérmicos dão conforto, mas NÃO evitam recorrência de crise.</text>
+  <text x="495" y="555" fill="#0284c7" font-size="8.8" font-weight="bold" font-family="system-ui, sans-serif">• Risco de epilepsia futura é de apenas 1% a 2% (população geral).</text>
 </svg>

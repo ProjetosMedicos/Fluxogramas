@@ -29,7 +29,7 @@
     <text x="260" y="140" text-anchor="middle" class="node-bold" fill="#be185d">PUBERDADE FEMININA NORMAL (8 A 13 ANOS)</text>
     <text x="60" y="165" class="node-text">1. <tspan font-weight="700">1º Sinal:</tspan> Telarca (Broto mamário M2 Tanner) - média 9.5-10 anos.</text>
     <text x="60" y="185" class="node-text">2. <tspan font-weight="700">2º Sinal:</tspan> Pubarca (Pelos pubianos P2) - ocorre ~6 meses após telarca.</text>
-    <text x="60" y="205" class="node-text">3. <tspan font-weight="700">Pico de Crescimento (Estirão):</tspan> Ocorre em Tanner <tspan font-weight="700">M3 / precoce</tspan> (8-9 cm/ano).</text>
+    <text x="60" y="205" class="node-text">3. <tspan font-weight="700">Estirão:</tspan> Tanner G4 tardio (10-12 cm/ano).<tspan font-weight="700">M3 / precoce</tspan> (8-9 cm/ano).</text>
     <text x="60" y="225" class="node-text">4. <tspan font-weight="700">Menarca:</tspan> Evento tardio (Tanner M4), 2 a 2.5 anos após a telarca.</text>
     <text x="60" y="245" class="node-text">• <tspan font-weight="700" fill="#dc2626">Precoce:</tspan> Telarca antes dos 8 anos | <tspan font-weight="700" fill="#2563eb">Atraso:</tspan> Sem telarca aos 13 anos.</text>
   </g>
@@ -37,9 +37,9 @@
   <g class="card-shadow">
     <rect x="520" y="115" width="440" height="150" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5" />
     <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#1d4ed8">PUBERDADE MASCULINA NORMAL (9 A 14 ANOS)</text>
-    <text x="540" y="165" class="node-text">1. <tspan font-weight="700">1º Sinal:</tspan> Aumento do volume testicular <tspan font-weight="700" fill="#1d4ed8">≥ 4 mL</tspan> (G2 orquidômetro de Prader).</text>
+    <text x="540" y="165" class="node-text">1. <tspan font-weight="700">1º Sinal:</tspan> Volume testicular <tspan font-weight="700" fill="#1d4ed8">≥ 4 mL</tspan> (G2 Prader).</text>
     <text x="540" y="185" class="node-text">2. <tspan font-weight="700">2º Sinal:</tspan> Pubarca (Pelos pubianos P2) e aumento do pênis em G3.</text>
-    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Pico de Crescimento (Estirão):</tspan> Ocorre em Tanner <tspan font-weight="700">G4 / tardio</tspan> (10-12 cm/ano).</text>
+    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Estirão:</tspan> Tanner G4 tardio (10-12 cm/ano).<tspan font-weight="700">G4 / tardio</tspan> (10-12 cm/ano).</text>
     <text x="540" y="225" class="node-text">4. Mudança de voz, pelos faciais e espermarca ocorrem em G4-G5.</text>
     <text x="540" y="245" class="node-text">• <tspan font-weight="700" fill="#dc2626">Precoce:</tspan> Testículos ≥ 4mL &lt; 9 anos | <tspan font-weight="700" fill="#2563eb">Atraso:</tspan> Testículos &lt; 4mL aos 14 anos.</text>
   </g>
@@ -80,8 +80,10 @@
   <g class="card-shadow">
     <rect x="40" y="545" width="920" height="175" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="60" y="575" class="node-bold" fill="#0f172a">VARIANTES BENIGNAS DO DESENVOLVIMENTO PUBERAL (CONDUTA EXPECTANTE / SEM TRATAMENTO):</text>
-    <text x="60" y="605" class="node-text">1. <tspan font-weight="700">Telarca Precoce Isolada:</tspan> Surgimento de broto mamário antes dos 8 anos (frequente nos primeiros 2 anos de vida) <tspan font-weight="700" fill="#15803d">SEM outros sinais puberais</tspan>, sem pelos pubianos, sem aceleração de crescimento e com idade óssea compatível com idade cronológica. Conduta: Tranquilizar os pais e acompanhar a cada 3 a 6 meses.</text>
-    <text x="60" y="650" class="node-text">2. <tspan font-weight="700">Adrenarca / Pubarca Precoce Isolada:</tspan> Surgimento de pelos pubianos, odor axilar apócrino adulto ou acne antes dos 8 anos em meninas ou 9 anos em meninos, por maturação precoce da zona reticular da suprarrenal (DHEA-S aumentado para idade, mas 17-OHP normal). Conduta: Afastar HAC de início tardio e acompanhar.</text>
+    <text x="60" y="600" class="node-text">1. <tspan font-weight="700">Telarca Precoce:</tspan> Broto mamário &lt; 8a sem outros sinais, sem avanço de IO ou estirão.</text>
+    <text x="75" y="618" class="node-text">Benigna; conduta expectante e vigilância clínica semestral.</text>
+    <text x="60" y="645" class="node-text">2. <tspan font-weight="700">Adrenarca Isolada:</tspan> Pelos ou odor &lt; 8a (meninas) ou 9a (meninos) por DHEA-S.</text>
+    <text x="75" y="663" class="node-text">Excluir Hiperplasia Adrenal Congênita não clássica (17-OHP normal).</text>
     <text x="60" y="695" class="node-text">3. <tspan font-weight="700">Menarca Precoce Isolada:</tspan> Um ou dois episódios de sangramento vaginal cíclico sem telarca prévia e sem outros sinais. Afastar corpo estranho e abuso.</text>
   </g>
 </svg>

@@ -18,7 +18,7 @@
   <rect x="30" y="88" width="1000" height="60" rx="8" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.8" filter="url(#shadow)"/>
   <text x="50" y="112" font-size="13" font-weight="800" fill="#0f766e">FASE PRÉVIA • ACOLHIMENTO, AMBIÊNCIA &amp; PREPARAÇÃO</text>
   <text x="50" y="132" font-size="11.5" fill="#334155">• Ambiente privativo com biombo • Explicação clara de cada etapa e consentimento • Presença de acompanhante / assistente de enfermagem</text>
-  <text x="730" y="122" font-size="11.5" font-weight="700" fill="#b91c1c">⚠️ Regra de Ouro: Esvaziamento vesical prévio obrigatório!</text>
+  <text x="730" y="122" font-size="11.5" font-weight="700" fill="#b91c1c">⚠️ Regra: Esvaziamento vesical prévio obrigatório!</text>
 
   <!-- Downward arrow from step 0 to step 1 & 2 -->
   <path d="M 530 148 L 530 174" stroke="#0d9488" stroke-width="2" marker-end="url(#arrow)"/>

@@ -77,9 +77,13 @@
     <rect x="40" y="495" width="920" height="225" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="60" y="525" class="node-bold" fill="#0f172a">DIREITOS SEXUAIS E REPRODUTIVOS DO ADOLESCENTE (PARECER CFM Nº 25/2013 &amp; SBP 2024)</text>
 
-    <text x="60" y="555" class="node-text">• <tspan font-weight="700" fill="#15803d">PRESCRIÇÃO DE CONTRACEPÇÃO INDEPENDENTE DOS PAIS:</tspan> O médico pode e deve prescrever métodos contraceptivos (ACO, injetável, implante, DIU, preservativo) para adolescentes que manifestem vida sexual ativa ou desejo de iniciar, mesmo desacompanhados, desde que tenham discernimento e capacidade de autocompreensão.</text>
-    <text x="60" y="605" class="node-text">• <tspan font-weight="700">SIGILO DA ATIVIDADE SEXUAL:</tspan> A atividade sexual consentida entre adolescentes NÃO configura motivo de quebra de sigilo para os pais. Revelar sem consentimento quebra o vínculo e afasta o jovem da assistência em saúde.</text>
-    <text x="60" y="640" class="node-text">• <tspan font-weight="700" fill="#dc2626">ESTUPRO DE VULNERÁVEL (Art. 217-A do Código Penal):</tspan> Prática sexual com menor de 14 anos é considerada vulnerável perante a legislação brasileira. Havendo suspeita de violência, coação ou discrepância de idade/poder, a proteção do vulnerável e notificação aos órgãos de proteção (Conselho Tutelar) são mandatórias.</text>
-    <text x="60" y="685" class="node-text">• <tspan font-weight="700">SAÚDE MENTAL &amp; TELAS:</tspan> Rastrear Dependência de Telas, Cyberbullying e Transtornos de Imagem Corporal (Vigorexia, Anorexia, Bulimia). Orientar sono reparador (8 a 10h) e higiene do sono sem celular na cama.</text>
+    <text x="60" y="548" class="node-text">• <tspan font-weight="700" fill="#15803d">PRESCRIÇÃO DE CONTRACEPÇÃO INDEPENDENTE DOS PAIS:</tspan> O médico pode prescrever métodos contraceptivos</text>
+    <text x="75" y="565" class="node-text">(ACO, injetável, implante, DIU, preservativo) para adolescentes com discernimento, mesmo desacompanhados (CFM 25/2013).</text>
+    <text x="60" y="588" class="node-text">• <tspan font-weight="700">SIGILO DA ATIVIDADE SEXUAL:</tspan> Atividade sexual consentida entre adolescentes NÃO configura quebra de sigilo para os pais.</text>
+    <text x="75" y="605" class="node-text">Revelar sem consentimento quebra o vínculo terapêutico e afasta o jovem do cuidado médico.</text>
+    <text x="60" y="628" class="node-text">• <tspan font-weight="700" fill="#dc2626">ESTUPRO DE VULNERÁVEL (Art. 217-A CP):</tspan> Prática sexual com &lt; 14 anos é vulnerável perante a legislação brasileira.</text>
+    <text x="75" y="645" class="node-text">Havendo suspeita de violência, coação ou discrepância de idade/poder, a notificação ao Conselho Tutelar é mandatória.</text>
+    <text x="60" y="668" class="node-text">• <tspan font-weight="700">SAÚDE MENTAL &amp; TELAS:</tspan> Rastrear Dependência de Telas, Cyberbullying e Transtornos Alimentares (Anorexia/Bulimia).</text>
+    <text x="75" y="685" class="node-text">Orientar sono reparador (8-10h) e higiene do sono sem telas no quarto.</text>
   </g>
 </svg>

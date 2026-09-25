@@ -46,11 +46,11 @@
   <g class="card-shadow">
     <rect x="40" y="285" width="920" height="170" rx="8" fill="#ffffff" stroke="#64748b" stroke-width="1.5" />
     <text x="60" y="310" class="node-bold" fill="#0f172a">RASTREIO LABORATORIAL DE COMORBIDADES (INDICADO SE Z IMC &gt; +2 OU SE Z &gt; +1 COM FATORES DE RISCO)</text>
-    <text x="60" y="340" class="node-text">1. <tspan font-weight="700">Perfil Lipídico Completo:</tspan> Colesterol Total, HDL, LDL e Triglicerídeos (Dislipidemia aterogênica: HDL &lt; 40 mg/dL e Triglicerídeos &gt; 100-130 mg/dL).</text>
-    <text x="60" y="365" class="node-text">2. <tspan font-weight="700">Glicemia de Jejum &amp; HbA1c:</tspan> Rastreio de Pré-Diabetes (Glicemia 100-125 mg/dL ou HbA1c 5.7-6.4%) e DM2 (Glicemia ≥ 126 ou HbA1c ≥ 6.5%).</text>
-    <text x="60" y="390" class="node-text">3. <tspan font-weight="700">Enzimas Hepáticas (ALT/TGP e AST/TGO):</tspan> Rastreio de Doença Hepática Esteatótica Associada à Disfunção Metabólica (MASLD/NASH).</text>
-    <text x="60" y="415" class="node-text">4. <tspan font-weight="700">Pressão Arterial:</tspan> Aferir em todas as consultas usando manguito adequado (largura 40% da circunferência braquial e comprimento 80-100%).</text>
-    <text x="60" y="440" class="node-text">5. <tspan font-weight="700">Exclusão de Causa Endócrina/Genética:</tspan> TSH/T4L (hipotireoidismo), Cortisol livre urinário (Cushing se baixa estatura + obesidade), Cariótipo/painel genético.</text>
+    <text x="60" y="340" class="node-text">1. <tspan font-weight="700">Perfil Lipídico:</tspan> Colesterol Total, HDL, LDL e Triglicerídeos (Dislipidemia: HDL &lt; 40 mg/dL e TG &gt; 100-130 mg/dL).</text>
+    <text x="60" y="365" class="node-text">2. <tspan font-weight="700">Glicemia &amp; HbA1c:</tspan> Pré-Diabetes (Glicemia 100-125 ou HbA1c 5,7-6,4%) e DM2 (Glicemia ≥ 126 ou HbA1c ≥ 6,5%).</text>
+    <text x="60" y="390" class="node-text">3. <tspan font-weight="700">Enzimas Hepáticas (ALT/AST):</tspan> Rastreio de Doença Hepática Esteatótica Metabólica (MASLD/Esteatose).</text>
+    <text x="60" y="415" class="node-text">4. <tspan font-weight="700">Pressão Arterial:</tspan> Aferir em todas as consultas com manguito adequado (largura 40% e comprimento 80-100%).</text>
+    <text x="60" y="440" class="node-text">5. <tspan font-weight="700">Causas Secundárias:</tspan> TSH/T4L (hipotireoidismo), Cortisol livre (Cushing se baixa estatura), Painel genético.</text>
   </g>
 
   <!-- Management Protocol 5-2-1-0 -->
@@ -80,8 +80,8 @@
     <text x="850" y="585" text-anchor="middle" class="node-text">achocolatados e chás doces.</text>
 
     <text x="60" y="630" class="node-bold" fill="#0f172a">FARMACOTERAPIA &amp; CONDUTA AVANÇADA NO ADOLESCENTE (SBP 2024):</text>
-    <text x="60" y="655" class="node-text">• Indicada apenas após falha documentada de mudança de estilo de vida intensiva em &gt; 12 anos com Obesidade Grave ou comorbidades graves.</text>
-    <text x="60" y="675" class="node-text">• Fármacos aprovados pela ANVISA em adolescentes ≥ 12 anos: <tspan font-weight="700">Liraglutida</tspan> (análogo GLP-1 3.0 mg/dia SC) e <tspan font-weight="700">Orlistate</tspan> (120 mg VO junto às refeições).</text>
-    <text x="60" y="695" class="node-text">• <tspan font-weight="700">Cirurgia Bariátrica:</tspan> Apenas para adolescentes com maturidade óssea (Tanner 4-5) e IMC &gt; 35 com comorbidades graves ou IMC &gt; 40 refratários.</text>
+    <text x="60" y="655" class="node-text">• Indicada após falha de MEV intensiva em &gt; 12 anos com Obesidade Grave (Z &gt; +3) ou comorbidades ativas.</text>
+    <text x="60" y="675" class="node-text">• <tspan font-weight="700">Fármacos ANVISA (≥ 12 anos):</tspan> Liraglutida (GLP-1 até 3,0 mg/dia SC) ou Orlistate (120 mg VO nas refeições).</text>
+    <text x="60" y="695" class="node-text">• <tspan font-weight="700">Cirurgia Bariátrica:</tspan> Pós-maturidade óssea (Tanner 4-5) e IMC &gt; 35 com comorbidade grave ou IMC &gt; 40 refratários.</text>
   </g>
 </svg>

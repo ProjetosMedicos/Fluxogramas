@@ -88,7 +88,7 @@
     <text x="12" y="230" fill="#fde047" font-size="10">→ Repetir em 1 hora</text>
     <text x="12" y="250" fill="#cbd5e1" font-size="10">• Se persistir alterado:</text>
     <text x="12" y="270" fill="#fca5a5" font-size="11" font-weight="800">→ ECOCARDIOGRAMA em até 24h</text>
-    <text x="12" y="295" fill="#94a3b8" font-size="10">Rastreia Cardiopatias Congênitas Críticas Canal-Dependentes</text>
+    <text x="12" y="295" fill="#94a3b8" font-size="10">Cardiopatias Críticas (PCA-dep.)</text>
   </g>
 
   <g transform="translate(275, 530)">
@@ -106,7 +106,7 @@
     <text x="12" y="213" fill="#cbd5e1" font-size="10">• Leucocoria (reflexo branco),</text>
     <text x="12" y="230" fill="#cbd5e1" font-size="10">assimetria ou manchas escuras</text>
     <text x="12" y="255" fill="#fca5a5" font-size="11" font-weight="800">→ ENCAMINHAR OFTALMOLOGISTA IMEDIATO</text>
-    <text x="12" y="295" fill="#94a3b8" font-size="10">Diagnóstico precoce de Catarata Congênita, Glaucoma e Retinoblastoma</text>
+    <text x="12" y="295" fill="#94a3b8" font-size="9.5">Catarata, Glaucoma e Retinoblastoma</text>
   </g>
 
   <g transform="translate(510, 530)">
@@ -117,11 +117,11 @@
     <text x="12" y="75" fill="#f8fafc" font-size="11" font-weight="700">Sem Indicadores de Risco:</text>
     <text x="12" y="93" fill="#94a3b8" font-size="11">• Emissões Otoacústicas Evocadas (EOAE)</text>
     <text x="12" y="120" fill="#f8fafc" font-size="11" font-weight="700">Com Indicadores de Risco:</text>
-    <text x="12" y="138" fill="#cbd5e1" font-size="10">(UTIN &gt; 5 dias, sepse, hiperbilirrubinemia com exsanguíneo, TORCH, ototóxicos):</text>
+    <text x="12" y="138" fill="#cbd5e1" font-size="9">(UTIN &gt; 5d, sepse, TORCH):</text>
     <text x="12" y="170" fill="#fde047" font-size="11" font-weight="800">• Realizar PEATE / BERA</text>
     <text x="12" y="195" fill="#f87171" font-size="11" font-weight="700">Resultado "Falha":</text>
     <text x="12" y="213" fill="#cbd5e1" font-size="10">• Reavaliar em até 30 dias</text>
-    <text x="12" y="235" fill="#fca5a5" font-size="11" font-weight="800">→ Se persistir falha: Diagnóstico audiológico aos 3 meses e prótese aos 6 meses</text>
+    <text x="12" y="235" fill="#fca5a5" font-size="11" font-weight="800">→ Falha: PEATE / BERA</text>
   </g>
 
   <g transform="translate(745, 530)">

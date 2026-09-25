@@ -55,8 +55,8 @@
     <text x="540" y="260" font-size="12" font-weight="700" fill="#9f1239">• Características Clínicas &amp; Red Flags:</text>
     <text x="550" y="278" font-size="11" fill="#be123c">Início tardio (qualquer fase do menacme, frequentemente > 25 anos).</text>
     <text x="550" y="296" font-size="11" fill="#be123c">Dor progressiva, com piora ao longo dos anos, persistindo após o fluxo.</text>
-    <text x="550" y="314" font-size="11" fill="#be123c">Sintomas associados: Dispareunia de profundidade, disúria/disquezia catamenial.</text>
-    <text x="550" y="332" font-size="11" fill="#be123c">Infertilidade conjugal associada e/ou sangramento uterino volumoso (SUA).</text>
+    <text x="550" y="314" font-size="11" fill="#be123c">Sintomas: Dispareunia profunda, disúria/disquezia catamenial.</text>
+    <text x="550" y="332" font-size="11" fill="#be123c">Infertilidade associada e/ou sangramento volumoso (SUA).</text>
 
     <line x1="540" y1="350" x2="920" y2="350" stroke="#fecdd3" stroke-width="1"/>
     <text x="540" y="375" font-size="12" font-weight="800" fill="#9f1239">ETIOLOGIAS ORGÂNICAS PRINCIPAIS:</text>
@@ -70,7 +70,7 @@
     <text x="555" y="520" font-size="10.5" fill="#334155">• USG-TV com mapeamento especializado para endometriose / RM.</text>
     <text x="555" y="538" font-size="10.5" fill="#334155">• Histeroscopia diagnóstica se suspeita intrauterina (pólipo/mioma).</text>
     <text x="555" y="556" font-size="10.5" fill="#334155">• Tratamento etiológico: Dienogeste 2 mg/d, DIU-LNG 52 mg,</text>
-    <text x="555" y="574" font-size="10.5" font-weight="700" fill="#0f172a">• Videolaparoscopia cirúrgica indicada nos casos refratários ou lesões avançadas.</text>
+    <text x="555" y="574" font-size="10.5" font-weight="700" fill="#0f172a">• Videolaparoscopia se refratário ou lesões avançadas.</text>
     
 
   <!-- Footer -->

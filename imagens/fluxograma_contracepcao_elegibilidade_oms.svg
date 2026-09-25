@@ -12,7 +12,7 @@
   <rect x="0" y="0" width="1020" height="70" fill="#0f172a"/>
   <text x="30" y="32" fill="#38bdf8" font-size="12" font-weight="700" letter-spacing="0.1em">PORTAL CLÍNICO FEBRASGO • DIRETRIZES OFICIAIS</text>
   <text x="30" y="54" fill="#ffffff" font-size="18" font-weight="800">CRITÉRIOS DE ELEGIBILIDADE MÉDICA DA OMS PARA CONTRACEPÇÃO</text>
-  <text x="990" y="45" fill="#94a3b8" font-size="13" font-weight="500" text-anchor="end">FEBRASGO Cap. 70 a 76 • Organização Mundial da Saúde (MEC OMS 5ª Ed.)</text>
+  <text x="990" y="32" fill="#94a3b8" font-size="11" font-weight="500" text-anchor="end">FEBRASGO Cap. 70 a 76 • Organização Mundial da Saúde (MEC OMS 5ª Ed.)</text>
 
   <!-- Content -->
   
@@ -62,14 +62,14 @@
     <text x="720" y="363" font-size="10.5" fill="#334155">• Cirrose hepática descompensada grave</text>
     <text x="720" y="381" font-size="10.5" fill="#334155">• Adenoma ou carcinoma hepatocelular</text>
     <text x="720" y="399" font-size="10.5" fill="#334155">• Lúpus com Anticorpo Antifosfolípide (+)</text>
-    <text x="720" y="417" font-size="10.5" fill="#334155">• Valvulopatia com fibrilação atrial / hipertensão pulmonar</text>
+    <text x="720" y="417" font-size="10.5" fill="#334155">• Valvulopatia com FA ou hipertensão pulmonar</text>
 
     <!-- Linha apontando para Alternativas -->
     <path d="M 510 475 L 510 500" stroke="#059669" stroke-width="2" marker-end="url(#arrow)"/>
 
     <!-- Caixa Inferior: Alternativas Seguras -->
     <rect x="40" y="500" width="940" height="135" rx="8" fill="#f0fdf4" stroke="#16a34a" stroke-width="2" filter="url(#shadow)"/>
-    <text x="510" y="525" font-size="13" font-weight="800" fill="#15803d" text-anchor="middle">MÉTODOS SEGUROS (CATEGORIA 1 E 2) DIANTE DE CONTRAINDICAÇÃO AO ESTROGÊNIO</text>
+    <text x="510" y="525" font-size="11" font-weight="800" fill="#15803d" text-anchor="middle">MÉTODOS SEGUROS (CATEGORIA 1 E 2) DIANTE DE CONTRAINDICAÇÃO AO ESTROGÊNIO</text>
 
     <text x="70" y="555" font-size="11" font-weight="700" fill="#166534">1. Progestagênio Isolado Oral (POPs):</text>
     <text x="80" y="573" font-size="10.5" fill="#334155">Desogestrel 75 mcg/dia (janela de 12h) ou Drospirenona 4 mg (janela de 24h, neutro cardiovascular).</text>

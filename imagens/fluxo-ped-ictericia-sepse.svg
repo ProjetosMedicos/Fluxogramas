@@ -59,11 +59,11 @@
   <text x="555" y="355" fill="#cbd5e1" font-size="11">• Resolução espontânea em até 7 a 10 dias (14 dias em prematuro)</text>
   <text x="555" y="372" fill="#cbd5e1" font-size="11">• RN em excelente estado geral, ganho ponderal adequado</text>
   <text x="545" y="400" fill="#fde047" font-size="12" font-weight="700">2. Icterícia do Aleitamento Materno (Precoce):</text>
-  <text x="555" y="418" fill="#cbd5e1" font-size="11">• Privação calórica por pega inadequada → Aumento da circulação entero-hepática</text>
+  <text x="555" y="418" fill="#cbd5e1" font-size="9.5">• Pega ineficaz → ↑ circulação entero-hepática</text>
   <text x="545" y="445" fill="#fde047" font-size="12" font-weight="700">3. Icterícia do Leite Materno (Tardia):</text>
-  <text x="555" y="463" fill="#cbd5e1" font-size="11">• Surge após a 1ª semana e dura semanas (substâncias no leite inibem a glicuronidação)</text>
+  <text x="555" y="463" fill="#cbd5e1" font-size="9.5">• Pós-1ª sem: fatores do leite inibem conjugação</text>
   <text x="555" y="480" fill="#94a3b8" font-size="10">Conduta: Manter amamentação! Não suspender o aleitamento materno</text>
-  <text x="545" y="492" fill="#f87171" font-size="10" font-weight="700">*Se Colestase (BD &gt; 1,0 mg/dL): Investigar Atresia de Vias Biliares (Cirurgia de Kasai)</text>
+  <text x="545" y="492" fill="#f87171" font-size="9.5" font-weight="700">*Colestase (BD &gt; 1,0): Investigar Atresia Vias Biliares (Kasai)</text>
 
   <!-- 2. Tratamento da Hiperbilirrubinemia: Fototerapia e Exsanguíneo -->
   <rect x="40" y="530" width="920" height="230" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" filter="url(#shadow)"/>
@@ -72,7 +72,7 @@
   <g transform="translate(60, 580)">
     <rect x="0" y="0" width="410" height="160" rx="8" fill="#082f49" stroke="#0284c7" stroke-width="1.5"/>
     <text x="205" y="26" text-anchor="middle" fill="#7dd3fc" font-size="13" font-weight="800">FOTOTERAPIA DE ALTA EFICÁCIA (LEDs Azuis)</text>
-    <text x="15" y="50" fill="#f8fafc" font-size="11">• Indicação guiada pelas curvas de Bhutani por horas de vida e fatores de risco</text>
+    <text x="15" y="50" fill="#f8fafc" font-size="10">• Guiada por curvas de Bhutani (h de vida)</text>
     <text x="15" y="70" fill="#cbd5e1" font-size="11">• Irradiância adequada: ≥ 30 µW/cm²/nm em espectro 460-490 nm</text>
     <text x="15" y="90" fill="#cbd5e1" font-size="11">• Máxima superfície corporal exposta (RN despido, apenas fralda)</text>
     <text x="15" y="110" fill="#fde047" font-size="11" font-weight="700">• Proteção ocular opaca obrigatória (risco de lesão retiniana)</text>
@@ -83,12 +83,12 @@
   <g transform="translate(510, 580)">
     <rect x="0" y="0" width="430" height="160" rx="8" fill="#4c0519" stroke="#dc2626" stroke-width="1.5"/>
     <text x="215" y="26" text-anchor="middle" fill="#fca5a5" font-size="13" font-weight="800">EXSANGUINOTRANSFUSÃO &amp; IMUNOGLOBULINA</text>
-    <text x="15" y="50" fill="#f8fafc" font-size="11" font-weight="700">• Exsanguinotransfusão total (2x volemia = 160 mL/kg):</text>
+    <text x="15" y="50" fill="#f8fafc" font-size="9.5" font-weight="700">• Exsanguinotransfusão (2x volemia):</text>
     <text x="25" y="70" fill="#cbd5e1" font-size="11">- Falha da fototerapia intensiva (subida mantida de BT)</text>
-    <text x="25" y="88" fill="#cbd5e1" font-size="11">- Sinais de encefalopatia aguda (letargia, hipertonia, opistótono, choro agudo)</text>
+    <text x="25" y="88" fill="#cbd5e1" font-size="11">- Sinais encefalopatia (hipertonia/opistótono)</text>
     <text x="25" y="106" fill="#fecaca" font-size="11" font-weight="700">- Relação BT/Albumina crítica</text>
     <text x="15" y="128" fill="#e9d5ff" font-size="11" font-weight="700">• Imunoglobulina Humana Endovenosa (IGIV):</text>
-    <text x="25" y="146" fill="#ffffff" font-size="11">0,5 a 1 g/kg IV em 2 horas na isoimunização Rh/ABO (reduz indicação de exsanguíneo)</text>
+    <text x="25" y="146" fill="#ffffff" font-size="11">0,5-1 g/kg IV em 2h na isoimunização</text>
   </g>
 
   <!-- 3. Sepse Neonatal: Precoce vs Tardia -->
@@ -114,11 +114,11 @@
     <rect x="0" y="0" width="430" height="240" rx="8" fill="#0f172a" stroke="#a855f7" stroke-width="1.5"/>
     <text x="215" y="26" text-anchor="middle" fill="#c084fc" font-size="13" font-weight="800">SEPSE NEONATAL TARDIA (&gt; 48 a 72 HORAS)</text>
     <text x="15" y="50" fill="#f8fafc" font-size="11" font-weight="700">Origem: Infecção nosocomial em UTIN ou comunitária</text>
-    <text x="15" y="70" fill="#cbd5e1" font-size="11">• Principais Agentes: Staphylococcus coagulase-negativa (S. epidermidis), Staphylococcus aureus, Gram-negativos multirresistentes (Klebsiella, Pseudomonas) e Candida sp.</text>
+    <text x="15" y="70" fill="#cbd5e1" font-size="9.5">• Agentes: S. epidermidis, S. aureus, GNR e Candida</text>
     <text x="15" y="110" fill="#d8b4fe" font-size="11" font-weight="700">Fatores de Risco:</text>
     <text x="15" y="128" fill="#cbd5e1" font-size="11">Cateter venoso central, ventilação mecânica, NPT prolongada</text>
     <text x="15" y="155" fill="#38bdf8" font-size="11" font-weight="800">ESQUEMA EMPÍRICO HOSPITALAR:</text>
-    <text x="15" y="175" fill="#a7f3d0" font-size="12" font-weight="800">OXACILINA (ou VANCOMICINA) + AMICACINA (ou CEFEPIMA / MEROPENEM)</text>
+    <text x="15" y="175" fill="#a7f3d0" font-size="10" font-weight="800">OXACILINA/VANCO + AMICACINA/CEFEPIMA</text>
     <text x="15" y="200" fill="#cbd5e1" font-size="11">Adicionar Anfotericina B se suspeita de infecção fúngica</text>
     <text x="15" y="225" fill="#fde047" font-size="10" font-weight="700">PUNÇÃO LOMBAR OBRIGATÓRIA na sepse tardia para descartar Meningite</text>
   </g>

@@ -108,10 +108,10 @@
   <g class="card-shadow">
     <rect x="50" y="525" width="900" height="180" rx="10" fill="#ffffff" stroke="#cbd5e1" stroke-width="1.5" />
     <text x="70" y="555" class="node-bold" fill="#0f172a">ROTEIRO PROPEDÊUTICO LABORATORIAL DE 1ª LINHA NA BAIXA ESTATURA PATOLÓGICA (SBP 2024)</text>
-    <text x="70" y="585" class="node-text">1. <tspan font-weight="700">Triagem Geral:</tspan> Hemograma completo, VHS/PCR, Creatinina, Eletrólitos (Na, K, Ca, P, Fostatase Alcalina), Gasometria venosa (Acidose Tubular Renal).</text>
-    <text x="70" y="610" class="node-text">2. <tspan font-weight="700">Rastreio de Má-Absorção / Doença Celíaca:</tspan> Antitransglutaminase tecidual IgA + Dosagem de IgA total (frequente causa insidiosa de baixa estatura sem diarreia).</text>
-    <text x="70" y="635" class="node-text">3. <tspan font-weight="700">Endocrinológico:</tspan> TSH e T4 livre (hipotireoidismo congênito/adquirido), IGF-1 e IGFBP-3 (avaliação do eixo Somatotrófico GH/IGF-1).</text>
-    <text x="70" y="660" class="node-text">4. <tspan font-weight="700">Genético Obrigatório:</tspan> Cariótipo de sangue periférico com banda G (46,XX vs mosaicismo) <tspan font-weight="700" fill="#dc2626">em TODA MENINA com baixa estatura sem causa evidente</tspan> (Turner 45,X).</text>
+    <text x="70" y="585" class="node-text">1. <tspan font-weight="700">Triagem Geral:</tspan> Hemograma, VHS/PCR, Creatinina, Eletrólitos (Na, K, Ca, P, FA), Gasometria venosa (rastreio de ATR).</text>
+    <text x="70" y="610" class="node-text">2. <tspan font-weight="700">Rastreio de Doença Celíaca:</tspan> Anti-tTG IgA + IgA total (causa insidiosa de baixa estatura sem diarreia clássica).</text>
+    <text x="70" y="635" class="node-text">3. <tspan font-weight="700">Endocrinológico:</tspan> TSH e T4L (hipotireoidismo), IGF-1 e IGFBP-3 (avaliação do eixo GH/IGF-1).</text>
+    <text x="70" y="660" class="node-text">4. <tspan font-weight="700">Cariótipo Obrigatório:</tspan> Banda G <tspan font-weight="700" fill="#dc2626">em TODA MENINA com baixa estatura sem causa evidente</tspan> (rastreio de Turner 45,X).</text>
     <text x="70" y="685" class="node-text">5. <tspan font-weight="700">Alvo Genético (Tanner):</tspan> Meninos: [Altura Pai + (Altura Mãe + 13)] / 2 ± 5 cm | Meninas: [(Altura Pai - 13) + Altura Mãe] / 2 ± 5 cm.</text>
   </g>
 </svg>

@@ -36,7 +36,7 @@
     <text x="740" y="140" text-anchor="middle" class="node-bold" fill="#b45309">OS 5 GRUPOS ALIMENTARES OBRIGATÓRIOS NO PRATO</text>
     <text x="540" y="165" class="node-text">1. <tspan font-weight="700">Cereais ou Tubérculos:</tspan> Arroz, batata, mandioca, inhame, milho.</text>
     <text x="540" y="185" class="node-text">2. <tspan font-weight="700">Leguminosas:</tspan> Feijão (carioca/preto), lentilha, grão-de-bico, ervilha.</text>
-    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Carnes e Ovos:</tspan> Frango, carne bovina, peixe, vísceras (fígado), ovo inteiro.</text>
+    <text x="540" y="205" class="node-text">3. <tspan font-weight="700">Carnes e Ovos:</tspan> Frango, boi, peixe e ovos.</text>
     <text x="540" y="225" class="node-text">4. <tspan font-weight="700">Legumes e Verduras:</tspan> Cenoura, abobrinha, chuchu, folhas verdes escuras.</text>
     <text x="540" y="245" class="node-text">5. <tspan font-weight="700">Frutas Frescas:</tspan> In natura nos lanches (amassadas ou em pedaços).</text>
   </g>
@@ -79,8 +79,8 @@
     <text x="60" y="525" class="node-text">🚫 <tspan font-weight="700">AÇÚCAR E PREPARAÇÕES ADAPTADAS:</tspan> Zero açúcar adicionado até 2 anos completos (inclui mascavo, melado, calda, doces, biscoitos e sucos artificiais).</text>
     <text x="60" y="550" class="node-text">🚫 <tspan font-weight="700">MEL DE ABELHA:</tspan> Contraindicado formalmente antes de 1 ano de vida devido ao risco fatal de <tspan font-weight="700" fill="#dc2626">Botulismo Intestinal Infantil</tspan> (<tspan font-style="italic">Clostridium botulinum</tspan>).</text>
     <text x="60" y="575" class="node-text">🚫 <tspan font-weight="700">SUCO DE FRUTAS (MESMO NATURAL):</tspan> Não recomendado no 1º ano de vida (perda de fibras, sobrecarga de frutose livre). Priorizar fruta in natura!</text>
-    <text x="60" y="600" class="node-text">🚫 <tspan font-weight="700">LEITE DE VACA INTEGRAL:</tspan> Não recomendado como fonte láctea principal antes de 12 meses (micro-hemorragias digestivas, anemia e sobrecarga renal de solutos).</text>
-    <text x="60" y="625" class="node-text">🚫 <tspan font-weight="700">ALIMENTOS DE ALTO RISCO DE ENGASGO:</tspan> Uva inteira, tomate-cereja, nozes/amendoim inteiros, salsicha cortada em rodelas (devem ser cortados longitudinalmente).</text>
+    <text x="60" y="600" class="node-text">🚫 <tspan font-weight="700">LEITE DE VACA INTEGRAL:</tspan> Proibido como leite principal antes de 12 meses (risco anemia/renal).</text>
+    <text x="60" y="625" class="node-text">🚫 <tspan font-weight="700">RISCO DE ENGASGO:</tspan> Uva, tomate-cereja, nozes e salsicha inteiros (cortar longitudinalmente).</text>
 
     <text x="60" y="660" class="node-bold" fill="#0f172a">INTRODUÇÃO DE ALERGÊNICOS (OVO, PEIXE, AMENDOIM, GLÚTEN):</text>
     <text x="60" y="685" class="node-text">• <tspan font-weight="700" fill="#15803d">Janela Imunológica Oportuna:</tspan> Devem ser introduzidos <tspan font-weight="700">ENTRE 6 E 9 MESES</tspan>, mesmo em bebês com história familiar de atopia.</text>

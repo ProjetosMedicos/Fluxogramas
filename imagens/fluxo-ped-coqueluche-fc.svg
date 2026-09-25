@@ -53,24 +53,24 @@
   <g class="card-shadow">
     <rect x="60" y="230" width="420" height="150" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5" />
     <text x="270" y="252" text-anchor="middle" class="node-bold" fill="#1e40af">FASES CLÍNICAS &amp; DIAGNÓSTICO DA COQUELUCHE</text>
-    <text x="270" y="272" text-anchor="middle" class="node-text">• Fase Catarral (1-2 sem): coriza, tosse seca, febre baixa (fase de maior contágio)</text>
-    <text x="270" y="290" text-anchor="middle" class="node-text">• Fase Paroxística (2-6 sem): acessos em salva seguidos de guincho inspiratório e vômitos</text>
+    <text x="270" y="272" text-anchor="middle" class="node-text">• Fase Catarral (1-2 sem): coriza, tosse seca, febre baixa</text>
+    <text x="270" y="290" text-anchor="middle" class="node-text">• Fase Paroxística (2-6 sem): acessos com guincho e vômitos</text>
     <text x="270" y="308" text-anchor="middle" class="node-text">• Alerta em &lt; 3 meses: apneia, cianose e engasgo sem guincho audível!</text>
     <text x="270" y="326" text-anchor="middle" class="node-text">• Laboratório: Hiperleucocitose importante (&gt; 20.000-50.000) com Linfocitose absoluta</text>
     <text x="270" y="344" text-anchor="middle" class="node-text">• Confirmação: PCR de aspirado/swab de nasofaringe em meio de Dacron/Rayon</text>
-    <text x="270" y="362" text-anchor="middle" class="node-bold">• Tratamento: Azitromicina 10 mg/kg/dia por 5 dias (todos os contatos domiciliares)</text>
+    <text x="270" y="375" text-anchor="middle" class="node-bold">• Azitromicina 10 mg/kg/d 5d (tratar contatos)</text>
   </g>
 
   <!-- Fibrose cística diagnóstico e tto -->
   <g class="card-shadow">
     <rect x="520" y="230" width="420" height="150" rx="10" fill="#fdf4ff" stroke="#a21caf" stroke-width="1.5" />
     <text x="730" y="252" text-anchor="middle" class="node-bold" fill="#701a75">INVESTIGAÇÃO DO TESTE DO SUOR (SBP 2024)</text>
-    <text x="730" y="272" text-anchor="middle" class="node-text">• Triagem Neonatal: Tripsina Imunorreativa (IRT) elevada em 2 dosagens (até 30 dias)</text>
-    <text x="730" y="290" text-anchor="middle" class="node-text">• Padrão-Ouro Diagnóstico: Dosagem de Cloro no Suor por iontoforese (Gibson-Cooke):</text>
+    <text x="730" y="272" text-anchor="middle" class="node-text">• Triagem Neonatal: IRT elevada em 2 dosagens (&lt; 30 dias)</text>
+    <text x="730" y="290" text-anchor="middle" class="node-text">• Padrão-Ouro: Cloro no Suor Gibson-Cooke (Cl ≥ 60 mEq/L)</text>
     <text x="730" y="308" text-anchor="middle" class="node-text">  - Normal: Cloreto &lt; 30 mEq/L</text>
     <text x="730" y="326" text-anchor="middle" class="node-text">  - Limítrofe: 30 a 59 mEq/L (repetir teste e fazer painel genético CFTR)</text>
     <text x="730" y="344" text-anchor="middle" class="node-bold">  - Positivo: Cloreto ≥ 60 mEq/L em 2 amostras independentes</text>
-    <text x="730" y="362" text-anchor="middle" class="node-text">• Mutações mais frequentes: F508del (Classe II - defeito de processamento protéico)</text>
+    <text x="730" y="375" text-anchor="middle" class="node-text">• Mutações mais frequentes: F508del (Classe II - defeito de processamento protéico)</text>
   </g>
 
   <path d="M 270 380 L 270 435" class="edge" />

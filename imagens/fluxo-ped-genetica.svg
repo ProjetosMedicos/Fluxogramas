@@ -72,11 +72,11 @@
   <text x="460" y="424" fill="#0f172a" font-size="8.5" font-family="system-ui, sans-serif">• Tratamento: Hidrocortisona (glicocorticoide) + Fludrocortisona (mineralocorticoide).</text>
 
   <!-- Outros Erros Inatos da Triagem -->
-  <rect x="55" y="450" width="810" height="135" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
-  <text x="65" y="470" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Outros Erros Inatos &amp; Doenças Rastreadas no Programa Nacional de Triagem Neonatal (PNTN):</text>
-  <text x="65" y="489" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Fenilcetonúria (PKU):</tspan> Deficiência da fenilalanina hidroxilase; acúmulo de fenilalanina neurotóxica. Cabelos claros, odor de mofo/camundongo na urina. Tratamento: Dieta isenta de fenilalanina.</text>
-  <text x="65" y="507" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Doença Falciforme &amp; Hemoglobinopatias:</tspan> Eletroforese de hemoglobina (padrões FS, FAS, FSC). Início imediato de profilaxia com Penicilina oral aos 2 meses e imunização antipneumocócica.</text>
-  <text x="65" y="525" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Fibrose Cística:</tspan> Dosagem de Tripsina Imunorreativa (IRT) em duas amostras antes dos 30 dias de vida; confirmatório com Teste do Suor de Gibson-Cooke (Cloro ≥ 60 mEq/L).</text>
-  <text x="65" y="543" fill="#334155" font-size="9.5" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Deficiência de Biotinidase:</tspan> Convulsões, hipotonia, alopecia e dermatite eczematosa. Tratamento imediato com Biotina oral.</text>
-  <text x="65" y="561" fill="#7c3aed" font-size="9.5" font-weight="bold" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Toxoplasmose Congênita:</tspan> IgM específica no papel filtro para início de sulfadiazina + pirimetamina + ácido folínico.</text>
+  <rect x="55" y="450" width="810" height="150" rx="5" fill="#f8fafc" stroke="#cbd5e1" />
+  <text x="65" y="468" fill="#0f172a" font-size="10" font-weight="bold" font-family="system-ui, sans-serif">Outros Erros Inatos &amp; Doenças Rastreadas no Programa Nacional de Triagem Neonatal (PNTN):</text>
+  <text x="65" y="486" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Fenilcetonúria (PKU):</tspan> Deficiência de fenilalanina hidroxilase; acúmulo neurotóxico. Cabelos claros, urina odor mofo. Dieta sem fenilalanina.</text>
+  <text x="65" y="504" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Doença Falciforme:</tspan> Eletroforese de Hb (padrão FS, FSC). Profilaxia com Penicilina oral aos 2 meses e vacina pneumocócica conjugada.</text>
+  <text x="65" y="522" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Fibrose Cística:</tspan> IRT em 2 amostras &lt; 30 dias; confirmatório com Teste do Suor Gibson-Cooke (Cloro ≥ 60 mEq/L).</text>
+  <text x="65" y="540" fill="#334155" font-size="8.8" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Deficiência de Biotinidase:</tspan> Convulsões, hipotonia, alopecia e dermatite. Tratamento precoce com Biotina oral.</text>
+  <text x="65" y="558" fill="#7c3aed" font-size="8.8" font-weight="bold" font-family="system-ui, sans-serif">• <tspan font-weight="bold">Toxoplasmose Congênita:</tspan> IgM no teste do pezinho → Início imediato de sulfadiazina + pirimetamina + folínico.</text>
 </svg>

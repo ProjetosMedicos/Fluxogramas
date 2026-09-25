@@ -92,6 +92,6 @@
     <text x="90" y="630" class="node-text">1. <tspan font-weight="700">Temperatura Ambiente:</tspan> Máximo 2 horas (SBP/Ministério da Saúde recomendam resfriar imediatamente).</text>
     <text x="90" y="655" class="node-text">2. <tspan font-weight="700">Geladeira (temperatura &lt; 5°C):</tspan> Até <tspan font-weight="700" fill="#15803d">12 HORAS</tspan> para uso domiciliar (se doação ao BLH, congelar de imediato).</text>
     <text x="90" y="680" class="node-text">3. <tspan font-weight="700">Freezer / Congelador (-18°C):</tspan> Até <tspan font-weight="700" fill="#15803d">15 DIAS</tspan>.</text>
-    <text x="70" y="710" class="node-text">• <tspan font-weight="700">Descongelamento &amp; Aquecimento:</tspan> Descongelar em geladeira ou banho-maria desligado (água morna). <tspan font-weight="700" fill="#dc2626">PROIBIDO micro-ondas ou ferver</tspan> (destrói imunoglobulinas).</text>
+    <text x="70" y="710" class="node-text">• <tspan font-weight="700">Descongelamento:</tspan> Em geladeira ou banho-maria desligado. <tspan font-weight="700" fill="#dc2626">PROIBIDO ferver</tspan> (destrói IgA).</text>
   </g>
 </svg>

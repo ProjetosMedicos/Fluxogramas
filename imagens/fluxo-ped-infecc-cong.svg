@@ -81,7 +81,7 @@
     <text x="10" y="68" fill="#ffffff" font-size="11">• RN assintomático com VDRL não reagente</text>
     <text x="10" y="98" fill="#a7f3d0" font-size="11" font-weight="700">CONDUTA PRECONIZADA:</text>
     <text x="10" y="120" fill="#a7f3d0" font-size="11" font-weight="800">• Se seguimento ambulatorial garantido:</text>
-    <text x="20" y="138" fill="#cbd5e1" font-size="11">Apenas seguimento clínico e VDRL no 1º, 3º, 6º, 12º e 18º mês</text>
+    <text x="20" y="138" fill="#cbd5e1" font-size="11">Seguimento clínico e VDRL seriado</text>
     <text x="10" y="170" fill="#fde047" font-size="11" font-weight="800">• Se seguimento incerto / mãe tratada inadequada:</text>
     <text x="20" y="192" fill="#ffffff" font-size="11" font-weight="800">Penicilina Benzatina IM 50.000 UI/kg</text>
     <text x="20" y="210" fill="#cbd5e1" font-size="11">em dose única (após triagem negativa)</text>
@@ -99,7 +99,7 @@
       <text x="10" y="50" fill="#fca5a5" font-size="11" font-weight="700">Tríade de Sabin Clássica:</text>
       <text x="10" y="70" fill="#ffffff" font-size="11">1. Coriorretinite (80%)</text>
       <text x="10" y="88" fill="#ffffff" font-size="11">2. Hidrocefalia obstrutiva</text>
-      <text x="10" y="106" fill="#fef08a" font-size="11" font-weight="700">3. Calcificações cerebrais DIFUSAS no parênquima</text>
+      <text x="10" y="106" fill="#fef08a" font-size="9.5" font-weight="700">3. Calcificações DIFUSAS</text>
       <text x="10" y="130" fill="#94a3b8" font-size="10">(+ convulsões e retardo mental)</text>
       <text x="10" y="155" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
       <text x="10" y="173" fill="#cbd5e1" font-size="11">IgM e IgA específicos positivos no RN (IgG materno atravessa)</text>
@@ -107,56 +107,56 @@
       <text x="10" y="225" fill="#ffffff" font-size="11">• Sulfadiazina 100 mg/kg/dia</text>
       <text x="10" y="245" fill="#ffffff" font-size="11">• Pirimetamina 1 mg/kg/dia</text>
       <text x="10" y="265" fill="#ffffff" font-size="11">• Ácido Folínico 10 mg 3x/sem</text>
-      <text x="10" y="288" fill="#cbd5e1" font-size="10">+ Corticoide (Prednisona 1 mg/kg/dia) se coriorretinite em atividade ou PT no LCR &gt; 1 g/dL</text>
+      <text x="10" y="288" fill="#cbd5e1" font-size="9">+ Prednisona se coriorretinite</text>
     </g>
 
     <!-- 2. Citomegalovírus (CMV) -->
     <g transform="translate(245, 50)">
       <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#8b5cf6" stroke-width="1.5"/>
       <text x="102" y="24" text-anchor="middle" fill="#a78bfa" font-size="12" font-weight="800">CITOMEGALOVÍRUS (CMV)</text>
-      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Causa mais comum de infecção congênita e surdez neurossensorial</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Causa comum de surdez congênita</text>
       <text x="10" y="90" fill="#fde047" font-size="11" font-weight="700">Quadro Clínico:</text>
       <text x="10" y="108" fill="#ffffff" font-size="11">• Microcefalia</text>
-      <text x="10" y="126" fill="#fef08a" font-size="11" font-weight="800">• Calcificações cerebrais PERIVENTRICULARES</text>
-      <text x="10" y="150" fill="#ffffff" font-size="11">• Petéquias / Púrpura "muffin de mirtilo" (hematopoiese dérmica)</text>
+      <text x="10" y="126" fill="#fef08a" font-size="11" font-weight="800">• Calcificação PERIVENTRICULAR</text>
+      <text x="10" y="150" fill="#ffffff" font-size="11">• Petéquias / Púrpura "muffin"</text>
       <text x="10" y="185" fill="#cbd5e1" font-size="11">• Hepatoesplenomegalia e icterícia</text>
       <text x="10" y="215" fill="#fde047" font-size="11" font-weight="700">Diagnóstico Padrão-Ouro:</text>
-      <text x="10" y="233" fill="#ffffff" font-size="11">PCR na urina ou saliva nas primeiras 2 a 3 semanas</text>
+      <text x="10" y="233" fill="#ffffff" font-size="11">PCR urina/saliva &lt; 3 sem</text>
       <text x="10" y="265" fill="#a7f3d0" font-size="11" font-weight="800">TRATAMENTO (6 MESES):</text>
-      <text x="10" y="285" fill="#ffffff" font-size="11">Valganciclovir Oral (16 mg/kg 12/12h) se acometimento de SNC/auditivo</text>
+      <text x="10" y="285" fill="#ffffff" font-size="9.5">Valganciclovir Oral (16 mg/kg 12/12h) se SNC/auditivo</text>
     </g>
 
     <!-- 3. Rubéola Congênita -->
     <g transform="translate(470, 50)">
       <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#06b6d4" stroke-width="1.5"/>
       <text x="102" y="24" text-anchor="middle" fill="#22d3ee" font-size="12" font-weight="800">RUBÉOLA CONGÊNITA</text>
-      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Rara devido à vacinação com Tríplice Viral</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="9.5">• Rara pós-vacina (SCR)</text>
       <text x="10" y="85" fill="#fde047" font-size="11" font-weight="700">Tríade de Gregg Clássica:</text>
-      <text x="10" y="105" fill="#ffffff" font-size="11">1. Catarata congênita / Microftalmia / Glaucoma</text>
+      <text x="10" y="105" fill="#ffffff" font-size="10">1. Catarata congênita / Microftalmia</text>
       <text x="10" y="135" fill="#fef08a" font-size="11" font-weight="700">2. Cardiopatia Congênita:</text>
-      <text x="20" y="153" fill="#ffffff" font-size="11">Persistência do Canal Arterial (PCA) e Estenose de Artéria Pulmonar</text>
+      <text x="20" y="153" fill="#ffffff" font-size="11">PCA e Estenose de Art. Pulmonar</text>
       <text x="10" y="190" fill="#ffffff" font-size="11">3. Surdez neurossensorial (mais frequente)</text>
       <text x="10" y="225" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
       <text x="10" y="243" fill="#cbd5e1" font-size="11">IgM específico no RN ou IgG persistente</text>
       <text x="10" y="275" fill="#f87171" font-size="11" font-weight="700">Tratamento:</text>
-      <text x="10" y="293" fill="#ffffff" font-size="11">Suporte e reabilitação auditiva/cirúrgica</text>
+      <text x="10" y="293" fill="#ffffff" font-size="11">Suporte e reabilitação</text>
     </g>
 
     <!-- 4. Herpes Simples (HSV) -->
     <g transform="translate(695, 50)">
       <rect x="0" y="0" width="205" height="440" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1.5"/>
       <text x="102" y="24" text-anchor="middle" fill="#fbbf24" font-size="12" font-weight="800">HERPES NEONATAL (HSV)</text>
-      <text x="10" y="50" fill="#cbd5e1" font-size="11">• Transmissão no canal de parto (HSV-2 &gt;&gt; HSV-1)</text>
+      <text x="10" y="50" fill="#cbd5e1" font-size="9.5">• Canal de parto (HSV-2)</text>
       <text x="10" y="85" fill="#fde047" font-size="11" font-weight="700">3 Formas Clínicas:</text>
-      <text x="10" y="105" fill="#ffffff" font-size="11">1. Pele, Olhos e Boca (SEM): vesículas agrupadas</text>
-      <text x="10" y="135" fill="#fef08a" font-size="11">2. Encefalite (SNC): convulsões, letargia, LCR hemorrágico</text>
-      <text x="10" y="170" fill="#fca5a5" font-size="11">3. Doença Disseminada: choque séptico, CIVD, hepatite grave</text>
+      <text x="10" y="105" fill="#ffffff" font-size="11">1. Pele/Boca: vesículas</text>
+      <text x="10" y="135" fill="#fef08a" font-size="11">2. Encefalite: convulsão, letargia</text>
+      <text x="10" y="170" fill="#fca5a5" font-size="11">3. Disseminada: choque, CIVD</text>
       <text x="10" y="210" fill="#fde047" font-size="11" font-weight="700">Diagnóstico:</text>
       <text x="10" y="228" fill="#cbd5e1" font-size="11">PCR para HSV no LCR, sangue e lesões</text>
       <text x="10" y="260" fill="#a7f3d0" font-size="11" font-weight="800">TRATAMENTO DE EMERGÊNCIA:</text>
       <text x="10" y="280" fill="#ffffff" font-size="11" font-weight="800">ACICLOVIR IV ALTA DOSE</text>
       <text x="10" y="300" fill="#fef08a" font-size="11">60 mg/kg/dia dividido 8/8h</text>
-      <text x="10" y="320" fill="#cbd5e1" font-size="10">Duração: 14 dias (SEM) ou 21 dias (SNC/Disseminada)</text>
+      <text x="10" y="320" fill="#cbd5e1" font-size="10">14d (SEM) ou 21d (SNC)</text>
     </g>
   </g>
 
