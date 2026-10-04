@@ -1547,23 +1547,48 @@
       gap: 8px;
     }
     .btn-theme-toggle {
-      background: rgba(255, 255, 255, 0.08);
-      border: 1px solid rgba(255, 255, 255, 0.15);
-      color: #fbbf24;
-      font-size: 1.15rem;
-      padding: 6px 10px;
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      min-height: 38px;
+      padding: 0;
       border-radius: var(--radius-sm);
       cursor: pointer;
-      transition: all 0.2s ease;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 38px;
-      min-width: 38px;
+      transition: all 0.2s ease;
+      box-sizing: border-box;
+      line-height: 1;
     }
-    .btn-theme-toggle:hover {
-      background: rgba(255, 255, 255, 0.18);
-      transform: scale(1.05);
+    .btn-theme-toggle svg {
+      display: block;
+      width: 20px;
+      height: 20px;
+      transition: transform 0.2s ease;
+    }
+    .btn-theme-toggle:hover svg {
+      transform: scale(1.1);
+    }
+    #topbar-theme-toggle {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+    #topbar-theme-toggle:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+      border-color: #cbd5e1;
+    }
+    #sidebar-theme-toggle {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #94a3b8;
+    }
+    #sidebar-theme-toggle:hover {
+      background: rgba(255, 255, 255, 0.16);
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.3);
     }
     .sidebar-close-btn {
       display: inline-flex;
@@ -2396,6 +2421,18 @@
     body.dark-mode #topbar-theme-toggle {
       border-color: #334155 !important;
       background-color: #1e293b !important;
+      color: #fbbf24 !important;
+    }
+    body.dark-mode #topbar-theme-toggle:hover {
+      background-color: #334155 !important;
+      color: #fde047 !important;
+      border-color: #475569 !important;
+    }
+    body.dark-mode #sidebar-theme-toggle {
+      color: #fbbf24 !important;
+    }
+    body.dark-mode #sidebar-theme-toggle:hover {
+      color: #fde047 !important;
     }
 
     /* Flowcharts & Diagram Containers in Dark Mode */
@@ -2919,7 +2956,7 @@
       </div>
       <div class="sidebar-header-actions">
         <button id="pwa-install-btn" class="btn-theme-toggle" onclick="installPWA()" title="Instalar Aplicativo no Dispositivo" style="display: none; background: rgba(2, 132, 199, 0.2); border-color: var(--primary); color: #38bdf8;">📲</button>
-        <button id="sidebar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        <button id="sidebar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
         <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu">✕</button>
       </div>
     </div>
@@ -7710,7 +7747,7 @@
         </button>
       </div>
       <div class="top-bar-right">
-        <button id="topbar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar Modo Noturno">🌙</button>
+        <button id="topbar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
         <button class="btn-action btn-print" onclick="window.print()" title="Imprimir esta conduta clínica">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
           <span>Imprimir</span>
@@ -47873,8 +47910,8 @@
     }
 
     function updateThemeButtons(isDark) {
-      const sunSvg = '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg>';
-      const moonSvg = '<svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg>';
+      const sunSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0-5a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0V3a1 1 0 0 1 1-1zm0 18a1 1 0 0 1 1 1v2a1 1 0 0 1-2 0v-2a1 1 0 0 1 1-1zm10-8a1 1 0 0 1-1 1h-2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zM5 12a1 1 0 0 1-1 1H2a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1zm14.071-7.071a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0zm-12.728 12.728a1 1 0 0 1 0 1.414l-1.414 1.414a1 1 0 1 1-1.414-1.414l1.414-1.414a1 1 0 0 1 1.414 0zM19.071 19.071a1 1 0 0 1-1.414 0l-1.414-1.414a1 1 0 1 1 1.414-1.414l1.414 1.414a1 1 0 0 1 0 1.414zm-12.728-12.728a1 1 0 0 1-1.414 0L3.515 4.929a1 1 0 1 1 1.414-1.414l1.414 1.414a1 1 0 0 1 0 1.414z"/></svg>';
+      const moonSvg = '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg>';
       const iconHtml = isDark ? sunSvg : moonSvg;
       const title = isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno';
       ['sidebar-theme-toggle', 'topbar-theme-toggle', 'theme-toggle'].forEach(id => {
@@ -47882,6 +47919,7 @@
         if (btn) {
           btn.innerHTML = iconHtml;
           btn.title = title;
+          btn.setAttribute('aria-label', title);
         }
       });
     }
@@ -47889,9 +47927,11 @@
     // Initialize Theme immediately with system preference fallback
     const savedTheme = localStorage.getItem('febrasgo_theme');
     const systemPrefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-    if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+    const initialIsDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+    if (initialIsDark) {
       document.body.classList.add('dark-mode');
     }
+    updateThemeButtons(initialIsDark);
 
     // Clear search helper
     function clearSearch() {
