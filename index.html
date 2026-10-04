@@ -1084,7 +1084,7 @@
 
     .sidebar-search input:focus { border-color: var(--primary); }
 
-    .nav-list { list-style: none; padding: 10px 8px; flex-grow: 1; }
+    .nav-list { list-style: none; padding: 10px 8px 32px; flex-grow: 1; }
 
     .nav-category {
       font-size: 0.68rem;
@@ -1205,11 +1205,7 @@
     }
 
     .sidebar-footer {
-      padding: 12px 14px;
-      border-top: 1px solid var(--border);
-      font-size: 0.70rem;
-      color: var(--text-muted);
-      background-color: var(--bg-sidebar);
+      display: none !important;
     }
 
     /* Main Content Area */
@@ -1954,12 +1950,13 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         width: min(320px, 85vw); 
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
+        box-shadow: none !important;
         contain: layout style;
       }
       #sidebar.open {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4) !important;
       }
       .sidebar-close-btn {
         display: inline-flex;
