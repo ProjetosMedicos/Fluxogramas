@@ -1084,7 +1084,7 @@
 
     .sidebar-search input:focus { border-color: var(--primary); }
 
-    .nav-list { list-style: none; padding: 10px 8px 32px; flex-grow: 1; }
+    .nav-list { list-style: none; padding: 10px 8px; flex-grow: 1; }
 
     .nav-category {
       font-size: 0.68rem;
@@ -1205,7 +1205,11 @@
     }
 
     .sidebar-footer {
-      display: none !important;
+      padding: 12px 14px;
+      border-top: 1px solid var(--border);
+      font-size: 0.70rem;
+      color: var(--text-muted);
+      background-color: var(--bg-sidebar);
     }
 
     /* Main Content Area */
@@ -1342,13 +1346,14 @@
     }
 
     .flowchart-img-container {
-      background-color: #ffffff;
+      background-color: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: var(--radius-md);
       padding: 20px;
       margin: 12px 0 20px;
-      overflow-x: auto !important;
-      overflow-y: hidden !important;
+      overflow: auto !important;
+      max-height: 85vh;
+      overscroll-behavior: contain;
       -webkit-overflow-scrolling: touch !important;
       display: block !important;
       text-align: center !important;
@@ -1358,7 +1363,6 @@
       box-sizing: border-box !important;
       box-shadow: var(--shadow-sm);
       transition: box-shadow 0.2s ease;
-      contain: paint;
     }
 
     .flowchart-img-container:hover {
@@ -1473,20 +1477,67 @@
     .palm-letter { display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 8px; color: white; font-weight: 800; font-size: 1.1rem; }
 
     /* Case Simulation */
-    .case-box h3 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
+    .case-box h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
     .case-box {
-      border: 2px solid #cbd5e1; border-radius: var(--radius-md);
-      padding: 22px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); margin-bottom: 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 22px;
+      background-color: var(--bg-card);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 24px;
     }
-    .case-vignette { background-color: #f1f5f9; padding: 16px; border-radius: var(--radius-sm); font-size: 0.90rem; margin-bottom: 14px; border-left: 4px solid #475569; }
-    .case-question { font-weight: 600; font-size: 0.94rem; margin-bottom: 12px; }
-    .case-options { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+    .case-vignette {
+      background-color: var(--bg-surface);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.90rem;
+      margin-bottom: 14px;
+      border-left: 4px solid var(--primary);
+      color: var(--text-body);
+    }
+    .case-question {
+      font-weight: 600;
+      font-size: 0.94rem;
+      color: var(--text-main);
+      margin-bottom: 12px;
+    }
+    .case-options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
     .case-option-btn {
-      text-align: left; padding: 10px 14px; border: 1px solid var(--border);
-      background-color: #ffffff; border-radius: var(--radius-sm); font-size: 0.86rem; cursor: pointer; transition: all 0.2s;
+      text-align: left;
+      padding: 10px 14px;
+      border: 1px solid var(--border);
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      border-radius: var(--radius-sm);
+      font-size: 0.86rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s;
     }
-    .case-option-btn:hover { background-color: #f8fafc; border-color: var(--primary); }
-    .case-feedback { display: none; padding: 16px; border-radius: var(--radius-sm); font-size: 0.88rem; margin-top: 12px; }
+    .case-option-btn:hover {
+      background-color: var(--bg-hover);
+      border-color: var(--primary);
+    }
+    .case-feedback {
+      display: none;
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      font-size: 0.88rem;
+      margin-top: 12px;
+      background-color: var(--bg-surface);
+      color: var(--text-body);
+      border: 1px solid var(--border);
+    }
 
     @media print {
       #sidebar, .top-bar, .case-option-btn, .sidebar-search, .module-selector, .flowchart-actions { display: none !important; }
@@ -1950,13 +2001,12 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         width: min(320px, 85vw); 
-        box-shadow: none !important;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4);
         contain: layout style;
       }
       #sidebar.open {
         -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
-        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.4) !important;
       }
       .sidebar-close-btn {
         display: inline-flex;
@@ -2481,14 +2531,16 @@
       color: #cbd5e1;
     }
 
-    /* Clinical Cases & Feedback */
-    body.dark-mode .case-box h3 { font-size: 1.05rem; font-weight: 700; color: #0f172a; margin-bottom: 12px; }
-    .case-box {
-      background: #151e2e;
-      border-color: #334155;
+    /* Clinical Cases & Feedback in Dark Mode */
+    body.dark-mode .case-box {
+      background: var(--bg-card);
+      border-color: var(--border);
     }
     body.dark-mode .case-box h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
       color: #38bdf8 !important;
+      margin-bottom: 12px;
     }
     body.dark-mode .case-question {
       color: #f8fafc;
@@ -27649,15 +27701,18 @@
 
       <!-- Fluxograma 1 -->
       <div class="card">
-        <h2 class="card-title">1. Roteiro Sequencial do Exame Físico Ginecológico Completo</h2>
-        <p>Algoritmo semiológico normatizado pela FEBRASGO cobrindo todas as etapas: Acolhimento → Esvaziamento Vesical → Mamas → Abdome → Posição → Genitais Externos → Espéculo → Toque Bimanual → Retovaginal:</p>
-        
-        <div class="flowchart-controls" style="margin-top: 12px; margin-bottom: 12px; display: flex; gap: 8px;">
-          <button class="btn-action" onclick="zoomFlowchart(this, 0.15)">Zoom +</button>
-          <button class="btn-action" onclick="zoomFlowchart(this, -0.15)">Zoom −</button>
-          <button class="btn-action" onclick="resetZoom(this)">↺ Reset</button>
+        <div class="card-header-flex">
+          <h2 class="card-title">1. Roteiro Sequencial do Exame Físico Ginecológico Completo</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxograma_exame_fisico_passo_a_passo.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
-
+        <p>Algoritmo semiológico normatizado pela FEBRASGO cobrindo todas as etapas: Acolhimento → Esvaziamento Vesical → Mamas → Abdome → Posição → Genitais Externos → Espéculo → Toque Bimanual → Retovaginal:</p>
         <div class="flowchart-img-container" style="display: block; text-align: center; contain: paint; max-width: 100%; overflow: auto;">
           <img src="imagens/fluxograma_exame_fisico_passo_a_passo.svg" alt="Roteiro Sequencial do Exame Físico Ginecológico Completo" class="flowchart-img" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
         </div>
@@ -30438,16 +30493,19 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-crescimento', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-crescimento', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-crescimento')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-crescimento.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma Oficial de Investigação da Baixa Estatura Infantil</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-crescimento.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-crescimento" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
+        <div class="flowchart-img-container">
           <img src="imagens/fluxo-ped-crescimento.svg" alt="Fluxograma Oficial de Baixa Estatura SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
@@ -30943,17 +31001,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-dnpm', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-dnpm', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-dnpm')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-dnpm.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Vigilância do Desenvolvimento Neuropsicomotor</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-dnpm.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-dnpm" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-dnpm.svg" alt="Fluxograma Oficial de Vigilância do DNPM SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-dnpm.svg" alt="Fluxograma de Vigilância do DNPM SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -31383,17 +31444,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-aleitamento', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-aleitamento', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-aleitamento')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-aleitamento.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Manejo e Dificuldades do Aleitamento Materno</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-aleitamento.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-aleitamento" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-aleitamento.svg" alt="Fluxograma Oficial de Aleitamento SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-aleitamento.svg" alt="Fluxograma Oficial de Aleitamento Materno SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -31779,17 +31843,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-nutricao', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-nutricao', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-nutricao')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-nutricao.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Introdução Alimentar & Suplementação Pediátrica</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-nutricao.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-nutricao" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-nutricao.svg" alt="Fluxograma Oficial de Introdução Alimentar SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-nutricao.svg" alt="Fluxograma de Introdução Alimentar SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -32206,17 +32273,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-desnutricao', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-desnutricao', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-desnutricao')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-desnutricao.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Abordagem da Desnutrição Infantil e Risco Nutricional</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-desnutricao.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-desnutricao" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-desnutricao.svg" alt="Fluxograma Oficial de Desnutrição SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-desnutricao.svg" alt="Fluxograma Oficial de Desnutrição Infantil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -32591,17 +32661,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-vitaminas', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-vitaminas', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-vitaminas')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-vitaminas.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Diagnóstico e Reposição de Hipovitaminoses na Infância</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-vitaminas.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-vitaminas" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-vitaminas.svg" alt="Fluxograma Oficial de Suplementação SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-vitaminas.svg" alt="Fluxograma de Hipovitaminoses SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -32977,16 +33050,19 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-obesidade', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-obesidade', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-obesidade')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-obesidade.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Rastreio e Manejo da Obesidade Infantil e Risco Metabólico</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-obesidade.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-obesidade" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
+        <div class="flowchart-img-container">
           <img src="imagens/fluxo-ped-obesidade.svg" alt="Fluxograma Oficial de Obesidade Infantil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
@@ -33445,17 +33521,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-puberdade', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-puberdade', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-puberdade')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-puberdade.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Investigação da Puberdade Precoce e Tardia</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-puberdade.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-puberdade" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-puberdade.svg" alt="Fluxograma Oficial de Puberdade Precoce SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-puberdade.svg" alt="Fluxograma Oficial de Puberdade Precoce e Tardia SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -33864,17 +33943,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-hebiatria', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-hebiatria', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-hebiatria')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-hebiatria.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Abordagem do Adolescente (HEEADSSS & Sigilo Médico)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-hebiatria.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-hebiatria" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-hebiatria.svg" alt="Fluxograma Oficial de Hebiatria SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-hebiatria.svg" alt="Fluxograma Oficial de Hebiatria e Sigilo SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -34240,17 +34322,20 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-controls" style="margin-bottom: 15px; display: flex; gap: 10px; flex-wrap: wrap;">
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-seguranca', 1.2)">Zoom +</button>
-          <button class="btn-flowchart-zoom" onclick="zoomFlowchart('svg-ped-seguranca', 0.8)">Zoom −</button>
-          <button class="btn-flowchart-zoom" onclick="resetFlowchartZoom('svg-ped-seguranca')">↺ Restaurar 100%</button>
-          <a href="imagens/fluxo-ped-seguranca.svg" target="_blank" class="btn-image-open">
-            Abrir SVG ↗
-          </a>
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Prevenção de Acidentes e Violência na Infância</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-seguranca.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
 
-        <div class="flowchart-container" id="svg-ped-seguranca" style="overflow: auto; border: 1px solid #e2e8f0; border-radius: 8px; padding: 10px; background: #ffffff;">
-          <img src="imagens/fluxo-ped-seguranca.svg" alt="Fluxograma Oficial de Segurança Infantil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-seguranca.svg" alt="Fluxograma Oficial de Prevenção de Acidentes na Infância SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -39045,10 +39130,21 @@
         <p class="section-subtitle">Algoritmo decisório de estratificação, indicação de tratamento empírico e manejo de contatos assintomáticos.</p>
       </div>
 
-      <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="margin-bottom: 20px;">Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)</h2>
-        <div class="flowchart-container" style="max-width: 900px; margin: 0 auto;">
-          <img src="imagens/fluxo-ped-tuberculose.svg" alt="Fluxograma Tuberculose Infantil SBP 2024" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-tuberculose.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-tuberculose.svg" alt="Fluxograma Tuberculose Infantil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -39606,10 +39702,21 @@
         <p class="section-subtitle">Árvore sequencial de tomada de decisão clínica para estratificação diagnóstica e escalonamento terapêutico.</p>
       </div>
 
-      <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="margin-bottom: 20px;">Algoritmo de Abordagem do RGE e DRGE no Lactente (SBP 2024)</h2>
-        <div class="flowchart-container" style="max-width: 900px; margin: 0 auto;">
-          <img src="imagens/fluxo-ped-drge.svg" alt="Fluxograma DRGE Pediátrica SBP 2024" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo de Abordagem do RGE e DRGE no Lactente (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-drge.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-drge.svg" alt="Fluxograma DRGE e RGE no Lactente SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -40079,10 +40186,21 @@
         <p class="section-subtitle">Algoritmo decisório dos Planos A, B e C da OMS adaptado pelo Tratado de Pediatria SBP 2024.</p>
       </div>
 
-      <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="margin-bottom: 20px;">Algoritmo Integrado da DDA e Reidratação (OMS / SBP 2024)</h2>
-        <div class="flowchart-container" style="max-width: 900px; margin: 0 auto;">
-          <img src="imagens/fluxo-ped-diarreia.svg" alt="Fluxograma Diarreia Aguda SBP 2024" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Integrado da DDA e Reidratação (OMS / SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-diarreia.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-diarreia.svg" alt="Fluxograma Oficial DDA e Reidratação SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -40557,10 +40675,21 @@
         <p class="section-subtitle">Algoritmo visual integrado desde a triagem dos sinais de alarme até a desimpactação e desmame laxativo.</p>
       </div>
 
-      <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="margin-bottom: 20px;">Algoritmo de Manejo da Constipação Intestinal Funcional (SBP 2024)</h2>
-        <div class="flowchart-container" style="max-width: 900px; margin: 0 auto;">
-          <img src="imagens/fluxo-ped-constipacao.svg" alt="Fluxograma Constipação Infantil SBP 2024" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo de Manejo da Constipação Intestinal Funcional (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-constipacao.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-constipacao.svg" alt="Fluxograma Oficial Constipação Funcional SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -40943,10 +41072,21 @@
         <p class="section-subtitle">Algoritmo decisório entre a abordagem sem biópsia e a indicação de endoscopia com biópsias duodenais.</p>
       </div>
 
-      <div class="card" style="text-align: center;">
-        <h2 class="card-title" style="margin-bottom: 20px;">Algoritmo Diagnóstico da Doença Celíaca (SBP / ESPGHAN 2024)</h2>
-        <div class="flowchart-container" style="max-width: 900px; margin: 0 auto;">
-          <img src="imagens/fluxo-ped-celiaca.svg" alt="Fluxograma Doença Celíaca SBP 2024" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico da Doença Celíaca (SBP / ESPGHAN 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-celiaca.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-celiaca.svg" alt="Fluxograma Oficial Doença Celíaca SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -41422,8 +41562,22 @@
         <p class="section-subtitle">Algoritmo decisório integrado: diagnóstico asséptico, estratificação pielonefrite vs cistite e roteiro de imagem.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-itu-enurese.svg" alt="Fluxograma Oficial de ITU e Enurese Noturna na Infância SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma Oficial de ITU e Enurese Noturna na Infância (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-itu-enurese.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-itu-enurese.svg" alt="Fluxograma Oficial de ITU e Enurese Noturna na Infância SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -41784,8 +41938,22 @@
         <p class="section-subtitle">Algoritmo decisório PALS/SBP: estratificação compensado vs hipotensivo, expansão volêmica e drogas vasoativas.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-choque.svg" alt="Fluxograma Oficial de Choque Pediátrico e Sepse SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Reconhecimento e Manejo do Choque Pediátrico (PALS / SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-choque.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-choque.svg" alt="Fluxograma Oficial de Reconhecimento e Manejo do Choque Pediátrico SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -42207,8 +42375,22 @@
         <p class="section-subtitle">Algoritmo mestre integrado de reanimação avançada: diferenciação de ritmos, dosagens e protocolo dos 6 H's e 5 T's.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-emerg-pcr.svg" alt="Fluxograma Oficial de PCR Pediátrica e PALS SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Ressuscitação Cardiopulmonar Pediátrica (PALS / SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-emerg-pcr.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-emerg-pcr.svg" alt="Fluxograma Oficial de PCR Pediátrica e Ritmos de Parada SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -42646,8 +42828,22 @@
         <p class="section-subtitle">Algoritmo decisório SBP/AAP: triagem de critérios de baixo risco vs conduta hospitalar de alto risco.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-brue-smsl.svg" alt="Fluxograma Oficial de BRUE e Prevenção de SMSL SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Abordagem de BRUE e Prevenção de SMSL (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-brue-smsl.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-brue-smsl.svg" alt="Fluxograma Oficial de BRUE e SMSL SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -43011,8 +43207,22 @@
         <p class="section-subtitle">Algoritmo decisório integrado: manejo agudo cronometrado, triagem simples vs complexa e indicação de punção lombar.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-convulsao.svg" alt="Fluxograma Oficial de Convulsão Febril e Crises Pediátricas SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Crise Febril e Estado de Mal Epiléptico na Infância (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-convulsao.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-convulsao.svg" alt="Fluxograma Oficial de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -43356,8 +43566,22 @@
         <p class="section-subtitle">Algoritmo decisório SBP: triagem por sinais de alarme, neuroimagem dirigida e escalonamento terapêutico.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-cefaleias.svg" alt="Fluxograma Oficial de Cefaleias na Infância SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Triagem e Manejo das Cefaleias na Infância (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-cefaleias.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-cefaleias.svg" alt="Fluxograma Oficial de Cefaleias na Infância e Sinais de Alarme SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -43766,8 +43990,22 @@
         <p class="section-subtitle">Algoritmo integrado SBP: diferenciação entre vasculite por IgA (Henoch-Schönlein) e Doença de Kawasaki com protocolo de IVIG.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-reumato-vasc.svg" alt="Fluxograma Oficial de Vasculites Pediátricas SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Investigação das Vasculites Sistêmicas Pediátricas (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-reumato-vasc.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-reumato-vasc.svg" alt="Fluxograma Oficial de Vasculites Sistêmicas na Infância SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -44155,8 +44393,22 @@
         <p class="section-subtitle">Algoritmo diferencial integrado: padrão da artrite, temporalidade, exames imunológicos e rastreamento de uveíte.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-reumato-aij.svg" alt="Fluxograma Oficial de Febre Reumática e AIJ SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Diagnóstico e Manejo da Artrite Idiopática Juvenil (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-reumato-aij.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-reumato-aij.svg" alt="Fluxograma Oficial de Artrite Idiopática Juvenil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -44513,8 +44765,22 @@
         <p class="section-subtitle">Algoritmo integrado SBP: oximetria de pulso, estratificação cianogênica vs acianogênica e manejo de emergência.</p>
       </div>
 
-      <div class="fluxo-frame-container" style="text-align: center; margin: 25px 0;">
-        <img src="imagens/fluxo-ped-cardiopatias.svg" alt="Fluxograma Oficial de Cardiopatias Congênitas e HAS SBP 2024" class="fluxo-img" style="max-width: 100%; height: auto; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);" />
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma de Triagem Neonatal de Cardiopatias Congênitas (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-cardiopatias.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-cardiopatias.svg" alt="Fluxograma Oficial de Cardiopatias Congênitas e Teste do Coraçãozinho SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -45005,14 +45271,22 @@
         <p class="section-subtitle">Mapa visual integrado conectando estigmas dismórficos, rastreamento mandatório e urgências metabólicas neonatais.</p>
       </div>
 
-      <div class="card" style="text-align: center; padding: 20px;">
-        <h2 class="card-title" style="margin-bottom: 15px;">Fluxograma Visual Estruturado SBP 2024</h2>
-        <div style="max-width: 950px; margin: 0 auto; background: white; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); padding: 10px;">
-          <img src="imagens/fluxo-ped-genetica.svg" alt="Fluxograma Síndromes Genéticas e Triagem Neonatal SBP 2024" style="width: 100%; height: auto; display: block; border-radius: 6px;">
+      <div class="card">
+        <div class="card-header-flex">
+          <h2 class="card-title">Fluxograma Visual Estruturado SBP 2024</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-genetica.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
         </div>
-        <p style="margin-top: 15px; font-size: 0.9rem; color: #64748b;">
-          Diagrama vetorial com especificações completas das diretrizes da Sociedade Brasileira de Pediatria (SBP 2024).
-        </p>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-genetica.svg" alt="Fluxograma Síndromes Genéticas e Triagem Neonatal SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        </div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -45444,9 +45718,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Oficial de Abordagem do Recém-Nascido Exposto</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-sifilis-cong.svg" alt="Fluxograma Decisório: Sífilis Gestacional e Congênita" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Oficial de Abordagem do Recém-Nascido Exposto (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-sifilis-cong.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-sifilis-cong.svg" alt="Fluxograma Sífilis Congênita e Abordagem do RN SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -45731,9 +46016,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-fibrose-cistica.svg" alt="Fluxograma Decisório: Fibrose Cística" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da Fibrose Cística (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-fibrose-cistica.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-fibrose-cistica.svg" alt="Fluxograma Fibrose Cística SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -45999,9 +46295,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-enurese.svg" alt="Fluxograma Decisório: Enurese Noturna na Infância" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da Enurese Noturna (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-enurese.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-enurese.svg" alt="Fluxograma Enurese Noturna SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -46260,9 +46567,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Clínico e Conduta Terapêutica Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-henoch-schonlein.svg" alt="Fluxograma Decisório: Púrpura de Henoch-Schönlein" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Clínico e Conduta Terapêutica na Púrpura de Henoch-Schönlein (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-henoch-schonlein.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-henoch-schonlein.svg" alt="Fluxograma Vasculite por IgA Henoch Schonlein SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -46555,9 +46873,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-aij.svg" alt="Fluxograma Decisório: Artrite Idiopática Juvenil" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da AIJ (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-aij.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-aij.svg" alt="Fluxograma Artrite Idiopatica Juvenil SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -46834,9 +47163,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-hipertensao.svg" alt="Fluxograma Decisório: Hipertensão Arterial na Criança" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da HAS Pediátrica (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-hipertensao.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-hipertensao.svg" alt="Fluxograma Hipertensao Arterial Pediatrica SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -47145,9 +47485,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-hipotireoidismo.svg" alt="Fluxograma Decisório: Hipotireoidismo Congênito" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial do Hipotireoidismo Congênito (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-hipotireoidismo.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-hipotireoidismo.svg" alt="Fluxograma Hipotireoidismo Congenito SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -47424,9 +47775,20 @@
       </div>
 
       <div class="card">
-        <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial SBP</h2>
-        <div class="svg-container" style="text-align: center; margin: 16px 0;">
-          <img src="imagens/fluxo-ped-hiperplasia-adrenal.svg" alt="Fluxograma Decisório: Hiperplasia Adrenal Congênita" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+        <div class="card-header-flex">
+          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da HAC (SBP 2024)</h2>
+          <div class="flowchart-actions">
+            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+            <a href="imagens/fluxo-ped-hiperplasia-adrenal.svg" target="_blank" class="btn-image-open">
+              Abrir SVG ↗
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container">
+          <img src="imagens/fluxo-ped-hiperplasia-adrenal.svg" alt="Fluxograma Hiperplasia Adrenal Congenita SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
 
@@ -48102,23 +48464,42 @@
       window.scrollTo(0, 0);
     }
 
-    // Zoom nos fluxogramas
-    function zoomFlowchart(btn, delta) {
-      const card = btn.closest('.card');
-      const img = card.querySelector('.flowchart-img');
+    // Zoom nos fluxogramas (Universal & Resiliente)
+    function zoomFlowchart(target, delta) {
+      let card, img;
+      if (typeof target === 'string') {
+        const el = document.getElementById(target);
+        card = el ? (el.closest('.card') || el) : null;
+        img = el ? (el.tagName === 'IMG' ? el : el.querySelector('.flowchart-img, img')) : null;
+      } else if (target && target.closest) {
+        card = target.closest('.card');
+        img = card ? card.querySelector('.flowchart-img, img') : null;
+      }
       if (!img) return;
       let currentScale = parseFloat(img.dataset.scale || 1.0);
-      currentScale = Math.min(Math.max(currentScale + delta, 0.6), 2.5);
+      const step = delta > 0.5 ? (delta - 1) : delta;
+      currentScale = Math.min(Math.max(currentScale + step, 0.6), 2.5);
       img.dataset.scale = currentScale;
       img.style.transform = `scale(${currentScale})`;
     }
 
-    function resetZoom(btn) {
-      const card = btn.closest('.card');
-      const img = card.querySelector('.flowchart-img');
+    function resetZoom(target) {
+      let card, img;
+      if (typeof target === 'string') {
+        const el = document.getElementById(target);
+        card = el ? (el.closest('.card') || el) : null;
+        img = el ? (el.tagName === 'IMG' ? el : el.querySelector('.flowchart-img, img')) : null;
+      } else if (target && target.closest) {
+        card = target.closest('.card');
+        img = card ? card.querySelector('.flowchart-img, img') : null;
+      }
       if (!img) return;
       img.dataset.scale = 1.0;
       img.style.transform = 'scale(1.0)';
+    }
+
+    function resetFlowchartZoom(target) {
+      resetZoom(target);
     }
 
     // Toggle para feedback de casos clínicos
