@@ -139,6 +139,13 @@
     html {
       scroll-behavior: smooth;
     }
+    h1, h2, h3, h4,
+    .card-title,
+    .step-title,
+    .content-section,
+    [id] {
+      scroll-margin-top: 76px;
+    }
 
     /* Content Visibility para renderização ultra-rápida (60 FPS) */
     .content-section:not(.active) {
@@ -1423,29 +1430,54 @@
     .alert-box.danger { background-color: var(--danger-light); border-left: 4px solid var(--danger); color: #9f1239; }
     .alert-box.success { background-color: var(--success-light); border-left: 4px solid var(--success); color: #166534; }
 
-    /* Tables */
+    /* Tables (Modern Sticky Header & Responsive Scroll) */
     .table-responsive,
     .table-container {
       width: 100% !important;
       max-width: 100% !important;
       min-width: 0 !important;
       overflow-x: auto !important;
+      max-height: 560px;
+      overflow-y: auto;
       -webkit-overflow-scrolling: touch !important;
       margin: 16px 0 !important;
       display: block !important;
       box-sizing: border-box !important;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
     }
     table,
     table.clinical-table {
       width: 100%;
       min-width: 560px;
-      border-collapse: collapse;
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 0.88rem;
       text-align: left;
     }
-    th { background-color: #f1f5f9; color: #334155; font-weight: 700; padding: 10px 12px; border-bottom: 2px solid var(--border); }
-    td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
-    tr:hover td { background-color: #f8fafc; }
+    th {
+      position: sticky;
+      top: 0;
+      background-color: var(--bg-surface);
+      color: var(--text-main);
+      font-weight: 700;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--border);
+      box-shadow: 0 1px 0 var(--border);
+      z-index: 2;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      background-color: var(--bg-card);
+      color: var(--text-body);
+    }
+    tr:hover td {
+      background-color: var(--bg-hover);
+    }
 
     /* Step Cards */
     .step-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin: 16px 0; }
@@ -2635,9 +2667,11 @@
       background-color: #1e293b;
       color: #93c5fd;
       border-bottom-color: #334155;
+      box-shadow: 0 1px 0 #334155;
     }
     body.dark-mode td {
       border-bottom-color: #243044;
+      background-color: #151e2e;
       color: #cbd5e1;
     }
     body.dark-mode tr:hover td {
@@ -48439,16 +48473,8 @@
         const text = activeLink.querySelector('span:last-child')?.textContent || 'Tópico';
         document.getElementById('current-crumb').textContent = text;
       }
-      // Sincronizar estado ativo no TOC 'Nesta Página'
-      const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
-      const curNav = document.getElementById('nav-group-' + curMod);
-      if (curNav) {
-        const linksList = Array.from(curNav.querySelectorAll('.nav-link'));
-        const activeIdx = linksList.findIndex(l => l.getAttribute('href') === '#' + sectionId);
-        if (activeIdx !== -1) {
-          updateTocActive(activeIdx);
-        }
-      }
+      // Sincronizar dinamicamente o TOC 'Nesta Página' com os títulos da seção ativa
+      renderToc(sectionId);
 
       };
 
@@ -48817,24 +48843,115 @@
     // =================================================================
     // SUPORTE AO ÍNDICE LATERAL (TOC / "NESTA PÁGINA" - ANTIGRAVITY DOCS)
     // =================================================================
-    function renderToc(moduleId) {
-      const tocList = document.getElementById('toc-list');
-      if (!tocList) return;
-      const mId = moduleId || (currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod);
-      const navGroup = document.getElementById('nav-group-' + mId);
-      if (!navGroup) return;
+    let tocObserver = null;
 
-      const links = navGroup.querySelectorAll('.nav-link');
-      let html = '';
-      links.forEach((link, idx) => {
-        const href = link.getAttribute('href') || '';
-        const targetId = href.replace(/^#/, '');
-        const titleSpan = link.querySelector('span:last-child') || link;
-        const title = titleSpan.textContent.trim();
-        const activeClass = link.classList.contains('active') ? ' active' : '';
-        html += `<li class="toc-item"><a href="${href}" onclick="switchSection('${targetId}'); return false;" class="${activeClass}" data-target="${targetId}">${title}</a></li>`;
+    function renderToc(sectionOrModuleId) {
+      const tocList = document.getElementById('toc-list');
+      const tocTitle = document.querySelector('.toc-title span') || document.querySelector('.toc-title');
+      if (!tocList) return;
+
+      if (tocObserver) {
+        tocObserver.disconnect();
+        tocObserver = null;
+      }
+
+      // Identificar a seção ativa
+      let activeSection = null;
+      if (typeof sectionOrModuleId === 'string') {
+        const byId = document.getElementById(sectionOrModuleId);
+        if (byId && byId.classList.contains('content-section')) {
+          activeSection = byId;
+        }
+      }
+      if (!activeSection) {
+        activeSection = document.querySelector('.content-section.active');
+      }
+
+      if (!activeSection) {
+        tocList.innerHTML = '';
+        return;
+      }
+
+      // Coletar cabeçalhos dentro da seção ativa
+      const candidates = Array.from(activeSection.querySelectorAll('h2, .card-title, h3.semiology-header, h3'));
+      const headingElements = candidates.filter(el => {
+        // Excluir títulos dentro de feedbacks de casos ocultos
+        if (el.closest('.case-feedback')) return false;
+        return el.textContent.trim().length > 0;
       });
-      tocList.innerHTML = html;
+
+      let html = '';
+      const headingIds = [];
+
+      if (headingElements.length >= 2) {
+        if (tocTitle) tocTitle.textContent = 'NESTA PÁGINA';
+        headingElements.forEach((heading, idx) => {
+          if (!heading.id) {
+            heading.id = `${activeSection.id}-heading-${idx}`;
+          }
+          headingIds.push(heading.id);
+          let rawText = heading.textContent.trim().replace(/^[\d.]+\s*/, '');
+          let displayText = rawText;
+          if (displayText.length > 34) {
+            displayText = displayText.slice(0, 32) + '...';
+          }
+          const activeClass = idx === 0 ? ' active' : '';
+          html += `<li class="toc-item"><a href="#${heading.id}" onclick="scrollToHeading('${heading.id}'); return false;" class="${activeClass}" data-target="${heading.id}" title="${rawText}">${displayText}</a></li>`;
+        });
+
+        tocList.innerHTML = html;
+        setupTocScrollspy(headingIds);
+      } else {
+        // Se a seção for curta, exibe os tópicos do módulo para navegação rápida
+        if (tocTitle) tocTitle.textContent = 'TÓPICOS DO MÓDULO';
+        const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
+        const navGroup = document.getElementById('nav-group-' + curMod);
+        if (navGroup) {
+          const links = navGroup.querySelectorAll('.nav-link');
+          links.forEach((link) => {
+            const href = link.getAttribute('href') || '';
+            const targetId = href.replace(/^#/, '');
+            const titleSpan = link.querySelector('span:last-child') || link;
+            const title = titleSpan.textContent.trim();
+            const isActive = activeSection && activeSection.id === targetId;
+            const activeClass = isActive ? ' active' : '';
+            html += `<li class="toc-item"><a href="${href}" onclick="switchSection('${targetId}'); return false;" class="${activeClass}" data-target="${targetId}">${title}</a></li>`;
+          });
+        }
+        tocList.innerHTML = html;
+      }
+    }
+
+    function setupTocScrollspy(headingIds) {
+      if (tocObserver) {
+        tocObserver.disconnect();
+        tocObserver = null;
+      }
+      if (!('IntersectionObserver' in window) || !headingIds || headingIds.length === 0) return;
+
+      tocObserver = new IntersectionObserver((entries) => {
+        const intersecting = entries.filter(e => e.isIntersecting);
+        if (intersecting.length > 0) {
+          intersecting.sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+          updateTocActive(intersecting[0].target.id);
+        }
+      }, {
+        rootMargin: '-76px 0px -70% 0px',
+        threshold: 0
+      });
+
+      headingIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) tocObserver.observe(el);
+      });
+    }
+
+    function scrollToHeading(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        updateTocActive(id);
+      }
     }
 
     function switchTocSection(index) {
@@ -48849,11 +48966,11 @@
       }
     }
 
-    function updateTocActive(indexOrSectionId) {
+    function updateTocActive(indexOrTargetId) {
       const items = document.querySelectorAll('#toc-list .toc-item a');
       items.forEach((a, i) => {
-        const isMatch = (typeof indexOrSectionId === 'number' && i === indexOrSectionId) ||
-                        (typeof indexOrSectionId === 'string' && a.getAttribute('data-target') === indexOrSectionId);
+        const isMatch = (typeof indexOrTargetId === 'number' && i === indexOrTargetId) ||
+                        (typeof indexOrTargetId === 'string' && a.getAttribute('data-target') === indexOrTargetId);
         if (isMatch) {
           a.classList.add('active');
         } else {
@@ -48889,8 +49006,9 @@
 
     // Inicialização do TOC ao carregar a página
     window.addEventListener('DOMContentLoaded', () => {
+      const activeSec = document.querySelector('.content-section.active');
       const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
-      renderToc(curMod);
+      renderToc(activeSec ? activeSec.id : curMod);
     });
 
   </script>
