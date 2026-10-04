@@ -544,6 +544,239 @@
       }
     }
 
+    /* ================================================================= */
+    /* MODAL DE BUSCA GLOBAL (COMMAND PALETTE / SPOTLIGHT)               */
+    /* ================================================================= */
+    .search-modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.65);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      z-index: 10000;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 60px 16px 20px;
+      box-sizing: border-box;
+      animation: fadeInModal 150ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes fadeInModal {
+      from { opacity: 0; transform: scale(0.98); }
+      to { opacity: 1; transform: scale(1); }
+    }
+    .search-modal-container {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 640px;
+      max-height: 80vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--border);
+      overflow: hidden;
+    }
+    body.dark-mode .search-modal-container {
+      background: #151e2e;
+      border-color: #334155;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6), 0 0 0 1px #334155;
+    }
+    .search-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-surface);
+    }
+    body.dark-mode .search-modal-header {
+      background: #111827;
+      border-bottom-color: #1e293b;
+    }
+    .search-modal-icon {
+      color: var(--primary);
+      flex-shrink: 0;
+    }
+    .search-modal-input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      color: var(--text-main);
+      font-size: 1rem;
+      font-family: inherit;
+      outline: none;
+      min-width: 0;
+    }
+    .search-modal-input::placeholder {
+      color: var(--text-muted);
+    }
+    .search-modal-clear {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 4px 8px;
+      border-radius: 4px;
+      transition: color 120ms;
+    }
+    .search-modal-clear:hover {
+      color: var(--text-main);
+    }
+    .search-modal-esc {
+      font-size: 0.72rem;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg-hover);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .search-modal-filters {
+      display: flex;
+      gap: 8px;
+      padding: 10px 18px;
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-subtle);
+      overflow-x: auto;
+    }
+    .search-filter-pill {
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      color: var(--text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 120ms ease;
+    }
+    .search-filter-pill:hover {
+      color: var(--text-main);
+      border-color: var(--primary);
+    }
+    .search-filter-pill.active {
+      background: var(--primary);
+      color: #ffffff !important;
+      border-color: var(--primary);
+    }
+    .search-modal-results {
+      flex: 1;
+      overflow-y: auto;
+      max-height: 460px;
+      padding: 8px;
+      scrollbar-width: thin;
+      scrollbar-color: var(--border) transparent;
+    }
+    .search-result-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      transition: background 100ms ease;
+    }
+    .search-result-item:hover,
+    .search-result-item.active {
+      background: var(--nav-active-bg);
+    }
+    body.dark-mode .search-result-item.active {
+      background: rgba(14, 165, 233, 0.15);
+    }
+    .search-result-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+    }
+    .search-result-info {
+      flex: 1;
+      min-width: 0;
+    }
+    .search-result-title {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .search-result-subtitle {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .search-result-badge {
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--text-muted);
+      flex-shrink: 0;
+    }
+    .search-result-badge.badge-flowchart {
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border-color: rgba(16, 185, 129, 0.3);
+    }
+    .search-result-badge.badge-case {
+      background: rgba(245, 158, 11, 0.12);
+      color: #d97706;
+      border-color: rgba(245, 158, 11, 0.3);
+    }
+    .search-result-badge.badge-pediatria {
+      background: rgba(14, 165, 233, 0.12);
+      color: #0284c7;
+      border-color: rgba(14, 165, 233, 0.3);
+    }
+    .search-modal-empty {
+      padding: 36px 16px;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .search-modal-empty span {
+      display: block;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    .search-modal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 18px;
+      border-top: 1px solid var(--border);
+      background: var(--bg-surface);
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+    body.dark-mode .search-modal-footer {
+      background: #111827;
+      border-top-color: #1e293b;
+    }
+    .search-modal-shortcuts {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .search-modal-shortcuts kbd {
+      font-size: 0.7rem;
+      padding: 1px 5px;
+      border-radius: 3px;
+      border: 1px solid var(--border);
+      background: var(--bg-hover);
+    }
+
     /* Cards e Superfícies Clínicas */
     .card {
       background: var(--bg-card) !important;
@@ -48979,28 +49212,315 @@
       });
     }
 
-    // Foco na Busca Global (Ctrl + K)
-    function focusSearch() {
-      if (isMobileMode()) {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar && !sidebar.classList.contains('open')) {
-          toggleSidebar();
-        }
-      }
-      setTimeout(() => {
-        const searchInput = document.getElementById('searchInput');
-        if (searchInput) {
-          searchInput.focus();
-          searchInput.select();
-        }
-      }, 80);
+    // =================================================================
+    // MODAL DE BUSCA GLOBAL (COMMAND PALETTE / SPOTLIGHT)
+    // =================================================================
+    let SEARCH_INDEX = [];
+    let currentSearchFilter = 'all';
+    let currentResults = [];
+    let activeResultIndex = -1;
+
+    function normalizeSearchText(text) {
+      return (text || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().trim();
     }
 
-    // Atalho global Ctrl+K / Cmd+K
-    window.addEventListener('keydown', (e) => {
+    function buildSearchIndex() {
+      if (SEARCH_INDEX.length > 0) return;
+      const index = [];
+
+      // 1. Módulos Clínicos (86 módulos)
+      Object.keys(MODULE_META).forEach(mId => {
+        const meta = MODULE_META[mId];
+        const isPed = mId.startsWith('ped-') || meta.specialty === 'pediatria';
+        index.push({
+          type: 'module',
+          id: mId,
+          moduleId: mId,
+          sectionId: meta.firstSection,
+          title: meta.name,
+          subtitle: meta.sub || (isPed ? 'Pediatria SBP 2024 (6ª Edição)' : 'Ginecologia FEBRASGO'),
+          icon: meta.icon || (isPed ? '👶' : '🩺'),
+          specialty: isPed ? 'pediatria' : 'ginecologia',
+          badge: isPed ? 'Pediatria' : 'Ginecologia',
+          badgeClass: isPed ? 'badge-pediatria' : '',
+          isFlowchart: false,
+          searchString: normalizeSearchText(`${meta.name} ${meta.sub || ''} ${meta.ref || ''} ${isPed ? 'pediatria sbp crianca' : 'ginecologia febrasgo'}`)
+        });
+      });
+
+      // 2. Seções Clínicas (684 seções)
+      const seenSectionIds = new Set();
+      document.querySelectorAll('ul[id^="nav-group-"]').forEach(group => {
+        const mId = group.id.replace('nav-group-', '');
+        const meta = MODULE_META[mId] || {};
+        const isPed = mId.startsWith('ped-') || meta.specialty === 'pediatria';
+
+        group.querySelectorAll('.nav-link').forEach(link => {
+          const href = link.getAttribute('href') || '';
+          const sId = href.replace(/^#/, '');
+          if (!sId || seenSectionIds.has(sId)) return;
+          seenSectionIds.add(sId);
+
+          const secEl = document.getElementById(sId);
+          const titleSpan = link.querySelector('span:last-child') || link;
+          const navTitle = titleSpan.textContent.trim();
+          const secH1 = secEl ? secEl.querySelector('h1.section-title, h1') : null;
+          const secSub = secEl ? secEl.querySelector('p.section-subtitle, p') : null;
+          const fullTitle = secH1 ? secH1.textContent.trim() : navTitle;
+          const subtitle = secSub ? secSub.textContent.trim() : (meta.name || '');
+          const isFlowchart = sId.includes('fluxograma') || sId.includes('fluxo') || (secEl && secEl.querySelector('.flowchart-img, img[src*=".svg"], .flowchart-container, .flowchart-actions'));
+          const isCase = sId.includes('caso') || (secEl && secEl.querySelector('.case-box'));
+
+          let badge = isPed ? 'Pediatria' : 'Ginecologia';
+          let badgeClass = isPed ? 'badge-pediatria' : '';
+          if (isFlowchart) {
+            badge = 'Fluxograma';
+            badgeClass = 'badge-flowchart';
+          } else if (isCase) {
+            badge = 'Caso Clínico';
+            badgeClass = 'badge-case';
+          }
+
+          index.push({
+            type: 'section',
+            id: sId,
+            moduleId: mId,
+            sectionId: sId,
+            title: fullTitle,
+            subtitle: `${meta.name ? meta.name + ' • ' : ''}${subtitle}`,
+            icon: isFlowchart ? '⚡' : (isCase ? '🎯' : (meta.icon || (isPed ? '👶' : '🩺'))),
+            specialty: isPed ? 'pediatria' : 'ginecologia',
+            badge: badge,
+            badgeClass: badgeClass,
+            isFlowchart: !!isFlowchart,
+            isCase: !!isCase,
+            searchString: normalizeSearchText(`${fullTitle} ${navTitle} ${subtitle} ${meta.name || ''} ${sId} ${isPed ? 'pediatria sbp' : 'ginecologia febrasgo'}`)
+          });
+        });
+      });
+
+      SEARCH_INDEX = index;
+    }
+
+    function openSearchModal() {
+      buildSearchIndex();
+      const modal = document.getElementById('command-search-modal');
+      const input = document.getElementById('modal-search-input');
+      if (!modal || !input) return;
+
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+      input.value = '';
+      const clearBtn = document.getElementById('modal-search-clear');
+      if (clearBtn) clearBtn.style.display = 'none';
+
+      executeModalSearch('');
+      setTimeout(() => {
+        input.focus();
+      }, 50);
+    }
+
+    function closeSearchModal() {
+      const modal = document.getElementById('command-search-modal');
+      if (!modal) return;
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+      activeResultIndex = -1;
+    }
+
+    function clearModalSearch() {
+      const input = document.getElementById('modal-search-input');
+      const clearBtn = document.getElementById('modal-search-clear');
+      if (input) {
+        input.value = '';
+        input.focus();
+      }
+      if (clearBtn) clearBtn.style.display = 'none';
+      executeModalSearch('');
+    }
+
+    function setSearchFilter(filter) {
+      currentSearchFilter = filter;
+      document.querySelectorAll('.search-filter-pill').forEach(pill => {
+        pill.classList.remove('active');
+      });
+      const targetPill = document.querySelector(`.search-filter-pill[data-filter="${filter}"]`);
+      if (targetPill) targetPill.classList.add('active');
+
+      const input = document.getElementById('modal-search-input');
+      executeModalSearch(input ? input.value : '');
+    }
+
+    function executeModalSearch(rawQuery) {
+      const query = normalizeSearchText(rawQuery);
+      const clearBtn = document.getElementById('modal-search-clear');
+      if (clearBtn) {
+        clearBtn.style.display = rawQuery ? 'block' : 'none';
+      }
+
+      let filtered = SEARCH_INDEX;
+      if (currentSearchFilter === 'pediatria') {
+        filtered = filtered.filter(item => item.specialty === 'pediatria');
+      } else if (currentSearchFilter === 'ginecologia') {
+        filtered = filtered.filter(item => item.specialty === 'ginecologia');
+      } else if (currentSearchFilter === 'fluxograma') {
+        filtered = filtered.filter(item => item.isFlowchart);
+      }
+
+      if (!query) {
+        currentResults = filtered.slice(0, 15);
+      } else {
+        const terms = query.split(/\s+/).filter(Boolean);
+        const scored = [];
+
+        filtered.forEach(item => {
+          const titleNorm = normalizeSearchText(item.title);
+          const matchesAll = terms.every(t => item.searchString.includes(t));
+          if (!matchesAll) return;
+
+          let score = 0;
+          if (titleNorm === query) score += 120;
+          else if (titleNorm.startsWith(query)) score += 60;
+          else if (titleNorm.includes(query)) score += 30;
+
+          if (item.type === 'module') score += 10;
+          if (item.isFlowchart) score += 5;
+
+          scored.push({ item, score });
+        });
+
+        scored.sort((a, b) => b.score - a.score);
+        currentResults = scored.slice(0, 25).map(s => s.item);
+      }
+
+      renderSearchResults();
+    }
+
+    function escapeSearchHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text || '';
+      return div.innerHTML;
+    }
+
+    function renderSearchResults() {
+      const container = document.getElementById('modal-search-results');
+      const countEl = document.getElementById('modal-search-count');
+      if (!container) return;
+
+      if (currentResults.length === 0) {
+        container.innerHTML = `
+          <div class="search-modal-empty">
+            <span>🔍</span>
+            <p>Nenhum resultado clínico encontrado para esta busca.</p>
+            <p style="font-size: 0.8rem; margin-top: 6px;">Tente pesquisar por termos como "baixa estatura", "sop", "has", "diarreia", "sifilis" ou "monif".</p>
+          </div>
+        `;
+        if (countEl) countEl.textContent = '0 resultados';
+        activeResultIndex = -1;
+        return;
+      }
+
+      let html = '';
+      currentResults.forEach((item, idx) => {
+        const activeClass = idx === 0 ? ' active' : '';
+        html += `
+          <div class="search-result-item${activeClass}" data-index="${idx}" onclick="selectSearchResult(${idx})">
+            <span class="search-result-icon">${item.icon}</span>
+            <div class="search-result-info">
+              <div class="search-result-title">${escapeSearchHtml(item.title)}</div>
+              <div class="search-result-subtitle">${escapeSearchHtml(item.subtitle)}</div>
+            </div>
+            <span class="search-result-badge ${item.badgeClass}">${item.badge}</span>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+      activeResultIndex = 0;
+      if (countEl) countEl.textContent = `${currentResults.length} resultado(s) disponível(is)`;
+    }
+
+    function selectSearchResult(index) {
+      if (index < 0 || index >= currentResults.length) return;
+      const target = currentResults[index];
+      if (!target) return;
+
+      closeSearchModal();
+
+      // Alternar especialidade se o resultado pertencer à outra
+      if (target.specialty && target.specialty !== currentSpecialty) {
+        if (typeof switchSpecialty === 'function') {
+          switchSpecialty(target.specialty);
+        }
+      }
+
+      if (target.moduleId) {
+        const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
+        if (curMod !== target.moduleId) {
+          switchModule(target.moduleId);
+        }
+      }
+      if (target.sectionId) {
+        switchSection(target.sectionId);
+      }
+    }
+
+    function updateModalSelection() {
+      const items = document.querySelectorAll('.search-result-item');
+      items.forEach((el, idx) => {
+        if (idx === activeResultIndex) {
+          el.classList.add('active');
+          el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        } else {
+          el.classList.remove('active');
+        }
+      });
+    }
+
+    // Foco na Busca Global (Ctrl + K ou clique na top bar)
+    function focusSearch() {
+      openSearchModal();
+    }
+
+    // Interações de teclado globais
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('command-search-modal');
+      const isModalOpen = modal && modal.style.display !== 'none';
+
+      // Abrir/fechar modal com Ctrl+K ou Cmd+K
       if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
         e.preventDefault();
-        focusSearch();
+        if (isModalOpen) {
+          closeSearchModal();
+        } else {
+          openSearchModal();
+        }
+        return;
+      }
+
+      // Se o modal estiver aberto:
+      if (isModalOpen) {
+        if (e.key === 'Escape') {
+          e.preventDefault();
+          closeSearchModal();
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (currentResults.length > 0) {
+            activeResultIndex = (activeResultIndex + 1) % currentResults.length;
+            updateModalSelection();
+          }
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (currentResults.length > 0) {
+            activeResultIndex = (activeResultIndex - 1 + currentResults.length) % currentResults.length;
+            updateModalSelection();
+          }
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (activeResultIndex >= 0 && activeResultIndex < currentResults.length) {
+            selectSearchResult(activeResultIndex);
+          }
+        }
       }
     });
 
@@ -49009,6 +49529,24 @@
       const activeSec = document.querySelector('.content-section.active');
       const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
       renderToc(activeSec ? activeSec.id : curMod);
+
+      // Listener para digitação no input do modal
+      const modalInput = document.getElementById('modal-search-input');
+      if (modalInput) {
+        modalInput.addEventListener('input', (e) => {
+          executeModalSearch(e.target.value);
+        });
+      }
+
+      // Fechar modal ao clicar no fundo escurecido
+      const searchModal = document.getElementById('command-search-modal');
+      if (searchModal) {
+        searchModal.addEventListener('click', (e) => {
+          if (e.target === searchModal) {
+            closeSearchModal();
+          }
+        });
+      }
     });
 
   </script>
@@ -49024,6 +49562,37 @@
       <button onclick="closePediatriaModal()" style="background: var(--primary); color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s;">
         Entendido, continuar em Ginecologia
       </button>
+    </div>
+  </div>
+
+  <!-- Modal de Busca Global (Command Palette / Spotlight) -->
+  <div id="command-search-modal" class="search-modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-label="Busca Global nos Módulos e Protocolos">
+    <div class="search-modal-container">
+      <div class="search-modal-header">
+        <svg class="search-modal-icon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/>
+        </svg>
+        <input type="text" id="modal-search-input" class="search-modal-input" placeholder="Buscar módulos, fluxogramas, protocolos, termos clínicos..." autocomplete="off" spellcheck="false" />
+        <button id="modal-search-clear" class="search-modal-clear" onclick="clearModalSearch()" title="Limpar busca" style="display: none;">✕</button>
+        <kbd class="search-modal-esc" onclick="closeSearchModal()">Esc</kbd>
+      </div>
+      <div class="search-modal-filters">
+        <button class="search-filter-pill active" data-filter="all" onclick="setSearchFilter('all')">Todos</button>
+        <button class="search-filter-pill" data-filter="pediatria" onclick="setSearchFilter('pediatria')">👶 Pediatria (48)</button>
+        <button class="search-filter-pill" data-filter="ginecologia" onclick="setSearchFilter('ginecologia')">🩺 Ginecologia (38)</button>
+        <button class="search-filter-pill" data-filter="fluxograma" onclick="setSearchFilter('fluxograma')">⚡ Fluxogramas</button>
+      </div>
+      <div id="modal-search-results" class="search-modal-results">
+        <!-- Resultados injetados dinamicamente via JS -->
+      </div>
+      <div class="search-modal-footer">
+        <div class="search-modal-shortcuts">
+          <span><kbd>↑</kbd> <kbd>↓</kbd> Navegar</span>
+          <span><kbd>↵</kbd> Selecionar</span>
+          <span><kbd>esc</kbd> Fechar</span>
+        </div>
+        <div id="modal-search-count" class="search-modal-count">86 módulos disponíveis</div>
+      </div>
     </div>
   </div>
 </body>
