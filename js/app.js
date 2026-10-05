@@ -57,7 +57,7 @@ function showLoadedModule(moduleId) {
   });
 }
 
-function switchSpecialty(spec) {
+function switchSpecialty(spec, openModal = false) {
   if (spec === 'pediatria') {
     currentSpecialty = 'pediatria';
     document.getElementById('spec-tab-pediatria')?.classList.add('active');
@@ -129,6 +129,10 @@ function switchSpecialty(spec) {
   try {
     localStorage.setItem('fluxomed_active_specialty', spec);
   } catch(e) {}
+
+  if (openModal && typeof openSearchModal === 'function') {
+    openSearchModal(spec);
+  }
 }
 
 function closePediatriaModal() {

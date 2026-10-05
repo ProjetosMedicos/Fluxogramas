@@ -90,7 +90,7 @@ function buildSearchIndex() {
   SEARCH_INDEX = index;
 }
 
-function openSearchModal() {
+function openSearchModal(initialFilter) {
   buildSearchIndex();
   const modal = document.getElementById('command-search-modal');
   const input = document.getElementById('modal-search-input');
@@ -102,7 +102,21 @@ function openSearchModal() {
   const clearBtn = document.getElementById('modal-search-clear');
   if (clearBtn) clearBtn.style.display = 'none';
 
-  executeModalSearch('');
+  if (initialFilter && (initialFilter === 'ginecologia' || initialFilter === 'pediatria' || initialFilter === 'fluxograma' || initialFilter === 'all')) {
+    setSearchFilter(initialFilter);
+    if (initialFilter === 'ginecologia') {
+      input.placeholder = "Buscar nas seções e protocolos de Ginecologia (FEBRASGO)...";
+    } else if (initialFilter === 'pediatria') {
+      input.placeholder = "Buscar nas seções e diretrizes de Pediatria (SBP 2024)...";
+    } else {
+      input.placeholder = "Buscar módulos, fluxogramas, protocolos, termos clínicos...";
+    }
+  } else {
+    setSearchFilter('all');
+    input.placeholder = "Buscar módulos, fluxogramas, protocolos, termos clínicos...";
+    executeModalSearch('');
+  }
+
   setTimeout(() => {
     input.focus();
   }, 50);
@@ -156,7 +170,8 @@ function executeModalSearch(rawQuery) {
   }
 
   if (!query) {
-    currentResults = filtered.slice(0, 15);
+    // Quando filtrado por especialidade, exibe todos os tópicos disponíveis dessa especialidade
+    currentResults = (currentSearchFilter === 'all') ? filtered.slice(0, 30) : filtered;
   } else {
     const terms = query.split(/\s+/).filter(Boolean);
     const scored = [];
@@ -225,7 +240,17 @@ function renderSearchResults() {
 
   container.innerHTML = html;
   activeResultIndex = 0;
-  if (countEl) countEl.textContent = `${currentResults.length} resultado(s) disponível(is)`;
+  if (countEl) {
+    const input = document.getElementById('modal-search-input');
+    const isSearching = input && input.value.trim().length > 0;
+    if (currentSearchFilter === 'ginecologia' && !isSearching) {
+      countEl.textContent = `38 módulos e ${currentResults.length} seções disponíveis em Ginecologia`;
+    } else if (currentSearchFilter === 'pediatria' && !isSearching) {
+      countEl.textContent = `48 módulos e ${currentResults.length} seções disponíveis em Pediatria (SBP 2024)`;
+    } else {
+      countEl.textContent = `${currentResults.length} resultado(s) disponível(is)`;
+    }
+  }
 }
 
 async function selectSearchResult(index) {

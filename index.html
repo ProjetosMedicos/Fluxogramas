@@ -45,11 +45,11 @@
 
     <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->
     <div class="specialty-tabs-bar" role="tablist" aria-label="Especialidades Médicas">
-      <button class="specialty-tab-btn active" role="tab" aria-selected="true" id="spec-tab-ginecologia" onclick="switchSpecialty('ginecologia')" title="Especialidade: Ginecologia & Obstetrícia (FEBRASGO)">
+      <button class="specialty-tab-btn active" role="tab" aria-selected="true" id="spec-tab-ginecologia" onclick="switchSpecialty('ginecologia', true)" title="Especialidade: Ginecologia & Obstetrícia (FEBRASGO) - Clique para ver seções">
         <span>Ginecologia</span>
         <span class="specialty-tab-badge">38</span>
       </button>
-      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria')" title="Especialidade: Pediatria (SBP 2024)">
+      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-pediatria" onclick="switchSpecialty('pediatria', true)" title="Especialidade: Pediatria (SBP 2024) - Clique para ver seções">
         <span>Pediatria</span>
         <span class="specialty-tab-badge" id="spec-ped-badge">48</span>
       </button>
@@ -723,14 +723,6 @@
             </div>
           </div>
         </div></div>
-      </div>
-    </div>
-
-    <div class="sidebar-search">
-      <div class="search-input-wrapper">
-        <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="color: var(--text-muted); flex-shrink: 0;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg>
-        <input type="text" id="searchInput" placeholder="Buscar queixa, fármaco ou termo..." oninput="handleSearch(this.value)">
-        <button id="searchClearBtn" class="search-clear-btn" onclick="clearSearch()" style="display:none;" title="Limpar busca">✕</button>
       </div>
     </div>
 
