@@ -18,8 +18,8 @@
   
   <!-- Fontes & Ícones -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@8..144,400..700&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Roboto+Mono:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
   
   <style>
 
@@ -27,8 +27,8 @@
     /* GOOGLE ANTIGRAVITY DOCS DESIGN SYSTEM (CLEAN & TECHNICAL)        */
     /* ================================================================= */
     :root {
-      --font-sans: 'Google Sans Flex', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      --font-mono: 'JetBrains Mono', 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      --font-sans: 'Inter', 'Google Sans Flex', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      --font-mono: 'Roboto Mono', 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
       --bg-body: #ffffff;
       --bg-canvas: #ffffff;
@@ -100,6 +100,31 @@
       background-color: var(--bg-body);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+      text-rendering: optimizeLegibility;
+      transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    ::selection {
+      background: rgba(26, 115, 232, 0.2);
+      color: inherit;
+    }
+    body.dark-mode ::selection {
+      background: rgba(138, 180, 248, 0.3);
+      color: inherit;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--primary) !important;
+      outline-offset: 2px !important;
+    }
+
+    button:active,
+    .btn-action:active,
+    .module-picker-item:active,
+    .docs-pager-link:active,
+    .search-filter-pill:active {
+      transform: scale(0.985);
     }
 
     /* Ocultar emoticons da navegação e caixas para máxima limpeza visual */
@@ -110,11 +135,11 @@
     }
 
     /* Tipografia de Cabeçalhos (Clean, Antigravity Docs Style) */
-    h1, h2, h3, h4 {
+    h1, h2, h3, h4, h5, h6 {
       font-family: var(--font-sans);
       color: var(--text-main);
       font-weight: 600;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.025em;
     }
     .section-header h1 {
       font-size: 1.85rem !important;
@@ -122,6 +147,7 @@
       letter-spacing: -0.03em !important;
       color: var(--text-main) !important;
       margin-bottom: 8px !important;
+      line-height: 1.25 !important;
     }
     .section-header p {
       font-size: 0.95rem !important;
@@ -133,6 +159,43 @@
       font-weight: 600 !important;
       letter-spacing: -0.015em !important;
       color: var(--text-main) !important;
+    }
+
+    /* Tipografia de Código, Posologias e Valores Técnicos */
+    code, kbd, samp, pre, .mono-code {
+      font-family: var(--font-mono) !important;
+      font-size: 0.85em;
+      font-variant-numeric: tabular-nums;
+    }
+    code {
+      padding: 2px 6px;
+      border-radius: var(--radius-xs);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      color: var(--primary);
+    }
+    kbd {
+      padding: 2px 6px;
+      border-radius: var(--radius-xs);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      box-shadow: 0 1px 0 rgba(0,0,0,0.1);
+      font-size: 0.72rem;
+      font-weight: 600;
+    }
+
+    /* Tabelas Clínicas com Alinhamento Numérico Perfeito (Tabular Nums) */
+    table, .clinical-table {
+      font-variant-numeric: tabular-nums lining-nums;
+      letter-spacing: -0.005em;
+    }
+    table th, .clinical-table th {
+      font-variant-numeric: tabular-nums lining-nums;
+      letter-spacing: 0.02em;
+    }
+    table td, .clinical-table td {
+      font-variant-numeric: tabular-nums lining-nums;
+      line-height: 1.55;
     }
 
     /* Suporte a transições e rolagem moderna */
@@ -1721,12 +1784,17 @@
     .badge {
       display: inline-flex;
       align-items: center;
-      padding: 3px 8px;
-      border-radius: 9999px;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: var(--radius-pill);
       font-size: 0.72rem;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.03em;
+      letter-spacing: 0.04em;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.4;
+      white-space: nowrap;
+      transition: all 0.15s ease;
     }
 
     .badge-evidence-1, .badge-evidence-a { background-color: #dcfce7; color: #15803d; border: 1px solid #86efac; }
