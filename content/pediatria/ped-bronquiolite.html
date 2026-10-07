@@ -283,24 +283,34 @@
       <div class="section-header">
         <div class="section-badges">
           <span class="badge" style="background: rgba(14, 165, 233, 0.15); color: #0284c7; border: 1px solid rgba(14, 165, 233, 0.3);">SBP 2024 (6ª Edição)</span>
-          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Algoritmo Decisório Vetorial</span>
+          <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3);">Infográfico de Alta Resolução</span>
         </div>
-        <h1 class="section-title">Fluxograma: Algoritmo da Bronquiolite Viral Aguda</h1>
-        <p class="section-subtitle">Árvore de decisão clínica sequencial da triagem ambulatorial ao suporte de terapia intensiva.</p>
+        <h1 class="section-title">Infográfico Clínico & Algoritmo da Bronquiolite Viral Aguda</h1>
+        <p class="section-subtitle">Síntese visual executiva estilo NotebookLM: propedêutica, escore de Wood-Downes, triagem sequencial e condutas baseadas em evidências.</p>
       </div>
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo da Bronquiolite Viral Aguda (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Bronquiolite Viral Aguda (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="bva-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-bronquiolite.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="bva-fullscreen-link" href="imagens/infografico-ped-bronquiolite.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="bva-download-link" href="imagens/infografico-ped-bronquiolite.png" download="infografico-ped-bronquiolite-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-bronquiolite.svg" alt="Fluxograma Bronquiolite Viral Aguda SBP" class="flowchart-img" data-scale="1.0">
+          <img id="bva-visual-display" src="imagens/infografico-ped-bronquiolite.png" alt="Infográfico Clínico da Bronquiolite Viral Aguda SBP 2024" class="flowchart-img infographic-mode" data-scale="1.0">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza diagnóstico, semiologia em 4 eixos, tabela de Wood-Downes, algoritmo sequencial em 3 vias e recomendações Choosing Wisely da SBP. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 

@@ -1718,6 +1718,47 @@
       transform: translateY(-1px);
     }
 
+    /* Flowchart & Infographic View Switcher */
+    .flowchart-view-toggle {
+      display: inline-flex;
+      background-color: #f1f5f9;
+      padding: 3px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      gap: 3px;
+    }
+
+    .flowchart-view-toggle .view-btn {
+      background: transparent;
+      border: none;
+      padding: 5px 11px;
+      border-radius: 4px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .flowchart-view-toggle .view-btn:hover {
+      color: var(--primary);
+    }
+
+    .flowchart-view-toggle .view-btn.active {
+      background-color: var(--bg-card);
+      color: var(--primary-dark);
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+      font-weight: 700;
+    }
+
+    .flowchart-img.infographic-mode {
+      max-width: 100% !important;
+      border-radius: 12px;
+    }
+
     .flowchart-img-container {
       background-color: var(--bg-card);
       border: 1px solid var(--border);
@@ -2924,6 +2965,21 @@
     }
 
     /* Flowcharts & Diagram Containers in Dark Mode */
+    body.dark-mode .flowchart-view-toggle {
+      background-color: #1e293b;
+      border-color: #334155;
+    }
+    body.dark-mode .flowchart-view-toggle .view-btn {
+      color: #94a3b8;
+    }
+    body.dark-mode .flowchart-view-toggle .view-btn:hover {
+      color: #38bdf8;
+    }
+    body.dark-mode .flowchart-view-toggle .view-btn.active {
+      background-color: #0f172a;
+      color: #38bdf8;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    }
     body.dark-mode .flowchart-img-container {
       background-color: #0b0f19;
       border-color: #243044;
@@ -2936,6 +2992,11 @@
       border: 1px solid #334155;
       filter: contrast(1.02) brightness(0.96);
       transition: filter 0.2s ease, transform 0.2s ease;
+    }
+    body.dark-mode .flowchart-img.infographic-mode {
+      padding: 6px;
+      background: #0f172a;
+      border-color: #38bdf8;
     }
 
     /* Cards, Steps & PALM Cards */

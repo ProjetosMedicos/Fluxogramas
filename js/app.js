@@ -424,6 +424,39 @@ function resetFlowchartZoom(target) {
   resetZoom(target);
 }
 
+function switchVisualMode(btn, mode) {
+  const card = btn.closest('.card');
+  if (!card) return;
+  const toggle = card.querySelector('.flowchart-view-toggle');
+  if (toggle) {
+    toggle.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+  }
+  const img = card.querySelector('.flowchart-img, img');
+  const fullLink = card.querySelector('#bva-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
+  const dlLink = card.querySelector('#bva-download-link, .flowchart-actions a[download]');
+  if (img) {
+    img.dataset.scale = '1.0';
+    img.style.transform = 'scale(1.0)';
+    if (mode === 'infographic') {
+      img.src = 'imagens/infografico-ped-bronquiolite.png';
+      img.alt = 'Infográfico Clínico da Bronquiolite Viral Aguda SBP 2024';
+      img.classList.add('infographic-mode');
+      if (fullLink) fullLink.href = 'imagens/infografico-ped-bronquiolite.png';
+      if (dlLink) {
+        dlLink.href = 'imagens/infografico-ped-bronquiolite.png';
+        dlLink.style.display = 'inline-flex';
+      }
+    } else {
+      img.src = 'imagens/fluxo-ped-bronquiolite.svg';
+      img.alt = 'Fluxograma Bronquiolite Viral Aguda SBP';
+      img.classList.remove('infographic-mode');
+      if (fullLink) fullLink.href = 'imagens/fluxo-ped-bronquiolite.svg';
+      if (dlLink) dlLink.style.display = 'none';
+    }
+  }
+}
+
 function toggleCaseFeedback(btn) {
   const card = btn.closest('.card, .clinical-card, .case-box') || btn.parentElement;
   if (!card) return;
@@ -717,8 +750,25 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
   updateThemeButtons(isDark);
 
-  const initialMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
-  await switchModule(initialMod);
+  const hash = window.location.hash.replace('#', '');
+  if (hash) {
+    let targetMod = null;
+    if (typeof ORDERED_SECTIONS !== 'undefined') {
+      const allSecs = [...ORDERED_SECTIONS.ginecologia, ...ORDERED_SECTIONS.pediatria];
+      const found = allSecs.find(s => s.sectionId === hash);
+      if (found && found.moduleId) targetMod = found.moduleId;
+    }
+    if (targetMod) {
+      await switchModule(targetMod);
+    } else {
+      const initialMod = hash.startsWith('ped-') ? 'ped-bronquiolite' : activeGinecologiaMod;
+      await switchModule(initialMod);
+    }
+    await switchSection(hash);
+  } else {
+    const initialMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
+    await switchModule(initialMod);
+  }
 
   const modalInput = document.getElementById('modal-search-input');
   if (modalInput) {
