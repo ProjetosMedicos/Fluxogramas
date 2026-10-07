@@ -316,6 +316,11 @@ function updateThemeButtons(isDark) {
     themeToggle.setAttribute('title', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
     themeToggle.setAttribute('aria-label', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
   }
+
+  const themeMetas = document.querySelectorAll('meta[name="theme-color"]');
+  themeMetas.forEach(meta => {
+    meta.setAttribute('content', isDark ? '#121316' : '#ffffff');
+  });
 }
 
 async function switchSection(sectionId) {
