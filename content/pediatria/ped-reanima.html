@@ -271,19 +271,37 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-header">
-          <div class="flowchart-title">Algoritmo Decisório Sequencial de Reanimação Neonatal em Sala de Parto</div>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Reanimação Neonatal em Sala de Parto (PRN-SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="reanima-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">➕ Ampliar</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxo-ped-reanima.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="reanima-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="reanima-fullscreen-link" href="imagens/infografico-ped-reanima.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="reanima-download-link" href="imagens/infografico-ped-reanima.png" download="infografico-ped-reanima-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-reanima.svg" alt="Fluxograma Oficial de Reanimação Neonatal SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+          <img id="reanima-visual-display" 
+               src="imagens/infografico-ped-reanima.png" 
+               alt="Infográfico Clínico da Reanimação Neonatal em Sala de Parto SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-reanima.png"
+               data-infographic-alt="Infográfico Clínico da Reanimação Neonatal em Sala de Parto SBP 2024"
+               data-svg-src="imagens/fluxo-ped-reanima.svg"
+               data-svg-alt="Fluxograma Oficial de Reanimação Neonatal SBP 2024">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza o Minuto de Ouro (Golden Minute), triagem em 3 perguntas, passos iniciais na mesa radiante (≤ 30s), parâmetros de VPP (40-60 mov/min e FiO2 21% a termo), tabela de saturação de O2 pré-ductal (MSD), massagem coordenada 3:1, adrenalina em veia umbilical (0,02 mg/kg) e protocolo de hipotermia terapêutica. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
       <div class="source-attribution" style="margin-top: 30px;">
