@@ -2713,6 +2713,12 @@
         box-sizing: border-box !important;
         contain: paint !important;
       }
+      .flowchart-img-container:has(.infographic-mode) {
+        max-height: none !important;
+        overflow-y: visible !important;
+        contain: none !important;
+        padding: 8px 0 !important;
+      }
       .flowchart-img {
         width: 100% !important;
         max-width: 100% !important;
@@ -2728,6 +2734,9 @@
         min-height: 38px !important;
         padding: 6px 10px !important;
         font-size: 0.82rem !important;
+      }
+      #bva-expand-btn {
+        display: none !important;
       }
 
       /* Contenção de Tabelas Clínicas */
