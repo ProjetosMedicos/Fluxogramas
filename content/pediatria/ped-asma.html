@@ -286,16 +286,35 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Manejo Escalonado da Asma Infantil & Crise Aguda (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Manejo Escalonado da Asma Infantil & Crise Aguda (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="asma-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-asma.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="asma-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="asma-fullscreen-link" href="imagens/infografico-ped-asma.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="asma-download-link" href="imagens/infografico-ped-asma.png" download="infografico-ped-asma-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-asma.svg" alt="Fluxograma Asma Infantil SBP" class="flowchart-img" data-scale="1.0">
+          <img id="asma-visual-display" 
+               src="imagens/infografico-ped-asma.png" 
+               alt="Infográfico Clínico da Asma na Infância e Crise Aguda SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-asma.png"
+               data-infographic-alt="Infográfico Clínico da Asma na Infância e Crise Aguda SBP 2024"
+               data-svg-src="imagens/fluxo-ped-asma.svg"
+               data-svg-alt="Fluxograma Asma Infantil SBP">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza fisiopatologia T2, semiologia e red flags, tabela do Escore PRAM, algoritmo sequencial da 1ª hora (20-20-20) em 3 vias, recomendações Choosing Wisely e etapas de manutenção GINA/SBP. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 

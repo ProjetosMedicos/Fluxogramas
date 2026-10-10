@@ -443,25 +443,31 @@ function switchVisualMode(btn, mode) {
     btn.classList.add('active');
   }
   const img = card.querySelector('.flowchart-img, img');
-  const fullLink = card.querySelector('#bva-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
-  const dlLink = card.querySelector('#bva-download-link, .flowchart-actions a[download]');
+  const fullLink = card.querySelector('#bva-fullscreen-link, #asma-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
+  const dlLink = card.querySelector('#bva-download-link, #asma-download-link, .flowchart-actions a[download]');
   if (img) {
     img.dataset.scale = '1.0';
     img.style.transform = 'scale(1.0)';
+    
+    const infoSrc = img.dataset.infographicSrc || 'imagens/infografico-ped-bronquiolite.png';
+    const svgSrc = img.dataset.svgSrc || 'imagens/fluxo-ped-bronquiolite.svg';
+    const infoAlt = img.dataset.infographicAlt || img.alt;
+    const svgAlt = img.dataset.svgAlt || 'Fluxograma Vetorial';
+
     if (mode === 'infographic') {
-      img.src = 'imagens/infografico-ped-bronquiolite.png';
-      img.alt = 'Infográfico Clínico da Bronquiolite Viral Aguda SBP 2024';
+      img.src = infoSrc;
+      img.alt = infoAlt;
       img.classList.add('infographic-mode');
-      if (fullLink) fullLink.href = 'imagens/infografico-ped-bronquiolite.png';
+      if (fullLink) fullLink.href = infoSrc;
       if (dlLink) {
-        dlLink.href = 'imagens/infografico-ped-bronquiolite.png';
+        dlLink.href = infoSrc;
         dlLink.style.display = 'inline-flex';
       }
     } else {
-      img.src = 'imagens/fluxo-ped-bronquiolite.svg';
-      img.alt = 'Fluxograma Bronquiolite Viral Aguda SBP';
+      img.src = svgSrc;
+      img.alt = svgAlt;
       img.classList.remove('infographic-mode');
-      if (fullLink) fullLink.href = 'imagens/fluxo-ped-bronquiolite.svg';
+      if (fullLink) fullLink.href = svgSrc;
       if (dlLink) dlLink.style.display = 'none';
     }
   }
