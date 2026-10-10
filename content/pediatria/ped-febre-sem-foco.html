@@ -289,16 +289,36 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo da Febre sem Foco (FSF) no Lactente (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo da Febre sem Foco (FSF) no Lactente (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="fsf-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-febre-sem-foco.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="fsf-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="fsf-fullscreen-link" href="imagens/infografico-ped-febre-sem-foco.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="fsf-download-link" href="imagens/infografico-ped-febre-sem-foco.png" download="infografico-ped-febre-sem-foco-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-febre-sem-foco.svg" alt="Fluxograma Febre sem Foco SBP" class="flowchart-img" data-scale="1.0">
+          <img id="fsf-visual-display" 
+               src="imagens/infografico-ped-febre-sem-foco.png" 
+               alt="Infográfico Clínico de Febre sem Foco no Lactente SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-febre-sem-foco.png"
+               data-infographic-alt="Infográfico Clínico de Febre sem Foco no Lactente SBP 2024"
+               data-svg-src="imagens/fluxo-ped-febre-sem-foco.svg"
+               data-svg-alt="Fluxograma Febre sem Foco SBP">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza a definição de FSF e risco de IBG, a estratificação nas 3 faixas etárias (< 28d, 29-60d e 3-36m), tabela dos Critérios de Rochester, armadilha do falso-positivo do saco coletor de urina, algoritmos em 3 vias, posologias de Ampicilina+Gentamicina, Ceftriaxona e antimicrobianos orais para ITU, Choosing Wisely e Red Flags de sepse/meningite. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 

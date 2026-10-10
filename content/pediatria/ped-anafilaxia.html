@@ -244,16 +244,36 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo de Emergência da Anafilaxia Pediátrica (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo de Emergência da Anafilaxia Pediátrica (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="anafilaxia-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-anafilaxia.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="anafilaxia-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="anafilaxia-fullscreen-link" href="imagens/infografico-ped-anafilaxia.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="anafilaxia-download-link" href="imagens/infografico-ped-anafilaxia.png" download="infografico-ped-anafilaxia-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-anafilaxia.svg" alt="Fluxograma Anafilaxia Pediátrica SBP" class="flowchart-img" data-scale="1.0">
+          <img id="anafilaxia-visual-display" 
+               src="imagens/infografico-ped-anafilaxia.png" 
+               alt="Infográfico Clínico de Anafilaxia Pediátrica SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-anafilaxia.png"
+               data-infographic-alt="Infográfico Clínico de Anafilaxia Pediátrica SBP 2024"
+               data-svg-src="imagens/fluxo-ped-anafilaxia.svg"
+               data-svg-alt="Fluxograma Anafilaxia Pediátrica SBP">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza a definição e fisiopatologia tempo-sensível, os critérios diagnósticos WAO/EAACI 2024, a regra de ouro da Adrenalina IM 0,01 mg/kg em vasto lateral da coxa, passos sequenciais de emergência, posicionamento sem risco de PCR, medicações adjuvantes, Choosing Wisely e plano de alta escolar com auto-injetor. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 

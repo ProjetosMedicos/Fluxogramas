@@ -259,16 +259,36 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo de APLV & Terapia Nutricional Pediátrica (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo de APLV &amp; Terapia Nutricional Pediátrica (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="alergia-alim-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-alergia-alim.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="alergia-alim-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="alergia-alim-fullscreen-link" href="imagens/infografico-ped-alergia-alim.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="alergia-alim-download-link" href="imagens/infografico-ped-alergia-alim.png" download="infografico-ped-alergia-alim-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-alergia-alim.svg" alt="Fluxograma APLV SBP" class="flowchart-img" data-scale="1.0">
+          <img id="alergia-alim-visual-display" 
+               src="imagens/infografico-ped-alergia-alim.png" 
+               alt="Infográfico Clínico de APLV e Alergia Alimentar SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-alergia-alim.png"
+               data-infographic-alt="Infográfico Clínico de APLV e Alergia Alimentar SBP 2024"
+               data-svg-src="imagens/fluxo-ped-alergia-alim.svg"
+               data-svg-alt="Fluxograma APLV SBP">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza o conceito e diferenciação de intolerância à lactose, os 3 mecanismos (IgE, Não-IgE e misto com FPIES/FPIAP), o diagnóstico padrão-ouro em 3 etapas (suspeita, dieta de exclusão e TPO), tabela comparativa das fórmulas especiais (FEH vs FAA vs Soja), suporte e suplementação de cálcio à mãe nutriz, Choosing Wisely e Red Flags para especialista. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 
