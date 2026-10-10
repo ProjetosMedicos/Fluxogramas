@@ -443,8 +443,8 @@ function switchVisualMode(btn, mode) {
     btn.classList.add('active');
   }
   const img = card.querySelector('.flowchart-img, img');
-  const fullLink = card.querySelector('#bva-fullscreen-link, #asma-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
-  const dlLink = card.querySelector('#bva-download-link, #asma-download-link, .flowchart-actions a[download]');
+  const fullLink = card.querySelector('#bva-fullscreen-link, #asma-fullscreen-link, #pneumonia-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
+  const dlLink = card.querySelector('#bva-download-link, #asma-download-link, #pneumonia-download-link, .flowchart-actions a[download]');
   if (img) {
     img.dataset.scale = '1.0';
     img.style.transform = 'scale(1.0)';

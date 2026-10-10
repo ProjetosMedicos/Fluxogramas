@@ -288,16 +288,35 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo da Pneumonia Comunitária Pediátrica (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo da Pneumonia Comunitária Pediátrica (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="pneumonia-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-pneumonia.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="pneumonia-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="pneumonia-fullscreen-link" href="imagens/infografico-ped-pneumonia.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="pneumonia-download-link" href="imagens/infografico-ped-pneumonia.png" download="infografico-ped-pneumonia-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-pneumonia.svg" alt="Fluxograma Pneumonia Comunitária SBP" class="flowchart-img" data-scale="1.0">
+          <img id="pneumonia-visual-display" 
+               src="imagens/infografico-ped-pneumonia.png" 
+               alt="Infográfico Clínico da Pneumonia Comunitária na Infância SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-pneumonia.png"
+               data-infographic-alt="Infográfico Clínico da Pneumonia Comunitária na Infância SBP 2024"
+               data-svg-src="imagens/fluxo-ped-pneumonia.svg"
+               data-svg-alt="Fluxograma Pneumonia Comunitária SBP">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza definição clínica OMS, etiologia por idade, tabela de taquipneia em 60s, estratificação em 3 níveis (não grave, grave e crítica), algoritmo terapêutico escalonado (Amoxicilina, Ampicilina, Ceftriaxona/Oxacilina), recomendações Choosing Wisely e critérios de empiema/drenagem torácica. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 
