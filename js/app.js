@@ -424,6 +424,16 @@ function resetFlowchartZoom(target) {
   resetZoom(target);
 }
 
+function toggleWideMode(btn) {
+  const card = btn.closest('.card') || btn.closest('.content-section');
+  if (!card) return;
+  const container = card.querySelector('.flowchart-img-container');
+  if (!container) return;
+  const isWide = container.classList.toggle('wide-mode');
+  btn.textContent = isWide ? '⇥ Reduzir' : '↔ Expandir';
+  btn.classList.toggle('active', isWide);
+}
+
 function switchVisualMode(btn, mode) {
   const card = btn.closest('.card');
   if (!card) return;
@@ -604,8 +614,10 @@ function updateTocActive(headingId) {
     const a = item.querySelector('a');
     if (a && a.getAttribute('href') === `#${headingId}`) {
       item.classList.add('active');
+      a.classList.add('active');
     } else {
       item.classList.remove('active');
+      if (a) a.classList.remove('active');
     }
   });
 }
@@ -797,3 +809,37 @@ window.addEventListener('DOMContentLoaded', async () => {
     }, { passive: true });
   }
 });
+
+// SPA History & Navegação pelo Histórico do Navegador (Avançar/Voltar)
+async function handleHashNavigation() {
+  const hash = window.location.hash.replace('#', '');
+  if (!hash) return;
+  const headingEl = document.getElementById(hash);
+  if (headingEl && (headingEl.tagName === 'H2' || headingEl.tagName === 'H3')) {
+    scrollToHeading(hash);
+    return;
+  }
+  let targetMod = null;
+  if (typeof ORDERED_SECTIONS !== 'undefined') {
+    const allSecs = [...ORDERED_SECTIONS.ginecologia, ...ORDERED_SECTIONS.pediatria];
+    const found = allSecs.find(s => s.sectionId === hash);
+    if (found && found.moduleId) targetMod = found.moduleId;
+  }
+  if (!targetMod && typeof MODULE_META !== 'undefined') {
+    for (const [mId, meta] of Object.entries(MODULE_META)) {
+      if (meta.firstSection === hash) {
+        targetMod = mId;
+        break;
+      }
+    }
+  }
+  if (targetMod && targetMod !== currentModule) {
+    await switchModule(targetMod);
+  }
+  await switchSection(hash);
+}
+
+window.addEventListener('hashchange', () => {
+  handleHashNavigation();
+});
+
