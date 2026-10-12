@@ -257,19 +257,32 @@
       </div>
 
       <div class="card">
-        <div class="flowchart-header">
-          <div class="flowchart-title">Algoritmo de Triagens Neonatais Universais &amp; Critérios de Alta Hospitalar (SBP 2024)</div>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo de Triagens Neonatais Universais & Critérios de Alta (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="cuidneonat-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">➕ Ampliar</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxo-ped-cuidneonat.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="cuidneonat-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="cuidneonat-fullscreen-link" href="imagens/infografico-ped-cuidneonat.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="cuidneonat-download-link" href="imagens/infografico-ped-cuidneonat.png" download="infografico-ped-cuidneonat-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-cuidneonat.svg" alt="Fluxograma de Triagens Neonatais SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+          <img id="cuidneonat-visual-display" 
+               src="imagens/infografico-ped-cuidneonat.png" 
+               alt="Infográfico Clínico de Cuidados do Recém-Nascido e Triagens Neonatais SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-cuidneonat.png"
+               data-svg-src="imagens/fluxo-ped-cuidneonat.svg">
         </div>
       </div>
       <div class="source-attribution" style="margin-top: 30px;">

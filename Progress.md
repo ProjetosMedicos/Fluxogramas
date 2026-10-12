@@ -1,6 +1,7 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** ✅ **Onda P6 Concluída** (Endocrinologia Pediátrica, Puberdade, Metabolismo & Imunizações) • Próxima: **Onda P7**  
+> **Status Atual:** ✅ **Onda P7 Concluída com Sucesso!** (Neonatologia Fundamental, Cuidados do RN & Puericultura Preventiva)  
+> **Próximo Passo:** 🚀 **Onda P8** (Reumatologia Pediátrica, Vasculites & Gastroenterologia Avançada)  
 > **Última Atualização:** 12/10/2026
 
 ---
@@ -8,8 +9,8 @@
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [██████████████░░░░░░░░░░░░░░] 36.0%  (31 / 86 módulos)
-PEDIATRIA (Total):                [█████████████████████░░░░░░░] 64.6%  (31 / 48 módulos)
+GLOBAL (Pediatria + Ginecologia): [████████████████░░░░░░░░░░░░] 41.9%  (36 / 86 módulos)
+PEDIATRIA (Total):                [████████████████████████░░░░] 75.0%  (36 / 48 módulos)
 GINECOLOGIA & OBSTETRÍCIA:        [░░░░░░░░░░░░░░░░░░░░░░░░░░░░]  0.0%  ( 0 / 38 módulos)
 ```
 
@@ -27,11 +28,11 @@ GINECOLOGIA & OBSTETRÍCIA:        [░░░░░░░░░░░░░░�
 | **Onda P3** | Infectologia, Síndromes Febris & Choque | 5 | ✅ Concluído | `[██████████]` 100% (5/5) |
 | **Onda P4** | Nefrologia, Neurologia, Perinatologia & BRUE | 5 | ✅ Concluído | `[██████████]` 100% (5/5) |
 | **Onda P5** | Puericultura, Nutrição, Crescimento & DNPM | 5 | ✅ Concluído | `[██████████]` 100% (5/5) |
-| **Onda P6** | Endocrinologia, Puberdade & Imunizações | 5 | ✅ **Concluído** | `[██████████]` 100% (5/5) |
-| **Onda P7** | Neonatologia Fundamental & Cuidados do RN | 5 | ⏳ Pendente | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda P8** | Reumatologia, Vasculites & Gastro Avançada | 6 | ⏳ Pendente | `[░░░░░░░░░░]` 0% (0/6) |
+| **Onda P6** | Endocrinologia, Puberdade & Imunizações | 5 | ✅ Concluído | `[██████████]` 100% (5/5) |
+| **Onda P7** | Neonatologia Fundamental & Cuidados do RN | 5 | ✅ Concluído | `[██████████]` 100% (5/5) |
+| **Onda P8** | Reumatologia, Vasculites & Gastro Avançada | 6 | ⏳ Próxima Onda | `[░░░░░░░░░░]` 0% (0/6) |
 | **Onda P9** | Cardiopatias, Hipertensão, Cefaleia & Genética | 6 | ⏳ Pendente | `[░░░░░░░░░░]` 0% (0/6) |
-| **SUBTOTAL** | **Pediatria Completa** | **48** | **64.6% Concluído** | **31 / 48 Módulos** |
+| **SUBTOTAL** | **Pediatria Completa** | **48** | **75.0% Concluído** | **36 / 48 Módulos** |
 
 ---
 
@@ -51,53 +52,53 @@ GINECOLOGIA & OBSTETRÍCIA:        [░░░░░░░░░░░░░░�
 
 ---
 
-## 📋 Detalhamento da Onda Ativa: Onda P6
+## 📋 Detalhamento da Onda P7 (100% Concluída)
 
-### Módulos da Onda P6:
-1. `ped-imunizacoes` — Calendário Vacinal SBP/PNI 2024, Atrasos, CRIE & Contraindicações
-2. `ped-puberdade` — Puberdade Precoce vs Atrasada & Estadiamento de Tanner
-3. `ped-hipotireoidismo` — Hipotireoidismo Congênito (Triagem Teste do Pezinho) & Adquirido
-4. `ped-hiperplasia-adrenal` — Hiperplasia Adrenal Congênita (21-OH, Crise Perdedora de Sal)
-5. `ped-obesidade` — Obesidade Infantil, Síndrome Metabólica & Dislipidemias
+### Módulos da Onda P7:
+1. `ped-cuidneonat` — Cuidados do Recém-Nascido Sadio, Sala de Parto & Triagens Neonatais Universais
+2. `ped-disturb-rn` — Distúrbios Metabólicos do RN: Hipoglicemia, Hipocalcemia & Policitemia
+3. `ped-vitaminas` — Suplementação Profilática de Ferro & Vitamina D nos 1.000 Dias (SBP 2024 / MS)
+4. `ped-seguranca` — Prevenção de Acidentes na Infância & Resolução CONTRAN 2024
+5. `ped-hebiatria` — Hebiatria: Consulta do Adolescente, Sigilo Médico & Rastreio CRAFFT
 
 ### Subetapas Operacionais:
 
-- [x] **Módulo 1: `ped-imunizacoes`**
-  - [x] Pesquisa clínica (SBP 2024 / PNI) e síntese dos 7 blocos
-  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_imunizacoes_vertical.html`)
-  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-imunizacoes.png`) (1200 × 4203 px)
+- [x] **Módulo 1: `ped-cuidneonat`**
+  - [x] Pesquisa clínica (SBP 2024 / Triagens) e síntese dos 7 blocos
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_cuidneonat_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-cuidneonat.png` - 1200x2456px)
   - [x] Validação visual dos cortes (topo, centro e rodapé)
-  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-imunizacoes.html`)
+  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-cuidneonat.html`)
 
-- [x] **Módulo 2: `ped-puberdade`**
-  - [x] Pesquisa clínica (SBP 2024 / Tanner) e síntese dos 7 blocos
-  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_puberdade_vertical.html`)
-  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-puberdade.png`) (1200 × 3277 px)
-  - [x] Validação visual dos cortes (topo, centro e rodapé)
-  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-puberdade.html`)
+- [x] **Módulo 2: `ped-disturb-rn`**
+  - [x] Pesquisa clínica (SBP 2024 / Hipoglicemia Neonatal) e síntese dos 7 blocos
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_disturb_rn_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-disturb-rn.png` - 1200x2653px)
+  - [x] Validação visual dos cortes
+  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-disturb-rn.html`)
 
-- [x] **Módulo 3: `ped-hipotireoidismo`**
-  - [x] Pesquisa clínica (SBP 2024 / Triagem Neonatal) e síntese dos 7 blocos
-  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_hipotireoidismo_vertical.html`)
-  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-hipotireoidismo.png`) (1200 × 2741 px)
-  - [x] Validação visual dos cortes (topo, centro e rodapé)
-  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-hipotireoidismo.html`)
+- [x] **Módulo 3: `ped-vitaminas`**
+  - [x] Pesquisa clínica (SBP 2024 / Ferro e Vitamina D) e síntese dos 7 blocos
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_vitaminas_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-vitaminas.png` - 1200x2387px)
+  - [x] Validação visual dos cortes
+  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-vitaminas.html`)
 
-- [x] **Módulo 4: `ped-hiperplasia-adrenal`**
-  - [x] Pesquisa clínica (SBP 2024 / Deficiência 21-OH) e síntese dos 7 blocos
-  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_hiperplasia_adrenal_vertical.html`)
-  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-hiperplasia-adrenal.png`) (1200 × 2693 px)
-  - [x] Validação visual dos cortes (topo, centro e rodapé)
-  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-hiperplasia-adrenal.html`)
+- [x] **Módulo 4: `ped-seguranca`**
+  - [x] Pesquisa clínica (SBP 2024 / CONTRAN 2024) e síntese dos 7 blocos
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_seguranca_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-seguranca.png` - 1200x2359px)
+  - [x] Validação visual dos cortes
+  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-seguranca.html`)
 
-- [x] **Módulo 5: `ped-obesidade`**
-  - [x] Pesquisa clínica (SBP 2024 / OMS IMC/Idade) e síntese dos 7 blocos
-  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_obesidade_vertical.html`)
-  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-obesidade.png`) (1200 × 2452 px)
-  - [x] Validação visual dos cortes (topo, centro e rodapé)
-  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-obesidade.html`)
+- [x] **Módulo 5: `ped-hebiatria`**
+  - [x] Pesquisa clínica (SBP 2024 / CFM Sigilo & CRAFFT) e síntese dos 7 blocos
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_hebiatria_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-ped-hebiatria.png` - 1200x2314px)
+  - [x] Validação visual dos cortes
+  - [x] Integração no webapp com alternância dupla (`content/pediatria/ped-hebiatria.html`)
 
-- [x] **Encerramento da Onda P6:**
-  - [x] Bump de cache no PWA Service Worker (`sw.js` $\rightarrow$ `fluxomed-cache-v8`)
+- [x] **Encerramento da Onda P7:**
+  - [x] Bump de cache no PWA Service Worker (`sw.js` $\rightarrow$ `fluxomed-cache-v9`)
   - [x] Atualização do `walkthrough.md`
   - [x] Commit e Push no Git (`origin/main`)
