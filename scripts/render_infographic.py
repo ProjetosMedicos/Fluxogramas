@@ -99,10 +99,29 @@ def measure_and_render(html_rel_path, output_png_rel_path, port=9895):
 
     img = Image.open(output_png)
     print(f"Success! Generated {output_png_rel_path}: {img.size[0]}x{img.size[1]}px ({os.path.getsize(output_png)/1024:.1f} KB)")
+    
+    # Gera automaticamente crops de topo e rodapé para inspeção no diretório de artifacts
+    artifact_dir = '/home/candida/.gemini/antigravity/brain/9978b589-e0e1-44b0-ab8d-b43e46700145'
+    if os.path.isdir(artifact_dir):
+        base_name = os.path.splitext(os.path.basename(output_png))[0].replace('infografico-', '')
+        top_crop = img.crop((0, 0, img.size[0], min(600, img.size[1])))
+        bot_crop = img.crop((0, max(0, img.size[1] - 600), img.size[0], img.size[1]))
+        top_crop.save(os.path.join(artifact_dir, f"{base_name}_top.png"))
+        bot_crop.save(os.path.join(artifact_dir, f"{base_name}_bot.png"))
+        print(f"--> Crops saved for QA: {base_name}_top.png, {base_name}_bot.png")
+
     return img.size
 
 if __name__ == '__main__':
     if len(sys.argv) < 3:
-        print("Usage: python3 render_infographic.py <html_path> <output_png_path>")
+        print("Usage: python3 render_infographic.py <html_path> <output_png_path> [<html2> <png2> ...]")
         sys.exit(1)
-    measure_and_render(sys.argv[1], sys.argv[2])
+    
+    pairs = []
+    args = sys.argv[1:]
+    if len(args) % 2 != 0:
+        print("Error: Arguments must be in pairs of <html_path> <output_png_path>")
+        sys.exit(1)
+    for i in range(0, len(args), 2):
+        measure_and_render(args[i], args[i+1])
+

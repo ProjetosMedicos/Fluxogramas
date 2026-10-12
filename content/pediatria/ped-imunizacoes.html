@@ -232,16 +232,31 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo do Calendário Vacinal SBP / PNI (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo do Calendário Vacinal SBP / PNI (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="imunizacoes-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-imunizacoes.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="imunizacoes-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="imunizacoes-fullscreen-link" href="imagens/infografico-ped-imunizacoes.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="imunizacoes-download-link" href="imagens/infografico-ped-imunizacoes.png" download="infografico-ped-imunizacoes-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
+
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-imunizacoes.svg" alt="Fluxograma Calendario Vacinal SBP" class="flowchart-img" data-scale="1.0">
+          <img id="imunizacoes-visual-display" 
+               src="imagens/infografico-ped-imunizacoes.png" 
+               alt="Infográfico Clínico do Calendário Vacinal Infantil SBP/PNI 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-imunizacoes.png"
+               data-svg-src="imagens/fluxo-ped-imunizacoes.svg">
         </div>
       </div>
 
