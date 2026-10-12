@@ -2,7 +2,7 @@
 // Service Worker - Fluxogramas Médicos (PWA com Suporte Offline Completo)
 // ============================================================================
 
-const CACHE_NAME = 'fluxomed-cache-v9';
+const CACHE_NAME = 'fluxomed-cache-v10';
 
 // Recursos essenciais pré-armazenados no momento da instalação
 const PRECACHE_ASSETS = [

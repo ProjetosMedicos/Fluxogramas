@@ -69,7 +69,7 @@ def measure_and_render(html_rel_path, output_png_rel_path, port=9895):
 
         time.sleep(1)
         res = send_cdp('Runtime.evaluate', {
-            'expression': 'document.querySelector(".poster-container").scrollHeight',
+            'expression': '(document.querySelector(".poster-container") || document.body).scrollHeight',
             'returnByValue': True
         })
         scrollHeight = res.get('result', {}).get('value')

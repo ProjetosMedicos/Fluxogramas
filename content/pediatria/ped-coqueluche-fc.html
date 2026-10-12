@@ -231,16 +231,30 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo de Coqueluche & Teste do Suor na FC (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico: Coqueluche &amp; FC (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="coqueluche-fc-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <a href="imagens/fluxo-ped-coqueluche-fc.svg" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <button type="button" class="btn-zoom" id="coqueluche-fc-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="coqueluche-fc-fullscreen-link" href="imagens/infografico-ped-coqueluche-fc.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="coqueluche-fc-download-link" href="imagens/infografico-ped-coqueluche-fc.png" download="infografico-ped-coqueluche-fc-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-coqueluche-fc.svg" alt="Fluxograma Coqueluche e Fibrose Cistica SBP" class="flowchart-img" data-scale="1.0">
+          <img id="coqueluche-fc-visual-display" 
+               src="imagens/infografico-ped-coqueluche-fc.png" 
+               alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-coqueluche-fc.png"
+               data-svg-src="imagens/fluxo-ped-coqueluche-fc.svg">
         </div>
       </div>
 
