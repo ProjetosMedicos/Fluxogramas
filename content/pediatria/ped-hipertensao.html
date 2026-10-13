@@ -152,19 +152,31 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo Diagnóstico e Terapêutico Oficial da HAS Pediátrica (SBP 2024)</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico de Hipertensão Pediátrica (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="hipertensao-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxo-ped-hipertensao.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="hipertensao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="hipertensao-fullscreen-link" href="imagens/infografico-ped-hipertensao.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="hipertensao-download-link" href="imagens/infografico-ped-hipertensao.png" download="infografico-ped-hipertensao-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
 
         <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-hipertensao.svg" alt="Fluxograma Hipertensao Arterial Pediatrica SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+          <img id="hipertensao-visual-display" 
+               src="imagens/infografico-ped-hipertensao.png" 
+               alt="Infográfico Clínico de Hipertensão Arterial Pediátrica SBP 2024" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-hipertensao.png"
+               data-svg-src="imagens/fluxo-ped-hipertensao.svg">
         </div>
       </div>
 

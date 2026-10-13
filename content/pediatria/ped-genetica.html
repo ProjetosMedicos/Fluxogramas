@@ -297,19 +297,44 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma Visual Estruturado SBP 2024</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxo-ped-genetica.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+          <div>
+            <h2 class="card-title">Diretriz Visual Integrada: Genética &amp; Dismorfologia</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Alterne entre o Infográfico Clínico HD (Guia Visual Expandido) e o Fluxograma Vetorial SVG original.</p>
+          </div>
+          <div class="view-toggle-group" id="genetica-view-toggle">
+            <button class="btn-toggle active" data-mode="infographic" onclick="switchVisualMode('genetica', 'infographic')">
+              <span>📊</span> Infográfico NotebookLM (HD)
+            </button>
+            <button class="btn-toggle" data-mode="flowchart" onclick="switchVisualMode('genetica', 'flowchart')">
+              <span>📐</span> Fluxograma SVG Clássico
+            </button>
+          </div>
+        </div>
+
+        <div class="visual-toolbar">
+          <div class="zoom-controls">
+            <button class="btn-zoom" onclick="zoomVisual('genetica', 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomVisual('genetica', -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetVisualZoom('genetica')" title="Tamanho Padrão (100%)">100%</button>
+          </div>
+          <div class="action-links">
+            <button class="btn-action-tool" id="genetica-expand-btn" onclick="toggleExpandVisual('genetica')" title="Alternar visualização expandida">
+              <span>⛶</span> Modo Expandido
+            </button>
+            <button class="btn-action-tool" onclick="openFullscreenVisual('genetica')" title="Visualizar em Tela Cheia">
+              <span>📺</span> Tela Cheia
+            </button>
+            <a href="imagens/infografico-ped-genetica.png" download="infografico-ped-genetica.png" class="btn-action-tool" id="genetica-download-btn" title="Baixar Infográfico em Alta Resolução">
+              <span>💾</span> Download HD
+            </a>
+            <a href="imagens/fluxo-ped-genetica.svg" target="_blank" class="btn-action-tool" id="genetica-svg-btn" style="display: none;" title="Abrir arquivo SVG original">
+              <span>↗</span> Abrir SVG
             </a>
           </div>
         </div>
 
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxo-ped-genetica.svg" alt="Fluxograma Síndromes Genéticas e Triagem Neonatal SBP 2024" class="flowchart-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container" id="genetica-visual-display">
+          <img src="imagens/infografico-ped-genetica.png" alt="Infográfico Diretrizes de Genética Clínica e Aneuploidias SBP 2024" class="flowchart-img infographic-mode" id="genetica-primary-img" loading="lazy" decoding="async">
         </div>
       </div>
 
