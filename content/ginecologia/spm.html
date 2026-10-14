@@ -89,16 +89,44 @@
         
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo de Diagnóstico e Tratamento Escalonado da SPM / TDPM</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_spm_tdpm_diagnostico_tratamento.svg" target="_blank" class="btn-image-open">Abrir SVG ↗</a>
+          <div>
+            <h2 class="card-title">Diretriz Visual Integrada: Diagnóstico &amp; Manejo da SPM / TDPM</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Alterne entre o Infográfico Clínico HD (Guia Visual Expandido) e o Fluxograma Vetorial SVG original.</p>
+          </div>
+          <div class="view-toggle-group" id="spm-view-toggle">
+            <button class="btn-toggle active" data-mode="infographic" onclick="switchVisualMode('spm', 'infographic')">
+              <span>📊</span> Infográfico NotebookLM (HD)
+            </button>
+            <button class="btn-toggle" data-mode="flowchart" onclick="switchVisualMode('spm', 'flowchart')">
+              <span>📐</span> Fluxograma SVG Clássico
+            </button>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_spm_tdpm_diagnostico_tratamento.svg" alt="Fluxograma SPM e TDPM Diagnóstico e Tratamento" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="visual-toolbar">
+          <div class="zoom-controls">
+            <button class="btn-zoom" onclick="zoomVisual('spm', 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomVisual('spm', -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetVisualZoom('spm')" title="Tamanho Padrão (100%)">100%</button>
+          </div>
+          <div class="action-links">
+            <button class="btn-action-tool" id="spm-expand-btn" onclick="toggleExpandVisual('spm')" title="Alternar visualização expandida">
+              <span>⛶</span> Modo Expandido
+            </button>
+            <button class="btn-action-tool" onclick="openFullscreenVisual('spm')" title="Visualizar em Tela Cheia">
+              <span>📺</span> Tela Cheia
+            </button>
+            <a href="imagens/infografico-gin-spm.png" download="infografico-gin-spm.png" class="btn-action-tool" id="spm-download-btn" title="Baixar Infográfico em Alta Resolução">
+              <span>💾</span> Download HD
+            </a>
+            <a href="imagens/fluxograma_spm_tdpm_diagnostico_tratamento.svg" target="_blank" class="btn-action-tool" id="spm-svg-btn" style="display: none;" title="Abrir arquivo SVG original">
+              <span>↗</span> Abrir SVG
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container" id="spm-visual-display">
+          <img src="imagens/infografico-gin-spm.png" alt="Infográfico Diretrizes FEBRASGO de SPM e TDPM" class="flowchart-img infographic-mode" id="spm-primary-img" loading="lazy" decoding="async">
         </div>
       </div>
 

@@ -226,16 +226,44 @@
       </div>
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Eixo Hipotálamo-Hipófise-Ovário & Esteroidogênese Ovariana</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_fisiologia_ciclo_menstrual_eixo.svg" target="_blank" class="btn-image-open">Abrir SVG ↗</a>
+          <div>
+            <h2 class="card-title">Diretriz Visual Integrada: Eixo HHO &amp; Esteroidogênese</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Alterne entre o Infográfico Clínico HD (Guia Visual Expandido) e o Fluxograma Vetorial SVG original.</p>
+          </div>
+          <div class="view-toggle-group" id="fisiologia-view-toggle">
+            <button class="btn-toggle active" data-mode="infographic" onclick="switchVisualMode('fisiologia', 'infographic')">
+              <span>📊</span> Infográfico NotebookLM (HD)
+            </button>
+            <button class="btn-toggle" data-mode="flowchart" onclick="switchVisualMode('fisiologia', 'flowchart')">
+              <span>📐</span> Fluxograma SVG Clássico
+            </button>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_fisiologia_ciclo_menstrual_eixo.svg" alt="Fluxograma Fisiologia do Eixo HHO e Esteroidogênese" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="visual-toolbar">
+          <div class="zoom-controls">
+            <button class="btn-zoom" onclick="zoomVisual('fisiologia', 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomVisual('fisiologia', -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetVisualZoom('fisiologia')" title="Tamanho Padrão (100%)">100%</button>
+          </div>
+          <div class="action-links">
+            <button class="btn-action-tool" id="fisiologia-expand-btn" onclick="toggleExpandVisual('fisiologia')" title="Alternar visualização expandida">
+              <span>⛶</span> Modo Expandido
+            </button>
+            <button class="btn-action-tool" onclick="openFullscreenVisual('fisiologia')" title="Visualizar em Tela Cheia">
+              <span>📺</span> Tela Cheia
+            </button>
+            <a href="imagens/infografico-gin-fisiologia.png" download="infografico-gin-fisiologia.png" class="btn-action-tool" id="fisiologia-download-btn" title="Baixar Infográfico em Alta Resolução">
+              <span>💾</span> Download HD
+            </a>
+            <a href="imagens/fluxograma_fisiologia_ciclo_menstrual_eixo.svg" target="_blank" class="btn-action-tool" id="fisiologia-svg-btn" style="display: none;" title="Abrir arquivo SVG original">
+              <span>↗</span> Abrir SVG
+            </a>
+          </div>
+        </div>
+
+        <div class="flowchart-img-container" id="fisiologia-visual-display">
+          <img src="imagens/infografico-gin-fisiologia.png" alt="Infográfico Diretrizes FEBRASGO de Fisiologia Menstrual e Esteroidogênese" class="flowchart-img infographic-mode" id="fisiologia-primary-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>

@@ -63,18 +63,44 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo Diagnóstico de Rotterdam & Classificação nos 4 Fenótipos (A, B, C e D)</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_sop_criterios_rotterdam.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+          <div>
+            <h2 class="card-title">Diretriz Visual Integrada: Diagnóstico &amp; Fenótipos da SOP</h2>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Alterne entre o Infográfico Clínico HD (Guia Visual Expandido) e o Fluxograma Vetorial SVG original.</p>
+          </div>
+          <div class="view-toggle-group" id="sop-view-toggle">
+            <button class="btn-toggle active" data-mode="infographic" onclick="switchVisualMode('sop', 'infographic')">
+              <span>📊</span> Infográfico NotebookLM (HD)
+            </button>
+            <button class="btn-toggle" data-mode="flowchart" onclick="switchVisualMode('sop', 'flowchart')">
+              <span>📐</span> Fluxograma SVG Clássico
+            </button>
+          </div>
+        </div>
+
+        <div class="visual-toolbar">
+          <div class="zoom-controls">
+            <button class="btn-zoom" onclick="zoomVisual('sop', 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button class="btn-zoom" onclick="zoomVisual('sop', -0.15)" title="Diminuir Zoom">Zoom −</button>
+            <button class="btn-zoom" onclick="resetVisualZoom('sop')" title="Tamanho Padrão (100%)">100%</button>
+          </div>
+          <div class="action-links">
+            <button class="btn-action-tool" id="sop-expand-btn" onclick="toggleExpandVisual('sop')" title="Alternar visualização expandida">
+              <span>⛶</span> Modo Expandido
+            </button>
+            <button class="btn-action-tool" onclick="openFullscreenVisual('sop')" title="Visualizar em Tela Cheia">
+              <span>📺</span> Tela Cheia
+            </button>
+            <a href="imagens/infografico-gin-sop.png" download="infografico-gin-sop.png" class="btn-action-tool" id="sop-download-btn" title="Baixar Infográfico em Alta Resolução">
+              <span>💾</span> Download HD
+            </a>
+            <a href="imagens/fluxograma_sop_criterios_rotterdam.svg" target="_blank" class="btn-action-tool" id="sop-svg-btn" style="display: none;" title="Abrir arquivo SVG original">
+              <span>↗</span> Abrir SVG
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_criterios_rotterdam.svg" alt="Fluxograma de Critérios de Rotterdam" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-img-container" id="sop-visual-display">
+          <img src="imagens/infografico-gin-sop.png" alt="Infográfico Diretrizes Monash e FEBRASGO de Síndrome dos Ovários Policísticos (SOP)" class="flowchart-img infographic-mode" id="sop-primary-img" loading="lazy" decoding="async">
         </div>
       </div>
 
