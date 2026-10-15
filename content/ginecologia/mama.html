@@ -70,18 +70,35 @@
 
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Algoritmo de Rastreamento Mamário: Risco Habitual vs. Mamas Densas vs. Alto Risco</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Rastreamento do Câncer de Mama & Sistema BI-RADS (FEBRASGO / SBM)</h2>
+            <div class="flowchart-view-toggle" id="mama-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mama_rastreamento.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="mama-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="mama-fullscreen-link" href="imagens/infografico-gin-mama.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="mama-download-link" href="imagens/infografico-gin-mama.png" download="infografico-gin-mama.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_mama_rastreamento.svg" alt="Fluxograma de Rastreamento Mamário FEBRASGO" class="flowchart-img" loading="lazy" decoding="async">
+          <img id="mama-visual-display" 
+               src="imagens/infografico-gin-mama.png" 
+               alt="Infográfico Diretrizes FEBRASGO de Rastreamento do Câncer de Mama e BI-RADS" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-mama.png"
+               data-infographic-alt="Infográfico Diretrizes FEBRASGO de Rastreamento do Câncer de Mama e BI-RADS"
+               data-svg-src="imagens/fluxograma_mama_rastreamento.svg"
+               data-svg-alt="Fluxograma de Rastreamento Mamário FEBRASGO">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza rastreamento populacional (FEBRASGO vs INCA), conduta em mamas densas e alto risco genético, categorias BI-RADS 0 a 6 com riscos de malignidade e métodos de biópsia percutânea (PAAF, Core Biopsy e Mamotomia). Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 
