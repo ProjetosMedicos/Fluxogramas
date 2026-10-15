@@ -58,16 +58,35 @@
         
       <div class="card">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma dos Critérios de Elegibilidade Médica da OMS para Contracepção</h2>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Planejamento Familiar: Critérios OMS & Diretrizes FEBRASGO</h2>
+            <div class="flowchart-view-toggle" id="contracepcao-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_contracepcao_elegibilidade_oms.svg" target="_blank" class="btn-image-open">Abrir SVG ↗</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="contracepcao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="contracepcao-fullscreen-link" href="imagens/infografico-gin-contracepcao.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="contracepcao-download-link" href="imagens/infografico-gin-contracepcao.png" download="infografico-gin-contracepcao.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_contracepcao_elegibilidade_oms.svg" alt="Fluxograma Critérios de Elegibilidade OMS" class="flowchart-img" loading="lazy" decoding="async">
+          <img id="contracepcao-visual-display" 
+               src="imagens/infografico-gin-contracepcao.png" 
+               alt="Infográfico Diretrizes FEBRASGO de Planejamento Familiar e Contracepção" 
+               class="flowchart-img infographic-mode" 
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-contracepcao.png"
+               data-infographic-alt="Infográfico Diretrizes FEBRASGO de Planejamento Familiar e Contracepção"
+               data-svg-src="imagens/fluxograma_contracepcao_elegibilidade_oms.svg"
+               data-svg-alt="Fluxograma Critérios de Elegibilidade OMS">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: O infográfico sintetiza a matriz de critérios de elegibilidade da OMS (MEC 1 a 4), contraindicações absolutas (MEC 4), protocolos escalonados de spotting para progestagênios, contracepção de emergência e as mudanças da Nova Lei de Esterilização nº 14.443/2022 com salpingectomia profilática. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
         </div>
       </div>
 

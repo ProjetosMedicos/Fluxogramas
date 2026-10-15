@@ -1,17 +1,17 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** 🎀 **Onda G2 Concluída! Mastologia & Oncologia Ginecológica (10/38 Módulos)**  
-> **Próxima Etapa:** 🌸 **Onda G3: Climatério, Anticoncepção & Planejamento Familiar**  
-> **Última Atualização:** 14/10/2026
+> **Status Atual:** 🌸 **Onda G3 Concluída! Climatério, Anticoncepção & Planejamento Familiar (15/38 Módulos)**  
+> **Próxima Etapa:** 🦠 **Onda G4: Infecções Genitais, DIP & ISTs na Mulher**  
+> **Última Atualização:** 15/10/2026
 
 ---
 
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [███████████████████████░░░░░] 67.4%  (58 / 86 módulos)
+GLOBAL (Pediatria + Ginecologia): [█████████████████████████░░░] 73.3%  (63 / 86 módulos)
 PEDIATRIA (Total):                [████████████████████████████] 100%   (48 / 48 módulos) 🏆
-GINECOLOGIA & OBSTETRÍCIA:        [███████░░░░░░░░░░░░░░░░░░░░░]  26.3% (10 / 38 módulos)
+GINECOLOGIA & OBSTETRÍCIA:        [███████████░░░░░░░░░░░░░░░░░]  39.5% (15 / 38 módulos)
 ```
 
 ---
@@ -24,13 +24,13 @@ GINECOLOGIA & OBSTETRÍCIA:        [███████░░░░░░░�
 | :--- | :--- | :---: | :---: | :---: |
 | **Onda G1** | Ciclo Menstrual, Sangramento Uterino Anormal & SOP | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🌸 |
 | **Onda G2** | Mastologia & Oncologia Ginecológica | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎀 |
-| **Onda G3** | Climatério, Anticoncepção & Planejamento Familiar | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
+| **Onda G3** | Climatério, Anticoncepção & Planejamento Familiar | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 💊 |
+| **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G8** | Infância, Adolescência, Atenção Integral & Emergências | 4 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/4) |
-| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **26.3% Concluído** | **10 / 38 Módulos** |
+| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **39.5% Concluído** | **15 / 38 Módulos** |
 
 ---
 
@@ -101,3 +101,56 @@ GINECOLOGIA & OBSTETRÍCIA:        [███████░░░░░░░�
   - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v13`)
   - [x] Atualização de progresso e walkthrough
   - [x] Git commit e push para `origin/main`
+
+---
+
+## 📋 Registro de Conclusão da Onda G3 (Climatério, Anticoncepção & Planejamento Familiar)
+
+### Módulos Concluídos:
+1. `clim` — Climatério & Menopausa: Critérios STRAW+10, Sintomas Vasomotores (neurônios KNDy), Síndrome Geniturinária (SGM) & Terapia Hormonal (`imagens/infografico-gin-clim.png` — 1200x2920px) ✅
+2. `trhav` — TRH Avançada: Testosterona no TDSH pós-menopausa, Vias de administração, Curvas de segurança sérica (30-70 ng/dL) & Saúde Óssea (`imagens/infografico-gin-trhav.png` — 1200x2913px) ✅
+3. `contracepcao` — Planejamento Familiar & Contracepção Hormonal: Critérios Médicos de Elegibilidade da OMS (MEC 1 a 4), Métodos Combinados vs Progestagênio Isolado, Manejo do Spotting, Anticoncepção de Emergência & Nova Lei de Esterilização nº 14.443/2022 (`imagens/infografico-gin-contracepcao.png` — 1200x4093px) ✅
+4. `larcs` — Contracepção Reversível de Longa Duração: DIU T de Cobre, DIU de Prata, DIU-LNG 52 mg (Mirena®), DIU-LNG 19,5 mg (Kyleena®), Implante de Etonogestrel (Implanon NXT®), Mitos e Propedêutica de Inserção (`imagens/infografico-gin-larcs.png` — 1200x3180px) ✅
+5. `dsf` — Disfunção Sexual Feminina: Modelos de Resposta Sexual (Kaplan vs Basson), DSM-5-TR (TDSH, Excitação, Orgasmo, TDGPP/Vaginismo), Propedêutica PLISSIT, Iatrogenias e Fisioterapia Pélvica (`imagens/infografico-gin-dsf.png` — 1200x3281px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] **Módulo 1: `clim` (Climatério & Menopausa)**
+  - [x] Pesquisa clínica FEBRASGO / NAMS / IMS / STRAW+10
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_clim_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-clim.png`, 1200x2920px)
+  - [x] Validação visual dos recortes (`gin-clim_top.png` e `gin-clim_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/clim.html`)
+
+- [x] **Módulo 2: `trhav` (TRH Avançada & Testosterona)**
+  - [x] Pesquisa clínica Consenso Global de Testosterona 2019 / FEBRASGO
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_trhav_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-trhav.png`, 1200x2913px)
+  - [x] Validação visual dos recortes (`gin-trhav_top.png` e `gin-trhav_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/trhav.html`)
+
+- [x] **Módulo 3: `contracepcao` (Planejamento Familiar & Contracepção)**
+  - [x] Pesquisa clínica FEBRASGO / OMS MEC 5ª Edição / Lei nº 14.443/2022
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_contracepcao_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-contracepcao.png`, 1200x4093px)
+  - [x] Validação visual dos recortes (`gin-contracepcao_top.png` e `gin-contracepcao_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/contracepcao.html`)
+
+- [x] **Módulo 4: `larcs` (Contracepção de Longa Duração)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 70-75 / OMS / CDC
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_larcs_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-larcs.png`, 1200x3180px)
+  - [x] Validação visual dos recortes (`gin-larcs_top.png` e `gin-larcs_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/larcs.html`)
+
+- [x] **Módulo 5: `dsf` (Disfunção Sexual Feminina)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 10-12 / DSM-5-TR / ISSWSH
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_dsf_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-dsf.png`, 1200x3281px)
+  - [x] Validação visual dos recortes (`gin-dsf_top.png` e `gin-dsf_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/dsf.html`)
+
+- [x] **Encerramento da Onda G3:**
+  - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v14`)
+  - [x] Atualização de progresso e walkthrough
+  - [x] Git commit e push para `origin/main`
+
