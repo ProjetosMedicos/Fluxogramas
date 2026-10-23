@@ -1,17 +1,17 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** 🌸 **Onda G3 Concluída! Climatério, Anticoncepção & Planejamento Familiar (15/38 Módulos)**  
-> **Próxima Etapa:** 🦠 **Onda G4: Infecções Genitais, DIP & ISTs na Mulher**  
-> **Última Atualização:** 15/10/2026
+> **Status Atual:** 🦠 **Onda G4 Concluída! Infecções Genitais, DIP & ISTs na Mulher (20/38 Módulos)**  
+> **Próxima Etapa:** 🎗️ **Onda G5: Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor**  
+> **Última Atualização:** 23/10/2026
 
 ---
 
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [█████████████████████████░░░] 73.3%  (63 / 86 módulos)
+GLOBAL (Pediatria + Ginecologia): [███████████████████████████░] 79.1%  (68 / 86 módulos)
 PEDIATRIA (Total):                [████████████████████████████] 100%   (48 / 48 módulos) 🏆
-GINECOLOGIA & OBSTETRÍCIA:        [███████████░░░░░░░░░░░░░░░░░]  39.5% (15 / 38 módulos)
+GINECOLOGIA & OBSTETRÍCIA:        [███████████████░░░░░░░░░░░░░]  52.6% (20 / 38 módulos)
 ```
 
 ---
@@ -25,12 +25,12 @@ GINECOLOGIA & OBSTETRÍCIA:        [███████████░░░�
 | **Onda G1** | Ciclo Menstrual, Sangramento Uterino Anormal & SOP | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🌸 |
 | **Onda G2** | Mastologia & Oncologia Ginecológica | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎀 |
 | **Onda G3** | Climatério, Anticoncepção & Planejamento Familiar | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 💊 |
-| **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
+| **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🦠 |
+| **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G8** | Infância, Adolescência, Atenção Integral & Emergências | 4 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/4) |
-| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **39.5% Concluído** | **15 / 38 Módulos** |
+| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **52.6% Concluído** | **20 / 38 Módulos** |
 
 ---
 
@@ -153,4 +153,57 @@ GINECOLOGIA & OBSTETRÍCIA:        [███████████░░░�
   - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v14`)
   - [x] Atualização de progresso e walkthrough
   - [x] Git commit e push para `origin/main`
+
+---
+
+## 📋 Registro de Conclusão da Onda G4 (Infecções Genitais, DIP & ISTs na Mulher)
+
+### Módulos Concluídos:
+1. `infeccoes` — Vulvovaginites, Cervicites & as 5 Grandes Úlceras Genitais (Critérios de Amsel/Nugent, Candidíase Complicada, Trichomonas, Sífilis, Herpes, Cancroide, LGV e Donovanose) (`imagens/infografico-gin-infeccoes.png` — 1200x3491px) ✅
+2. `dipav` — Doença Inflamatória Pélvica Especializada: Fisiopatologia Ascendente, Critérios de Gainesville/CDC, Classificação de Monif (I a IV), Abcesso Tubo-Ovariano e Síndrome de Fitz-Hugh-Curtis (`imagens/infografico-gin-dipav.png` — 1200x3233px) ✅
+3. `vulva` — Doenças da Vulva, Dermatoses & Glândula de Bartholin: Tríade dos Líquens (Escleroso, Plano e Simples), Protocolo de Clobetasol 0,05%, Cateter de Word vs Marsupialização, uVIN vs dVIN e Paget Extramamária (`imagens/infografico-gin-vulva.png` — 1200x3536px) ✅
+4. `cancervulva` — Câncer de Vulva e de Vagina: As duas vias carcinogênicas (HPV/p16 vs Líquen/TP53), Ponto de corte decisivo de 1,0 mm de invasão estromal, Estadiamento FIGO 2021, Incisão Tríplice de Basset, Linfonodo Sentinela (GROINSS-V) e Hegemonia da Radioterapia no Câncer Vaginal (`imagens/infografico-gin-cancervulva.png` — 1200x3490px) ✅
+5. `violencia` — Acolhimento Humanizado & Profilaxias na Violência Sexual: Presunção absoluta de veracidade sem BO/IML, Janela de Ouro de 72h, PEP HIV (TDF+3TC+DTG por 28 dias), Profilaxias de ISTs não virais e Hepatite B, Cadeia de custódia forense e Cronograma sorológico de 6 meses (`imagens/infografico-gin-violencia.png` — 1200x3287px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] **Módulo 1: `infeccoes` (Vulvovaginites, Cervicites & Úlceras Genitais)**
+  - [x] Pesquisa clínica FEBRASGO Tratado Caps. 38-42 / PCDT IST Ministério da Saúde 2022/2024 / CDC 2021
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_infeccoes_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-infeccoes.png`, 1200x3491px)
+  - [x] Validação visual dos recortes (`gin-infeccoes_top.png` e `gin-infeccoes_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/infeccoes.html`)
+
+- [x] **Módulo 2: `dipav` (Doença Inflamatória Pélvica Especializada)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 41-43 / CDC PID Guidelines / Gainesville
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_dipav_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-dipav.png`, 1200x3233px)
+  - [x] Validação visual dos recortes (`gin-dipav_top.png` e `gin-dipav_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/dipav.html`)
+
+- [x] **Módulo 3: `vulva` (Doenças da Vulva, Tríade dos Líquens & Bartholin)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 38, 77 e 78 / ISSVD Consensus Guidelines
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_vulva_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-vulva.png`, 1200x3536px)
+  - [x] Validação visual dos recortes (`gin-vulva_top.png` e `gin-vulva_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/vulva.html`)
+
+- [x] **Módulo 4: `cancervulva` (Câncer de Vulva e de Vagina)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 78 / FIGO 2021 / NCCN Guidelines / Estudo GROINSS-V
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_cancervulva_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-cancervulva.png`, 1200x3490px)
+  - [x] Validação visual dos recortes (`gin-cancervulva_top.png` e `gin-cancervulva_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/cancervulva.html`)
+
+- [x] **Módulo 5: `violencia` (Acolhimento à Vítima de Violência Sexual)**
+  - [x] Pesquisa clínica Ministério da Saúde PCDT PEP/IST / FEBRASGO Caps. 40 e 88 / Portaria GM/MS nº 2.561/2020
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_violencia_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-violencia.png`, 1200x3287px)
+  - [x] Validação visual dos recortes (`gin-violencia_top.png` e `gin-violencia_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/violencia.html`)
+
+- [x] **Encerramento da Onda G4:**
+  - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v15`)
+  - [x] Atualização de progresso e walkthrough
+  - [x] Git commit e push para `origin/main`
+
 
