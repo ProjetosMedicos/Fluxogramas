@@ -486,3 +486,24 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] 100% dos fluxogramas dos módulos `endo` e `dor` cobertos por infográficos HD! 🏆
 
 
+
+
+## [2026-10-24] - Sub-onda S5.1: Mastologia & Patologia Mamária Benigna Concluída (7 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `mama-birads` — **Categorias BI-RADS & Condutas Clínicas**: Categorias 0 a 6, riscos de malignidade (<2% no 3, 2-10% no 4A, 10-50% no 4B, 50-95% no 4C, >95% no 5), condutas padronizadas FEBRASGO/SBM/ACR (`imagens/infografico-gin-mama-birads.png` — 1200x1521px) ✅
+2. `mama-nodulo` — **Investigação do Nódulo Mamário Palpável**: Tríplice diagnóstica (Clínica + Imagem + Histologia), estratificação etária (<30 anos USG prioritário, ≥30 anos MMG + USG), algoritmo de PAAF vs Core Biopsy vs Mamotomia (`imagens/infografico-gin-mama-nodulo.png` — 1200x1406px) ✅
+3. `mama-descarga` — **Avaliação e Conduta na Descarga Papilar**: Critérios de descarga suspeita (uniductal, unilateral, espontânea, sanguinolenta ou água de rocha), investigação com USG, MMG, RM e ressecção cirúrgica de ductos terminais (`imagens/infografico-gin-mama-descarga.png` — 1200x1495px) ✅
+4. `mama-subtipos` — **Subtipos Moleculares e Terapia Sistêmica no Câncer de Mama**: Luminal A, Luminal B (HER2- e HER2+), HER2 superexpresso e Triplo-Negativo; Indicação de bloqueio hormonal, duplo bloqueio HER2 (Trastuzumabe + Pertuzumabe) e QT neoadjuvante/adjuvante (`imagens/infografico-gin-mama-subtipos.png` — 1200x1294px) ✅
+5. `mama-cirurgia` — **Cirurgia Mamária & Abordagem Axilar (Critérios ACOSOG Z0011)**: Conservadora (setorectomia com margens livres) vs Mastectomia; Biópsia de Linfonodo Sentinela (BLS) vs Esvaziamento Axilar (critérios de omissão de esvaziamento em T1-T2 cN0 com 1-2 sentinelas positivos) (`imagens/infografico-gin-mama-cirurgia.png` — 1200x1274px) ✅
+6. `mamabenigna-mastites` — **Manejo de Mastites & Abscessos Mamários**: Mastite puerperal lactacional (manutenção do aleitamento, Cefalexina/Amoxicilina-Clavulanato) vs Abscesso mamário (drenagem por agulha guiada por USG como 1ª linha) vs Mastite periductal não puerperal (cessação do tabagismo) (`imagens/infografico-gin-mamabenigna-infeccoes.png` — 1200x1493px) ✅
+7. `mamabenigna-descarga` — **Algoritmo da Descarga Papilar Benigna**: Diferenciação fisiológica vs patológica; Ectasia ductal vs Papiloma intraductal benigno; Conduta expectante vs Microdochectomia (`imagens/infografico-gin-mamabenigna-descarga.png` — 1200x1473px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Roteiro clínico e diretrizes FEBRASGO/SBM/ACOSOG/ASCO aplicadas
+- [x] Templates HTML verticais semânticos 1200px criados e validados
+- [x] Renderização Headless Chrome e corte milimétrico PIL nos 7 PNGs HD em `imagens/`
+- [x] Integração canônica Dual-Toggle em `content/ginecologia/mama.html` (Seções 2, 3, 4, 5, 6) e `content/ginecologia/mamabenigna.html` (Seções 5, 6)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v26`)
+- [x] Total de subfluxogramas cobertos até o momento: 34 de 88 (38.6%)! 🏆

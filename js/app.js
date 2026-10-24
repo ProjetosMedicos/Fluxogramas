@@ -463,9 +463,9 @@ function switchVisualMode(btn, mode) {
     }
     return;
   }
-  const card = btn.closest('.card');
+  const card = btn.closest('.card') || (btn.closest('.flowchart-view-toggle') && btn.closest('.flowchart-view-toggle').nextElementSibling);
   if (!card) return;
-  const toggle = card.querySelector('.flowchart-view-toggle, .segmented-control');
+  const toggle = card.querySelector('.flowchart-view-toggle, .segmented-control') || btn.closest('.flowchart-view-toggle, .segmented-control');
   if (toggle) {
     toggle.querySelectorAll('.view-btn, .btn-toggle').forEach(b => {
       b.classList.remove('active');
