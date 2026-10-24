@@ -2175,18 +2175,12 @@
     .btn-theme-toggle:hover svg {
       transform: scale(1.1);
     }
-    #topbar-theme-toggle,
-    #topbar-home-cmdk-btn {
+    #topbar-theme-toggle {
       background: var(--bg-surface);
       border: 1px solid var(--border);
       color: var(--text-muted);
     }
-    #topbar-home-cmdk-btn svg {
-      width: 18px;
-      height: 18px;
-    }
-    #topbar-theme-toggle:hover,
-    #topbar-home-cmdk-btn:hover {
+    #topbar-theme-toggle:hover {
       background: var(--bg-subtle);
       color: var(--text-main);
       border-color: var(--border-focus);
@@ -4036,10 +4030,6 @@
       text-decoration: underline;
     }
 
-    .home-only-search-btn {
-      display: none !important;
-    }
-
     .home-view {
       display: none;
     }
@@ -4062,7 +4052,6 @@
         display: none !important;
       }
     }
-    body.home-active .home-only-search-btn,
     body.home-active .brand-doc-pill {
       display: inline-flex !important;
     }
