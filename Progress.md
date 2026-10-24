@@ -1,7 +1,7 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** 🩺 **Onda G6 Concluída! Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica (30/38 Módulos)**  
-> **Próxima Etapa:** ⚡ **Onda G7: Reprodução Humana, Infertilidade, Prolactina, IOP & PGR**  
+> **Status Atual:** 🧬 **Onda G7 Concluída! Reprodução Humana, Infertilidade, Prolactina, IOP & PGR (34/38 Módulos)**  
+> **Próxima Etapa:** 🏁 **Onda G8 (Final): Infância, Adolescência, Atenção Integral & Metodologia (38/38 Módulos)**  
 > **Última Atualização:** 24/10/2026
 
 ---
@@ -9,9 +9,9 @@
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [███████████████████████████░] 90.7%  (78 / 86 módulos)
+GLOBAL (Pediatria + Ginecologia): [████████████████████████████] 95.3%  (82 / 86 módulos)
 PEDIATRIA (Total):                [████████████████████████████] 100%   (48 / 48 módulos) 🏆
-GINECOLOGIA & OBSTETRÍCIA:        [█████████████████████░░░░░░░]  78.9% (30 / 38 módulos)
+GINECOLOGIA & OBSTETRÍCIA:        [█████████████████████████░░░]  89.5% (34 / 38 módulos)
 ```
 
 ---
@@ -28,9 +28,9 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 | **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🦠 |
 | **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎗️ |
 | **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🩺 |
-| **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda G8** | Infância, Adolescência, Atenção Integral & Emergências | 4 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/4) |
-| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **78.9% Concluído** | **30 / 38 Módulos** |
+| **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 4 | ✅ Concluído | `[██████████]` 100% (4/4) 🧬 |
+| **Onda G8** | Infância, Adolescência, Atenção Integral & Metodologia | 4 | 🎯 Próxima Onda (Final) | `[░░░░░░░░░░]` 0% (0/4) |
+| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **89.5% Concluído** | **34 / 38 Módulos** |
 
 ---
 
@@ -310,6 +310,46 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
   - [x] Atualização de progresso e walkthrough
   - [x] Git commit e push para `origin/main`
 
+---
 
+## 📋 Registro de Conclusão da Onda G7 (Reprodução Humana, Infertilidade & Endocrinologia Ginecológica)
 
+### Módulos Concluídos:
+1. `infertil` — Infertilidade Conjugal & Reprodução Assistida: Critérios cronológicos (< 35a: 12 meses vs ≥ 35a: 6 meses), os 4 pilares diagnósticos (espermograma OMS 6ª ed. 2021, reserva ovariana AMH / CFA, ovulatório com Progesterona D21-24 e permeabilidade tubária por Histerossalpingografia com Prova de Cotte positiva), Indução da ovulação (Letrozol 2,5 mg/d vs Citrato de Clomifeno) e Técnicas de Reprodução Assistida (IIU vs FIV / ICSI, teste PGT e protocolo agonista GnRH para prevenção de Síndrome de Hiperestímulo Ovariano) (`imagens/infografico-gin-infertil.png` — 1200x2509px) ✅
+2. `prolactina` — Hiperprolactinemia & Galactorreia: Fisiologia do tônus inibitório dopaminérgico via receptores D2, "efeito haste" compressivo, estímulo por TRH no hipotireoidismo primário, galactorreia vs hipogonadismo hipogonadotrófico, armadilhas laboratoriais (Macroprolactina com precipitação por PEG e Efeito Gancho / Hook Effect com diluição 1:100), conduta de 1ª linha com Cabergolina 0,5 mg/sem e indicações neurocirúrgicas transesfenoidais restritas (`imagens/infografico-gin-prolactina.png` — 1200x2745px) ✅
+3. `iop` — Insuficiência Ovariana Prematura (IOP): Tríade de consenso ESHRE/FEBRASGO (< 40 anos, oligomenorreia/amenorreia ≥ 4 meses e 2 dosagens de FSH > 25 UI/L com intervalo de 4-6 semanas), natureza flutuante (5-10% ovulam e concebem), repercussões sistêmicas severas da carência estrogênica precoce (perda acelerada de DMO/osteoporose, risco cardiovascular precoce, declínio cognitivo), investigação etiológica obrigatória (Cariótipo com busca ativa de linhagem Y para gonadectomia profilática urgente por risco de disgerminoma; pré-mutação FMR1 / X Frágil; rastreio de autoimunidade adrenal de Addison com anti-21-hidroxilase), TRH fisiológica de alta dose obrigatória com 17-β-estradiol até 50-52 anos e FIV com ovodoação (`imagens/infografico-gin-iop.png` — 1200x2431px) ✅
+4. `pgr` — Perda Gestacional Recorrente (PGR) & Trombofilias: Definição contemporânea ASRM/ESHRE (≥ 2 perdas consecutivas documentadas), prognóstico natural favorável (~70% nascido vivo em idiopáticas com *tender loving care*), Síndrome Antifosfolípide (SAAF) com critérios obstétricos e laboratoriais de Sydney (LAC, aCL e anti-β2-GPI em 2 dosagens com intervalo ≥ 12 semanas) e esquema padrão-ouro AAS 100 mg/d pré-concepcional + Enoxaparina 40 mg/d SC até 6 semanas pós-parto, causas anatômicas (útero septado e septoplastia histeroscópica, sinéquias de Asherman, cerclagem na incompetência cervical 12-14 sem), citogenética parental (translocações balanceadas com FIV + PGT-SR) e desmistificação das trombofilias hereditárias em perdas precoces (estudos ALIFE/ALIFE2) (`imagens/infografico-gin-pgr.png` — 1200x3693px) ✅
 
+### Subetapas Operacionais Finalizadas:
+- [x] **Módulo 1: `infertil` (Infertilidade Conjugal & Reprodução Assistida)**
+  - [x] Pesquisa clínica FEBRASGO Tratado Cap. 48 / Consenso OMS 2021 / ASRM
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_infertil_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-infertil.png`, 1200x2509px)
+  - [x] Validação visual dos recortes (`gin-infertil_top.png` e `gin-infertil_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/infertil.html`)
+
+- [x] **Módulo 2: `prolactina` (Hiperprolactinemia & Galactorreia)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 45 / Endocrine Society Clinical Guidelines
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_prolactina_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-prolactina.png`, 1200x2745px)
+  - [x] Validação visual dos recortes (`gin-prolactina_top.png` e `gin-prolactina_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/prolactina.html`)
+
+- [x] **Módulo 3: `iop` (Insuficiência Ovariana Prematura)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 46 / ESHRE Guideline on POI / IMS
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_iop_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-iop.png`, 1200x2431px)
+  - [x] Validação visual dos recortes (`gin-iop_top.png` e `gin-iop_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/iop.html`)
+
+- [x] **Módulo 4: `pgr` (Perda Gestacional Recorrente & Trombofilias)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 53 e 61 / ASRM / ESHRE / Sydney Criteria
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_pgr_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-pgr.png`, 1200x3693px)
+  - [x] Validação visual dos recortes (`gin-pgr_top.png` e `gin-pgr_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/pgr.html`)
+
+- [x] **Encerramento da Onda G7:**
+  - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v18`)
+  - [x] Atualização de progresso e walkthrough
+  - [x] Git commit e push para `origin/main`
