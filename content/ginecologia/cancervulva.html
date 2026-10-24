@@ -238,16 +238,50 @@
         <p>Neoplasia ginecológica rara tratada predominantemente por teleterapia pélvica e braquiterapia de alta taxa de dose (HDR).</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-cancervulva-vagina">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma Visual do Câncer de Vagina</h2>
+          <h2 class="card-title">Fluxograma Visual do Câncer de Vagina: Estadiamento & Tratamento</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_cancervagina_estadiamento_radioterapia.svg" target="_blank" class="btn-image-open">Abrir SVG ↗</a>
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-cancervulva-vagina.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-cancervulva-vagina.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
+            </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-cancervulva-vagina.png"
+               data-infographic-src="imagens/infografico-gin-cancervulva-vagina.png"
+               data-svg-src="imagens/fluxograma_cancervagina_estadiamento_radioterapia.svg"
+               data-infographic-alt="Infográfico Clínico: Câncer Primário de Vagina: Estadiamento FIGO e Quimiorradioterapia"
+               data-svg-alt="Fluxograma Vetorial: Câncer de Vagina"
+               alt="Infográfico Clínico: Câncer Primário de Vagina: Estadiamento FIGO e Quimiorradioterapia"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_cancervagina_estadiamento_radioterapia.svg" alt="Fluxograma Cancer de Vagina" class="flowchart-img" loading="lazy" decoding="async" data-scale="1.0">
         </div>

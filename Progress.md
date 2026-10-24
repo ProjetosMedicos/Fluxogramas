@@ -507,3 +507,27 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Reconstrução do índice de busca em `js/modules-data.js`
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v26`)
 - [x] Total de subfluxogramas cobertos até o momento: 34 de 88 (38.6%)! 🏆
+
+
+## [2026-10-24] - Sub-onda S5.2: Oncologia Pélvica Concluída (9 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `colo-bethesda` — **Condutas nas Citopatologias Alteradas (Bethesda)**: Algoritmo por idade para ASC-US (<25 anos rotina 3 anos, 25-29 anos 12m, ≥30 anos 6m), LSIL (<25 anos 3 anos, ≥25 anos 6m), ASC-H (colposcopia imediata), HSIL (colposcopia/ver e tratar) e AGC (colposcopia + endocérvice + endométrio se ≥35 anos) (`imagens/infografico-gin-colo-bethesda.png` — 1200x1803px) ✅
+2. `colo-colposcopia` — **Colposcopia Especializada & Zonas de Transformação**: Classificação IFCPC 2011 das ZTs (1, 2 e 3); Prova do ácido acético 3-5% (acetobranco tênue vs denso nacarado); Teste de Schiller/Lugol (Iodo-negativo / amarelo-mostarda); Achados menores vs maiores (`imagens/infografico-gin-colo-colposcopia.png` — 1200x1667px) ✅
+3. `colo-precursoras` — **Manejo das Neoplasias Intraepiteliais Cervicais (NIC 1, 2 e 3)**: NIC 1 conduta expectante semestral (regressão até 80%); NIC 2 conduta individualizada; NIC 3 excisão total da ZT (EZT/CAF se ZT1/2 vs Conização a frio se ZT3/microinvasão); Conduta em margens comprometidas (`imagens/infografico-gin-colo-precursoras.png` — 1200x1675px) ✅
+4. `colo-estadiamento` — **Estadiamento Clínico e por Imagem FIGO 2018**: Estádios I a IV; Subestádios IA1/IA2 microscópicos; IB1-IB3 macroscópicos; Inclusão formal de imagem (RM/PET) e linfonodos pélvicos (IIIC1) e paraórticos (IIIC2) (`imagens/infografico-gin-colo-estadiamento.png` — 1200x1512px) ✅
+5. `colo-tratamento` — **Tratamento Cirúrgico vs Quimiorradioterapia**: Doença inicial (≤ IB2/IIA1) cirurgia de Wertheim-Meigs tipo C aberta (Diretriz pós-LACC Trial 2018 proibindo videolaparoscopia/robótica de rotina); Doença localmente avançada (≥ IB3/IIB a IVA) quimiorradioterapia concomitante (Cisplatina semanal) + Braquiterapia HDR; Protocolo KEYNOTE-826 (Pembrolizumabe) (`imagens/infografico-gin-colo-tratamento.png` — 1200x1606px) ✅
+6. `endometrio-hiperplasias` — **Manejo das Hiperplasias Endometriais (OMS 2014/2020)**: Hiperplasia sem atipia (DIU-LNG 52 mg Mirena com regressão >90-95%) vs Hiperplasia com atipia/NEI (Histerectomia total com salpingo-ooforectomia bilateral HT+SOB por risco de 40% de adenocarcinoma sincrônico); Protocolo de preservação de fertilidade (`imagens/infografico-gin-endometrio-hiperplasias.png` — 1200x1625px) ✅
+7. `endometrio-molecular` — **Estadiamento FIGO 2023 & Classificação Molecular TCGA**: Integração dos 4 grupos moleculares (POLE ultramutado com excelente prognóstico e descalonamento de adjuvância; MMRd/MSI-H sensível a anti-PD-1; NSMP hormoniossensível; p53 aberrante de alto risco exigindo QT/RT agressiva); Linfonodo sentinela com ICG (`imagens/infografico-gin-endometrio-molecular.png` — 1200x1417px) ✅
+8. `ovario-marcadores` — **Marcadores Tumorais & Escore RMI-1 de Jacobs**: Fórmula multiplicativa $RMI = U \times M \times \text{CA-125}$; Ponto de corte > 200 para encaminhamento a ginecologista oncológico; Painel diferencial: CA-125/HE4 (epiteliais), beta-hCG/AFP/LDH (germinativos em jovens), Inibina B/Estradiol (células da granulosa); Laparotomia exploradora mediana sem punção (`imagens/infografico-gin-ovario-marcadores.png` — 1200x1485px) ✅
+9. `cancervulva-vagina` — **Câncer Primário de Vagina & Estadiamento FIGO**: Regras de exclusão diagnóstica (ausência de tumor cervical em 5 anos e sem lesão vulvar); Estadiamento FIGO I a IV; Vaginectomia superior em casos restritos vs Quimiorradioterapia definitiva com IMRT e braquiterapia HDR; Drenagem linfática comparada com vulva (`imagens/infografico-gin-cancervulva-vagina.png` — 1200x1539px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Diretrizes INCA, MS, FEBRASGO, FIGO 2018/2023, ESGO, ESTRO, NCCN aplicadas
+- [x] Templates HTML verticais semânticos 1200px criados e validados
+- [x] Renderização Headless Chrome e corte milimétrico PIL nos 9 PNGs HD em `imagens/`
+- [x] Integração canônica Dual-Toggle em `content/ginecologia/colo.html` (Seções 2, 3, 4, 5, 6), `endometrio.html` (Seções 3, 5), `ovario.html` (Seção 4) e `cancervulva.html` (Seção 5)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v27`)
+- [x] **Onda S5 100% Concluída (16/16 infográficos)**!
+- [x] **Total acumulado de subfluxogramas cobertos por infográficos HD: 43 de 88 (48.9%)**! 🏆
