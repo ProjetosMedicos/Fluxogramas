@@ -131,18 +131,50 @@
         <p>A substituição definitiva da laparoscopia diagnóstica pelo mapeamento de imagem especializado de alta resolução.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-endo-imagem">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Mapeamento por Imagem Não Invasivo na Endometriose Pélvica</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Mapeamento por Imagem & Marcadores na Endometriose</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_diagnostico_imagem.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-endo-imagem.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-endo-imagem.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-endo-imagem.png"
+               data-infographic-src="imagens/infografico-gin-endo-imagem.png"
+               data-svg-src="imagens/fluxograma_endometriose_diagnostico_imagem.svg"
+               data-infographic-alt="Infográfico Clínico: Diagnóstico por Imagem e Marcadores na Endometriose (USTV com Preparo e RM Pélvica)"
+               data-svg-alt="Fluxograma Vetorial: Diagnóstico por Imagem Endometriose"
+               alt="Infográfico Clínico: Diagnóstico por Imagem e Marcadores na Endometriose (USTV com Preparo e RM Pélvica)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_endometriose_diagnostico_imagem.svg" alt="Fluxograma de Diagnóstico por Imagem Endometriose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -200,18 +232,50 @@
         <p>Estratégias hormonais para controle de sintomas álgicos e quebra do ciclo inflamatório.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-endo-dor">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Escalonamento Terapêutico Medicamentoso da Dor</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Tratamento Clínico Medicamentoso da Dor na Endometriose</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_tratamento_dor.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-endo-dor.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-endo-dor.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-endo-dor.png"
+               data-infographic-src="imagens/infografico-gin-endo-dor.png"
+               data-svg-src="imagens/fluxograma_endometriose_tratamento_dor.svg"
+               data-infographic-alt="Infográfico Clínico: Tratamento Clínico da Dor na Endometriose (Dienogeste 2mg Padrão-Ouro)"
+               data-svg-alt="Fluxograma Vetorial: Tratamento da Dor Endometriose"
+               alt="Infográfico Clínico: Tratamento Clínico da Dor na Endometriose (Dienogeste 2mg Padrão-Ouro)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_endometriose_tratamento_dor.svg" alt="Fluxograma de Tratamento da Dor Endometriose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -251,18 +315,50 @@
         <p>A linha tênue entre a cirurgia e a preservação do pool folicular ovariano.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-endo-endometrioma">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Conduta no Endometrioma Ovariano: Vigilância vs Cistectomia Laparoscópica</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo do Endometrioma Ovariano & Preservação da Reserva</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_manejo_endometrioma.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-endo-endometrioma.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-endo-endometrioma.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-endo-endometrioma.png"
+               data-infographic-src="imagens/infografico-gin-endo-endometrioma.png"
+               data-svg-src="imagens/fluxograma_endometriose_manejo_endometrioma.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo do Endometrioma Ovariano e Preservação do AMH"
+               data-svg-alt="Fluxograma Vetorial: Endometrioma Ovariano"
+               alt="Infográfico Clínico: Manejo do Endometrioma Ovariano e Preservação do AMH"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_endometriose_manejo_endometrioma.svg" alt="Fluxograma de Endometrioma Ovariano" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -303,18 +399,50 @@
         <p>A tomada de decisão reprodutiva baseada em idade materna, permeabilidade tubária e gravidade da doença.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-endo-fertilidade">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão Reprodutiva na Paciente com Endometriose</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Endometriose & Infertilidade Conjugal (Escore EFI & FIV)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_infertilidade.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-endo-fertilidade.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-endo-fertilidade.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-endo-fertilidade.png"
+               data-infographic-src="imagens/infografico-gin-endo-fertilidade.png"
+               data-svg-src="imagens/fluxograma_endometriose_infertilidade.svg"
+               data-infographic-alt="Infográfico Clínico: Endometriose e Infertilidade Conjugal (Baixa Complexidade vs FIV)"
+               data-svg-alt="Fluxograma Vetorial: Infertilidade na Endometriose"
+               alt="Infográfico Clínico: Endometriose e Infertilidade Conjugal (Baixa Complexidade vs FIV)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_endometriose_infertilidade.svg" alt="Fluxograma de Infertilidade na Endometriose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -363,18 +491,50 @@
         <p>As indicações absolutas de urgência cirúrgica e o escalonamento técnico nas lesões intestinais.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-endo-cirurgia">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Cirurgia da Endometriose Profunda Infiltrativa (EPI)</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Cirurgia na Endometriose Profunda Infiltrativa (EPI)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_cirurgia_profunda.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-endo-cirurgia.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-endo-cirurgia.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-endo-cirurgia.png"
+               data-infographic-src="imagens/infografico-gin-endo-cirurgia.png"
+               data-svg-src="imagens/fluxograma_endometriose_cirurgia_profunda.svg"
+               data-infographic-alt="Infográfico Clínico: Cirurgia de Endometriose Profunda Infiltrativa (Shaving, Discoctomia e Ressecção Segmentar)"
+               data-svg-alt="Fluxograma Vetorial: Cirurgia de Endometriose Profunda"
+               alt="Infográfico Clínico: Cirurgia de Endometriose Profunda Infiltrativa (Shaving, Discoctomia e Ressecção Segmentar)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_endometriose_cirurgia_profunda.svg" alt="Fluxograma de Cirurgia de Endometriose Profunda" class="flowchart-img" loading="lazy" decoding="async">
         </div>

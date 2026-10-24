@@ -464,4 +464,25 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v24`)
 - [x] 100% dos fluxogramas dos módulos `mioma` e `adeno` cobertos por infográficos HD! 🏆
 
+---
+
+## 📋 Registro de Conclusão da Onda S4 (Fase 2: Sub-Fluxogramas de Endometriose & Dor Pélvica) — ✅ CONCLUÍDA! 🚀
+
+### Módulos & Sub-Fluxogramas Concluídos (6 novos infográficos HD):
+1. `endometriose-imagem` — **Mapeamento por Imagem & Marcadores na Endometriose**: Consenso IDEA 2022 na USTV com preparo intestinal especializado (técnica dinâmica com sliding sign de fundo de saco retouterino) e Ressonância Magnética de Pelve com contraste/gel vaginal e retal para estadiamento #Enzian 2021; Limitações e papel restrito do CA-125 sérico (`imagens/infografico-gin-endo-imagem.png` — 1200x1219px) ✅
+2. `endometriose-tratamento-dor` — **Tratamento Clínico Medicamentoso da Dor na Endometriose**: 1ª linha padrão-ouro FEBRASGO/ESHRE com Dienogeste 2 mg/dia contínuo (ação anti-inflamatória e antiproliferativa seletiva com amenorreia e regressão dos focos); Alternativas com AOCs combinados de uso estendido e SIU-LNG 52 mg; 2ª linha com Análogos do GnRH depot com Add-Back obrigatória (`imagens/infografico-gin-endo-dor.png` — 1200x1248px) ✅
+3. `endometriose-endometrioma` — **Manejo do Endometrioma Ovariano & Preservação da Reserva (AMH)**: Conduta conservadora expectante para cistos assintomáticos < 3-4 cm; Cistectomia laparoscópica minuciosa por stripping com tração/contratração e hemostasia bipolar mínima para proteção folicular; Alerta crítico de queda de 30-50% do AMH pós-cistectomia e indicação formal de criopreservação prévia de oócitos se desejo gestacional futuro (`imagens/infografico-gin-endo-endometrioma.png` — 1200x1328px) ✅
+4. `endometriose-infertilidade` — **Endometriose & Infertilidade Conjugal**: Regra de ouro da ineficácia de tratamentos hormonais supressivos na fertilidade; Estratificação pelo Escore EFI (Endometriosis Fertility Index); Baixa complexidade (coito/IIU) para trompas pérvias e EFI 7-10 vs Alta complexidade (FIV/ICSI) para obstrução tubária bilateral, idade ≥ 35 anos ou EFI ≤ 4 (`imagens/infografico-gin-endo-fertilidade.png` — 1200x1362px) ✅
+5. `endometriose-cirurgia-profunda` — **Cirurgia na Endometriose Profunda Infiltrativa (EPI)**: As 4 indicações cirúrgicas formais (dor refratária EVA ≥ 7, suboclusão intestinal, hidronefrose ureteral e apêndice/íleo); Algoritmo de seleção da técnica intestinal: Shaving retal (< 2 cm e muscular superficial) vs Ressecção em disco (discoctomia 2-3 cm < 40% luz) vs Ressecção segmentar colorretal (> 3 cm, estenose > 50% da luz ou multifocal) (`imagens/infografico-gin-endo-cirurgia.png` — 1200x1447px) ✅
+6. `dor-diagnostico-diferencial` — **Investigação Diagnóstica da Dor Pélvica Crônica (DPC)**: Avaliação semiológica nos 4 eixos (Ginecológico, Urológico com cistite intersticial/úlceras de Hunner, Gastrointestinal com SII de Roma IV e Miofascial/Neural); Sinal de Carnett positivo para dor de parede abdominal; Neuromodulação central (Amitriptilina, Duloxetina, Fisioterapia com biofeedback e TCC) (`imagens/infografico-gin-dor-diferencial.png` — 1200x1427px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Pesquisa clínica e roteiro textual dos 6 infográficos aprovados
+- [x] Templates HTML semânticos 1200px criados em `scratch/`
+- [x] Renderização Headless Chrome e recorte de precisão PIL nos 6 arquivos PNG em `imagens/`
+- [x] Integração no webapp com alternância dupla (`content/ginecologia/endo.html` Seções 2, 3, 4, 5 e 6; `content/ginecologia/dor.html` Seção 4)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v25`)
+- [x] 100% dos fluxogramas dos módulos `endo` e `dor` cobertos por infográficos HD! 🏆
+
 
