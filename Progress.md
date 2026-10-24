@@ -399,3 +399,22 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
   - [x] Git commit e push para `origin/main`
   - [x] 100% de conclusão de Ginecologia & Obstetrícia (38/38 módulos) e do portal global (86/86 módulos) 🏆🎉
 
+---
+
+## 📋 Registro de Conclusão da Onda S1 (Fase 2: Sub-Fluxogramas de Infertilidade Conjugal) — ✅ CONCLUÍDA! 🚀
+
+### Módulos & Sub-Fluxogramas Concluídos:
+1. `infertilidade-masculino` — **Fator Masculino & Espermograma OMS 2021 (6ª Edição)**: Volume &ge; 1,4 mL, Concentração &ge; 16 mi/mL, Total &ge; 39 mi, Motilidade PR &ge; 30%, Kruger &ge; 4%, Vitalidade &ge; 54%; Algoritmo 3 Vias (Normo vs Leve/Moderada SMR 5-10 mi com IIU vs Grave SMR &lt; 5 mi com ICSI); Azoospermia obstrutiva vs não obstrutiva (Cariótipo 47,XXY e Microdeleções AZF); Choosing Wisely (proibição de testosterona exógena) (`imagens/infografico-gin-infertil-masculino.png` — 1200x2910px) ✅
+2. `infertilidade-ovariano` — **Avaliação da Reserva Ovariana & Disfunções Ovulatórias**: Hormônio Antimülleriano (AMH 1,0–3,5 ng/mL) e Contagem de Folículos Antrais (CFA 8–15); Progesterona lútea D21 &ge; 5 ng/mL; Estratificação Poseidon/Bologna de má resposta; Alerta de hiper-resposta na SOP e risco de SHO (`imagens/infografico-gin-infertil-reserva.png` — 1200x2805px) ✅
+3. `infertilidade-baixa-complexidade` — **Tratamento de Baixa Complexidade: Coito Programado & Inseminação Intrauterina (IIU)**: Pré-requisito inegociável de pelo menos UMA trompa pérvia e móvel; SMR &ge; 5 milhões; Indução com Letrozol 2,5 a 5 mg/d (1ª linha na SOP) vs Clomifeno; USG seriada (folículo &ge; 18 mm + endométrio &ge; 7 mm); Trigger com hCG recombinante 250 mcg e IIU com timing exato em 34–36h; Critério de cancelamento (&ge; 3 folículos maduros); Choosing Wisely (máximo 3 a 4 ciclos de IIU) (`imagens/infografico-gin-infertil-baixa-complexidade.png` — 1200x2613px) ✅
+4. `infertilidade-alta-complexidade` — **Tratamento de Alta Complexidade: Fertilização in Vitro (FIV) & ICSI**: Indicações absolutas (fator tubário bilateral, masculino severo, endometriose III/IV); Fator idade materna e taxa de aneuploidia; As 5 Etapas do Ciclo (EOC com antagonista flexível, trigger agonista GnRH preventivo de SHO, captação 35-36h, ICSI e blastocisto D5); Transferência eletiva de embrião único (eSET) e Freeze-All; Choosing Wisely (salpingectomia prévia obrigatória na hidrossalpinge comunicante) (`imagens/infografico-gin-infertil-alta-complexidade.png` — 1200x2871px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Pesquisa clínica e roteiro textual em 7 blocos aprovados
+- [x] Templates HTML semânticos 1200px criados em `scratch/`
+- [x] Renderização Headless Chrome e recorte de precisão PIL nos 4 arquivos PNG em `imagens/`
+- [x] Integração no webapp com alternância dupla (`content/ginecologia/infertil.html` Seções 3, 4, 5 e 6)
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v22`)
+- [x] 100% dos fluxogramas do módulo `infertil` cobertos por infográficos HD! 🏆
+
+

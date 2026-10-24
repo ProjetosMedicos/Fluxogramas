@@ -262,18 +262,50 @@
         <p>Valores de referência da 6ª edição da OMS, interpretação dos laudos e indicações de ICSI.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-infertil-masculino">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão Clínica no Espermograma Alterado</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Fator Masculino & Espermograma (OMS 2021)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_infertilidade_fator_masculino.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-infertil-masculino.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-infertil-masculino.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-infertil-masculino.png"
+               data-infographic-src="imagens/infografico-gin-infertil-masculino.png"
+               data-svg-src="imagens/fluxograma_infertilidade_fator_masculino.svg"
+               data-infographic-alt="Infográfico Clínico: Fator Masculino & Espermograma OMS 2021"
+               data-svg-alt="Fluxograma Decisório SVG: Espermograma Alterado"
+               alt="Infográfico Clínico: Fator Masculino & Espermograma OMS 2021"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_infertilidade_fator_masculino.svg" alt="Fluxograma do Fator Masculino" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -346,18 +378,50 @@
         <p>Hormônio Antimülleriano (AMH), Contagem de Folículos Antrais (CFA) e preditores de resposta ao estímulo ovariano.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-infertil-reserva">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Estratificação da Reserva Ovariana</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Reserva Ovariana & Disfunções Ovulatórias</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_infertilidade_reserva_ovariana.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-infertil-reserva.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-infertil-reserva.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-infertil-reserva.png"
+               data-infographic-src="imagens/infografico-gin-infertil-reserva.png"
+               data-svg-src="imagens/fluxograma_infertilidade_reserva_ovariana.svg"
+               data-infographic-alt="Infográfico Clínico: Reserva Ovariana (AMH / CFA) & Disfunções Ovulatórias"
+               data-svg-alt="Fluxograma Decisório SVG: Reserva Ovariana"
+               alt="Infográfico Clínico: Reserva Ovariana (AMH / CFA) & Disfunções Ovulatórias"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_infertilidade_reserva_ovariana.svg" alt="Fluxograma de Reserva Ovariana" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -416,18 +480,50 @@
         <p>Indução da ovulação, monitoramento ecográfico seriado e seleção entre relação programada e IIU (Capítulos 50 e 51 FEBRASGO).</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-infertil-baixa">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Protocolos de Baixa Complexidade</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Baixa Complexidade (Coito Programado & IIU)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_infertilidade_baixa_complexidade.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-infertil-baixa-complexidade.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-infertil-baixa-complexidade.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-infertil-baixa-complexidade.png"
+               data-infographic-src="imagens/infografico-gin-infertil-baixa-complexidade.png"
+               data-svg-src="imagens/fluxograma_infertilidade_baixa_complexidade.svg"
+               data-infographic-alt="Infográfico Clínico: Baixa Complexidade (Coito Programado & Inseminação Intrauterina)"
+               data-svg-alt="Fluxograma Decisório SVG: Protocolos de Baixa Complexidade"
+               alt="Infográfico Clínico: Baixa Complexidade (Coito Programado & Inseminação Intrauterina)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_infertilidade_baixa_complexidade.svg" alt="Fluxograma de Baixa Complexidade" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -473,18 +569,50 @@
         <p>Indicações primárias, as 5 etapas laboratoriais e clínicas e prevenção de complicações (Capítulo 52 FEBRASGO).</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-infertil-alta">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma do Ciclo de FIV e Injeção Intracitoplasmática de Espermatozoides (ICSI)</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Alta Complexidade (FIV & ICSI)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_infertilidade_alta_complexidade_fiv.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-infertil-alta-complexidade.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-infertil-alta-complexidade.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-infertil-alta-complexidade.png"
+               data-infographic-src="imagens/infografico-gin-infertil-alta-complexidade.png"
+               data-svg-src="imagens/fluxograma_infertilidade_alta_complexidade_fiv.svg"
+               data-infographic-alt="Infográfico Clínico: Alta Complexidade (Fertilização in Vitro & ICSI)"
+               data-svg-alt="Fluxograma Decisório SVG: Ciclo de FIV e ICSI"
+               alt="Infográfico Clínico: Alta Complexidade (Fertilização in Vitro & ICSI)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_infertilidade_alta_complexidade_fiv.svg" alt="Fluxograma de Alta Complexidade FIV ICSI" class="flowchart-img" loading="lazy" decoding="async">
         </div>
