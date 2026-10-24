@@ -439,23 +439,95 @@
       </div>
 
       <!-- Fluxograma 1 -->
-      <div class="card">
-        <div class="card-header-flex">
-          <h2 class="card-title">1. Roteiro Sequencial do Exame Físico Ginecológico Completo</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_exame_fisico_passo_a_passo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+      <!-- Card de Visualização com Alternância Dupla -->
+      <div class="card" id="card-visual-examefisico">
+        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
+          <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <!-- Alternância de Visualização -->
+            <div class="segmented-control" id="examefisico-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
+              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchExameFisicoView('infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
+                📊 Infográfico NotebookLM (HD)
+              </button>
+              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchExameFisicoView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
+                📐 Fluxograma SVG Clássico
+              </button>
+            </div>
+
+            <!-- Ações Rápidas de Zoom / Modal / Download -->
+            <div class="flowchart-actions" style="margin: 0;">
+              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+              <button class="btn-zoom" id="examefisico-expand-btn" onclick="toggleExameFisicoExpand()" title="Expandir Visualização">⛶ Expandir</button>
+              <a href="imagens/infografico-gin-examefisico.png" target="_blank" id="examefisico-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
+                Tela Cheia ↗
+              </a>
+              <a href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" id="examefisico-download-link" class="btn-image-open" style="background: #0284c7; color: #fff; border-color: #0284c7;" title="Download do Infográfico em Alta Resolução">
+                💾 Baixar HD
+              </a>
+            </div>
           </div>
         </div>
-        <p>Algoritmo semiológico normatizado pela FEBRASGO cobrindo todas as etapas: Acolhimento → Esvaziamento Vesical → Mamas → Abdome → Posição → Genitais Externos → Espéculo → Toque Bimanual → Retovaginal:</p>
-        <div class="flowchart-img-container" style="display: block; text-align: center; contain: paint; max-width: 100%; overflow: auto;">
-          <img src="imagens/fluxograma_exame_fisico_passo_a_passo.svg" alt="Roteiro Sequencial do Exame Físico Ginecológico Completo" class="flowchart-img" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">
+
+        <div class="flowchart-img-container" id="examefisico-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
+          <img src="imagens/infografico-gin-examefisico.png" alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada" class="flowchart-img" id="examefisico-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
         </div>
       </div>
+
+      <script>
+        function switchExameFisicoView(viewType) {
+          const img = document.getElementById('examefisico-active-img');
+          const toggle = document.getElementById('examefisico-view-toggle');
+          const fsLink = document.getElementById('examefisico-fullscreen-link');
+          const dlLink = document.getElementById('examefisico-download-link');
+          if (!img || !toggle) return;
+
+          const buttons = toggle.querySelectorAll('.btn-toggle');
+          buttons.forEach(btn => {
+            if (btn.dataset.view === viewType) {
+              btn.classList.add('active');
+              btn.style.background = '#0284c7';
+              btn.style.color = '#fff';
+            } else {
+              btn.classList.remove('active');
+              btn.style.background = 'transparent';
+              btn.style.color = '#475569';
+            }
+          });
+
+          if (viewType === 'infographic') {
+            img.src = 'imagens/infografico-gin-examefisico.png';
+            img.alt = 'Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada';
+            if (fsLink) fsLink.href = 'imagens/infografico-gin-examefisico.png';
+            if (dlLink) {
+              dlLink.href = 'imagens/infografico-gin-examefisico.png';
+              dlLink.download = 'infografico-gin-examefisico.png';
+              dlLink.style.display = 'inline-block';
+            }
+          } else {
+            img.src = 'imagens/fluxograma_exame_fisico_passo_a_passo.svg';
+            img.alt = 'Fluxograma SVG: Roteiro Sequencial do Exame Físico Ginecológico Completo';
+            if (fsLink) fsLink.href = 'imagens/fluxograma_exame_fisico_passo_a_passo.svg';
+            if (dlLink) dlLink.style.display = 'none';
+          }
+          img.style.transform = 'scale(1)';
+        }
+
+        function toggleExameFisicoExpand() {
+          const container = document.getElementById('examefisico-visual-display');
+          const btn = document.getElementById('examefisico-expand-btn');
+          if (!container || !btn) return;
+
+          if (container.style.maxHeight === 'none') {
+            container.style.maxHeight = '650px';
+            btn.textContent = '⛶ Expandir';
+          } else {
+            container.style.maxHeight = 'none';
+            btn.textContent = '🗗 Recolher';
+          }
+        }
+      </script>
 
       <!-- Fluxograma 2 -->
       <div class="card" style="margin-top: 24px;">
