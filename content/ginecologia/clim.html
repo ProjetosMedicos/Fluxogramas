@@ -213,20 +213,43 @@
         <p>A estratificação de segurança que revolucionou a prescrição da Terapia Hormonal da Menopausa.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-climaterio-janela-risco">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Rastreamento de Contraindicações Absolutas e Avaliação da Janela de Oportunidade</h2>
+          <h2 class="card-title">Fluxograma da Janela de Oportunidade e Contraindicações da THM</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_climaterio_janela_contraindicacoes.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-clim-janela-contraindicacoes.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-clim-janela-contraindicacoes.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_climaterio_janela_contraindicacoes.svg" alt="Fluxograma Janela de Oportunidade" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-clim-janela-contraindicacoes.png"
+               data-infographic-src="imagens/infografico-gin-clim-janela-contraindicacoes.png"
+               data-svg-src="imagens/fluxograma_climaterio_janela_contraindicacoes.svg"
+               data-infographic-alt="Infográfico Clínico: Janela de Oportunidade e Contraindicações Absolutas da THM (FEBRASGO / SOBRAC)"
+               data-svg-alt="Fluxograma Vetorial: Janela de Oportunidade e Contraindicações"
+               alt="Infográfico Clínico: Janela de Oportunidade e Contraindicações Absolutas da THM (FEBRASGO / SOBRAC)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -281,20 +304,43 @@
         <p>A regra de ouro de proteger o endométrio e a individualização dos esquemas terapêuticos.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-climaterio-regimes">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma da Regra de Ouro do Endométrio e Esquemas de Administração</h2>
+          <h2 class="card-title">Fluxograma de Seleção do Regime da THM: E+P vs Tibolona</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_climaterio_regimes_e_p.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-clim-regimes-e-p.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-clim-regimes-e-p.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_climaterio_regimes_e_p.svg" alt="Fluxograma Regimes E+P Climatério" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-clim-regimes-e-p.png"
+               data-infographic-src="imagens/infografico-gin-clim-regimes-e-p.png"
+               data-svg-src="imagens/fluxograma_climaterio_regimes_e_p.svg"
+               data-infographic-alt="Infográfico Clínico: Seleção de Regimes Hormonais da THM - E+P, Monoterapia e Tibolona (FEBRASGO / SOBRAC)"
+               data-svg-alt="Fluxograma Vetorial: Regimes E+P e Tibolona"
+               alt="Infográfico Clínico: Seleção de Regimes Hormonais da THM - E+P, Monoterapia e Tibolona (FEBRASGO / SOBRAC)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -385,20 +431,43 @@
         <p>O impacto crítico do metabolismo hepático de primeira passagem na segurança metabólica e vascular.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-climaterio-vias">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão da Via de Administração do Estrogênio</h2>
+          <h2 class="card-title">Fluxograma de Seleção da Via de Administração do Estrogênio: Oral vs Transdérmica</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_climaterio_vias_oral_transdermica.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-clim-vias-administracao.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-clim-vias-administracao.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_climaterio_vias_oral_transdermica.svg" alt="Fluxograma Vias Oral vs Transdérmica" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-clim-vias-administracao.png"
+               data-infographic-src="imagens/infografico-gin-clim-vias-administracao.png"
+               data-svg-src="imagens/fluxograma_climaterio_vias_oral_transdermica.svg"
+               data-infographic-alt="Infográfico Clínico: Vias de Administração do Estrogênio - Transdérmica vs Oral (FEBRASGO / SOBRAC)"
+               data-svg-alt="Fluxograma Vetorial: Vias Oral vs Transdérmica"
+               alt="Infográfico Clínico: Vias de Administração do Estrogênio - Transdérmica vs Oral (FEBRASGO / SOBRAC)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -452,20 +521,43 @@
         <p>Estratégias baseadas em evidências para pacientes com contraindicação absoluta à terapia hormonal.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-climaterio-nao-hormonal">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Prescrição Não Hormonal dos Fogachos e Alerta de Interação Oncológica</h2>
+          <h2 class="card-title">Fluxograma de Manejo Não Hormonal dos Fogachos e Alerta do Tamoxifeno</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_climaterio_alternativas_nao_hormonais.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-clim-nao-hormonal.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-clim-nao-hormonal.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_climaterio_alternativas_nao_hormonais.svg" alt="Fluxograma Não Hormonal Climatério" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-clim-nao-hormonal.png"
+               data-infographic-src="imagens/infografico-gin-clim-nao-hormonal.png"
+               data-svg-src="imagens/fluxograma_climaterio_alternativas_nao_hormonais.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo Não Hormonal dos Sintomas Vasomotores & Alerta do Tamoxifeno (FEBRASGO)"
+               data-svg-alt="Fluxograma Vetorial: Alternativas Não Hormonais"
+               alt="Infográfico Clínico: Manejo Não Hormonal dos Sintomas Vasomotores & Alerta do Tamoxifeno (FEBRASGO)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -570,20 +662,43 @@
         <p>O tratamento de alta precisão local sem necessidade de oposição progestagênica sistêmica.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-climaterio-sgm">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo da Síndrome Geniturinária Isolada e Perfil de Segurança Local</h2>
+          <h2 class="card-title">Fluxograma de Manejo da Síndrome Geniturinária da Menopausa (SGM)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_climaterio_sindrome_geniturinaria.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-clim-sgm.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-clim-sgm.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_climaterio_sindrome_geniturinaria.svg" alt="Fluxograma Síndrome Geniturinária Climatério" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-clim-sgm.png"
+               data-infographic-src="imagens/infografico-gin-clim-sgm.png"
+               data-svg-src="imagens/fluxograma_climaterio_sindrome_geniturinaria.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo da Síndrome Geniturinária da Menopausa (SGM) & Estrogênios Tópicos (FEBRASGO)"
+               data-svg-alt="Fluxograma Vetorial: Manejo da Síndrome Geniturinária"
+               alt="Infográfico Clínico: Manejo da Síndrome Geniturinária da Menopausa (SGM) & Estrogênios Tópicos (FEBRASGO)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
