@@ -68,6 +68,45 @@
         </div>
       </div>
 
+      <div class="card" id="card-visual-ped-tuberculose-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-tuberculose-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-tuberculose-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-tuberculose-landing-fullscreen-link" href="imagens/infografico-ped-tuberculose.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-tuberculose-landing-download-link" href="imagens/infografico-ped-tuberculose.png" download="infografico-ped-tuberculose.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-tuberculose-landing-visual-display"
+               src="imagens/infografico-ped-tuberculose.png"
+               alt="Infográfico Clínico de Tuberculose na Infância SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-tuberculose.png"
+               data-infographic-alt="Infográfico Clínico de Tuberculose na Infância SBP 2024"
+               data-svg-src="imagens/fluxo-ped-tuberculose.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -341,11 +380,11 @@
         <p class="section-subtitle">Algoritmo decisório de estratificação, indicação de tratamento empírico e manejo de contatos assintomáticos.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-tuberculose">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="tuberculose-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-tuberculose-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -354,25 +393,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="tuberculose-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="tuberculose-fullscreen-link" href="imagens/infografico-ped-tuberculose.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="tuberculose-download-link" href="imagens/infografico-ped-tuberculose.png" download="infografico-ped-tuberculose-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-tuberculose-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-tuberculose-fullscreen-link" href="imagens/infografico-ped-tuberculose.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-tuberculose-download-link" href="imagens/infografico-ped-tuberculose.png" download="infografico-ped-tuberculose.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="tuberculose-visual-display" 
-               src="imagens/infografico-ped-tuberculose.png" 
-               alt="Infográfico Clínico de Tuberculose na Infância SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-tuberculose-visual-display"
+               src="imagens/infografico-ped-tuberculose.png"
+               alt="Infográfico Clínico de Tuberculose na Infância SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-tuberculose.png"
                data-infographic-alt="Infográfico Clínico de Tuberculose na Infância SBP 2024"
                data-svg-src="imagens/fluxo-ped-tuberculose.svg"
-               data-svg-alt="Fluxograma Tuberculose Infantil SBP">
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo de Diagnóstico e Conduta na Tuberculose na Infância (MS / SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a fisiopatologia paucibacilar da criança como sentinela epidemiológica, a tabela completa de 5 critérios do Sistema de Pontuação MS/SBP (dispensando baciloscopia para scores ≥ 30-40), o esquema farmacológico primário 2 RHZ / 4 RH (sem etambutol em &lt; 10 anos), a corticoterapia na neurotuberculose, o protocolo oficial do recém-nascido de mãe bacilífera (sem BCG ao nascer e quimioprofilaxia por 3 meses) e o manejo da ILTB. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

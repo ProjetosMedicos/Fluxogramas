@@ -46,6 +46,45 @@
         </div>
       </div>
 
+      <div class="card" id="card-visual-ped-desnutricao-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de Manejo da Desnutrição Grave em 3 Fases (SBP 2024 / OMS)</h2>
+            <div class="flowchart-view-toggle" id="ped-desnutricao-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-desnutricao-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-desnutricao-landing-fullscreen-link" href="imagens/infografico-ped-desnutricao.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-desnutricao-landing-download-link" href="imagens/infografico-ped-desnutricao.png" download="infografico-ped-desnutricao.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-desnutricao-landing-visual-display"
+               src="imagens/infografico-ped-desnutricao.png"
+               alt="Infográfico Clínico de Desnutrição Infantil Grave e Protocolo da OMS em 3 Fases SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-desnutricao.png"
+               data-infographic-alt="Infográfico Clínico de Desnutrição Infantil Grave e Protocolo da OMS em 3 Fases SBP 2024"
+               data-svg-src="imagens/fluxo-ped-desnutricao.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de Manejo da Desnutrição Grave em 3 Fases (SBP 2024 / OMS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -225,11 +264,11 @@
         <p class="section-subtitle">Os 10 passos sequenciais da OMS e SBP distribuídos nas fases de Estabilização, Transição e Reabilitação.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-desnutricao">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de Manejo da Desnutrição Grave em 3 Fases (SBP 2024 / OMS)</h2>
-            <div class="flowchart-view-toggle" id="desnutricao-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-desnutricao-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -238,25 +277,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="desnutricao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="desnutricao-fullscreen-link" href="imagens/infografico-ped-desnutricao.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="desnutricao-download-link" href="imagens/infografico-ped-desnutricao.png" download="infografico-ped-desnutricao-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-desnutricao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-desnutricao-fullscreen-link" href="imagens/infografico-ped-desnutricao.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-desnutricao-download-link" href="imagens/infografico-ped-desnutricao.png" download="infografico-ped-desnutricao.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="desnutricao-visual-display" 
-               src="imagens/infografico-ped-desnutricao.png" 
-               alt="Infográfico Clínico de Desnutrição Infantil Grave e Protocolo da OMS em 3 Fases SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-desnutricao-visual-display"
+               src="imagens/infografico-ped-desnutricao.png"
+               alt="Infográfico Clínico de Desnutrição Infantil Grave e Protocolo da OMS em 3 Fases SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-desnutricao.png"
                data-infographic-alt="Infográfico Clínico de Desnutrição Infantil Grave e Protocolo da OMS em 3 Fases SBP 2024"
                data-svg-src="imagens/fluxo-ped-desnutricao.svg"
-               data-svg-alt="Fluxograma Oficial de Desnutrição Infantil SBP 2024">
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de Manejo da Desnutrição Grave em 3 Fases (SBP 2024 / OMS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a diferenciação semiológica entre Marasmo (desnutrição calórica seca) e Kwashiorkor (desnutrição proteica edematosa), as 4 vulnerabilidades de colapso circulatório na adaptação redutiva, as 3 fases do protocolo de 10 passos da OMS (Estabilização com F-75, Transição e Reabilitação com F-100), a composição hidroeletrolítica da solução ReSoMal, a regra de ouro que PROÍBE o ferro na fase 1 e a fisiopatologia fatal da Síndrome de Realimentação. Use o Zoom ou abra em tela cheia para máxima nitidez.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

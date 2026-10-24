@@ -8,7 +8,7 @@ let activeGinecologiaMod = 'dsf';
 let activePediatriaMod = 'ped-reanima';
 let currentModule = 'dsf';
 
-const loadedModules = new Set(['dsf']);
+const loadedModules = new Set();
 const moduleHtmlCache = new Map();
 
 // Carregamento Sob Demanda de Módulos Clínicos (Lazy Loader)
@@ -51,6 +51,9 @@ async function loadModule(moduleId) {
           oldScript.parentNode.replaceChild(newScript, oldScript);
         });
         container.appendChild(wrapper);
+        if (typeof enhanceModuleInteractivity === 'function') {
+          enhanceModuleInteractivity(wrapper);
+        }
       }
       loadedModules.add(moduleId);
       showLoadedModule(moduleId);
@@ -386,7 +389,12 @@ async function switchSection(sectionId) {
     updateSectionPager(sectionId);
   };
 
-  updateDOM();
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof document.startViewTransition === 'function' && !prefersReduced) {
+    document.startViewTransition(() => updateDOM());
+  } else {
+    updateDOM();
+  }
 
   if (isMobileMode()) {
     closeMobileSidebar();
@@ -880,4 +888,316 @@ async function handleHashNavigation() {
 window.addEventListener('hashchange', () => {
   handleHashNavigation();
 });
+
+// ============================================================================
+// MOTOR DE LIGHTBOX NATIVO (<dialog id="visual-lightbox">) COM PAN & ZOOM
+// ============================================================================
+let lightboxState = {
+  scale: 1.0,
+  infoSrc: '',
+  infoAlt: '',
+  svgSrc: '',
+  svgAlt: '',
+  currentMode: 'infographic',
+  isDragging: false,
+  startX: 0,
+  startY: 0,
+  scrollLeft: 0,
+  scrollTop: 0
+};
+
+function openVisualLightbox(triggerEl) {
+  const dialog = document.getElementById('visual-lightbox');
+  const img = document.getElementById('lightbox-img');
+  const titleEl = document.getElementById('lightbox-title');
+  const dlLink = document.getElementById('lightbox-download');
+  const newTabLink = document.getElementById('lightbox-newtab');
+  const btnInfo = document.getElementById('lightbox-btn-info');
+  const btnSvg = document.getElementById('lightbox-btn-svg');
+  const modeGroup = document.getElementById('lightbox-mode-group');
+
+  if (!dialog || !img) return;
+
+  const card = triggerEl ? triggerEl.closest('.card') : null;
+  const cardImg = card ? card.querySelector('.flowchart-img, img') : (triggerEl && triggerEl.tagName === 'IMG' ? triggerEl : null);
+  const cardTitle = card ? card.querySelector('.card-title, h2, h3') : null;
+
+  const currentSrc = cardImg ? cardImg.getAttribute('src') : (triggerEl ? triggerEl.getAttribute('href') : '');
+  const infoSrc = (cardImg && (cardImg.dataset.infographicSrc || cardImg.getAttribute('data-infographic-src'))) || (currentSrc.includes('infografico-') ? currentSrc : '');
+  const svgSrc = (cardImg && (cardImg.dataset.svgSrc || cardImg.getAttribute('data-svg-src'))) || (currentSrc.endsWith('.svg') ? currentSrc : '');
+  const infoAlt = (cardImg && (cardImg.dataset.infographicAlt || cardImg.getAttribute('data-infographic-alt') || cardImg.alt)) || 'Infográfico Clínico HD';
+  const svgAlt = (cardImg && (cardImg.dataset.svgAlt || cardImg.getAttribute('data-svg-alt'))) || 'Fluxograma Vetorial Clássico';
+
+  lightboxState.infoSrc = infoSrc || currentSrc;
+  lightboxState.svgSrc = svgSrc || currentSrc;
+  lightboxState.infoAlt = infoAlt;
+  lightboxState.svgAlt = svgAlt;
+  lightboxState.currentMode = (currentSrc && currentSrc.endsWith('.svg') && infoSrc !== currentSrc) ? 'svg' : 'infographic';
+  lightboxState.scale = 1.0;
+
+  if (titleEl) {
+    titleEl.textContent = cardTitle ? cardTitle.textContent.trim() : infoAlt;
+  }
+
+  if (modeGroup) {
+    modeGroup.style.display = (infoSrc && svgSrc && infoSrc !== svgSrc) ? 'inline-flex' : 'none';
+  }
+
+  applyLightboxMedia();
+
+  if (typeof dialog.showModal === 'function' && !dialog.open) {
+    dialog.showModal();
+  } else {
+    dialog.setAttribute('open', '');
+  }
+}
+
+function applyLightboxMedia() {
+  const img = document.getElementById('lightbox-img');
+  const dlLink = document.getElementById('lightbox-download');
+  const newTabLink = document.getElementById('lightbox-newtab');
+  const btnInfo = document.getElementById('lightbox-btn-info');
+  const btnSvg = document.getElementById('lightbox-btn-svg');
+  const zoomLabel = document.getElementById('lightbox-zoom-label');
+
+  if (!img) return;
+  const isInfo = lightboxState.currentMode === 'infographic';
+  const activeSrc = isInfo ? lightboxState.infoSrc : lightboxState.svgSrc;
+  const activeAlt = isInfo ? lightboxState.infoAlt : lightboxState.svgAlt;
+
+  img.src = activeSrc;
+  img.alt = activeAlt;
+  img.style.transform = `scale(${lightboxState.scale})`;
+
+  if (zoomLabel) zoomLabel.textContent = `${Math.round(lightboxState.scale * 100)}%`;
+  if (btnInfo) btnInfo.classList.toggle('active', isInfo);
+  if (btnSvg) btnSvg.classList.toggle('active', !isInfo);
+
+  if (dlLink) {
+    dlLink.href = activeSrc;
+    dlLink.download = activeSrc.split('/').pop() || 'infografico-fluxomed.png';
+  }
+  if (newTabLink) {
+    newTabLink.href = activeSrc;
+  }
+}
+
+function switchLightboxMode(mode) {
+  lightboxState.currentMode = mode;
+  lightboxState.scale = 1.0;
+  applyLightboxMedia();
+}
+
+function zoomLightbox(delta) {
+  const next = Math.min(3.5, Math.max(0.5, +(lightboxState.scale + delta).toFixed(2)));
+  lightboxState.scale = next;
+  const img = document.getElementById('lightbox-img');
+  const zoomLabel = document.getElementById('lightbox-zoom-label');
+  if (img) img.style.transform = `scale(${next})`;
+  if (zoomLabel) zoomLabel.textContent = `${Math.round(next * 100)}%`;
+}
+
+function resetLightboxZoom() {
+  lightboxState.scale = 1.0;
+  const img = document.getElementById('lightbox-img');
+  const zoomLabel = document.getElementById('lightbox-zoom-label');
+  const viewport = document.getElementById('lightbox-viewport');
+  if (img) img.style.transform = 'scale(1)';
+  if (zoomLabel) zoomLabel.textContent = '100%';
+  if (viewport) {
+    viewport.scrollTop = 0;
+    viewport.scrollLeft = 0;
+  }
+}
+
+function closeVisualLightbox() {
+  const dialog = document.getElementById('visual-lightbox');
+  if (!dialog) return;
+  if (typeof dialog.close === 'function' && dialog.open) {
+    dialog.close();
+  } else {
+    dialog.removeAttribute('open');
+  }
+}
+
+// Aliases de retrocompatibilidade para chamadas legadas
+function switchVisualView(modId, viewType) {
+  switchVisualMode(modId, viewType === 'flowchart' ? 'svg' : viewType);
+}
+function zoomVisual(modId, delta) {
+  const card = document.getElementById(`card-visual-${modId}`) || document.querySelector(`section[id^="${modId}"] .card`);
+  const btn = card ? card.querySelector('.btn-zoom') : null;
+  if (btn) zoomFlowchart(btn, delta);
+}
+function resetVisualZoom(modId) {
+  const card = document.getElementById(`card-visual-${modId}`) || document.querySelector(`section[id^="${modId}"] .card`);
+  const btn = card ? card.querySelector('.btn-zoom') : null;
+  if (btn) resetZoom(btn);
+}
+function toggleExpandVisual(modId) {
+  const btn = document.getElementById(`${modId}-expand-btn`);
+  if (btn) toggleWideMode(btn);
+}
+function openFullscreenVisual(modId) {
+  const card = document.getElementById(`card-visual-${modId}`) || document.querySelector(`section[id^="${modId}"] .card`);
+  const img = card ? card.querySelector('img') : null;
+  if (img) openVisualLightbox(img);
+}
+
+// ============================================================================
+// PRODUTIVIDADE CLÍNICA: COPIAR PRESCRIÇÃO / CONDUTA EM 1 CLIQUE + TOAST
+// ============================================================================
+let toastTimeout = null;
+function showClinicalToast(message) {
+  const toast = document.getElementById('clinical-toast');
+  if (!toast) return;
+  toast.textContent = message;
+  toast.classList.add('show');
+  if (toastTimeout) clearTimeout(toastTimeout);
+  toastTimeout = setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2600);
+}
+
+function enhanceModuleInteractivity(rootEl) {
+  if (!rootEl) return;
+
+  // 1. Tornar todas as imagens de fluxograma/infográfico e links de Tela Cheia compatíveis com o Lightbox
+  rootEl.querySelectorAll('.flowchart-img').forEach(img => {
+    img.style.cursor = 'zoom-in';
+    if (!img.getAttribute('onclick')) {
+      img.addEventListener('click', () => openVisualLightbox(img));
+    }
+  });
+
+  rootEl.querySelectorAll('.flowchart-actions .btn-image-open:not([download])').forEach(link => {
+    if (!link.getAttribute('onclick')) {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        openVisualLightbox(link);
+      });
+    }
+  });
+
+  // 2. Adicionar botão "📋 Copiar Conduta" nos cards de seções de Prescrição, Posologia, Manutenção e Conduta
+  const prescCards = rootEl.querySelectorAll(
+    'section[id*="prescricao"] .card, section[id*="tratamento"] .card, section[id*="manejo"] .card, ' +
+    'section[id*="manutencao"] .card, section[id*="conduta"] .card, section[id*="posologia"] .card, section[id*="terapia"] .card'
+  );
+  prescCards.forEach(card => {
+    if (card.querySelector('.btn-copy-clinical') || card.querySelector('.flowchart-img')) return;
+    const titleEl = card.querySelector('.card-title, h2, h3');
+    if (!titleEl) return;
+
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'btn-copy-clinical';
+    btn.innerHTML = '📋 Copiar Conduta';
+    btn.title = 'Copiar texto desta conduta/prescrição para a área de transferência';
+    btn.addEventListener('click', async () => {
+      const clone = card.cloneNode(true);
+      clone.querySelectorAll('button, .btn-copy-clinical').forEach(b => b.remove());
+      const cleanText = clone.innerText.replace(/\n{3,}/g, '\n\n').trim();
+      try {
+        await navigator.clipboard.writeText(cleanText);
+        btn.classList.add('copied');
+        btn.innerHTML = '✓ Copiado!';
+        showClinicalToast('📋 Conduta/Prescrição copiada para a área de transferência!');
+        setTimeout(() => {
+          btn.classList.remove('copied');
+          btn.innerHTML = '📋 Copiar Conduta';
+        }, 2000);
+      } catch (err) {
+        showClinicalToast('Não foi possível copiar automaticamente.');
+      }
+    });
+
+    const headerFlex = card.querySelector('.card-header-flex');
+    if (headerFlex) {
+      headerFlex.appendChild(btn);
+    } else {
+      titleEl.style.display = 'flex';
+      titleEl.style.alignItems = 'center';
+      titleEl.style.justifyContent = 'space-between';
+      titleEl.style.gap = '10px';
+      titleEl.style.flexWrap = 'wrap';
+      titleEl.appendChild(btn);
+    }
+  });
+}
+
+// ============================================================================
+// EVENTOS GLOBAIS DO LIGHTBOX E BARRA DE PROGRESSO DE LEITURA
+// ============================================================================
+window.addEventListener('DOMContentLoaded', () => {
+  const dialog = document.getElementById('visual-lightbox');
+  const viewport = document.getElementById('lightbox-viewport');
+
+  if (dialog) {
+    dialog.addEventListener('click', (e) => {
+      if (e.target === dialog) {
+        closeVisualLightbox();
+      }
+    });
+  }
+
+  if (viewport) {
+    viewport.addEventListener('wheel', (e) => {
+      if (e.ctrlKey || e.metaKey) {
+        e.preventDefault();
+        zoomLightbox(e.deltaY < 0 ? 0.2 : -0.2);
+      }
+    }, { passive: false });
+
+    viewport.addEventListener('mousedown', (e) => {
+      if (e.button !== 0) return;
+      lightboxState.isDragging = true;
+      viewport.classList.add('dragging');
+      lightboxState.startX = e.pageX - viewport.offsetLeft;
+      lightboxState.startY = e.pageY - viewport.offsetTop;
+      lightboxState.scrollLeft = viewport.scrollLeft;
+      lightboxState.scrollTop = viewport.scrollTop;
+    });
+
+    window.addEventListener('mouseup', () => {
+      if (lightboxState.isDragging) {
+        lightboxState.isDragging = false;
+        viewport.classList.remove('dragging');
+      }
+    });
+
+    viewport.addEventListener('mousemove', (e) => {
+      if (!lightboxState.isDragging) return;
+      e.preventDefault();
+      const x = e.pageX - viewport.offsetLeft;
+      const y = e.pageY - viewport.offsetTop;
+      viewport.scrollLeft = lightboxState.scrollLeft - (x - lightboxState.startX) * 1.4;
+      viewport.scrollTop = lightboxState.scrollTop - (y - lightboxState.startY) * 1.4;
+    });
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (!dialog || !dialog.open) return;
+    if (e.key === '+' || e.key === '=') {
+      e.preventDefault();
+      zoomLightbox(0.25);
+    } else if (e.key === '-') {
+      e.preventDefault();
+      zoomLightbox(-0.25);
+    } else if (e.key === '0') {
+      e.preventDefault();
+      resetLightboxZoom();
+    }
+  });
+});
+
+window.addEventListener('scroll', () => {
+  const bar = document.getElementById('reading-progress-bar');
+  if (!bar) return;
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
+  bar.style.width = `${pct}%`;
+}, { passive: true });
+
 

@@ -2016,9 +2016,63 @@
     }
 
     @media print {
-      #sidebar, .top-bar, .case-option-btn, .sidebar-search, .module-selector, .flowchart-actions { display: none !important; }
-      #main-content { margin-left: 0; padding: 0; }
-      .content-section { display: block !important; page-break-after: always; }
+      #sidebar,
+      #toc-sidebar,
+      .top-bar,
+      #reading-progress-bar,
+      .case-option-btn,
+      .sidebar-search,
+      .module-selector,
+      .flowchart-actions,
+      .flowchart-view-toggle,
+      .btn-copy-clinical,
+      .docs-pager,
+      #back-to-top,
+      #command-search-modal,
+      .visual-lightbox-dialog,
+      .clinical-toast,
+      #pediatria-preview-modal {
+        display: none !important;
+      }
+      body,
+      body.dark-mode,
+      #main-content {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      #content-container {
+        max-width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .content-section {
+        display: none !important;
+      }
+      .content-section.active {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+      .card {
+        background: #ffffff !important;
+        color: #0f172a !important;
+        border: 1px solid #cbd5e1 !important;
+        box-shadow: none !important;
+        break-inside: avoid;
+      }
+      .flowchart-container,
+      table {
+        break-inside: avoid;
+      }
+      .flowchart-img {
+        max-height: 88vh !important;
+        width: auto !important;
+        margin: 0 auto !important;
+      }
     }
 
     /* ================================================================= */
@@ -3556,4 +3610,353 @@
         -webkit-backdrop-filter: none !important;
         border-bottom-color: #243044 !important;
       }
+    }
+
+    /* ================================================================= */
+    /* READING PROGRESS BAR & VIEW TRANSITIONS API                       */
+    /* ================================================================= */
+    .reading-progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      width: 0%;
+      background: linear-gradient(90deg, #0284c7, #38bdf8, #10b981);
+      z-index: 10050;
+      transition: width 80ms linear;
+      pointer-events: none;
+    }
+
+    ::view-transition-old(root),
+    ::view-transition-new(root) {
+      animation-duration: 140ms;
+      animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* ================================================================= */
+    /* NATIVE LIGHTBOX DIALOG (<dialog id="visual-lightbox">)            */
+    /* ================================================================= */
+    .visual-lightbox-dialog {
+      border: none;
+      padding: 0;
+      margin: auto;
+      width: 96vw;
+      max-width: 1480px;
+      height: 92vh;
+      max-height: 92vh;
+      border-radius: 14px;
+      background: #0f172a;
+      color: #f8fafc;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(148, 163, 184, 0.2);
+      overflow: hidden;
+    }
+    .visual-lightbox-dialog[open] {
+      display: flex;
+      flex-direction: column;
+      animation: fadeInModal 160ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .visual-lightbox-dialog::backdrop {
+      background: rgba(9, 13, 22, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .lightbox-shell {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    .lightbox-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 18px;
+      background: #1e293b;
+      border-bottom: 1px solid #334155;
+      flex-wrap: wrap;
+      flex-shrink: 0;
+    }
+    .lightbox-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      flex: 1 1 240px;
+    }
+    .lightbox-badge {
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(56, 189, 248, 0.16);
+      color: #38bdf8;
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      flex-shrink: 0;
+    }
+    .lightbox-title {
+      font-size: 0.95rem !important;
+      font-weight: 700 !important;
+      color: #f8fafc !important;
+      margin: 0 !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .lightbox-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .lightbox-mode-switch {
+      display: inline-flex;
+      background: #0f172a;
+      padding: 3px;
+      border-radius: 8px;
+      border: 1px solid #334155;
+      gap: 4px;
+    }
+    .lightbox-mode-btn {
+      border: none;
+      background: transparent;
+      color: #94a3b8;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .lightbox-mode-btn:hover {
+      color: #f8fafc;
+    }
+    .lightbox-mode-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+    }
+    .lightbox-zoom-group {
+      display: inline-flex;
+      align-items: center;
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 8px;
+      padding: 2px;
+      gap: 2px;
+    }
+    .lightbox-zoom-readout {
+      font-family: var(--font-mono);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: #e2e8f0;
+      min-width: 48px;
+      text-align: center;
+    }
+    .lightbox-tool-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      background: #1e293b;
+      color: #e2e8f0;
+      border: 1px solid #475569;
+      border-radius: 6px;
+      padding: 5px 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .lightbox-tool-btn:hover {
+      background: #334155;
+      color: #ffffff;
+      border-color: #38bdf8;
+    }
+    .lightbox-download-btn {
+      background: #0284c7;
+      border-color: #0284c7;
+      color: #ffffff;
+    }
+    .lightbox-download-btn:hover {
+      background: #0369a1;
+    }
+    .lightbox-close-btn {
+      background: rgba(239, 68, 68, 0.16);
+      color: #fca5a5;
+      border: 1px solid rgba(239, 68, 68, 0.35);
+      border-radius: 6px;
+      width: 32px;
+      height: 32px;
+      font-size: 0.95rem;
+      font-weight: 700;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 120ms ease;
+    }
+    .lightbox-close-btn:hover {
+      background: #ef4444;
+      color: #ffffff;
+    }
+    .lightbox-viewport {
+      flex: 1;
+      overflow: auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 24px;
+      background: radial-gradient(circle at center, #1e293b 0%, #090d16 100%);
+      cursor: grab;
+      user-select: none;
+    }
+    .lightbox-viewport.dragging {
+      cursor: grabbing;
+    }
+    .lightbox-media {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      background: #ffffff;
+      padding: 8px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+      transform-origin: top center;
+      transition: transform 0.12s ease-out;
+    }
+    .lightbox-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 18px;
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+      font-size: 0.75rem;
+      color: #94a3b8;
+      flex-shrink: 0;
+    }
+
+    /* ================================================================= */
+    /* 1-CLICK COPY PRESCRIPTION BUTTON & CLINICAL TOAST                 */
+    /* ================================================================= */
+    .btn-copy-clinical {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      background: var(--bg-surface);
+      color: var(--primary);
+      cursor: pointer;
+      transition: all 140ms ease;
+      margin-left: auto;
+      flex-shrink: 0;
+    }
+    .btn-copy-clinical:hover {
+      background: var(--primary);
+      color: #ffffff;
+      border-color: var(--primary);
+    }
+    .btn-copy-clinical.copied {
+      background: #10b981;
+      color: #ffffff;
+      border-color: #10b981;
+    }
+    .clinical-toast {
+      position: fixed;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: #0f172a;
+      color: #f8fafc;
+      border: 1px solid #38bdf8;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-size: 0.84rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+      z-index: 10060;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 200ms cubic-bezier(0.16, 1, 0.3, 1);
+      pointer-events: none;
+    }
+    .clinical-toast.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ================================================================= */
+    /* SEARCH SNIPPETS & NEW BADGES                                      */
+    /* ================================================================= */
+    .search-result-snippet {
+      font-size: 0.73rem;
+      color: var(--primary);
+      margin-top: 3px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-weight: 500;
+    }
+    .search-result-badge.badge-infographic {
+      background: rgba(2, 132, 199, 0.14);
+      color: #0284c7;
+      border-color: rgba(2, 132, 199, 0.35);
+    }
+    body.dark-mode .search-result-badge.badge-infographic {
+      color: #38bdf8;
+    }
+    .search-result-badge.badge-prescription {
+      background: rgba(139, 92, 246, 0.14);
+      color: #7c3aed;
+      border-color: rgba(139, 92, 246, 0.35);
+    }
+    body.dark-mode .search-result-badge.badge-prescription {
+      color: #c4b5fd;
+    }
+
+    /* ================================================================= */
+    /* COMPLETE DARK MODE OVERRIDES FOR INLINE LIGHT BACKGROUNDS         */
+    /* ================================================================= */
+    body.dark-mode div[style*="#f8fafc"],
+    body.dark-mode div[style*="#f1f5f9"],
+    body.dark-mode div[style*="#e2e8f0"],
+    body.dark-mode div[style*="#ffffff"],
+    body.dark-mode div[style*="#fff;"] {
+      background-color: #151e2e !important;
+      color: #e2e8f0 !important;
+      border-color: #334155 !important;
+    }
+    body.dark-mode div[style*="#f0fdf4"]:not(.case-feedback),
+    body.dark-mode div[style*="#dcfce7"]:not(.case-feedback) {
+      background-color: rgba(16, 185, 129, 0.12) !important;
+      color: #d1fae5 !important;
+      border-color: rgba(52, 211, 153, 0.35) !important;
+    }
+    body.dark-mode div[style*="#fef2f2"]:not(.case-feedback),
+    body.dark-mode div[style*="#fee2e2"]:not(.case-feedback),
+    body.dark-mode div[style*="#fff1f2"]:not(.case-feedback) {
+      background-color: rgba(239, 68, 68, 0.12) !important;
+      color: #fecdd3 !important;
+      border-color: rgba(248, 113, 113, 0.35) !important;
+    }
+    body.dark-mode div[style*="#fffbeb"]:not(.case-feedback),
+    body.dark-mode div[style*="#fef3c7"]:not(.case-feedback),
+    body.dark-mode div[style*="#fef9c3"]:not(.case-feedback),
+    body.dark-mode div[style*="#ffedd5"]:not(.case-feedback) {
+      background-color: rgba(245, 158, 11, 0.12) !important;
+      color: #fde68a !important;
+      border-color: rgba(251, 191, 36, 0.35) !important;
+    }
+    body.dark-mode div[style*="#f0f9ff"]:not(.case-feedback),
+    body.dark-mode div[style*="#e0f2fe"]:not(.case-feedback) {
+      background-color: rgba(14, 165, 233, 0.12) !important;
+      color: #bae6fd !important;
+      border-color: rgba(56, 189, 248, 0.35) !important;
     }

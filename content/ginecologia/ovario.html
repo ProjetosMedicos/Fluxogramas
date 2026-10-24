@@ -40,6 +40,45 @@
           </div>
         </div>
       </div>
+    
+
+      <div class="card" id="card-visual-ovario-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Tumores Anexiais & Câncer de Ovário (IOTA / FEBRASGO)</h2>
+            <div class="flowchart-view-toggle" id="ovario-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ovario-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ovario-landing-fullscreen-link" href="imagens/infografico-gin-ovario.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ovario-landing-download-link" href="imagens/infografico-gin-ovario.png" download="infografico-gin-ovario.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ovario-landing-visual-display"
+               src="imagens/infografico-gin-ovario.png"
+               alt="Infográfico Diretrizes FEBRASGO e IOTA de Tumores Anexiais e Câncer de Ovário"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-ovario.png"
+               data-infographic-alt="Infográfico Diretrizes FEBRASGO e IOTA de Tumores Anexiais e Câncer de Ovário"
+               data-svg-src="imagens/fluxograma_ovario_iota_regras_simples.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Tumores Anexiais & Câncer de Ovário (IOTA / FEBRASGO)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="ovario-semiologia" class="content-section">
@@ -91,7 +130,7 @@
         <p>O método de consenso internacional padrão-ouro para triagem ecográfica de benignidade (B-features) vs malignidade (M-features).</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ovario">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Tumores Anexiais & Câncer de Ovário (IOTA / FEBRASGO)</h2>
@@ -105,23 +144,27 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
             <button type="button" class="btn-zoom" id="ovario-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="ovario-fullscreen-link" href="imagens/infografico-gin-ovario.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="ovario-fullscreen-link" href="imagens/infografico-gin-ovario.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
             <a id="ovario-download-link" href="imagens/infografico-gin-ovario.png" download="infografico-gin-ovario.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img id="ovario-visual-display" 
-               src="imagens/infografico-gin-ovario.png" 
-               alt="Infográfico Diretrizes FEBRASGO e IOTA de Tumores Anexiais e Câncer de Ovário" 
-               class="flowchart-img infographic-mode" 
+          <img id="ovario-visual-display"
+               src="imagens/infografico-gin-ovario.png"
+               alt="Infográfico Diretrizes FEBRASGO e IOTA de Tumores Anexiais e Câncer de Ovário"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-ovario.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO e IOTA de Tumores Anexiais e Câncer de Ovário"
                data-svg-src="imagens/fluxograma_ovario_iota_regras_simples.svg"
-               data-svg-alt="Fluxograma IOTA Simple Rules">
+               data-svg-alt="Fluxograma Vetorial Clássico: Tumores Anexiais & Câncer de Ovário (IOTA / FEBRASGO)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a abordagem da massa anexial (menacme vs pós-menopausa), critérios IOTA Simple Rules (B-features vs M-features), biomarcadores (CA-125, HE4, ROMA e RMI) e princípios da laparotomia estadiadora e citorredução ótima FIGO. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

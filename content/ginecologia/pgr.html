@@ -35,6 +35,45 @@
             </ul>
         </div>
       </div>
+    
+
+      <div class="card" id="card-visual-pgr-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico da Perda Gestacional Recorrente</h2>
+            <div class="flowchart-view-toggle" id="pgr-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="pgr-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="pgr-landing-fullscreen-link" href="imagens/infografico-gin-pgr.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="pgr-landing-download-link" href="imagens/infografico-gin-pgr.png" download="infografico-gin-pgr.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="pgr-landing-visual-display"
+               src="imagens/infografico-gin-pgr.png"
+               alt="Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-pgr.png"
+               data-infographic-alt="Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias"
+               data-svg-src="imagens/fluxograma_pgr_perda_gestacional_investigacao.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico da Perda Gestacional Recorrente"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="pgr-saaf" class="content-section">
@@ -191,93 +230,42 @@
         <div style="line-height: 1.7; margin-top: 10px;"><p>Navegue pelo algoritmo decisório nos 4 eixos investigativos: SAAF com critérios de Sydney, avaliação anatômica histeroscópica, cariótipo do casal e conduta com AAS + Enoxaparina. Utilize as ferramentas de zoom e arrasto.</p></div>
       </div>
       <div class="card" id="card-visual-pgr">
-        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
-          <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico da Perda Gestacional Recorrente</h2>
-          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-            <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="pgr-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchPGRView('infographic')" style="border: none; background: #9f1239; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
-                📊 Infográfico NotebookLM (HD)
-              </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchPGRView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
-                📐 Fluxograma SVG Clássico
-              </button>
-            </div>
-
-            <!-- Ações Rápidas de Zoom / Modal / Download -->
-            <div class="flowchart-actions" style="margin: 0;">
-              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="pgr-expand-btn" onclick="togglePGRExpand()" title="Expandir Visualização">⛶ Expandir</button>
-              <a href="imagens/infografico-gin-pgr.png" target="_blank" id="pgr-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
-                Tela Cheia ↗
-              </a>
-              <a href="imagens/infografico-gin-pgr.png" download="infografico-gin-pgr.png" id="pgr-download-link" class="btn-image-open" style="background: #9f1239; color: #fff; border-color: #9f1239;" title="Download do Infográfico em Alta Resolução">
-                💾 Baixar HD
-              </a>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico da Perda Gestacional Recorrente</h2>
+            <div class="flowchart-view-toggle" id="pgr-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
           </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="pgr-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="pgr-fullscreen-link" href="imagens/infografico-gin-pgr.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="pgr-download-link" href="imagens/infografico-gin-pgr.png" download="infografico-gin-pgr.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
         </div>
-
-        <div class="flowchart-img-container" id="pgr-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-pgr.png" alt="Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias" class="flowchart-img" id="pgr-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img id="pgr-visual-display"
+               src="imagens/infografico-gin-pgr.png"
+               alt="Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-pgr.png"
+               data-infographic-alt="Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias"
+               data-svg-src="imagens/fluxograma_pgr_perda_gestacional_investigacao.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico da Perda Gestacional Recorrente"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
-
-      <script>
-        function switchPGRView(viewType) {
-          const img = document.getElementById('pgr-active-img');
-          const toggle = document.getElementById('pgr-view-toggle');
-          const fsLink = document.getElementById('pgr-fullscreen-link');
-          const dlLink = document.getElementById('pgr-download-link');
-          if (!img || !toggle) return;
-
-          const buttons = toggle.querySelectorAll('.btn-toggle');
-          buttons.forEach(btn => {
-            if (btn.dataset.view === viewType) {
-              btn.classList.add('active');
-              btn.style.background = '#9f1239';
-              btn.style.color = '#fff';
-            } else {
-              btn.classList.remove('active');
-              btn.style.background = 'transparent';
-              btn.style.color = '#475569';
-            }
-          });
-
-          if (viewType === 'infographic') {
-            img.src = 'imagens/infografico-gin-pgr.png';
-            img.alt = 'Infográfico NotebookLM: Perda Gestacional Recorrente & Trombofilias';
-            if (fsLink) fsLink.href = 'imagens/infografico-gin-pgr.png';
-            if (dlLink) {
-              dlLink.href = 'imagens/infografico-gin-pgr.png';
-              dlLink.download = 'infografico-gin-pgr.png';
-              dlLink.style.display = 'inline-block';
-            }
-          } else {
-            img.src = 'imagens/fluxograma_pgr_perda_gestacional_investigacao.svg';
-            img.alt = 'Fluxograma SVG: Investigação da Perda Gestacional Recorrente';
-            if (fsLink) fsLink.href = 'imagens/fluxograma_pgr_perda_gestacional_investigacao.svg';
-            if (dlLink) dlLink.style.display = 'none';
-          }
-          img.style.transform = 'scale(1)';
-        }
-
-        function togglePGRExpand() {
-          const container = document.getElementById('pgr-visual-display');
-          const btn = document.getElementById('pgr-expand-btn');
-          if (!container || !btn) return;
-
-          if (container.style.maxHeight === 'none') {
-            container.style.maxHeight = '650px';
-            btn.textContent = '⛶ Expandir';
-          } else {
-            container.style.maxHeight = 'none';
-            btn.textContent = '🗗 Recolher';
-          }
-        }
-      </script>
     </section>
 
 <section id="pgr-tabelas" class="content-section">

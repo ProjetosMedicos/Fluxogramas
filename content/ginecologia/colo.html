@@ -61,7 +61,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-colo">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Rastreamento do Câncer de Colo Uterino & Bethesda (INCA / FEBRASGO)</h2>
@@ -75,23 +75,27 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
             <button type="button" class="btn-zoom" id="colo-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="colo-fullscreen-link" href="imagens/infografico-gin-colo.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="colo-fullscreen-link" href="imagens/infografico-gin-colo.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
             <a id="colo-download-link" href="imagens/infografico-gin-colo.png" download="infografico-gin-colo.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img id="colo-visual-display" 
-               src="imagens/infografico-gin-colo.png" 
-               alt="Infográfico Diretrizes FEBRASGO e INCA de Câncer de Colo Uterino" 
-               class="flowchart-img infographic-mode" 
+          <img id="colo-visual-display"
+               src="imagens/infografico-gin-colo.png"
+               alt="Infográfico Diretrizes FEBRASGO e INCA de Câncer de Colo Uterino"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-colo.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO e INCA de Câncer de Colo Uterino"
                data-svg-src="imagens/fluxograma_colo_rastreamento.svg"
-               data-svg-alt="Fluxograma de Rastreamento Cervical FEBRASGO">
+               data-svg-alt="Fluxograma Vetorial Clássico: Rastreamento do Câncer de Colo Uterino & Bethesda (INCA / FEBRASGO)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a população-alvo e intervalos de rastreio (25-64 anos e imunossuprimidas), condutas sistemáticas por laudo citopatológico Bethesda (ASC-US, LSIL, ASC-H, HSIL e AGC), semiologia colposcópica e caracterização de ZTs e técnicas excisionais (EZT 1, 2, 3 e conização). Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

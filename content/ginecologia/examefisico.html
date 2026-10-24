@@ -61,6 +61,45 @@
           <p>A paciente apoia os joelhos e o tórax sobre a maca, mantendo as nádegas elevadas. Reservada para situações muito específicas, como na inspeção e reparo de fístulas vesicovaginais altas ou na pesquisa de prolapsos ocultos.</p>
         </div>
       </div>
+    
+
+      <div class="card" id="card-visual-examefisico-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
+            <div class="flowchart-view-toggle" id="examefisico-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="examefisico-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="examefisico-landing-fullscreen-link" href="imagens/infografico-gin-examefisico.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="examefisico-landing-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="examefisico-landing-visual-display"
+               src="imagens/infografico-gin-examefisico.png"
+               alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-examefisico.png"
+               data-infographic-alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada"
+               data-svg-src="imagens/fluxograma_exame_fisico_passo_a_passo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: 1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="examefisico-mamas" class="content-section">
@@ -441,93 +480,42 @@
       <!-- Fluxograma 1 -->
       <!-- Card de Visualização com Alternância Dupla -->
       <div class="card" id="card-visual-examefisico">
-        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
-          <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
-          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-            <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="examefisico-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchExameFisicoView('infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
-                📊 Infográfico NotebookLM (HD)
-              </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchExameFisicoView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
-                📐 Fluxograma SVG Clássico
-              </button>
-            </div>
-
-            <!-- Ações Rápidas de Zoom / Modal / Download -->
-            <div class="flowchart-actions" style="margin: 0;">
-              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="examefisico-expand-btn" onclick="toggleExameFisicoExpand()" title="Expandir Visualização">⛶ Expandir</button>
-              <a href="imagens/infografico-gin-examefisico.png" target="_blank" id="examefisico-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
-                Tela Cheia ↗
-              </a>
-              <a href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" id="examefisico-download-link" class="btn-image-open" style="background: #0284c7; color: #fff; border-color: #0284c7;" title="Download do Infográfico em Alta Resolução">
-                💾 Baixar HD
-              </a>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
+            <div class="flowchart-view-toggle" id="examefisico-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
           </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="examefisico-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="examefisico-fullscreen-link" href="imagens/infografico-gin-examefisico.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="examefisico-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
         </div>
-
-        <div class="flowchart-img-container" id="examefisico-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-examefisico.png" alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada" class="flowchart-img" id="examefisico-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img id="examefisico-visual-display"
+               src="imagens/infografico-gin-examefisico.png"
+               alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-examefisico.png"
+               data-infographic-alt="Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada"
+               data-svg-src="imagens/fluxograma_exame_fisico_passo_a_passo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: 1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
-
-      <script>
-        function switchExameFisicoView(viewType) {
-          const img = document.getElementById('examefisico-active-img');
-          const toggle = document.getElementById('examefisico-view-toggle');
-          const fsLink = document.getElementById('examefisico-fullscreen-link');
-          const dlLink = document.getElementById('examefisico-download-link');
-          if (!img || !toggle) return;
-
-          const buttons = toggle.querySelectorAll('.btn-toggle');
-          buttons.forEach(btn => {
-            if (btn.dataset.view === viewType) {
-              btn.classList.add('active');
-              btn.style.background = '#0284c7';
-              btn.style.color = '#fff';
-            } else {
-              btn.classList.remove('active');
-              btn.style.background = 'transparent';
-              btn.style.color = '#475569';
-            }
-          });
-
-          if (viewType === 'infographic') {
-            img.src = 'imagens/infografico-gin-examefisico.png';
-            img.alt = 'Infográfico NotebookLM: Exame Físico Ginecológico & Propedêutica Armada';
-            if (fsLink) fsLink.href = 'imagens/infografico-gin-examefisico.png';
-            if (dlLink) {
-              dlLink.href = 'imagens/infografico-gin-examefisico.png';
-              dlLink.download = 'infografico-gin-examefisico.png';
-              dlLink.style.display = 'inline-block';
-            }
-          } else {
-            img.src = 'imagens/fluxograma_exame_fisico_passo_a_passo.svg';
-            img.alt = 'Fluxograma SVG: Roteiro Sequencial do Exame Físico Ginecológico Completo';
-            if (fsLink) fsLink.href = 'imagens/fluxograma_exame_fisico_passo_a_passo.svg';
-            if (dlLink) dlLink.style.display = 'none';
-          }
-          img.style.transform = 'scale(1)';
-        }
-
-        function toggleExameFisicoExpand() {
-          const container = document.getElementById('examefisico-visual-display');
-          const btn = document.getElementById('examefisico-expand-btn');
-          if (!container || !btn) return;
-
-          if (container.style.maxHeight === 'none') {
-            container.style.maxHeight = '650px';
-            btn.textContent = '⛶ Expandir';
-          } else {
-            container.style.maxHeight = 'none';
-            btn.textContent = '🗗 Recolher';
-          }
-        }
-      </script>
 
       <!-- Fluxograma 2 -->
       <div class="card" style="margin-top: 24px;">

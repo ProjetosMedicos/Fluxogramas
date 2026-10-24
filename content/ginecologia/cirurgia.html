@@ -28,6 +28,45 @@
           </div>
         </div>
       </div>
+    
+
+      <div class="card" id="card-visual-cirurgia-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Espaços Avasculares Pélvicos, Ureter e Malformações Müllerianas</h2>
+            <div class="flowchart-view-toggle" id="cirurgia-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="cirurgia-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="cirurgia-landing-fullscreen-link" href="imagens/infografico-gin-cirurgia.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="cirurgia-landing-download-link" href="imagens/infografico-gin-cirurgia.png" download="infografico-gin-cirurgia.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="cirurgia-landing-visual-display"
+               src="imagens/infografico-gin-cirurgia.png"
+               alt="Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-cirurgia.png"
+               data-infographic-alt="Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas"
+               data-svg-src="imagens/fluxograma_cirurgia_malformacoes_muller_espacos.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Espaços Avasculares Pélvicos, Ureter e Malformações Müllerianas"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="cirurgia-embriologia" class="content-section">
@@ -203,93 +242,42 @@
         <div style="line-height: 1.7; margin-top: 10px;"><p>Visualize a topografia dos espaços avasculares pélvicos, o trajeto cirúrgico do ureter, o algoritmo diagnóstica de malformações müllerianas e os limites de segurança histeroscópica. Utilize as ferramentas de zoom e arrasto.</p></div>
       </div>
       <div class="card" id="card-visual-cirurgia">
-        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
-          <h2 class="card-title" style="margin: 0;">Espaços Avasculares Pélvicos, Ureter e Malformações Müllerianas</h2>
-          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-            <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="cirurgia-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchCirurgiaView('infographic')" style="border: none; background: #334155; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
-                📊 Infográfico NotebookLM (HD)
-              </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchCirurgiaView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
-                📐 Fluxograma SVG Clássico
-              </button>
-            </div>
-
-            <!-- Ações Rápidas de Zoom / Modal / Download -->
-            <div class="flowchart-actions" style="margin: 0;">
-              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="cirurgia-expand-btn" onclick="toggleCirurgiaExpand()" title="Expandir Visualização">⛶ Expandir</button>
-              <a href="imagens/infografico-gin-cirurgia.png" target="_blank" id="cirurgia-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
-                Tela Cheia ↗
-              </a>
-              <a href="imagens/infografico-gin-cirurgia.png" download="infografico-gin-cirurgia.png" id="cirurgia-download-link" class="btn-image-open" style="background: #334155; color: #fff; border-color: #334155;" title="Download do Infográfico em Alta Resolução">
-                💾 Baixar HD
-              </a>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Espaços Avasculares Pélvicos, Ureter e Malformações Müllerianas</h2>
+            <div class="flowchart-view-toggle" id="cirurgia-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
           </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="cirurgia-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="cirurgia-fullscreen-link" href="imagens/infografico-gin-cirurgia.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="cirurgia-download-link" href="imagens/infografico-gin-cirurgia.png" download="infografico-gin-cirurgia.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
         </div>
-
-        <div class="flowchart-img-container" id="cirurgia-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-cirurgia.png" alt="Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas" class="flowchart-img" id="cirurgia-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img id="cirurgia-visual-display"
+               src="imagens/infografico-gin-cirurgia.png"
+               alt="Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-cirurgia.png"
+               data-infographic-alt="Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas"
+               data-svg-src="imagens/fluxograma_cirurgia_malformacoes_muller_espacos.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Espaços Avasculares Pélvicos, Ureter e Malformações Müllerianas"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
-
-      <script>
-        function switchCirurgiaView(viewType) {
-          const img = document.getElementById('cirurgia-active-img');
-          const toggle = document.getElementById('cirurgia-view-toggle');
-          const fsLink = document.getElementById('cirurgia-fullscreen-link');
-          const dlLink = document.getElementById('cirurgia-download-link');
-          if (!img || !toggle) return;
-
-          const buttons = toggle.querySelectorAll('.btn-toggle');
-          buttons.forEach(btn => {
-            if (btn.dataset.view === viewType) {
-              btn.classList.add('active');
-              btn.style.background = '#334155';
-              btn.style.color = '#fff';
-            } else {
-              btn.classList.remove('active');
-              btn.style.background = 'transparent';
-              btn.style.color = '#475569';
-            }
-          });
-
-          if (viewType === 'infographic') {
-            img.src = 'imagens/infografico-gin-cirurgia.png';
-            img.alt = 'Infográfico NotebookLM: Anatomia Cirúrgica Pélvica & Malformações Müllerianas';
-            if (fsLink) fsLink.href = 'imagens/infografico-gin-cirurgia.png';
-            if (dlLink) {
-              dlLink.href = 'imagens/infografico-gin-cirurgia.png';
-              dlLink.download = 'infografico-gin-cirurgia.png';
-              dlLink.style.display = 'inline-block';
-            }
-          } else {
-            img.src = 'imagens/fluxograma_cirurgia_malformacoes_muller_espacos.svg';
-            img.alt = 'Fluxograma SVG: Anatomia Cirúrgica e Malformações Müllerianas';
-            if (fsLink) fsLink.href = 'imagens/fluxograma_cirurgia_malformacoes_muller_espacos.svg';
-            if (dlLink) dlLink.style.display = 'none';
-          }
-          img.style.transform = 'scale(1)';
-        }
-
-        function toggleCirurgiaExpand() {
-          const container = document.getElementById('cirurgia-visual-display');
-          const btn = document.getElementById('cirurgia-expand-btn');
-          if (!container || !btn) return;
-
-          if (container.style.maxHeight === 'none') {
-            container.style.maxHeight = '650px';
-            btn.textContent = '⛶ Expandir';
-          } else {
-            container.style.maxHeight = 'none';
-            btn.textContent = '🗗 Recolher';
-          }
-        }
-      </script>
     </section>
 
 <section id="cirurgia-tabelas" class="content-section">

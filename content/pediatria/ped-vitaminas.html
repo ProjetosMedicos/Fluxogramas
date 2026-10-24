@@ -13,6 +13,45 @@
         <p>A carência de micronutrientes (conhecida como <strong>fome oculta</strong>) é caracterizada pela deficiência assintomática ou subclínica de vitaminas e minerais essenciais sem que necessariamente ocorra emaciação ou perda ponderal visível. O <strong>Tratado de Pediatria SBP 2024</strong> enfatiza que a deficiência de ferro, vitamina D, vitamina A e zinco compromete a mielinização axonal, a proliferação celular epitelial e a imunidade inata e adaptativa de milhões de crianças brasileiras.</p>
       </div>
 
+      <div class="card" id="card-visual-ped-vitaminas-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma de Suplementação nos Primeiros 1.000 Dias & Hipovitaminoses (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-vitaminas-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-vitaminas-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-vitaminas-landing-fullscreen-link" href="imagens/infografico-ped-vitaminas.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-vitaminas-landing-download-link" href="imagens/infografico-ped-vitaminas.png" download="infografico-ped-vitaminas.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-vitaminas-landing-visual-display"
+               src="imagens/infografico-ped-vitaminas.png"
+               alt="Infográfico Clínico de Suplementação nos Primeiros 1.000 Dias SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-vitaminas.png"
+               data-infographic-alt="Infográfico Clínico de Suplementação nos Primeiros 1.000 Dias SBP 2024"
+               data-svg-src="imagens/fluxo-ped-vitaminas.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma de Suplementação nos Primeiros 1.000 Dias & Hipovitaminoses (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -194,11 +233,11 @@
         <p class="section-subtitle">Algoritmo de decisão rápida para prescrição de Ferro, Vitamina D, Vitamina A e Zinco no lactente e na criança.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-vitaminas">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma de Suplementação nos Primeiros 1.000 Dias & Hipovitaminoses (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="vitaminas-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-vitaminas-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -207,20 +246,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="vitaminas-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="vitaminas-fullscreen-link" href="imagens/infografico-ped-vitaminas.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="vitaminas-download-link" href="imagens/infografico-ped-vitaminas.png" download="infografico-ped-vitaminas-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-vitaminas-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-vitaminas-fullscreen-link" href="imagens/infografico-ped-vitaminas.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-vitaminas-download-link" href="imagens/infografico-ped-vitaminas.png" download="infografico-ped-vitaminas.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="vitaminas-visual-display" 
-               src="imagens/infografico-ped-vitaminas.png" 
-               alt="Infográfico Clínico de Suplementação nos Primeiros 1.000 Dias SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-vitaminas-visual-display"
+               src="imagens/infografico-ped-vitaminas.png"
+               alt="Infográfico Clínico de Suplementação nos Primeiros 1.000 Dias SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-vitaminas.png"
-               data-svg-src="imagens/fluxo-ped-vitaminas.svg">
+               data-infographic-alt="Infográfico Clínico de Suplementação nos Primeiros 1.000 Dias SBP 2024"
+               data-svg-src="imagens/fluxo-ped-vitaminas.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma de Suplementação nos Primeiros 1.000 Dias & Hipovitaminoses (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

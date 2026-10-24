@@ -23,6 +23,45 @@
         </ul>
       </div>
 
+      <div class="card" id="card-visual-ped-fibrose-cistica-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Fibrose Cística</h2>
+            <div class="flowchart-view-toggle" id="ped-fibrose-cistica-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-fibrose-cistica-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-fibrose-cistica-landing-fullscreen-link" href="imagens/infografico-ped-fibrose-cistica.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-fibrose-cistica-landing-download-link" href="imagens/infografico-ped-fibrose-cistica.png" download="infografico-ped-fibrose-cistica.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-fibrose-cistica-landing-visual-display"
+               src="imagens/infografico-ped-fibrose-cistica.png"
+               alt="Infográfico Diretrizes de Fibrose Cística SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-fibrose-cistica.png"
+               data-infographic-alt="Infográfico Diretrizes de Fibrose Cística SBP 2024"
+               data-svg-src="imagens/fluxo-ped-fibrose-cistica.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Fibrose Cística"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</div>
     </section>
 
@@ -63,7 +102,7 @@
       <div class="card">
         <h2 class="card-title">Manifestações por Faixa Etária</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Período</th>
@@ -84,7 +123,7 @@
                 <td style="padding: 10px;">Bronquiectasias progressivas, sinusite crônica e polipose nasal recorrente; baqueteamento digital (dedos em baqueta de tambor e unhas em vidro de relógio); cirrose biliar focal com hipertensão portal; diabetes relacionado à fibrose cística (DRFC).</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -105,7 +144,7 @@
         <h2 class="card-title">Interpretação do Teste do Suor (Método de Gibson e Cooke)</h2>
         <p>A dosagem quantitativa de cloreto no suor obtido por iontoforese com pilocarpina é o <strong>padrão-ouro indiscutível</strong> para o diagnóstico de fibrose cística. O peso mínimo de suor coletado deve ser de 75 mg (ou 15 &micro;L pelo método Macroduct).</p>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Concentração de Cloreto</th>
@@ -130,7 +169,7 @@
                 <td style="padding: 10px;">Requer duas dosagens positivas independentes OU uma dosagem &ge; 60 mEq/L acompanhada da identificação de duas mutações patogênicas no gene CFTR.</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -147,46 +186,41 @@
         <p class="section-subtitle">Algoritmo sequencial de triagem, diagnóstico e manejo clínico (SBP 2024).</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-fibrose-cistica">
         <div class="card-header-flex">
-          <div>
-            <h2 class="card-title">Diretriz Visual Integrada: Fibrose Cística</h2>
-            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 2px;">Alterne entre o Infográfico Clínico HD (Guia Visual Expandido) e o Fluxograma Vetorial SVG original.</p>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Fibrose Cística</h2>
+            <div class="flowchart-view-toggle" id="ped-fibrose-cistica-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
           </div>
-          <div class="view-toggle-group" id="fibrose-cistica-view-toggle">
-            <button class="btn-toggle active" data-mode="infographic" onclick="switchVisualMode('fibrose-cistica', 'infographic')">
-              <span>📊</span> Infográfico NotebookLM (HD)
-            </button>
-            <button class="btn-toggle" data-mode="flowchart" onclick="switchVisualMode('fibrose-cistica', 'flowchart')">
-              <span>📐</span> Fluxograma SVG Clássico
-            </button>
-          </div>
-        </div>
-
-        <div class="visual-toolbar">
-          <div class="zoom-controls">
-            <button class="btn-zoom" onclick="zoomVisual('fibrose-cistica', 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomVisual('fibrose-cistica', -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetVisualZoom('fibrose-cistica')" title="Tamanho Padrão (100%)">100%</button>
-          </div>
-          <div class="action-links">
-            <button class="btn-action-tool" id="fibrose-cistica-expand-btn" onclick="toggleExpandVisual('fibrose-cistica')" title="Alternar visualização expandida">
-              <span>⛶</span> Modo Expandido
-            </button>
-            <button class="btn-action-tool" onclick="openFullscreenVisual('fibrose-cistica')" title="Visualizar em Tela Cheia">
-              <span>📺</span> Tela Cheia
-            </button>
-            <a href="imagens/infografico-ped-fibrose-cistica.png" download="infografico-ped-fibrose-cistica.png" class="btn-action-tool" id="fibrose-cistica-download-btn" title="Baixar Infográfico em Alta Resolução">
-              <span>💾</span> Download HD
-            </a>
-            <a href="imagens/fluxo-ped-fibrose-cistica.svg" target="_blank" class="btn-action-tool" id="fibrose-cistica-svg-btn" style="display: none;" title="Abrir arquivo SVG original">
-              <span>↗</span> Abrir SVG
-            </a>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-fibrose-cistica-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-fibrose-cistica-fullscreen-link" href="imagens/infografico-ped-fibrose-cistica.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-fibrose-cistica-download-link" href="imagens/infografico-ped-fibrose-cistica.png" download="infografico-ped-fibrose-cistica.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
-        <div class="flowchart-img-container" id="fibrose-cistica-visual-display">
-          <img src="imagens/infografico-ped-fibrose-cistica.png" alt="Infográfico Diretrizes de Fibrose Cística SBP 2024" class="flowchart-img infographic-mode" id="fibrose-cistica-primary-img" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img id="ped-fibrose-cistica-visual-display"
+               src="imagens/infografico-ped-fibrose-cistica.png"
+               alt="Infográfico Diretrizes de Fibrose Cística SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-fibrose-cistica.png"
+               data-infographic-alt="Infográfico Diretrizes de Fibrose Cística SBP 2024"
+               data-svg-src="imagens/fluxo-ped-fibrose-cistica.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Fibrose Cística"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

@@ -10,7 +10,7 @@
 
       <div class="card">
         <h2 class="card-title">Diferença Fisiopatológica Fundamental: Criança vs Adulto (SBP 2024 / PALS)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Aspecto Clínico</th>
@@ -40,7 +40,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Desfibrilação elétrica rápida com DEA e compressões de alta qualidade.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="card">
@@ -52,6 +52,45 @@
           <br>Na infância, uma FC &lt; 60 bpm com hipoperfusão é hemodinamicamente equivalente a uma parada cardiorrespiratória!
         </div>
       </div>
+
+      <div class="card" id="card-visual-ped-emerg-pcr-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">PCR Pediátrica & Algoritmos PALS (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-emerg-pcr-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-emerg-pcr-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-emerg-pcr-landing-fullscreen-link" href="imagens/infografico-ped-emerg-pcr.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-emerg-pcr-landing-download-link" href="imagens/infografico-ped-emerg-pcr.png" download="infografico-ped-emerg-pcr.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-emerg-pcr-landing-visual-display"
+               src="imagens/infografico-ped-emerg-pcr.png"
+               alt="Infográfico Clínico da PCR Pediátrica & PALS SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-emerg-pcr.png"
+               data-infographic-alt="Infográfico Clínico da PCR Pediátrica & PALS SBP 2024"
+               data-svg-src="imagens/fluxo-ped-emerg-pcr.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: PCR Pediátrica & Algoritmos PALS (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
 
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
@@ -85,7 +124,7 @@
 
       <div class="card">
         <h2 class="card-title">Relação Compressão-Ventilação e Técnicas Anatômicas</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Parâmetro de BLS</th>
@@ -120,7 +159,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Técnica com 2 mãos sobrepostas e braços estendidos a 90°</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -229,11 +268,11 @@
         <p class="section-subtitle">Algoritmo mestre integrado de reanimação avançada: diferenciação de ritmos, dosagens e protocolo dos 6 H's e 5 T's.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-emerg-pcr">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">PCR Pediátrica & Algoritmos PALS (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="pcr-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-emerg-pcr-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -242,25 +281,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="pcr-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="pcr-fullscreen-link" href="imagens/infografico-ped-emerg-pcr.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="pcr-download-link" href="imagens/infografico-ped-emerg-pcr.png" download="infografico-ped-emerg-pcr-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-emerg-pcr-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-emerg-pcr-fullscreen-link" href="imagens/infografico-ped-emerg-pcr.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-emerg-pcr-download-link" href="imagens/infografico-ped-emerg-pcr.png" download="infografico-ped-emerg-pcr.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="pcr-visual-display" 
-               src="imagens/infografico-ped-emerg-pcr.png" 
-               alt="Infográfico Clínico da PCR Pediátrica & PALS SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-emerg-pcr-visual-display"
+               src="imagens/infografico-ped-emerg-pcr.png"
+               alt="Infográfico Clínico da PCR Pediátrica & PALS SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-emerg-pcr.png"
                data-infographic-alt="Infográfico Clínico da PCR Pediátrica & PALS SBP 2024"
                data-svg-src="imagens/fluxo-ped-emerg-pcr.svg"
-               data-svg-alt="Fluxograma Oficial de PCR Pediátrica e Ritmos de Parada SBP 2024">
+               data-svg-alt="Fluxograma Vetorial Clássico: PCR Pediátrica & Algoritmos PALS (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza fisiopatologia asfíxica, regra da bradicardia sintomática (FC &lt; 60 bpm), métricas de BLS de alta qualidade (15:2), algoritmos PALS bifurcados (chocáveis vs. não-chocáveis), mnemônico completo dos 6 Hs e 6 Ts, capnografia quantitativa (ETCO2) e bundle pós-ROSC. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 
@@ -281,7 +323,7 @@
 
       <div class="card">
         <h2 class="card-title">Os 6 H's da Pediatria (Etiologias Metabólicas e Respiratórias)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Causa ("H")</th>
@@ -321,7 +363,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Glicose 10% na dose de 2 mL/kg em bolus IV/IO</strong></td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="card">

@@ -21,6 +21,45 @@
         </div>
       </div>
 
+      <div class="card" id="card-visual-ped-hipotireoidismo-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico Oficial do Hipotireoidismo Congênito (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-hipotireoidismo-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-hipotireoidismo-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-hipotireoidismo-landing-fullscreen-link" href="imagens/infografico-ped-hipotireoidismo.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-hipotireoidismo-landing-download-link" href="imagens/infografico-ped-hipotireoidismo.png" download="infografico-ped-hipotireoidismo.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-hipotireoidismo-landing-visual-display"
+               src="imagens/infografico-ped-hipotireoidismo.png"
+               alt="Infográfico Clínico de Hipotireoidismo Congênito, Triagem e Manejo SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-hipotireoidismo.png"
+               data-infographic-alt="Infográfico Clínico de Hipotireoidismo Congênito, Triagem e Manejo SBP 2024"
+               data-svg-src="imagens/fluxo-ped-hipotireoidismo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico Oficial do Hipotireoidismo Congênito (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</div>
     </section>
 
@@ -37,7 +76,7 @@
       <div class="card">
         <h2 class="card-title">Classificação Etiológica Primária</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Grupo Etiológico</th>
@@ -62,7 +101,7 @@
                 <td style="padding: 10px;">Causado por deficiência de iodo, sobrecarga de iodo tópica (antissépticos com PVPI no RN), passagem transplacentária de anticorpos maternos bloqueadores de receptor de TSH (TRAB) ou uso de antitireoidianos maternos (propiltiouracil/metimazol).</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -83,7 +122,7 @@
         <h2 class="card-title">Interpretação Oficial do TSH Neonatal (SBP 2024)</h2>
         <p>A coleta universal de sangue capilar em papel-filtro deve ser feita <strong>idealmente entre o 3º e o 5º dia de vida</strong> (coletas nas primeiras 24 a 48 horas capturam o pico fisiológico transitório de TSH desencadeado pelo resfriamento pós-parto, gerando falso-positivos):</p>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Valor de TSH em Papel-Filtro</th>
@@ -108,7 +147,7 @@
                 <td style="padding: 10px;">Colher soro para dosagem confirmatória e <strong>INICIAR LEVOTIROXINA IMEDIATAMENTE</strong> sem aguardar o resultado sérico!</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -154,11 +193,11 @@
         <p class="section-subtitle">Algoritmo clínico oficial baseado no Tratado de Pediatria SBP 2024.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-hipotireoidismo">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico Oficial do Hipotireoidismo Congênito (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="hipotireoidismo-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-hipotireoidismo-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -167,20 +206,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="hipotireoidismo-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="hipotireoidismo-fullscreen-link" href="imagens/infografico-ped-hipotireoidismo.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="hipotireoidismo-download-link" href="imagens/infografico-ped-hipotireoidismo.png" download="infografico-ped-hipotireoidismo-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-hipotireoidismo-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-hipotireoidismo-fullscreen-link" href="imagens/infografico-ped-hipotireoidismo.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-hipotireoidismo-download-link" href="imagens/infografico-ped-hipotireoidismo.png" download="infografico-ped-hipotireoidismo.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="hipotireoidismo-visual-display" 
-               src="imagens/infografico-ped-hipotireoidismo.png" 
-               alt="Infográfico Clínico de Hipotireoidismo Congênito, Triagem e Manejo SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-hipotireoidismo-visual-display"
+               src="imagens/infografico-ped-hipotireoidismo.png"
+               alt="Infográfico Clínico de Hipotireoidismo Congênito, Triagem e Manejo SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-hipotireoidismo.png"
-               data-svg-src="imagens/fluxo-ped-hipotireoidismo.svg">
+               data-infographic-alt="Infográfico Clínico de Hipotireoidismo Congênito, Triagem e Manejo SBP 2024"
+               data-svg-src="imagens/fluxo-ped-hipotireoidismo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico Oficial do Hipotireoidismo Congênito (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

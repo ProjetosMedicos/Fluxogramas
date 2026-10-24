@@ -40,6 +40,45 @@
         </ul>
       </div>
 
+      <div class="card" id="card-visual-ped-choque-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Reconhecimento & Manejo do Choque Pediátrico (SBP 2024 / PALS)</h2>
+            <div class="flowchart-view-toggle" id="ped-choque-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-choque-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-choque-landing-fullscreen-link" href="imagens/infografico-ped-choque.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-choque-landing-download-link" href="imagens/infografico-ped-choque.png" download="infografico-ped-choque.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-choque-landing-visual-display"
+               src="imagens/infografico-ped-choque.png"
+               alt="Infográfico Clínico do Choque Pediátrico e Sepse SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-choque.png"
+               data-infographic-alt="Infográfico Clínico do Choque Pediátrico e Sepse SBP 2024"
+               data-svg-src="imagens/fluxo-ped-choque.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Reconhecimento & Manejo do Choque Pediátrico (SBP 2024 / PALS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -92,7 +131,7 @@
 
       <div class="card">
         <h2 class="card-title">Definição Rigorosa de Hipotensão Pediátrica (Percentil 5 de PAS - SBP 2024 / PALS)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Faixa Etária</th>
@@ -122,7 +161,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Padrão semelhante ao do adulto</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="alert-box alert-danger" style="margin-top: 15px;">
           <strong>Regra de Ouro da Emergência Pediátrica:</strong>
           <br><strong>"NUNCA ESPERE A PRESSÃO ARTERIAL CAIR PARA DIAGNOSTICAR CHOQUE EM UMA CRIANÇA!"</strong>
@@ -187,11 +226,11 @@
         <p class="section-subtitle">Algoritmo decisório PALS/SBP: estratificação compensado vs hipotensivo, expansão volêmica e drogas vasoativas.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-choque">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Reconhecimento & Manejo do Choque Pediátrico (SBP 2024 / PALS)</h2>
-            <div class="flowchart-view-toggle" id="choque-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-choque-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -200,25 +239,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="choque-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="choque-fullscreen-link" href="imagens/infografico-ped-choque.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="choque-download-link" href="imagens/infografico-ped-choque.png" download="infografico-ped-choque-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-choque-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-choque-fullscreen-link" href="imagens/infografico-ped-choque.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-choque-download-link" href="imagens/infografico-ped-choque.png" download="infografico-ped-choque.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="choque-visual-display" 
-               src="imagens/infografico-ped-choque.png" 
-               alt="Infográfico Clínico do Choque Pediátrico e Sepse SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-choque-visual-display"
+               src="imagens/infografico-ped-choque.png"
+               alt="Infográfico Clínico do Choque Pediátrico e Sepse SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-choque.png"
                data-infographic-alt="Infográfico Clínico do Choque Pediátrico e Sepse SBP 2024"
                data-svg-src="imagens/fluxo-ped-choque.svg"
-               data-svg-alt="Fluxograma Oficial de Reconhecimento e Manejo do Choque Pediátrico SBP 2024">
+               data-svg-alt="Fluxograma Vetorial Clássico: Reconhecimento & Manejo do Choque Pediátrico (SBP 2024 / PALS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza fisiopatologia DO2/VO2, 4 tipos etiológicos, fenótipos Frio vs. Quente (Adrenalina vs. Noradrenalina), fórmula do percentil 5 de PAS, algoritmo da Golden Hour com acesso IO em 90s, recomendações Choosing Wisely e metas clínicas de ressuscitação. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 
@@ -239,7 +281,7 @@
 
       <div class="card">
         <h2 class="card-title">Escolha da Droga Vasoativa pelo Fenótipo Clínico (SBP 2024 / PALS)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Fenótipo Hemodinâmico</th>
@@ -274,7 +316,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Persistência de choque após altas doses de adrenalina e noradrenalina.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="alert-box alert-info" style="margin-top: 15px;">
           <strong>Via de Infusão Periférica/Intraóssea Segura:</strong>
           <br>Segundo a diretriz da SBP e Surviving Sepsis Campaign, as drogas vasoativas (adrenalina ou noradrenalina) <strong>PODEM E DEVEM ser iniciadas imediatamente por via venosa periférica ou via intraóssea</strong> caso o paciente não possua acesso central, evitando atrasos que aumentam dramaticamente a mortalidade infantil!

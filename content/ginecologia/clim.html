@@ -58,7 +58,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-clim">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Climatério & Terapia Hormonal da Menopausa (FEBRASGO / NAMS)</h2>
@@ -72,23 +72,27 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
             <button type="button" class="btn-zoom" id="clim-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="clim-fullscreen-link" href="imagens/infografico-gin-clim.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="clim-fullscreen-link" href="imagens/infografico-gin-clim.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
             <a id="clim-download-link" href="imagens/infografico-gin-clim.png" download="infografico-gin-clim.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img id="clim-visual-display" 
-               src="imagens/infografico-gin-clim.png" 
-               alt="Infográfico Diretrizes FEBRASGO de Climatério e Terapia Hormonal da Menopausa" 
-               class="flowchart-img infographic-mode" 
+          <img id="clim-visual-display"
+               src="imagens/infografico-gin-clim.png"
+               alt="Infográfico Diretrizes FEBRASGO de Climatério e Terapia Hormonal da Menopausa"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-clim.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de Climatério e Terapia Hormonal da Menopausa"
                data-svg-src="imagens/fluxograma_climaterio_straw_diagnostico.svg"
-               data-svg-alt="Fluxograma STRAW+10 Climatério">
+               data-svg-alt="Fluxograma Vetorial Clássico: Climatério & Terapia Hormonal da Menopausa (FEBRASGO / NAMS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza o estadiamento reprodutivo (STRAW+10), fisiopatologia dos sintomas vasomotores (neurônios KNDy) e síndrome geniturinária (SGM), janela de oportunidade (< 60 anos ou < 10 anos pós-menopausa), proteção endometrial obrigatória e opções não-hormonais. Use os botões de Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

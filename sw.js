@@ -2,12 +2,16 @@
 // Service Worker - Fluxogramas Médicos (PWA com Suporte Offline Completo)
 // ============================================================================
 
-const CACHE_NAME = 'fluxomed-cache-v20';
+const CACHE_NAME = 'fluxomed-cache-v21';
 
-// Recursos essenciais pré-armazenados no momento da instalação
+// Recursos essenciais do App Shell pré-armazenados no momento da instalação
 const PRECACHE_ASSETS = [
   './',
   './index.html',
+  './css/main.css',
+  './js/modules-data.js',
+  './js/search.js',
+  './js/app.js',
   './manifest.webmanifest',
   './imagens/icon-192.png',
   './imagens/icon-512.png',
@@ -15,17 +19,17 @@ const PRECACHE_ASSETS = [
   './imagens/icon-512.svg'
 ];
 
-// Instalação do Service Worker & Pré-cache
+// Instalação do Service Worker & Pré-cache atômico do App Shell
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
-      console.log('[Service Worker] Pré-carregando recursos fundamentais do app shell');
+      console.log('[Service Worker] Pré-carregando App Shell completo (v21)');
       return cache.addAll(PRECACHE_ASSETS);
     }).then(() => self.skipWaiting())
   );
 });
 
-// Ativação e limpeza de caches legados
+// Ativação e limpeza imediata de caches legados (v1..v20)
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -41,22 +45,19 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Interceptação de requisições: Estratégia Stale-While-Revalidate
-// 1. Entrega imediatamente do cache (velocidade máxima e suporte offline).
-// 2. Busca na rede em segundo plano para atualizar o cache automaticamente.
+// Interceptação de requisições: Estratégia Stale-While-Revalidate segura
+// 1. Entrega imediatamente do cache para velocidade instantânea e uso offline em plantões.
+// 2. Atualiza em segundo plano quando há conectividade, gravando módulos HTML e infográficos PNG/SVG visitados.
 self.addEventListener('fetch', (event) => {
-  // Apenas intercepta requisições GET
   if (event.request.method !== 'GET') return;
 
   const url = new URL(event.request.url);
+  if (url.protocol !== 'http:' && url.protocol !== 'https:') return;
 
-  // Não interceptar requisições externas para outros domínios como Google Fonts
-  // a menos que seja para servir offline se já estiver em cache
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       const fetchPromise = fetch(event.request).then((networkResponse) => {
-        // Se a resposta da rede for válida, grava no cache
-        if (networkResponse && networkResponse.status === 200) {
+        if (networkResponse && networkResponse.status === 200 && (url.origin === self.location.origin || networkResponse.type === 'cors')) {
           const responseToCache = networkResponse.clone();
           caches.open(CACHE_NAME).then((cache) => {
             cache.put(event.request, responseToCache);
@@ -64,13 +65,12 @@ self.addEventListener('fetch', (event) => {
         }
         return networkResponse;
       }).catch(() => {
-        // Em caso de falha de rede (ex.: offline), se não houver resposta em cache e for navegação HTML:
         if (event.request.mode === 'navigate') {
           return caches.match('./index.html');
         }
+        return cachedResponse || Response.error();
       });
 
-      // Retorna a resposta em cache se existir; senão aguarda a rede
       return cachedResponse || fetchPromise;
     })
   );

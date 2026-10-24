@@ -97,6 +97,45 @@
           </div>
         </div>
       </div>
+    
+
+      <div class="card" id="card-visual-larcs-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">LARCs: Escolha, Manejo & Diretrizes FEBRASGO / OMS</h2>
+            <div class="flowchart-view-toggle" id="larcs-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="larcs-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="larcs-landing-fullscreen-link" href="imagens/infografico-gin-larcs.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="larcs-landing-download-link" href="imagens/infografico-gin-larcs.png" download="infografico-gin-larcs.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="larcs-landing-visual-display"
+               src="imagens/infografico-gin-larcs.png"
+               alt="Infográfico Diretrizes FEBRASGO de LARCs"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-larcs.png"
+               data-infographic-alt="Infográfico Diretrizes FEBRASGO de LARCs"
+               data-svg-src="imagens/fluxograma_larcs_algoritmo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: LARCs: Escolha, Manejo & Diretrizes FEBRASGO / OMS"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="larcs-algoritmo" class="content-section">
@@ -127,7 +166,7 @@
         </div>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-larcs">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">LARCs: Escolha, Manejo & Diretrizes FEBRASGO / OMS</h2>
@@ -141,23 +180,27 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
             <button type="button" class="btn-zoom" id="larcs-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="larcs-fullscreen-link" href="imagens/infografico-gin-larcs.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
+            <a id="larcs-fullscreen-link" href="imagens/infografico-gin-larcs.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
             <a id="larcs-download-link" href="imagens/infografico-gin-larcs.png" download="infografico-gin-larcs.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img id="larcs-visual-display" 
-               src="imagens/infografico-gin-larcs.png" 
-               alt="Infográfico Diretrizes FEBRASGO de LARCs" 
-               class="flowchart-img infographic-mode" 
+          <img id="larcs-visual-display"
+               src="imagens/infografico-gin-larcs.png"
+               alt="Infográfico Diretrizes FEBRASGO de LARCs"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-larcs.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de LARCs"
                data-svg-src="imagens/fluxograma_larcs_algoritmo.svg"
-               data-svg-alt="Fluxograma de Escolha dos LARCs">
+               data-svg-alt="Fluxograma Vetorial Clássico: LARCs: Escolha, Manejo & Diretrizes FEBRASGO / OMS"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza o espectro dos 5 LARCs modernos (TCu380A, Cobre+Prata, Mirena®, Kyleena® e Implante de Etonogestrel), matriz fenotípica de indicação, desmistificação de nulíparas e adolescentes, técnicas passo a passo de inserção e conduta em fios não visíveis e perfurações. Use os botões de Zoom ou abra em tela cheia para visualização em altíssima resolução.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
     </section>

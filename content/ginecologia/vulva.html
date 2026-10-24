@@ -26,6 +26,45 @@
           <li><strong>Patologias das Glândulas Vestibulares Maiores (Bartholin):</strong> Cistos de retenção assintomáticos e abscessos infecciosos agudos.</li>
         </ul>
       </div>
+    
+
+      <div class="card" id="card-visual-vulva-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Mapa Visual & Infográfico Clínico: Doenças da Vulva & Glândula de Bartholin</h2>
+            <div class="flowchart-view-toggle" id="vulva-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="vulva-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="vulva-landing-fullscreen-link" href="imagens/infografico-gin-vulva.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="vulva-landing-download-link" href="imagens/infografico-gin-vulva.png" download="infografico-gin-vulva.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="vulva-landing-visual-display"
+               src="imagens/infografico-gin-vulva.png"
+               alt="Infográfico Clínico Completo: Doenças da Vulva, Tríade dos Líquens e Glândula de Bartholin - FEBRASGO / ISSVD"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-vulva.png"
+               data-infographic-alt="Infográfico Clínico Completo: Doenças da Vulva, Tríade dos Líquens e Glândula de Bartholin - FEBRASGO / ISSVD"
+               data-svg-src="imagens/fluxograma_vulva_liquen_escleroso_manejo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Mapa Visual & Infográfico Clínico: Doenças da Vulva & Glândula de Bartholin"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
     </section>
 
 <section id="vulva-semiologia" class="content-section">
@@ -78,56 +117,41 @@
       </div>
 
       <!-- Card com Alternância Dupla: Infográfico NotebookLM HD vs Fluxograma SVG -->
-      <div class="card visual-guide-card">
+      <div class="card" id="card-visual-vulva">
         <div class="card-header-flex">
-          <div class="header-title-group">
-            <h2 class="card-title">Mapa Visual & Infográfico Clínico: Doenças da Vulva & Glândula de Bartholin</h2>
-            <p class="card-subtitle">Alterne entre o infográfico vertical editorial (padrão-ouro HD) e o fluxograma esquemático clássico em SVG.</p>
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Mapa Visual & Infográfico Clínico: Doenças da Vulva & Glândula de Bartholin</h2>
+            <div class="flowchart-view-toggle" id="vulva-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
           </div>
           <div class="flowchart-actions">
-            <!-- Alternador de Visualização -->
-            <div class="view-toggle-pills" id="vulva-view-toggle">
-              <button class="toggle-pill active" data-view="infographic" onclick="switchVisualView('vulva', 'infographic')">
-                <span class="pill-icon">📊</span> Infográfico NotebookLM (HD)
-              </button>
-              <button class="toggle-pill" data-view="flowchart" onclick="switchVisualView('vulva', 'flowchart')">
-                <span class="pill-icon">📐</span> Fluxograma SVG Clássico
-              </button>
-            </div>
-            <!-- Controles de Ação e Zoom -->
-            <div class="action-buttons-group">
-              <button class="btn-zoom" onclick="zoomVisual('vulva', 0.15)" title="Aumentar Zoom">Zoom +</button>
-              <button class="btn-zoom" onclick="zoomVisual('vulva', -0.15)" title="Diminuir Zoom">Zoom −</button>
-              <button class="btn-zoom" onclick="resetVisualZoom('vulva')" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-action-tool" id="vulva-expand-btn" onclick="toggleExpandVisual('vulva')" title="Expandir visualização">⤢ Expandir</button>
-              <a href="imagens/infografico-gin-vulva.png" id="vulva-fullscreen-link" target="_blank" class="btn-action-tool" title="Abrir em Tela Cheia">↗ Tela Cheia</a>
-              <a href="imagens/infografico-gin-vulva.png" id="vulva-download-link" download="infografico-gin-vulva.png" class="btn-action-tool download-btn" title="Baixar Imagem HD">⬇ Baixar HD</a>
-            </div>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="vulva-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="vulva-fullscreen-link" href="imagens/infografico-gin-vulva.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="vulva-download-link" href="imagens/infografico-gin-vulva.png" download="infografico-gin-vulva.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
-        <!-- Container do Display Visual -->
-        <div class="visual-display-wrapper" id="vulva-visual-display" data-current-view="infographic" data-scale="1.0">
-          <!-- View 1: Infográfico HD Vertical -->
-          <div class="visual-view infographic-view active">
-            <img src="imagens/infografico-gin-vulva.png" 
-                 alt="Infográfico Clínico Completo: Doenças da Vulva, Tríade dos Líquens e Glândula de Bartholin - FEBRASGO / ISSVD" 
-                 class="infographic-hd-img" 
-                 loading="lazy" 
-                 decoding="async">
-          </div>
-          <!-- View 2: Fluxograma SVG Clássico -->
-          <div class="visual-view flowchart-view">
-            <img src="imagens/fluxograma_vulva_liquen_escleroso_manejo.svg" 
-                 alt="Fluxograma Vetorial Clássico: Manejo do Líquen Escleroso Vulvar" 
-                 class="flowchart-svg-img" 
-                 loading="lazy" 
-                 decoding="async">
-          </div>
+        <div class="flowchart-img-container">
+          <img id="vulva-visual-display"
+               src="imagens/infografico-gin-vulva.png"
+               alt="Infográfico Clínico Completo: Doenças da Vulva, Tríade dos Líquens e Glândula de Bartholin - FEBRASGO / ISSVD"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-vulva.png"
+               data-infographic-alt="Infográfico Clínico Completo: Doenças da Vulva, Tríade dos Líquens e Glândula de Bartholin - FEBRASGO / ISSVD"
+               data-svg-src="imagens/fluxograma_vulva_liquen_escleroso_manejo.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Mapa Visual & Infográfico Clínico: Doenças da Vulva & Glândula de Bartholin"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
-        <div class="visual-footer-info">
-          <span class="info-badge">💡 Dica Clínica</span>
-          <span class="info-text">No Líquen Escleroso, a manutenção pós-indução de 12 semanas (Clobetasol 0,05%) deve ser contínua com 1 a 2 aplicações semanais para prevenção de apagamento anatômico e estenose introital. Na glândula de Bartholin, a incisão simples isolada tem recidiva > 50%; priorize Cateter de Word por 4-6 semanas ou Marsupialização.</span>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

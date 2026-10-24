@@ -101,91 +101,40 @@
       </div>
 
       <div class="card" id="card-visual-metodologia">
-        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
-          <h2 class="card-title" style="margin: 0;">Fluxograma Visual & Framework Clínico-Visual (5 Etapas)</h2>
-          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
-            <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="metodologia-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchMetodologiaView('infographic')" style="border: none; background: #4338ca; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
-                📊 Infográfico NotebookLM (HD)
-              </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchMetodologiaView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
-                📐 Fluxograma SVG Clássico
-              </button>
-            </div>
-
-            <!-- Ações Rápidas de Zoom / Modal / Download -->
-            <div class="flowchart-actions" style="margin: 0;">
-              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="metodologia-expand-btn" onclick="toggleMetodologiaExpand()" title="Expandir Visualização">⛶ Expandir</button>
-              <a href="imagens/infografico-gin-metodologia.png" target="_blank" id="metodologia-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
-                Tela Cheia ↗
-              </a>
-              <a href="imagens/infografico-gin-metodologia.png" download="infografico-gin-metodologia.png" id="metodologia-download-link" class="btn-image-open" style="background: #4338ca; color: #fff; border-color: #4338ca;" title="Download do Infográfico em Alta Resolução">
-                💾 Baixar HD
-              </a>
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma Visual & Framework Clínico-Visual (5 Etapas)</h2>
+            <div class="flowchart-view-toggle" id="metodologia-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
           </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="metodologia-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="metodologia-fullscreen-link" href="imagens/infografico-gin-metodologia.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="metodologia-download-link" href="imagens/infografico-gin-metodologia.png" download="infografico-gin-metodologia.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
         </div>
-
-        <div class="flowchart-img-container" id="metodologia-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-metodologia.png" alt="Infográfico NotebookLM: Metodologia do Framework Clínico-Visual" class="flowchart-img" id="metodologia-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+        <div class="flowchart-img-container">
+          <img id="metodologia-visual-display"
+               src="imagens/infografico-gin-metodologia.png"
+               alt="Infográfico NotebookLM: Metodologia do Framework Clínico-Visual"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-gin-metodologia.png"
+               data-infographic-alt="Infográfico NotebookLM: Metodologia do Framework Clínico-Visual"
+               data-svg-src="imagens/fluxograma_metodologia.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Visual & Framework Clínico-Visual (5 Etapas)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
-
-      <script>
-        function switchMetodologiaView(viewType) {
-          const img = document.getElementById('metodologia-active-img');
-          const toggle = document.getElementById('metodologia-view-toggle');
-          const fsLink = document.getElementById('metodologia-fullscreen-link');
-          const dlLink = document.getElementById('metodologia-download-link');
-          if (!img || !toggle) return;
-
-          const buttons = toggle.querySelectorAll('.btn-toggle');
-          buttons.forEach(btn => {
-            if (btn.dataset.view === viewType) {
-              btn.classList.add('active');
-              btn.style.background = '#4338ca';
-              btn.style.color = '#fff';
-            } else {
-              btn.classList.remove('active');
-              btn.style.background = 'transparent';
-              btn.style.color = '#475569';
-            }
-          });
-
-          if (viewType === 'infographic') {
-            img.src = 'imagens/infografico-gin-metodologia.png';
-            img.alt = 'Infográfico NotebookLM: Metodologia do Framework Clínico-Visual';
-            if (fsLink) fsLink.href = 'imagens/infografico-gin-metodologia.png';
-            if (dlLink) {
-              dlLink.href = 'imagens/infografico-gin-metodologia.png';
-              dlLink.download = 'infografico-gin-metodologia.png';
-              dlLink.style.display = 'inline-block';
-            }
-          } else {
-            img.src = 'imagens/fluxograma_metodologia.svg';
-            img.alt = 'Fluxograma SVG: Framework Clínico-Visual';
-            if (fsLink) fsLink.href = 'imagens/fluxograma_metodologia.svg';
-            if (dlLink) dlLink.style.display = 'none';
-          }
-          img.style.transform = 'scale(1)';
-        }
-
-        function toggleMetodologiaExpand() {
-          const container = document.getElementById('metodologia-visual-display');
-          const btn = document.getElementById('metodologia-expand-btn');
-          if (!container || !btn) return;
-
-          if (container.style.maxHeight === 'none') {
-            container.style.maxHeight = '650px';
-            btn.textContent = '⛶ Expandir';
-          } else {
-            container.style.maxHeight = 'none';
-            btn.textContent = '🗗 Recolher';
-          }
-        }
-      </script>
     </section>

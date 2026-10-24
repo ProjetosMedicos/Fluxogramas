@@ -18,6 +18,45 @@
         <p>A artrite na infância é clinicamente diagnosticada pelo edema articular perceptível ou pela presença de dor/limitação de movimento articular acompanhada de calor local ou sensibilidade à palpação. É comum rigidez matinal ou após períodos prolongados de repouso (fenômeno do gel articular).</p>
       </div>
 
+      <div class="card" id="card-visual-ped-aij-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico de Artrite Idiopática Juvenil (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-aij-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-aij-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-aij-landing-fullscreen-link" href="imagens/infografico-ped-aij.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-aij-landing-download-link" href="imagens/infografico-ped-aij.png" download="infografico-ped-aij.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-aij-landing-visual-display"
+               src="imagens/infografico-ped-aij.png"
+               alt="Infográfico Clínico de Artrite Idiopática Juvenil SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-aij.png"
+               data-infographic-alt="Infográfico Clínico de Artrite Idiopática Juvenil SBP 2024"
+               data-svg-src="imagens/fluxo-ped-aij.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma e Infográfico de Artrite Idiopática Juvenil (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</div>
     </section>
 
@@ -34,7 +73,7 @@
       <div class="card">
         <h2 class="card-title">Classificação em 7 Categorias Clínicas</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Subtipo ILAR</th>
@@ -64,7 +103,7 @@
                 <td style="padding: 10px;">Hepatoesplenomegalia, linfonodomegalia e serosite (derrame pericárdico/pleural). Risco iminente de <strong>Síndrome de Ativação Macrofágica (SAM)</strong>.</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -123,7 +162,7 @@
       <div class="card">
         <h2 class="card-title">Protocolo de Vigilância com Lâmpada de Fenda (SBP 2024)</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Subtipo de AIJ</th>
@@ -148,7 +187,7 @@
                 <td style="padding: 10px;">Anualmente</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -165,11 +204,11 @@
         <p class="section-subtitle">Algoritmo clínico estruturado segundo o Tratado de Pediatria SBP 2024.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-aij">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico de Artrite Idiopática Juvenil (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="aij-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-aij-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -178,20 +217,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="aij-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="aij-fullscreen-link" href="imagens/infografico-ped-aij.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="aij-download-link" href="imagens/infografico-ped-aij.png" download="infografico-ped-aij-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-aij-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-aij-fullscreen-link" href="imagens/infografico-ped-aij.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-aij-download-link" href="imagens/infografico-ped-aij.png" download="infografico-ped-aij.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="aij-visual-display" 
-               src="imagens/infografico-ped-aij.png" 
-               alt="Infográfico Clínico de Artrite Idiopática Juvenil SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-aij-visual-display"
+               src="imagens/infografico-ped-aij.png"
+               alt="Infográfico Clínico de Artrite Idiopática Juvenil SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-aij.png"
-               data-svg-src="imagens/fluxo-ped-aij.svg">
+               data-infographic-alt="Infográfico Clínico de Artrite Idiopática Juvenil SBP 2024"
+               data-svg-src="imagens/fluxo-ped-aij.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma e Infográfico de Artrite Idiopática Juvenil (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

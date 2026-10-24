@@ -23,6 +23,45 @@
         </ul>
       </div>
 
+      <div class="card" id="card-visual-ped-convulsao-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma de Crise Febril e Estado de Mal Epiléptico na Infância (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-convulsao-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-convulsao-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-convulsao-landing-fullscreen-link" href="imagens/infografico-ped-convulsao.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-convulsao-landing-download-link" href="imagens/infografico-ped-convulsao.png" download="infografico-ped-convulsao.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-convulsao-landing-visual-display"
+               src="imagens/infografico-ped-convulsao.png"
+               alt="Infográfico Clínico de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-convulsao.png"
+               data-infographic-alt="Infográfico Clínico de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024"
+               data-svg-src="imagens/fluxo-ped-convulsao.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma de Crise Febril e Estado de Mal Epiléptico na Infância (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -40,7 +79,7 @@
 
       <div class="card">
         <h2 class="card-title">Matriz Comparativa Oficial (SBP 2024)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Parâmetro Clínico</th>
@@ -75,7 +114,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0; color: #b91c1c; font-weight: bold;">Moderado: Risco de epilepsia futura de 5% a 10% (maior se múltiplos fatores de risco)</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="alert-box alert-info" style="margin-top: 15px;">
           <strong>Regra Mnemônica:</strong> Basta a presença de <strong>APENAS UM</strong> dos 3 critérios atípicos (focalidade, duração &ge; 15 min ou repetição em 24h) para que a crise seja formalmente reclassificada como <strong>Convulsão Febril Complexa</strong>.
         </div>
@@ -147,7 +186,7 @@
 
       <div class="card">
         <h2 class="card-title">Benzodiazepínicos de 1ª Linha (Se Crise &gt; 5 Minutos - SBP 2024 / PALS)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Fármaco &amp; Via</th>
@@ -172,7 +211,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Administrado com seringa sem agulha ou sonda retal. Boa opção pré-hospitalar e domiciliar.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
         <p style="margin-top: 10px;">Se a crise não cessar em 5 a 10 minutos após a primeira dose, pode-se <strong>repetir uma única segunda dose de benzodiazepínico</strong> enquanto se prepara a droga de 2ª linha para o Estado de Mal Epiléptico.</p>
       </div>
 
@@ -191,11 +230,11 @@
         <p class="section-subtitle">Algoritmo decisório integrado: manejo agudo cronometrado, triagem simples vs complexa e indicação de punção lombar.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-convulsao">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma de Crise Febril e Estado de Mal Epiléptico na Infância (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="convulsao-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-convulsao-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -204,25 +243,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="convulsao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="convulsao-fullscreen-link" href="imagens/infografico-ped-convulsao.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="convulsao-download-link" href="imagens/infografico-ped-convulsao.png" download="infografico-ped-convulsao-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-convulsao-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-convulsao-fullscreen-link" href="imagens/infografico-ped-convulsao.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-convulsao-download-link" href="imagens/infografico-ped-convulsao.png" download="infografico-ped-convulsao.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="convulsao-visual-display" 
-               src="imagens/infografico-ped-convulsao.png" 
-               alt="Infográfico Clínico de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-convulsao-visual-display"
+               src="imagens/infografico-ped-convulsao.png"
+               alt="Infográfico Clínico de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-convulsao.png"
                data-infographic-alt="Infográfico Clínico de Crise Convulsiva e Estado de Mal Epiléptico SBP 2024"
                data-svg-src="imagens/fluxo-ped-convulsao.svg"
-               data-svg-alt="Fluxograma Crise Convulsiva SBP">
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma de Crise Febril e Estado de Mal Epiléptico na Infância (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a classificação semiológica da convulsão febril (simples vs complexa), a linha do tempo cronometrada do Estado de Mal Epiléptico (Minuto 0 a 5 estabilização/glicose, Minuto 5 a 10 midazolam/diazepam, Minuto 10 a 20 fenitoína/levetiracetam e Minuto 20 a 40 UTI), os critérios formais para punção lombar (LCR), a tríade da Síndrome de West e Choosing Wisely SBP 2024. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 
@@ -252,7 +294,7 @@
 
       <div class="card">
         <h2 class="card-title">Drogas de 2ª Linha (Minuto 10 ao 20 - Choque Refratário a BZD)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Anticonvulsivante de 2ª Linha</th>
@@ -282,7 +324,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;"><strong>Droga de PRIMEIRA ESCOLHA estrita em NEONATOS (&lt; 28 dias)</strong>. Em crianças maiores causa hipotensão e depressão respiratória acentuada.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">

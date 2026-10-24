@@ -16,7 +16,7 @@
       <div class="card">
         <h2 class="card-title">Critérios Oficiais de Tratamento Materno Adequado (SBP 2024 / MS)</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Critério Avaliado</th>
@@ -46,10 +46,49 @@
                 <td style="padding: 10px;">Ausência de queda sugere reinfecção ou falência terapêutica.</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
         <p style="margin-top: 12px; font-size: 0.9rem; color: #047857; font-weight: 600;">* NOTA OFICIAL SBP / MS: O tratamento do parceiro sexual NÃO é mais critério para definir a adequação do tratamento da gestante, embora o aconselhamento e tratamento da parceria permaneçam recomendados para evitar reinfecção.</p>
       </div>
+
+      <div class="card" id="card-visual-ped-sifilis-cong-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo Oficial de Abordagem do Recém-Nascido Exposto (SBP 2024 / MS)</h2>
+            <div class="flowchart-view-toggle" id="ped-sifilis-cong-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-sifilis-cong-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-sifilis-cong-landing-fullscreen-link" href="imagens/infografico-ped-sifilis-cong.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-sifilis-cong-landing-download-link" href="imagens/infografico-ped-sifilis-cong.png" download="infografico-ped-sifilis-cong.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-sifilis-cong-landing-visual-display"
+               src="imagens/infografico-ped-sifilis-cong.png"
+               alt="Infográfico Clínico de Sífilis Congênita e Abordagem do RN Exposto SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-sifilis-cong.png"
+               data-infographic-alt="Infográfico Clínico de Sífilis Congênita e Abordagem do RN Exposto SBP 2024"
+               data-svg-src="imagens/fluxo-ped-sifilis-cong.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Oficial de Abordagem do Recém-Nascido Exposto (SBP 2024 / MS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
 
       <div class="source-attribution">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</div>
     </section>
@@ -97,7 +136,7 @@
         <h2 class="card-title">Sífilis Congênita Precoce (Manifestações nos Primeiros 2 Anos de Vida)</h2>
         <p>Aproximadamente <strong>60% a 70% dos recém-nascidos infectados são totalmente assintomáticos ao nascimento</strong>, ressaltando a relevância da triagem sorológica universal na sala de parto. Nos neonatos e lactentes sintomáticos, as manifestações clássicas incluem:</p>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Sistema</th>
@@ -122,7 +161,7 @@
                 <td style="padding: 10px;">Síndrome nefrótica congênita por glomerulonefrite membranosa; <em>pneumonia alba</em> (infiltração intersticial fibrosa difusa com insuficiência respiratória grave).</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -184,11 +223,11 @@
         <p class="section-subtitle">Algoritmo clínico-laboratorial estruturado segundo o Tratado de Pediatria SBP 2024.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-sifilis-cong">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Algoritmo Oficial de Abordagem do Recém-Nascido Exposto (SBP 2024 / MS)</h2>
-            <div class="flowchart-view-toggle" id="sifilis-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-sifilis-cong-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -197,25 +236,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="sifilis-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="sifilis-fullscreen-link" href="imagens/infografico-ped-sifilis-cong.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="sifilis-download-link" href="imagens/infografico-ped-sifilis-cong.png" download="infografico-ped-sifilis-cong-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-sifilis-cong-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-sifilis-cong-fullscreen-link" href="imagens/infografico-ped-sifilis-cong.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-sifilis-cong-download-link" href="imagens/infografico-ped-sifilis-cong.png" download="infografico-ped-sifilis-cong.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="sifilis-visual-display" 
-               src="imagens/infografico-ped-sifilis-cong.png" 
-               alt="Infográfico Clínico de Sífilis Congênita e Abordagem do RN Exposto SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-sifilis-cong-visual-display"
+               src="imagens/infografico-ped-sifilis-cong.png"
+               alt="Infográfico Clínico de Sífilis Congênita e Abordagem do RN Exposto SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-sifilis-cong.png"
                data-infographic-alt="Infográfico Clínico de Sífilis Congênita e Abordagem do RN Exposto SBP 2024"
                data-svg-src="imagens/fluxo-ped-sifilis-cong.svg"
-               data-svg-alt="Fluxograma Sífilis Congênita e Abordagem do RN SBP 2024">
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Oficial de Abordagem do Recém-Nascido Exposto (SBP 2024 / MS)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a definição de tratamento materno adequado (Penicilina Benzatina, término &gt; 30d do parto, dose correta por estágio e queda documentada de VDRL), os 4 cenários neonatais com esquemas terapêuticos (Penicilina Cristalina 10d, Procaína 10d ou Benzatina dose única), critérios de retratamento e Choosing Wisely SBP 2024. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

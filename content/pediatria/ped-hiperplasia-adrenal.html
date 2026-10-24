@@ -24,6 +24,45 @@
         </ul>
       </div>
 
+      <div class="card" id="card-visual-ped-hiperplasia-adrenal-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico Oficial da HAC (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-hiperplasia-adrenal-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-hiperplasia-adrenal-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-hiperplasia-adrenal-landing-fullscreen-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-hiperplasia-adrenal-landing-download-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" download="infografico-ped-hiperplasia-adrenal.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-hiperplasia-adrenal-landing-visual-display"
+               src="imagens/infografico-ped-hiperplasia-adrenal.png"
+               alt="Infográfico Clínico de Hiperplasia Adrenal Congênita e Crise Perdedora de Sal SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-hiperplasia-adrenal.png"
+               data-infographic-alt="Infográfico Clínico de Hiperplasia Adrenal Congênita e Crise Perdedora de Sal SBP 2024"
+               data-svg-src="imagens/fluxo-ped-hiperplasia-adrenal.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico Oficial da HAC (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution">Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.</div>
     </section>
 
@@ -40,7 +79,7 @@
       <div class="card">
         <h2 class="card-title">Estratificação Clínica e Atividade Enzimática Residual</h2>
         <div style="overflow-x: auto; margin-top: 12px;">
-          <table class="data-table" style="width: 100%; border-collapse: collapse;">
+          <div class="table-responsive"><table class="data-table" style="width: 100%; border-collapse: collapse;">
             <thead>
               <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
                 <th style="padding: 10px;">Forma Clínica</th>
@@ -69,7 +108,7 @@
                 <td style="padding: 10px;">Frequentemente assintomáticos ou com adrenarca precoce e acne leve.</td>
               </tr>
             </tbody>
-          </table>
+          </table></div>
         </div>
       </div>
 
@@ -155,11 +194,11 @@
         <p class="section-subtitle">Algoritmo clínico oficial baseado no Tratado de Pediatria SBP 2024.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-hiperplasia-adrenal">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Algoritmo Diagnóstico e Terapêutico Oficial da HAC (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="hiperplasia-adrenal-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-hiperplasia-adrenal-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -168,20 +207,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="hiperplasia-adrenal-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="hiperplasia-adrenal-fullscreen-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="hiperplasia-adrenal-download-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" download="infografico-ped-hiperplasia-adrenal-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-hiperplasia-adrenal-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-hiperplasia-adrenal-fullscreen-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-hiperplasia-adrenal-download-link" href="imagens/infografico-ped-hiperplasia-adrenal.png" download="infografico-ped-hiperplasia-adrenal.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="hiperplasia-adrenal-visual-display" 
-               src="imagens/infografico-ped-hiperplasia-adrenal.png" 
-               alt="Infográfico Clínico de Hiperplasia Adrenal Congênita e Crise Perdedora de Sal SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-hiperplasia-adrenal-visual-display"
+               src="imagens/infografico-ped-hiperplasia-adrenal.png"
+               alt="Infográfico Clínico de Hiperplasia Adrenal Congênita e Crise Perdedora de Sal SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-hiperplasia-adrenal.png"
-               data-svg-src="imagens/fluxo-ped-hiperplasia-adrenal.svg">
+               data-infographic-alt="Infográfico Clínico de Hiperplasia Adrenal Congênita e Crise Perdedora de Sal SBP 2024"
+               data-svg-src="imagens/fluxo-ped-hiperplasia-adrenal.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Algoritmo Diagnóstico e Terapêutico Oficial da HAC (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

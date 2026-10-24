@@ -42,6 +42,45 @@
         </div>
       </div>
 
+      <div class="card" id="card-visual-ped-brue-smsl-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de Abordagem de BRUE e Prevenção de SMSL (SBP 2024 / AAP)</h2>
+            <div class="flowchart-view-toggle" id="ped-brue-smsl-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-brue-smsl-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-brue-smsl-landing-fullscreen-link" href="imagens/infografico-ped-brue-smsl.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-brue-smsl-landing-download-link" href="imagens/infografico-ped-brue-smsl.png" download="infografico-ped-brue-smsl.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-brue-smsl-landing-visual-display"
+               src="imagens/infografico-ped-brue-smsl.png"
+               alt="Infográfico Clínico de BRUE e Prevenção de SMSL SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-brue-smsl.png"
+               data-infographic-alt="Infográfico Clínico de BRUE e Prevenção de SMSL SBP 2024"
+               data-svg-src="imagens/fluxo-ped-brue-smsl.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de Abordagem de BRUE e Prevenção de SMSL (SBP 2024 / AAP)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -60,7 +99,7 @@
       <div class="card">
         <h2 class="card-title">Critérios Cumulativos Obrigatórios de Baixo Risco (SBP 2024 / AAP)</h2>
         <p>Para que um paciente seja classificado na categoria de <strong>BRUE DE BAIXO RISCO</strong>, ele deve preencher <strong>TODOS OS SETE CRITÉRIOS ABAIXO SIMULTANEAMENTE</strong>:</p>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 12px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 12px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Critério</th>
@@ -105,7 +144,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Lactente ativo, reativo, eupnéico, corado, afebril, com tônus e reflexos normais para a idade.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -138,7 +177,7 @@
 
       <div class="card">
         <h2 class="card-title">O que o Pediatra NÃO DEVE Fazer (Proscrito no Baixo Risco - SBP 2024)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Procedimento / Exame</th>
@@ -173,7 +212,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Não reduzem a recorrência de BRUE e aumentam o risco de infecções entéricas e respiratórias.</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="source-attribution" style="margin-top: 30px;">
@@ -237,11 +276,11 @@
         <p class="section-subtitle">Algoritmo decisório SBP/AAP: triagem de critérios de baixo risco vs conduta hospitalar de alto risco.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-brue-smsl">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de Abordagem de BRUE e Prevenção de SMSL (SBP 2024 / AAP)</h2>
-            <div class="flowchart-view-toggle" id="brue-smsl-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-brue-smsl-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -250,25 +289,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="brue-smsl-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="brue-smsl-fullscreen-link" href="imagens/infografico-ped-brue-smsl.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="brue-smsl-download-link" href="imagens/infografico-ped-brue-smsl.png" download="infografico-ped-brue-smsl-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-brue-smsl-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-brue-smsl-fullscreen-link" href="imagens/infografico-ped-brue-smsl.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-brue-smsl-download-link" href="imagens/infografico-ped-brue-smsl.png" download="infografico-ped-brue-smsl.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="brue-smsl-visual-display" 
-               src="imagens/infografico-ped-brue-smsl.png" 
-               alt="Infográfico Clínico de BRUE e Prevenção de SMSL SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-brue-smsl-visual-display"
+               src="imagens/infografico-ped-brue-smsl.png"
+               alt="Infográfico Clínico de BRUE e Prevenção de SMSL SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-brue-smsl.png"
                data-infographic-alt="Infográfico Clínico de BRUE e Prevenção de SMSL SBP 2024"
                data-svg-src="imagens/fluxo-ped-brue-smsl.svg"
-               data-svg-alt="Fluxograma Oficial de BRUE e SMSL SBP 2024">
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de Abordagem de BRUE e Prevenção de SMSL (SBP 2024 / AAP)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a transição de ALTE para BRUE, os 4 componentes clínicos cardinais, a checagem dos 7 critérios cumulativos de Baixo Risco, propedêutica no pronto-atendimento (observação de 1-4h + ECG vs não internar/não pedir TC/exames invasivos), protocolo hospitalar de Alto Risco, as 6 regras inegociáveis de Sono Seguro anti-SMSL e Choosing Wisely SBP 2024. Use o Zoom ou abra em tela cheia para máxima nitidez.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

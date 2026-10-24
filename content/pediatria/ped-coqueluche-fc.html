@@ -31,6 +31,45 @@
         </ul>
       </div>
 
+      <div class="card" id="card-visual-ped-coqueluche-fc-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico: Coqueluche &amp; FC (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-coqueluche-fc-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-coqueluche-fc-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-coqueluche-fc-landing-fullscreen-link" href="imagens/infografico-ped-coqueluche-fc.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-coqueluche-fc-landing-download-link" href="imagens/infografico-ped-coqueluche-fc.png" download="infografico-ped-coqueluche-fc.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-coqueluche-fc-landing-visual-display"
+               src="imagens/infografico-ped-coqueluche-fc.png"
+               alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-coqueluche-fc.png"
+               data-infographic-alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024"
+               data-svg-src="imagens/fluxo-ped-coqueluche-fc.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma e Infográfico: Coqueluche &amp; FC (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
+
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
       </div>
@@ -229,32 +268,41 @@
         <p class="section-subtitle">Árvore de decisão clínica sequencial da tosse paroxística à interpretação do teste do suor.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-coqueluche-fc">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma e Infográfico: Coqueluche &amp; FC (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="coqueluche-fc-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-coqueluche-fc-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
           </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="coqueluche-fc-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="coqueluche-fc-fullscreen-link" href="imagens/infografico-ped-coqueluche-fc.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="coqueluche-fc-download-link" href="imagens/infografico-ped-coqueluche-fc.png" download="infografico-ped-coqueluche-fc-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-coqueluche-fc-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-coqueluche-fc-fullscreen-link" href="imagens/infografico-ped-coqueluche-fc.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-coqueluche-fc-download-link" href="imagens/infografico-ped-coqueluche-fc.png" download="infografico-ped-coqueluche-fc.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
-          <img id="coqueluche-fc-visual-display" 
-               src="imagens/infografico-ped-coqueluche-fc.png" 
-               alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-coqueluche-fc-visual-display"
+               src="imagens/infografico-ped-coqueluche-fc.png"
+               alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-coqueluche-fc.png"
-               data-svg-src="imagens/fluxo-ped-coqueluche-fc.svg">
+               data-infographic-alt="Infográfico Clínico de Coqueluche e Fibrose Cística SBP 2024"
+               data-svg-src="imagens/fluxo-ped-coqueluche-fc.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma e Infográfico: Coqueluche &amp; FC (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 

@@ -22,7 +22,7 @@
 
       <div class="card">
         <h2 class="card-title">Diferenciação Clínica: Pielonefrite Aguda (ITU Alta) vs Cistite Aguda (ITU Baixa)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Parâmetro Clínico</th>
@@ -57,7 +57,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">Nulo para parênquima renal</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="card">
@@ -69,6 +69,45 @@
           <li><strong>Pseudomonas aeruginosa:</strong> Sugere forte suspeita de uropatia obstrutiva congênita, cateterismo vesical de demora ou uso recente de antimicrobianos de amplo espectro.</li>
         </ul>
       </div>
+
+      <div class="card" id="card-visual-ped-itu-enurese-landing">
+        <div class="card-header-flex">
+          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de ITU e Enurese Noturna na Infância (SBP 2024)</h2>
+            <div class="flowchart-view-toggle" id="ped-itu-enurese-landing-view-toggle">
+              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
+              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
+            </div>
+          </div>
+          <div class="flowchart-actions">
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
+            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
+            <button type="button" class="btn-zoom" id="ped-itu-enurese-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-itu-enurese-landing-fullscreen-link" href="imagens/infografico-ped-itu-enurese.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-itu-enurese-landing-download-link" href="imagens/infografico-ped-itu-enurese.png" download="infografico-ped-itu-enurese.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+          </div>
+        </div>
+        <div class="flowchart-img-container">
+          <img id="ped-itu-enurese-landing-visual-display"
+               src="imagens/infografico-ped-itu-enurese.png"
+               alt="Infográfico Clínico de ITU e Enurese Noturna SBP 2024"
+               class="flowchart-img infographic-mode"
+               data-scale="1.0"
+               data-infographic-src="imagens/infografico-ped-itu-enurese.png"
+               data-infographic-alt="Infográfico Clínico de ITU e Enurese Noturna SBP 2024"
+               data-svg-src="imagens/fluxo-ped-itu-enurese.svg"
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de ITU e Enurese Noturna na Infância (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+        </div>
+      </div>
+
 
       <div class="source-attribution" style="margin-top: 30px;">
         Fonte Oficial de Referência: Tratado de Pediatria — Sociedade Brasileira de Pediatria (SBP), 6ª Edição (2024), Volumes 1 e 2.
@@ -87,7 +126,7 @@
 
       <div class="card">
         <h2 class="card-title">Pontos de Corte Diagnósticos da Urocultura Segundo o Tratado de Pediatria SBP 2024</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Método de Coleta</th>
@@ -122,7 +161,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0; color: #b91c1c;"><strong>Taxa de falso-positivo de 85% a 90%!</strong> Serve apenas se NEGATIVO (alto VPN). Se alterado, DEVE SER CONFIRMADO por sondagem ou jato médio!</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
       </div>
 
       <div class="card">
@@ -164,7 +203,7 @@
 
       <div class="card">
         <h2 class="card-title">Esquemas Antimicrobianos Recomendados (SBP 2024)</h2>
-        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <div class="table-responsive"><table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
           <thead>
             <tr style="background: #f8fafc; border-bottom: 2px solid #e2e8f0; text-align: left;">
               <th style="padding: 10px; border: 1px solid #e2e8f0;">Quadro Clínico</th>
@@ -199,7 +238,7 @@
               <td style="padding: 10px; border: 1px solid #e2e8f0;">3 a 5 dias</td>
             </tr>
           </tbody>
-        </table>
+        </table></div>
         <div class="alert-box alert-warning" style="margin-top: 12px;">
           <strong>Alerta Farmacológico Máximo:</strong> A <strong>Nitrofurantoína NUNCA deve ser utilizada no tratamento da Pielonefrite Aguda</strong>, pois tem ação estritamente intravesical e não atinge níveis séricos nem concentração terapêutica no parênquima renal!
         </div>
@@ -269,11 +308,11 @@
         <p class="section-subtitle">Algoritmo decisório integrado: diagnóstico asséptico, estratificação pielonefrite vs cistite e roteiro de imagem.</p>
       </div>
 
-      <div class="card">
+      <div class="card" id="card-visual-ped-itu-enurese">
         <div class="card-header-flex">
           <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
             <h2 class="card-title" style="margin: 0;">Fluxograma Oficial de ITU e Enurese Noturna na Infância (SBP 2024)</h2>
-            <div class="flowchart-view-toggle" id="itu-enurese-view-toggle">
+            <div class="flowchart-view-toggle" id="ped-itu-enurese-view-toggle">
               <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
               <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
             </div>
@@ -282,25 +321,28 @@
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
             <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="itu-enurese-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="itu-enurese-fullscreen-link" href="imagens/infografico-ped-itu-enurese.png" target="_blank" class="btn-image-open">🔍 Abrir em Tela Cheia</a>
-            <a id="itu-enurese-download-link" href="imagens/infografico-ped-itu-enurese.png" download="infografico-ped-itu-enurese-sbp2024.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <button type="button" class="btn-zoom" id="ped-itu-enurese-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
+            <a id="ped-itu-enurese-fullscreen-link" href="imagens/infografico-ped-itu-enurese.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
+            <a id="ped-itu-enurese-download-link" href="imagens/infografico-ped-itu-enurese.png" download="infografico-ped-itu-enurese.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
           </div>
         </div>
-
         <div class="flowchart-img-container">
-          <img id="itu-enurese-visual-display" 
-               src="imagens/infografico-ped-itu-enurese.png" 
-               alt="Infográfico Clínico de ITU e Enurese Noturna SBP 2024" 
-               class="flowchart-img infographic-mode" 
+          <img id="ped-itu-enurese-visual-display"
+               src="imagens/infografico-ped-itu-enurese.png"
+               alt="Infográfico Clínico de ITU e Enurese Noturna SBP 2024"
+               class="flowchart-img infographic-mode"
                data-scale="1.0"
                data-infographic-src="imagens/infografico-ped-itu-enurese.png"
                data-infographic-alt="Infográfico Clínico de ITU e Enurese Noturna SBP 2024"
                data-svg-src="imagens/fluxo-ped-itu-enurese.svg"
-               data-svg-alt="Fluxograma ITU e Enurese SBP">
+               data-svg-alt="Fluxograma Vetorial Clássico: Fluxograma Oficial de ITU e Enurese Noturna na Infância (SBP 2024)"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: O infográfico sintetiza a diferenciação entre pielonefrite aguda (febre sem foco em lactentes) e cistite, métodos estéreis de coleta (punção suprapúbica e cateterismo vesical aliviador com ponto de corte de 50.000 UFC/mL), falso-positivo > 85% do saco coletor, regimes antimicrobianos (cefalexina/cefuroxima oral vs ceftriaxona IV), roteiro de imagem (USG no 1º episódio, UCRM sob indicação estrita e DMSA tardio), manejo da enurese monossintomática (alarme noturno e DDAVP com restrição hídrica) e Choosing Wisely SBP 2024. Use o Zoom ou abra em tela cheia para leitura com nitidez máxima.</em>
+          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
         </div>
       </div>
 
