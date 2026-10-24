@@ -6,6 +6,7 @@
 let currentSpecialty = 'ginecologia';
 let activeGinecologiaMod = 'dsf';
 let activePediatriaMod = 'ped-reanima';
+let currentModule = 'dsf';
 
 const loadedModules = new Set(['dsf']);
 const moduleHtmlCache = new Map();
@@ -202,6 +203,7 @@ async function switchModule(moduleId) {
       if (pickerPed) pickerPed.style.display = 'none';
     }
   }
+  currentModule = moduleId;
   
   if (typeof moduleIds !== 'undefined') {
     moduleIds.forEach(id => {
@@ -839,7 +841,8 @@ async function handleHashNavigation() {
       }
     }
   }
-  if (targetMod && targetMod !== currentModule) {
+  const curActiveMod = typeof currentModule !== 'undefined' ? currentModule : (currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod);
+  if (targetMod && targetMod !== curActiveMod) {
     await switchModule(targetMod);
   }
   await switchSection(hash);

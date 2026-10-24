@@ -821,7 +821,7 @@ const ORDERED_SECTIONS = {
     {
       "moduleId": "dipav",
       "sectionId": "dipav-sequelas",
-      "title": "Infertilidade & Sequelas",
+      "title": "Sequelas Tuboperitoneais da DIP",
       "specialty": "ginecologia"
     },
     {
