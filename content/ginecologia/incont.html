@@ -203,20 +203,43 @@
         <p>A investigação funcional da bexiga e do esfíncter uretral para tomada de decisão cirúrgica segura.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-incontinencia-urodinamica">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Interpretação das Fases do Estudo Urodinâmico e Pressão de Perda sob Esforço</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_incontinencia_estudo_urodinamico.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-incont-urodinamica.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-incont-urodinamica.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_incontinencia_estudo_urodinamico.svg" alt="Fluxograma do Estudo Urodinâmico" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-incont-urodinamica.png"
+               data-infographic-src="imagens/infografico-gin-incont-urodinamica.png"
+               data-svg-src="imagens/fluxograma_incontinencia_estudo_urodinamico.svg"
+               data-infographic-alt="Infográfico Clínico: O Estudo Urodinâmico (EUD) na Prática Ginecológica & Cortes de VLPP (FEBRASGO / ICS)"
+               data-svg-alt="Fluxograma Vetorial: Interpretação Urodinâmica e Cortes de VLPP"
+               alt="Infográfico Clínico: O Estudo Urodinâmico (EUD) na Prática Ginecológica & Cortes de VLPP (FEBRASGO / ICS)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -267,20 +290,43 @@
         <p>A transição racional do manejo comportamental aos fármacos orais e intervenções minimamente invasivas.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-incontinencia-bexiga-hiperativa">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Escalonamento Terapêutico da Síndrome da Bexiga Hiperativa</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_incontinencia_bexiga_hiperativa.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-incont-bhi-urgencia.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-incont-bhi-urgencia.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_incontinencia_bexiga_hiperativa.svg" alt="Fluxograma Bexiga Hiperativa" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-incont-bhi-urgencia.png"
+               data-infographic-src="imagens/infografico-gin-incont-bhi-urgencia.png"
+               data-svg-src="imagens/fluxograma_incontinencia_bexiga_hiperativa.svg"
+               data-infographic-alt="Infográfico Clínico: Escalonamento Terapêutico da Síndrome da Bexiga Hiperativa (FEBRASGO / ICS)"
+               data-svg-alt="Fluxograma Vetorial: Escalonamento da Bexiga Hiperativa"
+               alt="Infográfico Clínico: Escalonamento Terapêutico da Síndrome da Bexiga Hiperativa (FEBRASGO / ICS)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -337,20 +383,43 @@
         <p>A obrigatoriedade do tratamento conservador prévio e os critérios para encaminhamento cirúrgico.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-incontinencia-esforco">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Escalonamento da IUE: Conservador de 1ª Linha vs Tratamento Cirúrgico</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_incontinencia_esforco_manejo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-incont-iue-fisiopatologia.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-incont-iue-fisiopatologia.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_incontinencia_esforco_manejo.svg" alt="Fluxograma Manejo da IUE" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-incont-iue-fisiopatologia.png"
+               data-infographic-src="imagens/infografico-gin-incont-iue-fisiopatologia.png"
+               data-svg-src="imagens/fluxograma_incontinencia_esforco_manejo.svg"
+               data-infographic-alt="Infográfico Clínico: Incontinência Urinária de Esforço (IUE) - Fisiopatologia, TMAP & Cirurgia (FEBRASGO)"
+               data-svg-alt="Fluxograma Vetorial: Escalonamento Clínico e Cirúrgico da IUE"
+               alt="Infográfico Clínico: Incontinência Urinária de Esforço (IUE) - Fisiopatologia, TMAP & Cirurgia (FEBRASGO)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -441,20 +510,43 @@
         <p>O divisor de águas cirúrgico mundial da uroginecologia moderna e suas indicações precisas.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-incontinencia-slings">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Decisão Cirúrgica: Sling Retropúbico (TVT) vs Sling Transobturador (TOT)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_incontinencia_slings_tvt_tot.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-incont-slings.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-incont-slings.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_incontinencia_slings_tvt_tot.svg" alt="Fluxograma Slings TVT vs TOT" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-incont-slings.png"
+               data-infographic-src="imagens/infografico-gin-incont-slings.png"
+               data-svg-src="imagens/fluxograma_incontinencia_slings_tvt_tot.svg"
+               data-infographic-alt="Infográfico Clínico: Slings Sintéticos de Uretra Média - TVT Retropúbico vs TOT Transobturador (FEBRASGO)"
+               data-svg-alt="Fluxograma Vetorial: Seleção Cirúrgica TVT vs TOT"
+               alt="Infográfico Clínico: Slings Sintéticos de Uretra Média - TVT Retropúbico vs TOT Transobturador (FEBRASGO)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
@@ -517,20 +609,43 @@
         <p>A arte do diagnóstico e a regra de ouro de tratar primeiro o componente clinicamente predominante.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-incontinencia-mista">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo Integrado da Incontinência Urinária Mista (IUM)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_incontinencia_mista_algoritmo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-incont-mista.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-incont-mista.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_incontinencia_mista_algoritmo.svg" alt="Fluxograma Incontinência Mista" class="flowchart-img" loading="lazy" decoding="async">
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-incont-mista.png"
+               data-infographic-src="imagens/infografico-gin-incont-mista.png"
+               data-svg-src="imagens/fluxograma_incontinencia_mista_algoritmo.svg"
+               data-infographic-alt="Infográfico Clínico: Incontinência Urinária Mista (IUM) - Estratificação & Algoritmo Sequencial (FEBRASGO)"
+               data-svg-alt="Fluxograma Vetorial: Algoritmo da Incontinência Urinária Mista"
+               alt="Infográfico Clínico: Incontinência Urinária Mista (IUM) - Estratificação & Algoritmo Sequencial (FEBRASGO)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
         </div>
       </div>
 
