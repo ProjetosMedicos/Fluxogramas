@@ -439,4 +439,29 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v23`)
 - [x] 100% dos fluxogramas dos módulos `sop` e `sua` cobertos por infográficos HD! 🏆
 
+---
+
+## 📋 Registro de Conclusão da Onda S3 (Fase 2: Sub-Fluxogramas de Mioma & Adenomiose) — ✅ CONCLUÍDA! 🚀
+
+### Módulos & Sub-Fluxogramas Concluídos (10 novos infográficos HD):
+1. `mioma-propedutica` — **Mapeamento Diagnóstico Estratificado da Miomatose**: Da USTV inicial à Histerossonografia (manto miometrial livre) e Ressonância Magnética 3D com contraste (diferenciação com adenomiose e sarcoma) (`imagens/infografico-gin-mioma-propedutica.png` — 1200x1137px) ✅
+2. `mioma-clinico` — **Tratamento Clínico Medicamentoso dos Leiomiomas**: 1ª linha hemostática (Ácido Tranexâmico 1g 8/8h nos dias de fluxo + AINEs + SIU-LNG 52 mg se cavidade preservada); Citorredução pré-operatória com Agonistas GnRH depot (Goserrelina 3.6 mg) ou Antagonistas Orais (Relugolix 40 mg + E2/NETA); Ferroterapia venosa com Carboximaltose Férrica (`imagens/infografico-gin-mioma-clinico.png` — 1200x1405px) ✅
+3. `mioma-miomectomia` — **Vias Cirúrgicas em Miomectomia Conservadora**: Submucosos estratificados pelo Escore de Lasmar/STEPW (Grau 0-4 em tempo único, 5-6 em dois tempos com GnRH de intervalo, 7-9 contraindicação histeroscópica); Intramurais/subserosos por Laparoscopia (< 4 nódulos, < 8-10 cm, sutura miometrial em camadas) vs Laparotomia (úteros volumosos multinodulares) (`imagens/infografico-gin-mioma-miomectomia.png` — 1200x1230px) ✅
+4. `mioma-embolizacao` — **Embolização das Artérias Uterinas (EAU)**: Candidata ideal (SUA/compressão, recusa de cirurgia aberta, prole completa); Contraindicações formais (gestação, infecção ativa, malignidade); Alertas anatômicos de risco de expulsão/sepse no FIGO 0 e necrose/peritonite no FIGO 7 pediculado; Técnica com microesferas de PVA 500-900 µm (`imagens/infografico-gin-mioma-embolizacao.png` — 1200x1458px) ✅
+5. `mioma-histerectomia` — **Histerectomia Definitiva & Degenerações Tumorais**: Histerectomia total com salpingectomia profilática bilateral; Espectro das degenerações: hialina (65%), cística, calcificação e degeneração vermelha/carne crua (2º trimestre de gestação por infarto hemorrágico com conduta 100% conservadora sem cirurgia); Sarcoma pós-menopausa (`imagens/infografico-gin-mioma-histerectomia.png` — 1200x1400px) ✅
+6. `adenomiose-imagem-musa` — **Critérios MUSA e RM Pélvica no Diagnóstico da Adenomiose**: Consenso MUSA na USTV com critérios diretos (cistos miometriais 1-5 mm, ilhotas hiperecogênicas, estrias/sombras em leque rain shower) e indiretos (assimetria de parede posterior, útero globular, vascularização translesional ao Doppler); Critérios de RM em T2 da Zona Juncional (ZJ ≥ 12 mm confirmatório) (`imagens/infografico-gin-adeno-musa.png` — 1200x1659px) ✅
+7. `adenomiose-formas-anatomicas` — **Adenomiose Difusa, Adenomioma vs Leiomioma Uterino**: Diagnóstico diferencial anatomopatológico e cirúrgico: Adenomioma (ausência de pseudocápsula, margens infiltrantes indistintas, Doppler translesional, plano cirúrgico inexistente) vs Leiomioma (presença de pseudocápsula fibrosa nítida, anel vascular em coroa, enucleação cirúrgica perfeita) (`imagens/infografico-gin-adeno-formas.png` — 1200x1482px) ✅
+8. `adenomiose-tratamento-clinico` — **Escalonamento Clínico na Adenomiose Sintomática**: 1ª linha padrão-ouro Nível A com SIU-LNG 52 mg (Mirena - redução > 80-90% de SUA-A e alívio de dismenorreia); Alternativas orais contínuas com Dienogeste 2 mg/dia ou ACO combinado de uso estendido; 2ª linha com agonistas de GnRH + Add-Back therapy (`imagens/infografico-gin-adeno-clinico.png` — 1200x1265px) ✅
+9. `adenomiose-fertilidade` — **Adenomiose & Protocolos Pré-FIV na Reprodução Assistida**: Impacto fisiopatológico na zona juncional e receptividade endometrial; Protocolo ultralongo em 4 fases: captação ovocitária e cultivo até blastocisto D5, congelamento total Freeze-All, bloqueio com Agonista GnRH Depot por 2 a 3 meses consecutivos e preparo endometrial diferido com eSET (`imagens/infografico-gin-adeno-fertilidade.png` — 1200x1197px) ✅
+10. `adenomiose-cirurgia` — **Tratamento Cirúrgico da Adenomiose Refratária**: Histerectomia total com salpingectomia como padrão-ouro curativo definitivo; Técnicas conservadoras de exceção para preservação uterina (Adenomiomectomia e Técnica citorredutora de Osada com retalhos miometriais triplos); Alerta obstétrico grave de rotura uterina espontânea pós-Osada (8-10%) e parto cesariana eletivo mandatório às 36-37 semanas (`imagens/infografico-gin-adeno-cirurgico.png` — 1200x1366px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Pesquisa clínica e roteiro textual dos 10 infográficos aprovados
+- [x] Templates HTML semânticos 1200px criados em `scratch/`
+- [x] Renderização Headless Chrome e recorte de precisão PIL nos 10 arquivos PNG em `imagens/`
+- [x] Integração no webapp com alternância dupla (`content/ginecologia/mioma.html` Seções 2, 3, 4, 5 e 6; `content/ginecologia/adeno.html` Seções 2, 3, 4, 5 e 6)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v24`)
+- [x] 100% dos fluxogramas dos módulos `mioma` e `adeno` cobertos por infográficos HD! 🏆
+
 

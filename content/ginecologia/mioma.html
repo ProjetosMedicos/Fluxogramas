@@ -178,18 +178,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-mioma-propedutica">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Mapeamento Diagnóstico Estratificado: da USTV à Ressonância Magnética</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Mapeamento Diagnóstico Estratificado (USTV à RM)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_propedutica_mapeamento.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-mioma-propedutica.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-mioma-propedutica.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-mioma-propedutica.png"
+               data-infographic-src="imagens/infografico-gin-mioma-propedutica.png"
+               data-svg-src="imagens/fluxograma_mioma_propedutica_mapeamento.svg"
+               data-infographic-alt="Infográfico Clínico: Mapeamento Diagnóstico Estratificado da Miomatose (USTV à RM Pélvica)"
+               data-svg-alt="Fluxograma Vetorial: Propedêutica Miomatose"
+               alt="Infográfico Clínico: Mapeamento Diagnóstico Estratificado da Miomatose (USTV à RM Pélvica)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-container">
           <img src="imagens/fluxograma_mioma_propedutica_mapeamento.svg" alt="Fluxograma Propedêutica Miomatose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -263,18 +295,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-mioma-clinico">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Escalonamento Farmacológico: da Hemostasia ao Preparo Pré-Operatório</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Tratamento Clínico Medicamentoso dos Leiomiomas</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_tratamento_clinico.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-mioma-clinico.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-mioma-clinico.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-mioma-clinico.png"
+               data-infographic-src="imagens/infografico-gin-mioma-clinico.png"
+               data-svg-src="imagens/fluxograma_mioma_tratamento_clinico.svg"
+               data-infographic-alt="Infográfico Clínico: Tratamento Clínico da Miomatose Uterina"
+               data-svg-alt="Fluxograma Vetorial: Tratamento Clínico Miomas"
+               alt="Infográfico Clínico: Tratamento Clínico da Miomatose Uterina"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-container">
           <img src="imagens/fluxograma_mioma_tratamento_clinico.svg" alt="Fluxograma Tratamento Clínico Miomas" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -342,18 +406,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-mioma-miomectomia">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Escolha da Via de Miomectomia Baseado na Topografia, Número e Dimensões</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Vias Cirúrgicas em Miomectomia Conservadora</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_miomectomia_vias.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-mioma-miomectomia.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-mioma-miomectomia.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-mioma-miomectomia.png"
+               data-infographic-src="imagens/infografico-gin-mioma-miomectomia.png"
+               data-svg-src="imagens/fluxograma_mioma_miomectomia_vias.svg"
+               data-infographic-alt="Infográfico Clínico: Algoritmo de Decisão em Miomectomia Conservadora (Escore de Lasmar)"
+               data-svg-alt="Fluxograma Vetorial: Vias de Miomectomia"
+               alt="Infográfico Clínico: Algoritmo de Decisão em Miomectomia Conservadora (Escore de Lasmar)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-container">
           <img src="imagens/fluxograma_mioma_miomectomia_vias.svg" alt="Fluxograma Vias de Miomectomia" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -421,18 +517,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-mioma-embolizacao">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Elegibilidade, Contraindicações e Riscos Anatômicos da EAU</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Embolização das Artérias Uterinas (EAU)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_embolizacao_eau.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-mioma-embolizacao.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-mioma-embolizacao.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-mioma-embolizacao.png"
+               data-infographic-src="imagens/infografico-gin-mioma-embolizacao.png"
+               data-svg-src="imagens/fluxograma_mioma_embolizacao_eau.svg"
+               data-infographic-alt="Infográfico Clínico: Embolização das Artérias Uterinas (EAU) na Miomatose"
+               data-svg-alt="Fluxograma Vetorial: Embolização EAU"
+               alt="Infográfico Clínico: Embolização das Artérias Uterinas (EAU) na Miomatose"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-container">
           <img src="imagens/fluxograma_mioma_embolizacao_eau.svg" alt="Fluxograma Embolização EAU" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -489,18 +617,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-mioma-histerectomia">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão Cirúrgica Definitiva e Diagnóstico Diferencial de Degenerações e Sarcomas</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Histerectomia Definitiva & Degenerações Tumorais</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_histerectomia_degeneracoes.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-mioma-histerectomia.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-mioma-histerectomia.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-mioma-histerectomia.png"
+               data-infographic-src="imagens/infografico-gin-mioma-histerectomia.png"
+               data-svg-src="imagens/fluxograma_mioma_histerectomia_degeneracoes.svg"
+               data-infographic-alt="Infográfico Clínico: Histerectomia e Degenerações dos Leiomiomas (Degeneração Vermelha na Gravidez)"
+               data-svg-alt="Fluxograma Vetorial: Histerectomia e Degenerações"
+               alt="Infográfico Clínico: Histerectomia e Degenerações dos Leiomiomas (Degeneração Vermelha na Gravidez)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-container">
           <img src="imagens/fluxograma_mioma_histerectomia_degeneracoes.svg" alt="Fluxograma Histerectomia e Degenerações" class="flowchart-img" loading="lazy" decoding="async">
         </div>

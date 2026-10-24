@@ -133,18 +133,50 @@
         <p>A revolução da propedêutica por imagem permitindo o diagnóstico precoce sem necessidade de histerectomia.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-adeno-musa">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Avaliação Diagnóstica por Imagem: Consenso MUSA vs Ressonância Magnética</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Critérios MUSA e RM Pélvica na Adenomiose</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_adenomiose_diagnostico_musa_rm.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-adeno-musa.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-adeno-musa.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-adeno-musa.png"
+               data-infographic-src="imagens/infografico-gin-adeno-musa.png"
+               data-svg-src="imagens/fluxograma_adenomiose_diagnostico_musa_rm.svg"
+               data-infographic-alt="Infográfico Clínico: Critérios MUSA e RM no Diagnóstico da Adenomiose"
+               data-svg-alt="Fluxograma Vetorial: MUSA e RM na Adenomiose"
+               alt="Infográfico Clínico: Critérios MUSA e RM no Diagnóstico da Adenomiose"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_adenomiose_diagnostico_musa_rm.svg" alt="Fluxograma MUSA e RM na Adenomiose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -204,18 +236,50 @@
         <p>A diferenciação anatômica e o desafio clínico na distinção entre nódulo adenomiomatoso e fibroma uterino.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-adeno-formas">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Caracterização Anatômica e Diagnóstico Diferencial Miometrial</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Adenomiose Difusa, Adenomioma vs Leiomioma</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_adenomiose_difusa_vs_adenomioma.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-adeno-formas.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-adeno-formas.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-adeno-formas.png"
+               data-infographic-src="imagens/infografico-gin-adeno-formas.png"
+               data-svg-src="imagens/fluxograma_adenomiose_difusa_vs_adenomioma.svg"
+               data-infographic-alt="Infográfico Clínico: Adenomiose Difusa, Adenomioma vs Leiomioma Uterino"
+               data-svg-alt="Fluxograma Vetorial: Formas Anatômicas da Adenomiose"
+               alt="Infográfico Clínico: Adenomiose Difusa, Adenomioma vs Leiomioma Uterino"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_adenomiose_difusa_vs_adenomioma.svg" alt="Fluxograma de Formas Anatômicas" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -270,18 +334,50 @@
         <p>Estratégias de 1ª e 2ª linha para controle do sangramento volumoso e alívio da dismenorreia.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-adeno-clinico">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo Clínico Escalonado na Adenomiose Sintomática</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Escalonamento Clínico na Adenomiose Sintomática</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_adenomiose_tratamento_clinico.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-adeno-clinico.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-adeno-clinico.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-adeno-clinico.png"
+               data-infographic-src="imagens/infografico-gin-adeno-clinico.png"
+               data-svg-src="imagens/fluxograma_adenomiose_tratamento_clinico.svg"
+               data-infographic-alt="Infográfico Clínico: Tratamento Clínico da Adenomiose Sintomática (SIU-LNG 52mg, Dienogeste)"
+               data-svg-alt="Fluxograma Vetorial: Tratamento Clínico da Adenomiose"
+               alt="Infográfico Clínico: Tratamento Clínico da Adenomiose Sintomática (SIU-LNG 52mg, Dienogeste)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_adenomiose_tratamento_clinico.svg" alt="Fluxograma de Tratamento Clínico da Adenomiose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -319,18 +415,50 @@
         <p>Mecanismos de subfertilidade, falhas de implantação e otimização dos desfechos na Reprodução Assistida.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-adeno-fertilidade">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo da Mulher com Adenomiose e Desejo Reprodutivo</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Adenomiose & Protocolos Pré-FIV na Reprodução Assistida</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_adenomiose_fertilidade_reproducao.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-adeno-fertilidade.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-adeno-fertilidade.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-adeno-fertilidade.png"
+               data-infographic-src="imagens/infografico-gin-adeno-fertilidade.png"
+               data-svg-src="imagens/fluxograma_adenomiose_fertilidade_reproducao.svg"
+               data-infographic-alt="Infográfico Clínico: Adenomiose & Protocolos Pré-FIV (Freeze-All e Bloqueio GnRH Ultralongo)"
+               data-svg-alt="Fluxograma Vetorial: Fertilidade na Adenomiose"
+               alt="Infográfico Clínico: Adenomiose & Protocolos Pré-FIV (Freeze-All e Bloqueio GnRH Ultralongo)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_adenomiose_fertilidade_reproducao.svg" alt="Fluxograma de Fertilidade na Adenomiose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -374,18 +502,50 @@
         <p>A histerectomia como cura definitiva e os desafios técnicos dos procedimentos preservadores do útero.</p>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-adeno-cirurgico">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão Cirúrgica na Adenomiose Refratária</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Tratamento Cirúrgico da Adenomiose (Histerectomia vs Osada)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_adenomiose_tratamento_cirurgico.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-adeno-cirurgico.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-adeno-cirurgico.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-adeno-cirurgico.png"
+               data-infographic-src="imagens/infografico-gin-adeno-cirurgico.png"
+               data-svg-src="imagens/fluxograma_adenomiose_tratamento_cirurgico.svg"
+               data-infographic-alt="Infográfico Clínico: Tratamento Cirúrgico da Adenomiose Refratária (Histerectomia Total vs Técnica de Osada)"
+               data-svg-alt="Fluxograma Vetorial: Cirurgia na Adenomiose"
+               alt="Infográfico Clínico: Tratamento Cirúrgico da Adenomiose Refratária (Histerectomia Total vs Técnica de Osada)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_adenomiose_tratamento_cirurgico.svg" alt="Fluxograma de Cirurgia na Adenomiose" class="flowchart-img" loading="lazy" decoding="async">
         </div>
