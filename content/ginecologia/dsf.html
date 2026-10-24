@@ -279,18 +279,45 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-dsf-desejo">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão no TDSH</h2>
+          <h2 class="card-title">Fluxograma de Investigação e Decisão no Transtorno do Desejo Sexual Hipoativo (TDSH / TIESF)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_dsf_desejo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-dsf-desejo.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-dsf-desejo.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-dsf-desejo.png"
+               data-infographic-src="imagens/infografico-gin-dsf-desejo.png"
+               data-svg-src="imagens/fluxograma_dsf_desejo.svg"
+               data-infographic-alt="Infográfico Clínico: Investigação e Decisão Terapêutica no TDSH Feminino (FEBRASGO / ISSWSH)"
+               data-svg-alt="Fluxograma Vetorial: Decisão no TDSH"
+               alt="Infográfico Clínico: Investigação e Decisão Terapêutica no TDSH Feminino (FEBRASGO / ISSWSH)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_dsf_desejo.svg" alt="Fluxograma de Decisão no TDSH" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -361,18 +388,45 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-dsf-excitacao">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo da Falha de Excitação / Lubrificação</h2>
+          <h2 class="card-title">Fluxograma de Manejo Escalonado do Transtorno da Excitação Sexual Feminina (DESF)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_dsf_excitacao.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-dsf-excitacao.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-dsf-excitacao.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-dsf-excitacao.png"
+               data-infographic-src="imagens/infografico-gin-dsf-excitacao.png"
+               data-svg-src="imagens/fluxograma_dsf_excitacao.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo Escalonado do Transtorno de Excitação Sexual Feminina (FEBRASGO / ISSWSH)"
+               data-svg-alt="Fluxograma Vetorial: Manejo da Falha de Excitação"
+               alt="Infográfico Clínico: Manejo Escalonado do Transtorno de Excitação Sexual Feminina (FEBRASGO / ISSWSH)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_dsf_excitacao.svg" alt="Fluxograma de Manejo da Excitação" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -443,18 +497,45 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-dsf-orgasmo">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Abordagem do Transtorno do Orgasmo</h2>
+          <h2 class="card-title">Fluxograma Semiológico e Terapêutico da Disfunção Orgásmica Feminina (DOF / Anorgasmia)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_dsf_orgasmo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-dsf-orgasmo.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-dsf-orgasmo.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-dsf-orgasmo.png"
+               data-infographic-src="imagens/infografico-gin-dsf-orgasmo.png"
+               data-svg-src="imagens/fluxograma_dsf_orgasmo.svg"
+               data-infographic-alt="Infográfico Clínico: Abordagem Semiológica e Terapêutica da Anorgasmia Feminina (FEBRASGO / ISSWSH)"
+               data-svg-alt="Fluxograma Vetorial: Manejo da Disfunção Orgásmica"
+               alt="Infográfico Clínico: Abordagem Semiológica e Terapêutica da Anorgasmia Feminina (FEBRASGO / ISSWSH)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_dsf_orgasmo.svg" alt="Fluxograma de Transtorno do Orgasmo" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -525,18 +606,45 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-dsf-dor-pelvica">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Decisão em Dor Sexual</h2>
+          <h2 class="card-title">Fluxograma Diagnóstico e Terapêutico do Transtorno de Dor Gênito-Pélvica / Penetração (TDGPP)</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_dsf_dor.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-dsf-dor.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-dsf-dor.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-dsf-dor.png"
+               data-infographic-src="imagens/infografico-gin-dsf-dor.png"
+               data-svg-src="imagens/fluxograma_dsf_dor.svg"
+               data-infographic-alt="Infográfico Clínico: Diagnóstico e Manejo do Transtorno de Dor Gênito-Pélvica/Penetração (FEBRASGO / ISSVD)"
+               data-svg-alt="Fluxograma Vetorial: Manejo da Dor Gênito-Pélvica"
+               alt="Infográfico Clínico: Diagnóstico e Manejo do Transtorno de Dor Gênito-Pélvica/Penetração (FEBRASGO / ISSVD)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_dsf_dor.svg" alt="Fluxograma de Dor Sexual" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -615,18 +723,45 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-dsf-iatrogenias">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo de Iatrogenias Medicamentosas</h2>
+          <h2 class="card-title">Fluxograma de Manejo das Iatrogenias Farmacológicas na Sexualidade Feminina</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_dsf_iatrogenias.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-dsf-iatrogenias.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-dsf-iatrogenias.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-dsf-iatrogenias.png"
+               data-infographic-src="imagens/infografico-gin-dsf-iatrogenias.png"
+               data-svg-src="imagens/fluxograma_dsf_iatrogenias.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo das Disfunções Sexuais Iatrogênicas por Psicofármacos e ACO (FEBRASGO / ISSWSH)"
+               data-svg-alt="Fluxograma Vetorial: Iatrogenias Farmacológicas Sexuais"
+               alt="Infográfico Clínico: Manejo das Disfunções Sexuais Iatrogênicas por Psicofármacos e ACO (FEBRASGO / ISSWSH)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async">
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_dsf_iatrogenias.svg" alt="Fluxograma de Iatrogenias" class="flowchart-img" loading="lazy" decoding="async">
         </div>

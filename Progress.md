@@ -531,3 +531,84 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v27`)
 - [x] **Onda S5 100% Concluída (16/16 infográficos)**!
 - [x] **Total acumulado de subfluxogramas cobertos por infográficos HD: 43 de 88 (48.9%)**! 🏆
+
+
+## [2026-10-24] - Onda S6: Uroginecologia & Assoalho Pélvico Concluída (11 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `prolapso-popq` — **Estadiamento Anatômico POP-Q & Pontos de Referência**: Ba, Bp, C, D, Aa, Ap, gh, pb, tvl (`imagens/infografico-gin-prolapso-popq.png` — 1200x2909px) ✅
+2. `prolapso-iue-oculta` — **Investigação e Manejo da IUE Oculta Pós-Redução**: Teste com redução mecânica por espéculo/pessário (`imagens/infografico-gin-prolapso-iue-oculta.png` — 1200x2565px) ✅
+3. `prolapso-pessarios` — **Terapia Conservadora: Pessários Vaginais & Reabilitação**: Suporte (anel) vs Preenchimento (Gellhorn/cubo) (`imagens/infografico-gin-prolapso-pessarios.png` — 1200x2675px) ✅
+4. `prolapso-reconstrutiva` — **Cirurgias Reconstrutivas: Promontofixação vs Cirurgia Vaginal**: Fixação sacroespinhosa vs Sacrocolpopexia (`imagens/infografico-gin-prolapso-reconstrutiva.png` — 1200x2763px) ✅
+5. `prolapso-colpocleise` — **Cirurgias Obliterativas: Colpocleise de Le Fort e Latzko**: Sem desejo coital futuro (`imagens/infografico-gin-prolapso-colpocleise.png` — 1200x3413px) ✅
+6. `incont-urodinamica` — **Estudo Urodinâmico Completo & Interpretação de Traçados**: Fluxometria, Cistometria, VLPP/PMU (`imagens/infografico-gin-incont-urodinamica.png` — 1200x3102px) ✅
+7. `incont-bhi-urgencia` — **Bexiga Hiperativa: Tratamento Escalonado e Farmacoterapia**: Antimuscarínicos, Mirabegrona, Botox intravesical (`imagens/infografico-gin-incont-bhi-urgencia.png` — 1200x2873px) ✅
+8. `incont-iue-fisiopatologia` — **Incontinência Urinária de Esforço (IUE): Fisiopatologia & Diagnóstico**: Hipermobilidade uretral vs Deficiência esfincteriana intrínseca (`imagens/infografico-gin-incont-iue-fisiopatologia.png` — 1200x3017px) ✅
+9. `incont-slings` — **Slings de Uretra Média: TVT Retropúbico vs TOT Transobturador**: TVT (VLPP <60) vs TOT (VLPP >90) (`imagens/infografico-gin-incont-slings.png` — 1200x2900px) ✅
+10. `incont-mista` — **Incontinência Urinária Mista (IUM): Diagnóstico e Priorização**: Tratar primeiro o componente que mais incomoda (`imagens/infografico-gin-incont-mista.png` — 1200x2653px) ✅
+11. `vulva-bartholin` — **Patologia da Glândula de Bartholin: Cisto vs Abscesso & Cateter de Word**: Drenagem e cateter de Word vs Marsupialização (`imagens/infografico-gin-vulva-bartholin.png` — 1200x2878px) ✅
+
+- [x] **Onda S6 100% Concluída (11/11 infográficos)**! Acumulado: 54 de 88 (61.4%).
+
+
+## [2026-10-24] - Onda S7: Infecções Genitais & DIP Concluída (10 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `infeccoes-vaginose-candida` — **Vaginose Bacteriana vs Candidíase Vulvovaginal**: Critérios de Amsel e Nugent vs Candida esporos/hifas (`imagens/infografico-gin-infeccoes-vaginose-candida.png` — 1200x2836px) ✅
+2. `infeccoes-tricomoniase-cervicites` — **Tricomoníase Vaginal & Cervicites Mucopurulentas**: Protozoário flagelado, colo em morango, tratamento simultâneo da parceria (`imagens/infografico-gin-infeccoes-tricomoniase-cervicites.png` — 1200x2633px) ✅
+3. `infeccoes-dip-diagnostico` — **DIP: Critérios Clínicos & Classificação de Monif**: Tríade maior, menores e elaborados (`imagens/infografico-gin-infeccoes-dip-diagnostico.png` — 1200x2764px) ✅
+4. `infeccoes-dip-manejo` — **DIP: Protocolo Ambulatorial vs Hospitalar & ATO**: Ceftriaxona + Doxiciclina + Metronidazol (`imagens/infografico-gin-infeccoes-dip-manejo.png` — 1200x3023px) ✅
+5. `infeccoes-ulceras-ists` — **Diagnóstico Diferencial das Úlceras Genitais & ISTs**: Cancro duro (Sífilis), Cancro mole, Herpes simples, Linfogranuloma, Donovanose (`imagens/infografico-gin-infeccoes-ulceras-ists.png` — 1200x2847px) ✅
+6. `dipav-criterios` — **Critérios de Gainesville/CDC & Abdome Agudo**: Dor pélvica, hipersensibilidade anexial e à mobilização cervical (`imagens/infografico-gin-dipav-criterios.png` — 1200x2795px) ✅
+7. `dipav-monif` — **Estadiamento de Monif & Fitz-Hugh-Curtis**: Monif I a IV, aderências em corda de violino peri-hepáticas (`imagens/infografico-gin-dipav-monif.png` — 1200x2718px) ✅
+8. `dipav-terapeutica` — **Algoritmo Terapêutico Ambulatorial vs Parenteral**: Esquemas antimicrobianos detalhados (`imagens/infografico-gin-dipav-terapeutica.png` — 1200x2744px) ✅
+9. `dipav-abscesso` — **Abscesso Tubo-Ovariano (ATO) & Diretriz do DIU**: Manutenção inicial do DIU salvo ausência de resposta em 48-72h (`imagens/infografico-gin-dipav-abscesso.png` — 1200x2700px) ✅
+10. `dipav-sequelas` — **Sequelas Crônicas Tardias Pós-DIP: Hidrossalpinge & FIV**: Salpingectomia antes da FIV por líquido embriotóxico (`imagens/infografico-gin-dipav-sequelas.png` — 1200x2408px) ✅
+
+- [x] **Onda S7 100% Concluída (10/10 infográficos)**! Acumulado: 64 de 88 (72.7%).
+
+
+## [2026-10-24] - Onda S8: Endocrinologia Ginecológica & TRH Concluída (15 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `amenor-rokitansky-morris` — **Rokitansky (MRKH 46,XX) vs Morris (CAIS 46,XY)** (`imagens/infografico-gin-amenor-rokitansky-morris.png` — 1200x3386px) ✅
+2. `amenor-secundaria` — **Amenorreia Secundária: Algoritmo dos 4 Passos** (`imagens/infografico-gin-amenor-secundaria.png` — 1200x2840px) ✅
+3. `amenor-hipotalamo-hipofise` — **Diferenciação Central: Hipotálamo (IV) vs Hipófise (III)** (`imagens/infografico-gin-amenor-hipotalamo-hipofise.png` — 1200x2981px) ✅
+4. `amenor-cariotipo` — **Cariótipo, Disgenesias Gonadais & Risco do Cromossomo Y** (`imagens/infografico-gin-amenor-cariotipo.png` — 1200x2631px) ✅
+5. `amenor-manejo` — **Indução Puberal & TRH na Insuficiência Ovariana Prematura** (`imagens/infografico-gin-amenor-manejo.png` — 1200x2636px) ✅
+6. `clim-janela-contraindicacoes` — **Janela de Oportunidade e Contraindicações da THM** (`imagens/infografico-gin-clim-janela-contraindicacoes.png` — 1200x2796px) ✅
+7. `clim-regimes-e-p` — **Regimes da THM: E+P Combinado vs Monoterapia vs Tibolona** (`imagens/infografico-gin-clim-regimes-e-p.png` — 1200x2768px) ✅
+8. `clim-vias-administracao` — **Vias do Estrogênio: Oral vs Transdérmica** (`imagens/infografico-gin-clim-vias-administracao.png` — 1200x2617px) ✅
+9. `clim-nao-hormonal` — **Manejo Não Hormonal dos Fogachos & Alerta do Tamoxifeno** (`imagens/infografico-gin-clim-nao-hormonal.png` — 1200x2716px) ✅
+10. `clim-sgm` — **Síndrome Geniturinária da Menopausa (SGM) & Terapia Tópica** (`imagens/infografico-gin-clim-sgm.png` — 1200x2610px) ✅
+11. `trhav-monitoramento-testosterona` — **Testosterona no TDSH & Monitoramento de Segurança** (`imagens/infografico-gin-trhav-monitoramento-testosterona.png` — 1200x2659px) ✅
+12. `trhav-sangramento-investigacao` — **Sangramento Uterino Inesperado na TRH** (`imagens/infografico-gin-trhav-sangramento-investigacao.png` — 1200x2474px) ✅
+13. `trhav-osteoporose` — **TRH & Saúde Óssea na Pós-Menopausa (FRAX / Densitometria)** (`imagens/infografico-gin-trhav-osteoporose.png` — 1200x2664px) ✅
+14. `trhav-ajuste-doses-efeitos` — **Ajuste Fino de Doses & Efeitos Adversos na TRH** (`imagens/infografico-gin-trhav-ajuste-doses-efeitos.png` — 1200x2481px) ✅
+15. `trhav-desmame` — **Protocolo de Descontinuação & Desmame Gradual da TRH** (`imagens/infografico-gin-trhav-desmame.png` — 1200x2487px) ✅
+
+- [x] **Onda S8 100% Concluída (15/15 infográficos)**! Acumulado: 79 de 88 (89.8%).
+
+
+## [2026-10-24] - Onda S9: Sexologia, Abdome Agudo & Contracepção Concluída (9 infográficos novos)
+
+### Infográficos Renderizados e Integrados:
+1. `dsf-desejo` — **Transtorno do Desejo Sexual Hipoativo (TDSH / TIESF)**: Critérios DSM-5, TCC sexual, Flibanserina, Bremelanotida, Testosterona 300 mcg/d na pós-menopausa (`imagens/infografico-gin-dsf-desejo.png` — 1200x2596px) ✅
+2. `dsf-excitacao` — **Transtorno da Excitação Sexual Feminina (DESF)**: Fisiopatologia neurovascular, lubrificantes, estriol tópico na SGM, Sildenafila 25-50 mg sob demanda (`imagens/infografico-gin-dsf-excitacao.png` — 1200x2655px) ✅
+3. `dsf-orgasmo` — **Disfunção Orgásmica Feminina (DOF / Anorgasmia)**: Estímulo clitoridiano direto concomitante, masturbação dirigida de Heiman & LoPiccolo, manejo da anorgasmia por ISRS (`imagens/infografico-gin-dsf-orgasmo.png` — 1200x2526px) ✅
+4. `dsf-dor` — **Transtorno de Dor Gênito-Pélvica/Penetração (TDGPP)**: Vaginismo (fisioterapia pélvica, dilatadores de Hegar) vs Vestibulodinia Provocada (teste do cotonete, lidocaína tópica, amitriptilina) vs Dispareunia profunda (`imagens/infografico-gin-dsf-dor.png` — 1200x2586px) ✅
+5. `dsf-iatrogenias` — **Iatrogenias Farmacológicas na Sexualidade Feminina**: ISRS e associação de Bupropiona; ACO combinado e elevação de SHBG hepática (troca por DIU-LNG); betabloqueadores (`imagens/infografico-gin-dsf-iatrogenias.png` — 1200x2567px) ✅
+6. `abdome-ectopica` — **Prenhez Ectópica: Manejo Clínico (MTX) vs Cirúrgico**: Zona discriminatória (hCG 1500-2000), critérios estritos de Metotrexato 50 mg/m² IM dose única, queda ≥15% entre D4 e D7, salpingostomia vs salpingectomia (`imagens/infografico-gin-abdome-ectopica.png` — 1200x2644px) ✅
+7. `abdome-torcao` — **Torção Anexial & Cisto Ovariano Hemorrágico**: Dor aguda com vômitos, sinal do redemoinho ao Doppler, padrão-ouro de laparoscopia com destorção conservadora de urgência (evitar ooforectomia de rotina) (`imagens/infografico-gin-abdome-torcao.png` — 1200x2868px) ✅
+8. `contracepcao-escape` — **Progestagênios & Manejo do Sangramento de Escape (Spotting)**: Atrofia endometrial e microvasos frágeis sob LARCs/DIU-LNG/implante; manejo escalonado com AINEs, ácido tranexâmico ou valerato de estradiol curto; não retirar LARC precocemente (`imagens/infografico-gin-contracepcao-escape.png` — 1200x2529px) ✅
+9. `contracepcao-emergencia` — **Anticoncepção de Emergência & Regras de Esquecimento**: Levonorgestrel 1,5 mg até 72h, Acetato de Ulipristal 30 mg até 120h (eleição em IMC >30), DIU de Cobre até 120h (>99,8% eficácia); Regras práticas de esquecimento de pílulas (<48h vs ≥48h com 7 dias de preservativo) (`imagens/infografico-gin-contracepcao-emergencia.png` — 1200x2569px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Diretrizes FEBRASGO, ISSWSH, ISSVD, ACOG, CDC e Critérios de Elegibilidade Médica da OMS 2024 aplicadas
+- [x] Templates HTML verticais semânticos 1200px criados e validados no padrão canônico ouro
+- [x] Renderização Headless Chrome e corte milimétrico PIL nos 9 PNGs HD em `imagens/`
+- [x] Integração canônica Dual-Toggle em `content/ginecologia/dsf.html` (5 seções), `abdome.html` (2 seções) e `contracepcao.html` (2 seções)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v34`)
+- [x] **Onda S9 100% Concluída (9/9 infográficos)**!
+- [x] **META HISTÓRICA ATINGIDA: 88 DE 88 SUB-FLUXOGRAMAS DE GINECOLOGIA (100%) CONCLUÍDOS NO PADRÃO CANÔNICO OURO!** 🏆🎉
