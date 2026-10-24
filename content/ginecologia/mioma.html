@@ -59,20 +59,57 @@
         </div>
       </div>
 
-      <div class="card">
+      <!-- Card com Alternância Dupla: Infográfico NotebookLM HD vs Fluxograma SVG -->
+      <div class="card visual-guide-card">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma da Classificação FIGO (Tipos 0 a 8) e Correlação com Sintomas e Conduta</h2>
+          <div class="header-title-group">
+            <h2 class="card-title">Mapa Visual & Infográfico Clínico: Miomatose Uterina & Classificação FIGO</h2>
+            <p class="card-subtitle">Alterne entre o infográfico vertical editorial (padrão-ouro HD) e o fluxograma esquemático clássico em SVG.</p>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_mioma_classificacao_figo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <!-- Alternador de Visualização -->
+            <div class="view-toggle-pills" id="mioma-view-toggle">
+              <button class="toggle-pill active" data-view="infographic" onclick="switchVisualView('mioma', 'infographic')">
+                <span class="pill-icon">📊</span> Infográfico NotebookLM (HD)
+              </button>
+              <button class="toggle-pill" data-view="flowchart" onclick="switchVisualView('mioma', 'flowchart')">
+                <span class="pill-icon">📐</span> Fluxograma SVG Clássico
+              </button>
+            </div>
+            <!-- Controles de Ação e Zoom -->
+            <div class="action-buttons-group">
+              <button class="btn-zoom" onclick="zoomVisual('mioma', 0.15)" title="Aumentar Zoom">Zoom +</button>
+              <button class="btn-zoom" onclick="zoomVisual('mioma', -0.15)" title="Diminuir Zoom">Zoom −</button>
+              <button class="btn-zoom" onclick="resetVisualZoom('mioma')" title="Tamanho Padrão (100%)">100%</button>
+              <button class="btn-action-tool" id="mioma-expand-btn" onclick="toggleExpandVisual('mioma')" title="Expandir visualização">⤢ Expandir</button>
+              <a href="imagens/infografico-gin-mioma.png" id="mioma-fullscreen-link" target="_blank" class="btn-action-tool" title="Abrir em Tela Cheia">↗ Tela Cheia</a>
+              <a href="imagens/infografico-gin-mioma.png" id="mioma-download-link" download="infografico-gin-mioma.png" class="btn-action-tool download-btn" title="Baixar Imagem HD">⬇ Baixar HD</a>
+            </div>
           </div>
         </div>
-        <div class="flowchart-container">
-          <img src="imagens/fluxograma_mioma_classificacao_figo.svg" alt="Fluxograma Classificação FIGO Miomas" class="flowchart-img" loading="lazy" decoding="async">
+
+        <!-- Container do Display Visual -->
+        <div class="visual-display-wrapper" id="mioma-visual-display" data-current-view="infographic" data-scale="1.0">
+          <!-- View 1: Infográfico HD Vertical -->
+          <div class="visual-view infographic-view active">
+            <img src="imagens/infografico-gin-mioma.png" 
+                 alt="Infográfico Clínico Completo: Miomatose Uterina, Classificação FIGO 0 a 8, Escore STEPW e Condutas - FEBRASGO / PALM-COEIN" 
+                 class="infographic-hd-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+          <!-- View 2: Fluxograma SVG Clássico -->
+          <div class="visual-view flowchart-view">
+            <img src="imagens/fluxograma_mioma_classificacao_figo.svg" 
+                 alt="Fluxograma Vetorial Clássico: Classificação FIGO de Miomas e Conduta" 
+                 class="flowchart-svg-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+        </div>
+        <div class="visual-footer-info">
+          <span class="info-badge">💡 Dica Clínica</span>
+          <span class="info-text">Os miomas submucosos (FIGO 0, 1 e 2) são os grandes causadores de menorragia e infertilidade; sua ressecção histeroscópica depende do escore STEPW de Lasmar. Em miomas intramurais e subserosos (FIGO 3 a 7), o DIU-LNG 52 mg e o Ácido Tranexâmico são opções clínicas excelentes. Na gestação com degeneração rubra, o tratamento é estritamente conservador (analgesia e hidratação).</span>
         </div>
       </div>
 

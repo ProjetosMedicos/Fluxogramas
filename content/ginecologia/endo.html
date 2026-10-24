@@ -59,20 +59,57 @@
         </div>
       </div>
 
-      <div class="card">
+      <!-- Card com Alternância Dupla: Infográfico NotebookLM HD vs Fluxograma SVG -->
+      <div class="card visual-guide-card">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Etiopatogenia de Sampson, os 3 Fenótipos Anatômicos e os 6 "D"s Clínicos</h2>
+          <div class="header-title-group">
+            <h2 class="card-title">Mapa Visual & Infográfico Clínico: Endometriose Pélvica & Profunda</h2>
+            <p class="card-subtitle">Alterne entre o infográfico vertical editorial (padrão-ouro HD) e o fluxograma esquemático clássico em SVG.</p>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_endometriose_fisiopatologia_clinica.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <!-- Alternador de Visualização -->
+            <div class="view-toggle-pills" id="endo-view-toggle">
+              <button class="toggle-pill active" data-view="infographic" onclick="switchVisualView('endo', 'infographic')">
+                <span class="pill-icon">📊</span> Infográfico NotebookLM (HD)
+              </button>
+              <button class="toggle-pill" data-view="flowchart" onclick="switchVisualView('endo', 'flowchart')">
+                <span class="pill-icon">📐</span> Fluxograma SVG Clássico
+              </button>
+            </div>
+            <!-- Controles de Ação e Zoom -->
+            <div class="action-buttons-group">
+              <button class="btn-zoom" onclick="zoomVisual('endo', 0.15)" title="Aumentar Zoom">Zoom +</button>
+              <button class="btn-zoom" onclick="zoomVisual('endo', -0.15)" title="Diminuir Zoom">Zoom −</button>
+              <button class="btn-zoom" onclick="resetVisualZoom('endo')" title="Tamanho Padrão (100%)">100%</button>
+              <button class="btn-action-tool" id="endo-expand-btn" onclick="toggleExpandVisual('endo')" title="Expandir visualização">⤢ Expandir</button>
+              <a href="imagens/infografico-gin-endo.png" id="endo-fullscreen-link" target="_blank" class="btn-action-tool" title="Abrir em Tela Cheia">↗ Tela Cheia</a>
+              <a href="imagens/infografico-gin-endo.png" id="endo-download-link" download="infografico-gin-endo.png" class="btn-action-tool download-btn" title="Baixar Imagem HD">⬇ Baixar HD</a>
+            </div>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_endometriose_fisiopatologia_clinica.svg" alt="Fluxograma de Fisiopatologia da Endometriose" class="flowchart-img" loading="lazy" decoding="async">
+
+        <!-- Container do Display Visual -->
+        <div class="visual-display-wrapper" id="endo-visual-display" data-current-view="infographic" data-scale="1.0">
+          <!-- View 1: Infográfico HD Vertical -->
+          <div class="visual-view infographic-view active">
+            <img src="imagens/infografico-gin-endo.png" 
+                 alt="Infográfico Clínico Completo: Endometriose Pélvica e Profunda, Fenótipos Clínicos, 6 Ds e Condutas - FEBRASGO / ESHRE" 
+                 class="infographic-hd-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+          <!-- View 2: Fluxograma SVG Clássico -->
+          <div class="visual-view flowchart-view">
+            <img src="imagens/fluxograma_endometriose_fisiopatologia_clinica.svg" 
+                 alt="Fluxograma Vetorial Clássico: Fisiopatologia e Clínica da Endometriose" 
+                 class="flowchart-svg-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+        </div>
+        <div class="visual-footer-info">
+          <span class="info-badge">💡 Dica Clínica</span>
+          <span class="info-text">A endometriose não é doença de diagnóstico cirúrgico; a USG com preparo intestinal e a RM pélvica têm sensibilidade > 90% para mapeamento anatômico (#Enzian). O tratamento clínico de primeira linha para a dor é farmacológico (Dienogeste 2 mg ou DIU-LNG). A cirurgia é reservada para refratariedade álgica, endometriomas volumosos ou risco a órgãos nobres (ureter/intestino), com atenção redobrada à preservação da reserva ovariana (AMH).</span>
         </div>
       </div>
 

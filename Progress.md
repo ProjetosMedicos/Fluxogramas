@@ -1,7 +1,7 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** 🦠 **Onda G4 Concluída! Infecções Genitais, DIP & ISTs na Mulher (20/38 Módulos)**  
-> **Próxima Etapa:** 🎗️ **Onda G5: Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor**  
+> **Status Atual:** 🎗️ **Onda G5 Concluída! Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor (25/38 Módulos)**  
+> **Próxima Etapa:** ⚡ **Onda G6: Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica**  
 > **Última Atualização:** 23/10/2026
 
 ---
@@ -9,9 +9,9 @@
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [███████████████████████████░] 79.1%  (68 / 86 módulos)
+GLOBAL (Pediatria + Ginecologia): [████████████████████████████░] 84.9%  (73 / 86 módulos)
 PEDIATRIA (Total):                [████████████████████████████] 100%   (48 / 48 módulos) 🏆
-GINECOLOGIA & OBSTETRÍCIA:        [███████████████░░░░░░░░░░░░░]  52.6% (20 / 38 módulos)
+GINECOLOGIA & OBSTETRÍCIA:        [██████████████████░░░░░░░░░░]  65.8% (25 / 38 módulos)
 ```
 
 ---
@@ -26,11 +26,11 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 | **Onda G2** | Mastologia & Oncologia Ginecológica | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎀 |
 | **Onda G3** | Climatério, Anticoncepção & Planejamento Familiar | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 💊 |
 | **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🦠 |
-| **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
+| **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎗️ |
+| **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G8** | Infância, Adolescência, Atenção Integral & Emergências | 4 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/4) |
-| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **52.6% Concluído** | **20 / 38 Módulos** |
+| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **65.8% Concluído** | **25 / 38 Módulos** |
 
 ---
 
@@ -205,5 +205,58 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
   - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v15`)
   - [x] Atualização de progresso e walkthrough
   - [x] Git commit e push para `origin/main`
+
+---
+
+## 📋 Registro de Conclusão da Onda G5 (Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor)
+
+### Módulos Concluídos:
+1. `mioma` — Miomatose Uterina & Classificação FIGO: Os 8 tipos FIGO, Escore STEPW de Lasmar, Miomectomia histeroscópica vs laparotômica, Embolização das Artérias Uterinas (EAU), Histerectomia e Degeneração Rubra na gestação (`imagens/infografico-gin-mioma.png` — 1200x3175px) ✅
+2. `adeno` — Adenomiose Uterina: Fisiopatologia da Zona Juncional (ZJ) e mecanismo TIAR, A tríade clínica (SUA + Dismenorreia + Útero globoso), Critérios ultrassonográficos MUSA e de Ressonância Magnética (ZJ ≥ 12 mm), Formas difusa vs focal e DIU-LNG 52 mg (`imagens/infografico-gin-adeno.png` — 1200x2696px) ✅
+3. `endo` — Endometriose Pélvica & Profunda: Teoria de Sampson, Os 3 Fenótipos Clínicos (peritoneal superficial, endometrioma e profunda > 5 mm), A semiótica dos 6 "D"s, Mapeamento com preparo intestinal e RM, Classificação #Enzian, Preservação de fertilidade/AMH e Conduta clínica (Dienogeste/DIU-LNG) vs Cirúrgica (`imagens/infografico-gin-endo.png` — 1200x2935px) ✅
+4. `dor` — Dor Pélvica Crônica & Dismenorreia: Dismenorreia primária (PGF2α) vs secundária estrutural, Sensibilização central e wind-up medular, As 4 grandes esferas da DPC (ginecológica, urológica/bexiga dolorosa, intestinal/SII e miofascial/neural), Manobra de Carnett e Critérios de Nantes (`imagens/infografico-gin-dor.png` — 1200x2727px) ✅
+5. `polipos` — Pólipos Endometriais & Cervicais: Biopatologia e superexpressão de Bcl-2, Classificação histopatológica, Os 5 preditores independentes de malignidade na pós-menopausa/Tamoxifeno, Propedêutica por Doppler com "feeding vessel" e Histerossonografia, e Algoritmo de conduta expectante vs Polipectomia Histeroscópica guiada sob visão direta (`imagens/infografico-gin-polipos.png` — 1200x2905px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] **Módulo 1: `mioma` (Miomatose Uterina & Classificação FIGO)**
+  - [x] Pesquisa clínica FEBRASGO Tratado Cap. 32 / FIGO PALM-COEIN / Escore STEPW
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_mioma_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-mioma.png`, 1200x3175px)
+  - [x] Validação visual dos recortes (`gin-mioma_top.png` e `gin-mioma_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/mioma.html`)
+
+- [x] **Módulo 2: `adeno` (Adenomiose Uterina & Critérios MUSA)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 34 / Consenso Internacional MUSA
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_adeno_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-adeno.png`, 1200x2696px)
+  - [x] Validação visual dos recortes (`gin-adeno_top.png` e `gin-adeno_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/adeno.html`)
+
+- [x] **Módulo 3: `endo` (Endometriose Pélvica & Profunda)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 35 / Diretrizes ESHRE / Classificação #Enzian
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_endo_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-endo.png`, 1200x2935px)
+  - [x] Validação visual dos recortes (`gin-endo_top.png` e `gin-endo_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/endo.html`)
+
+- [x] **Módulo 4: `dor` (Dor Pélvica Crônica & Dismenorreia)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 30 e 36 / ACOG Practice Bulletin / Critérios de Nantes
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_dor_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-dor.png`, 1200x2727px)
+  - [x] Validação visual dos recortes (`gin-dor_top.png` e `gin-dor_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/dor.html`)
+
+- [x] **Módulo 5: `polipos` (Pólipos Endometriais & Cervicais)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 33 / Consenso AAGL / FIGO PALM-COEIN
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_polipos_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-polipos.png`, 1200x2905px)
+  - [x] Validação visual dos recortes (`gin-polipos_top.png` e `gin-polipos_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/polipos.html`)
+
+- [x] **Encerramento da Onda G5:**
+  - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v16`)
+  - [x] Atualização de progresso e walkthrough
+  - [x] Git commit e push para `origin/main`
+
 
 
