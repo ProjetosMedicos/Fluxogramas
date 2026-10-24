@@ -34,26 +34,14 @@
 
   <!-- Sidebar Navigation -->
   <aside id="sidebar">
-    <!-- Sidebar Header -->
-    <div class="sidebar-header">
-      <div class="sidebar-brand" onclick="goHome(event)" role="button" tabindex="0" title="Ir para a Página Inicial (Alt + H)" style="cursor: pointer;">
-        <h2>Fluxogramas Médicos</h2>
-        <p id="sidebar-stats-caption">Ginecologia • 38 Módulos • 129 Fluxos</p>
-      </div>
-      <div class="sidebar-header-actions">
-        <button id="pwa-install-btn" class="btn-theme-toggle" onclick="installPWA()" title="Instalar Aplicativo no Dispositivo" style="display: none; background: rgba(2, 132, 199, 0.2); border-color: var(--primary); color: #38bdf8;">📲</button>
-        <button id="sidebar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
-        <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu">✕</button>
-      </div>
-    </div>
-
-    <!-- Atalho para Página Inicial -->
+    <!-- Topo da Barra Lateral: Página Inicial & Fechar (Mobile) -->
     <div class="sidebar-home-bar">
       <a href="#inicio" id="sidebar-home-btn" class="sidebar-home-link active" onclick="goHome(event)" title="Voltar à Página Inicial (Alt + H)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span>Página Inicial</span>
         <kbd>Alt H</kbd>
       </a>
+      <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu" aria-label="Fechar menu lateral">✕</button>
     </div>
 
     <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->

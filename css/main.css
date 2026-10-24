@@ -2564,8 +2564,13 @@
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        min-height: 38px;
-        min-width: 38px;
+        min-height: 36px;
+        min-width: 36px;
+        flex-shrink: 0;
+      }
+      .sidebar-home-bar {
+        padding-top: calc(14px + env(safe-area-inset-top, 0px)) !important;
+        padding-left: max(14px, env(safe-area-inset-left, 0px)) !important;
       }
       .sidebar-header {
         padding-top: calc(16px + env(safe-area-inset-top, 0px)) !important;
@@ -3981,14 +3986,19 @@
     /* PÁGINA INICIAL MINIMALISTA (HOME VIEW & NAVIGATION)               */
     /* ================================================================= */
     .sidebar-home-bar {
-      padding: 8px 14px 4px;
-      background-color: var(--bg-sidebar);
-    }
-    .sidebar-home-link {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 7px 11px;
+      padding: 12px 14px 10px;
+      background-color: var(--bg-sidebar);
+      border-bottom: 1px solid var(--border);
+    }
+    .sidebar-home-link {
+      flex: 1 1 auto;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
       border-radius: var(--radius-sm);
       border: 1px solid var(--border);
       background-color: var(--bg-card);
