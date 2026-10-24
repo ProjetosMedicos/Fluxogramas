@@ -59,20 +59,57 @@
         </div>
       </div>
 
-      <div class="card">
+      <!-- Card com Alternância Dupla: Infográfico NotebookLM HD vs Fluxograma SVG -->
+      <div class="card visual-guide-card">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma dos 3 Níveis de DeLancey: Suspensão Apical, Fixação Lateral e Fusão Perineal</h2>
+          <div class="header-title-group">
+            <h2 class="card-title">Mapa Visual & Infográfico Clínico: Prolapso de Órgãos Pélvicos</h2>
+            <p class="card-subtitle">Alterne entre o infográfico vertical editorial (padrão-ouro HD) e o fluxograma esquemático clássico em SVG.</p>
+          </div>
           <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_prolapso_niveis_delancey.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
-            </a>
+            <!-- Alternador de Visualização -->
+            <div class="view-toggle-pills" id="prolapso-view-toggle">
+              <button class="toggle-pill active" data-view="infographic" onclick="switchVisualView('prolapso', 'infographic')">
+                <span class="pill-icon">📊</span> Infográfico NotebookLM (HD)
+              </button>
+              <button class="toggle-pill" data-view="flowchart" onclick="switchVisualView('prolapso', 'flowchart')">
+                <span class="pill-icon">📐</span> Fluxograma SVG Clássico
+              </button>
+            </div>
+            <!-- Controles de Ação e Zoom -->
+            <div class="action-buttons-group">
+              <button class="btn-zoom" onclick="zoomVisual('prolapso', 0.15)" title="Aumentar Zoom">Zoom +</button>
+              <button class="btn-zoom" onclick="zoomVisual('prolapso', -0.15)" title="Diminuir Zoom">Zoom −</button>
+              <button class="btn-zoom" onclick="resetVisualZoom('prolapso')" title="Tamanho Padrão (100%)">100%</button>
+              <button class="btn-action-tool" id="prolapso-expand-btn" onclick="toggleExpandVisual('prolapso')" title="Expandir visualização">⤢ Expandir</button>
+              <a href="imagens/infografico-gin-prolapso.png" id="prolapso-fullscreen-link" target="_blank" class="btn-action-tool" title="Abrir em Tela Cheia">↗ Tela Cheia</a>
+              <a href="imagens/infografico-gin-prolapso.png" id="prolapso-download-link" download="infografico-gin-prolapso.png" class="btn-action-tool download-btn" title="Baixar Imagem HD">⬇ Baixar HD</a>
+            </div>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_prolapso_niveis_delancey.svg" alt="Fluxograma Níveis de DeLancey" class="flowchart-img" loading="lazy" decoding="async">
+
+        <!-- Container do Display Visual -->
+        <div class="visual-display-wrapper" id="prolapso-visual-display" data-current-view="infographic" data-scale="1.0">
+          <!-- View 1: Infográfico HD Vertical -->
+          <div class="visual-view infographic-view active">
+            <img src="imagens/infografico-gin-prolapso.png" 
+                 alt="Infográfico Clínico Completo: Prolapso de Órgãos Pélvicos, Níveis de DeLancey, POP-Q e Condutas - FEBRASGO / ICS" 
+                 class="infographic-hd-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+          <!-- View 2: Fluxograma SVG Clássico -->
+          <div class="visual-view flowchart-view">
+            <img src="imagens/fluxograma_prolapso_niveis_delancey.svg" 
+                 alt="Fluxograma Vetorial Clássico: Níveis de DeLancey no Prolapso" 
+                 class="flowchart-svg-img" 
+                 loading="lazy" 
+                 decoding="async">
+          </div>
+        </div>
+        <div class="visual-footer-info">
+          <span class="info-badge">💡 Dica Clínica</span>
+          <span class="info-text">A identificação precisa do nível de DeLancey rompido (Nível I apical, Nível II lateral ou Nível III distal) orienta a técnica reconstrutiva correta. Em prolapsos avançados (Estádios III e IV), realize SEMPRE a manobra de redução do prolapso para desmascarar Incontinência Urinária de Esforço (IUE) oculta antes da cirurgia. Em idosas com alto risco cirúrgico, os pessários vaginais associados a estriol tópico são opções seguras e de primeira linha.</span>
         </div>
       </div>
 

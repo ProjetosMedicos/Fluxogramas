@@ -1,17 +1,17 @@
 # 📊 Painel de Progresso Geral — Infográficos Clínicos HD (Fluxomed)
 
-> **Status Atual:** 🎗️ **Onda G5 Concluída! Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor (25/38 Módulos)**  
-> **Próxima Etapa:** ⚡ **Onda G6: Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica**  
-> **Última Atualização:** 23/10/2026
+> **Status Atual:** 🩺 **Onda G6 Concluída! Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica (30/38 Módulos)**  
+> **Próxima Etapa:** ⚡ **Onda G7: Reprodução Humana, Infertilidade, Prolactina, IOP & PGR**  
+> **Última Atualização:** 24/10/2026
 
 ---
 
 ## 📈 Gráfico Geral de Conclusão
 
 ```text
-GLOBAL (Pediatria + Ginecologia): [████████████████████████████░] 84.9%  (73 / 86 módulos)
+GLOBAL (Pediatria + Ginecologia): [███████████████████████████░] 90.7%  (78 / 86 módulos)
 PEDIATRIA (Total):                [████████████████████████████] 100%   (48 / 48 módulos) 🏆
-GINECOLOGIA & OBSTETRÍCIA:        [██████████████████░░░░░░░░░░]  65.8% (25 / 38 módulos)
+GINECOLOGIA & OBSTETRÍCIA:        [█████████████████████░░░░░░░]  78.9% (30 / 38 módulos)
 ```
 
 ---
@@ -27,10 +27,10 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 | **Onda G3** | Climatério, Anticoncepção & Planejamento Familiar | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 💊 |
 | **Onda G4** | Infecções Genitais, DIP & ISTs na Mulher | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🦠 |
 | **Onda G5** | Patologia Benigna: Mioma, Adenomiose, Endometriose & Dor | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🎗️ |
-| **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
-| **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/5) |
+| **Onda G6** | Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica | 5 | ✅ Concluído | `[██████████]` 100% (5/5) 🩺 |
+| **Onda G7** | Reprodução Humana, Infertilidade, Prolactina, IOP & PGR | 5 | 🎯 Próxima Onda | `[░░░░░░░░░░]` 0% (0/5) |
 | **Onda G8** | Infância, Adolescência, Atenção Integral & Emergências | 4 | ⏳ Na Fila | `[░░░░░░░░░░]` 0% (0/4) |
-| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **65.8% Concluído** | **25 / 38 Módulos** |
+| **SUBTOTAL** | **Ginecologia & Obstetrícia** | **38** | **78.9% Concluído** | **30 / 38 Módulos** |
 
 ---
 
@@ -257,6 +257,59 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
   - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v16`)
   - [x] Atualização de progresso e walkthrough
   - [x] Git commit e push para `origin/main`
+
+---
+
+## 📋 Registro de Conclusão da Onda G6 (Uroginecologia, Assoalho Pélvico & Cirurgia Ginecológica)
+
+### Módulos Concluídos:
+1. `prolapso` — Prolapso de Órgãos Pélvicos (POP): Níveis de DeLancey (I, II e III), Estadiamento POP-Q (9 pontos), Pesquisa de IUE Oculta com redução anatômica, Manejo com Pessários (+ Estriol vaginal) e Cirurgias reconstrutivas (Sacrocolpopexia, Richter, Colporrafias e Colpocleise de Le Fort) (`imagens/infografico-gin-prolapso.png` — 1200x2923px) ✅
+2. `incont` — Incontinência Urinária Feminina: IUE (hipermobilidade vs Deficiência Esfincteriana Intrínseca com VLPP < 60 cmH2O) vs IUU / Bexiga Hiperativa vs Incontinência Mista (IUM), Estudo Urodinâmico completo, Slings de uretra média (TVT retropúbico vs TOT transobturatório), Antimuscarínicos e Mirabegrona (`imagens/infografico-gin-incont.png` — 1200x3788px) ✅
+3. `urocomplexa` — Uroginecologia Complexa & ITUR: Infecções Urinárias Recorrentes (eubiose, D-manose, nitrofurantoína contínua/pós-coital, estrogênio tópico), Fístulas Urogenitais (vesicovaginal vs ureterovaginal, teste do azul de metileno e 3 tampões de gaze, técnica de Latzko), e Bexiga Dolorosa / Cistite Intersticial (sinal de alívio pós-miccional, quebra de GAGs, amitriptilina e pentosana) (`imagens/infografico-gin-urocomplexa.png` — 1200x2983px) ✅
+4. `cirurgia` — Anatomia Cirúrgica Pélvica & Cirurgia Minimamente Invasiva: Os 6 Espaços Avasculares da Pelve (Retzius, paravesical, vesicovaginal, pararretal de Latzko/Okabayashi, retrovaginal e pré-sacral), Trajeto crítico do Ureter ("água sob a ponte" em relação à artéria uterina e ligamentos IP), Malformações Müllerianas (Classificação ESHRE/ESGE: septado, bicorno, didelfo, unicorno, Rokitansky) e Limites de absorção com meios de distensão histeroscópica (Glicina 1.000 mL vs SF 2.500 mL) (`imagens/infografico-gin-cirurgia.png` — 1200x3072px) ✅
+5. `abdome` — Abdome Agudo em Ginecologia & Hemorragias Graves: As 4 Síndromes clínicas (Hemorrágico, Isquêmico, Inflamatório e Perfurativo); Triagem por estabilidade hemodinâmica (FAST imediato); Gravidez Ectópica rota vs protocolo de Metotrexato em dose única (50 mg/m² com critérios de D4/D7); Torção Anexial com nova diretriz de destorção laparoscópica precoce e preservação ovariana; e Choque séptico por abscesso tubo-ovariano roto (`imagens/infografico-gin-abdome.png` — 1200x2837px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] **Módulo 1: `prolapso` (Prolapso Genital & POP-Q)**
+  - [x] Pesquisa clínica FEBRASGO Tratado Cap. 68 / ICS / IUGA
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_prolapso_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-prolapso.png`, 1200x2923px)
+  - [x] Validação visual dos recortes (`gin-prolapso_top.png` e `gin-prolapso_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/prolapso.html`)
+
+- [x] **Módulo 2: `incont` (Incontinência Urinária Feminina)**
+  - [x] Pesquisa clínica FEBRASGO Cap. 67 / IUGA / ICS / ACOG
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_incont_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-incont.png`, 1200x3788px)
+  - [x] Validação visual dos recortes (`gin-incont_top.png` e `gin-incont_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/incont.html`)
+
+- [x] **Módulo 3: `urocomplexa` (Uroginecologia Complexa & ITUR)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 66 e 69 / EAU / IUGA
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_urocomplexa_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-urocomplexa.png`, 1200x2983px)
+  - [x] Validação visual dos recortes (`gin-urocomplexa_top.png` e `gin-urocomplexa_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/urocomplexa.html`)
+
+- [x] **Módulo 4: `cirurgia` (Anatomia Cirúrgica Pélvica & Müller)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 1-3, 5, 15-18 / ESHRE / AAGL
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_cirurgia_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-cirurgia.png`, 1200x3072px)
+  - [x] Validação visual dos recortes (`gin-cirurgia_top.png` e `gin-cirurgia_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/cirurgia.html`)
+
+- [x] **Módulo 5: `abdome` (Abdome Agudo em Ginecologia & Hemorragias)**
+  - [x] Pesquisa clínica FEBRASGO Caps. 37 e 39 / ACOG Practice Bulletins
+  - [x] Criação do template HTML vertical 1200px (`scratch/infografico_abdome_vertical.html`)
+  - [x] Renderização Headless Chrome CDP (`imagens/infografico-gin-abdome.png`, 1200x2837px)
+  - [x] Validação visual dos recortes (`gin-abdome_top.png` e `gin-abdome_bot.png`)
+  - [x] Integração no webapp com alternância dupla (`content/ginecologia/abdome.html`)
+
+- [x] **Encerramento da Onda G6:**
+  - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v17`)
+  - [x] Atualização de progresso e walkthrough
+  - [x] Git commit e push para `origin/main`
+
 
 
 

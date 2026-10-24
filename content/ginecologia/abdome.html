@@ -88,20 +88,94 @@
         <p>Protocolo sequencial de tomada de decisão: avaliação imediata, FAST ultrassonográfico e indicação cirúrgica de urgência.</p>
       </div>
 
-      <div class="card">
-        <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma Visual de Triagem no Abdome Agudo Ginecológico</h2>
-          <div class="flowchart-actions">
-            <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
-            <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_abdome_agudo_triagem.svg" target="_blank" class="btn-image-open">Abrir SVG ↗</a>
+      <div class="card" id="card-visual-abdome">
+        <div class="card-header-flex" style="flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center;">
+          <h2 class="card-title" style="margin: 0;">Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica</h2>
+          <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
+            <!-- Alternância de Visualização -->
+            <div class="segmented-control" id="abdome-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
+              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchAbdomeView('infographic')" style="border: none; background: #dc2626; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
+                📊 Infográfico NotebookLM (HD)
+              </button>
+              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchAbdomeView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
+                📐 Fluxograma SVG Clássico
+              </button>
+            </div>
+
+            <!-- Ações Rápidas de Zoom / Modal / Download -->
+            <div class="flowchart-actions" style="margin: 0;">
+              <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
+              <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
+              <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
+              <button class="btn-zoom" id="abdome-expand-btn" onclick="toggleAbdomeExpand()" title="Expandir Visualização">⛶ Expandir</button>
+              <a href="imagens/infografico-gin-abdome.png" target="_blank" id="abdome-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
+                Tela Cheia ↗
+              </a>
+              <a href="imagens/infografico-gin-abdome.png" download="infografico-gin-abdome.png" id="abdome-download-link" class="btn-image-open" style="background: #dc2626; color: #fff; border-color: #dc2626;" title="Download do Infográfico em Alta Resolução">
+                💾 Baixar HD
+              </a>
+            </div>
           </div>
         </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_abdome_agudo_triagem.svg" alt="Fluxograma de Triagem no Abdome Agudo" class="flowchart-img" loading="lazy" decoding="async" data-scale="1.0">
+
+        <div class="flowchart-img-container" id="abdome-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
+          <img src="imagens/infografico-gin-abdome.png" alt="Infográfico NotebookLM: Abdome Agudo em Ginecologia & Hemorragias Graves" class="flowchart-img" id="abdome-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
         </div>
       </div>
+
+      <script>
+        function switchAbdomeView(viewType) {
+          const img = document.getElementById('abdome-active-img');
+          const toggle = document.getElementById('abdome-view-toggle');
+          const fsLink = document.getElementById('abdome-fullscreen-link');
+          const dlLink = document.getElementById('abdome-download-link');
+          if (!img || !toggle) return;
+
+          const buttons = toggle.querySelectorAll('.btn-toggle');
+          buttons.forEach(btn => {
+            if (btn.dataset.view === viewType) {
+              btn.classList.add('active');
+              btn.style.background = '#dc2626';
+              btn.style.color = '#fff';
+            } else {
+              btn.classList.remove('active');
+              btn.style.background = 'transparent';
+              btn.style.color = '#475569';
+            }
+          });
+
+          if (viewType === 'infographic') {
+            img.src = 'imagens/infografico-gin-abdome.png';
+            img.alt = 'Infográfico NotebookLM: Abdome Agudo em Ginecologia & Hemorragias Graves';
+            if (fsLink) fsLink.href = 'imagens/infografico-gin-abdome.png';
+            if (dlLink) {
+              dlLink.href = 'imagens/infografico-gin-abdome.png';
+              dlLink.download = 'infografico-gin-abdome.png';
+              dlLink.style.display = 'inline-block';
+            }
+          } else {
+            img.src = 'imagens/fluxograma_abdome_agudo_triagem.svg';
+            img.alt = 'Fluxograma SVG: Triagem no Abdome Agudo';
+            if (fsLink) fsLink.href = 'imagens/fluxograma_abdome_agudo_triagem.svg';
+            if (dlLink) dlLink.style.display = 'none';
+          }
+          img.style.transform = 'scale(1)';
+        }
+
+        function toggleAbdomeExpand() {
+          const container = document.getElementById('abdome-visual-display');
+          const btn = document.getElementById('abdome-expand-btn');
+          if (!container || !btn) return;
+
+          if (container.style.maxHeight === 'none') {
+            container.style.maxHeight = '650px';
+            btn.textContent = '⛶ Expandir';
+          } else {
+            container.style.maxHeight = 'none';
+            btn.textContent = '🗗 Recolher';
+          }
+        }
+      </script>
 
       <div class="card">
         <h2 class="card-title">Protocolo de Atendimento por Estabilidade Hemodinâmica</h2>
