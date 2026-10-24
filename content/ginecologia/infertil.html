@@ -68,11 +68,11 @@
           <h2 class="card-title" style="margin: 0;">Algoritmo de Definição, Ponto de Corte Temporal & Critérios de Triagem Imediata</h2>
           <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
             <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="infertil-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchInfertilView('infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
+            <div class="segmented-control flowchart-view-toggle" id="infertil-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
+              <button type="button" class="btn-toggle view-btn active" data-view="infographic" data-mode="infographic" onclick="switchVisualMode(this, 'infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
                 📊 Infográfico NotebookLM (HD)
               </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchInfertilView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
+              <button type="button" class="btn-toggle view-btn" data-view="flowchart" data-mode="svg" onclick="switchVisualMode(this, 'svg')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
                 📐 Fluxograma SVG Clássico
               </button>
             </div>
@@ -82,7 +82,7 @@
               <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
               <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
               <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="infertil-expand-btn" onclick="toggleInfertilExpand()" title="Expandir Visualização">⛶ Expandir</button>
+              <button class="btn-zoom" id="infertil-expand-btn" onclick="toggleWideMode(this)" title="Expandir Visualização">↔ Expandir</button>
               <a href="imagens/infografico-gin-infertil.png" target="_blank" id="infertil-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
                 Tela Cheia ↗
               </a>
@@ -94,7 +94,17 @@
         </div>
 
         <div class="flowchart-img-container" id="infertil-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-infertil.png" alt="Infográfico NotebookLM: Infertilidade Conjugal & Reprodução Assistida" class="flowchart-img" id="infertil-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+          <img src="imagens/infografico-gin-infertil.png" 
+               data-infographic-src="imagens/infografico-gin-infertil.png"
+               data-svg-src="imagens/fluxograma_infertilidade_definicao_triagem.svg"
+               data-infographic-alt="Infográfico NotebookLM: Infertilidade Conjugal & Reprodução Assistida"
+               data-svg-alt="Fluxograma SVG: Definição e Triagem da Infertilidade"
+               alt="Infográfico NotebookLM: Infertilidade Conjugal & Reprodução Assistida" 
+               class="flowchart-img infographic-mode" 
+               id="infertil-active-img" 
+               style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" 
+               loading="lazy" 
+               decoding="async">
         </div>
       </div>
 
@@ -212,11 +222,11 @@
           <h2 class="card-title" style="margin: 0;">Fluxograma de Investigação Simultânea dos 4 Pilares da Infertilidade</h2>
           <div style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
             <!-- Alternância de Visualização -->
-            <div class="segmented-control" id="infertil-pilares-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
-              <button type="button" class="btn-toggle active" data-view="infographic" onclick="switchInfertilPilaresView('infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
+            <div class="segmented-control flowchart-view-toggle" id="infertil-pilares-view-toggle" style="display: inline-flex; background: #e2e8f0; padding: 3px; border-radius: 8px; gap: 4px;">
+              <button type="button" class="btn-toggle view-btn active" data-view="infographic" data-mode="infographic" onclick="switchVisualMode(this, 'infographic')" style="border: none; background: #0284c7; color: #fff; padding: 5px 12px; border-radius: 6px; font-weight: 700; font-size: 13px; cursor: pointer;">
                 📊 Infográfico NotebookLM (HD)
               </button>
-              <button type="button" class="btn-toggle" data-view="flowchart" onclick="switchInfertilPilaresView('flowchart')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
+              <button type="button" class="btn-toggle view-btn" data-view="flowchart" data-mode="svg" onclick="switchVisualMode(this, 'svg')" style="border: none; background: transparent; color: #475569; padding: 5px 12px; border-radius: 6px; font-weight: 600; font-size: 13px; cursor: pointer;">
                 📐 Fluxograma SVG Clássico
               </button>
             </div>
@@ -226,7 +236,7 @@
               <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
               <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
               <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-              <button class="btn-zoom" id="infertil-pilares-expand-btn" onclick="toggleInfertilPilaresExpand()" title="Expandir Visualização">⛶ Expandir</button>
+              <button class="btn-zoom" id="infertil-pilares-expand-btn" onclick="toggleWideMode(this)" title="Expandir Visualização">↔ Expandir</button>
               <a href="imagens/infografico-gin-infertil.png" target="_blank" id="infertil-pilares-fullscreen-link" class="btn-image-open" title="Visualizar em Tela Cheia">
                 Tela Cheia ↗
               </a>
@@ -238,7 +248,17 @@
         </div>
 
         <div class="flowchart-img-container" id="infertil-pilares-visual-display" style="min-height: 480px; display: flex; align-items: center; justify-content: center; background: #f8fafc; overflow: auto; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; transition: max-height 0.3s ease;">
-          <img src="imagens/infografico-gin-infertil.png" alt="Infográfico NotebookLM: Infertilidade Conjugal & Propedêutica dos 4 Pilares" class="flowchart-img" id="infertil-pilares-active-img" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" loading="lazy" decoding="async">
+          <img src="imagens/infografico-gin-infertil.png" 
+               data-infographic-src="imagens/infografico-gin-infertil.png"
+               data-svg-src="imagens/fluxograma_infertilidade_propedutica_basica.svg"
+               data-infographic-alt="Infográfico NotebookLM: Infertilidade Conjugal & Propedêutica dos 4 Pilares"
+               data-svg-alt="Fluxograma SVG: Propedêutica Básica dos 4 Pilares da Infertilidade"
+               alt="Infográfico NotebookLM: Infertilidade Conjugal & Propedêutica dos 4 Pilares" 
+               class="flowchart-img infographic-mode" 
+               id="infertil-pilares-active-img" 
+               style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); transition: transform 0.2s ease;" 
+               loading="lazy" 
+               decoding="async">
         </div>
       </div>
 

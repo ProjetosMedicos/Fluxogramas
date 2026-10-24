@@ -44,6 +44,12 @@ async function loadModule(moduleId) {
         wrapper.id = `module-content-${moduleId}`;
         wrapper.className = 'module-content-wrapper';
         wrapper.innerHTML = html;
+        wrapper.querySelectorAll('script').forEach(oldScript => {
+          const newScript = document.createElement('script');
+          Array.from(oldScript.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value));
+          newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+          oldScript.parentNode.replaceChild(newScript, oldScript);
+        });
         container.appendChild(wrapper);
       }
       loadedModules.add(moduleId);
@@ -437,26 +443,49 @@ function toggleWideMode(btn) {
 }
 
 function switchVisualMode(btn, mode) {
+  if (typeof btn === 'string') {
+    const modId = btn;
+    const modeType = mode === 'flowchart' ? 'svg' : mode;
+    const card = document.getElementById(`card-visual-${modId}`) || document.querySelector(`.card[data-module="${modId}"]`) || document.querySelector(`section[id^="${modId}"] .card`);
+    if (card) {
+      const targetBtn = card.querySelector(`.btn-toggle[data-mode="${modeType}"], .btn-toggle[data-view="${modeType}"], .view-btn[data-mode="${modeType}"]`);
+      if (targetBtn) {
+        return switchVisualMode(targetBtn, modeType);
+      }
+    }
+    return;
+  }
   const card = btn.closest('.card');
   if (!card) return;
-  const toggle = card.querySelector('.flowchart-view-toggle');
+  const toggle = card.querySelector('.flowchart-view-toggle, .segmented-control');
   if (toggle) {
-    toggle.querySelectorAll('.view-btn').forEach(b => b.classList.remove('active'));
+    toggle.querySelectorAll('.view-btn, .btn-toggle').forEach(b => {
+      b.classList.remove('active');
+      if (b.classList.contains('btn-toggle')) {
+        b.style.background = 'transparent';
+        b.style.color = '#475569';
+      }
+    });
     btn.classList.add('active');
+    if (btn.classList.contains('btn-toggle')) {
+      btn.style.background = '#0284c7';
+      btn.style.color = '#fff';
+    }
   }
   const img = card.querySelector('.flowchart-img, img');
-  const fullLink = card.querySelector('#bva-fullscreen-link, #asma-fullscreen-link, #pneumonia-fullscreen-link, #choque-fullscreen-link, #pcr-fullscreen-link, #reanima-fullscreen-link, .flowchart-actions .btn-image-open:not([download])');
-  const dlLink = card.querySelector('#bva-download-link, #asma-download-link, #pneumonia-download-link, #choque-download-link, #pcr-download-link, #reanima-download-link, .flowchart-actions a[download]');
+  const fullLink = card.querySelector('.flowchart-actions .btn-image-open:not([download])');
+  const dlLink = card.querySelector('.flowchart-actions a[download]');
   if (img) {
     img.dataset.scale = '1.0';
     img.style.transform = 'scale(1.0)';
     
-    const infoSrc = img.dataset.infographicSrc || 'imagens/infografico-ped-bronquiolite.png';
-    const svgSrc = img.dataset.svgSrc || 'imagens/fluxo-ped-bronquiolite.svg';
+    const infoSrc = img.dataset.infographicSrc || img.getAttribute('data-infographic-src') || 'imagens/infografico-ped-bronquiolite.png';
+    const svgSrc = img.dataset.svgSrc || img.getAttribute('data-svg-src') || 'imagens/fluxo-ped-bronquiolite.svg';
     const infoAlt = img.dataset.infographicAlt || img.alt;
     const svgAlt = img.dataset.svgAlt || 'Fluxograma Vetorial';
 
-    if (mode === 'infographic') {
+    const isInfographic = (mode === 'infographic');
+    if (isInfographic) {
       img.src = infoSrc;
       img.alt = infoAlt;
       img.classList.add('infographic-mode');
