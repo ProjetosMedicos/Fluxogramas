@@ -417,4 +417,26 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v22`)
 - [x] 100% dos fluxogramas do módulo `infertil` cobertos por infográficos HD! 🏆
 
+---
+
+## 📋 Registro de Conclusão da Onda S2 (Fase 2: Sub-Fluxogramas de SOP & SUA) — ✅ CONCLUÍDA! 🚀
+
+### Módulos & Sub-Fluxogramas Concluídos (7 novos infográficos HD):
+1. `sop-diferencial` — **Diagnóstico Diferencial & Rastreamento de Alertas Vermelhos no Hiperandrogenismo**: Exclusão de HAC não clássica (17-OHP basal < 200 ng/dL vs teste ACTH), Hiperprolactinemia (PRL), Disfunção Tireoidiana (TSH) e Neoplasias Virilizantes (Testosterona Total > 200 ng/dL e DHEA-S > 700 mcg/dL); Cushing (Cortisol Salivar / Nugent) (`imagens/infografico-gin-sop-diferencial.png` — 1200x2801px) ✅
+2. `sop-metabolico` — **Avaliação Metabólica, Cardiovascular & Proteção do Endométrio**: TOTG 75g (Dextrose) de rastreio bienal; Perfil lipídico e escore de risco SCORE/ASCVD; Manejo de Síndrome Metabólica; Indicação de biópsia endometrial guiada por histeroscopia se amenorreia > 3 meses ou espessamento endometrial > 7 mm (`imagens/infografico-gin-sop-metabolico.png` — 1200x2598px) ✅
+3. `sop-hirsutismo` — **Manejo Escalonado do Hiperandrogenismo Cutâneo**: Avaliação pelo Índice de Ferriman-Gallwey (mFG ≥ 4 a 6 no Brasil); 1ª linha com ACO combinado com progestagênio antiandrogênico (Ciproterona, Drospirenona, Dienogeste) por 6 meses; 2ª linha com Espironolactona 100–200 mg/dia ou Finasterida; Terapia cosmética de suporte (`imagens/infografico-gin-sop-hirsutismo.png` — 1200x2645px) ✅
+4. `sop-disfuncao-menstrual` — **Manejo da Disfunção Ovulatória & Regularização Menstrual**: Escolha do método conforme desejo contraceptivo; ACO combinado de baixa dose vs Progestagênio oral cíclico (AMP 10 mg 12-14 dias/mês) vs SIU-LNG 52 mg; Prevenção primária de hiperplasia e adenocarcinoma endometrial (`imagens/infografico-gin-sop-disfuncao.png` — 1200x2667px) ✅
+5. `sop-inducao-ovulacao` — **Indução da Ovulação na SOP com Desejo de Gestação**: Otimização ponderal e estilo de vida prévio; Letrozol 2,5 a 7,5 mg/d do D3 ao D7 como 1ª linha Padrão-Ouro (superior ao Citrato de Clomifeno em taxa de nascidos vivos Monash 2023); 2ª linha: Baixas doses de gonadotrofinas (FSH recombinante em step-up) ou Laparoscopic Ovarian Drilling (LOD); 3ª linha: FIV/ICSI (`imagens/infografico-gin-sop-inducao.png` — 1200x2175px) ✅
+6. `sua-agudo` — **Manejo de Emergência do SUA Agudo**: Triagem hemodinâmica imediata (estável vs instável com cristaloides e hemotransfusão); Estrogênios Conjugados IV (25 mg 4/4h até 24h) ou ACO combinado oral em dose hemostática de ataque (3 comp/dia por 2-3 dias e desmame) ou Ácido Tranexâmico IV/VO (10-15 mg/kg IV ou 1g VO 8/8h); Tamponamento com Balão de Foley intrauterino e curetagem hemostática / embolização se refratário (`imagens/infografico-gin-sua-agudo.png` — 1200x2853px) ✅
+7. `sua-cronico` — **Tratamento Clínico e Cirúrgico do SUA Crônico**: Algoritmo escalonado baseado em desejo reprodutivo; Deseja gestação: Ácido Tranexâmico oral 1g 8/8h + AINEs durante menstruação (redução 40-55%); Sem desejo imediato: Padrão-ouro FEBRASGO/NICE com SIU-LNG 52 mg (redução 71-96%); 2ª linha: ACOs contínuos (Valerato de Estradiol + Dienogeste) e progestagênios contínuos; Manejo cirúrgico: Ablação endometrial histeroscópica e Histerectomia total (`imagens/infografico-gin-sua-cronico.png` — 1200x2537px) ✅
+
+### Subetapas Operacionais Finalizadas:
+- [x] Pesquisa clínica e roteiro textual em 7 blocos aprovados
+- [x] 7 templates HTML semânticos 1200px criados em `scratch/`
+- [x] Renderização Headless Chrome e recorte de precisão PIL nos 7 arquivos PNG em `imagens/`
+- [x] Integração no webapp com alternância dupla (`content/ginecologia/sop.html` Seções 2, 3, 4, 5 e 6; `content/ginecologia/sua.html` Seções 5 e 6)
+- [x] Reconstrução do índice de busca em `js/modules-data.js`
+- [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v23`)
+- [x] 100% dos fluxogramas dos módulos `sop` e `sua` cobertos por infográficos HD! 🏆
+
 

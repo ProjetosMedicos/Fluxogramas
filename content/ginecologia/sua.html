@@ -376,18 +376,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-sua-agudo">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo de Emergência do SUA Agudo</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo de Emergência do SUA Agudo</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_sua_agudo.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-sua-agudo.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-sua-agudo.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-sua-agudo.png"
+               data-infographic-src="imagens/infografico-gin-sua-agudo.png"
+               data-svg-src="imagens/fluxograma_sua_agudo.svg"
+               data-infographic-alt="Infográfico Clínico: Manejo de Emergência do SUA Agudo (Estabilização & Hemostasia Rápida)"
+               data-svg-alt="Fluxograma Vetorial: Emergência SUA Agudo"
+               alt="Infográfico Clínico: Manejo de Emergência do SUA Agudo (Estabilização & Hemostasia Rápida)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_sua_agudo.svg" alt="Fluxograma de Manejo de Emergência do SUA Agudo" class="flowchart-img" loading="lazy" decoding="async">
         </div>
@@ -460,18 +492,50 @@
         </div>
       </div>
 
-      <div class="card">
+            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
+      <div class="flowchart-view-toggle">
+        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
+          📊 Infográfico Clínico
+        </button>
+        <button type="button" onclick="switchVisualMode(this, 'svg')">
+          📐 Fluxograma SVG
+        </button>
+      </div>
+
+      <div class="card" id="card-visual-sua-cronico">
         <div class="card-header-flex">
-          <h2 class="card-title">Fluxograma de Manejo do SUA Crônico</h2>
+          <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo Clínico & Cirúrgico do SUA Crônico</h2>
           <div class="flowchart-actions">
             <button class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Diminuir Zoom">Zoom −</button>
             <button class="btn-zoom" onclick="resetZoom(this)" title="Tamanho Padrão (100%)">100%</button>
-            <a href="imagens/fluxograma_sua_cronico.svg" target="_blank" class="btn-image-open">
-              Abrir SVG ↗
+            <button class="btn-zoom" onclick="openVisualLightbox(this)" title="Ver em Tela Cheia no Lightbox">⛶ Tela Cheia</button>
+            <a href="imagens/infografico-gin-sua-cronico.png" download class="btn-image-open btn-download-visual" title="Baixar Infográfico em Alta Resolução">
+              💾 Baixar HD
+            </a>
+            <a href="imagens/infografico-gin-sua-cronico.png" target="_blank" rel="noopener" class="btn-image-open btn-newtab-visual" title="Abrir imagem original em nova guia">
+              Abrir Imagem ↗
             </a>
           </div>
         </div>
+
+        <div class="flowchart-container">
+          <img src="imagens/infografico-gin-sua-cronico.png"
+               data-infographic-src="imagens/infografico-gin-sua-cronico.png"
+               data-svg-src="imagens/fluxograma_sua_cronico.svg"
+               data-infographic-alt="Infográfico Clínico: Escalonamento Terapêutico do SUA Crônico (SIU-LNG 52mg, TXA, AINEs, Ablação)"
+               data-svg-alt="Fluxograma Vetorial: Manejo do SUA Crônico"
+               alt="Infográfico Clínico: Escalonamento Terapêutico do SUA Crônico (SIU-LNG 52mg, TXA, AINEs, Ablação)"
+               class="flowchart-img"
+               loading="lazy"
+               decoding="async"
+               onclick="openVisualLightbox(this)">
+        </div>
+
+        <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
+          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
+        </div>
+      </div>
         <div class="flowchart-img-container">
           <img src="imagens/fluxograma_sua_cronico.svg" alt="Fluxograma de Manejo do SUA Crônico" class="flowchart-img" loading="lazy" decoding="async">
         </div>
