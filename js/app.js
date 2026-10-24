@@ -177,6 +177,7 @@ document.addEventListener('click', (e) => {
 });
 
 async function switchModule(moduleId) {
+  exitHomeView();
   if (moduleId.startsWith('ped-')) {
     activePediatriaMod = moduleId;
     if (currentSpecialty !== 'pediatria') {
@@ -300,6 +301,11 @@ function toggleSidebar() {
       if (menuBtn) menuBtn.setAttribute('aria-expanded', 'true');
       document.body.classList.add('mobile-menu-open');
     }
+  } else if (document.body.classList.contains('home-active')) {
+    const isOpen = document.body.classList.toggle('home-sidebar-open');
+    if (menuBtn) {
+      menuBtn.setAttribute('aria-expanded', isOpen.toString());
+    }
   } else {
     document.body.classList.toggle('sidebar-collapsed');
     const collapsed = document.body.classList.contains('sidebar-collapsed');
@@ -335,6 +341,7 @@ function updateThemeButtons(isDark) {
 }
 
 async function switchSection(sectionId) {
+  exitHomeView();
   let target = document.getElementById(sectionId);
   if (!target) {
     let targetMod = null;
@@ -456,7 +463,7 @@ function switchVisualMode(btn, mode) {
     const modeType = mode === 'flowchart' ? 'svg' : mode;
     const card = document.getElementById(`card-visual-${modId}`) || document.querySelector(`.card[data-module="${modId}"]`) || document.querySelector(`section[id^="${modId}"] .card`);
     if (card) {
-      const targetBtn = card.querySelector(`.btn-toggle[data-mode="${modeType}"], .btn-toggle[data-view="${modeType}"], .view-btn[data-mode="${modeType}"]`);
+      const targetBtn = card.querySelector(`.btn-toggle[data-mode="${modeType}"], .btn-toggle[data-view="${modeType}"], .view-btn[data-mode="${modeType}"], .flowchart-view-toggle button[onclick*="'${modeType}'"]`);
       if (targetBtn) {
         return switchVisualMode(targetBtn, modeType);
       }
@@ -467,7 +474,7 @@ function switchVisualMode(btn, mode) {
   if (!card) return;
   const toggle = card.querySelector('.flowchart-view-toggle, .segmented-control') || btn.closest('.flowchart-view-toggle, .segmented-control');
   if (toggle) {
-    toggle.querySelectorAll('.view-btn, .btn-toggle').forEach(b => {
+    toggle.querySelectorAll('button, .view-btn, .btn-toggle').forEach(b => {
       b.classList.remove('active');
       if (b.classList.contains('btn-toggle')) {
         b.style.background = 'transparent';
@@ -784,6 +791,31 @@ document.addEventListener('keydown', (e) => {
     return;
   }
 
+  if (e.altKey && e.key.toLowerCase() === 'h') {
+    e.preventDefault();
+    goHome();
+    return;
+  }
+
+  const activeTag = document.activeElement ? document.activeElement.tagName : '';
+  const isTypingField = activeTag === 'INPUT' || activeTag === 'TEXTAREA' || activeTag === 'SELECT' || (document.activeElement && document.activeElement.isContentEditable);
+  const lbDialog = document.getElementById('visual-lightbox');
+  const isLbOpen = lbDialog && lbDialog.open;
+
+  if (!isTypingField && !isLbOpen && !e.ctrlKey && !e.metaKey && !e.altKey && e.key === '/') {
+    e.preventDefault();
+    if (document.body.classList.contains('home-active')) {
+      const homeInput = document.getElementById('home-search-input');
+      if (homeInput) {
+        homeInput.focus();
+        homeInput.select();
+      }
+    } else {
+      openSearchModal();
+    }
+    return;
+  }
+
   if (e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
     const prevLink = document.querySelector('.docs-pager-link.pager-prev');
     const nextLink = document.querySelector('.docs-pager-link.pager-next');
@@ -807,24 +839,33 @@ window.addEventListener('DOMContentLoaded', async () => {
   }
   updateThemeButtons(isDark);
 
+  initHomePage();
+
   const hash = window.location.hash.replace('#', '');
-  if (hash) {
+  if (hash && hash !== 'inicio' && hash !== 'home') {
     let targetMod = null;
     if (typeof ORDERED_SECTIONS !== 'undefined') {
       const allSecs = [...ORDERED_SECTIONS.ginecologia, ...ORDERED_SECTIONS.pediatria];
       const found = allSecs.find(s => s.sectionId === hash);
       if (found && found.moduleId) targetMod = found.moduleId;
     }
+    if (!targetMod && typeof MODULE_META !== 'undefined' && MODULE_META[hash]) {
+      targetMod = hash;
+    }
     if (targetMod) {
       await switchModule(targetMod);
+      if (MODULE_META && MODULE_META[hash]) {
+        await switchSection(MODULE_META[hash].firstSection);
+      } else {
+        await switchSection(hash);
+      }
     } else {
       const initialMod = hash.startsWith('ped-') ? 'ped-bronquiolite' : activeGinecologiaMod;
       await switchModule(initialMod);
+      await switchSection(hash);
     }
-    await switchSection(hash);
   } else {
-    const initialMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
-    await switchModule(initialMod);
+    showHomePage(false);
   }
 
   const modalInput = document.getElementById('modal-search-input');
@@ -858,7 +899,10 @@ window.addEventListener('DOMContentLoaded', async () => {
 // SPA History & Navegação pelo Histórico do Navegador (Avançar/Voltar)
 async function handleHashNavigation() {
   const hash = window.location.hash.replace('#', '');
-  if (!hash) return;
+  if (!hash || hash === 'inicio' || hash === 'home') {
+    showHomePage(false);
+    return;
+  }
   const headingEl = document.getElementById(hash);
   if (headingEl && (headingEl.tagName === 'H2' || headingEl.tagName === 'H3')) {
     scrollToHeading(hash);
@@ -871,18 +915,23 @@ async function handleHashNavigation() {
     if (found && found.moduleId) targetMod = found.moduleId;
   }
   if (!targetMod && typeof MODULE_META !== 'undefined') {
-    for (const [mId, meta] of Object.entries(MODULE_META)) {
-      if (meta.firstSection === hash) {
-        targetMod = mId;
-        break;
+    if (MODULE_META[hash]) {
+      targetMod = hash;
+    } else {
+      for (const [mId, meta] of Object.entries(MODULE_META)) {
+        if (meta.firstSection === hash) {
+          targetMod = mId;
+          break;
+        }
       }
     }
   }
   const curActiveMod = typeof currentModule !== 'undefined' ? currentModule : (currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod);
-  if (targetMod && targetMod !== curActiveMod) {
+  if (targetMod && (targetMod !== curActiveMod || document.body.classList.contains('home-active'))) {
     await switchModule(targetMod);
   }
-  await switchSection(hash);
+  const finalSec = (typeof MODULE_META !== 'undefined' && MODULE_META[hash]) ? MODULE_META[hash].firstSection : hash;
+  await switchSection(finalSec);
 }
 
 window.addEventListener('hashchange', () => {
@@ -1194,10 +1243,500 @@ window.addEventListener('DOMContentLoaded', () => {
 window.addEventListener('scroll', () => {
   const bar = document.getElementById('reading-progress-bar');
   if (!bar) return;
+  if (document.body.classList.contains('home-active')) {
+    bar.style.width = '0%';
+    return;
+  }
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const docHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
   const pct = docHeight > 0 ? Math.min(100, Math.max(0, (scrollTop / docHeight) * 100)) : 0;
   bar.style.width = `${pct}%`;
 }, { passive: true });
+
+// ============================================================================
+// PÁGINA INICIAL MINIMALISTA (DIRETÓRIO DE TÓPICOS & PESQUISA INSTANTÂNEA)
+// ============================================================================
+const HOME_TOPIC_GROUPS = {
+  ginecologia: [
+    {
+      axis: 'Endocrinologia Ginecológica, Reprodução & Climatério',
+      ids: ['amenor', 'sop', 'prolactina', 'iop', 'infertil', 'pgr', 'spm', 'clim', 'trhav']
+    },
+    {
+      axis: 'Sangramento Uterino, Patologia Benigna & Dor Pélvica',
+      ids: ['sua', 'mioma', 'adeno', 'polipos', 'endo', 'dor']
+    },
+    {
+      axis: 'Contracepção, Sexualidade & Urgências Ginecológicas',
+      ids: ['contracepcao', 'larcs', 'dsf', 'abdome', 'violencia', 'cirurgia']
+    },
+    {
+      axis: 'Infecções Genitais & Uroginecologia',
+      ids: ['infeccoes', 'dipav', 'vulva', 'incont', 'prolapso', 'urocomplexa']
+    },
+    {
+      axis: 'Mastologia & Ginecologia Oncológica',
+      ids: ['mamabenigna', 'mama', 'colo', 'endometrio', 'ovario', 'cancervulva']
+    },
+    {
+      axis: 'Consulta, Propedêutica & Fundamentos',
+      ids: ['examefisico', 'saudeintegral', 'fisiologia', 'infancia', 'metodologia']
+    }
+  ],
+  pediatria: [
+    {
+      axis: 'Neonatologia & Perinatologia',
+      ids: ['ped-reanima', 'ped-cuidneonat', 'ped-distresp-rn', 'ped-ictericia-sepse', 'ped-disturb-rn', 'ped-infecc-cong', 'ped-sifilis-cong']
+    },
+    {
+      axis: 'Puericultura, Nutrologia & Adolescência',
+      ids: ['ped-crescimento', 'ped-dnpm', 'ped-aleitamento', 'ped-nutricao', 'ped-desnutricao', 'ped-vitaminas', 'ped-obesidade', 'ped-puberdade', 'ped-hebiatria', 'ped-seguranca']
+    },
+    {
+      axis: 'Pneumologia, Alergia & Imunologia',
+      ids: ['ped-asma', 'ped-bronquiolite', 'ped-pneumonia', 'ped-coqueluche-fc', 'ped-fibrose-cistica', 'ped-anafilaxia', 'ped-alergia-alim']
+    },
+    {
+      axis: 'Emergências, Neurologia & Terapia Intensiva',
+      ids: ['ped-emerg-pcr', 'ped-choque', 'ped-brue-smsl', 'ped-convulsao', 'ped-cefaleias']
+    },
+    {
+      axis: 'Infectologia & Imunizações',
+      ids: ['ped-imunizacoes', 'ped-febre-sem-foco', 'ped-exantematicas', 'ped-tuberculose']
+    },
+    {
+      axis: 'Gastroenterologia & Nefrologia',
+      ids: ['ped-drge', 'ped-diarreia', 'ped-constipacao', 'ped-celiaca', 'ped-itu-enurese', 'ped-enurese']
+    },
+    {
+      axis: 'Cardiologia, Endocrinologia, Reumatologia & Genética',
+      ids: ['ped-cardiopatias', 'ped-hipertensao', 'ped-hipotireoidismo', 'ped-hiperplasia-adrenal', 'ped-reumato-vasc', 'ped-henoch-schonlein', 'ped-reumato-aij', 'ped-aij', 'ped-genetica']
+    }
+  ]
+};
+
+let homeSpecialtyFilter = 'all';
+let homeLiveItems = [];
+let homeLiveIndex = -1;
+
+function exitHomeView() {
+  if (!document.body.classList.contains('home-active')) return;
+  document.body.classList.remove('home-active', 'home-sidebar-open');
+  const homeEl = document.getElementById('home-view');
+  if (homeEl) homeEl.classList.remove('active');
+
+  const homeBtn = document.getElementById('sidebar-home-btn');
+  if (homeBtn) homeBtn.classList.remove('active');
+
+  const crumbSpec = document.getElementById('crumb-specialty');
+  if (crumbSpec) crumbSpec.textContent = currentSpecialty === 'pediatria' ? 'Pediatria' : 'Ginecologia';
+  const sepCur = document.getElementById('crumb-sep-cur');
+  const curCrumb = document.getElementById('current-crumb');
+  if (sepCur) sepCur.style.display = '';
+  if (curCrumb) curCrumb.style.display = '';
+
+  const menuBtn = document.getElementById('topbar-hamburger-btn');
+  if (menuBtn && !isMobileMode()) {
+    const collapsed = document.body.classList.contains('sidebar-collapsed');
+    menuBtn.setAttribute('aria-expanded', (!collapsed).toString());
+  }
+}
+
+function showHomePage(updateUrl = false) {
+  const applyHomeDOM = () => {
+    document.body.classList.add('home-active');
+    document.body.classList.remove('home-sidebar-open');
+
+    const homeEl = document.getElementById('home-view');
+    if (homeEl) homeEl.classList.add('active');
+
+    document.querySelectorAll('.content-section.active').forEach(sec => sec.classList.remove('active'));
+    document.querySelectorAll('.module-content-wrapper').forEach(w => { w.style.display = 'none'; });
+    document.querySelectorAll('.nav-link.active').forEach(l => { l.className = 'nav-link'; });
+
+    const homeBtn = document.getElementById('sidebar-home-btn');
+    if (homeBtn) homeBtn.classList.add('active');
+
+    const crumbSpec = document.getElementById('crumb-specialty');
+    if (crumbSpec) crumbSpec.textContent = 'Página Inicial';
+    const sepCur = document.getElementById('crumb-sep-cur');
+    const curCrumb = document.getElementById('current-crumb');
+    if (sepCur) sepCur.style.display = 'none';
+    if (curCrumb) curCrumb.style.display = 'none';
+
+    const menuBtn = document.getElementById('topbar-hamburger-btn');
+    if (menuBtn) menuBtn.setAttribute('aria-expanded', 'false');
+
+    const bar = document.getElementById('reading-progress-bar');
+    if (bar) bar.style.width = '0%';
+
+    renderHomeTopics();
+  };
+
+  if (updateUrl) {
+    try {
+      if (window.location.hash && window.location.hash !== '#inicio') {
+        history.pushState(null, '', window.location.pathname + window.location.search);
+      }
+    } catch (e) {}
+  }
+
+  const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (updateUrl && typeof document.startViewTransition === 'function' && !prefersReduced) {
+    document.startViewTransition(() => applyHomeDOM());
+  } else {
+    applyHomeDOM();
+  }
+
+  if (isMobileMode()) {
+    closeMobileSidebar();
+  }
+  window.scrollTo(0, 0);
+}
+
+function goHome(event) {
+  if (event) event.preventDefault();
+  if (typeof closeSearchModal === 'function') closeSearchModal();
+  showHomePage(true);
+}
+
+async function openModuleFromHome(moduleId, event) {
+  if (event) event.preventDefault();
+  const meta = (typeof MODULE_META !== 'undefined') ? MODULE_META[moduleId] : null;
+  if (meta && meta.firstSection) {
+    try {
+      history.pushState(null, '', `#${meta.firstSection}`);
+    } catch (e) {}
+  }
+  await switchModule(moduleId);
+}
+
+function setHomeSpecialtyFilter(spec) {
+  homeSpecialtyFilter = spec;
+  document.querySelectorAll('.home-spec-tab').forEach(btn => {
+    const isMatch = btn.dataset.spec === spec;
+    btn.classList.toggle('active', isMatch);
+    btn.setAttribute('aria-selected', isMatch ? 'true' : 'false');
+  });
+  const homeInput = document.getElementById('home-search-input');
+  const q = homeInput ? homeInput.value : '';
+  renderHomeTopics(q);
+  if (q.trim()) {
+    renderHomeLiveResults(q);
+  }
+}
+
+function renderHomeTopics(rawQuery = '') {
+  const container = document.getElementById('home-topics-directory');
+  const countBadge = document.getElementById('home-topics-count');
+  if (!container || typeof MODULE_META === 'undefined') return;
+
+  const normFn = typeof normalizeSearchText === 'function'
+    ? normalizeSearchText
+    : (t) => (t || '').toLowerCase().trim();
+
+  const query = normFn(rawQuery);
+  const terms = query ? query.split(/\s+/).filter(Boolean) : [];
+  const secMeta = (typeof SECTION_SEARCH_META !== 'undefined') ? SECTION_SEARCH_META : {};
+
+  const specsToRender = homeSpecialtyFilter === 'all'
+    ? ['ginecologia', 'pediatria']
+    : [homeSpecialtyFilter];
+
+  let totalMatched = 0;
+  let html = '';
+
+  specsToRender.forEach(spec => {
+    const groups = HOME_TOPIC_GROUPS[spec] || [];
+    let specHtml = '';
+    let specCount = 0;
+
+    groups.forEach(group => {
+      let cardsHtml = '';
+      group.ids.forEach(mId => {
+        const meta = MODULE_META[mId];
+        if (!meta) return;
+
+        if (terms.length > 0) {
+          const firstSecKw = (secMeta[meta.firstSection] && secMeta[meta.firstSection].kw) || '';
+          const haystack = normFn(`${meta.name} ${meta.sub || ''} ${meta.ref || ''} ${mId} ${group.axis} ${firstSecKw}`);
+          const ok = terms.every(t => haystack.includes(t));
+          if (!ok) return;
+        }
+
+        totalMatched++;
+        specCount++;
+        const safeName = typeof escapeSearchHtml === 'function' ? escapeSearchHtml(meta.name) : meta.name;
+        const cleanSub = (meta.sub || '').replace(/^Capítulos?\s+[\d,\s\-e&]+\s*(?:Tratado\s*FEBRASGO|FEBRASGO)?\s*•\s*/i, '');
+        const safeSub = typeof escapeSearchHtml === 'function' ? escapeSearchHtml(cleanSub || meta.sub || '') : (cleanSub || '');
+
+        cardsHtml += `
+          <a href="#${meta.firstSection}" class="home-topic-card" onclick="openModuleFromHome('${mId}', event)">
+            <div class="home-topic-info">
+              <div class="home-topic-name">${safeName}</div>
+              <div class="home-topic-sub">${safeSub}</div>
+            </div>
+            <span class="home-topic-arrow" aria-hidden="true">→</span>
+          </a>
+        `;
+      });
+
+      if (cardsHtml) {
+        specHtml += `
+          <div class="home-axis-group">
+            <h4 class="home-axis-title">${group.axis}</h4>
+            <div class="home-topic-grid">${cardsHtml}</div>
+          </div>
+        `;
+      }
+    });
+
+    if (specHtml) {
+      const specTitle = spec === 'ginecologia' ? 'Ginecologia & Obstetrícia' : 'Pediatria';
+      const specRef = spec === 'ginecologia' ? `FEBRASGO · ${specCount} módulos` : `SBP 2024 · ${specCount} módulos`;
+      const dotClass = spec === 'ginecologia' ? 'gin' : 'ped';
+
+      html += `
+        <div class="home-spec-block">
+          <div class="home-spec-header">
+            <h3 class="home-spec-title"><span class="home-spec-dot ${dotClass}" aria-hidden="true"></span>${specTitle}</h3>
+            <span class="home-spec-source">${specRef}</span>
+          </div>
+          ${specHtml}
+        </div>
+      `;
+    }
+  });
+
+  if (!html) {
+    html = `
+      <div class="home-empty-topics">
+        Nenhum módulo principal corresponde diretamente ao filtro. Confira os resultados detalhados acima ou pressione <kbd>Ctrl</kbd> + <kbd>K</kbd> para busca completa.
+      </div>
+    `;
+  }
+
+  container.innerHTML = html;
+  if (countBadge) {
+    countBadge.textContent = `${totalMatched} ${totalMatched === 1 ? 'módulo' : 'módulos'}`;
+  }
+}
+
+function renderHomeLiveResults(rawQuery) {
+  const box = document.getElementById('home-live-results');
+  const clearBtn = document.getElementById('home-search-clear');
+  if (!box) return;
+
+  const trimmed = (rawQuery || '').trim();
+  if (clearBtn) {
+    clearBtn.hidden = trimmed.length === 0;
+  }
+
+  if (trimmed.length < 2 || typeof buildSearchIndex !== 'function') {
+    box.hidden = true;
+    box.innerHTML = '';
+    homeLiveItems = [];
+    homeLiveIndex = -1;
+    return;
+  }
+
+  buildSearchIndex();
+  const query = normalizeSearchText(trimmed);
+  const terms = query.split(/\s+/).filter(Boolean);
+  const scored = [];
+
+  SEARCH_INDEX.forEach(item => {
+    if (homeSpecialtyFilter !== 'all' && item.specialty !== homeSpecialtyFilter) return;
+    if (!terms.every(t => item.searchString.includes(t))) return;
+
+    const titleNorm = normalizeSearchText(item.title);
+    const subNorm = normalizeSearchText(item.subtitle);
+    let score = 0;
+    if (titleNorm === query) score += 150;
+    else if (titleNorm.startsWith(query)) score += 80;
+    else if (titleNorm.includes(query)) score += 45;
+    if (subNorm.includes(query)) score += 20;
+
+    terms.forEach(t => {
+      if (titleNorm.includes(t)) score += 18;
+      else if (subNorm.includes(t)) score += 8;
+      else score += 5;
+    });
+
+    if (item.type === 'module') score += 12;
+    else if (item.isFlowchart) score += 6;
+    else if (item.isPrescription) score += 5;
+
+    const snippet = typeof extractClinicalSnippet === 'function' ? extractClinicalSnippet(item, terms) : '';
+    scored.push({ item: Object.assign({}, item, { _snippet: snippet }), score });
+  });
+
+  scored.sort((a, b) => b.score - a.score);
+  const totalHits = scored.length;
+  homeLiveItems = scored.slice(0, 6).map(s => s.item);
+  homeLiveIndex = homeLiveItems.length > 0 ? 0 : -1;
+
+  if (homeLiveItems.length === 0) {
+    box.innerHTML = `
+      <div class="home-live-footer">
+        <span>Nenhum termo clínico exato para "${escapeSearchHtml(trimmed)}".</span>
+        <button type="button" class="home-live-more-btn" onclick="openSearchModal()">Busca Avançada (Ctrl+K) →</button>
+      </div>
+    `;
+    box.hidden = false;
+    return;
+  }
+
+  let itemsHtml = '';
+  homeLiveItems.forEach((it, idx) => {
+    const activeCls = idx === 0 ? ' active' : '';
+    const snippetHtml = it._snippet
+      ? `<div class="home-live-snippet">↳ ${escapeSearchHtml(it._snippet)}</div>`
+      : '';
+    itemsHtml += `
+      <a href="#${it.sectionId}" class="home-live-item${activeCls}" data-idx="${idx}" onclick="selectHomeLiveResult(${idx}, event)">
+        <div class="home-live-main">
+          <div class="home-live-title">${escapeSearchHtml(it.title)}</div>
+          <div class="home-live-sub">${escapeSearchHtml(it.subtitle)}</div>
+          ${snippetHtml}
+        </div>
+        <span class="home-live-badge">${escapeSearchHtml(it.badge)}</span>
+      </a>
+    `;
+  });
+
+  itemsHtml += `
+    <div class="home-live-footer">
+      <span>${totalHits} resultado(s) nas 684 seções · <kbd>↑</kbd><kbd>↓</kbd> e <kbd>Enter</kbd></span>
+      <button type="button" class="home-live-more-btn" onclick="openFullSearchWithHomeQuery()">Ver todos os resultados →</button>
+    </div>
+  `;
+
+  box.innerHTML = itemsHtml;
+  box.hidden = false;
+}
+
+function openFullSearchWithHomeQuery() {
+  const homeInput = document.getElementById('home-search-input');
+  const q = homeInput ? homeInput.value.trim() : '';
+  openSearchModal(homeSpecialtyFilter === 'all' ? 'all' : homeSpecialtyFilter);
+  if (q) {
+    const modalInput = document.getElementById('modal-search-input');
+    if (modalInput) {
+      modalInput.value = q;
+      executeModalSearch(q);
+    }
+  }
+}
+
+async function selectHomeLiveResult(index, event) {
+  if (event) event.preventDefault();
+  if (index < 0 || index >= homeLiveItems.length) return;
+  const target = homeLiveItems[index];
+  if (!target) return;
+
+  if (target.sectionId) {
+    try {
+      history.pushState(null, '', `#${target.sectionId}`);
+    } catch (e) {}
+  }
+
+  if (target.specialty && target.specialty !== currentSpecialty && typeof switchSpecialty === 'function') {
+    switchSpecialty(target.specialty);
+  }
+  if (target.moduleId) {
+    const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
+    if (curMod !== target.moduleId || document.body.classList.contains('home-active')) {
+      await switchModule(target.moduleId);
+    }
+  }
+  if (target.sectionId) {
+    await switchSection(target.sectionId);
+  }
+}
+
+function updateHomeLiveSelection() {
+  document.querySelectorAll('#home-live-results .home-live-item').forEach((el, idx) => {
+    el.classList.toggle('active', idx === homeLiveIndex);
+  });
+}
+
+function applyHomeSuggestion(term) {
+  const input = document.getElementById('home-search-input');
+  if (!input) return;
+  input.value = term;
+  input.focus();
+  renderHomeLiveResults(term);
+  renderHomeTopics(term);
+}
+
+function clearHomeSearch() {
+  const input = document.getElementById('home-search-input');
+  const box = document.getElementById('home-live-results');
+  const clearBtn = document.getElementById('home-search-clear');
+  if (input) {
+    input.value = '';
+    input.focus();
+  }
+  if (clearBtn) clearBtn.hidden = true;
+  if (box) {
+    box.hidden = true;
+    box.innerHTML = '';
+  }
+  homeLiveItems = [];
+  homeLiveIndex = -1;
+  renderHomeTopics('');
+}
+
+function initHomePage() {
+  renderHomeTopics('');
+  const homeInput = document.getElementById('home-search-input');
+  if (homeInput) {
+    homeInput.addEventListener('input', (e) => {
+      const val = e.target.value;
+      renderHomeLiveResults(val);
+      renderHomeTopics(val);
+    });
+
+    homeInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        if (homeInput.value) {
+          e.preventDefault();
+          clearHomeSearch();
+        } else {
+          homeInput.blur();
+        }
+        return;
+      }
+      if (homeLiveItems.length > 0) {
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          homeLiveIndex = (homeLiveIndex + 1) % homeLiveItems.length;
+          updateHomeLiveSelection();
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          homeLiveIndex = (homeLiveIndex - 1 + homeLiveItems.length) % homeLiveItems.length;
+          updateHomeLiveSelection();
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          const idx = homeLiveIndex >= 0 ? homeLiveIndex : 0;
+          selectHomeLiveResult(idx);
+        }
+      }
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('home-active') && document.body.classList.contains('home-sidebar-open')) {
+      const sb = document.getElementById('sidebar');
+      const hb = document.getElementById('topbar-hamburger-btn');
+      if (sb && !sb.contains(e.target) && (!hb || !hb.contains(e.target))) {
+        document.body.classList.remove('home-sidebar-open');
+        if (hb) hb.setAttribute('aria-expanded', 'false');
+      }
+    }
+  });
+}
+
 
 

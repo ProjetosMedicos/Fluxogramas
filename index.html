@@ -27,7 +27,7 @@
   
     <link rel="stylesheet" href="css/main.css">
 </head>
-<body>
+<body class="home-active">
   <div id="reading-progress-bar" class="reading-progress-bar" aria-hidden="true"></div>
 
   <div id="mobile-overlay" onclick="closeMobileSidebar()"></div>
@@ -36,7 +36,7 @@
   <aside id="sidebar">
     <!-- Sidebar Header -->
     <div class="sidebar-header">
-      <div class="sidebar-brand">
+      <div class="sidebar-brand" onclick="goHome(event)" role="button" tabindex="0" title="Ir para a Página Inicial (Alt + H)" style="cursor: pointer;">
         <span class="brand-badge">PORTAL MULTIDISCIPLINAR</span>
         <h2>Fluxogramas Médicos</h2>
         <p id="sidebar-stats-caption">Ginecologia • 38 Módulos • 129 Fluxos</p>
@@ -46,6 +46,15 @@
         <button id="sidebar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
         <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu">✕</button>
       </div>
+    </div>
+
+    <!-- Atalho para Página Inicial -->
+    <div class="sidebar-home-bar">
+      <a href="#inicio" id="sidebar-home-btn" class="sidebar-home-link active" onclick="goHome(event)" title="Voltar à Página Inicial (Alt + H)">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <span>Página Inicial</span>
+        <kbd>Alt H</kbd>
+      </a>
     </div>
 
     <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->
@@ -4223,15 +4232,17 @@
     
     <div class="top-bar">
       <div class="top-bar-left">
-        <button id="topbar-hamburger-btn" class="topbar-menu-btn" onclick="toggleSidebar()" title="Ocultar / Exibir Barra Lateral (☰)" aria-label="Alternar barra lateral" aria-expanded="true">☰</button>
-        <div class="brand-doc-pill">
+        <button id="topbar-hamburger-btn" class="topbar-menu-btn" onclick="toggleSidebar()" title="Ocultar / Exibir Barra Lateral (☰)" aria-label="Alternar barra lateral" aria-expanded="false">☰</button>
+        <a href="#inicio" class="brand-doc-pill" onclick="goHome(event)" title="Página Inicial (Alt + H)">
           <span class="brand-doc-logo">Fluxomed</span>
-        </div>
-        <div class="breadcrumbs">
-          <span class="crumb-separator">/</span>
-          <span class="crumb-specialty" id="crumb-specialty">Ginecologia</span>
-          <span class="crumb-separator">/</span>
-          <span id="current-crumb" class="crumb-current">Método do Fluxograma</span>
+        </a>
+        <div class="breadcrumbs" id="topbar-breadcrumbs">
+          <span class="crumb-separator crumb-home-sep">/</span>
+          <a href="#inicio" id="crumb-home-link" class="crumb-home-link" onclick="goHome(event)" title="Voltar à Página Inicial">Início</a>
+          <span class="crumb-separator" id="crumb-sep-spec">/</span>
+          <span class="crumb-specialty" id="crumb-specialty">Página Inicial</span>
+          <span class="crumb-separator" id="crumb-sep-cur" style="display: none;">/</span>
+          <span id="current-crumb" class="crumb-current" style="display: none;"></span>
         </div>
       </div>
       <div class="top-bar-center">
@@ -4244,6 +4255,9 @@
         </button>
       </div>
       <div class="top-bar-right">
+        <button id="topbar-home-cmdk-btn" class="btn-theme-toggle home-only-search-btn" onclick="openSearchModal()" title="Busca Avançada com Filtros (Ctrl + K)" aria-label="Abrir busca avançada">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </button>
         <button id="topbar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
         <button class="btn-action btn-print" onclick="window.print()" title="Imprimir esta conduta clínica">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
@@ -4253,11 +4267,153 @@
     </div>
 
     <!-- ================================================================= -->
-    <!-- MÓDULO 1: DISFUNÇÃO SEXUAL FEMININA (CAPÍTULOS 10, 11 e 12)       -->
+    <!-- PÁGINA INICIAL MINIMALISTA (HOME VIEW)                            -->
     <!-- ================================================================= -->
+    <section id="home-view" class="home-view active" aria-label="Página Inicial Fluxogramas Médicos">
+      <div class="home-shell">
 
-    <!-- SEÇÃO 1: METODOLOGIA -->
-    
+        <!-- Cabeçalho Minimalista & Busca Direta -->
+        <header class="home-hero">
+          <div class="home-meta-pill">
+            <span>FEBRASGO &amp; SBP 2024</span>
+            <span class="home-dot" aria-hidden="true">·</span>
+            <span>86 Módulos</span>
+            <span class="home-dot" aria-hidden="true">·</span>
+            <span>174 Infográficos HD</span>
+          </div>
+          <h1 class="home-title">Fluxogramas Médicos</h1>
+          <p class="home-subtitle">Algoritmos diagnósticos, infográficos clínicos em alta resolução e condutas objetivas para consulta rápida.</p>
+
+          <search class="home-search-wrap" aria-label="Busca rápida nos protocolos">
+            <div class="home-search-box">
+              <svg class="home-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+              </svg>
+              <input
+                type="search"
+                id="home-search-input"
+                class="home-search-input"
+                placeholder="Pesquisar tópico, fármaco, escore ou conduta..."
+                autocomplete="off"
+                spellcheck="false"
+                aria-label="Pesquisar tópico, fármaco, escore ou conduta"
+              />
+              <button type="button" id="home-search-clear" class="home-search-clear" onclick="clearHomeSearch()" title="Limpar pesquisa" aria-label="Limpar pesquisa" hidden>✕</button>
+              <div class="home-search-shortcuts">
+                <kbd class="home-kbd-slash" title="Pressione / para focar na pesquisa">/</kbd>
+                <button type="button" class="home-cmdk-btn" onclick="openSearchModal()" title="Abrir Busca Avançada com Filtros (Ctrl + K)">
+                  <kbd>Ctrl K</kbd>
+                </button>
+              </div>
+            </div>
+
+            <!-- Resultados Instantâneos Profundos (exibidos ao digitar) -->
+            <div id="home-live-results" class="home-live-results" hidden></div>
+
+            <!-- Sugestões Rápidas -->
+            <div class="home-suggestions" id="home-suggestions-row">
+              <span class="home-suggestions-label">Exemplos:</span>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Prenhez Ectópica')">Prenhez Ectópica</button>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Letrozol')">Letrozol</button>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Monif')">Critérios de Monif</button>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Anafilaxia')">Anafilaxia</button>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Reanimação Neonatal')">Reanimação Neonatal</button>
+              <button type="button" class="home-chip" onclick="applyHomeSuggestion('Anticoncepção de Emergência')">Anticoncepção de Emergência</button>
+            </div>
+          </search>
+        </header>
+
+        <!-- Dicas de Comandos & Fluxo de Uso -->
+        <section class="home-block" aria-labelledby="home-cmd-heading">
+          <div class="home-block-header">
+            <h2 id="home-cmd-heading" class="home-section-label">Dicas de Comandos &amp; Navegação</h2>
+          </div>
+          <div class="home-cmd-grid">
+            <button type="button" class="home-cmd-card home-cmd-interactive" onclick="openSearchModal()">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Busca Global</span>
+                <span class="home-cmd-keys"><kbd>Ctrl</kbd><kbd>K</kbd> <em>ou</em> <kbd>/</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Localize fármacos, posologias, escores e condutas em 684 seções.</p>
+            </button>
+
+            <div class="home-cmd-card">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Navegar entre Tópicos</span>
+                <span class="home-cmd-keys"><kbd>Alt</kbd><kbd>←</kbd><kbd>→</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Avance ou retorne sequencialmente pelas seções de cada protocolo.</p>
+            </div>
+
+            <div class="home-cmd-card">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Tela Cheia &amp; Zoom</span>
+                <span class="home-cmd-keys"><kbd>+</kbd><kbd>−</kbd><kbd>0</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Clique no infográfico para abrir o Lightbox com arraste e Ctrl+Scroll.</p>
+            </div>
+
+            <div class="home-cmd-card">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Alternador Visual</span>
+                <span class="home-cmd-keys"><kbd>HD</kbd><span>↔</span><kbd>SVG</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Alterne no topo do card entre o Infográfico Clínico e o Fluxograma SVG.</p>
+            </div>
+
+            <div class="home-cmd-card">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Copiar Conduta</span>
+                <span class="home-cmd-keys"><kbd>1-Clique</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Copie prescrições e posologias prontas diretamente para o prontuário.</p>
+            </div>
+
+            <div class="home-cmd-card">
+              <div class="home-cmd-top">
+                <span class="home-cmd-name">Início &amp; Impressão</span>
+                <span class="home-cmd-keys"><kbd>Alt H</kbd> <kbd>Ctrl P</kbd></span>
+              </div>
+              <p class="home-cmd-desc">Volte a esta página inicial de qualquer tela ou imprima em PDF limpo.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tópicos Disponíveis -->
+        <section class="home-block" aria-labelledby="home-topics-heading">
+          <div class="home-block-header home-topics-bar">
+            <div class="home-topics-heading-wrap">
+              <h2 id="home-topics-heading" class="home-section-label">Tópicos Disponíveis</h2>
+              <span id="home-topics-count" class="home-count-badge">86 módulos</span>
+            </div>
+            <div class="home-spec-tabs" role="tablist" aria-label="Filtrar tópicos por especialidade">
+              <button type="button" role="tab" aria-selected="true" class="home-spec-tab active" data-spec="all" onclick="setHomeSpecialtyFilter('all')">
+                Todos <span>86</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" class="home-spec-tab" data-spec="ginecologia" onclick="setHomeSpecialtyFilter('ginecologia')">
+                Ginecologia <span>38</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" class="home-spec-tab" data-spec="pediatria" onclick="setHomeSpecialtyFilter('pediatria')">
+                Pediatria <span>48</span>
+              </button>
+            </div>
+          </div>
+
+          <div id="home-topics-directory" class="home-topics-directory">
+            <!-- Diretório categorizado renderizado via JS -->
+          </div>
+        </section>
+
+        <footer class="home-footer">
+          <span>Tratado de Ginecologia FEBRASGO (2ª Ed.) &amp; Tratado de Pediatria SBP (6ª Ed., 2024)</span>
+          <span class="home-dot" aria-hidden="true">·</span>
+          <span>Acesso Offline (PWA)</span>
+        </footer>
+
+      </div>
+    </section>
+
       <div id="content-container">
       </div>
 

@@ -418,6 +418,14 @@ async function selectSearchResult(index) {
 
   closeSearchModal();
 
+  if (target.sectionId) {
+    try {
+      if (typeof history !== 'undefined' && typeof history.pushState === 'function') {
+        history.pushState(null, '', '#' + target.sectionId);
+      }
+    } catch (e) {}
+  }
+
   if (target.specialty && target.specialty !== currentSpecialty) {
     if (typeof switchSpecialty === 'function') {
       await switchSpecialty(target.specialty);
@@ -426,7 +434,8 @@ async function selectSearchResult(index) {
 
   if (target.moduleId) {
     const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
-    if (curMod !== target.moduleId && typeof switchModule === 'function') {
+    const isOnHome = !!(document.body && document.body.classList && document.body.classList.contains('home-active'));
+    if ((curMod !== target.moduleId || isOnHome) && typeof switchModule === 'function') {
       await switchModule(target.moduleId);
     }
   }
