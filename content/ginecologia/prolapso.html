@@ -62,13 +62,7 @@
       <!-- Card com Alternância Dupla: Infográfico NotebookLM HD vs Fluxograma SVG -->
       <div class="card" id="card-visual-prolapso">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Mapa Visual & Infográfico Clínico: Prolapso de Órgãos Pélvicos</h2>
-            <div class="flowchart-view-toggle" id="prolapso-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Mapa Visual & Infográfico Clínico: Prolapso de Órgãos Pélvicos</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -86,15 +80,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-prolapso.png"
                data-infographic-alt="Infográfico Clínico Completo: Prolapso de Órgãos Pélvicos, Níveis de DeLancey, POP-Q e Condutas - FEBRASGO / ICS"
-               data-svg-src="imagens/fluxograma_prolapso_niveis_delancey.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Mapa Visual & Infográfico Clínico: Prolapso de Órgãos Pélvicos"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -141,17 +133,7 @@
         <p>A padronização internacional milimétrica que substituiu a classificação subjetiva de Baden-Walker.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-prolapso-popq">
+            <div class="card" id="card-visual-prolapso-popq">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Medição dos 9 Pontos Anatômicos e Estratificação nos Estádios 0 a IV</h2>
           <div class="flowchart-actions">
@@ -171,11 +153,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-prolapso-popq.png"
                data-infographic-src="imagens/infografico-gin-prolapso-popq.png"
-               data-svg-src="imagens/fluxograma_prolapso_classificacao_popq.svg"
                data-infographic-alt="Infográfico Clínico: Classificação POP-Q & Estádios do Prolapso Genital (FEBRASGO / IUGA)"
-               data-svg-alt="Fluxograma Vetorial: Classificação POP-Q dos Prolapsos"
                alt="Infográfico Clínico: Classificação POP-Q & Estádios do Prolapso Genital (FEBRASGO / IUGA)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -318,17 +298,7 @@
         <p>Como diagnosticar a perda urinária mascarada pelo dobramento mecânico da uretra.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-prolapso-iue-oculta">
+            <div class="card" id="card-visual-prolapso-iue-oculta">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma do Teste Mandatório de Redução do Prolapso e Investigação da IUE Oculta</h2>
           <div class="flowchart-actions">
@@ -348,11 +318,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-prolapso-iue-oculta.png"
                data-infographic-src="imagens/infografico-gin-prolapso-iue-oculta.png"
-               data-svg-src="imagens/fluxograma_prolapso_propedutica_iue_oculta.svg"
                data-infographic-alt="Infográfico Clínico: Propedêutica do Prolapso Genital & Teste de IUE Oculta (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Investigação de IUE Oculta no Prolapso"
                alt="Infográfico Clínico: Propedêutica do Prolapso Genital & Teste de IUE Oculta (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -436,17 +404,7 @@
         <p>A abordagem não cirúrgica de primeira linha para alívio imediato e manutenção do suporte.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-prolapso-pessarios">
+            <div class="card" id="card-visual-prolapso-pessarios">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo Conservador e Seleção do Pessário Adequado</h2>
           <div class="flowchart-actions">
@@ -466,11 +424,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-prolapso-pessarios.png"
                data-infographic-src="imagens/infografico-gin-prolapso-pessarios.png"
-               data-svg-src="imagens/fluxograma_prolapso_manejo_conservador_pessarios.svg"
                data-infographic-alt="Infográfico Clínico: Manejo Conservador do Prolapso Genital com Pessários Vaginais (FEBRASGO / IUGA)"
-               data-svg-alt="Fluxograma Vetorial: Seleção e Manejo de Pessários Vaginais"
                alt="Infográfico Clínico: Manejo Conservador do Prolapso Genital com Pessários Vaginais (FEBRASGO / IUGA)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -525,17 +481,7 @@
         <p>Cirurgias anatômicas que preservam o canal vaginal e a função sexual da mulher.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-prolapso-cirurgia-reconstrutiva">
+            <div class="card" id="card-visual-prolapso-cirurgia-reconstrutiva">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Decisão Cirúrgica Reconstrutiva por Compartimento Pélvico</h2>
           <div class="flowchart-actions">
@@ -555,11 +501,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-prolapso-reconstrutiva.png"
                data-infographic-src="imagens/infografico-gin-prolapso-reconstrutiva.png"
-               data-svg-src="imagens/fluxograma_prolapso_cirurgia_reconstrutiva.svg"
                data-infographic-alt="Infográfico Clínico: Cirurgias Reconstrutivas do Prolapso de Órgãos Pélvicos (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Cirurgias Reconstrutivas do Prolapso Genital"
                alt="Infográfico Clínico: Cirurgias Reconstrutivas do Prolapso de Órgãos Pélvicos (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -620,17 +564,7 @@
         <p>A melhor opção cirúrgica para pacientes idosas frágeis sem interesse em atividade sexual com penetração.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-prolapso-colpocleise">
+            <div class="card" id="card-visual-prolapso-colpocleise">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Indicação e Execução da Colpocleise (Cirurgia Obliterativa)</h2>
           <div class="flowchart-actions">
@@ -650,11 +584,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-prolapso-colpocleise.png"
                data-infographic-src="imagens/infografico-gin-prolapso-colpocleise.png"
-               data-svg-src="imagens/fluxograma_prolapso_cirurgia_obliterativa.svg"
                data-infographic-alt="Infográfico Clínico: Cirurgias Obliterativas do Prolapso Genital - Colpocleise de Le Fort e Latzko (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Colpocleise Parcial e Total"
                alt="Infográfico Clínico: Cirurgias Obliterativas do Prolapso Genital - Colpocleise de Le Fort e Latzko (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>

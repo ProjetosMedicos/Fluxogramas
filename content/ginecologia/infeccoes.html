@@ -59,13 +59,7 @@
 
       <div class="card" id="card-visual-infeccoes">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Infecções Genitais: Vulvovaginites, Cervicites & ISTs</h2>
-            <div class="flowchart-view-toggle" id="infeccoes-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Infecções Genitais: Vulvovaginites, Cervicites & ISTs</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -83,15 +77,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-infeccoes.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de Infecções Genitais e ISTs"
-               data-svg-src="imagens/fluxograma_infeccoes_vulvovaginites_diagnostico.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Infecções Genitais: Vulvovaginites, Cervicites & ISTs"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -170,17 +162,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-infeccoes-vaginose-candida">
+            <div class="card" id="card-visual-infeccoes-vaginose-candida">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo da Vaginose Bacteriana e Candidíase Vulvovaginal</h2>
           <div class="flowchart-actions">
@@ -200,11 +182,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-infeccoes-vaginose-candida.png"
                data-infographic-src="imagens/infografico-gin-infeccoes-vaginose-candida.png"
-               data-svg-src="imagens/fluxograma_infeccoes_vaginose_candida_manejo.svg"
                data-infographic-alt="Infográfico Clínico: Estratificação Terapêutica da Vaginose Bacteriana vs Candidíase Vulvovaginal (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Manejo de Vaginose e Candidíase"
                alt="Infográfico Clínico: Estratificação Terapêutica da Vaginose Bacteriana vs Candidíase Vulvovaginal (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -261,17 +241,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-infeccoes-tricomoniase-cervicites">
+            <div class="card" id="card-visual-infeccoes-tricomoniase-cervicites">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Abordagem da Tricomoníase e Cervicites Agudas Mucopurulentas</h2>
           <div class="flowchart-actions">
@@ -291,11 +261,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-infeccoes-tricomoniase-cervicites.png"
                data-infographic-src="imagens/infografico-gin-infeccoes-tricomoniase-cervicites.png"
-               data-svg-src="imagens/fluxograma_infeccoes_tricomoniase_cervicites.svg"
                data-infographic-alt="Infográfico Clínico: Tricomoníase Vaginal & Cervicites Mucopurulentas (Clamídia & Gonococo) - FEBRASGO"
-               data-svg-alt="Fluxograma Vetorial: Tricomoníase e Cervicites Agudas"
                alt="Infográfico Clínico: Tricomoníase Vaginal & Cervicites Mucopurulentas (Clamídia & Gonococo) - FEBRASGO"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -351,17 +319,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-infeccoes-dip-diagnostico">
+            <div class="card" id="card-visual-infeccoes-dip-diagnostico">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Critérios Clínicos de Gainesville e Classificação de Monif</h2>
           <div class="flowchart-actions">
@@ -381,11 +339,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-infeccoes-dip-diagnostico.png"
                data-infographic-src="imagens/infografico-gin-infeccoes-dip-diagnostico.png"
-               data-svg-src="imagens/fluxograma_infeccoes_dip_diagnostico_monif.svg"
                data-infographic-alt="Infográfico Clínico: Doença Inflamatória Pélvica (DIP) - Critérios de Gainesville & Monif (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Diagnóstico de DIP e Classificação de Monif"
                alt="Infográfico Clínico: Doença Inflamatória Pélvica (DIP) - Critérios de Gainesville & Monif (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -442,17 +398,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-infeccoes-dip-manejo">
+            <div class="card" id="card-visual-infeccoes-dip-manejo">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Tratamento Ambulatorial vs Hospitalar e Conduta no ATO</h2>
           <div class="flowchart-actions">
@@ -472,11 +418,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-infeccoes-dip-manejo.png"
                data-infographic-src="imagens/infografico-gin-infeccoes-dip-manejo.png"
-               data-svg-src="imagens/fluxograma_infeccoes_dip_tratamento_amb_hosp.svg"
                data-infographic-alt="Infográfico Clínico: Protocolo Terapêutico da DIP - Ambulatorial vs Hospitalar & ATO (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Protocolos Terapêuticos da DIP"
                alt="Infográfico Clínico: Protocolo Terapêutico da DIP - Ambulatorial vs Hospitalar & ATO (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -533,17 +477,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-infeccoes-ulceras-ists">
+            <div class="card" id="card-visual-infeccoes-ulceras-ists">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Diagnóstico Diferencial e Conduta nas Úlceras Genitais</h2>
           <div class="flowchart-actions">
@@ -563,11 +497,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-infeccoes-ulceras-ists.png"
                data-infographic-src="imagens/infografico-gin-infeccoes-ulceras-ists.png"
-               data-svg-src="imagens/fluxograma_infeccoes_ulceras_genitais_ists.svg"
                data-infographic-alt="Infográfico Clínico: Diagnóstico Diferencial das Úlceras Genitais & Síndromes de IST (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Diagnóstico das Úlceras Genitais"
                alt="Infográfico Clínico: Diagnóstico Diferencial das Úlceras Genitais & Síndromes de IST (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>

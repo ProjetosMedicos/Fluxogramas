@@ -41,13 +41,7 @@
 
       <div class="card" id="card-visual-abdome-landing">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica</h2>
-            <div class="flowchart-view-toggle" id="abdome-landing-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -65,15 +59,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-abdome.png"
                data-infographic-alt="Infográfico NotebookLM: Abdome Agudo em Ginecologia & Hemorragias Graves"
-               data-svg-src="imagens/fluxograma_abdome_agudo_triagem.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>
@@ -129,13 +121,7 @@
 
       <div class="card" id="card-visual-abdome">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica</h2>
-            <div class="flowchart-view-toggle" id="abdome-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -153,15 +139,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-abdome.png"
                data-infographic-alt="Infográfico NotebookLM: Abdome Agudo em Ginecologia & Hemorragias Graves"
-               data-svg-src="imagens/fluxograma_abdome_agudo_triagem.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Triagem Sindrômica & Algoritmo de Decisão Hemodinâmica"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -183,17 +167,7 @@
         <p>Estratificação da gestação tubária, critérios de elegibilidade para Metotrexato e técnicas de laparoscopia conservadora vs radical.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-abdome-ectopica">
+            <div class="card" id="card-visual-abdome-ectopica">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Decisório na Prenhez Ectópica: Manejo Clínico (Metotrexato) vs Cirúrgico</h2>
           <div class="flowchart-actions">
@@ -213,17 +187,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-abdome-ectopica.png"
                data-infographic-src="imagens/infografico-gin-abdome-ectopica.png"
-               data-svg-src="imagens/fluxograma_abdome_ectopica_manejo.svg"
                data-infographic-alt="Infográfico Clínico: Manejo da Prenhez Ectópica - Critérios de Metotrexato vs Cirurgia (FEBRASGO / ACOG)"
-               data-svg-alt="Fluxograma Vetorial: Manejo da Prenhez Ectópica"
                alt="Infográfico Clínico: Manejo da Prenhez Ectópica - Critérios de Metotrexato vs Cirurgia (FEBRASGO / ACOG)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_abdome_ectopica_manejo.svg" alt="Fluxograma Gravidez Ectopica" class="flowchart-img" loading="lazy" decoding="async" data-scale="1.0">
         </div>
       </div>
 
@@ -285,17 +253,7 @@
         <p>Fisiopatologia isquêmica, critérios ao ecodoppler e a desmistificação da destorção com preservação ovariana.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-abdome-torcao">
+            <div class="card" id="card-visual-abdome-torcao">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Urgência na Torção Anexial & Cisto Ovariano Hemorrágico</h2>
           <div class="flowchart-actions">
@@ -315,17 +273,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-abdome-torcao.png"
                data-infographic-src="imagens/infografico-gin-abdome-torcao.png"
-               data-svg-src="imagens/fluxograma_abdome_torcao_anexial.svg"
                data-infographic-alt="Infográfico Clínico: Conduta de Emergência na Torção Anexial & Cisto Hemorrágico (FEBRASGO / ACOG)"
-               data-svg-alt="Fluxograma Vetorial: Manejo da Torção Anexial"
                alt="Infográfico Clínico: Conduta de Emergência na Torção Anexial & Cisto Hemorrágico (FEBRASGO / ACOG)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_abdome_torcao_anexial.svg" alt="Fluxograma Torcao Anexial" class="flowchart-img" loading="lazy" decoding="async" data-scale="1.0">
         </div>
       </div>
 

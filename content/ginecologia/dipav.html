@@ -62,13 +62,7 @@
 
       <div class="card" id="card-visual-dipav">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Doença Inflamatória Pélvica: Diretrizes FEBRASGO & CDC</h2>
-            <div class="flowchart-view-toggle" id="dipav-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Doença Inflamatória Pélvica: Diretrizes FEBRASGO & CDC</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -86,15 +80,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-dipav.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de Doença Inflamatória Pélvica"
-               data-svg-src="imagens/fluxograma_dip_fisiopatologia_etiologia.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Doença Inflamatória Pélvica: Diretrizes FEBRASGO & CDC"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -154,17 +146,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dipav-criterios">
+            <div class="card" id="card-visual-dipav-criterios">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Critérios Diagnósticos de Gainesville / CDC e Diagnóstico Diferencial do Abdome Agudo</h2>
           <div class="flowchart-actions">
@@ -184,11 +166,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dipav-criterios.png"
                data-infographic-src="imagens/infografico-gin-dipav-criterios.png"
-               data-svg-src="imagens/fluxograma_dip_criterios_diagnosticos.svg"
                data-infographic-alt="Infográfico Clínico: Critérios Diagnósticos da DIP (Gainesville/CDC) & Abdome Agudo (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Critérios Diagnósticos de Gainesville / CDC"
                alt="Infográfico Clínico: Critérios Diagnósticos da DIP (Gainesville/CDC) & Abdome Agudo (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -256,17 +236,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dipav-monif">
+            <div class="card" id="card-visual-dipav-monif">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Estadiamento Clínico-Cirúrgico de Monif e Síndrome de Fitz-Hugh-Curtis</h2>
           <div class="flowchart-actions">
@@ -286,11 +256,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dipav-monif.png"
                data-infographic-src="imagens/infografico-gin-dipav-monif.png"
-               data-svg-src="imagens/fluxograma_dip_estadiamento_monif.svg"
                data-infographic-alt="Infográfico Clínico: Estadiamento Clínico-Cirúrgico de Monif & Fitz-Hugh-Curtis (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Estadiamento de Monif e Peri-Hepatite"
                alt="Infográfico Clínico: Estadiamento Clínico-Cirúrgico de Monif & Fitz-Hugh-Curtis (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -358,17 +326,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dipav-terapeutica">
+            <div class="card" id="card-visual-dipav-terapeutica">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Tomada de Decisão Terapêutica na DIP: Ambulatorial vs Hospitalar Parenteral</h2>
           <div class="flowchart-actions">
@@ -388,11 +346,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dipav-terapeutica.png"
                data-infographic-src="imagens/infografico-gin-dipav-terapeutica.png"
-               data-svg-src="imagens/fluxograma_dip_algoritmo_terapeutico.svg"
                data-infographic-alt="Infográfico Clínico: Tomada de Decisão Terapêutica na DIP - Ambulatorial vs Hospitalar Parenteral (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Algoritmo Terapêutico da DIP"
                alt="Infográfico Clínico: Tomada de Decisão Terapêutica na DIP - Ambulatorial vs Hospitalar Parenteral (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -454,17 +410,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dipav-abscesso">
+            <div class="card" id="card-visual-dipav-abscesso">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo do Abscesso Tubo-Ovariano (ATO), Intervenções e Diretriz do DIU</h2>
           <div class="flowchart-actions">
@@ -484,11 +430,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dipav-abscesso.png"
                data-infographic-src="imagens/infografico-gin-dipav-abscesso.png"
-               data-svg-src="imagens/fluxograma_dip_abscesso_tubo_ovariano.svg"
                data-infographic-alt="Infográfico Clínico: Manejo do Abscesso Tubo-Ovariano (ATO) & Diretriz do DIU (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Manejo do ATO e Conduta no DIU"
                alt="Infográfico Clínico: Manejo do Abscesso Tubo-Ovariano (ATO) & Diretriz do DIU (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -550,17 +494,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dipav-sequelas">
+            <div class="card" id="card-visual-dipav-sequelas">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma das Sequelas Crônicas da DIP: Fator Tuboperitoneal, Hidrossalpinge e Infertilidade</h2>
           <div class="flowchart-actions">
@@ -580,11 +514,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dipav-sequelas.png"
                data-infographic-src="imagens/infografico-gin-dipav-sequelas.png"
-               data-svg-src="imagens/fluxograma_dip_sequelas_infertilidade.svg"
                data-infographic-alt="Infográfico Clínico: Sequelas Crônicas Tardias Pós-DIP - Infertilidade, Hidrossalpinge & Dor Crônica (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Sequelas Crônicas e Infertilidade Pós-DIP"
                alt="Infográfico Clínico: Sequelas Crônicas Tardias Pós-DIP - Infertilidade, Hidrossalpinge & Dor Crônica (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>

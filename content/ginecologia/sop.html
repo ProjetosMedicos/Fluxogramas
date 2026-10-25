@@ -63,13 +63,7 @@
 
       <div class="card" id="card-visual-sop">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Diagnóstico &amp; Fenótipos da SOP</h2>
-            <div class="flowchart-view-toggle" id="sop-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Diagnóstico &amp; Fenótipos da SOP</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -87,15 +81,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-sop.png"
                data-infographic-alt="Infográfico Diretrizes Monash e FEBRASGO de Síndrome dos Ovários Policísticos (SOP)"
-               data-svg-src="imagens/fluxograma_sop_criterios_rotterdam.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Diagnóstico &amp; Fenótipos da SOP"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -153,17 +145,7 @@
         <p>A SOP é um diagnóstico de exclusão obrigatória de outras endocrinopatias (Capítulo 43 FEBRASGO).</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sop-diferencial">
+            <div class="card" id="card-visual-sop-diferencial">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Diagnóstico Diferencial de Hiperandrogenismo</h2>
           <div class="flowchart-actions">
@@ -183,22 +165,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sop-diferencial.png"
                data-infographic-src="imagens/infografico-gin-sop-diferencial.png"
-               data-svg-src="imagens/fluxograma_sop_diagnostico_diferencial.svg"
                data-infographic-alt="Infográfico Clínico: Diagnóstico Diferencial de Hiperandrogenismo na SOP"
-               data-svg-alt="Fluxograma Vetorial: Diagnóstico Diferencial SOP"
                alt="Infográfico Clínico: Diagnóstico Diferencial de Hiperandrogenismo na SOP"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_diagnostico_diferencial.svg" alt="Fluxograma de Diagnóstico Diferencial SOP" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -296,17 +272,7 @@
         <p>A SOP como distúrbio metabólico sistêmico e o risco oncogênico da anovulação crônica prolongada.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sop-metabolico">
+            <div class="card" id="card-visual-sop-metabolico">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Avaliação Metabólica & Proteção Endometrial</h2>
           <div class="flowchart-actions">
@@ -326,22 +292,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sop-metabolico.png"
                data-infographic-src="imagens/infografico-gin-sop-metabolico.png"
-               data-svg-src="imagens/fluxograma_sop_fenotipos_risco_metabolico.svg"
                data-infographic-alt="Infográfico Clínico: Fenótipos e Rastreio Metabólico da SOP"
-               data-svg-alt="Fluxograma Vetorial: Fenótipos e Risco Metabólico SOP"
                alt="Infográfico Clínico: Fenótipos e Rastreio Metabólico da SOP"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_fenotipos_risco_metabolico.svg" alt="Fluxograma Metabólico e Endometrial" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -394,17 +354,7 @@
         <p>Mecanismos androgênicos, Índice de Ferriman-Gallwey e seleção de terapias antiandrogênicas.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sop-hirsutismo">
+            <div class="card" id="card-visual-sop-hirsutismo">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo Escalonado do Hiperandrogenismo & Hirsutismo</h2>
           <div class="flowchart-actions">
@@ -424,22 +374,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sop-hirsutismo.png"
                data-infographic-src="imagens/infografico-gin-sop-hirsutismo.png"
-               data-svg-src="imagens/fluxograma_sop_tratamento_hirsutismo.svg"
                data-infographic-alt="Infográfico Clínico: Manejo Escalonado do Hirsutismo na SOP"
-               data-svg-alt="Fluxograma Vetorial: Tratamento do Hirsutismo"
                alt="Infográfico Clínico: Manejo Escalonado do Hirsutismo na SOP"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_tratamento_hirsutismo.svg" alt="Fluxograma de Tratamento do Hirsutismo" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -564,17 +508,7 @@
         <p>Escolha individualizada entre AOCs, progestagênios orais cíclicos/contínuos e SIU de levonorgestrel.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sop-disfuncao">
+            <div class="card" id="card-visual-sop-disfuncao">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo da Disfunção Ovulatória & Regularização Menstrual</h2>
           <div class="flowchart-actions">
@@ -594,22 +528,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sop-disfuncao.png"
                data-infographic-src="imagens/infografico-gin-sop-disfuncao.png"
-               data-svg-src="imagens/fluxograma_sop_protecao_endometrial.svg"
                data-infographic-alt="Infográfico Clínico: Regularização Menstrual e Proteção Endometrial na SOP"
-               data-svg-alt="Fluxograma Vetorial: Seleção Terapêutica Menstrual SOP"
                alt="Infográfico Clínico: Regularização Menstrual e Proteção Endometrial na SOP"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_protecao_endometrial.svg" alt="Fluxograma de Proteção Endometrial SOP" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -662,17 +590,7 @@
         <p>A anovulação crônica na SOP e o algoritmo moderno de reprodução assistida (Capítulo 50 e 51 FEBRASGO / Teede 2023).</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sop-inducao">
+            <div class="card" id="card-visual-sop-inducao">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Indução da Ovulação na SOP com Desejo de Gestação</h2>
           <div class="flowchart-actions">
@@ -692,22 +610,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sop-inducao.png"
                data-infographic-src="imagens/infografico-gin-sop-inducao.png"
-               data-svg-src="imagens/fluxograma_sop_desejo_reprodutivo.svg"
                data-infographic-alt="Infográfico Clínico: Indução da Ovulação na Infertilidade por SOP (Letrozol 1ª Linha)"
-               data-svg-alt="Fluxograma Vetorial: Indução da Ovulação SOP"
                alt="Infográfico Clínico: Indução da Ovulação na Infertilidade por SOP (Letrozol 1ª Linha)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sop_desejo_reprodutivo.svg" alt="Fluxograma de Indução na SOP" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 

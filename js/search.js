@@ -448,13 +448,9 @@ async function selectSearchResult(index) {
   if (target.isInfographic) {
     setTimeout(() => {
       const activeSec = document.getElementById(target.sectionId);
-      const infoCard = activeSec ? activeSec.querySelector('.flowchart-container') : null;
+      const infoCard = activeSec ? activeSec.querySelector('.flowchart-container, .flowchart-img-container') : null;
       if (infoCard) {
         const cardWrap = infoCard.closest('.card') || infoCard;
-        const infoBtn = cardWrap.querySelector('.flowchart-view-toggle button:first-child');
-        if (infoBtn && !infoBtn.classList.contains('active') && typeof switchVisualMode === 'function') {
-          switchVisualMode(infoBtn, 'infographic');
-        }
         cardWrap.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     }, 120);

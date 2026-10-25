@@ -63,13 +63,7 @@
 
       <div class="card" id="card-visual-colo">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Rastreamento do Câncer de Colo Uterino & Bethesda (INCA / FEBRASGO)</h2>
-            <div class="flowchart-view-toggle" id="colo-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Rastreamento do Câncer de Colo Uterino & Bethesda (INCA / FEBRASGO)</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -87,15 +81,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-colo.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO e INCA de Câncer de Colo Uterino"
-               data-svg-src="imagens/fluxograma_colo_rastreamento.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Rastreamento do Câncer de Colo Uterino & Bethesda (INCA / FEBRASGO)"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -160,17 +152,7 @@
         <p>Condutas mandatórias para ASC-US, ASC-H, LSIL, HSIL e AGC segundo as Diretrizes Brasileiras / FEBRASGO.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-colo-bethesda">
+            <div class="card" id="card-visual-colo-bethesda">
         <div class="card-header-flex">
           <h2 class="card-title">Árvore de Decisão Imediata para Laudos Citopatológicos Alterados (Sistema de Bethesda)</h2>
           <div class="flowchart-actions">
@@ -190,22 +172,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-colo-bethesda.png"
                data-infographic-src="imagens/infografico-gin-colo-bethesda.png"
-               data-svg-src="imagens/fluxograma_colo_citopatologia.svg"
                data-infographic-alt="Infográfico Clínico: Condutas nas Citopatologias Alteradas (Sistema de Bethesda - INCA / FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Citopatologia Bethesda"
                alt="Infográfico Clínico: Condutas nas Citopatologias Alteradas (Sistema de Bethesda - INCA / FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_colo_citopatologia.svg" alt="Fluxograma de Citopatologia Bethesda" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -276,17 +252,7 @@
         <p>Léxico oficial da IFCPC (Federação Internacional de Patologia Cervical e Colposcopia) e Capítulo 14 da FEBRASGO.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-colo-colposcopia">
+            <div class="card" id="card-visual-colo-colposcopia">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Avaliação Colposcópica & Zonas de Transformação (ZT 1, 2 e 3)</h2>
           <div class="flowchart-actions">
@@ -306,22 +272,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-colo-colposcopia.png"
                data-infographic-src="imagens/infografico-gin-colo-colposcopia.png"
-               data-svg-src="imagens/fluxograma_colo_colposcopia.svg"
                data-infographic-alt="Infográfico Clínico: Colposcopia Especializada, Zonas de Transformação e Testes Químicos"
-               data-svg-alt="Fluxograma Vetorial: Colposcopia e ZTs"
                alt="Infográfico Clínico: Colposcopia Especializada, Zonas de Transformação e Testes Químicos"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_colo_colposcopia.svg" alt="Fluxograma de Colposcopia e ZTs" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -413,17 +373,7 @@
         <p>Conduta conservadora vs. procedimentos excisionais com alça diatérmica e conização (Capítulo 77 FEBRASGO).</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-colo-precursoras">
+            <div class="card" id="card-visual-colo-precursoras">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Decisão Terapêutica nas Lesões Precursoras (NIC 1, 2 e 3)</h2>
           <div class="flowchart-actions">
@@ -443,22 +393,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-colo-precursoras.png"
                data-infographic-src="imagens/infografico-gin-colo-precursoras.png"
-               data-svg-src="imagens/fluxograma_colo_lesoes_precursoras.svg"
                data-infographic-alt="Infográfico Clínico: Manejo das Neoplasias Intraepiteliais Cervicais (NIC 1, 2 e 3)"
-               data-svg-alt="Fluxograma Vetorial: Lesões Precursoras NIC"
                alt="Infográfico Clínico: Manejo das Neoplasias Intraepiteliais Cervicais (NIC 1, 2 e 3)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_colo_lesoes_precursoras.svg" alt="Fluxograma de Lesões Precursoras NIC" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -505,17 +449,7 @@
         <p>Classificação oficial revista incorporando exame clínico, exames de imagem e achados anatomopatológicos.</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-colo-estadiamento">
+            <div class="card" id="card-visual-colo-estadiamento">
         <div class="card-header-flex">
           <h2 class="card-title">Diagrama de Estadiamento FIGO 2018: Microscópico vs Confinado vs Paramétrios vs Avançado</h2>
           <div class="flowchart-actions">
@@ -535,22 +469,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-colo-estadiamento.png"
                data-infographic-src="imagens/infografico-gin-colo-estadiamento.png"
-               data-svg-src="imagens/fluxograma_colo_estadiamento_figo.svg"
                data-infographic-alt="Infográfico Clínico: Estadiamento Clínico e por Imagem do Câncer de Colo Uterino (FIGO 2018)"
-               data-svg-alt="Fluxograma Vetorial: Estadiamento FIGO 2018"
                alt="Infográfico Clínico: Estadiamento Clínico e por Imagem do Câncer de Colo Uterino (FIGO 2018)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_colo_estadiamento_figo.svg" alt="Diagrama de Estadiamento FIGO 2018" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -603,17 +531,7 @@
         <p>A grande bifurcação terapêutica: cirurgia de Wertheim-Meigs vs. Quimiorradioterapia Concomitante (Capítulo 79 FEBRASGO).</p>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-colo-tratamento">
+            <div class="card" id="card-visual-colo-tratamento">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma da Decisão Terapêutica Central no Câncer de Colo Uterino</h2>
           <div class="flowchart-actions">
@@ -633,22 +551,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-colo-tratamento.png"
                data-infographic-src="imagens/infografico-gin-colo-tratamento.png"
-               data-svg-src="imagens/fluxograma_colo_tratamento.svg"
                data-infographic-alt="Infográfico Clínico: Tratamento do Câncer de Colo Uterino: Cirurgia de Wertheim-Meigs vs Quimiorradioterapia"
-               data-svg-alt="Fluxograma Vetorial: Tratamento Câncer de Colo Uterino"
                alt="Infográfico Clínico: Tratamento do Câncer de Colo Uterino: Cirurgia de Wertheim-Meigs vs Quimiorradioterapia"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_colo_tratamento.svg" alt="Fluxograma de Tratamento Colo Uterino" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
 

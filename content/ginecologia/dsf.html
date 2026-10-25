@@ -105,13 +105,7 @@
 
       <div class="card" id="card-visual-dsf">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Disfunção Sexual Feminina: Diretrizes FEBRASGO & DSM-5-TR</h2>
-            <div class="flowchart-view-toggle" id="dsf-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Disfunção Sexual Feminina: Diretrizes FEBRASGO & DSM-5-TR</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -129,15 +123,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-dsf.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de Disfunção Sexual Feminina"
-               data-svg-src="imagens/fluxograma_dsf_geral.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Disfunção Sexual Feminina: Diretrizes FEBRASGO & DSM-5-TR"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>
@@ -279,17 +271,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dsf-desejo">
+            <div class="card" id="card-visual-dsf-desejo">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Investigação e Decisão no Transtorno do Desejo Sexual Hipoativo (TDSH / TIESF)</h2>
           <div class="flowchart-actions">
@@ -309,17 +291,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dsf-desejo.png"
                data-infographic-src="imagens/infografico-gin-dsf-desejo.png"
-               data-svg-src="imagens/fluxograma_dsf_desejo.svg"
                data-infographic-alt="Infográfico Clínico: Investigação e Decisão Terapêutica no TDSH Feminino (FEBRASGO / ISSWSH)"
-               data-svg-alt="Fluxograma Vetorial: Decisão no TDSH"
                alt="Infográfico Clínico: Investigação e Decisão Terapêutica no TDSH Feminino (FEBRASGO / ISSWSH)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_dsf_desejo.svg" alt="Fluxograma de Decisão no TDSH" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -388,17 +364,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dsf-excitacao">
+            <div class="card" id="card-visual-dsf-excitacao">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo Escalonado do Transtorno da Excitação Sexual Feminina (DESF)</h2>
           <div class="flowchart-actions">
@@ -418,17 +384,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dsf-excitacao.png"
                data-infographic-src="imagens/infografico-gin-dsf-excitacao.png"
-               data-svg-src="imagens/fluxograma_dsf_excitacao.svg"
                data-infographic-alt="Infográfico Clínico: Manejo Escalonado do Transtorno de Excitação Sexual Feminina (FEBRASGO / ISSWSH)"
-               data-svg-alt="Fluxograma Vetorial: Manejo da Falha de Excitação"
                alt="Infográfico Clínico: Manejo Escalonado do Transtorno de Excitação Sexual Feminina (FEBRASGO / ISSWSH)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_dsf_excitacao.svg" alt="Fluxograma de Manejo da Excitação" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -497,17 +457,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dsf-orgasmo">
+            <div class="card" id="card-visual-dsf-orgasmo">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Semiológico e Terapêutico da Disfunção Orgásmica Feminina (DOF / Anorgasmia)</h2>
           <div class="flowchart-actions">
@@ -527,17 +477,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dsf-orgasmo.png"
                data-infographic-src="imagens/infografico-gin-dsf-orgasmo.png"
-               data-svg-src="imagens/fluxograma_dsf_orgasmo.svg"
                data-infographic-alt="Infográfico Clínico: Abordagem Semiológica e Terapêutica da Anorgasmia Feminina (FEBRASGO / ISSWSH)"
-               data-svg-alt="Fluxograma Vetorial: Manejo da Disfunção Orgásmica"
                alt="Infográfico Clínico: Abordagem Semiológica e Terapêutica da Anorgasmia Feminina (FEBRASGO / ISSWSH)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_dsf_orgasmo.svg" alt="Fluxograma de Transtorno do Orgasmo" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -606,17 +550,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dsf-dor-pelvica">
+            <div class="card" id="card-visual-dsf-dor-pelvica">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Diagnóstico e Terapêutico do Transtorno de Dor Gênito-Pélvica / Penetração (TDGPP)</h2>
           <div class="flowchart-actions">
@@ -636,17 +570,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dsf-dor.png"
                data-infographic-src="imagens/infografico-gin-dsf-dor.png"
-               data-svg-src="imagens/fluxograma_dsf_dor.svg"
                data-infographic-alt="Infográfico Clínico: Diagnóstico e Manejo do Transtorno de Dor Gênito-Pélvica/Penetração (FEBRASGO / ISSVD)"
-               data-svg-alt="Fluxograma Vetorial: Manejo da Dor Gênito-Pélvica"
                alt="Infográfico Clínico: Diagnóstico e Manejo do Transtorno de Dor Gênito-Pélvica/Penetração (FEBRASGO / ISSVD)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_dsf_dor.svg" alt="Fluxograma de Dor Sexual" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>
@@ -723,17 +651,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-dsf-iatrogenias">
+            <div class="card" id="card-visual-dsf-iatrogenias">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo das Iatrogenias Farmacológicas na Sexualidade Feminina</h2>
           <div class="flowchart-actions">
@@ -753,17 +671,11 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-dsf-iatrogenias.png"
                data-infographic-src="imagens/infografico-gin-dsf-iatrogenias.png"
-               data-svg-src="imagens/fluxograma_dsf_iatrogenias.svg"
                data-infographic-alt="Infográfico Clínico: Manejo das Disfunções Sexuais Iatrogênicas por Psicofármacos e ACO (FEBRASGO / ISSWSH)"
-               data-svg-alt="Fluxograma Vetorial: Iatrogenias Farmacológicas Sexuais"
                alt="Infográfico Clínico: Manejo das Disfunções Sexuais Iatrogênicas por Psicofármacos e ACO (FEBRASGO / ISSWSH)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_dsf_iatrogenias.svg" alt="Fluxograma de Iatrogenias" class="flowchart-img" loading="lazy" decoding="async">
         </div>
       </div>
     </section>

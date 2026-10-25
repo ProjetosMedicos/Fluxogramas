@@ -85,13 +85,7 @@
 
       <div class="card" id="card-visual-sua-landing">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Classificação &amp; Manejo do SUA</h2>
-            <div class="flowchart-view-toggle" id="sua-landing-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Classificação &amp; Manejo do SUA</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -109,15 +103,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-sua.png"
                data-infographic-alt="Infográfico Diretrizes FIGO e FEBRASGO de Sangramento Uterino Anormal (SUA)"
-               data-svg-src="imagens/fluxograma_sua_geral.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Classificação &amp; Manejo do SUA"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>
@@ -159,13 +151,7 @@
 
       <div class="card" id="card-visual-sua">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Classificação &amp; Manejo do SUA</h2>
-            <div class="flowchart-view-toggle" id="sua-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Classificação &amp; Manejo do SUA</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -183,15 +169,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-sua.png"
                data-infographic-alt="Infográfico Diretrizes FIGO e FEBRASGO de Sangramento Uterino Anormal (SUA)"
-               data-svg-src="imagens/fluxograma_sua_geral.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Classificação &amp; Manejo do SUA"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>
@@ -376,17 +360,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sua-agudo">
+            <div class="card" id="card-visual-sua-agudo">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo de Emergência do SUA Agudo</h2>
           <div class="flowchart-actions">
@@ -406,22 +380,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sua-agudo.png"
                data-infographic-src="imagens/infografico-gin-sua-agudo.png"
-               data-svg-src="imagens/fluxograma_sua_agudo.svg"
                data-infographic-alt="Infográfico Clínico: Manejo de Emergência do SUA Agudo (Estabilização & Hemostasia Rápida)"
-               data-svg-alt="Fluxograma Vetorial: Emergência SUA Agudo"
                alt="Infográfico Clínico: Manejo de Emergência do SUA Agudo (Estabilização & Hemostasia Rápida)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sua_agudo.svg" alt="Fluxograma de Manejo de Emergência do SUA Agudo" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>
@@ -492,17 +460,7 @@
         </div>
       </div>
 
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-sua-cronico">
+            <div class="card" id="card-visual-sua-cronico">
         <div class="card-header-flex">
           <h2 class="card-title">Infográfico Clínico & Algoritmo: Manejo Clínico & Cirúrgico do SUA Crônico</h2>
           <div class="flowchart-actions">
@@ -522,22 +480,16 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-sua-cronico.png"
                data-infographic-src="imagens/infografico-gin-sua-cronico.png"
-               data-svg-src="imagens/fluxograma_sua_cronico.svg"
                data-infographic-alt="Infográfico Clínico: Escalonamento Terapêutico do SUA Crônico (SIU-LNG 52mg, TXA, AINEs, Ablação)"
-               data-svg-alt="Fluxograma Vetorial: Manejo do SUA Crônico"
                alt="Infográfico Clínico: Escalonamento Terapêutico do SUA Crônico (SIU-LNG 52mg, TXA, AINEs, Ablação)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async"
                onclick="openVisualLightbox(this)">
         </div>
 
         <div style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 10px;">
-          💡 <em>Alterne entre o <strong>Infográfico Clínico</strong> e o <strong>Fluxograma SVG</strong> pelos botões acima. Use os controles de zoom ou clique na imagem para ampliar no Lightbox.</em>
-        </div>
-      </div>
-        <div class="flowchart-img-container">
-          <img src="imagens/fluxograma_sua_cronico.svg" alt="Fluxograma de Manejo do SUA Crônico" class="flowchart-img" loading="lazy" decoding="async">
+          💡 <em>Dica: Use os controles de zoom ou clique no infográfico para ampliar em alta resolução no Lightbox com Pan &amp; Zoom.</em>
         </div>
       </div>
     </section>

@@ -69,13 +69,7 @@
 
         <div class="card" id="card-visual-amenor">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Investigação das Amenorreias</h2>
-            <div class="flowchart-view-toggle" id="amenor-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">Diretriz Visual Integrada: Investigação das Amenorreias</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -93,15 +87,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-amenor.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de Amenorreias Primária e Secundária"
-               data-svg-src="imagens/fluxograma_amenorreia_primaria_caracteres_e_utero.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: Diretriz Visual Integrada: Investigação das Amenorreias"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -167,17 +159,7 @@
         </div>
 
               <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-amenor-rokitansky-morris">
+            <div class="card" id="card-visual-amenor-rokitansky-morris">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Comparativo: Rokitansky (MRKH) vs Insensibilidade Androgênica (Morris / CAIS)</h2>
           <div class="flowchart-actions">
@@ -197,11 +179,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-amenor-rokitansky-morris.png"
                data-infographic-src="imagens/infografico-gin-amenor-rokitansky-morris.png"
-               data-svg-src="imagens/fluxograma_amenorreia_diferencial_rokitansky_morris.svg"
                data-infographic-alt="Infográfico Clínico: Diagnóstico Diferencial Genético-Anatômico - Rokitansky (MRKH) vs Morris (CAIS) (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Rokitansky vs Morris"
                alt="Infográfico Clínico: Diagnóstico Diferencial Genético-Anatômico - Rokitansky (MRKH) vs Morris (CAIS) (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -284,17 +264,7 @@
         </div>
 
               <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-amenor-secundaria">
+            <div class="card" id="card-visual-amenor-secundaria">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma Investigação da Amenorreia Secundária: Algoritmo dos 4 Passos</h2>
           <div class="flowchart-actions">
@@ -314,11 +284,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-amenor-secundaria.png"
                data-infographic-src="imagens/infografico-gin-amenor-secundaria.png"
-               data-svg-src="imagens/fluxograma_amenorreia_secundaria_passos_diagnosticos.svg"
                data-infographic-alt="Infográfico Clínico: Algoritmo Decisório dos 4 Passos na Amenorreia Secundária (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Investigação de Amenorreia Secundária"
                alt="Infográfico Clínico: Algoritmo Decisório dos 4 Passos na Amenorreia Secundária (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -429,17 +397,7 @@
         </div>
 
               <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-amenor-hipotalamo-hipofise">
+            <div class="card" id="card-visual-amenor-hipotalamo-hipofise">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Diferenciação Central: Hipotálamo (IV) vs Hipófise (III)</h2>
           <div class="flowchart-actions">
@@ -459,11 +417,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-amenor-hipotalamo-hipofise.png"
                data-infographic-src="imagens/infografico-gin-amenor-hipotalamo-hipofise.png"
-               data-svg-src="imagens/fluxograma_amenorreia_hipotalamica_vs_hipofisaria.svg"
                data-infographic-alt="Infográfico Clínico: Diferenciação Central - Hipotálamo (IV) vs Hipófise (III) (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Hipotálamo vs Hipófise"
                alt="Infográfico Clínico: Diferenciação Central - Hipotálamo (IV) vs Hipófise (III) (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -526,17 +482,7 @@
         </div>
 
               <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-amenor-cariotipo">
+            <div class="card" id="card-visual-amenor-cariotipo">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Cariótipo, Disgenesias Gonadais e Risco do Cromossomo Y</h2>
           <div class="flowchart-actions">
@@ -556,11 +502,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-amenor-cariotipo.png"
                data-infographic-src="imagens/infografico-gin-amenor-cariotipo.png"
-               data-svg-src="imagens/fluxograma_amenorreia_genetica_cariotipo_gonadectomia.svg"
                data-infographic-alt="Infográfico Clínico: Cariótipo, Disgenesias Gonadais e Risco do Cromossomo Y (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Cariótipo e Gonadectomia"
                alt="Infográfico Clínico: Cariótipo, Disgenesias Gonadais e Risco do Cromossomo Y (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -617,17 +561,7 @@
         </div>
 
               <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-amenor-manejo">
+            <div class="card" id="card-visual-amenor-manejo">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Manejo Terapêutico, Indução Puberal e TRH nas Amenorreias</h2>
           <div class="flowchart-actions">
@@ -647,11 +581,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-amenor-manejo.png"
                data-infographic-src="imagens/infografico-gin-amenor-manejo.png"
-               data-svg-src="imagens/fluxograma_amenorreia_manejo_terapeutico_trh.svg"
                data-infographic-alt="Infográfico Clínico: Manejo Terapêutico, Indução Puberal e TRH nas Amenorreias (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Manejo Terapêutico das Amenorreias"
                alt="Infográfico Clínico: Manejo Terapêutico, Indução Puberal e TRH nas Amenorreias (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>

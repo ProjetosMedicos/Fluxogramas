@@ -53,13 +53,7 @@
 
       <div class="card" id="card-visual-trhav">
         <div class="card-header-flex">
-          <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
-            <h2 class="card-title" style="margin: 0;">TRH Avançada: Testosterona & Saúde Óssea (FEBRASGO)</h2>
-            <div class="flowchart-view-toggle" id="trhav-view-toggle">
-              <button type="button" class="view-btn active" onclick="switchVisualMode(this, 'infographic')" title="Exibir Infográfico Completo em Alta Resolução">📊 Infográfico NotebookLM (HD)</button>
-              <button type="button" class="view-btn" onclick="switchVisualMode(this, 'svg')" title="Exibir Fluxograma Vetorial Clássico">📐 Fluxograma SVG Clássico</button>
-            </div>
-          </div>
+          <h2 class="card-title" style="margin: 0;">TRH Avançada: Testosterona & Saúde Óssea (FEBRASGO)</h2>
           <div class="flowchart-actions">
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
             <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
@@ -77,15 +71,13 @@
                data-scale="1.0"
                data-infographic-src="imagens/infografico-gin-trhav.png"
                data-infographic-alt="Infográfico Diretrizes FEBRASGO de TRH Avançada e Testosterona"
-               data-svg-src="imagens/fluxograma_trh_androgenios_tdsh.svg"
-               data-svg-alt="Fluxograma Vetorial Clássico: TRH Avançada: Testosterona & Saúde Óssea (FEBRASGO)"
                loading="lazy"
                decoding="async"
                onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre a imagem ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo com Pan &amp; Zoom de alta resolução, ou alterne entre o <strong>Infográfico HD</strong> e o <strong>Fluxograma SVG</strong>.</em>
+          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
         </div>
       </div>
 
@@ -141,17 +133,7 @@
       </div>
 
             <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-trhav-monitoramento">
+            <div class="card" id="card-visual-trhav-monitoramento">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Monitoramento e Segurança da Testosterona no TDSH</h2>
           <div class="flowchart-actions">
@@ -171,11 +153,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-trhav-monitoramento-testosterona.png"
                data-infographic-src="imagens/infografico-gin-trhav-monitoramento-testosterona.png"
-               data-svg-src="imagens/fluxograma_trh_monitoramento_testosterona.svg"
                data-infographic-alt="Infográfico Clínico: Monitoramento e Segurança da Testosterona no TDSH Feminino (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Monitoramento da Testosterona"
                alt="Infográfico Clínico: Monitoramento e Segurança da Testosterona no TDSH Feminino (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -244,17 +224,7 @@
       </div>
 
             <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-trhav-sangramento">
+            <div class="card" id="card-visual-trhav-sangramento">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Abordagem do Sangramento Uterino Inesperado na TRH</h2>
           <div class="flowchart-actions">
@@ -274,11 +244,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-trhav-sangramento-investigacao.png"
                data-infographic-src="imagens/infografico-gin-trhav-sangramento-investigacao.png"
-               data-svg-src="imagens/fluxograma_trh_sangramento_investigacao.svg"
                data-infographic-alt="Infográfico Clínico: Abordagem do Sangramento Uterino Inesperado na TRH (FEBRASGO)"
-               data-svg-alt="Fluxograma Vetorial: Investigação do Sangramento na TRH"
                alt="Infográfico Clínico: Abordagem do Sangramento Uterino Inesperado na TRH (FEBRASGO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -341,17 +309,7 @@
       </div>
 
             <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-trhav-osteoporose">
+            <div class="card" id="card-visual-trhav-osteoporose">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de TRH e Saúde Óssea no Climatério: Diagnóstico e Prevenção de Fraturas</h2>
           <div class="flowchart-actions">
@@ -371,11 +329,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-trhav-osteoporose.png"
                data-infographic-src="imagens/infografico-gin-trhav-osteoporose.png"
-               data-svg-src="imagens/fluxograma_trh_saude_ossea_osteoporose.svg"
                data-infographic-alt="Infográfico Clínico: TRH e Saúde Óssea no Climatério - Diagnóstico e Prevenção de Fraturas (FEBRASGO / ABRASSO)"
-               data-svg-alt="Fluxograma Vetorial: TRH e Saúde Óssea"
                alt="Infográfico Clínico: TRH e Saúde Óssea no Climatério - Diagnóstico e Prevenção de Fraturas (FEBRASGO / ABRASSO)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -433,17 +389,7 @@
       </div>
 
             <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-trhav-efeitos">
+            <div class="card" id="card-visual-trhav-efeitos">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Ajuste Fino de Doses e Manejo de Efeitos Adversos na TRH</h2>
           <div class="flowchart-actions">
@@ -463,11 +409,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-trhav-ajuste-doses-efeitos.png"
                data-infographic-src="imagens/infografico-gin-trhav-ajuste-doses-efeitos.png"
-               data-svg-src="imagens/fluxograma_trh_ajuste_doses_efeitos.svg"
                data-infographic-alt="Infográfico Clínico: Ajuste Fino de Doses e Manejo de Efeitos Adversos na TRH (FEBRASGO / SOBRAC)"
-               data-svg-alt="Fluxograma Vetorial: Ajuste Fino de Doses"
                alt="Infográfico Clínico: Ajuste Fino de Doses e Manejo de Efeitos Adversos na TRH (FEBRASGO / SOBRAC)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
@@ -530,17 +474,7 @@
       </div>
 
             <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-            <!-- Alternador de Visualização Canônico (Dual-Toggle) -->
-      <div class="flowchart-view-toggle">
-        <button type="button" class="active" onclick="switchVisualMode(this, 'infographic')">
-          📊 Infográfico Clínico
-        </button>
-        <button type="button" onclick="switchVisualMode(this, 'svg')">
-          📐 Fluxograma SVG
-        </button>
-      </div>
-
-      <div class="card" id="card-visual-trhav-desmame">
+            <div class="card" id="card-visual-trhav-desmame">
         <div class="card-header-flex">
           <h2 class="card-title">Fluxograma de Protocolo de Descontinuação e Desmame Gradual da TRH</h2>
           <div class="flowchart-actions">
@@ -560,11 +494,9 @@
         <div class="flowchart-container">
           <img src="imagens/infografico-gin-trhav-desmame.png"
                data-infographic-src="imagens/infografico-gin-trhav-desmame.png"
-               data-svg-src="imagens/fluxograma_trh_descontinuacao_desmame.svg"
                data-infographic-alt="Infográfico Clínico: Protocolo de Descontinuação e Desmame Gradual da TRH (FEBRASGO / SOBRAC)"
-               data-svg-alt="Fluxograma Vetorial: Descontinuação e Desmame"
                alt="Infográfico Clínico: Protocolo de Descontinuação e Desmame Gradual da TRH (FEBRASGO / SOBRAC)"
-               class="flowchart-img"
+               class="flowchart-img infographic-mode"
                loading="lazy"
                decoding="async">
         </div>
