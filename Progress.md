@@ -612,3 +612,25 @@ GINECOLOGIA & OBSTETRÍCIA:        [██████████████�
 - [x] Atualização de versão do Service Worker (`sw.js` -> `fluxomed-cache-v34`)
 - [x] **Onda S9 100% Concluída (9/9 infográficos)**!
 - [x] **META HISTÓRICA ATINGIDA: 88 DE 88 SUB-FLUXOGRAMAS DE GINECOLOGIA (100%) CONCLUÍDOS NO PADRÃO CANÔNICO OURO!** 🏆🎉
+
+---
+
+## [2026-10-24] - Marco de Refinamento de UI & Conversão Global de Tabelas em Imagens HD
+
+### 1. Exclusividade Visual de Infográficos HD
+- **Remoção de Alternadores Redundantes:** Eliminadas as barras `.flowchart-view-toggle` em todos os 86 módulos, apresentando diretamente o Infográfico HD editorial.
+- **Deduplicação de Containers:** Remoção de 52 SVGs duplicados que ficavam empilhados abaixo do infográfico principal, mantendo SVGs autônomos exclusivamente em módulos que não possuem versão PNG.
+
+### 2. Otimização Ergonômica dos Cards & Visualizador Lightbox
+- **Cards Clínicos Limpos:** Eliminação de botões de controle dispersos nos cabeçalhos dos cards (`Zoom +`, `Zoom −`, `100%`, `Reset`, `Tela Cheia`, `Baixar`). O card agora exibe unicamente o título clínico (`<h2 class="card-title">`) e a mídia direta.
+- **Aproveitamento de Tela Expandido:** Aumento da largura útil desktop para `1060px` (e `1180px` com sidebar recolhida), eliminando bordas duplas e travas de rolagem vertical.
+- **Lightbox Focado:** Toolbar de visualização simplificada para exibir exclusivamente o botão de **Baixar HD** (`#lightbox-download`) e o botão de **Fechar** (`✕`), preservando suporte completo a Pan & Zoom tátil.
+
+### 3. Migração Integral de Tabelas Clínicas para Formato Visual HD (306 Tabelas)
+- **100% das Tabelas Convertidas:** Todas as 306 tabelas clínicas dos 86 módulos (153 em Ginecologia e 151 em Pediatria + 2 pilotos) convertidas para imagens PNG de 1200px de alta definição editorial em `imagens/tabelas/`.
+- **Padrão Sem Cabeçalho:** Imagens iniciam diretamente na matriz da tabela com cores semafóricas, evitando redundância com o título do card HTML.
+- **Informações Acompanhantes Integradas:** Blocos de estratificação de risco, notas de corte, posologias e diretrizes imediatas foram integrados diretamente no rodapé da imagem (`.accompanying-box`).
+- **Resolução de Problema Crítico no Mobile:** Fim definitivo de tabelas quebrando ou exigindo rolagem horizontal desajeitada em telas de celular; todas as tabelas agora abrem em tela cheia via Lightbox com alta legibilidade.
+- **Zero Tabelas HTML Residuais:** 0 tags `<table>` em código bruto restante no diretório `content/`.
+- **PWA & Cache:** Versão do Service Worker elevada para `fluxomed-cache-v45`.
+

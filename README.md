@@ -1,6 +1,6 @@
 # 🩺 Fluxomed | Algoritmos & Infográficos Clínicos
 
-Portal médico interativo e **Web App (PWA)** de alta performance voltado à tomada de decisão clínica rápida, visualização de fluxogramas vetoriais, propedêutica e prescrição baseada em evidências.
+Portal médico interativo e **Web App (PWA)** de alta performance voltado à tomada de decisão clínica rápida, visualização de fluxogramas editoriais, propedêutica e prescrição baseada em evidências.
 
 Totalmente desenvolvido em arquitetura estática pura (*zero runtime dependencies*), com carregamento dinâmico modular e funcionamento **100% offline**.
 
@@ -11,20 +11,21 @@ Totalmente desenvolvido em arquitetura estática pura (*zero runtime dependencie
 | Métrica | Total | Detalhes |
 | :--- | :---: | :--- |
 | **Módulos Clínicos** | **86** | 38 Ginecologia (FEBRASGO) + 48 Pediatria (SBP 2024) |
-| **Seções Estruturadas** | **684** | 8 seções homogêneas por módulo clínico |
-| **Infográficos HD** | **174** | Sínteses visuais de alta resolução em formato editorial |
-| **Fluxogramas SVG** | **176** | Árvores decisórias vetoriais com zoom dinâmico |
-| **Índice de Busca** | **856** | Itens indexados (fármacos, condutas, escores e tabelas) |
-| **Compatibilidade** | **PWA** | Acesso offline, instalável em Android, iOS e Desktop |
+| **Seções Estruturadas** | **684** | 8 seções clínicas padronizadas por módulo |
+| **Infográficos HD** | **86** | Pôsteres verticais editoriais em alta resolução (1 por módulo) |
+| **Tabelas Clínicas Visuais HD** | **306** | 100% das tabelas convertidas em imagens HD com condutas integradas |
+| **Índice de Busca** | **856** | Itens indexados para busca instantânea (`Ctrl + K`) |
+| **Compatibilidade** | **PWA** | Acesso offline com cache Service Worker, instalável em Mobile e Desktop |
 
 ---
 
 ## 🌟 Recursos Principais
 
-- **Página Inicial Minimalista:** Canvas centralizado e direto ao ponto, com adaptação ultra limpa para smartphones.
-- **Busca Global Instantânea (`Ctrl + K` ou `/`):** Localização em tempo real de patologias, dosagens, critérios diagnósticos e condutas em 856 itens indexados.
-- **Alternador Visual Duplo (`HD ↔ SVG`):** Alternância instantânea em 1-clique entre o Infográfico Clínico em alta resolução e o Fluxograma Vetorial SVG.
-- **Lightbox Clínico Interativo:** Zoom dinâmico (`+`, `−`, `0`, `Ctrl + Scroll`), arraste panorâmico e atalho `Esc`.
+- **Página Inicial Minimalista & Mobile-First:** Interface limpa e direta ao ponto, com gaveta lateral otimizada para smartphones.
+- **Cards Clínicos Limpos:** Foco visual imediato no conteúdo; botões de zoom e download foram centralizados exclusivamente dentro do visualizador expandido.
+- **Visualizador Lightbox Otimizado:** Toque em qualquer imagem (infográfico ou tabela) para abrir em alta resolução com Pan & Zoom tátil, botão de **Baixar HD** e botão de **Fechar (✕)**.
+- **Tabelas Clínicas em Formato Visual:** Eliminação completa de rolagem horizontal em telas móveis; tabelas estruturadas com cores semafóricas e notas de conduta no rodapé.
+- **Busca Global Instantânea (`Ctrl + K` ou `/`):** Localização em tempo real de patologias, fármacos, critérios diagnósticos e escores.
 - **Prescrições & Posologias Prontas:** Botão de 1-clique para copiar doses e esquemas terapêuticos direto para o prontuário.
 - **Casos Clínicos Simulados:** Mais de 500 cenários interativos da prática diária com revelação comentada da conduta recomendada.
 
@@ -68,7 +69,7 @@ Acesse: `http://localhost:8000`
 
 ## 📱 Instalação como App (PWA)
 
-- **Android (Chrome):** Toque no botão de instalação da barra lateral ou selecione *"Instalar aplicativo"* no menu.
+- **Android (Chrome):** Toque no botão de instalação da barra lateral ou selecione *"Instalar aplicativo"* no menu do navegador.
 - **iOS (Safari):** Toque no botão *Compartilhar* e selecione *"Adicionar à Tela de Início"*.
 - **Desktop (Chrome/Edge):** Clique no ícone de instalação na barra de endereços do navegador.
 
@@ -87,7 +88,9 @@ Fluxogramas/
 ├── content/
 │   ├── ginecologia/        # 38 módulos clínicos FEBRASGO em HTML semântico
 │   └── pediatria/          # 48 módulos clínicos SBP 2024 em HTML semântico
-├── imagens/                # 174 infográficos HD (.png) e 176 fluxogramas (.svg)
+├── imagens/
+│   ├── infografico-*.png   # 86 infográficos verticais editoriais HD
+│   └── tabelas/            # 306 tabelas clínicas em formato visual HD
 ├── manifest.webmanifest    # Manifesto PWA
 ├── sw.js                   # Service Worker com estratégia de cache offline
 ├── metodo_fluxograma.md    # Manual metodológico do framework clínico-visual
@@ -98,6 +101,6 @@ Fluxogramas/
 
 ## ⚖️ Referências Oficiais
 
-- **Ginecologia:** *Tratado de Ginecologia FEBRASGO (2ª Edição).*
-- **Pediatria:** *Tratado de Pediatria SBP (6ª Edição, 2024).*
-- **Diretrizes Complementares:** *Ministério da Saúde do Brasil, OMS, GINA, WAO, FIGO, AHA/PALS e ESHRE.*
+- **Ginecologia:** Tratado de Ginecologia FEBRASGO (2ª Edição) & Protocolos Oficiais FEBRASGO.
+- **Pediatria:** Tratado de Pediatria da Sociedade Brasileira de Pediatria - SBP (6ª Edição, 2024).
+- **Emergências:** Diretrizes PALS/AHA, Diretrizes de Reanimação Neonatal SBP 2024 e Consensos Globais (GINA, GOLD, KDIGO).
