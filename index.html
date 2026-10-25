@@ -4332,10 +4332,10 @@
 
             <div class="home-cmd-card">
               <div class="home-cmd-top">
-                <span class="home-cmd-name">Lightbox &amp; Zoom</span>
-                <span class="home-cmd-keys"><kbd>Clique</kbd><span>+</span><kbd>Scroll</kbd></span>
+                <span class="home-cmd-name">Visualizador HD</span>
+                <span class="home-cmd-keys"><kbd>Clique</kbd><span>para</span><kbd>Abrir</kbd></span>
               </div>
-              <p class="home-cmd-desc">Clique em qualquer imagem para ampliar em tela cheia com arraste e zoom interativo.</p>
+              <p class="home-cmd-desc">Clique em qualquer imagem para abrir em alta resolução com visualização limpa.</p>
             </div>
 
             <div class="home-cmd-card">
@@ -4483,18 +4483,7 @@
           <h2 id="lightbox-title" class="lightbox-title">Infográfico Clínico</h2>
         </div>
         <div class="lightbox-controls">
-          <div class="lightbox-mode-switch" id="lightbox-mode-group">
-            <button type="button" id="lightbox-btn-info" class="lightbox-mode-btn active" onclick="switchLightboxMode('infographic')">📊 Infográfico HD</button>
-            <button type="button" id="lightbox-btn-svg" class="lightbox-mode-btn" onclick="switchLightboxMode('svg')">📐 Fluxograma SVG</button>
-          </div>
-          <div class="lightbox-zoom-group">
-            <button type="button" class="lightbox-tool-btn" onclick="zoomLightbox(-0.25)" title="Diminuir Zoom (-)">−</button>
-            <span id="lightbox-zoom-label" class="lightbox-zoom-readout">100%</span>
-            <button type="button" class="lightbox-tool-btn" onclick="zoomLightbox(0.25)" title="Aumentar Zoom (+)">+</button>
-            <button type="button" class="lightbox-tool-btn" onclick="resetLightboxZoom()" title="Ajustar ao Ecrã (0)">100%</button>
-          </div>
           <a id="lightbox-download" href="#" download class="lightbox-tool-btn lightbox-download-btn" title="Baixar Imagem em Alta Resolução">💾 Baixar HD</a>
-          <a id="lightbox-newtab" href="#" target="_blank" rel="noopener" class="lightbox-tool-btn" title="Abrir arquivo original em nova guia">↗</a>
           <button type="button" class="lightbox-close-btn" onclick="closeVisualLightbox()" title="Fechar (Esc)" aria-label="Fechar visualizador">✕</button>
         </div>
       </header>
@@ -4502,8 +4491,7 @@
         <img id="lightbox-img" src="" alt="" class="lightbox-media" draggable="false" />
       </div>
       <footer class="lightbox-footer">
-        <span>🖱️ Role para navegar ou use <strong>Ctrl + Scroll</strong> para Zoom • Arraste para mover quando ampliado</span>
-        <span>Atalhos: <kbd>+</kbd> <kbd>−</kbd> <kbd>0</kbd> <kbd>Esc</kbd></span>
+        <span>🖱️ Role ou arraste para navegar • Pressione <kbd>Esc</kbd> para fechar</span>
       </footer>
     </div>
   </dialog>
