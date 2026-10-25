@@ -4652,18 +4652,79 @@
     }
 
     @media (max-width: 640px) {
-      .home-kbd-slash {
-        display: none;
+      .home-shell {
+        padding: 18px 14px 44px !important;
+      }
+      .home-hero {
+        margin-bottom: 20px !important;
+      }
+      .home-meta-pill,
+      .home-subtitle,
+      .home-suggestions,
+      .home-search-shortcuts,
+      .home-spec-source,
+      .home-block:has(#home-cmd-heading) {
+        display: none !important;
+      }
+      .home-title {
+        font-size: 1.62rem !important;
+        margin-bottom: 4px !important;
+      }
+      .home-search-box {
+        height: 44px !important;
+        padding: 0 10px 0 12px !important;
+        border-radius: 10px !important;
+      }
+      .home-search-input {
+        font-size: 0.88rem !important;
       }
       .home-topics-bar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        margin-bottom: 14px !important;
+        padding-bottom: 8px !important;
+        gap: 8px !important;
+      }
+      .home-topics-heading-wrap {
+        width: 100% !important;
+        justify-content: space-between !important;
       }
       .home-spec-tabs {
-        width: 100%;
+        width: 100% !important;
+        display: flex !important;
       }
       .home-spec-tab {
-        flex: 1;
-        justify-content: center;
+        flex: 1 !important;
+        justify-content: center !important;
+        padding: 6px 8px !important;
+        font-size: 0.76rem !important;
+      }
+      .home-spec-header {
+        margin-bottom: 12px !important;
+      }
+      .home-axis-group {
+        margin-bottom: 14px !important;
+      }
+      .home-axis-title {
+        font-size: 0.72rem !important;
+        margin-bottom: 6px !important;
+      }
+      .home-topic-grid {
+        gap: 6px !important;
+      }
+      .home-topic-card {
+        padding: 9px 12px !important;
+        border-radius: 8px !important;
+      }
+      .home-topic-name {
+        font-size: 0.82rem !important;
+      }
+      .home-topic-sub {
+        font-size: 0.69rem !important;
+      }
+      .home-footer {
+        margin-top: 32px !important;
+        padding-top: 14px !important;
+        font-size: 0.70rem !important;
       }
     }
