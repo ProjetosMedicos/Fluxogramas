@@ -386,10 +386,23 @@ async function switchSection(sectionId) {
       activeLink.classList.add('active');
       const prefix = sectionId.split('-')[0];
       if (prefix) activeLink.classList.add(`${prefix}-active`);
+    }
 
-      const text = activeLink.querySelector('span:last-child')?.textContent || 'Tópico';
-      const currentCrumb = document.getElementById('current-crumb');
-      if (currentCrumb) currentCrumb.textContent = text;
+    let text = activeLink ? (activeLink.querySelector('span:last-child')?.textContent || '').trim() : '';
+    if (!text && target) {
+      const h1 = target.querySelector('h1.section-title, h1');
+      if (h1) text = h1.textContent.trim();
+    }
+    if (!text) text = 'Conduta Clínica';
+
+    const currentCrumb = document.getElementById('current-crumb');
+    const sepCur = document.getElementById('crumb-sep-cur');
+    if (currentCrumb) {
+      currentCrumb.textContent = text;
+      currentCrumb.style.display = '';
+    }
+    if (sepCur) {
+      sepCur.style.display = '';
     }
 
     renderToc(sectionId);

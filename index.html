@@ -4224,30 +4224,13 @@
           <span class="brand-doc-logo">Fluxomed</span>
         </a>
         <div class="breadcrumbs" id="topbar-breadcrumbs">
-          <span class="crumb-separator crumb-home-sep">/</span>
-          <a href="#inicio" id="crumb-home-link" class="crumb-home-link" onclick="goHome(event)" title="Voltar à Página Inicial">Início</a>
-          <span class="crumb-separator" id="crumb-sep-spec">/</span>
-          <span class="crumb-specialty" id="crumb-specialty">Página Inicial</span>
           <span class="crumb-separator" id="crumb-sep-cur" style="display: none;">/</span>
           <span id="current-crumb" class="crumb-current" style="display: none;"></span>
+          <span id="crumb-specialty" style="display: none;"></span>
         </div>
       </div>
-      <div class="top-bar-center">
-        <button class="topbar-search-trigger" onclick="focusSearch()" title="Buscar nos tópicos (Ctrl + K)">
-          <svg class="search-icon-svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="color: var(--text-muted); flex-shrink: 0;">
-            <path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/>
-          </svg>
-          <span class="search-text">Buscar nos tópicos...</span>
-          <kbd class="search-kbd">Ctrl K</kbd>
-        </button>
-      </div>
-      <div class="top-bar-right">
-        <button id="topbar-theme-toggle" class="btn-theme-toggle" onclick="toggleTheme()" title="Alternar para Modo Noturno" aria-label="Alternar para Modo Noturno"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.3 2a10 10 0 0 0-.19 20 10.04 10.04 0 0 0 9.71-7.66 1 1 0 0 0-.96-1.24 8 8 0 0 1-8.56-8.56 1 1 0 0 0-1.24-.96A9.85 9.85 0 0 0 12.3 2z"/></svg></button>
-        <button class="btn-action btn-print" onclick="window.print()" title="Imprimir esta conduta clínica">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" style="flex-shrink: 0;"><path d="M19 8H5c-1.66 0-3 1.34-3 3v6h4v4h12v-4h4v-6c0-1.66-1.34-3-3-3zm-3 11H8v-5h8v5zm3-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm-1-9H6v4h12V3z"/></svg>
-          <span>Imprimir</span>
-        </button>
-      </div>
+      <div class="top-bar-center" style="display: none !important;"></div>
+      <div class="top-bar-right" style="display: none !important;"></div>
     </div>
 
     <!-- ================================================================= -->
