@@ -67,12 +67,7 @@
         <div class="card-header-flex">
           <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
           <div class="flowchart-actions">
-            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="examefisico-landing-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="examefisico-landing-fullscreen-link" href="imagens/infografico-gin-examefisico.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
-            <a id="examefisico-landing-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <a id="examefisico-landing-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open btn-download-visual" title="Baixar imagem em altíssima resolução">💾 Baixar HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
@@ -89,7 +84,7 @@
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
+          💡 <em>Clique no infográfico para ampliar em alta resolução com Pan &amp; Zoom interativo.</em>
         </div>
       </div>
     </section>
@@ -475,12 +470,7 @@
         <div class="card-header-flex">
           <h2 class="card-title" style="margin: 0;">1. Roteiro Sequencial do Exame Físico Ginecológico & Propedêutica Armada</h2>
           <div class="flowchart-actions">
-            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, 0.15)" title="Aumentar Zoom">Zoom +</button>
-            <button type="button" class="btn-zoom" onclick="zoomFlowchart(this, -0.15)" title="Reduzir Zoom">Zoom −</button>
-            <button type="button" class="btn-zoom" onclick="resetZoom(this)" title="Restaurar Tamanho">100%</button>
-            <button type="button" class="btn-zoom" id="examefisico-expand-btn" onclick="toggleWideMode(this)" title="Alternar largura expandida no desktop">↔ Expandir</button>
-            <a id="examefisico-fullscreen-link" href="imagens/infografico-gin-examefisico.png" target="_blank" class="btn-image-open" onclick="if(typeof openVisualLightbox==='function'){event.preventDefault();openVisualLightbox(this);}">🔍 Abrir em Tela Cheia</a>
-            <a id="examefisico-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open" title="Baixar imagem em altíssima resolução">💾 Baixar Imagem HD</a>
+            <a id="examefisico-download-link" href="imagens/infografico-gin-examefisico.png" download="infografico-gin-examefisico.png" class="btn-image-open btn-download-visual" title="Baixar imagem em altíssima resolução">💾 Baixar HD</a>
           </div>
         </div>
         <div class="flowchart-img-container">
@@ -497,7 +487,7 @@
                style="cursor: zoom-in;">
         </div>
         <div style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted); text-align: center; line-height: 1.5;">
-          💡 <em>Dica: Clique diretamente sobre o infográfico ou em <strong>Abrir em Tela Cheia</strong> para abrir o visualizador interativo em alta resolução com Pan &amp; Zoom.</em>
+          💡 <em>Clique no infográfico para ampliar em alta resolução com Pan &amp; Zoom interativo.</em>
         </div>
       </div>
 
@@ -505,12 +495,6 @@
       <div class="card" style="margin-top: 24px;">
         <h2 class="card-title">2. Conduta Clínica Diante de Achados Anormais ao Exame Físico</h2>
         <p>Árvore de decisão rápida para estratificação de sinais de alerta: nódulo mamário pétreo, descarga papilar patológica, tumefação de Bartholin, sinal de Frenkel positivo, lesões cervicais e massa anexial na pós-menopausa:</p>
-        
-        <div class="flowchart-controls" style="margin-top: 12px; margin-bottom: 12px; display: flex; gap: 8px;">
-          <button class="btn-action" onclick="zoomFlowchart(this, 0.15)">Zoom +</button>
-          <button class="btn-action" onclick="zoomFlowchart(this, -0.15)">Zoom −</button>
-          <button class="btn-action" onclick="resetZoom(this)">↺ Reset</button>
-        </div>
 
         <div class="flowchart-img-container" style="display: block; text-align: center; contain: paint; max-width: 100%; overflow: auto;">
           <img src="imagens/fluxograma_exame_fisico_achados_anormais.svg" alt="Conduta em Achados Anormais no Exame Físico Ginecológico" class="flowchart-img" loading="lazy" decoding="async" style="max-width: 100%; height: auto;">

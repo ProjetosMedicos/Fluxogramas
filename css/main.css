@@ -525,13 +525,13 @@
       .content-section {
         margin-right: 280px !important;
         margin-left: 36px !important;
-        max-width: 900px !important;
+        max-width: 1060px !important;
       }
       .toc-sidebar {
         display: block !important;
         position: fixed !important;
         top: 76px !important;
-        right: max(24px, calc(100vw - 310px - 36px - 900px - 260px)) !important;
+        right: max(24px, calc(100vw - 310px - 36px - 1060px - 260px)) !important;
         width: 240px !important;
         max-height: calc(100vh - 96px) !important;
         overflow-y: auto !important;
@@ -1613,7 +1613,7 @@
       body.sidebar-collapsed .content-section {
         margin-left: auto !important;
         margin-right: auto !important;
-        max-width: 1040px !important;
+        max-width: 1180px !important;
         padding: 0 40px !important;
       }
       body.sidebar-collapsed .toc-sidebar {
@@ -1780,46 +1780,52 @@
       color: var(--primary);
     }
 
-    .flowchart-img.infographic-mode {
-      max-width: 100% !important;
-      border-radius: 12px;
+    /* Otimização de Aproveitamento de Tela para Infográficos e Imagens Clínicas */
+    .card:has(.flowchart-img),
+    .card:has(.flowchart-container),
+    .card:has(.flowchart-img-container),
+    .card[id^="card-visual-"] {
+      padding: 20px 20px 14px !important;
     }
 
-    .flowchart-img-container {
-      background-color: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 20px;
-      margin: 12px 0 20px;
-      overflow: auto !important;
-      max-height: 85vh;
-      overscroll-behavior: contain;
-      -webkit-overflow-scrolling: touch !important;
+    .flowchart-img-container,
+    .flowchart-container {
+      background-color: transparent !important;
+      border: none !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      margin: 10px 0 6px !important;
+      overflow: visible !important;
+      max-height: none !important;
       display: block !important;
       text-align: center !important;
       width: 100% !important;
       max-width: 100% !important;
       min-width: 0 !important;
       box-sizing: border-box !important;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.2s ease;
-    }
-
-    .flowchart-img-container:hover {
-      box-shadow: var(--shadow-md);
     }
 
     .flowchart-img {
       width: 100% !important;
-      max-width: 860px !important;
+      max-width: 100% !important;
       height: auto !important;
-      display: inline-block !important;
+      display: block !important;
       margin: 0 auto !important;
-      border-radius: var(--radius-sm);
-      transform-origin: top center;
-      transition: transform 0.2s ease;
-      vertical-align: middle;
+      border-radius: var(--radius-md) !important;
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+      cursor: zoom-in;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
       box-sizing: border-box !important;
+    }
+
+    .flowchart-img:hover {
+      box-shadow: 0 6px 26px rgba(0, 0, 0, 0.12);
+    }
+
+    .flowchart-img.infographic-mode {
+      max-width: 100% !important;
+      border-radius: 12px;
     }
 
     /* Wide Mode para Fluxogramas e Infográficos em Desktop */
@@ -2773,33 +2779,36 @@
         margin-top: 10px !important;
       }
 
-      /* Contenção Rígida de Fluxogramas SVG no iPhone */
-      .flowchart-img-container {
-        padding: 10px 4px !important;
-        min-height: 160px !important;
-        margin: 10px 0 16px !important;
-        overflow-x: auto !important;
-        -webkit-overflow-scrolling: touch !important;
+      /* Aproveitamento Total de Tela de Imagens & Infográficos no Mobile */
+      .card:has(.flowchart-img),
+      .card:has(.flowchart-img-container),
+      .card[id^="card-visual-"] {
+        padding: 12px 8px 10px !important;
+      }
+      .flowchart-img-container,
+      .flowchart-container {
+        padding: 0 !important;
+        min-height: auto !important;
+        margin: 8px 0 6px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        contain: none !important;
         display: block !important;
         text-align: center !important;
         width: 100% !important;
         max-width: 100% !important;
         min-width: 0 !important;
         box-sizing: border-box !important;
-        contain: paint !important;
-      }
-      .flowchart-img-container:has(.infographic-mode) {
-        max-height: none !important;
-        overflow-y: visible !important;
-        contain: none !important;
-        padding: 8px 0 !important;
       }
       .flowchart-img {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
-        display: inline-block !important;
+        display: block !important;
         box-sizing: border-box !important;
+        border-radius: 8px !important;
       }
       .flowchart-actions {
         width: 100% !important;
@@ -3506,16 +3515,17 @@
 
     /* Compatibilidade para Contêineres de Fluxogramas e Tabelas */
     .flowchart-container {
-      background-color: #ffffff;
-      border: 1px solid var(--border);
-      border-radius: var(--radius-md);
-      padding: 24px;
-      margin: 12px 0 20px;
-      overflow: auto;
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      margin: 10px 0 6px;
+      overflow: visible;
+      width: 100%;
+      text-align: center;
     }
     body.dark-mode .flowchart-container {
-      background-color: #0b0f19;
-      border-color: #243044;
+      background-color: transparent;
+      border: none;
     }
     .table-container {
       overflow-x: auto;
