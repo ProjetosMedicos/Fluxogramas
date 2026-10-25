@@ -227,55 +227,17 @@
 
       <div class="card">
         <h2 class="card-title">Matriz Diferencial Completa</h2>
-        <div class="table-container">
-          <table class="clinical-table">
-            <thead>
-              <tr>
-                <th scope="col">Entidade Clínica</th>
-                <th scope="col">Quadro Clínico & Gatilho</th>
-                <th scope="col">&beta;-hCG & Laboratório</th>
-                <th scope="col">Achados Ecográficos (USG)</th>
-                <th scope="col">Conduta Padrão (FEBRASGO)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Gravidez Ectópica Rota</strong></td>
-                <td>Atraso menstrual, sangramento escuro em borra, dor súbita em pontada, síncope e choque.</td>
-                <td><span class="badge badge-danger">&beta;-hCG Positivo</span> (&gt; 1.500 mUI/mL sem saco intraútero).</td>
-                <td>Útero vazio com endométrio espessado, massa anexial heterogênea e hemoperitônio volumoso.</td>
-                <td>Laparotomia exploradora imediata se choque; laparoscopia com salpingectomia se estável.</td>
-              </tr>
-              <tr>
-                <td><strong>Rotura de Cisto Hemorrágico</strong></td>
-                <td>Dor súbita após coito vigoroso ou esforço físico no 20º-26º dia do ciclo (fase lútea).</td>
-                <td><span class="badge badge-success">&beta;-hCG Negativo</span> Queda hematimétrica variável.</td>
-                <td>Ovário com imagem anecóica de paredes irregulares e retração de coágulo ("rede de pesca").</td>
-                <td>Expectante se estabilidade e sem queda progressiva de Hb. Laparoscopia hemostática se choque.</td>
-              </tr>
-              <tr>
-                <td><strong>Torção Anexial</strong></td>
-                <td>Dor unilateral paroxística excruciante, náuseas/vômitos refratários em 70%, histórico de cisto.</td>
-                <td><span class="badge badge-success">&beta;-hCG Negativo</span> Leucocitose discreta sem febre alta.</td>
-                <td>Ovário aumentado (&gt; 4-5 cm), estroma hiperecogênico, folículos periféricos e Sinal do Redemoinho ao Doppler.</td>
-                <td>Laparoscopia de urgência imediata com <strong>destorção e preservação ovariana</strong>.</td>
-              </tr>
-              <tr>
-                <td><strong>Abscesso Tubo-Ovariano (ATO) Roto</strong></td>
-                <td>Febre séptica (&gt; 38,5ºC), dor pélvica difusa, peritonite purulenta, corrimento fétido e leucocitose acentuada.</td>
-                <td><span class="badge badge-success">&beta;-hCG Negativo</span> PCR &gt; 100 mg/L, leucocitose com desvio à esquerda.</td>
-                <td>Massa complexa multiloculada anexial com ecos internos grosseiros e debris em fundo de saco.</td>
-                <td>Laparotomia exploradora de emergência com drenagem ampla, lavado peritoneal e antibioticoterapia EV tripla.</td>
-              </tr>
-              <tr>
-                <td><strong>Apendicite Aguda (Mimetizador)</strong></td>
-                <td>Dor epigástrica que migra para o ponto de McBurney em FID, febre baixa, anorexia e náuseas.</td>
-                <td><span class="badge badge-success">&beta;-hCG Negativo</span> Leucocitose neutrofílica.</td>
-                <td>Apêndice não compressível com diâmetro &gt; 6 mm, espessamento da parede e apendicolito ecogênico.</td>
-                <td>Apendicectomia laparoscópica de urgência em conjunto com Cirurgia Geral.</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="flowchart-img-container">
+          <img src="imagens/tabelas/tabela-abdome-1-matriz-diferencial-completa.png"
+               alt="Tabela Clínica Visual: Matriz Diferencial Completa"
+               class="flowchart-img infographic-mode"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted); text-align: center; line-height: 1.4;">
+          💡 <em>Clique na tabela para ampliar em alta resolução com Pan &amp; Zoom interativo.</em>
         </div>
       </div>
     </section>
@@ -344,49 +306,17 @@
 
       <div class="card">
         <h2 class="card-title">Tabela de Prescrições Baseadas em Evidências (FEBRASGO)</h2>
-        <div class="table-container">
-          <table class="clinical-table">
-            <thead>
-              <tr>
-                <th scope="col">Fármaco / Esquema</th>
-                <th scope="col">Posologia & Via</th>
-                <th scope="col">Indicação Clínica</th>
-                <th scope="col">Alertas Críticos & Efeitos Adversos</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Metotrexato (MTX)</strong></td>
-                <td><strong>50 mg/m² IM profundo dose única</strong> (calculado pela área de superfície corporal).</td>
-                <td>Gravidez Ectópica íntegra preenchendo todos os critérios de elegibilidade.</td>
-                <td>Evitar AINEs, ácido fólico e exposição solar durante o tratamento. Dosar &beta;-hCG no D4 e D7. Dor tipo cólica pode ocorrer entre D3 e D7 (dor de separação trofoblástica).</td>
-              </tr>
-              <tr>
-                <td><strong>Dipirona + Cetoprofeno</strong></td>
-                <td>Dipirona 1g EV em bólus lento 6/6h + Cetoprofeno 100 mg EV diluído em 100 mL de SF 12/12h.</td>
-                <td>Analgesia no abdome agudo estável (cisto de ovário roto, torção em pós-operatório).</td>
-                <td>Evitar AINEs se houver suspeita de choque hemorrágico ativo ou risco de sangramento não controlado.</td>
-              </tr>
-              <tr>
-                <td><strong>Morfina</strong></td>
-                <td><strong>2 a 4 mg EV em bólus lento</strong>, titulada a cada 15-30 minutos conforme EVA.</td>
-                <td>Dor lancinante de forte intensidade (EVA &gt; 7-8) no abdome agudo até definição diagnóstica.</td>
-                <td>Não mascara os sinais de peritonite parietal nem atrasa a indicação cirúrgica. Monitorar oximetria e frequência respiratória.</td>
-              </tr>
-              <tr>
-                <td><strong>Ceftriaxona + Metronidazol + Doxiciclina</strong></td>
-                <td>Ceftriaxona 1-2g EV 1x/dia + Metronidazol 500 mg EV 8/8h + Doxiciclina 100 mg VO/EV 12/12h por 14 dias.</td>
-                <td>Abscesso Tubo-Ovariano (ATO) íntegro ou roto / Pelviperitonite.</td>
-                <td>Cobertura tripla de amplo espectro para gonococo, clamídia, gram-negativos e anaeróbios estritos (Bacteroides fragilis).</td>
-              </tr>
-              <tr>
-                <td><strong>Ressuscitação Volêmica</strong></td>
-                <td>Ringer Lactato 1.000 a 2.000 mL EV aquecido em bólus rápido + Concentrado de hemácias →	ext{O}^{-}→.</td>
-                <td>Choque hipovolêmico por hemoperitônio maciço.</td>
-                <td>Alvo: PAS 90-100 mmHg (hipotensão permissiva pré-hemostasia cirúrgica para evitar diluição de fatores e rotura de coágulos).</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="flowchart-img-container">
+          <img src="imagens/tabelas/tabela-abdome-2-tabela-de-prescri-es-baseadas-em-ev.png"
+               alt="Tabela Clínica Visual: Tabela de Prescrições Baseadas em Evidências (FEBRASGO)"
+               class="flowchart-img infographic-mode"
+               loading="lazy"
+               decoding="async"
+               onclick="if(typeof openVisualLightbox==='function'){openVisualLightbox(this);}"
+               style="cursor: zoom-in;">
+        </div>
+        <div style="margin-top: 8px; font-size: 0.8rem; color: var(--text-muted); text-align: center; line-height: 1.4;">
+          💡 <em>Clique na tabela para ampliar em alta resolução com Pan &amp; Zoom interativo.</em>
         </div>
       </div>
     </section>
