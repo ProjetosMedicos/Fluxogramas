@@ -3951,6 +3951,33 @@
       background: var(--bg-surface);
       box-shadow: none;
     }
+    .sidebar-utility-btns {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+    .sidebar-icon-btn {
+      width: 34px;
+      height: 34px;
+      min-width: 34px;
+      min-height: 34px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+      background-color: var(--bg-card);
+      color: var(--text-body);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 140ms ease;
+      padding: 0;
+    }
+    .sidebar-icon-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background-color: var(--bg-hover);
+    }
 
     .crumb-home-link {
       color: var(--text-muted);

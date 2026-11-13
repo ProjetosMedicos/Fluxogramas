@@ -145,11 +145,6 @@ function switchSpecialty(spec, openModal = false) {
   }
 }
 
-function closePediatriaModal() {
-  const modal = document.getElementById('pediatria-preview-modal');
-  if (modal) modal.style.display = 'none';
-}
-
 function toggleModuleDropdown() {
   const dropdown = document.getElementById('module-picker-dropdown');
   const box = document.getElementById('active-module-banner');
@@ -325,14 +320,16 @@ function toggleTheme() {
 }
 
 function updateThemeButtons(isDark) {
-  const sunSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:auto;"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>`;
-  const moonSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:auto;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>`;
-  const themeToggle = document.getElementById('topbar-theme-toggle');
-  if (themeToggle) {
-    themeToggle.innerHTML = isDark ? sunSvg : moonSvg;
-    themeToggle.setAttribute('title', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
-    themeToggle.setAttribute('aria-label', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
-  }
+  const sunSvg = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:auto;"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2"></path><path d="M12 20v2"></path><path d="m4.93 4.93 1.41 1.41"></path><path d="m17.66 17.66 1.41 1.41"></path><path d="M2 12h2"></path><path d="M20 12h2"></path><path d="m6.34 17.66-1.41 1.41"></path><path d="m19.07 4.93-1.41 1.41"></path></svg>`;
+  const moonSvg = `<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="display:block;margin:auto;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>`;
+  ['topbar-theme-toggle', 'sidebar-theme-toggle'].forEach(btnId => {
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      btn.innerHTML = isDark ? sunSvg : moonSvg;
+      btn.setAttribute('title', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
+      btn.setAttribute('aria-label', isDark ? 'Alternar para Modo Claro' : 'Alternar para Modo Noturno');
+    }
+  });
 
   const themeMetas = document.querySelectorAll('meta[name="theme-color"]');
   themeMetas.forEach(meta => {
@@ -981,8 +978,11 @@ function openVisualLightbox(triggerEl) {
   if (!dialog || !img) return;
 
   const card = triggerEl ? triggerEl.closest('.card') : null;
-  const cardImg = card ? card.querySelector('.flowchart-img, img') : (triggerEl && triggerEl.tagName === 'IMG' ? triggerEl : null);
+  const cardImg = (triggerEl && triggerEl.tagName === 'IMG')
+    ? triggerEl
+    : (card ? card.querySelector('.flowchart-img, img') : null);
   const cardTitle = card ? card.querySelector('.card-title, h2, h3') : null;
+  const multiImgsInCard = card ? card.querySelectorAll('.flowchart-img, img').length > 1 : false;
 
   const currentSrc = cardImg ? cardImg.getAttribute('src') : (triggerEl ? triggerEl.getAttribute('href') : '');
   const infoSrc = (cardImg && (cardImg.dataset.infographicSrc || cardImg.getAttribute('data-infographic-src'))) || (currentSrc.includes('infografico-') ? currentSrc : '');
@@ -998,7 +998,8 @@ function openVisualLightbox(triggerEl) {
   lightboxState.scale = 1.0;
 
   if (titleEl) {
-    titleEl.textContent = cardTitle ? cardTitle.textContent.trim() : infoAlt;
+    const cleanAltTitle = infoAlt.replace(/^(Tabela Clínica Visual:|Infográfico Clínico:)\s*/i, '').trim();
+    titleEl.textContent = (!multiImgsInCard && cardTitle) ? cardTitle.textContent.trim() : (cleanAltTitle || (cardTitle ? cardTitle.textContent.trim() : 'Visualização HD'));
   }
 
   if (modeGroup) {
@@ -1147,7 +1148,12 @@ function enhanceModuleInteractivity(rootEl) {
     'section[id*="manutencao"] .card, section[id*="conduta"] .card, section[id*="posologia"] .card, section[id*="terapia"] .card'
   );
   prescCards.forEach(card => {
-    if (card.querySelector('.btn-copy-clinical') || card.querySelector('.flowchart-img')) return;
+    if (card.querySelector('.btn-copy-clinical')) return;
+    // Pula apenas cards que são puramente pôsteres de fluxograma/infográfico sem tabela nem texto clínico
+    const hasInfographicPoster = !!card.querySelector('img[src*="infografico-"]');
+    const hasTableImg = !!card.querySelector('img[data-copy-text], img[src*="tabela"]');
+    if (hasInfographicPoster && !hasTableImg) return;
+
     const titleEl = card.querySelector('.card-title, h2, h3');
     if (!titleEl) return;
 
@@ -1159,7 +1165,15 @@ function enhanceModuleInteractivity(rootEl) {
     btn.addEventListener('click', async () => {
       const clone = card.cloneNode(true);
       clone.querySelectorAll('button, .btn-copy-clinical').forEach(b => b.remove());
-      const cleanText = clone.innerText.replace(/\n{3,}/g, '\n\n').trim();
+      clone.querySelectorAll('img[data-copy-text]').forEach(img => {
+        const txtNode = document.createElement('pre');
+        txtNode.textContent = '\n' + (img.getAttribute('data-copy-text') || '') + '\n';
+        img.replaceWith(txtNode);
+      });
+      const cleanText = clone.innerText
+        .replace(/💡\s*Clique n[ao] (?:tabela|infográfico) para ampliar[^\n]*/gi, '')
+        .replace(/\n{3,}/g, '\n\n')
+        .trim();
       try {
         await navigator.clipboard.writeText(cleanText);
         btn.classList.add('copied');
@@ -1235,6 +1249,54 @@ window.addEventListener('DOMContentLoaded', () => {
       const y = e.pageY - viewport.offsetTop;
       viewport.scrollLeft = lightboxState.scrollLeft - (x - lightboxState.startX) * 1.4;
       viewport.scrollTop = lightboxState.scrollTop - (y - lightboxState.startY) * 1.4;
+    });
+
+    // Suporte Mobile: Pinça com 2 dedos (Pinch-to-Zoom) e Duplo-Toque para ampliar
+    let initialPinchDistance = null;
+    let initialPinchScale = 1.0;
+    let lastTapTime = 0;
+
+    viewport.addEventListener('touchstart', (e) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        initialPinchDistance = Math.hypot(dx, dy);
+        initialPinchScale = lightboxState.scale || 1.0;
+      } else if (e.touches.length === 1) {
+        const now = Date.now();
+        if (now - lastTapTime < 280) {
+          e.preventDefault();
+          if (lightboxState.scale > 1.05) {
+            resetLightboxZoom();
+          } else {
+            zoomLightbox(0.85);
+          }
+          lastTapTime = 0;
+        } else {
+          lastTapTime = now;
+        }
+      }
+    }, { passive: false });
+
+    viewport.addEventListener('touchmove', (e) => {
+      if (e.touches.length === 2 && initialPinchDistance) {
+        e.preventDefault();
+        const dx = e.touches[0].clientX - e.touches[1].clientX;
+        const dy = e.touches[0].clientY - e.touches[1].clientY;
+        const dist = Math.hypot(dx, dy);
+        const ratio = dist / initialPinchDistance;
+        const next = Math.min(3.5, Math.max(0.5, +(initialPinchScale * ratio).toFixed(2)));
+        lightboxState.scale = next;
+        const img = document.getElementById('lightbox-img');
+        if (img) img.style.transform = `scale(${next})`;
+      }
+    }, { passive: false });
+
+    viewport.addEventListener('touchend', (e) => {
+      if (e.touches.length < 2) {
+        initialPinchDistance = null;
+      }
     });
   }
 

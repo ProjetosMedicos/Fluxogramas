@@ -34,14 +34,21 @@
 
   <!-- Sidebar Navigation -->
   <aside id="sidebar">
-    <!-- Topo da Barra Lateral: Página Inicial & Fechar (Mobile) -->
+    <!-- Topo da Barra Lateral: Página Inicial, Busca, Tema & Fechar (Mobile) -->
     <div class="sidebar-home-bar">
       <a href="#inicio" id="sidebar-home-btn" class="sidebar-home-link active" onclick="goHome(event)" title="Voltar à Página Inicial (Alt + H)">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
         <span>Página Inicial</span>
-        <kbd>Alt H</kbd>
       </a>
-      <button class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu" aria-label="Fechar menu lateral">✕</button>
+      <div class="sidebar-utility-btns">
+        <button type="button" id="sidebar-search-btn" class="sidebar-icon-btn" onclick="if(typeof isMobileMode==='function' && isMobileMode()) closeMobileSidebar(); openSearchModal();" title="Busca Global (Ctrl + K)" aria-label="Abrir busca global">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        </button>
+        <button type="button" id="sidebar-theme-toggle" class="sidebar-icon-btn" onclick="toggleTheme()" title="Alternar Modo Noturno" aria-label="Alternar Modo Noturno">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+        </button>
+        <button type="button" class="sidebar-close-btn" onclick="toggleSidebar()" title="Fechar Menu" aria-label="Fechar menu lateral">✕</button>
+      </div>
     </div>
 
     <!-- Specialty Switcher Tabs: Abas de Especialidades Médicas -->
@@ -4246,7 +4253,7 @@
             <span class="home-dot" aria-hidden="true">·</span>
             <span>86 Módulos</span>
             <span class="home-dot" aria-hidden="true">·</span>
-            <span>174 Infográficos HD</span>
+            <span>480+ Infográficos &amp; Tabelas HD</span>
           </div>
           <h1 class="home-title">Fluxogramas Médicos</h1>
           <p class="home-subtitle">Algoritmos diagnósticos, infográficos clínicos em alta resolução e condutas objetivas para consulta rápida.</p>
@@ -4290,62 +4297,6 @@
             </div>
           </search>
         </header>
-
-        <!-- Dicas de Comandos & Fluxo de Uso -->
-        <section class="home-block" aria-labelledby="home-cmd-heading">
-          <div class="home-block-header">
-            <h2 id="home-cmd-heading" class="home-section-label">Dicas de Comandos &amp; Navegação</h2>
-          </div>
-          <div class="home-cmd-grid">
-            <button type="button" class="home-cmd-card home-cmd-interactive" onclick="openSearchModal()">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Busca Global</span>
-                <span class="home-cmd-keys"><kbd>Ctrl</kbd><kbd>K</kbd> <em>ou</em> <kbd>/</kbd></span>
-              </div>
-              <p class="home-cmd-desc">Localize fármacos, posologias, escores e condutas em 684 seções.</p>
-            </button>
-
-            <div class="home-cmd-card">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Navegar entre Tópicos</span>
-                <span class="home-cmd-keys"><kbd>Alt</kbd><kbd>←</kbd><kbd>→</kbd></span>
-              </div>
-              <p class="home-cmd-desc">Avance ou retorne sequencialmente pelas seções de cada protocolo.</p>
-            </div>
-
-            <div class="home-cmd-card">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Visualizador HD</span>
-                <span class="home-cmd-keys"><kbd>Clique</kbd><span>para</span><kbd>Abrir</kbd></span>
-              </div>
-              <p class="home-cmd-desc">Clique em qualquer imagem para abrir em alta resolução com visualização limpa.</p>
-            </div>
-
-            <div class="home-cmd-card">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Infográficos Clínicos</span>
-                <span class="home-cmd-keys"><kbd>HD</kbd><span>2400px</span></span>
-              </div>
-              <p class="home-cmd-desc">Infográficos em altíssima resolução com zoom interativo e download direto.</p>
-            </div>
-
-            <div class="home-cmd-card">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Copiar Conduta</span>
-                <span class="home-cmd-keys"><kbd>1-Clique</kbd></span>
-              </div>
-              <p class="home-cmd-desc">Copie prescrições e posologias prontas diretamente para o prontuário.</p>
-            </div>
-
-            <div class="home-cmd-card">
-              <div class="home-cmd-top">
-                <span class="home-cmd-name">Início &amp; Impressão</span>
-                <span class="home-cmd-keys"><kbd>Alt H</kbd> <kbd>Ctrl P</kbd></span>
-              </div>
-              <p class="home-cmd-desc">Volte a esta página inicial de qualquer tela ou imprima em PDF limpo.</p>
-            </div>
-          </div>
-        </section>
 
         <!-- Tópicos Disponíveis -->
         <section class="home-block" aria-labelledby="home-topics-heading">
@@ -4409,19 +4360,6 @@
 
 
   <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" title="Voltar ao topo">↑</button>
-  <!-- Modal Informativo: Especialidade Pediatria em Preparação -->
-  <div id="pediatria-preview-modal" style="display: none; position: fixed; inset: 0; background: rgba(15, 23, 42, 0.75); z-index: 9999; align-items: center; justify-content: center; padding: 16px;">
-    <div style="background: var(--bg-card); color: var(--text-main); border: 1px solid var(--border); border-radius: 12px; max-width: 480px; width: 100%; padding: 26px; box-shadow: 0 20px 40px rgba(0,0,0,0.5); text-align: center;">
-      <div style="font-size: 2.5rem; margin-bottom: 12px;">👶</div>
-      <h3 style="font-size: 1.25rem; font-weight: 800; color: var(--primary); margin-bottom: 8px;">Aba de Pediatria em Preparação</h3>
-      <p style="font-size: 0.9rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 20px;">
-        Esta aba está devidamente estruturada e pronta para receber os novos protocolos clínicos, fluxogramas vetoriais e casos simulados de <strong>Pediatria</strong> assim que o conteúdo for enviado.
-      </p>
-      <button onclick="closePediatriaModal()" style="background: var(--primary); color: white; border: none; padding: 10px 24px; border-radius: 8px; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.2s;">
-        Entendido, continuar em Ginecologia
-      </button>
-    </div>
-  </div>
 
   <!-- Modal de Busca Global (Command Palette / Spotlight) -->
   <div id="command-search-modal" class="search-modal-backdrop" style="display: none;" role="dialog" aria-modal="true" aria-label="Busca Global nos Módulos e Protocolos">
@@ -4474,7 +4412,7 @@
         <img id="lightbox-img" src="" alt="" class="lightbox-media" draggable="false" />
       </div>
       <footer class="lightbox-footer">
-        <span>🖱️ Role ou arraste para navegar • Pressione <kbd>Esc</kbd> para fechar</span>
+        <span>🖱️ Role, arraste ou use pinça/duplo-toque para ampliar • <kbd>Esc</kbd> para fechar</span>
       </footer>
     </div>
   </dialog>
