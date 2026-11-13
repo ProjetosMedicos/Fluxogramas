@@ -1,0 +1,634 @@
+<!-- ======================================================================= -->
+<!-- MÓDULO EF-GERAL: EXAME FÍSICO — SINAIS VITAIS & ECTOSCOPIA INTERATIVOS -->
+<!-- ======================================================================= -->
+
+<!-- SEÇÃO 1: Sinais Vitais, Antropometria & Balanço -->
+<section id="ef-sinais-vitais" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME FÍSICO &amp; SEMIOTÉCNICA • INTERNATO MÉDICO</span>
+    <h1>Sinais Vitais, Antropometria &amp; Balanço</h1>
+    <p>Preencha com valores únicos ou com mínima e máxima (evolução das últimas 24h) para classificação semafórica imediata e geração automática do texto de admissão ou evolução médica.</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalVitals()">
+        ⚡ Preencher Sinais Vitais Normais
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetVitals()">
+        🗑️ Limpar Sinais Vitais
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-ectoscopia')">
+        ➡️ Ir para Ectoscopia
+      </button>
+    </div>
+  </div>
+
+  <div class="ef-vitals-grid">
+    <!-- 1. Pressão Arterial (PA) -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>🩺 Pressão Arterial (mmHg)</h3>
+        <span id="ef-pa-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-pa-matrix">
+        <div class="ef-input-group">
+          <label for="ef-pas-min">PAS Mínima</label>
+          <input type="number" id="ef-pas-min" class="ef-input" min="30" max="320" step="1" placeholder="Ex: 110" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-pas-max">PAS Máxima</label>
+          <input type="number" id="ef-pas-max" class="ef-input" min="30" max="320" step="1" placeholder="Ex: 120" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-pad-min">PAD Mínima</label>
+          <input type="number" id="ef-pad-min" class="ef-input" min="20" max="200" step="1" placeholder="Ex: 70" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-pad-max">PAD Máxima</label>
+          <input type="number" id="ef-pad-max" class="ef-input" min="20" max="200" step="1" placeholder="Ex: 80" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ef-vital-footer">
+        <div class="ef-inline-select-wrap">
+          <label for="ef-pa-pos">Posição / Membro:</label>
+          <select id="ef-pa-pos" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="MSD sentado">MSD sentado</option>
+            <option value="MSE sentado">MSE sentado</option>
+            <option value="MSD decúbito">MSD em decúbito</option>
+            <option value="MSE decúbito">MSE em decúbito</option>
+            <option value="ortostase">Em ortostase</option>
+          </select>
+        </div>
+        <span id="ef-pam-display" class="ef-calc-pill">PAM: —</span>
+      </div>
+    </div>
+
+    <!-- 2. Temperatura Axilar (Tax) -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>🌡️ Temperatura Axilar (°C)</h3>
+        <span id="ef-tax-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-minmax-row">
+        <div class="ef-input-group">
+          <label for="ef-tax-min">Tax Mínima (°C)</label>
+          <input type="number" id="ef-tax-min" class="ef-input" min="30" max="44" step="0.1" placeholder="Ex: 36.2" inputmode="decimal">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-tax-max">Tax Máxima (°C)</label>
+          <input type="number" id="ef-tax-max" class="ef-input" min="30" max="44" step="0.1" placeholder="Ex: 36.8" inputmode="decimal">
+        </div>
+      </div>
+      <div class="ef-vital-footer">
+        <button type="button" id="ef-tax-afebril-btn" class="ef-chip ef-chip-sm" data-afebril="false">
+          ✓ Afebril nas 24h
+        </button>
+      </div>
+    </div>
+
+    <!-- 3. Frequência Cardíaca (FC) & Pulso -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>❤️ Frequência Cardíaca (bpm)</h3>
+        <span id="ef-fc-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-minmax-row">
+        <div class="ef-input-group">
+          <label for="ef-fc-min">FC Mínima</label>
+          <input type="number" id="ef-fc-min" class="ef-input" min="20" max="260" step="1" placeholder="Ex: 68" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-fc-max">FC Máxima</label>
+          <input type="number" id="ef-fc-max" class="ef-input" min="20" max="260" step="1" placeholder="Ex: 84" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ef-vital-footer">
+        <div class="ef-inline-select-wrap" style="width: 100%;">
+          <label for="ef-pulso-caract">Pulso:</label>
+          <select id="ef-pulso-caract" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="pulsos rítmicos, cheios e simétricos">Rítmico, cheio e simétrico</option>
+            <option value="pulso irregular/arrítmico">Irregular / arrítmico</option>
+            <option value="pulso filiforme">Filiforme / fino</option>
+            <option value="pulsos distais reduzidos">Pulsos distais reduzidos</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Frequência Respiratória (FR) -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>🫁 Frequência Respiratória (irpm)</h3>
+        <span id="ef-fr-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-minmax-row">
+        <div class="ef-input-group">
+          <label for="ef-fr-min">FR Mínima</label>
+          <input type="number" id="ef-fr-min" class="ef-input" min="4" max="80" step="1" placeholder="Ex: 14" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-fr-max">FR Máxima</label>
+          <input type="number" id="ef-fr-max" class="ef-input" min="4" max="80" step="1" placeholder="Ex: 18" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ef-vital-hint">Referência adulto em repouso: 12 a 20 irpm</div>
+    </div>
+
+    <!-- 5. Saturação de O₂ (SpO₂) -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>🫧 Saturação de O₂ — SpO₂ (%)</h3>
+        <span id="ef-spo2-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-minmax-row">
+        <div class="ef-input-group">
+          <label for="ef-spo2-min">SpO₂ Mínima (%)</label>
+          <input type="number" id="ef-spo2-min" class="ef-input" min="40" max="100" step="1" placeholder="Ex: 96" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-spo2-max">SpO₂ Máxima (%)</label>
+          <input type="number" id="ef-spo2-max" class="ef-input" min="40" max="100" step="1" placeholder="Ex: 99" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ef-vital-footer">
+        <div class="ef-inline-select-wrap" style="flex: 1;">
+          <label for="ef-spo2-sup">Suporte:</label>
+          <select id="ef-spo2-sup" class="ef-select">
+            <option value="em ar ambiente">Em ar ambiente</option>
+            <option value="em cateter nasal">Em cateter nasal (CN)</option>
+            <option value="em máscara de Venturi">Em máscara de Venturi</option>
+            <option value="em máscara não-reinalante">Em máscara não-reinalante</option>
+            <option value="em VNI">Em VNI</option>
+            <option value="em TOT/VM">Em TOT / Ventilação Mecânica</option>
+          </select>
+        </div>
+        <div id="ef-spo2-flow-wrap" class="ef-inline-select-wrap" style="display: none;">
+          <label for="ef-spo2-flow" id="ef-spo2-flow-label">Fluxo/FiO₂:</label>
+          <input type="text" id="ef-spo2-flow" class="ef-input ef-input-sm" placeholder="Ex: 2 L/min ou 40%">
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Dor (EVA) & Glicemia Capilar (HGT) -->
+    <div class="card ef-vital-card">
+      <div class="ef-vital-head">
+        <h3>🩸 Glicemia Capilar (HGT) &amp; Dor (EVA)</h3>
+        <span id="ef-hgt-badge" class="ef-status-badge neutral">Aguardando</span>
+      </div>
+      <div class="ef-pa-matrix">
+        <div class="ef-input-group">
+          <label for="ef-hgt-min">HGT Mín (mg/dL)</label>
+          <input type="number" id="ef-hgt-min" class="ef-input" min="10" max="900" step="1" placeholder="Ex: 88" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-hgt-max">HGT Máx (mg/dL)</label>
+          <input type="number" id="ef-hgt-max" class="ef-input" min="10" max="900" step="1" placeholder="Ex: 112" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-eva-min">Dor EVA Mín (0–10)</label>
+          <input type="number" id="ef-eva-min" class="ef-input" min="0" max="10" step="1" placeholder="0" inputmode="numeric">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-eva-max">Dor EVA Máx (0–10)</label>
+          <input type="number" id="ef-eva-max" class="ef-input" min="0" max="10" step="1" placeholder="0" inputmode="numeric">
+        </div>
+      </div>
+      <div class="ef-vital-hint">EVA: 0 = sem dor; 1–3 = leve; 4–6 = moderada; 7–10 = intensa</div>
+    </div>
+
+    <!-- 7. Antropometria & Diurese 24h -->
+    <div class="card ef-vital-card ef-vital-card-wide">
+      <div class="ef-vital-head">
+        <h3>⚖️ Antropometria &amp; Diurese (24h)</h3>
+        <div class="ef-badges-row">
+          <span id="ef-imc-badge" class="ef-calc-pill">IMC: —</span>
+          <span id="ef-diurese-badge" class="ef-calc-pill">Débito: —</span>
+        </div>
+      </div>
+      <div class="ef-anthro-row">
+        <div class="ef-input-group">
+          <label for="ef-peso">Peso (kg)</label>
+          <input type="number" id="ef-peso" class="ef-input" min="0.5" max="350" step="0.1" placeholder="Ex: 70" inputmode="decimal">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-altura">Altura (cm ou m)</label>
+          <input type="number" id="ef-altura" class="ef-input" min="0.3" max="250" step="0.01" placeholder="Ex: 172 ou 1.72" inputmode="decimal">
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-diurese">Diurese 24h (mL)</label>
+          <input type="number" id="ef-diurese" class="ef-input" min="0" max="15000" step="10" placeholder="Ex: 1400" inputmode="numeric">
+        </div>
+        <div class="ef-input-group ef-obs-span">
+          <label for="ef-vitais-obs">Observação adicional nos Sinais Vitais</label>
+          <input type="text" id="ef-vitais-obs" class="ef-input" placeholder="Ex: Sem uso de drogas vasoativas; evacuação presente nas últimas 24h">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pré-visualização e Cópia Rápida dos Sinais Vitais -->
+  <div id="ef-vitais-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto de Sinais Vitais Pronto para Anamnese</h3>
+        <p class="ef-output-sub">Atualizado automaticamente conforme você preenche os campos acima (valores com Mín e Máx exibem a variação de 24h).</p>
+      </div>
+    </div>
+    <textarea id="ef-vitais-preview" class="ef-textarea" rows="3" placeholder="Preencha os sinais vitais acima ou clique em 'Preencher Sinais Vitais Normais'..."></textarea>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('vitals')">
+        📋 Copiar Sinais Vitais
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Completo (Sinais Vitais + Ectoscopia)
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-ectoscopia')">
+        ➡️ Avançar para Ectoscopia →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 2: Ectoscopia & Exame Físico Geral -->
+<section id="ef-ectoscopia" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">SEMIOLOGIA CLÍNICA • ECTOSCOPIA COMPLETA</span>
+    <h1>Ectoscopia &amp; Exame Físico Geral</h1>
+    <p>Selecione os achados observados à inspeção geral. Características graduáveis (hipocorado, desidratado, ictérico, cianótico, dispneico e edema) abrem automaticamente a seleção em cruzes (<strong>+/4+ a 4+/4+</strong>).</p>
+  </div>
+
+  <!-- Barra de Ferramentas da Ectoscopia -->
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalEctoscopia()">
+        ⚡ Preencher Ectoscopia Normal (Padrão)
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetEctoscopia()">
+        🗑️ Limpar Seleção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-sinais-vitais')">
+        ⬅️ Voltar aos Sinais Vitais
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-cross-format">Formato das cruzes:</label>
+        <select id="ef-cross-format" class="ef-select">
+          <option value="4+">Numérico (+/4+, 2+/4+, 3+/4+, 4+/4+)</option>
+          <option value="plus">Cruzes (+/++++, ++/++++, +++/++++, ++++/++++)</option>
+        </select>
+      </div>
+      <div class="ef-inline-select-wrap">
+        <label for="ef-text-style">Estilo do texto:</label>
+        <select id="ef-text-style" class="ef-select">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria (BEG, LOTE, CHAA...)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- Grupo 1: Estado Geral, Consciência, Atitude e Fácies -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Estado Geral, Nível de Consciência, Atitude &amp; Fácies</h3>
+
+      <div class="ef-ecto-group" data-group="estado_geral">
+        <div class="ef-group-label">Estado Geral:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="estado_geral" data-val="BEG">BEG (Bom estado geral)</button>
+          <button type="button" class="ef-chip" data-group="estado_geral" data-val="REG">REG (Regular estado geral)</button>
+          <button type="button" class="ef-chip" data-group="estado_geral" data-val="MEG">MEG (Mau estado geral)</button>
+          <button type="button" class="ef-chip" data-group="estado_geral" data-val="Grave">Estado geral grave</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="consciencia">
+        <div class="ef-group-label">Consciência &amp; Orientação:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="LOTE">LOTE (Lúcido e orientado)</button>
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="Desorientado">Desorientado</button>
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="Confuso">Confuso</button>
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="Sonolento">Sonolento</button>
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="Torporoso">Torporoso</button>
+          <button type="button" class="ef-chip" data-group="consciencia" data-val="Comatoso">Comatoso</button>
+          <div class="ef-glasgow-box">
+            <label for="ef-glasgow">Glasgow:</label>
+            <input type="number" id="ef-glasgow" class="ef-input ef-input-xs" min="3" max="15" step="1" placeholder="3–15" inputmode="numeric">
+            <button type="button" class="ef-chip ef-chip-sm" id="ef-glasgow-15-btn">ECG 15</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cooperacao">
+        <div class="ef-group-label">Cooperação:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cooperacao" data-val="cooperativo e contactuante">Cooperativo / contactuante</button>
+          <button type="button" class="ef-chip" data-group="cooperacao" data-val="pouco contactuante">Pouco contactuante</button>
+          <button type="button" class="ef-chip" data-group="cooperacao" data-val="agitado">Agitado</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="atitude">
+        <div class="ef-group-label">Atitude &amp; Decúbito:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="atitude" data-val="ativo e indiferente no leito">Ativo / indiferente no leito</button>
+          <button type="button" class="ef-chip" data-group="atitude" data-val="em decúbito dorsal preferencial">Decúbito dorsal preferencial</button>
+          <button type="button" class="ef-chip" data-group="atitude" data-val="em ortopneia">Ortopneia</button>
+          <button type="button" class="ef-chip" data-group="atitude" data-val="em posição antálgica">Posição antálgica</button>
+          <button type="button" class="ef-chip" data-group="atitude" data-val="restrito ao leito">Restrito ao leito</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="facies">
+        <div class="ef-group-label">Fácies:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="facies" data-val="atípica">Atípica</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="de dor / sofrimento agudo">Dor / sofrimento agudo</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="hipocrática">Hipocrática</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="renal">Renal</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="cushingoide">Cushingoide</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="basedowiana">Basedowiana</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="mixedematosa">Mixedematosa</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="parkinsoniana">Parkinsoniana</button>
+          <button type="button" class="ef-chip" data-group="facies" data-val="depressiva">Depressiva</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo 2: Mucosas, Hidratação, Icterícia, Cianose e Temperatura -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Mucosas, Hidratação, Icterícia, Cianose &amp; Temperatura ("CHAA")</h3>
+
+      <!-- Coloração Mucosa -->
+      <div class="ef-ecto-group" data-group="coloracao">
+        <div class="ef-group-label">Coloração Mucosa:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="coloracao" data-val="corado">Corado (Normocorado)</button>
+          <button type="button" class="ef-chip" data-group="coloracao" data-val="hipocorado" data-needs-cross="true">Hipocorado</button>
+          <button type="button" class="ef-chip" data-group="coloracao" data-val="hipercorado">Hipercorado</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-coloracao" hidden>
+          <span class="ef-cross-label">Intensidade da palidez mucosa:</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="coloracao" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="coloracao" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="coloracao" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="coloracao" data-cross="4">4+/4+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidratação -->
+      <div class="ef-ecto-group" data-group="hidratacao">
+        <div class="ef-group-label">Hidratação:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="hidratacao" data-val="hidratado">Hidratado</button>
+          <button type="button" class="ef-chip" data-group="hidratacao" data-val="desidratado" data-needs-cross="true">Desidratado</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-hidratacao" hidden>
+          <span class="ef-cross-label">Grau de desidratação:</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="hidratacao" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="hidratacao" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="hidratacao" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="hidratacao" data-cross="4">4+/4+</button>
+          </div>
+          <div class="ef-sub-chips">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="hidratacao_sinais" data-multi="true" data-val="mucosas secas">Mucosas secas</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="hidratacao_sinais" data-multi="true" data-val="sinal da prega positivo">Sinal da prega positivo</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="hidratacao_sinais" data-multi="true" data-val="enoftalmia">Enoftalmia</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="hidratacao_sinais" data-multi="true" data-val="sede intensa">Sede intensa</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Icterícia -->
+      <div class="ef-ecto-group" data-group="ictericia">
+        <div class="ef-group-label">Icterícia:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ictericia" data-val="anictérico">Anictérico</button>
+          <button type="button" class="ef-chip" data-group="ictericia" data-val="ictérico" data-needs-cross="true">Ictérico</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-ictericia" hidden>
+          <span class="ef-cross-label">Intensidade da icterícia:</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="ictericia" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="ictericia" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="ictericia" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="ictericia" data-cross="4">4+/4+</button>
+          </div>
+          <div class="ef-sub-chips">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="ictericia_local" data-val="em escleras">Em escleras</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="ictericia_local" data-val="em escleras e pele">Em escleras e pele</button>
+            <select id="ef-kramer-select" class="ef-select ef-select-sm" aria-label="Zona de Kramer">
+              <option value="">Zona de Kramer (opcional)</option>
+              <option value="Zona I de Kramer (cabeça e pescoço)">Zona I (Cabeça/pescoço)</option>
+              <option value="Zona II de Kramer (até umbigo)">Zona II (Até umbigo)</option>
+              <option value="Zona III de Kramer (até joelhos)">Zona III (Até joelhos)</option>
+              <option value="Zona IV de Kramer (até tornozelos/punhos)">Zona IV (Tornozelos/punhos)</option>
+              <option value="Zona V de Kramer (palmas e plantas)">Zona V (Palmas e plantas)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cianose -->
+      <div class="ef-ecto-group" data-group="cianose">
+        <div class="ef-group-label">Cianose:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cianose" data-val="acianótico">Acianótico</button>
+          <button type="button" class="ef-chip" data-group="cianose" data-val="cianótico" data-needs-cross="true">Cianótico</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-cianose" hidden>
+          <span class="ef-cross-label">Intensidade da cianose:</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="cianose" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="cianose" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="cianose" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="cianose" data-cross="4">4+/4+</button>
+          </div>
+          <div class="ef-sub-chips">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="cianose_tipo" data-val="periférica (em extremidades)">Periférica / extremidades</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="cianose_tipo" data-val="central (lábios e língua)">Central</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="cianose_tipo" data-val="mista">Mista</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temperatura ao Toque -->
+      <div class="ef-ecto-group" data-group="temperatura_toque">
+        <div class="ef-group-label">Temperatura ao Toque:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="temperatura_toque" data-val="afebril ao toque">Afebril ao toque</button>
+          <button type="button" class="ef-chip" data-group="temperatura_toque" data-val="subfebril ao toque">Subfebril</button>
+          <button type="button" class="ef-chip" data-group="temperatura_toque" data-val="febril ao toque">Febril ao toque</button>
+          <button type="button" class="ef-chip" data-group="temperatura_toque" data-val="hipotérmico ao toque">Hipotérmico</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo 3: Padrão Respiratório, Perfusão, Edemas & Biotipo -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Padrão Respiratório, Perfusão, Edema &amp; Estado Nutricional</h3>
+
+      <!-- Padrão Respiratório -->
+      <div class="ef-ecto-group" data-group="respiratorio">
+        <div class="ef-group-label">Padrão Respiratório:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="respiratorio" data-val="eupneico em ar ambiente, sem esforço respiratório">Eupneico sem esforço</button>
+          <button type="button" class="ef-chip" data-group="respiratorio" data-val="taquipneico">Taquipneico</button>
+          <button type="button" class="ef-chip" data-group="respiratorio" data-val="dispneico" data-needs-cross="true">Dispneico</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-respiratorio" hidden>
+          <span class="ef-cross-label">Intensidade da dispneia / desconforto:</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="respiratorio" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="respiratorio" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="respiratorio" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="respiratorio" data-cross="4">4+/4+</button>
+          </div>
+          <div class="ef-sub-chips">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="esforco_sinais" data-multi="true" data-val="tiragem intercostal">Tiragem intercostal</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="esforco_sinais" data-multi="true" data-val="tiragem subcostal">Tiragem subcostal</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="esforco_sinais" data-multi="true" data-val="tiragem de fúrcula">Tiragem de fúrcula</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="esforco_sinais" data-multi="true" data-val="batimento de asa de nariz">BAN</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="esforco_sinais" data-multi="true" data-val="uso de musculatura acessória">Musculatura acessória</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Perfusão Periférica -->
+      <div class="ef-ecto-group" data-group="perfusao">
+        <div class="ef-group-label">Perfusão &amp; Extremidades:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="perfusao" data-val="bem perfundido (TEC &lt; 3s), extremidades aquecidas">Bem perfundido (TEC &lt; 3s), extremidades aquecidas</button>
+          <button type="button" class="ef-chip" data-group="perfusao" data-val="perfusão periférica lentificada (TEC &gt; 3s)">Perfusão lentificada (TEC &gt; 3s)</button>
+          <button type="button" class="ef-chip" data-group="perfusao" data-val="extremidades frias e mal perfundidas">Extremidades frias</button>
+        </div>
+      </div>
+
+      <!-- Edema / Cacifo -->
+      <div class="ef-ecto-group" data-group="edema">
+        <div class="ef-group-label">Edema (Sinal de Godet / Cacifo):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="edema" data-val="sem edemas (MMII livres, panturrilhas livres e indolores)">Sem edemas (MMII livres)</button>
+          <button type="button" class="ef-chip" data-group="edema" data-val="edema presente" data-needs-cross="true">Edema presente</button>
+        </div>
+        <div class="ef-cross-panel" id="ef-cross-panel-edema" hidden>
+          <span class="ef-cross-label">Intensidade do cacifo (Godet):</span>
+          <div class="ef-cross-btns">
+            <button type="button" class="ef-cross-btn" data-group="edema" data-cross="1">+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="edema" data-cross="2">2+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="edema" data-cross="3">3+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="edema" data-cross="4">4+/4+</button>
+            <button type="button" class="ef-cross-btn" data-group="edema" data-cross="duro">Sem cacifo / duro</button>
+          </div>
+          <div class="ef-sub-chips">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="em MMII / maleolar bilateral">MMII / maleolar</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="pré-tibial">Pré-tibial</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="assimétrico">Assimétrico</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="sacral">Sacral</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="periorbitário">Periorbitário</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_local" data-multi="true" data-val="anasarca">Anasarca</button>
+          </div>
+          <div class="ef-sub-chips" style="margin-top: 6px;">
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_caract" data-val="mole e indolor">Mole e indolor</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_caract" data-val="doloroso">Doloroso</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_caract" data-val="com empastamento de panturrilha">Empastamento de panturrilha</button>
+            <button type="button" class="ef-chip ef-chip-sm" data-group="edema_caract" data-val="quente e hiperemiado">Quente / hiperemiado</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estado Nutricional & Biotipo -->
+      <div class="ef-ecto-group" data-group="nutricional">
+        <div class="ef-group-label">Estado Nutricional:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="nutricional" data-val="eutrófico">Eutrófico</button>
+          <button type="button" class="ef-chip" data-group="nutricional" data-val="com sobrepeso">Sobrepeso</button>
+          <button type="button" class="ef-chip" data-group="nutricional" data-val="obeso">Obeso</button>
+          <button type="button" class="ef-chip" data-group="nutricional" data-val="emagrecido">Emagrecido</button>
+          <button type="button" class="ef-chip" data-group="nutricional" data-val="caquético / sarcopênico">Caquético / sarcopênico</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="biotipo">
+        <div class="ef-group-label">Biotipo:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="biotipo" data-val="normolíneo">Normolíneo</button>
+          <button type="button" class="ef-chip" data-group="biotipo" data-val="brevilíneo">Brevilíneo</button>
+          <button type="button" class="ef-chip" data-group="biotipo" data-val="longilíneo">Longilíneo</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grupo 4: Pele, Linfonodos & Dispositivos -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">4. Pele, Fâneros, Linfonodos &amp; Dispositivos</h3>
+
+      <div class="ef-ecto-group" data-group="pele">
+        <div class="ef-group-label">Pele &amp; Fâneros (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="pele" data-multi="true" data-val="pele íntegra, turgor e elasticidade preservados">Pele íntegra, turgor preservado</button>
+          <button type="button" class="ef-chip" data-group="pele" data-multi="true" data-val="sem lesões elementares ou petéquias">Sem lesões ou petéquias</button>
+          <button type="button" class="ef-chip" data-group="pele" data-multi="true" data-val="presença de lesões elementares">Lesões elementares presentes</button>
+          <button type="button" class="ef-chip" data-group="pele" data-multi="true" data-val="ferida operatória / cicatriz limpa e seca">Ferida/cicatriz limpa e seca</button>
+          <button type="button" class="ef-chip" data-group="pele" data-multi="true" data-val="lesão por pressão">Lesão por pressão</button>
+        </div>
+        <input type="text" id="ef-pele-obs" class="ef-input ef-input-sub" placeholder="Descrição de lesões cutâneas (opcional): ex. máculas eritematosas em tronco, petéquias em MMII...">
+      </div>
+
+      <div class="ef-ecto-group" data-group="linfonodos">
+        <div class="ef-group-label">Linfonodos Periféricos:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="linfonodos" data-val="sem linfonodomegalias palpáveis">Sem linfonodomegalias palpáveis</button>
+          <button type="button" class="ef-chip" data-group="linfonodos" data-val="linfonodomegalia palpável">Linfonodomegalia palpável</button>
+        </div>
+        <input type="text" id="ef-linf-obs" class="ef-input ef-input-sub" placeholder="Se palpável, especifique cadeia, tamanho, consistência e dor (ex: cervical anterior, ~1,5 cm, fibroelástico, móvel, indolor)" hidden>
+      </div>
+
+      <div class="ef-ecto-group" data-group="dispositivos">
+        <div class="ef-group-label">Dispositivos em Uso (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="acesso venoso periférico (AVP) pérvio sem sinais flogísticos">AVP sem flogose</button>
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="cateter venoso central (CVC) sem sinais flogísticos">CVC</button>
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="sonda vesical de demora (SVD)">SVD</button>
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="sonda nasoenteral (SNE)">SNE</button>
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="cateter nasal de O₂">Cateter nasal de O₂</button>
+          <button type="button" class="ef-chip" data-group="dispositivos" data-multi="true" data-val="dreno">Dreno</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-ecto-obs" class="ef-group-label">Observações Livres da Ectoscopia:</label>
+        <input type="text" id="ef-ecto-obs" class="ef-input" placeholder="Ex: Presença de xantelasmas, baqueteamento digital, ginecomastia...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Caixa de Texto Final Gerada para Anamnese -->
+  <div id="ef-final-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📝 Texto Pronto para Copiar para a Anamnese / Prontuário</h3>
+        <p class="ef-output-sub">Gerado em tempo real com Sinais Vitais + Ectoscopia. Você também pode editar o texto livremente abaixo antes de copiar.</p>
+      </div>
+    </div>
+    <textarea id="ef-generated-text" class="ef-textarea" rows="5" placeholder="Selecione as características da ectoscopia ou preencha os sinais vitais para gerar o texto pronto para anamnese..."></textarea>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('both')">
+        📋 Copiar Completo (Sinais Vitais + Ectoscopia)
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('ecto')">
+        📋 Copiar Só Ectoscopia
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="efCopyText('vitals')">
+        📋 Copiar Só Sinais Vitais
+      </button>
+    </div>
+  </div>
+</section>

@@ -17,10 +17,12 @@ function buildSearchIndex() {
   const secMetaMap = (typeof SECTION_SEARCH_META !== 'undefined') ? SECTION_SEARCH_META : {};
   const infoMap = (typeof MODULE_INFOGRAPHICS !== 'undefined') ? MODULE_INFOGRAPHICS : {};
 
-  // 1. Módulos Clínicos (86 módulos)
+  // 1. Módulos Clínicos
   Object.keys(metaMap).forEach(mId => {
     const meta = metaMap[mId];
     const isPed = mId.startsWith('ped-') || meta.specialty === 'pediatria';
+    const isEf = mId.startsWith('ef-') || meta.specialty === 'exame-fisico';
+    const spec = isEf ? 'exame-fisico' : (isPed ? 'pediatria' : 'ginecologia');
     // Reúne palavras-chave da primeira seção para enriquecer também o card do módulo
     const firstSecMeta = secMetaMap[meta.firstSection] || {};
     index.push({
@@ -29,18 +31,18 @@ function buildSearchIndex() {
       moduleId: mId,
       sectionId: meta.firstSection,
       title: meta.name,
-      subtitle: meta.sub || (isPed ? 'Pediatria SBP 2024 (6ª Edição)' : 'Ginecologia FEBRASGO'),
-      icon: meta.icon || (isPed ? '👶' : '🩺'),
-      specialty: isPed ? 'pediatria' : 'ginecologia',
-      badge: isPed ? 'Módulo Pediatria' : 'Módulo Ginecologia',
-      badgeClass: isPed ? 'badge-pediatria' : '',
+      subtitle: meta.sub || (isEf ? 'Exame Físico & Semiologia Médica' : (isPed ? 'Pediatria SBP 2024 (6ª Edição)' : 'Ginecologia FEBRASGO')),
+      icon: meta.icon || (isEf ? '🩺' : (isPed ? '👶' : '🩺')),
+      specialty: spec,
+      badge: isEf ? 'Módulo Exame Físico' : (isPed ? 'Módulo Pediatria' : 'Módulo Ginecologia'),
+      badgeClass: isEf ? 'badge-ef' : (isPed ? 'badge-pediatria' : ''),
       isInfographic: false,
       isFlowchart: false,
       isPrescription: false,
       isCase: false,
       rawKeywords: firstSecMeta.kw || meta.ref || '',
       searchString: normalizeSearchText(
-        `${meta.name} ${meta.sub || ''} ${meta.ref || ''} ${mId} ${firstSecMeta.kw || ''} ${isPed ? 'pediatria sbp crianca lactente neonato' : 'ginecologia febrasgo mulher'}`
+        `${meta.name} ${meta.sub || ''} ${meta.ref || ''} ${mId} ${firstSecMeta.kw || ''} ${isEf ? 'exame fisico semiologia sinais vitais ectoscopia anamnese' : (isPed ? 'pediatria sbp crianca lactente neonato' : 'ginecologia febrasgo mulher')}`
       )
     });
   });
@@ -86,6 +88,8 @@ function buildSearchIndex() {
     const meta = metaMap[mId] || {};
     const sMeta = secMetaMap[sId] || {};
     const isPed = mId.startsWith('ped-') || meta.specialty === 'pediatria';
+    const isEf = mId.startsWith('ef-') || meta.specialty === 'exame-fisico';
+    const spec = isEf ? 'exame-fisico' : (isPed ? 'pediatria' : 'ginecologia');
 
     const secEl = document.getElementById(sId);
     const domH1 = secEl ? secEl.querySelector('h1.section-title, h1') : null;
@@ -101,9 +105,9 @@ function buildSearchIndex() {
     const isCase = !!(sMeta.caso || sId.includes('caso'));
     const isPrescription = !!(sMeta.presc || sId.includes('prescricao') || sId.includes('posologia'));
 
-    let badge = isPed ? 'Pediatria' : 'Ginecologia';
-    let badgeClass = isPed ? 'badge-pediatria' : '';
-    let icon = meta.icon || (isPed ? '👶' : '🩺');
+    let badge = isEf ? 'Exame Físico' : (isPed ? 'Pediatria' : 'Ginecologia');
+    let badgeClass = isEf ? 'badge-ef' : (isPed ? 'badge-pediatria' : '');
+    let icon = meta.icon || (isEf ? '🩺' : (isPed ? '👶' : '🩺'));
 
     if (isFlowchart) {
       badge = 'Fluxograma';
@@ -130,7 +134,7 @@ function buildSearchIndex() {
       navTitle: navTitleFallback || fullTitle,
       subtitle: subtitle,
       icon: icon,
-      specialty: isPed ? 'pediatria' : 'ginecologia',
+      specialty: spec,
       badge: badge,
       badgeClass: badgeClass,
       isInfographic: false,
@@ -139,7 +143,7 @@ function buildSearchIndex() {
       isCase: isCase,
       rawKeywords: rawKeywords,
       searchString: normalizeSearchText(
-        `${fullTitle} ${navTitleFallback || ''} ${rawSub} ${meta.name || ''} ${sId} ${rawKeywords} ${isPed ? 'pediatria sbp' : 'ginecologia febrasgo'}`
+        `${fullTitle} ${navTitleFallback || ''} ${rawSub} ${meta.name || ''} ${sId} ${rawKeywords} ${isEf ? 'exame fisico semiologia sinais vitais ectoscopia' : (isPed ? 'pediatria sbp' : 'ginecologia febrasgo')}`
       )
     });
   }
@@ -157,7 +161,7 @@ function buildSearchIndex() {
 
   // Garante cobertura 100% mesmo para seções listadas apenas em ORDERED_SECTIONS
   if (typeof ORDERED_SECTIONS !== 'undefined') {
-    ['ginecologia', 'pediatria'].forEach(sp => {
+    ['ginecologia', 'pediatria', 'exame-fisico'].forEach(sp => {
       (ORDERED_SECTIONS[sp] || []).forEach(sec => {
         addSectionEntry(sec.moduleId, sec.sectionId, sec.title);
       });
@@ -210,13 +214,15 @@ function openSearchModal(initialFilter) {
   const clearBtn = document.getElementById('modal-search-clear');
   if (clearBtn) clearBtn.style.display = 'none';
 
-  const validFilters = ['all', 'ginecologia', 'pediatria', 'infografico', 'fluxograma', 'prescricao', 'caso'];
+  const validFilters = ['all', 'ginecologia', 'pediatria', 'exame-fisico', 'infografico', 'fluxograma', 'prescricao', 'caso'];
   const activeFilter = (initialFilter && validFilters.includes(initialFilter)) ? initialFilter : 'all';
 
   if (activeFilter === 'ginecologia') {
     input.placeholder = 'Buscar protocolos, escores e fármacos em Ginecologia (FEBRASGO)...';
   } else if (activeFilter === 'pediatria') {
     input.placeholder = 'Buscar diretrizes, doses e triagens em Pediatria (SBP 2024)...';
+  } else if (activeFilter === 'exame-fisico') {
+    input.placeholder = 'Buscar roteiros e construtores de Exame Físico (Sinais Vitais, Ectoscopia)...';
   } else if (activeFilter === 'infografico') {
     input.placeholder = 'Filtrar entre os 86 Infográficos Clínicos HD...';
   } else if (activeFilter === 'prescricao') {
@@ -276,6 +282,8 @@ function executeModalSearch(rawQuery) {
     filtered = filtered.filter(item => item.specialty === 'pediatria' && item.type !== 'infographic');
   } else if (currentSearchFilter === 'ginecologia') {
     filtered = filtered.filter(item => item.specialty === 'ginecologia' && item.type !== 'infographic');
+  } else if (currentSearchFilter === 'exame-fisico') {
+    filtered = filtered.filter(item => item.specialty === 'exame-fisico' && item.type !== 'infographic');
   } else if (currentSearchFilter === 'infografico') {
     filtered = filtered.filter(item => item.isInfographic);
   } else if (currentSearchFilter === 'fluxograma') {
@@ -389,11 +397,13 @@ function renderSearchResults() {
     const isSearching = input && input.value.trim().length > 0;
     if (!isSearching) {
       if (currentSearchFilter === 'all') {
-        countEl.textContent = '86 módulos clínicos • 684 seções indexadas';
+        countEl.textContent = '87 módulos clínicos • 686 seções indexadas';
       } else if (currentSearchFilter === 'ginecologia') {
         countEl.textContent = `38 módulos e ${currentResults.length - 38} seções em Ginecologia (FEBRASGO)`;
       } else if (currentSearchFilter === 'pediatria') {
         countEl.textContent = `48 módulos e ${currentResults.length - 48} seções em Pediatria (SBP 2024)`;
+      } else if (currentSearchFilter === 'exame-fisico') {
+        countEl.textContent = `1 módulo e ${Math.max(0, currentResults.length - 1)} seções em Exame Físico`;
       } else if (currentSearchFilter === 'infografico') {
         countEl.textContent = `${currentResults.length} Infográficos Clínicos HD disponíveis`;
       } else if (currentSearchFilter === 'fluxograma') {
@@ -433,7 +443,9 @@ async function selectSearchResult(index) {
   }
 
   if (target.moduleId) {
-    const curMod = currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod;
+    const curMod = currentSpecialty === 'exame-fisico'
+      ? activeExameFisicoMod
+      : (currentSpecialty === 'pediatria' ? activePediatriaMod : activeGinecologiaMod);
     const isOnHome = !!(document.body && document.body.classList && document.body.classList.contains('home-active'));
     if ((curMod !== target.moduleId || isOnHome) && typeof switchModule === 'function') {
       await switchModule(target.moduleId);

@@ -61,6 +61,10 @@
         <span>Pediatria</span>
         <span class="specialty-tab-badge" id="spec-ped-badge">48</span>
       </button>
+      <button class="specialty-tab-btn" role="tab" aria-selected="false" id="spec-tab-exame-fisico" onclick="switchSpecialty('exame-fisico', false)" title="Especialidade: Exame Físico & Semiologia Médica (Sinais Vitais e Ectoscopia)">
+        <span>Exame Físico</span>
+        <span class="specialty-tab-badge" id="spec-ef-badge">1</span>
+      </button>
     </div>
 
     <!-- Hidden sync select for accessibility & automated tests -->
@@ -154,6 +158,9 @@
         <option value="ped-hipotireoidismo">Hipotireoidismo Congênito</option>
         <option value="ped-hiperplasia-adrenal">Hiperplasia Adrenal Congênita</option>
         <option value="ped-genetica">Síndromes Genéticas &amp; Erros Inatos</option>
+      </optgroup>
+      <optgroup id="optgroup-exame-fisico" label="Exame Físico &amp; Semiotécnica">
+        <option value="ef-geral">Sinais Vitais &amp; Ectoscopia</option>
       </optgroup>
     </select>
 
@@ -4211,6 +4218,21 @@
       </li>
     </ul>
 
+    <!-- NAV-GROUP: EXAME FÍSICO GERAL (SINAIS VITAIS & ECTOSCOPIA) -->
+    <ul id="nav-group-ef-geral" class="nav-list" style="display: none;">
+      <li class="nav-category">Exame Físico &amp; Semiotécnica</li>
+      <li class="nav-item">
+        <a href="#ef-sinais-vitais" class="nav-link" onclick="switchSection('ef-sinais-vitais')">
+          <span>Sinais Vitais &amp; Antropometria</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="#ef-ectoscopia" class="nav-link" onclick="switchSection('ef-ectoscopia')">
+          <span>Ectoscopia &amp; Texto Anamnese</span>
+        </a>
+      </li>
+    </ul>
+
     <div class="sidebar-footer" id="sidebar-footer">
       <div style="font-size: 0.65rem; text-transform: uppercase; color: #64748b; font-weight: 700; letter-spacing: 0.05em; margin-bottom: 2px;">
         Fonte Oficial de Referência
@@ -4251,7 +4273,7 @@
           <div class="home-meta-pill">
             <span>FEBRASGO &amp; SBP 2024</span>
             <span class="home-dot" aria-hidden="true">·</span>
-            <span>86 Módulos</span>
+            <span>87 Módulos</span>
             <span class="home-dot" aria-hidden="true">·</span>
             <span>480+ Infográficos &amp; Tabelas HD</span>
           </div>
@@ -4303,17 +4325,20 @@
           <div class="home-block-header home-topics-bar">
             <div class="home-topics-heading-wrap">
               <h2 id="home-topics-heading" class="home-section-label">Tópicos Disponíveis</h2>
-              <span id="home-topics-count" class="home-count-badge">86 módulos</span>
+              <span id="home-topics-count" class="home-count-badge">87 módulos</span>
             </div>
             <div class="home-spec-tabs" role="tablist" aria-label="Filtrar tópicos por especialidade">
               <button type="button" role="tab" aria-selected="true" class="home-spec-tab active" data-spec="all" onclick="setHomeSpecialtyFilter('all')">
-                Todos <span>86</span>
+                Todos <span>87</span>
               </button>
               <button type="button" role="tab" aria-selected="false" class="home-spec-tab" data-spec="ginecologia" onclick="setHomeSpecialtyFilter('ginecologia')">
                 Ginecologia <span>38</span>
               </button>
               <button type="button" role="tab" aria-selected="false" class="home-spec-tab" data-spec="pediatria" onclick="setHomeSpecialtyFilter('pediatria')">
                 Pediatria <span>48</span>
+              </button>
+              <button type="button" role="tab" aria-selected="false" class="home-spec-tab" data-spec="exame-fisico" onclick="setHomeSpecialtyFilter('exame-fisico')">
+                Exame Físico <span>1</span>
               </button>
             </div>
           </div>
@@ -4376,6 +4401,7 @@
         <button type="button" class="search-filter-pill active" data-filter="all" onclick="setSearchFilter('all')">Todos</button>
         <button type="button" class="search-filter-pill" data-filter="ginecologia" onclick="setSearchFilter('ginecologia')">🩺 Ginecologia (38)</button>
         <button type="button" class="search-filter-pill" data-filter="pediatria" onclick="setSearchFilter('pediatria')">👶 Pediatria (48)</button>
+        <button type="button" class="search-filter-pill" data-filter="exame-fisico" onclick="setSearchFilter('exame-fisico')">🩺 Exame Físico (1)</button>
         <button type="button" class="search-filter-pill" data-filter="infografico" onclick="setSearchFilter('infografico')">📊 Infográficos HD (86)</button>
         <button type="button" class="search-filter-pill" data-filter="fluxograma" onclick="setSearchFilter('fluxograma')">⚡ Fluxogramas</button>
         <button type="button" class="search-filter-pill" data-filter="prescricao" onclick="setSearchFilter('prescricao')">💊 Prescrições</button>
@@ -4390,7 +4416,7 @@
           <span><kbd>↵</kbd> Selecionar</span>
           <span><kbd>esc</kbd> Fechar</span>
         </div>
-        <div id="modal-search-count" class="search-modal-count">86 módulos disponíveis</div>
+        <div id="modal-search-count" class="search-modal-count">87 módulos disponíveis</div>
       </div>
     </div>
   </div>

@@ -294,20 +294,26 @@
     /* Specialty Switcher Tabs (Estilo Subnav Antigravity Docs) */
     .specialty-tabs-bar {
       display: flex !important;
-      gap: 6px !important;
-      padding: 10px 14px !important;
+      gap: 4px !important;
+      padding: 8px 8px !important;
       background: var(--bg-sidebar) !important;
       border-bottom: 1px solid var(--border) !important;
+      overflow-x: auto !important;
+      scrollbar-width: none !important;
+    }
+    .specialty-tabs-bar::-webkit-scrollbar {
+      display: none !important;
     }
     .specialty-tab-btn {
-      flex: 1 !important;
+      flex: 1 1 auto !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      gap: 6px !important;
-      padding: 7px 12px !important;
-      font-size: 0.82rem !important;
+      gap: 3px !important;
+      padding: 5px 5px !important;
+      font-size: 0.69rem !important;
       font-weight: 500 !important;
+      white-space: nowrap !important;
       border-radius: var(--radius-sm) !important;
       border: 1px solid var(--border) !important;
       background: var(--bg-card) !important;
@@ -327,8 +333,8 @@
       font-weight: 600 !important;
     }
     .specialty-tab-badge {
-      font-size: 0.68rem !important;
-      padding: 1px 6px !important;
+      font-size: 0.59rem !important;
+      padding: 1px 4px !important;
       border-radius: var(--radius-pill) !important;
       background: rgba(0, 0, 0, 0.08) !important;
       color: inherit !important;
@@ -4509,6 +4515,9 @@
     .home-spec-dot.ped {
       background-color: #0d9488;
     }
+    .home-spec-dot.ef {
+      background-color: #7c3aed;
+    }
     .home-spec-source {
       font-size: 0.75rem;
       color: var(--text-muted);
@@ -4643,12 +4652,14 @@
       .home-spec-tabs {
         width: 100% !important;
         display: flex !important;
+        flex-wrap: wrap !important;
       }
       .home-spec-tab {
-        flex: 1 !important;
+        flex: 1 1 auto !important;
         justify-content: center !important;
+        white-space: nowrap !important;
         padding: 6px 8px !important;
-        font-size: 0.76rem !important;
+        font-size: 0.74rem !important;
       }
       .home-spec-header {
         margin-bottom: 12px !important;
@@ -4678,4 +4689,412 @@
         padding-top: 14px !important;
         font-size: 0.70rem !important;
       }
+    }
+
+    /* ================================================================= */
+    /* MÓDULO EXAME FÍSICO (SINAIS VITAIS & ECTOSCOPIA INTERATIVOS)      */
+    /* ================================================================= */
+    .search-result-badge.badge-ef {
+      background: rgba(124, 58, 237, 0.12);
+      color: #6d28d9;
+      border-color: rgba(124, 58, 237, 0.28);
+    }
+    body.dark-mode .search-result-badge.badge-ef {
+      background: rgba(167, 139, 250, 0.16);
+      color: #c4b5fd;
+      border-color: rgba(167, 139, 250, 0.3);
+    }
+
+    .ef-toolbar {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 14px 18px !important;
+      margin-bottom: 18px !important;
+    }
+    .ef-toolbar-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+    }
+    .ef-toolbar-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    .ef-btn-primary {
+      background-color: var(--primary) !important;
+      color: #ffffff !important;
+      border: 1px solid var(--primary) !important;
+    }
+    .ef-btn-secondary {
+      background-color: var(--bg-subtle) !important;
+      color: var(--text-main) !important;
+      border: 1px solid var(--border) !important;
+    }
+    .ef-btn-secondary:hover {
+      background-color: var(--bg-hover) !important;
+      border-color: var(--border-focus) !important;
+    }
+    .ef-btn-outline {
+      background-color: transparent !important;
+      color: var(--primary) !important;
+      border: 1px solid var(--primary) !important;
+    }
+    .ef-btn-outline:hover {
+      background-color: var(--nav-active-bg) !important;
+    }
+
+    .ef-vitals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .ef-vital-card {
+      padding: 16px 18px !important;
+      margin-bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ef-vital-card-wide {
+      grid-column: 1 / -1;
+    }
+    .ef-vital-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .ef-vital-head h3 {
+      margin: 0;
+      font-size: 0.96rem !important;
+      font-weight: 600 !important;
+    }
+    .ef-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .ef-status-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      border: 1px solid transparent;
+    }
+    .ef-status-badge.neutral {
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      border-color: var(--border);
+    }
+    .ef-status-badge.ok {
+      background: rgba(16, 185, 129, 0.14);
+      color: #047857;
+      border-color: rgba(16, 185, 129, 0.35);
+    }
+    body.dark-mode .ef-status-badge.ok {
+      background: rgba(16, 185, 129, 0.18);
+      color: #6ee7b7;
+    }
+    .ef-status-badge.warn {
+      background: rgba(245, 158, 11, 0.14);
+      color: #b45309;
+      border-color: rgba(245, 158, 11, 0.35);
+    }
+    body.dark-mode .ef-status-badge.warn {
+      background: rgba(245, 158, 11, 0.18);
+      color: #fcd34d;
+    }
+    .ef-status-badge.danger {
+      background: rgba(239, 68, 68, 0.14);
+      color: #b91c1c;
+      border-color: rgba(239, 68, 68, 0.35);
+    }
+    body.dark-mode .ef-status-badge.danger {
+      background: rgba(239, 68, 68, 0.2);
+      color: #fca5a5;
+    }
+
+    .ef-calc-pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 3px 9px;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 600;
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      border: 1px solid var(--border);
+    }
+
+    .ef-minmax-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .ef-pa-matrix {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .ef-anthro-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .ef-obs-span {
+      grid-column: span 2;
+    }
+    @media (max-width: 640px) {
+      .ef-obs-span {
+        grid-column: span 1;
+      }
+    }
+
+    .ef-input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .ef-input-group label {
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+    .ef-input,
+    .ef-select,
+    .ef-textarea {
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      color: var(--text-main);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 7px 10px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: border-color 140ms ease, box-shadow 140ms ease;
+    }
+    .ef-input:focus,
+    .ef-select:focus,
+    .ef-textarea:focus {
+      outline: none !important;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.14);
+    }
+    .ef-input-xs {
+      width: 78px !important;
+      padding: 4px 8px !important;
+      font-size: 0.82rem !important;
+      text-align: center;
+    }
+    .ef-input-sm {
+      width: 145px !important;
+      padding: 5px 8px !important;
+      font-size: 0.82rem !important;
+    }
+    .ef-input-sub {
+      margin-top: 8px;
+    }
+    .ef-select-sm {
+      width: auto !important;
+      padding: 5px 9px !important;
+      font-size: 0.78rem !important;
+    }
+    .ef-vital-footer {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .ef-inline-select-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+    .ef-inline-select-wrap label {
+      white-space: nowrap;
+      font-weight: 600;
+    }
+    .ef-vital-hint {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .ef-ecto-sections {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .ef-ecto-card {
+      padding: 18px 20px !important;
+      margin-bottom: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .ef-group-card-title {
+      margin: 0 !important;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+      font-size: 1.02rem !important;
+    }
+    .ef-ecto-group {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .ef-group-label {
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .ef-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      align-items: center;
+    }
+    .ef-chip {
+      appearance: none;
+      border: 1px solid var(--border);
+      background-color: var(--bg-surface);
+      color: var(--text-body);
+      font-family: var(--font-sans);
+      font-size: 0.81rem;
+      font-weight: 500;
+      padding: 6px 12px;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: all 120ms ease;
+      line-height: 1.25;
+      text-align: left;
+    }
+    .ef-chip:hover {
+      border-color: var(--primary);
+      background-color: var(--bg-hover);
+      color: var(--text-main);
+    }
+    .ef-chip.active {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      font-weight: 600;
+      box-shadow: 0 1px 4px rgba(26, 115, 232, 0.25);
+    }
+    body.dark-mode .ef-chip.active {
+      color: #121316;
+    }
+    .ef-chip-sm {
+      font-size: 0.76rem;
+      padding: 4px 10px;
+    }
+    .ef-glasgow-box {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border);
+      font-size: 0.76rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .ef-cross-panel {
+      margin-top: 4px;
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      background-color: var(--bg-surface);
+      border: 1px dashed var(--primary);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .ef-cross-panel[hidden] {
+      display: none !important;
+    }
+    .ef-cross-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+    .ef-cross-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .ef-cross-btn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background-color: var(--bg-card);
+      color: var(--text-main);
+      font-family: var(--font-mono);
+      font-size: 0.80rem;
+      font-weight: 600;
+      padding: 5px 11px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .ef-cross-btn:hover {
+      border-color: var(--primary);
+    }
+    .ef-cross-btn.active {
+      background-color: #d97706;
+      border-color: #d97706;
+      color: #ffffff;
+    }
+    .ef-sub-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .ef-output-box {
+      padding: 18px 20px !important;
+      border: 1.5px solid var(--primary) !important;
+      background: var(--bg-card) !important;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .ef-output-head h3 {
+      margin: 0 0 4px 0 !important;
+      font-size: 1rem !important;
+    }
+    .ef-output-sub {
+      margin: 0 !important;
+      font-size: 0.80rem !important;
+      color: var(--text-muted);
+    }
+    .ef-textarea {
+      font-family: var(--font-sans);
+      line-height: 1.55;
+      resize: vertical;
+      min-height: 82px;
+    }
+    .ef-output-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
     }
