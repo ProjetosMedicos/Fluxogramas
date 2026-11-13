@@ -24,6 +24,7 @@ def measure_and_render(html_rel_path, output_png_rel_path, port=9895):
         f'--user-data-dir={user_data}',
         '--disable-gpu',
         '--no-sandbox',
+        '--hide-scrollbars',
         '--window-size=1200,1000',
         f'file://{html_path}'
     ]
@@ -87,6 +88,7 @@ def measure_and_render(html_rel_path, output_png_rel_path, port=9895):
         '--headless=new',
         '--disable-gpu',
         '--no-sandbox',
+        '--hide-scrollbars',
         f'--window-size=1200,{scrollHeight}',
         '--virtual-time-budget=6000',
         f'--screenshot={output_png}',
