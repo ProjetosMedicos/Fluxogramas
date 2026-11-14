@@ -5098,3 +5098,202 @@
       gap: 8px;
       align-items: center;
     }
+
+    .ef-btn-emerald {
+      background-color: #059669 !important;
+      color: #ffffff !important;
+      border: 1px solid #059669 !important;
+    }
+    .ef-btn-emerald:hover {
+      background-color: #047857 !important;
+      border-color: #047857 !important;
+    }
+    .ef-btn-compact {
+      padding: 6px 12px !important;
+      font-size: 0.80rem !important;
+      white-space: nowrap;
+    }
+
+    /* Construtor de Topografia & Sopros */
+    .ef-topo-builder {
+      margin-top: 6px;
+      padding: 12px;
+      border-radius: var(--radius-md);
+      background-color: var(--bg-surface);
+      border: 1px dashed var(--border-focus);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ef-topo-row {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr auto;
+      gap: 8px;
+      align-items: center;
+    }
+    @media (max-width: 760px) {
+      .ef-topo-row {
+        grid-template-columns: 1fr;
+      }
+    }
+    .ef-quick-presets-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: center;
+    }
+    .ef-mini-label {
+      font-size: 0.74rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+    .ef-added-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .ef-added-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: var(--radius-pill);
+      background: rgba(26, 115, 232, 0.12);
+      border: 1px solid rgba(26, 115, 232, 0.35);
+      color: var(--primary);
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    body.dark-mode .ef-added-tag {
+      background: rgba(96, 165, 250, 0.16);
+      color: #93c5fd;
+    }
+    .ef-added-tag button {
+      border: none;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-weight: 700;
+      padding: 0 2px;
+      font-size: 0.82rem;
+    }
+
+    /* Escala MRC 0-5 Grid */
+    .ef-mrc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    /* Cartões de Manobras Especiais (Negativo/Positivo + Botão ?) */
+    .ef-maneuver-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 10px;
+    }
+    .ef-maneuver-card {
+      padding: 10px 12px;
+      border-radius: var(--radius-md);
+      background-color: var(--bg-surface);
+      border: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: border-color 140ms ease, background-color 140ms ease;
+    }
+    .ef-maneuver-card.is-neg {
+      border-color: rgba(16, 185, 129, 0.45);
+      background-color: rgba(16, 185, 129, 0.05);
+    }
+    .ef-maneuver-card.is-pos {
+      border-color: rgba(239, 68, 68, 0.55);
+      background-color: rgba(239, 68, 68, 0.06);
+    }
+    .ef-maneuver-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .ef-maneuver-title {
+      font-size: 0.83rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .ef-help-btn {
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--border-focus);
+      background-color: var(--bg-card);
+      color: var(--primary);
+      font-size: 0.74rem;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: all 120ms ease;
+    }
+    .ef-help-btn:hover,
+    .ef-help-btn.active {
+      background-color: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+    }
+    body.dark-mode .ef-help-btn.active {
+      color: #121316;
+    }
+    .ef-maneuver-btns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+    }
+    .ef-mbtn {
+      appearance: none;
+      border: 1px solid var(--border);
+      background-color: var(--bg-card);
+      color: var(--text-body);
+      font-family: var(--font-sans);
+      font-size: 0.77rem;
+      font-weight: 600;
+      padding: 5px 8px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: all 120ms ease;
+    }
+    .ef-mbtn:hover {
+      border-color: var(--border-focus);
+    }
+    .ef-mbtn[data-mval="neg"].active {
+      background-color: #059669;
+      border-color: #059669;
+      color: #ffffff;
+    }
+    .ef-mbtn[data-mval="pos"].active {
+      background-color: #dc2626;
+      border-color: #dc2626;
+      color: #ffffff;
+    }
+    .ef-help-popover {
+      font-size: 0.76rem;
+      line-height: 1.45;
+      color: var(--text-body);
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--primary);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+    }
+    .ef-help-popover[hidden] {
+      display: none !important;
+    }
+
+    /* Output segmentar + completo lado a lado */
+    .ef-section-output-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }

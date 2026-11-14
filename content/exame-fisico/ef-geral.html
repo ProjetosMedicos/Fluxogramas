@@ -15,6 +15,9 @@
       <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalVitals()">
         ⚡ Preencher Sinais Vitais Normais
       </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
       <button type="button" class="btn-action ef-btn-secondary" onclick="efResetVitals()">
         🗑️ Limpar Sinais Vitais
       </button>
@@ -243,7 +246,7 @@
         📋 Copiar Sinais Vitais
       </button>
       <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
-        📋 Copiar Completo (Sinais Vitais + Ectoscopia)
+        📋 Copiar Exame Físico Completo
       </button>
       <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-ectoscopia')">
         ➡️ Avançar para Ectoscopia →
@@ -266,24 +269,30 @@
       <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalEctoscopia()">
         ⚡ Preencher Ectoscopia Normal (Padrão)
       </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
       <button type="button" class="btn-action ef-btn-secondary" onclick="efResetEctoscopia()">
         🗑️ Limpar Seleção
       </button>
       <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-sinais-vitais')">
-        ⬅️ Voltar aos Sinais Vitais
+        ⬅️ Sinais Vitais
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cabeca-pescoco')">
+        ➡️ Cabeça e Pescoço
       </button>
     </div>
     <div class="ef-toolbar-options">
       <div class="ef-inline-select-wrap">
         <label for="ef-cross-format">Formato das cruzes:</label>
-        <select id="ef-cross-format" class="ef-select">
+        <select id="ef-cross-format" class="ef-select ef-sync-cross-format">
           <option value="4+">Numérico (+/4+, 2+/4+, 3+/4+, 4+/4+)</option>
           <option value="plus">Cruzes (+/++++, ++/++++, +++/++++, ++++/++++)</option>
         </select>
       </div>
       <div class="ef-inline-select-wrap">
         <label for="ef-text-style">Estilo do texto:</label>
-        <select id="ef-text-style" class="ef-select">
+        <select id="ef-text-style" class="ef-select ef-sync-text-style">
           <option value="anamnese">Texto Corrido de Anamnese</option>
           <option value="evolucao">Evolução Compacta de Enfermaria (BEG, LOTE, CHAA...)</option>
         </select>
@@ -614,20 +623,1683 @@
   <div id="ef-final-output-card" class="card ef-output-box">
     <div class="ef-output-head">
       <div>
-        <h3>📝 Texto Pronto para Copiar para a Anamnese / Prontuário</h3>
-        <p class="ef-output-sub">Gerado em tempo real com Sinais Vitais + Ectoscopia. Você também pode editar o texto livremente abaixo antes de copiar.</p>
+        <h3>📝 Texto Completo do Exame Físico Pronto para Anamnese / Prontuário</h3>
+        <p class="ef-output-sub">Reúne automaticamente Sinais Vitais, Ectoscopia e todos os Sistemas Segmentares preenchidos. Você também pode editar livremente abaixo antes de copiar.</p>
       </div>
     </div>
-    <textarea id="ef-generated-text" class="ef-textarea" rows="5" placeholder="Selecione as características da ectoscopia ou preencha os sinais vitais para gerar o texto pronto para anamnese..."></textarea>
+    <textarea id="ef-generated-text" class="ef-textarea ef-full-output-textarea" rows="6" placeholder="Selecione os achados do exame físico para gerar o texto completo pronto para anamnese..."></textarea>
     <div class="ef-output-actions">
       <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('both')">
-        📋 Copiar Completo (Sinais Vitais + Ectoscopia)
+        📋 Copiar Exame Físico Completo (Tudo Preenchido)
       </button>
       <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('ecto')">
         📋 Copiar Só Ectoscopia
       </button>
       <button type="button" class="btn-action ef-btn-outline" onclick="efCopyText('vitals')">
         📋 Copiar Só Sinais Vitais
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cabeca-pescoco')">
+        ➡️ Avançar para Cabeça e Pescoço →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3: Cabeça, Olhos, Oroscopia & Pescoço -->
+<section id="ef-cabeca-pescoco" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • CABEÇA, ORL &amp; PESCOÇO</span>
+    <h1>Cabeça, Olhos, Oroscopia &amp; Pescoço</h1>
+    <p>Avaliação segmentar completa de crânio, pupilas e conjuntivas, otoscopia/rinoscopia, oroscopia, tireoide, traqueia, linfonodos cervicais e turgência jugular a 45°.</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('cabeca')">
+        ⚡ Preencher Cabeça &amp; Pescoço Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('cabeca')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-ectoscopia')">
+        ⬅️ Ectoscopia
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-respiratorio')">
+        ➡️ Respiratório
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-cp-style">Estilo do texto:</label>
+        <select id="ef-cp-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- Crânio e Face -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Crânio &amp; Face</h3>
+      <div class="ef-ecto-group" data-group="cp_cranio">
+        <div class="ef-group-label">Inspeção &amp; Palpação do Crânio / Seios da Face:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_cranio" data-val="crânio normocefálico, sem abaulamentos, retrações ou lesões em couro cabeludo; seios da face indolores à digito-pressão">Normocefálico e atípico, seios da face indolores</button>
+          <button type="button" class="ef-chip" data-group="cp_cranio" data-val="seios da face dolorosos à digito-pressão (maxilares/frontais)">Dor à palpação de seios da face</button>
+          <button type="button" class="ef-chip" data-group="cp_cranio" data-val="trauma/hematoma subgaleal ou ferida em couro cabeludo">Trauma / hematoma / lesão craniana</button>
+          <button type="button" class="ef-chip" data-group="cp_cranio" data-val="assimetria facial">Assimetria facial</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Olhos -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Olhos (Pupilas, Conjuntivas, Escleras &amp; Motricidade)</h3>
+
+      <div class="ef-ecto-group" data-group="cp_pupilas">
+        <div class="ef-group-label">Pupilas &amp; Reflexo Fotomotor:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_pupilas" data-val="pupilas isocóricas e fotorreagentes (PIRF)">Isocóricas e fotorreagentes (PIRF)</button>
+          <button type="button" class="ef-chip" data-group="cp_pupilas" data-val="pupilas anisocóricas">Anisocoria</button>
+          <button type="button" class="ef-chip" data-group="cp_pupilas" data-val="pupilas mióticas e simétricas">Miose</button>
+          <button type="button" class="ef-chip" data-group="cp_pupilas" data-val="pupilas midriáticas">Midríase</button>
+          <button type="button" class="ef-chip" data-group="cp_pupilas" data-val="pupilas hiporreativas ou arreativas à luz">Arreativas / hiporreativas</button>
+        </div>
+        <input type="text" id="ef-cp-pupilas-det" class="ef-input ef-input-sub" placeholder="Se anisocoria ou alteração, especifique (ex: D &gt; E, 5 mm x 2 mm, bradirreativa à D)">
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_conjuntivas">
+        <div class="ef-group-label">Conjuntivas &amp; Escleras (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="conjuntivas normocoradas e úmidas">Conjuntivas normocoradas</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="escleras anictéricas">Escleras anictéricas</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="conjuntivas hipocoradas">Conjuntivas hipocoradas</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="escleras ictéricas">Escleras ictéricas</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="hiperemia conjuntival">Hiperemia conjuntival</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="secreção ocular">Secreção ocular</button>
+          <button type="button" class="ef-chip" data-group="cp_conjuntivas" data-multi="true" data-val="hemorragia subconjuntival">Hemorragia subconjuntival</button>
+        </div>
+        <div class="ef-toolbar-options" style="border-top: none; padding-top: 4px;">
+          <div class="ef-inline-select-wrap">
+            <label for="ef-cp-olhos-cruz">Palidez conjuntival:</label>
+            <select id="ef-cp-olhos-cruz" class="ef-select ef-select-sm">
+              <option value="">Não graduar</option>
+              <option value="1">+/4+</option>
+              <option value="2">2+/4+</option>
+              <option value="3">3+/4+</option>
+              <option value="4">4+/4+</option>
+            </select>
+          </div>
+          <div class="ef-inline-select-wrap">
+            <label for="ef-cp-escleras-cruz">Icterícia escleral:</label>
+            <select id="ef-cp-escleras-cruz" class="ef-select ef-select-sm">
+              <option value="">Não graduar</option>
+              <option value="1">+/4+</option>
+              <option value="2">2+/4+</option>
+              <option value="3">3+/4+</option>
+              <option value="4">4+/4+</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_moe">
+        <div class="ef-group-label">Motricidade Ocular Extrínseca (MOE) &amp; Pálpebras:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="movimentação ocular extrínseca (MOE) preservada, sem nistagmo ou estrabismo">MOE preservada s/ nistagmo</button>
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="nistagmo presente">Nistagmo</button>
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="ptose palpebral">Ptose palpebral</button>
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="paresia de musculatura ocular extrínseca">Paresia de MOE / diplopia</button>
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="exoftalmia">Exoftalmia</button>
+          <button type="button" class="ef-chip" data-group="cp_moe" data-multi="true" data-val="edema palpebral">Edema palpebral</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Oroscopia, Otoscopia e Rinoscopia -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Oroscopia, Otoscopia &amp; Rinoscopia</h3>
+
+      <div class="ef-ecto-group" data-group="cp_oroscopia">
+        <div class="ef-group-label">Oroscopia — Mucosa, Língua &amp; Orofaringe (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="mucosa oral hidratada e corada, sem lesões">Mucosa hidratada e corada</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="orofaringe e tonsilas palatinas sem hiperemia ou exsudato">Orofaringe s/ hiperemia ou placas</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="mucosa oral seca">Mucosa seca</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="hiperemia de orofaringe e pilares amigdalianos">Hiperemia de orofaringe</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="exsudato / placas purulentas em tonsilas">Placas / exsudato tonsilar</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="hipertrofia amigdaliana">Hipertrofia amigdaliana</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="placas esbranquiçadas removíveis sugestivas de candidíase oral">Candidíase oral (monilíase)</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="úlceras orais / aftas">Úlceras / aftas</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="língua saburrosa">Língua saburrosa</button>
+          <button type="button" class="ef-chip" data-group="cp_oroscopia" data-multi="true" data-val="língua despapilada (glossite)">Língua despapilada</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_dentes">
+        <div class="ef-group-label">Estado Dentário:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_dentes" data-val="dentes em bom estado de conservação">Bom estado dentário</button>
+          <button type="button" class="ef-chip" data-group="cp_dentes" data-val="estado dentário regular (cáries / falhas parciais)">Regular (cáries/falhas)</button>
+          <button type="button" class="ef-chip" data-group="cp_dentes" data-val="estado dentário precário">Estado dentário precário</button>
+          <button type="button" class="ef-chip" data-group="cp_dentes" data-val="edêntulo parcial ou total, em uso de prótese dentária">Edêntulo / prótese dentária</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_orl">
+        <div class="ef-group-label">Otoscopia &amp; Rinoscopia Anterior (opcional / complementar):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_orl" data-multi="true" data-val="otoscopia bilateral sem alterações (MT íntegras e translúcidas com brilho preservado)">Otoscopia normal bilateral</button>
+          <button type="button" class="ef-chip" data-group="cp_orl" data-multi="true" data-val="membrana timpânica hiperemiada e abaulada">MT hiperemiada/abaulada</button>
+          <button type="button" class="ef-chip" data-group="cp_orl" data-multi="true" data-val="otorreia / cerume impactado">Otorreia / cerume</button>
+          <button type="button" class="ef-chip" data-group="cp_orl" data-multi="true" data-val="fossas nasais pérvias sem secreções patológicas ou epistaxe">Rinoscopia normal</button>
+          <button type="button" class="ef-chip" data-group="cp_orl" data-multi="true" data-val="cornetos hipertrofiados / rinorreia">Cornetos hipertrofiados / rinorreia</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pescoço -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">4. Pescoço (Tireoide, Traqueia, Linfonodos &amp; Jugulares)</h3>
+
+      <div class="ef-ecto-group" data-group="cp_traqueia">
+        <div class="ef-group-label">Traqueia &amp; Mobilidade Cervical:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_traqueia" data-val="pescoço cilíndrico, simétrico, com mobilidade livre e traqueia centrada">Traqueia centrada, mobilidade livre</button>
+          <button type="button" class="ef-chip" data-group="cp_traqueia" data-val="traqueia desviada para a direita">Traqueia desviada à D</button>
+          <button type="button" class="ef-chip" data-group="cp_traqueia" data-val="traqueia desviada para a esquerda">Traqueia desviada à E</button>
+          <button type="button" class="ef-chip" data-group="cp_traqueia" data-val="mobilidade cervical limitada por dor/contratura">Cervicalgia / limitação de mobilidade</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_tireoide">
+        <div class="ef-group-label">Glândula Tireoide (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="tireoide tópica, de tamanho e consistência fibroelástica normais, móvel à deglutição, indolor e sem nódulos palpáveis">Tópica, fibroelástica, indolor, s/ nódulos</button>
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="tireoide aumentada difusamente (bócio difuso)">Aumentada (bócio difuso)</button>
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="nódulo tireoidiano palpável">Nódulo palpável</button>
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="tireoide de consistência endurecida">Consistência endurecida</button>
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="tireoide dolorosa à palpação">Dolorosa à palpação</button>
+          <button type="button" class="ef-chip" data-group="cp_tireoide" data-multi="true" data-val="frêmito / sopro tireoidiano presente">Frêmito / sopro tireoidiano</button>
+        </div>
+        <input type="text" id="ef-cp-tireoide-obs" class="ef-input ef-input-sub" placeholder="Detalhes da tireoide (opcional): ex. nódulo ~2 cm em lobo direito, móvel à deglutição">
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_linfonodos">
+        <div class="ef-group-label">Linfonodos Cervicais &amp; Supraclaviculares:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_linfonodos" data-val="ausência de linfonodomegalias cervicais ou supraclaviculares palpáveis">Sem linfonodomegalias palpáveis</button>
+          <button type="button" class="ef-chip" data-group="cp_linfonodos" data-val="linfonodomegalia cervical palpável">Linfonodomegalia cervical palpável</button>
+          <button type="button" class="ef-chip" data-group="cp_linfonodos" data-val="linfonodomegalia supraclavicular palpável">Linfonodomegalia supraclavicular</button>
+        </div>
+        <input type="text" id="ef-cp-linf-obs" class="ef-input ef-input-sub" placeholder="Cadeia, tamanho, consistência, aderência e dor (ex: cadeia jugular interna D, ~1,5 cm, fibroelástico, móvel, doloroso)">
+      </div>
+
+      <div class="ef-ecto-group" data-group="cp_jugular">
+        <div class="ef-group-label">Turgência Jugular a 45° &amp; Carótidas (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cp_jugular" data-multi="true" data-val="sem turgência jugular patológica a 45° (TJP ausente)">TJP a 45° ausente</button>
+          <button type="button" class="ef-chip" data-group="cp_jugular" data-multi="true" data-val="turgência jugular patológica a 45° presente (TJP+)">TJP a 45° presente</button>
+          <button type="button" class="ef-chip" data-group="cp_jugular" data-multi="true" data-val="refluxo hepatojugular positivo">Refluxo hepatojugular (+)</button>
+          <button type="button" class="ef-chip" data-group="cp_jugular" data-multi="true" data-val="pulsos carotídeos simétricos, cheios e sem sopros">Carótidas simétricas s/ sopros</button>
+          <button type="button" class="ef-chip" data-group="cp_jugular" data-multi="true" data-val="sopro carotídeo audível">Sopro carotídeo audível</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-cp-obs" class="ef-group-label">Observações Livres — Cabeça e Pescoço:</label>
+        <input type="text" id="ef-cp-obs" class="ef-input" placeholder="Ex: Parótidas normais sem aumento de volume; sem rigidez cervical.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Cabeça e Pescoço + Completo -->
+  <div id="ef-cabeca-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto de Cabeça &amp; Pescoço para Anamnese</h3>
+        <p class="ef-output-sub">Pré-visualização do segmento Cabeça/Pescoço e do Exame Físico completo acumulado.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-cabeca">Segmento: Cabeça &amp; Pescoço</label>
+        <textarea id="ef-preview-cabeca" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-cabeca">Exame Físico Completo (Sinais Vitais + Ectoscopia + Sistemas Preenchidos)</label>
+        <textarea id="ef-full-preview-cabeca" class="ef-textarea ef-full-output-textarea" rows="4" placeholder="Texto completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('cabeca')">
+        📋 Copiar Cabeça &amp; Pescoço
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-respiratorio')">
+        ➡️ Avançar para Aparelho Respiratório →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4: Aparelho Respiratório -->
+<section id="ef-respiratorio" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • APARELHO RESPIRATÓRIO</span>
+    <h1>Aparelho Respiratório</h1>
+    <p>Inspeção estática e dinâmica, palpação de expansibilidade e frêmito toracovocal (FTV), percussão e ausculta pulmonar com seletor rápido de topografia.</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('resp')">
+        ⚡ Preencher Respiratório Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('resp')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cabeca-pescoco')">
+        ⬅️ Cabeça e Pescoço
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cardiovascular')">
+        ➡️ Cardiovascular
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-resp-style">Estilo do texto:</label>
+        <select id="ef-resp-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria (MV+, s/ RA...)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- 1. Inspeção -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Inspeção Torácica (Estática &amp; Dinâmica)</h3>
+
+      <div class="ef-ecto-group" data-group="resp_forma">
+        <div class="ef-group-label">Forma do Tórax &amp; Simetria:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_forma" data-val="tórax atípico e simétrico">Tórax atípico e simétrico</button>
+          <button type="button" class="ef-chip" data-group="resp_forma" data-val="tórax em tonel (globoso, aumento do diâmetro AP)">Tórax em tonel</button>
+          <button type="button" class="ef-chip" data-group="resp_forma" data-val="tórax cifoescoliótico / assimétrico">Cifoescoliótico / assimétrico</button>
+          <button type="button" class="ef-chip" data-group="resp_forma" data-val="pectus excavatum">Pectus excavatum</button>
+          <button type="button" class="ef-chip" data-group="resp_forma" data-val="pectus carinatum">Pectus carinatum</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="resp_tiragens">
+        <div class="ef-group-label">Tiragens &amp; Uso de Musculatura Acessória (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="sem tiragens ou uso de musculatura acessória">Sem tiragens / s/ musculatura acessória</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="tiragem intercostal">Tiragem intercostal</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="tiragem subcostal">Tiragem subcostal</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="tiragem supraclavicular / fúrcula">Tiragem supraclavicular</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="uso de musculatura acessória (ECM / escalenos)">Uso de musculatura acessória</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="batimento de asa de nariz (BAN)">Batimento de asa nasal</button>
+          <button type="button" class="ef-chip" data-group="resp_tiragens" data-multi="true" data-val="respiração paradoxal">Respiração paradoxal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Palpação e Percussão -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Palpação &amp; Percussão Torácica</h3>
+
+      <div class="ef-ecto-group" data-group="resp_expans">
+        <div class="ef-group-label">Expansibilidade Torácica:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_expans" data-val="expansibilidade torácica preservada e simétrica bilateralmente">Preservada e simétrica bilateralmente</button>
+          <button type="button" class="ef-chip" data-group="resp_expans" data-val="expansibilidade reduzida globalmente">Reduzida globalmente</button>
+          <button type="button" class="ef-chip" data-group="resp_expans" data-val="expansibilidade reduzida em hemitórax direito">Reduzida em HTD</button>
+          <button type="button" class="ef-chip" data-group="resp_expans" data-val="expansibilidade reduzida em hemitórax esquerdo">Reduzida em HTE</button>
+          <button type="button" class="ef-chip" data-group="resp_expans" data-val="expansibilidade reduzida em bases">Reduzida em bases</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="resp_ftv">
+        <div class="ef-group-label">Frêmito Toracovocal (FTV):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_ftv" data-val="frêmito toracovocal (FTV) normodistribuído bilateralmente">FTV normodistribuído bilateralmente</button>
+          <button type="button" class="ef-chip" data-group="resp_ftv" data-val="FTV aumentado">FTV aumentado (condensação)</button>
+          <button type="button" class="ef-chip" data-group="resp_ftv" data-val="FTV diminuído">FTV diminuído</button>
+          <button type="button" class="ef-chip" data-group="resp_ftv" data-val="FTV abolido">FTV abolido (derrame/pneumotórax)</button>
+        </div>
+        <input type="text" id="ef-resp-ftv-topo" class="ef-input ef-input-sub" placeholder="Topografia da alteração do FTV (opcional): ex. em base direita">
+      </div>
+
+      <div class="ef-ecto-group" data-group="resp_perc">
+        <div class="ef-group-label">Percussão Pulmonar:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_perc" data-val="som claro pulmonar à percussão em todos os campos">Som claro pulmonar bilateralmente</button>
+          <button type="button" class="ef-chip" data-group="resp_perc" data-val="macicez à percussão">Macicez</button>
+          <button type="button" class="ef-chip" data-group="resp_perc" data-val="submacicez à percussão">Submacicez</button>
+          <button type="button" class="ef-chip" data-group="resp_perc" data-val="hipertimpanismo à percussão">Hipertimpanismo</button>
+        </div>
+        <input type="text" id="ef-resp-perc-topo" class="ef-input ef-input-sub" placeholder="Topografia do som anormal à percussão (opcional): ex. em terço inferior esquerdo">
+      </div>
+    </div>
+
+    <!-- 3. Ausculta Pulmonar com Topografia -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Ausculta Pulmonar &amp; Seletor Rápido de Topografia</h3>
+
+      <div class="ef-ecto-group" data-group="resp_mv">
+        <div class="ef-group-label">Murmúrio Vesicular (MV):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_mv" data-val="murmúrio vesicular presente e bem distribuído bilateralmente">MV presente e bem distribuído</button>
+          <button type="button" class="ef-chip" data-group="resp_mv" data-val="murmúrio vesicular globalmente diminuído">MV globalmente diminuído</button>
+          <button type="button" class="ef-chip" data-group="resp_mv" data-val="murmúrio vesicular diminuído localmente">MV diminuído em região</button>
+          <button type="button" class="ef-chip" data-group="resp_mv" data-val="murmúrio vesicular abolido localmente">MV abolido em região</button>
+        </div>
+        <input type="text" id="ef-resp-mv-topo" class="ef-input ef-input-sub" placeholder="Se reduzido/abolido localmente, especifique topografia (ex: em base direita / hemitórax esquerdo)">
+      </div>
+
+      <div class="ef-ecto-group" data-group="resp_ra_status">
+        <div class="ef-group-label">Ruídos Adventícios (RA):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_ra_status" data-val="sem ruídos adventícios">Sem ruídos adventícios (s/ RA)</button>
+          <button type="button" class="ef-chip" data-group="resp_ra_status" data-val="com ruídos adventícios">Presença de ruídos adventícios</button>
+        </div>
+
+        <div class="ef-topo-builder">
+          <div class="ef-topo-row">
+            <select id="ef-resp-ra-tipo" class="ef-select" aria-label="Tipo de ruído adventício">
+              <option value="estertores finos (crepitantes)">Estertores finos (crepitantes)</option>
+              <option value="estertores grossos (bolhosos)">Estertores grossos (bolhosos)</option>
+              <option value="sibilos expiratórios">Sibilos expiratórios</option>
+              <option value="sibilos difusos">Sibilos insp/expiratórios</option>
+              <option value="roncos">Roncos</option>
+              <option value="atrito pleural">Atrito pleural</option>
+              <option value="estridor laríngeo">Estridor</option>
+            </select>
+            <select id="ef-resp-ra-regiao" class="ef-select" aria-label="Topografia regional">
+              <option value="base">Base (terço inferior)</option>
+              <option value="terço médio">Terço médio</option>
+              <option value="ápice">Ápice (terço superior)</option>
+              <option value="difuso">Difuso / todo hemitórax</option>
+            </select>
+            <select id="ef-resp-ra-lado" class="ef-select" aria-label="Lateralidade">
+              <option value="bilateral">Bilateral</option>
+              <option value="à direita">Direito (D)</option>
+              <option value="à esquerda">Esquerdo (E)</option>
+            </select>
+            <button type="button" class="btn-action ef-btn-primary ef-btn-compact" onclick="efAddRespFinding()">
+              + Adicionar Achado
+            </button>
+          </div>
+          <div class="ef-quick-presets-row">
+            <span class="ef-mini-label">Atalhos:</span>
+            <button type="button" class="ef-chip ef-chip-sm" onclick="efAddRespFinding('estertores finos', 'base', 'bilateral')">Crepitantes bases bilaterais</button>
+            <button type="button" class="ef-chip ef-chip-sm" onclick="efAddRespFinding('estertores finos', 'base', 'à direita')">Crepitantes base D</button>
+            <button type="button" class="ef-chip ef-chip-sm" onclick="efAddRespFinding('sibilos expiratórios', 'difuso', 'bilateral')">Sibilos difusos bilat.</button>
+            <button type="button" class="ef-chip ef-chip-sm" onclick="efAddRespFinding('roncos', 'difuso', 'bilateral')">Roncos difusos</button>
+          </div>
+          <div id="ef-resp-ra-list" class="ef-added-tags"></div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="resp_voz">
+        <div class="ef-group-label">Ausculta da Voz &amp; Ressonância Vocal (complemento):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="resp_voz" data-val="ausculta da voz sem alterações">Normal (s/ alterações)</button>
+          <button type="button" class="ef-chip" data-group="resp_voz" data-val="broncofonia aumentada">Broncofonia</button>
+          <button type="button" class="ef-chip" data-group="resp_voz" data-val="egofonia presente">Egofonia</button>
+          <button type="button" class="ef-chip" data-group="resp_voz" data-val="pectorilóquia fônica/afônica">Pectorilóquia</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-resp-obs" class="ef-group-label">Observações Livres — Respiratório:</label>
+        <input type="text" id="ef-resp-obs" class="ef-input" placeholder="Ex: Tempo expiratório prolongado; tosse produtiva durante o exame.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Aparelho Respiratório -->
+  <div id="ef-resp-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto do Aparelho Respiratório para Anamnese</h3>
+        <p class="ef-output-sub">Pré-visualização do Aparelho Respiratório e do Exame Físico completo acumulado.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-resp">Segmento: Aparelho Respiratório</label>
+        <textarea id="ef-preview-resp" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-resp">Exame Físico Completo (Sinais Vitais + Ectoscopia + Sistemas Preenchidos)</label>
+        <textarea id="ef-full-preview-resp" class="ef-textarea ef-full-output-textarea" rows="4" placeholder="Texto completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('resp')">
+        📋 Copiar Aparelho Respiratório
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cardiovascular')">
+        ➡️ Avançar para Aparelho Cardiovascular →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5: Aparelho Cardiovascular -->
+<section id="ef-cardiovascular" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • APARELHO CARDIOVASCULAR</span>
+    <h1>Aparelho Cardiovascular</h1>
+    <p>Precórdio e ictus cordis, frêmitos, ritmo e tempos cardíacos, bulhas/desdobramentos, construtor detalhado de sopros (+/6+) e perfusão/pulsos periféricos.</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('cardio')">
+        ⚡ Preencher Cardiovascular Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('cardio')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-respiratorio')">
+        ⬅️ Respiratório
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-abdome')">
+        ➡️ Abdome
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-cardio-style">Estilo do texto:</label>
+        <select id="ef-cardio-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria (RCR 2T BNF s/ sopros...)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- 1. Precórdio -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Precórdio (Inspeção, Ictus Cordis &amp; Frêmitos)</h3>
+
+      <div class="ef-ecto-group" data-group="cv_precordio">
+        <div class="ef-group-label">Inspeção do Precórdio:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cv_precordio" data-val="precórdio calmo, sem abaulamentos ou retrações">Precórdio calmo s/ abaulamentos</button>
+          <button type="button" class="ef-chip" data-group="cv_precordio" data-val="impulsão paraesternal esquerda visível/palpável">Impulsão paraesternal (VD)</button>
+          <button type="button" class="ef-chip" data-group="cv_precordio" data-val="precórdio hiperdinâmico">Precórdio hiperdinâmico</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <div class="ef-group-label">Palpação do Ictus Cordis (Localização e Extensão):</div>
+        <div class="ef-minmax-row">
+          <div class="ef-input-group">
+            <label for="ef-cv-ictus-local">Localização do Ictus:</label>
+            <select id="ef-cv-ictus-local" class="ef-select">
+              <option value="">Não especificar</option>
+              <option value="ictus cordis não visível e não palpável">Não visível / não palpável</option>
+              <option value="ictus cordis palpável no 5º EICE na linha hemiclavicular esquerda">Palpável 5º EICE na LHC (normal)</option>
+              <option value="ictus cordis desviado para esquerda (linha axilar anterior)">Desviado para esquerda (LAA)</option>
+              <option value="ictus cordis desviado para baixo e esquerda (6º EICE)">Desviado p/ baixo e esquerda (6º EICE)</option>
+            </select>
+          </div>
+          <div class="ef-input-group">
+            <label for="ef-cv-ictus-ext">Extensão &amp; Caráter:</label>
+            <select id="ef-cv-ictus-ext" class="ef-select">
+              <option value="">Não especificar</option>
+              <option value="extensão normal (1–2 polpas digitais), normocinético">Normal (1–2 polpas, normocinético)</option>
+              <option value="difuso (&gt; 2 polpas digitais)">Difuso (&gt; 2 polpas)</option>
+              <option value="propulsivo / sustentado">Propulsivo / sustentado</option>
+              <option value="em cúpula de Bard">Em cúpula de Bard</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cv_fremito">
+        <div class="ef-group-label">Pesquisa de Frêmitos Cardiovasculares:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cv_fremito" data-val="ausência de frêmitos cardiovasculares">Sem frêmitos palpáveis</button>
+          <button type="button" class="ef-chip" data-group="cv_fremito" data-val="frêmito sistólico palpável">Frêmito sistólico</button>
+          <button type="button" class="ef-chip" data-group="cv_fremito" data-val="frêmito diastólico palpável">Frêmito diastólico</button>
+        </div>
+        <input type="text" id="ef-cv-fremito-foco" class="ef-input ef-input-sub" placeholder="Se frêmito presente, especifique o foco (ex: em foco aórtico com irradiação cervical)">
+      </div>
+    </div>
+
+    <!-- 2. Ausculta Cardíaca -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Ausculta Cardíaca (Ritmo, Bulhas &amp; Sopros)</h3>
+
+      <div class="ef-pa-matrix">
+        <div class="ef-input-group">
+          <label for="ef-cv-ritmo">Ritmo Cardíaco:</label>
+          <select id="ef-cv-ritmo" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="regular">Ritmo cardíaco regular (RCR)</option>
+            <option value="irregular">Ritmo cardíaco irregular (RCI)</option>
+            <option value="irregular com extrassístoles isoladas">Regular com extrassístoles</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-cv-tempos">Tempos Cardíacos:</label>
+          <select id="ef-cv-tempos" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="2T">Em 2 tempos (2T)</option>
+            <option value="3T (B3)">Em 3 tempos com B3 (galope)</option>
+            <option value="3T (B4)">Em 3 tempos com B4</option>
+            <option value="4T">Em 4 tempos (4T)</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-cv-bulhas">Intensidade das Bulhas:</label>
+          <select id="ef-cv-bulhas" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="BNF">Bulhas normofonéticas (BNF)</option>
+            <option value="hipofonéticas">Bulhas hipofonéticas</option>
+            <option value="hiperfonéticas">Bulhas hiperfonéticas</option>
+            <option value="hiperfonese de B2">Hiperfonese de B2</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-cv-desdob">Desdobramentos / Outros Sons:</label>
+          <select id="ef-cv-desdob" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="sem desdobramentos patológicos ou atrito">Sem desdobramentos patológicos</option>
+            <option value="desdobramento fisiológico de B2">Desdobramento fisiológico de B2</option>
+            <option value="desdobramento fixo de B2">Desdobramento fixo de B2 (CIA)</option>
+            <option value="desdobramento paradoxal de B2">Desdobramento paradoxal de B2</option>
+            <option value="atrito pericárdico presente">Atrito pericárdico presente</option>
+            <option value="estalido de abertura / clique sistólico">Estalido / clique audível</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="cv_sopro_status">
+        <div class="ef-group-label">Sopros Cardíacos:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cv_sopro_status" data-val="sem sopros audíveis">Sem sopros audíveis</button>
+          <button type="button" class="ef-chip" data-group="cv_sopro_status" data-val="com sopro audível">Presença de sopro cardíaco</button>
+        </div>
+
+        <div id="ef-cv-sopro-panel" class="ef-cross-panel" hidden>
+          <span class="ef-cross-label">Detalhamento do Sopro Cardíaco:</span>
+          <div class="ef-pa-matrix">
+            <div class="ef-input-group">
+              <label for="ef-cv-sopro-fase">Fase do Ciclo:</label>
+              <select id="ef-cv-sopro-fase" class="ef-select">
+                <option value="sopro sistólico">Sistólico</option>
+                <option value="sopro holossistólico">Holossistólico (regurgitativo)</option>
+                <option value="sopro mesossistólico ejetivo">Mesossistólico / ejetivo</option>
+                <option value="sopro diastólico">Diastólico</option>
+                <option value="sopro protodiastólico aspirativo">Protodiastólico aspirativo</option>
+                <option value="sopro mesodiastólico em ruflar">Mesodiastólico (ruflar)</option>
+                <option value="sopro contínuo em maquinaria">Contínuo (em maquinaria)</option>
+              </select>
+            </div>
+            <div class="ef-input-group">
+              <label for="ef-cv-sopro-foco">Foco Principal:</label>
+              <select id="ef-cv-sopro-foco" class="ef-select">
+                <option value="em foco mitral">Foco mitral</option>
+                <option value="em foco aórtico">Foco aórtico</option>
+                <option value="em foco tricúspide">Foco tricúspide</option>
+                <option value="em foco pulmonar">Foco pulmonar</option>
+                <option value="em foco aórtico acessório">Foco aórtico acessório (Erb)</option>
+                <option value="em todo o precórdio">Todo o precórdio</option>
+              </select>
+            </div>
+            <div class="ef-input-group">
+              <label for="ef-cv-sopro-int">Intensidade (Levine):</label>
+              <select id="ef-cv-sopro-int" class="ef-select">
+                <option value="+/6+">+/6+ (muito suave)</option>
+                <option value="2+/6+">2+/6+ (suave)</option>
+                <option value="3+/6+">3+/6+ (moderado s/ frêmito)</option>
+                <option value="4+/6+">4+/6+ (alto com frêmito)</option>
+                <option value="5+/6+">5+/6+ (audível com estetoscópio inclinado)</option>
+                <option value="6+/6+">6+/6+ (audível sem estetoscópio)</option>
+              </select>
+            </div>
+            <div class="ef-input-group">
+              <label for="ef-cv-sopro-irrad">Irradiação:</label>
+              <select id="ef-cv-sopro-irrad" class="ef-select">
+                <option value="sem irradiação">Sem irradiação</option>
+                <option value="com irradiação para carótidas e fúrcula esternal">Para carótidas / fúrcula</option>
+                <option value="com irradiação para axila esquerda">Para axila esquerda</option>
+                <option value="com irradiação para dorso">Para dorso</option>
+                <option value="com irradiação para borda esternal esquerda">Para borda esternal esquerda</option>
+              </select>
+            </div>
+          </div>
+          <div class="ef-output-actions">
+            <button type="button" class="btn-action ef-btn-primary ef-btn-compact" onclick="efAddCardioMurmur()">
+              + Adicionar Sopro à Lista
+            </button>
+          </div>
+          <div id="ef-cv-sopros-list" class="ef-added-tags"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Cardiovascular Periférico -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Exame Vascular Periférico Cardiovascular</h3>
+
+      <div class="ef-ecto-group" data-group="cv_pulsos">
+        <div class="ef-group-label">Pulsos Arteriais Periféricos (Simetria e Amplitude):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cv_pulsos" data-val="pulsos arteriais periféricos presentes, cheios e simétricos nos 4 membros">Presentes, cheios e simétricos (4 membros)</button>
+          <button type="button" class="ef-chip" data-group="cv_pulsos" data-val="pulsos periféricos diminuídos bilateralmente">Diminuídos bilateralmente</button>
+          <button type="button" class="ef-chip" data-group="cv_pulsos" data-val="pulsos periféricos assimétricos entre os membros">Assimétricos</button>
+          <button type="button" class="ef-chip" data-group="cv_pulsos" data-val="pulsos filiformes / débeis">Filiformes</button>
+          <button type="button" class="ef-chip" data-group="cv_pulsos" data-val="pulsos amplos / em martelo d'água">Amplo / martelo d'água (Corrigan)</button>
+        </div>
+        <input type="text" id="ef-cv-pulsos-obs" class="ef-input ef-input-sub" placeholder="Especifique se alterado (ex: pulso pedioso esquerdo não palpável; diferença radial D &gt; E)">
+      </div>
+
+      <div class="ef-ecto-group" data-group="cv_tec">
+        <div class="ef-group-label">Tempo de Enchimento Capilar (TEC) &amp; Sinais Hemodinâmicos:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="cv_tec" data-val="tempo de enchimento capilar (TEC) &lt; 3 segundos">TEC &lt; 3s (preservado)</button>
+          <button type="button" class="ef-chip" data-group="cv_tec" data-val="tempo de enchimento capilar (TEC) ≥ 3 segundos (lentificado)">TEC ≥ 3s (lentificado)</button>
+          <button type="button" class="ef-chip" data-group="cv_tec" data-val="livedo reticular / cianose de extremidades">Livedo / cianose periférica</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-cv-obs" class="ef-group-label">Observações Livres — Cardiovascular:</label>
+        <input type="text" id="ef-cv-obs" class="ef-input" placeholder="Ex: Sopro acentuado à manobra de Valsalva / Rivero-Carvallo negativo.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Aparelho Cardiovascular -->
+  <div id="ef-cardio-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto do Aparelho Cardiovascular para Anamnese</h3>
+        <p class="ef-output-sub">Pré-visualização do Aparelho Cardiovascular e do Exame Físico completo acumulado.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-cardio">Segmento: Aparelho Cardiovascular</label>
+        <textarea id="ef-preview-cardio" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-cardio">Exame Físico Completo (Sinais Vitais + Ectoscopia + Sistemas Preenchidos)</label>
+        <textarea id="ef-full-preview-cardio" class="ef-textarea ef-full-output-textarea" rows="4" placeholder="Texto completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('cardio')">
+        📋 Copiar Aparelho Cardiovascular
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-abdome')">
+        ➡️ Avançar para Abdome →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6: Abdome & Manobras Especiais -->
+<section id="ef-abdome" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • ABDOME &amp; LOJA RENAL</span>
+    <h1>Abdome &amp; Manobras Especiais</h1>
+    <p>Inspeção, ausculta, percussão (Traube, hepatimetria, sinais de ascite), palpação superficial e profunda por regiões e manobras especiais com guia rápido de execução e interpretação (?).</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('abdome')">
+        ⚡ Preencher Abdome Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('abdome')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-cardiovascular')">
+        ⬅️ Cardiovascular
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-neurologico')">
+        ➡️ Neurológico
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-abd-style">Estilo do texto:</label>
+        <select id="ef-abd-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria (RHA+, flácido, indolor...)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- 1. Inspeção Abdominal -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Inspeção Abdominal</h3>
+
+      <div class="ef-ecto-group" data-group="abd_forma">
+        <div class="ef-group-label">Forma do Abdome:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome plano">Plano</button>
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome semigloboso">Semigloboso</button>
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome globoso">Globoso</button>
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome em avental">Em avental</button>
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome escavado">Escavado</button>
+          <button type="button" class="ef-chip" data-group="abd_forma" data-val="abdome distendido">Distendido</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="abd_inspecao_det">
+        <div class="ef-group-label">Cicatriz Umbilical, Abaulamentos &amp; Circulação Colateral (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="cicatriz umbilical introrsa e centrada">Umbigo centrado/introrso</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="sem cicatrizes cirúrgicas, abaulamentos ou circulação colateral">S/ cicatrizes, abaulamentos ou circ. colateral</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="abaulamento / hérnia de parede abdominal visível">Abaulamento / hérnia</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="circulação colateral tipo porta (cabeça de medusa)">Circulação colateral tipo porta</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="circulação colateral tipo cava">Circulação colateral tipo cava</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="peristaltismo de luta visível (Kussmaul)">Peristaltismo visível</button>
+          <button type="button" class="ef-chip" data-group="abd_inspecao_det" data-multi="true" data-val="sinal de Cullen / Grey-Turner">Equimose (Cullen / Grey-Turner)</button>
+        </div>
+        <div class="ef-inline-select-wrap" style="margin-top: 6px;">
+          <label for="ef-abd-cicatriz-sel">Cicatriz Cirúrgica / Estoma:</label>
+          <select id="ef-abd-cicatriz-sel" class="ef-select ef-select-sm">
+            <option value="">Nenhuma adicional</option>
+            <option value="cicatriz cirúrgica mediana">Mediana (xifopúbica/infraumbilical)</option>
+            <option value="cicatriz de Pfannenstiel">Pfannenstiel</option>
+            <option value="cicatriz em FID (McBurney)">McBurney (FID)</option>
+            <option value="cicatriz subcostal direita (Kocher)">Kocher (subcostal D)</option>
+            <option value="portais de videolaparoscopia">Portais laparoscópicos</option>
+            <option value="presença de ostomia (colostomia/ileostomia) funcionante">Ostomia funcionante</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Ausculta & Percussão -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Ausculta &amp; Percussão Abdominal</h3>
+
+      <div class="ef-pa-matrix">
+        <div class="ef-input-group">
+          <label for="ef-abd-rha-sel">Ruídos Hidroaéreos (RHA):</label>
+          <select id="ef-abd-rha-sel" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="ruídos hidroaéreos presentes e normoativos">Presentes e normoativos</option>
+            <option value="RHA aumentados (hiperativos)">Aumentados / hiperativos</option>
+            <option value="RHA aumentados com timbre metálico">Timbre metálico (luta / obstrução)</option>
+            <option value="RHA diminuídos (hipoativos)">Diminuídos / hipoativos</option>
+            <option value="RHA abolidos (silêncio abdominal)">Abolidos (silêncio abdominal)</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-abd-traube-sel">Espaço de Traube:</label>
+          <select id="ef-abd-traube-sel" class="ef-select">
+            <option value="">Não especificar</option>
+            <option value="espaço de Traube livre">Espaço de Traube livre</option>
+            <option value="espaço de Traube ocupado (macicez)">Espaço de Traube ocupado</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="abd_sopros">
+        <div class="ef-group-label">Sopros Vasculares Abdominais:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_sopros" data-val="ausência de sopros vasculares abdominais">Sem sopros vasculares abdominais</button>
+          <button type="button" class="ef-chip" data-group="abd_sopros" data-val="sopro sistólico em foco aórtico abdominal">Sopro em aorta abdominal</button>
+          <button type="button" class="ef-chip" data-group="abd_sopros" data-val="sopro em artéria renal">Sopro em artéria renal</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="abd_percussao">
+        <div class="ef-group-label">Percussão, Hepatimetria &amp; Pesquisa de Ascite (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="timpanismo fisiológico difuso">Timpanismo fisiológico difuso</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="hipertimpanismo abdominal">Hipertimpanismo</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="hepatimetria normal (8–12 cm na LHC)">Hepatimetria normal (~8–12 cm)</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="sem sinais de ascite à percussão">Sem sinais de ascite</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="macicez móvel de decúbito positiva">Macicez móvel positiva</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="sinal do piparote positivo">Sinal do piparote positivo</button>
+          <button type="button" class="ef-chip" data-group="abd_percussao" data-multi="true" data-val="semicírculos de Skoda presentes">Semicírculos de Skoda</button>
+        </div>
+        <div class="ef-inline-select-wrap" style="margin-top: 6px;">
+          <label for="ef-abd-hepa-cm">Hepatimetria medida (cm na LHC):</label>
+          <input type="number" id="ef-abd-hepa-cm" class="ef-input ef-input-xs" min="4" max="30" step="0.5" placeholder="Ex: 10">
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Palpação -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Palpação Superficial &amp; Profunda</h3>
+
+      <div class="ef-ecto-group" data-group="abd_palp_tensao">
+        <div class="ef-group-label">Tensão da Parede &amp; Sensibilidade:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_palp_tensao" data-val="flácido, depressível e indolor à palpação superficial e profunda">Flácido e indolor</button>
+          <button type="button" class="ef-chip" data-group="abd_palp_tensao" data-val="flácido, porém doloroso à palpação">Flácido e doloroso</button>
+          <button type="button" class="ef-chip" data-group="abd_palp_tensao" data-val="tenso com defesa voluntária">Tenso / defesa voluntária</button>
+          <button type="button" class="ef-chip" data-group="abd_palp_tensao" data-val="contratura involuntária (abdome em tábua)">Abdome em tábua (contratura)</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="abd_dor_regiao">
+        <div class="ef-group-label">Região/Quadrante da Dor à Palpação (se presente, múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="hipocôndrio direito (HCD)">HCD</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="epigástrio">Epigástrio</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="hipocôndrio esquerdo (HCE)">HCE</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="flanco direito">Flanco D</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="mesogástrio / periumbilical">Mesogástrio</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="flanco esquerdo">Flanco E</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="fossa ilíaca direita (FID)">FID</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="hipogástrio">Hipogástrio</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="fossa ilíaca esquerda (FIE)">FIE</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="abd_dor_regiao" data-multi="true" data-val="difusamente">Difusa</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="abd_visc">
+        <div class="ef-group-label">Massas &amp; Visceromegalias (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="sem massas ou visceromegalias palpáveis">Sem massas ou visceromegalias palpáveis</button>
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="hepatomegalia palpável">Hepatomegalia</button>
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="esplenomegalia palpável">Esplenomegalia</button>
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="massa abdominal palpável">Massa palpável</button>
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="fecaloma palpável">Corda cólica / fecaloma</button>
+          <button type="button" class="ef-chip" data-group="abd_visc" data-multi="true" data-val="globo vesical palpável">Globo vesical</button>
+        </div>
+        <div class="ef-minmax-row" style="margin-top: 6px;">
+          <input type="text" id="ef-abd-figado-obs" class="ef-input" placeholder="Fígado (se palpável): ex. a 3 cm do RCD, borda romba, indolor">
+          <input type="text" id="ef-abd-baco-obs" class="ef-input" placeholder="Baço (se palpável): ex. Boyd II, a 2 cm do RCE">
+        </div>
+        <input type="text" id="ef-abd-massa-obs" class="ef-input ef-input-sub" placeholder="Descrição de massa abdominal (se presente): localização, tamanho, consistência, mobilidade">
+      </div>
+    </div>
+
+    <!-- 4. Manobras Especiais -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">4. Manobras Especiais Abdominais &amp; Loja Renal (Negativo / Positivo + Guia ?)</h3>
+      <p class="ef-vital-hint" style="margin-top: -6px;">Marque <strong>Negativo (-)</strong> ou <strong>Positivo (+)</strong> para cada manobra pesquisada. Clique em <strong>?</strong> para ver como executar e interpretar.</p>
+
+      <div id="ef-abd-maneuvers" class="ef-maneuver-grid">
+        <!-- Blumberg -->
+        <div class="ef-maneuver-card" data-maneuver="blumberg" data-label="Sinal de Blumberg">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Blumberg (FID)</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Compressão lenta e profunda no ponto de McBurney (FID) seguida de descompressão brusca.<br>
+            <strong>Interpretação:</strong> Positivo quando a descompressão súbita causa dor aguda intensa → sugere irritação peritoneal localizada (ex.: apendicite aguda).
+          </div>
+        </div>
+
+        <!-- Murphy -->
+        <div class="ef-maneuver-card" data-maneuver="murphy" data-label="Sinal de Murphy">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Murphy (HCD)</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Comprimir o ponto cístico (junção da borda costal direita com a linha hemiclavicular / borda lateral do reto abdominal) e pedir inspiração profunda.<br>
+            <strong>Interpretação:</strong> Positivo se o paciente interrompe bruscamente a inspiração por dor → sugere colecistite aguda.
+          </div>
+        </div>
+
+        <!-- Rovsing -->
+        <div class="ef-maneuver-card" data-maneuver="rovsing" data-label="Sinal de Rovsing">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Rovsing</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Compressão profunda e contínua na fossa ilíaca esquerda (FIE), deslocando retrógradamente os gases pelo cólon.<br>
+            <strong>Interpretação:</strong> Positivo se desencadear dor referida na fossa ilíaca direita (FID) → apendicite aguda.
+          </div>
+        </div>
+
+        <!-- Psoas -->
+        <div class="ef-maneuver-card" data-maneuver="psoas" data-label="Sinal do Psoas">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Psoas (Lapinsky)</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Com paciente em decúbito lateral esquerdo, estender passivamente o quadril direito (ou pedir elevação do MID contra resistência em decúbito dorsal).<br>
+            <strong>Interpretação:</strong> Dor em FID sugere irritação do músculo iliopsoas (apendicite retrocecal ou abscesso de psoas).
+          </div>
+        </div>
+
+        <!-- Obturador -->
+        <div class="ef-maneuver-card" data-maneuver="obturador" data-label="Sinal do Obturador">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Obturador</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Flexionar coxa e joelho direitos a 90° e realizar rotação interna passiva do quadril.<br>
+            <strong>Interpretação:</strong> Dor em hipogástrio/FID sugere apendicite pélvica ou processo inflamatório contíguo ao músculo obturador interno.
+          </div>
+        </div>
+
+        <!-- Giordano -->
+        <div class="ef-maneuver-card" data-maneuver="giordano" data-label="Sinal de Giordano">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Giordano (Punho-percussão)</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Punho-percussão com a borda ulnar da mão sobre os ângulos costovertebrais (lojas renais), com ou sem mão espalmada interposta.<br>
+            <strong>Interpretação:</strong> Dor intensa/reação de fuga sugere pielonefrite aguda, nefrolitíase com distensão capsular ou abscesso perirrenal.
+          </div>
+        </div>
+
+        <!-- DB Difusa -->
+        <div class="ef-maneuver-card" data-maneuver="db" data-label="Descompressão brusca difusa (DB)">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Descompressão Brusca (DB)</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Compressão lenta e descompressão súbita em múltiplos quadrantes abdominais.<br>
+            <strong>Interpretação:</strong> Positivo quando há dor difusa à descompressão → sugere peritonite generalizada (abdome agudo cirúrgico).
+          </div>
+        </div>
+
+        <!-- Jobert -->
+        <div class="ef-maneuver-card" data-maneuver="jobert" data-label="Sinal de Jobert">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Sinal de Jobert</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Percutir a região da macicez hepática na linha axilar média / hemiclavicular direita.<br>
+            <strong>Interpretação:</strong> Presença de timpanismo em vez de macicez hepática → sugere pneumoperitônio (perfuração de víscera oca).
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" style="margin-top: 6px;">
+        <label for="ef-abd-obs" class="ef-group-label">Observações Livres — Abdome:</label>
+        <input type="text" id="ef-abd-obs" class="ef-input" placeholder="Ex: Giordano positivo apenas à direita; toque retal / exame pélvico detalhado em folha anexa.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Abdome -->
+  <div id="ef-abdome-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto de Abdome para Anamnese</h3>
+        <p class="ef-output-sub">Pré-visualização do segmento Abdominal e do Exame Físico completo acumulado.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-abdome">Segmento: Abdome</label>
+        <textarea id="ef-preview-abdome" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-abdome">Exame Físico Completo (Sinais Vitais + Ectoscopia + Sistemas Preenchidos)</label>
+        <textarea id="ef-full-preview-abdome" class="ef-textarea ef-full-output-textarea" rows="4" placeholder="Texto completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('abdome')">
+        📋 Copiar Abdome
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-neurologico')">
+        ➡️ Avançar para Sistema Neurológico →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7: Sistema Neurológico -->
+<section id="ef-neurologico" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • SISTEMA NEUROLÓGICO</span>
+    <h1>Sistema Neurológico</h1>
+    <p>Escala de Coma de Glasgow detalhada (AO/RV/RM), linguagem e orientação, pares cranianos (I–XII), força MRC por membro (0–5), tônus, reflexos osteotendíneos (0–4+), sensibilidade, coordenação, marcha e sinais meníngeos.</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('neuro')">
+        ⚡ Preencher Neurológico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('neuro')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-abdome')">
+        ⬅️ Abdome
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-extremidades')">
+        ➡️ Extremidades
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-neuro-style">Estilo do texto:</label>
+        <select id="ef-neuro-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- 1. Consciência e Funções Corticais -->
+    <div class="card ef-ecto-card">
+      <div class="ef-vital-head">
+        <h3 class="ef-group-card-title" style="border: none; padding: 0;">1. Nível de Consciência, Glasgow &amp; Funções Corticais</h3>
+        <span id="ef-neuro-ecg-pill" class="ef-calc-pill">ECG: —</span>
+      </div>
+
+      <div class="ef-anthro-row">
+        <div class="ef-input-group">
+          <label for="ef-neuro-ao">Abertura Ocular (AO 1–4):</label>
+          <select id="ef-neuro-ao" class="ef-select">
+            <option value="">Não pontuar</option>
+            <option value="4">4 — Espontânea</option>
+            <option value="3">3 — Ao comando verbal</option>
+            <option value="2">2 — À pressão/estímulo doloroso</option>
+            <option value="1">1 — Ausente</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-neuro-rv">Resposta Verbal (RV 1–5):</label>
+          <select id="ef-neuro-rv" class="ef-select">
+            <option value="">Não pontuar</option>
+            <option value="5">5 — Orientada</option>
+            <option value="4">4 — Confusa / desorientada</option>
+            <option value="3">3 — Palavras inapropriadas</option>
+            <option value="2">2 — Sons incompreensíveis</option>
+            <option value="1">1 — Ausente</option>
+          </select>
+        </div>
+        <div class="ef-input-group">
+          <label for="ef-neuro-rm">Resposta Motora (RM 1–6):</label>
+          <select id="ef-neuro-rm" class="ef-select">
+            <option value="">Não pontuar</option>
+            <option value="6">6 — Obedece a comandos</option>
+            <option value="5">5 — Localiza estímulo</option>
+            <option value="4">4 — Flexão normal (retirada)</option>
+            <option value="3">3 — Flexão anormal (decorticação)</option>
+            <option value="2">2 — Extensão (descerebração)</option>
+            <option value="1">1 — Ausente</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_orient">
+        <div class="ef-group-label">Orientação &amp; Funções Cognitivas:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_orient" data-val="lúcido e orientado autopsíquica e alopsiquicamente (tempo e espaço)">Orientado no tempo e espaço</button>
+          <button type="button" class="ef-chip" data-group="neuro_orient" data-val="desorientado no tempo e/ou espaço">Desorientado (tempo/espaço)</button>
+          <button type="button" class="ef-chip" data-group="neuro_orient" data-val="confuso / delirium">Confuso / delirium</button>
+          <button type="button" class="ef-chip" data-group="neuro_orient" data-val="sonolento / torporoso, com déficit de atenção">Sonolento / déficit de atenção</button>
+          <button type="button" class="ef-chip" data-group="neuro_orient" data-val="comatoso / não contactuante">Comatoso / não contactuante</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_ling">
+        <div class="ef-group-label">Linguagem &amp; Fala:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_ling" data-val="linguagem preservada, fluente e coerente">Linguagem preservada e fluente</button>
+          <button type="button" class="ef-chip" data-group="neuro_ling" data-val="disartria">Disartria</button>
+          <button type="button" class="ef-chip" data-group="neuro_ling" data-val="afasia motora (de expressão / Broca)">Afasia motora (Broca)</button>
+          <button type="button" class="ef-chip" data-group="neuro_ling" data-val="afasia sensitiva (de compreensão / Wernicke)">Afasia sensitiva (Wernicke)</button>
+          <button type="button" class="ef-chip" data-group="neuro_ling" data-val="afasia mista / global">Afasia global</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Pares Cranianos -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Pares Cranianos (I ao XII)</h3>
+
+      <div class="ef-ecto-group" data-group="neuro_pares_status">
+        <div class="ef-group-label">Seleção Rápida ou Pares Alterados (múltipla escolha para déficits):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_pares_status" data-val="pares cranianos (I ao XII) clinicamente preservados e simétricos">I ao XII pares cranianos preservados</button>
+          <button type="button" class="ef-chip" data-group="neuro_pares_status" data-val="alteração em pares cranianos">Alteração em pares específicos</button>
+        </div>
+        <div class="ef-sub-chips" style="margin-top: 6px;">
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="I par (hiposmia/anosmia)">I (Olfatório)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="II par (redução de acuidade visual / hemianopsia)">II (Óptico)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="III/IV/VI pares (ptose/anisocoria/paresia ocular)">III, IV e VI (MOE/Pupilas)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="V par (hipoestesia facial)">V (Trigêmeo)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="VII par (paralisia facial central)">VII (Facial Central)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="VII par (paralisia facial periférica)">VII (Facial Periférica)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="VIII par (hipoacusia / vertigem)">VIII (Vestibulococlear)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="IX/X pares (disfagia / desvio de úvula)">IX e X (Bulbares)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="XI par (paresia de ECM/trapézio)">XI (Acessório)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_pares_alt" data-multi="true" data-val="XII par (desvio de língua)">XII (Hipoglosso)</button>
+        </div>
+        <input type="text" id="ef-neuro-pares-obs" class="ef-input ef-input-sub" placeholder="Detalhes dos pares cranianos (opcional): ex. paralisia facial central à esquerda com desvio de rima para a direita">
+      </div>
+    </div>
+
+    <!-- 3. Motricidade, Tônus, Trofismo e Reflexos -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Motricidade (Escala MRC 0–5), Tônus, Trofismo &amp; Reflexos</h3>
+
+      <div class="ef-ecto-group" data-group="neuro_forca_global">
+        <div class="ef-group-label">Força Muscular (MRC 0 a 5):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_forca_global" data-val="força muscular preservada (grau 5/5 na escala MRC) global e simétrica nos 4 membros">Força grau 5/5 global (MRC)</button>
+          <button type="button" class="ef-chip" data-group="neuro_forca_global" data-val="déficit motor focal">Déficit motor focal (detalhar abaixo)</button>
+        </div>
+
+        <div class="ef-mrc-grid">
+          <div class="ef-input-group">
+            <label for="ef-neuro-mrc-msd">MSD (0–5):</label>
+            <select id="ef-neuro-mrc-msd" class="ef-select">
+              <option value="">—</option>
+              <option value="5/5">5/5 — Normal</option>
+              <option value="4/5">4/5 — Vence resistência parcial</option>
+              <option value="3/5">3/5 — Vence gravidade</option>
+              <option value="2/5">2/5 — Movimento sem gravidade</option>
+              <option value="1/5">1/5 — Esboço de contração</option>
+              <option value="0/5">0/5 — Plegia (sem contração)</option>
+            </select>
+          </div>
+          <div class="ef-input-group">
+            <label for="ef-neuro-mrc-mse">MSE (0–5):</label>
+            <select id="ef-neuro-mrc-mse" class="ef-select">
+              <option value="">—</option>
+              <option value="5/5">5/5 — Normal</option>
+              <option value="4/5">4/5 — Vence resistência parcial</option>
+              <option value="3/5">3/5 — Vence gravidade</option>
+              <option value="2/5">2/5 — Movimento sem gravidade</option>
+              <option value="1/5">1/5 — Esboço de contração</option>
+              <option value="0/5">0/5 — Plegia (sem contração)</option>
+            </select>
+          </div>
+          <div class="ef-input-group">
+            <label for="ef-neuro-mrc-mid">MID (0–5):</label>
+            <select id="ef-neuro-mrc-mid" class="ef-select">
+              <option value="">—</option>
+              <option value="5/5">5/5 — Normal</option>
+              <option value="4/5">4/5 — Vence resistência parcial</option>
+              <option value="3/5">3/5 — Vence gravidade</option>
+              <option value="2/5">2/5 — Movimento sem gravidade</option>
+              <option value="1/5">1/5 — Esboço de contração</option>
+              <option value="0/5">0/5 — Plegia (sem contração)</option>
+            </select>
+          </div>
+          <div class="ef-input-group">
+            <label for="ef-neuro-mrc-mie">MIE (0–5):</label>
+            <select id="ef-neuro-mrc-mie" class="ef-select">
+              <option value="">—</option>
+              <option value="5/5">5/5 — Normal</option>
+              <option value="4/5">4/5 — Vence resistência parcial</option>
+              <option value="3/5">3/5 — Vence gravidade</option>
+              <option value="2/5">2/5 — Movimento sem gravidade</option>
+              <option value="1/5">1/5 — Esboço de contração</option>
+              <option value="0/5">0/5 — Plegia (sem contração)</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_tonus">
+        <div class="ef-group-label">Tônus &amp; Trofismo Muscular (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="normotônico e normotrófico">Normotônico e normotrófico</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="hipotonia muscular">Hipotonia</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="hipertonia espástica (sinal do canivete)">Hipertonia espástica</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="hipertonia plástica (rigidez / roda denteada)">Hipertonia plástica / roda denteada</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="hipotrofia / atrofia muscular">Hipotrofia / atrofia</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="presença de fasciculações">Fasciculações</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="manobras de Mingazzini e Barré negativas (sem queda)">Mingazzini / Barré negativos</button>
+          <button type="button" class="ef-chip" data-group="neuro_tonus" data-multi="true" data-val="queda em prova de Mingazzini / Barré">Mingazzini / Barré positivos</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_rot">
+        <div class="ef-group-label">Reflexos Osteotendíneos (0 a 4+) &amp; Reflexo Cutâneo-Plantar:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_rot" data-val="reflexos osteotendíneos normoativos e simétricos (2+/4+)">Normorreflexia (2+/4+)</button>
+          <button type="button" class="ef-chip" data-group="neuro_rot" data-val="arreflexia osteotendínea (0/4+)">Arreflexia (0/4+)</button>
+          <button type="button" class="ef-chip" data-group="neuro_rot" data-val="hiporreflexia osteotendínea (1+/4+)">Hiporreflexia (1+/4+)</button>
+          <button type="button" class="ef-chip" data-group="neuro_rot" data-val="hiperreflexia osteotendínea (3+/4+)">Hiperreflexia (3+/4+)</button>
+          <button type="button" class="ef-chip" data-group="neuro_rot" data-val="hiperreflexia exaltada com clônus (4+/4+)">Exaltado / clônus (4+/4+)</button>
+        </div>
+        <div class="ef-chips-wrap" style="margin-top: 6px;">
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_babinski" data-val="reflexo cutâneo-plantar em flexão bilateral (Sinal de Babinski ausente)">Cutâneo-plantar flexor / Babinski (-)</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_babinski" data-val="Sinal de Babinski positivo à direita">Babinski (+) à D</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_babinski" data-val="Sinal de Babinski positivo à esquerda">Babinski (+) à E</button>
+          <button type="button" class="ef-chip ef-chip-sm" data-group="neuro_babinski" data-val="Sinal de Babinski positivo bilateralmente">Babinski (+) bilateral</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Sensibilidade, Coordenação, Marcha & Sinais Meníngeos -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">4. Sensibilidade, Coordenação, Marcha &amp; Sinais Meníngeos</h3>
+
+      <div class="ef-ecto-group" data-group="neuro_sens">
+        <div class="ef-group-label">Sensibilidade Superficial &amp; Profunda (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="sensibilidade superficial (tátil, térmica e dolorosa) e profunda (propriocepção/palestesia) preservadas e simétricas">Sensibilidade superficial e profunda preservadas</button>
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="hipoestesia superficial">Hipoestesia tátil/dolorosa</button>
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="anestesia em região delimitada">Anestesia</button>
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="parestesias">Parestesias</button>
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="déficit de propriocepção / sensibilidade vibratória">Déficit proprioceptivo/vibratório</button>
+          <button type="button" class="ef-chip" data-group="neuro_sens" data-multi="true" data-val="nível sensitivo medular identificado">Nível sensitivo</button>
+        </div>
+        <input type="text" id="ef-neuro-sens-obs" class="ef-input ef-input-sub" placeholder="Topografia sensitiva (opcional): ex. hipoestesia em bota e luva; nível sensitivo em T10">
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_coord">
+        <div class="ef-group-label">Provas Cerebelares &amp; Coordenação (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="neuro_coord" data-multi="true" data-val="provas índex-nariz e calcanhar-joelho sem dismetria; eudiadococinesia presente">Índex-nariz e calcanhar-joelho normais</button>
+          <button type="button" class="ef-chip" data-group="neuro_coord" data-multi="true" data-val="dismetria em provas cerebelares">Dismetria</button>
+          <button type="button" class="ef-chip" data-group="neuro_coord" data-multi="true" data-val="disdiadococinesia">Disdiadococinesia</button>
+          <button type="button" class="ef-chip" data-group="neuro_coord" data-multi="true" data-val="ataxia apendicular/axial">Ataxia</button>
+          <button type="button" class="ef-chip" data-group="neuro_coord" data-multi="true" data-val="tremor intencional / de repouso">Tremor (repouso/intencional)</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="neuro_marcha">
+        <div class="ef-group-label">Equilíbrio &amp; Marcha:</div>
+        <div class="ef-inline-select-wrap" style="flex-wrap: wrap;">
+          <select id="ef-neuro-marcha-sel" class="ef-select" style="max-width: 340px;">
+            <option value="">Selecionar marcha / equilíbrio...</option>
+            <option value="equilíbrio estático preservado (Romberg negativo) e marcha eubásica / atípica">Romberg (-), marcha eubásica (normal)</option>
+            <option value="Sinal de Romberg positivo">Sinal de Romberg positivo</option>
+            <option value="marcha ceifante (hemiplégica)">Marcha ceifante</option>
+            <option value="marcha atáxica (ebriosa / cerebelar)">Marcha atáxica</option>
+            <option value="marcha talonante (tabética / sensitiva)">Marcha talonante</option>
+            <option value="marcha parkinsoniana (em pequenos passos / festinante)">Marcha parkinsoniana</option>
+            <option value="marcha escarvante">Marcha escarvante</option>
+            <option value="marcha não avaliada (paciente restrito ao leito)">Não testada / restrito ao leito</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <div class="ef-group-label">Pesquisa de Sinais Meníngeos (Negativo / Positivo + Guia ?):</div>
+        <div class="ef-maneuver-grid">
+          <div class="ef-maneuver-card" data-maneuver="rigidez_nuca" data-label="Rigidez de nuca">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Rigidez de Nuca</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Paciente em decúbito dorsal, realizar flexão passiva suave do pescoço tentando encostar o queixo no tórax (descartado trauma cervical).<br>
+              <strong>Interpretação:</strong> Resistência involuntária e dor à flexão anteroposterior (com rotação lateral geralmente livre) → irritação meníngea (meningite / HSA).
+            </div>
+          </div>
+
+          <div class="ef-maneuver-card" data-maneuver="kernig" data-label="Sinal de Kernig">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Sinal de Kernig</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Com quadril e joelho fletidos a 90°, tentar estender passivamente a perna.<br>
+              <strong>Interpretação:</strong> Dor lombar/posterior da coxa e resistência antálgica impedindo extensão completa do joelho (> 135°) → irritação meníngea.
+            </div>
+          </div>
+
+          <div class="ef-maneuver-card" data-maneuver="brudzinski" data-label="Sinal de Brudzinski">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Sinal de Brudzinski</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Durante a flexão passiva da nuca, observar os membros inferiores do paciente.<br>
+              <strong>Interpretação:</strong> Positivo quando ocorre flexão involuntária reflexa dos quadris e joelhos ao fletir o pescoço → irritação meníngea.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-neuro-obs" class="ef-group-label">Observações Livres — Sistema Neurológico:</label>
+        <input type="text" id="ef-neuro-obs" class="ef-input" placeholder="Ex: NIHSS estimado = 2 pontos; pupilas fotorreagentes avaliadas com lanterna.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Neurológico -->
+  <div id="ef-neuro-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📋 Texto do Sistema Neurológico para Anamnese</h3>
+        <p class="ef-output-sub">Pré-visualização do Sistema Neurológico e do Exame Físico completo acumulado.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-neuro">Segmento: Sistema Neurológico</label>
+        <textarea id="ef-preview-neuro" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-neuro">Exame Físico Completo (Sinais Vitais + Ectoscopia + Sistemas Preenchidos)</label>
+        <textarea id="ef-full-preview-neuro" class="ef-textarea ef-full-output-textarea" rows="4" placeholder="Texto completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('neuro')">
+        📋 Copiar Sistema Neurológico
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-extremidades')">
+        ➡️ Avançar para Extremidades &amp; Osteoarticular →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 8: Extremidades, Osteoarticular & Complementos -->
+<section id="ef-extremidades" class="content-section">
+  <div class="section-header">
+    <span class="badge-topic">EXAME SEGMENTAR • EXTREMIDADES, OSTEOARTICULAR &amp; VASCULAR</span>
+    <h1>Extremidades, Osteoarticular &amp; Vascular Periférico</h1>
+    <p>Articulações e coluna (simetria, flogose, deformidades, ADM, Lasègue), exame vascular periférico, empastamento de panturrilhas e manobras de TVP (Homans, Bancroft, Bandeira).</p>
+  </div>
+
+  <div class="ef-toolbar card">
+    <div class="ef-toolbar-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efApplyNormalSection('extrem')">
+        ⚡ Preencher Extremidades Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-emerald" onclick="efApplyAllNormal()">
+        🌟 Preencher Todo o Exame Físico Normal
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efResetSection('extrem')">
+        🗑️ Limpar Seção
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="switchSection('ef-neurologico')">
+        ⬅️ Sistema Neurológico
+      </button>
+    </div>
+    <div class="ef-toolbar-options">
+      <div class="ef-inline-select-wrap">
+        <label for="ef-ext-style">Estilo do texto:</label>
+        <select id="ef-ext-style" class="ef-select ef-sync-text-style">
+          <option value="anamnese">Texto Corrido de Anamnese</option>
+          <option value="evolucao">Evolução Compacta de Enfermaria</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="ef-ecto-sections">
+    <!-- 1. Articulações e Coluna -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">1. Sistema Osteoarticular: Articulações &amp; Coluna Vertebral</h3>
+
+      <div class="ef-ecto-group" data-group="ext_art">
+        <div class="ef-group-label">Articulações Periféricas (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="articulações simétricas, livres, móveis e sem sinais flogísticos">Simétricas, livres e s/ sinais flogísticos</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="amplitude de movimento (ADM) ativa e passiva preservada">ADM preservada</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="artralgia à mobilização / palpação">Dor articular (artralgia)</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="sinais flogísticos articulares (edema, calor, rubor, derrame articular)">Sinais flogísticos (artrite/derrame)</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="deformidades articulares presentes">Deformidades articulares</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="crepitação articular">Crepitação</button>
+          <button type="button" class="ef-chip" data-group="ext_art" data-multi="true" data-val="limitação da amplitude de movimento">ADM limitada</button>
+        </div>
+        <input type="text" id="ef-ext-art-obs" class="ef-input ef-input-sub" placeholder="Especifique articulação se alterada (ex: artrite em joelho D com edema e calor; nódulos de Heberden em IFDs)">
+      </div>
+
+      <div class="ef-ecto-group" data-group="ext_coluna">
+        <div class="ef-group-label">Coluna Vertebral (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ext_coluna" data-multi="true" data-val="coluna vertebral alinhada e indolor à palpação dos processos espinhosos e musculatura paravertebral">Alinhada e indolor à palpação</button>
+          <button type="button" class="ef-chip" data-group="ext_coluna" data-multi="true" data-val="dor à palpação de processos espinhosos / paravertebral">Dor à palpação vertebral</button>
+          <button type="button" class="ef-chip" data-group="ext_coluna" data-multi="true" data-val="desvio postural (escoliose / hipercifose)">Escoliose / desvio postural</button>
+          <button type="button" class="ef-chip" data-group="ext_coluna" data-multi="true" data-val="contratura muscular paravertebral">Contratura paravertebral</button>
+        </div>
+      </div>
+
+      <div class="ef-maneuver-grid">
+        <div class="ef-maneuver-card" data-maneuver="lasegue" data-label="Sinal de Lasègue">
+          <div class="ef-maneuver-head">
+            <span class="ef-maneuver-title">Sinal de Lasègue</span>
+            <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+          </div>
+          <div class="ef-maneuver-btns">
+            <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+            <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+          </div>
+          <div class="ef-help-popover" hidden>
+            <strong>Execução:</strong> Com paciente em decúbito dorsal e joelho estendido, elevar passivamente o membro inferior até 70°.<br>
+            <strong>Interpretação:</strong> Dor irradiada em trajeto do nervo ciático (lombociatalgia) entre 30° e 70° → radiculopatia lombossacra (L4–S1 / hérnia discal).
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Vascular Periférico & TVP -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">2. Vascular Periférico, Panturrilhas &amp; Pesquisa de TVP</h3>
+
+      <div class="ef-ecto-group" data-group="ext_vasc_perf">
+        <div class="ef-group-label">Perfusão Distal, Temperatura &amp; Pulsos Distais (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="extremidades bem perfundidas (TEC &lt; 3s) e aquecidas">Bem perfundidas (TEC &lt; 3s) e aquecidas</button>
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="pulsos pediosos e tibiais posteriores presentes, amplos e simétricos">Pulsos pediosos/tibiais simétricos</button>
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="perfusão periférica lentificada (TEC ≥ 3s)">TEC ≥ 3s (lentificado)</button>
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="extremidades frias e pálidas/cianóticas">Extremidades frias / cianóticas</button>
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="pulsos distais diminuídos ou ausentes">Pulsos distais diminuídos/ausentes</button>
+          <button type="button" class="ef-chip" data-group="ext_vasc_perf" data-multi="true" data-val="sinais de insuficiência venosa crônica (varizes, dermatite ocre)">Varizes / insuficiência venosa</button>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group" data-group="ext_panturrilha">
+        <div class="ef-group-label">Panturrilhas &amp; Edema de Membros Inferiores (múltipla escolha):</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="panturrilhas livres, moles e indolores (sem empastamento)">Panturrilhas livres e s/ empastamento</button>
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="MMII sem edemas">MMII sem edemas</button>
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="empastamento de panturrilha direita">Empastamento panturrilha D</button>
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="empastamento de panturrilha esquerda">Empastamento panturrilha E</button>
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="edema de MMII bilateral">Edema MMII bilateral</button>
+          <button type="button" class="ef-chip" data-group="ext_panturrilha" data-multi="true" data-val="edema assimétrico de membro inferior">Edema assimétrico unilateral</button>
+        </div>
+        <div class="ef-inline-select-wrap" style="margin-top: 6px;">
+          <label for="ef-ext-edema-cruz">Cacifo no edema de MMII:</label>
+          <select id="ef-ext-edema-cruz" class="ef-select ef-select-sm">
+            <option value="">Não especificar</option>
+            <option value="1">+/4+</option>
+            <option value="2">2+/4+</option>
+            <option value="3">3+/4+</option>
+            <option value="4">4+/4+</option>
+            <option value="duro">Sem cacifo / duro</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="ef-ecto-group">
+        <div class="ef-group-label">Manobras para Trombose Venosa Profunda (TVP) (Negativo / Positivo + Guia ?):</div>
+        <div class="ef-maneuver-grid">
+          <div class="ef-maneuver-card" data-maneuver="homans" data-label="Sinal de Homans">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Sinal de Homans</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Dorsiflexão passiva forçada do pé com o joelho levemente fletido.<br>
+              <strong>Interpretação:</strong> Dor na panturrilha sugere TVP (baixa sensibilidade/especificidade isolada; associar com escore de Wells e Doppler).
+            </div>
+          </div>
+
+          <div class="ef-maneuver-card" data-maneuver="bancroft" data-label="Sinal de Bancroft">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Sinal de Bancroft</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Comprimir manualmente a musculatura da panturrilha contra o plano ósseo da tíbia/fíbula (sentido anteroposterior).<br>
+              <strong>Interpretação:</strong> Dor à palpação profunda sugere TVP do membro avaliado.
+            </div>
+          </div>
+
+          <div class="ef-maneuver-card" data-maneuver="bandeira" data-label="Sinal da Bandeira">
+            <div class="ef-maneuver-head">
+              <span class="ef-maneuver-title">Sinal da Bandeira</span>
+              <button type="button" class="ef-help-btn" onclick="efToggleManeuverHelp(this)" aria-expanded="false" title="Como executar e interpretar">?</button>
+            </div>
+            <div class="ef-maneuver-btns">
+              <button type="button" class="ef-mbtn" data-mval="neg">Negativo (-)</button>
+              <button type="button" class="ef-mbtn" data-mval="pos">Positivo (+)</button>
+            </div>
+            <div class="ef-help-popover" hidden>
+              <strong>Execução:</strong> Comparar a mobilidade/flacidez lateral da panturrilha ao balançá-la passivamente com os dedos.<br>
+              <strong>Interpretação:</strong> Redução da mobilidade ("panturrilha empastada / endurecida") sugere trombose venosa profunda.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Complemento Opcional -->
+    <div class="card ef-ecto-card">
+      <h3 class="ef-group-card-title">3. Complementos Opcionais (Mamas, Geniturinário &amp; Toque Retal)</h3>
+      <div class="ef-ecto-group" data-group="ext_comp">
+        <div class="ef-group-label">Somente entra no texto final se selecionado:</div>
+        <div class="ef-chips-wrap">
+          <button type="button" class="ef-chip" data-group="ext_comp" data-multi="true" data-val="Mamas: simétricas, sem abaulamentos, nódulos palpáveis ou descarga papilar">Mamas normais</button>
+          <button type="button" class="ef-chip" data-group="ext_comp" data-multi="true" data-val="Geniturinário: genitália externa sem lesões ou secreções patológicas">Genitália externa normal</button>
+          <button type="button" class="ef-chip" data-group="ext_comp" data-multi="true" data-val="Toque retal: esfíncter normotônico, ampola retal vazia ou fezes pastosas, sem massas ou sangue em dedo de luva">Toque retal normal</button>
+        </div>
+        <input type="text" id="ef-ext-comp-obs" class="ef-input ef-input-sub" placeholder="Achados específicos de mamas, geniturinário ou toque retal (ex: melena em dedo de luva; próstata fibroelástica ~30g)">
+      </div>
+
+      <div class="ef-ecto-group">
+        <label for="ef-ext-obs" class="ef-group-label">Observações Livres — Extremidades / Osteoarticular:</label>
+        <input type="text" id="ef-ext-obs" class="ef-input" placeholder="Ex: Úlcera em maléolo medial D sem sinais de infecção ativa.">
+      </div>
+    </div>
+  </div>
+
+  <!-- Output Final Completo -->
+  <div id="ef-extrem-output-card" class="card ef-output-box">
+    <div class="ef-output-head">
+      <div>
+        <h3>📝 Exame Físico Segmentar &amp; Texto Final Completo para Anamnese</h3>
+        <p class="ef-output-sub">Copie apenas Extremidades/Osteoarticular ou o Exame Físico completo com Sinais Vitais, Ectoscopia e todos os sistemas avaliados.</p>
+      </div>
+    </div>
+    <div class="ef-section-output-grid">
+      <div class="ef-input-group">
+        <label for="ef-preview-extrem">Segmento: Extremidades &amp; Osteoarticular</label>
+        <textarea id="ef-preview-extrem" class="ef-textarea" rows="3" placeholder="Selecione os achados acima..."></textarea>
+      </div>
+      <div class="ef-input-group">
+        <label for="ef-full-preview-extrem">Exame Físico Completo (Pronto para Colar na Anamnese / Prontuário)</label>
+        <textarea id="ef-full-preview-extrem" class="ef-textarea ef-full-output-textarea" rows="6" placeholder="O Exame Físico completo acumulado aparecerá aqui..."></textarea>
+      </div>
+    </div>
+    <div class="ef-output-actions">
+      <button type="button" class="btn-action ef-btn-primary" onclick="efCopyText('both')">
+        📋 Copiar Exame Físico Completo (Tudo Preenchido)
+      </button>
+      <button type="button" class="btn-action ef-btn-secondary" onclick="efCopyText('extrem')">
+        📋 Copiar Só Extremidades / Vascular
+      </button>
+      <button type="button" class="btn-action ef-btn-outline" onclick="efApplyAllNormal()">
+        🌟 Preencher Todos os Sistemas Normais
       </button>
     </div>
   </div>

@@ -1725,7 +1725,7 @@ function renderHomeLiveResults(rawQuery) {
 
   itemsHtml += `
     <div class="home-live-footer">
-      <span>${totalHits} resultado(s) nas 686 seções · <kbd>↑</kbd><kbd>↓</kbd> e <kbd>Enter</kbd></span>
+      <span>${totalHits} resultado(s) nas 692 seções · <kbd>↑</kbd><kbd>↓</kbd> e <kbd>Enter</kbd></span>
       <button type="button" class="home-live-more-btn" onclick="openFullSearchWithHomeQuery()">Ver todos os resultados →</button>
     </div>
   `;
@@ -1859,7 +1859,7 @@ function initHomePage() {
 }
 
 // ============================================================================
-// CONSTRUTOR INTERATIVO DE EXAME FÍSICO (SINAIS VITAIS & ECTOSCOPIA)
+// CONSTRUTOR INTERATIVO DE EXAME FÍSICO (GERAL & SEGMENTAR POR SISTEMAS)
 // ============================================================================
 const efState = {
   single: {},
@@ -1868,7 +1868,27 @@ const efState = {
     esforco_sinais: [],
     edema_local: [],
     pele: [],
-    dispositivos: []
+    dispositivos: [],
+    cp_conjuntivas: [],
+    cp_moe: [],
+    cp_oroscopia: [],
+    cp_orl: [],
+    cp_tireoide: [],
+    cp_jugular: [],
+    resp_tiragens: [],
+    abd_inspecao_det: [],
+    abd_percussao: [],
+    abd_dor_regiao: [],
+    abd_visc: [],
+    neuro_pares_alt: [],
+    neuro_tonus: [],
+    neuro_sens: [],
+    neuro_coord: [],
+    ext_art: [],
+    ext_coluna: [],
+    ext_vasc_perf: [],
+    ext_panturrilha: [],
+    ext_comp: []
   },
   crosses: {
     coloracao: '1',
@@ -1877,10 +1897,53 @@ const efState = {
     cianose: '1',
     respiratorio: '1',
     edema: '1'
-  }
+  },
+  maneuvers: {
+    blumberg: '',
+    murphy: '',
+    rovsing: '',
+    psoas: '',
+    obturador: '',
+    giordano: '',
+    db: '',
+    jobert: '',
+    rigidez_nuca: '',
+    kernig: '',
+    brudzinski: '',
+    lasegue: '',
+    homans: '',
+    bancroft: '',
+    bandeira: ''
+  },
+  respFindings: [],
+  cardioMurmurs: []
 };
 
 const EF_CROSS_GROUPS = ['coloracao', 'hidratacao', 'ictericia', 'cianose', 'respiratorio', 'edema'];
+
+const EF_SECTION_SINGLE_GROUPS = {
+  cabeca: ['cp_cranio', 'cp_pupilas', 'cp_dentes', 'cp_traqueia', 'cp_linfonodos'],
+  resp: ['resp_forma', 'resp_expans', 'resp_ftv', 'resp_perc', 'resp_mv', 'resp_ra_status', 'resp_voz'],
+  cardio: ['cv_precordio', 'cv_fremito', 'cv_sopro_status', 'cv_pulsos', 'cv_tec'],
+  abdome: ['abd_forma', 'abd_sopros', 'abd_palp_tensao'],
+  neuro: ['neuro_orient', 'neuro_ling', 'neuro_pares_status', 'neuro_forca_global', 'neuro_rot', 'neuro_babinski'],
+  extrem: []
+};
+
+const EF_SECTION_MULTI_GROUPS = {
+  cabeca: ['cp_conjuntivas', 'cp_moe', 'cp_oroscopia', 'cp_orl', 'cp_tireoide', 'cp_jugular'],
+  resp: ['resp_tiragens'],
+  cardio: [],
+  abdome: ['abd_inspecao_det', 'abd_percussao', 'abd_dor_regiao', 'abd_visc'],
+  neuro: ['neuro_pares_alt', 'neuro_tonus', 'neuro_sens', 'neuro_coord'],
+  extrem: ['ext_art', 'ext_coluna', 'ext_vasc_perf', 'ext_panturrilha', 'ext_comp']
+};
+
+const EF_SECTION_MANEUVERS = {
+  abdome: ['blumberg', 'murphy', 'rovsing', 'psoas', 'obturador', 'giordano', 'db', 'jobert'],
+  neuro: ['rigidez_nuca', 'kernig', 'brudzinski'],
+  extrem: ['lasegue', 'homans', 'bancroft', 'bandeira']
+};
 
 function efFormatNum(n, decimals = 0) {
   if (n === null || n === undefined || Number.isNaN(n)) return '';
@@ -1920,6 +1983,11 @@ function efSetBadge(id, text, level = 'neutral') {
   el.className = `ef-status-badge ${level}`;
 }
 
+function efIsCompactStyle() {
+  const styleEl = document.getElementById('ef-text-style');
+  return !!(styleEl && styleEl.value === 'evolucao');
+}
+
 function efFormatCross(code) {
   if (!code) return '';
   if (code === 'duro') return 'sem cacifo / duro';
@@ -1942,7 +2010,8 @@ function efRefreshCrossLabels() {
 }
 
 function efSyncChipUI() {
-  document.querySelectorAll('#module-content-ef-geral .ef-chip[data-group], #ef-ectoscopia .ef-chip[data-group]').forEach(chip => {
+  const container = document.getElementById('module-content-ef-geral') || document;
+  container.querySelectorAll('.ef-chip[data-group]').forEach(chip => {
     const group = chip.getAttribute('data-group');
     const val = chip.getAttribute('data-val');
     const isMulti = chip.getAttribute('data-multi') === 'true';
@@ -1958,7 +2027,7 @@ function efSyncChipUI() {
   EF_CROSS_GROUPS.forEach(group => {
     const panel = document.getElementById(`ef-cross-panel-${group}`);
     if (!panel) return;
-    const activeTrigger = document.querySelector(`.ef-chip.active[data-group="${group}"][data-needs-cross="true"]`);
+    const activeTrigger = container.querySelector(`.ef-chip.active[data-group="${group}"][data-needs-cross="true"]`);
     const showPanel = !!activeTrigger;
     panel.hidden = !showPanel;
     if (showPanel) {
@@ -1969,9 +2038,47 @@ function efSyncChipUI() {
     }
   });
 
+  const soproPanel = document.getElementById('ef-cv-sopro-panel');
+  if (soproPanel) {
+    soproPanel.hidden = (efState.single.cv_sopro_status !== 'com sopro audível');
+  }
+
+  container.querySelectorAll('.ef-maneuver-card[data-maneuver]').forEach(card => {
+    const key = card.getAttribute('data-maneuver');
+    const val = efState.maneuvers[key] || '';
+    card.classList.toggle('is-pos', val === 'pos');
+    card.classList.toggle('is-neg', val === 'neg');
+    card.querySelectorAll('.ef-mbtn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-mval') === val);
+    });
+  });
+
   const linfObs = document.getElementById('ef-linf-obs');
   if (linfObs) {
     linfObs.hidden = (efState.single.linfonodos !== 'linfonodomegalia palpável');
+  }
+
+  efRenderRespFindingsList();
+  efRenderCardioMurmursList();
+  efUpdateNeuroGlasgowPill();
+}
+
+function efUpdateNeuroGlasgowPill() {
+  const pill = document.getElementById('ef-neuro-ecg-pill');
+  if (!pill) return;
+  const ao = efReadNum('ef-neuro-ao');
+  const rv = efReadNum('ef-neuro-rv');
+  const rm = efReadNum('ef-neuro-rm');
+  if (ao !== null && rv !== null && rm !== null) {
+    const total = ao + rv + rm;
+    pill.textContent = `ECG: ${total} (AO${ao} RV${rv} RM${rm})`;
+    const ectoGlasgow = document.getElementById('ef-glasgow');
+    if (ectoGlasgow) ectoGlasgow.value = String(total);
+    const gBtn = document.getElementById('ef-glasgow-15-btn');
+    if (gBtn) gBtn.classList.toggle('active', total === 15);
+  } else {
+    const g = efReadNum('ef-glasgow');
+    pill.textContent = g !== null ? `ECG: ${Math.round(g)}` : 'ECG: —';
   }
 }
 
@@ -2242,8 +2349,7 @@ function efBuildEctoText() {
   const s = efState.single;
   const m = efState.multi;
   const c = efState.crosses;
-  const styleEl = document.getElementById('ef-text-style');
-  const isCompact = styleEl && styleEl.value === 'evolucao';
+  const isCompact = efIsCompactStyle();
   const glasgow = efReadNum('ef-glasgow');
 
   const items = [];
@@ -2359,23 +2465,495 @@ function efBuildEctoText() {
   return `Ectoscopia / Exame Físico Geral: Paciente ${lead}${items.join(', ')}.`;
 }
 
-function efGenerateTexts() {
-  efRefreshCrossLabels();
-  const vitalsText = efBuildVitalsText();
-  const ectoText = efBuildEctoText();
-
-  const vitalsPreview = document.getElementById('ef-vitais-preview');
-  if (vitalsPreview) {
-    vitalsPreview.value = vitalsText;
+function efBuildManeuverList(keys) {
+  const container = document.getElementById('module-content-ef-geral') || document;
+  const posList = [];
+  const negList = [];
+  keys.forEach(k => {
+    const val = efState.maneuvers[k];
+    if (!val) return;
+    const card = container.querySelector(`.ef-maneuver-card[data-maneuver="${k}"]`);
+    const label = card ? (card.getAttribute('data-label') || k) : k;
+    if (val === 'pos') posList.push(`${label} positivo (+)`);
+    else if (val === 'neg') negList.push(label.replace(/^Sinal d[eoa] /, '').replace(/^Descompressão brusca difusa \(DB\)/, 'DB'));
+  });
+  const out = [...posList];
+  if (negList.length > 0) {
+    out.push(`manobras negativas: ${negList.join(', ')}`);
   }
-
-  const finalBox = document.getElementById('ef-generated-text');
-  if (finalBox) {
-    finalBox.value = [vitalsText, ectoText].filter(Boolean).join('\n\n');
-  }
+  return out;
 }
 
-function efApplyNormalVitals() {
+function efBuildCabecaPescocoText() {
+  const s = efState.single;
+  const m = efState.multi;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  if (s.cp_cranio) items.push(s.cp_cranio);
+
+  if (s.cp_pupilas) {
+    const pupDet = (document.getElementById('ef-cp-pupilas-det')?.value || '').trim();
+    items.push(pupDet ? `${s.cp_pupilas} (${pupDet})` : s.cp_pupilas);
+  }
+
+  const conjRaw = [...(m.cp_conjuntivas || [])];
+  const olhoCruz = document.getElementById('ef-cp-olhos-cruz')?.value || '';
+  const escleraCruz = document.getElementById('ef-cp-escleras-cruz')?.value || '';
+  const conjList = conjRaw.map(txt => {
+    if (txt === 'conjuntivas hipocoradas' && olhoCruz) return `conjuntivas hipocoradas (${efFormatCross(olhoCruz)})`;
+    if (txt === 'escleras ictéricas' && escleraCruz) return `escleras ictéricas (${efFormatCross(escleraCruz)})`;
+    return txt;
+  });
+  items.push(...conjList);
+
+  if (Array.isArray(m.cp_moe) && m.cp_moe.length > 0) items.push(...m.cp_moe);
+  if (Array.isArray(m.cp_oroscopia) && m.cp_oroscopia.length > 0) items.push(...m.cp_oroscopia);
+  if (s.cp_dentes) items.push(s.cp_dentes);
+  if (Array.isArray(m.cp_orl) && m.cp_orl.length > 0) items.push(...m.cp_orl);
+  if (s.cp_traqueia) items.push(s.cp_traqueia);
+
+  if (Array.isArray(m.cp_tireoide) && m.cp_tireoide.length > 0) {
+    const tirObs = (document.getElementById('ef-cp-tireoide-obs')?.value || '').trim();
+    const tirStr = tirObs ? `${m.cp_tireoide.join(', ')} (${tirObs})` : m.cp_tireoide.join(', ');
+    items.push(tirStr);
+  }
+
+  if (s.cp_linfonodos) {
+    const linfObs = (document.getElementById('ef-cp-linf-obs')?.value || '').trim();
+    items.push(linfObs ? `${s.cp_linfonodos} (${linfObs})` : s.cp_linfonodos);
+  }
+
+  if (Array.isArray(m.cp_jugular) && m.cp_jugular.length > 0) items.push(...m.cp_jugular);
+
+  const cpObs = (document.getElementById('ef-cp-obs')?.value || '').trim();
+  if (cpObs) items.push(cpObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `Cabeça/Pescoço: ${items.join('; ')}.`
+    : `Cabeça e Pescoço: ${items.join('; ')}.`;
+}
+
+function efFormatRespPhrase(tipo, regiao, lado) {
+  let loc = '';
+  if (regiao === 'base') {
+    loc = lado === 'bilateral' ? 'em bases bilaterais' : (lado === 'à direita' ? 'em base direita' : 'em base esquerda');
+  } else if (regiao === 'terço médio') {
+    loc = lado === 'bilateral' ? 'em terços médios bilaterais' : (lado === 'à direita' ? 'em terço médio direito' : 'em terço médio esquerdo');
+  } else if (regiao === 'ápice') {
+    loc = lado === 'bilateral' ? 'em ápices bilaterais' : (lado === 'à direita' ? 'em ápice direito' : 'em ápice esquerdo');
+  } else {
+    loc = lado === 'bilateral' ? 'difusos bilateralmente' : `difusos em hemitórax ${lado === 'à direita' ? 'direito' : 'esquerdo'}`;
+  }
+  return `${tipo} ${loc}`;
+}
+
+function efAddRespFinding(presetTipo, presetRegiao, presetLado) {
+  const tipo = presetTipo || document.getElementById('ef-resp-ra-tipo')?.value || 'estertores finos';
+  const regiao = presetRegiao || document.getElementById('ef-resp-ra-regiao')?.value || 'base';
+  const lado = presetLado || document.getElementById('ef-resp-ra-lado')?.value || 'bilateral';
+  const phrase = efFormatRespPhrase(tipo, regiao, lado);
+  if (!efState.respFindings.includes(phrase)) {
+    efState.respFindings.push(phrase);
+  }
+  efState.single.resp_ra_status = 'com ruídos adventícios';
+  efSyncChipUI();
+  efGenerateTexts();
+}
+
+function efRemoveRespFinding(idx) {
+  efState.respFindings.splice(idx, 1);
+  if (efState.respFindings.length === 0 && efState.single.resp_ra_status === 'com ruídos adventícios') {
+    delete efState.single.resp_ra_status;
+  }
+  efSyncChipUI();
+  efGenerateTexts();
+}
+
+function efRenderRespFindingsList() {
+  const box = document.getElementById('ef-resp-ra-list');
+  if (!box) return;
+  if (efState.respFindings.length === 0) {
+    box.innerHTML = '';
+    return;
+  }
+  box.innerHTML = efState.respFindings.map((item, idx) => `
+    <span class="ef-added-tag">
+      <span>${escapeSearchHtml(item)}</span>
+      <button type="button" onclick="efRemoveRespFinding(${idx})" aria-label="Remover achado">✕</button>
+    </span>
+  `).join('');
+}
+
+function efBuildRespiratorioText() {
+  const s = efState.single;
+  const m = efState.multi;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  if (s.resp_forma) items.push(s.resp_forma);
+  if (Array.isArray(m.resp_tiragens) && m.resp_tiragens.length > 0) items.push(...m.resp_tiragens);
+  if (s.resp_expans) items.push(s.resp_expans);
+
+  if (s.resp_ftv) {
+    const ftvTopo = (document.getElementById('ef-resp-ftv-topo')?.value || '').trim();
+    items.push(ftvTopo ? `${s.resp_ftv} (${ftvTopo})` : s.resp_ftv);
+  }
+
+  if (s.resp_perc) {
+    const percTopo = (document.getElementById('ef-resp-perc-topo')?.value || '').trim();
+    items.push(percTopo ? `${s.resp_perc} (${percTopo})` : s.resp_perc);
+  }
+
+  if (s.resp_mv) {
+    const mvTopo = (document.getElementById('ef-resp-mv-topo')?.value || '').trim();
+    const mvText = isCompact && s.resp_mv.includes('presente e bem distribuído')
+      ? 'MV+ bilateral'
+      : (mvTopo ? `${s.resp_mv} (${mvTopo})` : s.resp_mv);
+    items.push(mvText);
+  }
+
+  if (efState.respFindings.length > 0) {
+    items.push(`presença de ${efState.respFindings.join(', ')}`);
+  } else if (s.resp_ra_status === 'sem ruídos adventícios') {
+    items.push(isCompact ? 's/ RA' : 'sem ruídos adventícios');
+  } else if (s.resp_ra_status === 'com ruídos adventícios') {
+    items.push('ruídos adventícios presentes');
+  }
+
+  if (s.resp_voz) items.push(s.resp_voz);
+  const respObs = (document.getElementById('ef-resp-obs')?.value || '').trim();
+  if (respObs) items.push(respObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `AR: ${items.join(', ')}.`
+    : `Aparelho Respiratório: ${items.join(', ')}.`;
+}
+
+function efReadCurrentMurmurString() {
+  const fase = document.getElementById('ef-cv-sopro-fase')?.value || '';
+  const foco = document.getElementById('ef-cv-sopro-foco')?.value || '';
+  const inten = document.getElementById('ef-cv-sopro-int')?.value || '';
+  const irrad = document.getElementById('ef-cv-sopro-irrad')?.value || '';
+  return [fase, foco, inten ? `intensidade ${inten}` : '', irrad].filter(Boolean).join(', ');
+}
+
+function efAddCardioMurmur() {
+  const phrase = efReadCurrentMurmurString();
+  if (phrase && !efState.cardioMurmurs.includes(phrase)) {
+    efState.cardioMurmurs.push(phrase);
+  }
+  efState.single.cv_sopro_status = 'com sopro audível';
+  efSyncChipUI();
+  efGenerateTexts();
+}
+
+function efRemoveCardioMurmur(idx) {
+  efState.cardioMurmurs.splice(idx, 1);
+  efSyncChipUI();
+  efGenerateTexts();
+}
+
+function efRenderCardioMurmursList() {
+  const box = document.getElementById('ef-cv-sopros-list');
+  if (!box) return;
+  if (efState.cardioMurmurs.length === 0) {
+    box.innerHTML = '';
+    return;
+  }
+  box.innerHTML = efState.cardioMurmurs.map((item, idx) => `
+    <span class="ef-added-tag">
+      <span>${escapeSearchHtml(item)}</span>
+      <button type="button" onclick="efRemoveCardioMurmur(${idx})" aria-label="Remover sopro">✕</button>
+    </span>
+  `).join('');
+}
+
+function efBuildCardiovascularText() {
+  const s = efState.single;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  if (s.cv_precordio) items.push(s.cv_precordio);
+
+  const ictusLocal = (document.getElementById('ef-cv-ictus-local')?.value || '').trim();
+  const ictusExt = (document.getElementById('ef-cv-ictus-ext')?.value || '').trim();
+  if (ictusLocal || ictusExt) {
+    items.push([ictusLocal, ictusExt].filter(Boolean).join(', '));
+  }
+
+  if (s.cv_fremito) {
+    const fremFoco = (document.getElementById('ef-cv-fremito-foco')?.value || '').trim();
+    items.push(fremFoco ? `${s.cv_fremito} (${fremFoco})` : s.cv_fremito);
+  }
+
+  const ritmo = document.getElementById('ef-cv-ritmo')?.value || '';
+  const tempos = document.getElementById('ef-cv-tempos')?.value || '';
+  const bulhas = document.getElementById('ef-cv-bulhas')?.value || '';
+  const desdob = document.getElementById('ef-cv-desdob')?.value || '';
+
+  if (ritmo || tempos || bulhas) {
+    if (isCompact && ritmo === 'regular' && tempos === '2T' && bulhas === 'BNF') {
+      items.push('RCR em 2T BNF');
+    } else {
+      const rTxt = ritmo ? (ritmo === 'regular' ? 'ritmo cardíaco regular' : (ritmo === 'irregular' ? 'ritmo cardíaco irregular' : `ritmo ${ritmo}`)) : '';
+      const tTxt = tempos ? `em ${tempos}` : '';
+      const bTxt = bulhas === 'BNF' ? 'bulhas normofonéticas' : (bulhas ? `bulhas ${bulhas}` : '');
+      items.push([rTxt, tTxt, bTxt].filter(Boolean).join(', '));
+    }
+  }
+  if (desdob) items.push(desdob);
+
+  if (s.cv_sopro_status === 'com sopro audível') {
+    if (efState.cardioMurmurs.length > 0) {
+      items.push(...efState.cardioMurmurs);
+    } else {
+      const curSopro = efReadCurrentMurmurString();
+      if (curSopro) items.push(curSopro);
+    }
+  } else if (s.cv_sopro_status === 'sem sopros audíveis') {
+    items.push(isCompact ? 's/ sopros' : 'sem sopros audíveis');
+  }
+
+  if (s.cv_pulsos) {
+    const pObs = (document.getElementById('ef-cv-pulsos-obs')?.value || '').trim();
+    items.push(pObs ? `${s.cv_pulsos} (${pObs})` : s.cv_pulsos);
+  }
+  if (s.cv_tec) items.push(s.cv_tec);
+
+  const cvObs = (document.getElementById('ef-cv-obs')?.value || '').trim();
+  if (cvObs) items.push(cvObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `ACV: ${items.join(', ')}.`
+    : `Aparelho Cardiovascular: ${items.join(', ')}.`;
+}
+
+function efBuildAbdomeText() {
+  const s = efState.single;
+  const m = efState.multi;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  if (s.abd_forma) items.push(s.abd_forma);
+  if (Array.isArray(m.abd_inspecao_det) && m.abd_inspecao_det.length > 0) items.push(...m.abd_inspecao_det);
+  const cic = document.getElementById('ef-abd-cicatriz-sel')?.value || '';
+  if (cic) items.push(cic);
+
+  const rha = document.getElementById('ef-abd-rha-sel')?.value || '';
+  if (rha) {
+    items.push(isCompact && rha.includes('presentes e normoativos') ? 'RHA+' : rha);
+  }
+  if (s.abd_sopros) items.push(s.abd_sopros);
+
+  if (Array.isArray(m.abd_percussao) && m.abd_percussao.length > 0) items.push(...m.abd_percussao);
+  const hepaCm = efReadNum('ef-abd-hepa-cm');
+  if (hepaCm !== null) items.push(`hepatimetria de ${efFormatNum(hepaCm, Number.isInteger(hepaCm) ? 0 : 1)} cm na LHC`);
+  const traube = document.getElementById('ef-abd-traube-sel')?.value || '';
+  if (traube) items.push(traube);
+
+  if (s.abd_palp_tensao) {
+    let palpStr = s.abd_palp_tensao;
+    if (Array.isArray(m.abd_dor_regiao) && m.abd_dor_regiao.length > 0) {
+      palpStr += ` em ${m.abd_dor_regiao.join(', ')}`;
+    }
+    items.push(palpStr);
+  } else if (Array.isArray(m.abd_dor_regiao) && m.abd_dor_regiao.length > 0) {
+    items.push(`dor à palpação em ${m.abd_dor_regiao.join(', ')}`);
+  }
+
+  if (Array.isArray(m.abd_visc) && m.abd_visc.length > 0) items.push(...m.abd_visc);
+  const figObs = (document.getElementById('ef-abd-figado-obs')?.value || '').trim();
+  const bacObs = (document.getElementById('ef-abd-baco-obs')?.value || '').trim();
+  const masObs = (document.getElementById('ef-abd-massa-obs')?.value || '').trim();
+  if (figObs) items.push(`fígado palpável (${figObs})`);
+  if (bacObs) items.push(`baço palpável (${bacObs})`);
+  if (masObs) items.push(`massa abdominal (${masObs})`);
+
+  items.push(...efBuildManeuverList(EF_SECTION_MANEUVERS.abdome));
+
+  const abdObs = (document.getElementById('ef-abd-obs')?.value || '').trim();
+  if (abdObs) items.push(abdObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `Abdome: ${items.join(', ')}.`
+    : `Abdome: ${items.join(', ')}.`;
+}
+
+function efBuildNeurologicoText() {
+  const s = efState.single;
+  const m = efState.multi;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  const ao = efReadNum('ef-neuro-ao');
+  const rv = efReadNum('ef-neuro-rv');
+  const rm = efReadNum('ef-neuro-rm');
+  if (ao !== null && rv !== null && rm !== null) {
+    items.push(`Escala de Coma de Glasgow ${ao + rv + rm}/15 (AO${ao} RV${rv} RM${rm})`);
+  }
+  if (s.neuro_orient) items.push(s.neuro_orient);
+  if (s.neuro_ling) items.push(s.neuro_ling);
+
+  if (s.neuro_pares_status === 'pares cranianos (I ao XII) clinicamente preservados e simétricos') {
+    items.push(s.neuro_pares_status);
+  } else if (Array.isArray(m.neuro_pares_alt) && m.neuro_pares_alt.length > 0) {
+    items.push(`alteração em pares cranianos: ${m.neuro_pares_alt.join(', ')}`);
+  } else if (s.neuro_pares_status) {
+    items.push(s.neuro_pares_status);
+  }
+  const paresObs = (document.getElementById('ef-neuro-pares-obs')?.value || '').trim();
+  if (paresObs) items.push(paresObs);
+
+  const msd = document.getElementById('ef-neuro-mrc-msd')?.value || '';
+  const mse = document.getElementById('ef-neuro-mrc-mse')?.value || '';
+  const mid = document.getElementById('ef-neuro-mrc-mid')?.value || '';
+  const mie = document.getElementById('ef-neuro-mrc-mie')?.value || '';
+  const hasMrcDetail = msd || mse || mid || mie;
+  if (s.neuro_forca_global && s.neuro_forca_global !== 'déficit motor focal' && !hasMrcDetail) {
+    items.push(s.neuro_forca_global);
+  } else if (hasMrcDetail) {
+    const mrcParts = [
+      msd ? `MSD ${msd}` : '',
+      mse ? `MSE ${mse}` : '',
+      mid ? `MID ${mid}` : '',
+      mie ? `MIE ${mie}` : ''
+    ].filter(Boolean);
+    items.push(`força muscular (MRC): ${mrcParts.join(', ')}`);
+  } else if (s.neuro_forca_global === 'déficit motor focal') {
+    items.push('déficit motor focal');
+  }
+
+  if (Array.isArray(m.neuro_tonus) && m.neuro_tonus.length > 0) items.push(...m.neuro_tonus);
+  if (s.neuro_rot) items.push(s.neuro_rot);
+  if (s.neuro_babinski) items.push(s.neuro_babinski);
+
+  if (Array.isArray(m.neuro_sens) && m.neuro_sens.length > 0) {
+    const sensObs = (document.getElementById('ef-neuro-sens-obs')?.value || '').trim();
+    const sTxt = m.neuro_sens.join(', ');
+    items.push(sensObs ? `${sTxt} (${sensObs})` : sTxt);
+  }
+  if (Array.isArray(m.neuro_coord) && m.neuro_coord.length > 0) items.push(...m.neuro_coord);
+  const marcha = document.getElementById('ef-neuro-marcha-sel')?.value || '';
+  if (marcha) items.push(marcha);
+
+  items.push(...efBuildManeuverList(EF_SECTION_MANEUVERS.neuro));
+
+  const nObs = (document.getElementById('ef-neuro-obs')?.value || '').trim();
+  if (nObs) items.push(nObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `Neuro: ${items.join('; ')}.`
+    : `Sistema Neurológico: ${items.join('; ')}.`;
+}
+
+function efBuildExtremidadesText() {
+  const m = efState.multi;
+  const isCompact = efIsCompactStyle();
+  const items = [];
+
+  if (Array.isArray(m.ext_art) && m.ext_art.length > 0) items.push(...m.ext_art);
+  const artObs = (document.getElementById('ef-ext-art-obs')?.value || '').trim();
+  if (artObs) items.push(artObs);
+  if (Array.isArray(m.ext_coluna) && m.ext_coluna.length > 0) items.push(...m.ext_coluna);
+  if (Array.isArray(m.ext_vasc_perf) && m.ext_vasc_perf.length > 0) items.push(...m.ext_vasc_perf);
+
+  const edemaCruz = document.getElementById('ef-ext-edema-cruz')?.value || '';
+  if (Array.isArray(m.ext_panturrilha) && m.ext_panturrilha.length > 0) {
+    m.ext_panturrilha.forEach(txt => {
+      if (txt.startsWith('edema') && edemaCruz) {
+        items.push(`${txt} (${efFormatCross(edemaCruz)})`);
+      } else {
+        items.push(txt);
+      }
+    });
+  } else if (edemaCruz) {
+    items.push(`edema de MMII (${efFormatCross(edemaCruz)})`);
+  }
+
+  items.push(...efBuildManeuverList(EF_SECTION_MANEUVERS.extrem));
+
+  const extObs = (document.getElementById('ef-ext-obs')?.value || '').trim();
+  if (extObs) items.push(extObs);
+
+  if (Array.isArray(m.ext_comp) && m.ext_comp.length > 0) items.push(...m.ext_comp);
+  const compObs = (document.getElementById('ef-ext-comp-obs')?.value || '').trim();
+  if (compObs) items.push(compObs);
+
+  if (items.length === 0) return '';
+  return isCompact
+    ? `Extremidades/MSSO: ${items.join(', ')}.`
+    : `Extremidades & Osteoarticular: ${items.join(', ')}.`;
+}
+
+function efBuildAllSectionsMap() {
+  return {
+    vitals: efBuildVitalsText(),
+    ecto: efBuildEctoText(),
+    cabeca: efBuildCabecaPescocoText(),
+    resp: efBuildRespiratorioText(),
+    cardio: efBuildCardiovascularText(),
+    abdome: efBuildAbdomeText(),
+    neuro: efBuildNeurologicoText(),
+    extrem: efBuildExtremidadesText()
+  };
+}
+
+function efGenerateTexts() {
+  efRefreshCrossLabels();
+  efUpdateNeuroGlasgowPill();
+  const map = efBuildAllSectionsMap();
+
+  const vitalsPreview = document.getElementById('ef-vitais-preview');
+  if (vitalsPreview) vitalsPreview.value = map.vitals;
+
+  const mapPreviews = {
+    cabeca: 'ef-preview-cabeca',
+    resp: 'ef-preview-resp',
+    cardio: 'ef-preview-cardio',
+    abdome: 'ef-preview-abdome',
+    neuro: 'ef-preview-neuro',
+    extrem: 'ef-preview-extrem'
+  };
+  Object.entries(mapPreviews).forEach(([key, elId]) => {
+    const el = document.getElementById(elId);
+    if (el) el.value = map[key] || '';
+  });
+
+  const combined = [
+    map.vitals,
+    map.ecto,
+    map.cabeca,
+    map.resp,
+    map.cardio,
+    map.abdome,
+    map.neuro,
+    map.extrem
+  ].filter(Boolean).join('\n\n');
+
+  document.querySelectorAll('.ef-full-output-textarea').forEach(ta => {
+    ta.value = combined;
+  });
+}
+
+function efToggleManeuverHelp(btn) {
+  if (!btn) return;
+  const card = btn.closest('.ef-maneuver-card');
+  if (!card) return;
+  const pop = card.querySelector('.ef-help-popover');
+  if (!pop) return;
+  const isHidden = pop.hidden;
+  pop.hidden = !isHidden;
+  btn.setAttribute('aria-expanded', String(isHidden));
+  btn.classList.toggle('active', isHidden);
+}
+
+function efApplyNormalVitals(silent = false) {
   const presets = {
     'ef-pas-min': '110',
     'ef-pas-max': '120',
@@ -2407,11 +2985,13 @@ function efApplyNormalVitals() {
     afebrilBtn.setAttribute('data-afebril', 'true');
     afebrilBtn.classList.add('active');
   }
-  efGenerateTexts();
-  showClinicalToast('⚡ Sinais vitais normais preenchidos!');
+  if (!silent) {
+    efGenerateTexts();
+    showClinicalToast('⚡ Sinais vitais normais preenchidos!');
+  }
 }
 
-function efResetVitals() {
+function efResetVitals(silent = false) {
   const ids = [
     'ef-pas-min', 'ef-pas-max', 'ef-pad-min', 'ef-pad-max',
     'ef-tax-min', 'ef-tax-max', 'ef-fc-min', 'ef-fc-max',
@@ -2434,11 +3014,11 @@ function efResetVitals() {
     afebrilBtn.setAttribute('data-afebril', 'false');
     afebrilBtn.classList.remove('active');
   }
-  efGenerateTexts();
+  if (!silent) efGenerateTexts();
 }
 
-function efApplyNormalEctoscopia() {
-  efState.single = {
+function efApplyNormalEctoscopia(silent = false) {
+  Object.assign(efState.single, {
     estado_geral: 'BEG',
     consciencia: 'LOTE',
     cooperacao: 'cooperativo e contactuante',
@@ -2455,14 +3035,14 @@ function efApplyNormalEctoscopia() {
     nutricional: 'eutrófico',
     biotipo: 'normolíneo',
     linfonodos: 'sem linfonodomegalias palpáveis'
-  };
-  efState.multi = {
+  });
+  Object.assign(efState.multi, {
     hidratacao_sinais: [],
     esforco_sinais: [],
     edema_local: [],
     pele: ['pele íntegra, turgor e elasticidade preservados', 'sem lesões elementares ou petéquias'],
     dispositivos: []
-  };
+  });
   const gEl = document.getElementById('ef-glasgow');
   if (gEl) gEl.value = '15';
   const gBtn = document.getElementById('ef-glasgow-15-btn');
@@ -2471,20 +3051,28 @@ function efApplyNormalEctoscopia() {
     const el = document.getElementById(id);
     if (el) el.value = '';
   });
-  efSyncChipUI();
-  efGenerateTexts();
-  showClinicalToast('⚡ Ectoscopia normal preenchida!');
+  if (!silent) {
+    efSyncChipUI();
+    efGenerateTexts();
+    showClinicalToast('⚡ Ectoscopia normal preenchida!');
+  }
 }
 
-function efResetEctoscopia() {
-  efState.single = {};
-  efState.multi = {
+function efResetEctoscopia(silent = false) {
+  const ectoSingles = [
+    'estado_geral', 'consciencia', 'cooperacao', 'atitude', 'facies',
+    'coloracao', 'hidratacao', 'ictericia', 'ictericia_local', 'cianose',
+    'cianose_tipo', 'temperatura_toque', 'respiratorio', 'perfusao', 'edema',
+    'edema_caract', 'nutricional', 'biotipo', 'linfonodos'
+  ];
+  ectoSingles.forEach(k => delete efState.single[k]);
+  Object.assign(efState.multi, {
     hidratacao_sinais: [],
     esforco_sinais: [],
     edema_local: [],
     pele: [],
     dispositivos: []
-  };
+  });
   efState.crosses = {
     coloracao: '1',
     hidratacao: '1',
@@ -2499,32 +3087,215 @@ function efResetEctoscopia() {
   });
   const gBtn = document.getElementById('ef-glasgow-15-btn');
   if (gBtn) gBtn.classList.remove('active');
+  if (!silent) {
+    efSyncChipUI();
+    efGenerateTexts();
+  }
+}
+
+function efApplyNormalSection(key, silent = false) {
+  if (key === 'vitals') {
+    efApplyNormalVitals(silent);
+    return;
+  }
+  if (key === 'ecto') {
+    efApplyNormalEctoscopia(silent);
+    return;
+  }
+
+  efResetSection(key, true);
+
+  if (key === 'cabeca') {
+    Object.assign(efState.single, {
+      cp_cranio: 'crânio normocefálico, sem abaulamentos, retrações ou lesões em couro cabeludo; seios da face indolores à digito-pressão',
+      cp_pupilas: 'pupilas isocóricas e fotorreagentes (PIRF)',
+      cp_dentes: 'dentes em bom estado de conservação',
+      cp_traqueia: 'pescoço cilíndrico, simétrico, com mobilidade livre e traqueia centrada',
+      cp_linfonodos: 'ausência de linfonodomegalias cervicais ou supraclaviculares palpáveis'
+    });
+    Object.assign(efState.multi, {
+      cp_conjuntivas: ['conjuntivas normocoradas e úmidas', 'escleras anictéricas'],
+      cp_moe: ['movimentação ocular extrínseca (MOE) preservada, sem nistagmo ou estrabismo'],
+      cp_oroscopia: ['mucosa oral hidratada e corada, sem lesões', 'orofaringe e tonsilas palatinas sem hiperemia ou exsudato'],
+      cp_tireoide: ['tireoide tópica, de tamanho e consistência fibroelástica normais, móvel à deglutição, indolor e sem nódulos palpáveis'],
+      cp_jugular: ['sem turgência jugular patológica a 45° (TJP ausente)', 'pulsos carotídeos simétricos, cheios e sem sopros']
+    });
+  } else if (key === 'resp') {
+    Object.assign(efState.single, {
+      resp_forma: 'tórax atípico e simétrico',
+      resp_expans: 'expansibilidade torácica preservada e simétrica bilateralmente',
+      resp_ftv: 'frêmito toracovocal (FTV) normodistribuído bilateralmente',
+      resp_perc: 'som claro pulmonar à percussão em todos os campos',
+      resp_mv: 'murmúrio vesicular presente e bem distribuído bilateralmente',
+      resp_ra_status: 'sem ruídos adventícios'
+    });
+    efState.multi.resp_tiragens = ['sem tiragens ou uso de musculatura acessória'];
+  } else if (key === 'cardio') {
+    Object.assign(efState.single, {
+      cv_precordio: 'precórdio calmo, sem abaulamentos ou retrações',
+      cv_fremito: 'ausência de frêmitos cardiovasculares',
+      cv_sopro_status: 'sem sopros audíveis',
+      cv_pulsos: 'pulsos arteriais periféricos presentes, cheios e simétricos nos 4 membros',
+      cv_tec: 'tempo de enchimento capilar (TEC) < 3 segundos'
+    });
+    const setVal = (id, v) => { const el = document.getElementById(id); if (el) el.value = v; };
+    setVal('ef-cv-ictus-local', 'ictus cordis palpável no 5º EICE na linha hemiclavicular esquerda');
+    setVal('ef-cv-ictus-ext', 'extensão normal (1–2 polpas digitais), normocinético');
+    setVal('ef-cv-ritmo', 'regular');
+    setVal('ef-cv-tempos', '2T');
+    setVal('ef-cv-bulhas', 'BNF');
+    setVal('ef-cv-desdob', 'sem desdobramentos patológicos ou atrito');
+  } else if (key === 'abdome') {
+    Object.assign(efState.single, {
+      abd_forma: 'abdome plano',
+      abd_sopros: 'ausência de sopros vasculares abdominais',
+      abd_palp_tensao: 'flácido, depressível e indolor à palpação superficial e profunda'
+    });
+    Object.assign(efState.multi, {
+      abd_inspecao_det: ['cicatriz umbilical introrsa e centrada', 'sem cicatrizes cirúrgicas, abaulamentos ou circulação colateral'],
+      abd_percussao: ['timpanismo fisiológico difuso', 'sem sinais de ascite à percussão'],
+      abd_visc: ['sem massas ou visceromegalias palpáveis']
+    });
+    const rha = document.getElementById('ef-abd-rha-sel');
+    if (rha) rha.value = 'ruídos hidroaéreos presentes e normoativos';
+    const traube = document.getElementById('ef-abd-traube-sel');
+    if (traube) traube.value = 'espaço de Traube livre';
+    ['blumberg', 'murphy', 'rovsing', 'psoas', 'obturador', 'giordano'].forEach(mKey => {
+      efState.maneuvers[mKey] = 'neg';
+    });
+  } else if (key === 'neuro') {
+    Object.assign(efState.single, {
+      neuro_orient: 'lúcido e orientado autopsíquica e alopsiquicamente (tempo e espaço)',
+      neuro_ling: 'linguagem preservada, fluente e coerente',
+      neuro_pares_status: 'pares cranianos (I ao XII) clinicamente preservados e simétricos',
+      neuro_forca_global: 'força muscular preservada (grau 5/5 na escala MRC) global e simétrica nos 4 membros',
+      neuro_rot: 'reflexos osteotendíneos normoativos e simétricos (2+/4+)',
+      neuro_babinski: 'reflexo cutâneo-plantar em flexão bilateral (Sinal de Babinski ausente)'
+    });
+    Object.assign(efState.multi, {
+      neuro_tonus: ['normotônico e normotrófico'],
+      neuro_sens: ['sensibilidade superficial (tátil, térmica e dolorosa) e profunda (propriocepção/palestesia) preservadas e simétricas'],
+      neuro_coord: ['provas índex-nariz e calcanhar-joelho sem dismetria; eudiadococinesia presente']
+    });
+    const setVal = (id, v) => { const el = document.getElementById(id); if (el) el.value = v; };
+    setVal('ef-neuro-ao', '4');
+    setVal('ef-neuro-rv', '5');
+    setVal('ef-neuro-rm', '6');
+    setVal('ef-neuro-marcha-sel', 'equilíbrio estático preservado (Romberg negativo) e marcha eubásica / atípica');
+    ['rigidez_nuca', 'kernig', 'brudzinski'].forEach(mKey => { efState.maneuvers[mKey] = 'neg'; });
+  } else if (key === 'extrem') {
+    Object.assign(efState.multi, {
+      ext_art: ['articulações simétricas, livres, móveis e sem sinais flogísticos', 'amplitude de movimento (ADM) ativa e passiva preservada'],
+      ext_coluna: ['coluna vertebral alinhada e indolor à palpação dos processos espinhosos e musculatura paravertebral'],
+      ext_vasc_perf: ['extremidades bem perfundidas (TEC < 3s) e aquecidas', 'pulsos pediosos e tibiais posteriores presentes, amplos e simétricos'],
+      ext_panturrilha: ['panturrilhas livres, moles e indolores (sem empastamento)', 'MMII sem edemas']
+    });
+    ['homans', 'lasegue'].forEach(mKey => { efState.maneuvers[mKey] = 'neg'; });
+  }
+
+  if (!silent) {
+    efSyncChipUI();
+    efGenerateTexts();
+    showClinicalToast('⚡ Padrão normal da seção preenchido!');
+  }
+}
+
+function efResetSection(key, silent = false) {
+  if (key === 'vitals') { efResetVitals(silent); return; }
+  if (key === 'ecto') { efResetEctoscopia(silent); return; }
+
+  (EF_SECTION_SINGLE_GROUPS[key] || []).forEach(g => delete efState.single[g]);
+  (EF_SECTION_MULTI_GROUPS[key] || []).forEach(g => { efState.multi[g] = []; });
+  (EF_SECTION_MANEUVERS[key] || []).forEach(mk => { efState.maneuvers[mk] = ''; });
+
+  if (key === 'cabeca') {
+    ['ef-cp-pupilas-det', 'ef-cp-olhos-cruz', 'ef-cp-escleras-cruz', 'ef-cp-tireoide-obs', 'ef-cp-linf-obs', 'ef-cp-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  } else if (key === 'resp') {
+    efState.respFindings = [];
+    ['ef-resp-ftv-topo', 'ef-resp-perc-topo', 'ef-resp-mv-topo', 'ef-resp-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  } else if (key === 'cardio') {
+    efState.cardioMurmurs = [];
+    ['ef-cv-ictus-local', 'ef-cv-ictus-ext', 'ef-cv-fremito-foco', 'ef-cv-ritmo', 'ef-cv-tempos', 'ef-cv-bulhas', 'ef-cv-desdob', 'ef-cv-pulsos-obs', 'ef-cv-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  } else if (key === 'abdome') {
+    ['ef-abd-cicatriz-sel', 'ef-abd-rha-sel', 'ef-abd-traube-sel', 'ef-abd-hepa-cm', 'ef-abd-figado-obs', 'ef-abd-baco-obs', 'ef-abd-massa-obs', 'ef-abd-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  } else if (key === 'neuro') {
+    ['ef-neuro-ao', 'ef-neuro-rv', 'ef-neuro-rm', 'ef-neuro-pares-obs', 'ef-neuro-mrc-msd', 'ef-neuro-mrc-mse', 'ef-neuro-mrc-mid', 'ef-neuro-mrc-mie', 'ef-neuro-sens-obs', 'ef-neuro-marcha-sel', 'ef-neuro-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  } else if (key === 'extrem') {
+    ['ef-ext-art-obs', 'ef-ext-edema-cruz', 'ef-ext-comp-obs', 'ef-ext-obs'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+  }
+
+  if (!silent) {
+    efSyncChipUI();
+    efGenerateTexts();
+  }
+}
+
+function efApplyAllNormal() {
+  ['vitals', 'ecto', 'cabeca', 'resp', 'cardio', 'abdome', 'neuro', 'extrem'].forEach(k => {
+    efApplyNormalSection(k, true);
+  });
   efSyncChipUI();
   efGenerateTexts();
+  showClinicalToast('🌟 Exame Físico completo normal preenchido em todos os sistemas!');
 }
 
 async function efCopyText(mode = 'both') {
+  const map = efBuildAllSectionsMap();
   let textToCopy = '';
+  let toastLabel = 'Exame Físico copiado para a Anamnese!';
+
   if (mode === 'vitals') {
-    textToCopy = (document.getElementById('ef-vitais-preview')?.value || '').trim() || efBuildVitalsText();
+    textToCopy = (document.getElementById('ef-vitais-preview')?.value || '').trim() || map.vitals;
+    toastLabel = 'Sinais Vitais copiados para a Anamnese!';
   } else if (mode === 'ecto') {
-    textToCopy = efBuildEctoText();
+    textToCopy = map.ecto;
+    toastLabel = 'Ectoscopia copiada para a Anamnese!';
+  } else if (mode === 'cabeca') {
+    textToCopy = (document.getElementById('ef-preview-cabeca')?.value || '').trim() || map.cabeca;
+    toastLabel = 'Cabeça & Pescoço copiado para a Anamnese!';
+  } else if (mode === 'resp') {
+    textToCopy = (document.getElementById('ef-preview-resp')?.value || '').trim() || map.resp;
+    toastLabel = 'Aparelho Respiratório copiado para a Anamnese!';
+  } else if (mode === 'cardio') {
+    textToCopy = (document.getElementById('ef-preview-cardio')?.value || '').trim() || map.cardio;
+    toastLabel = 'Aparelho Cardiovascular copiado para a Anamnese!';
+  } else if (mode === 'abdome') {
+    textToCopy = (document.getElementById('ef-preview-abdome')?.value || '').trim() || map.abdome;
+    toastLabel = 'Abdome copiado para a Anamnese!';
+  } else if (mode === 'neuro') {
+    textToCopy = (document.getElementById('ef-preview-neuro')?.value || '').trim() || map.neuro;
+    toastLabel = 'Sistema Neurológico copiado para a Anamnese!';
+  } else if (mode === 'extrem') {
+    textToCopy = (document.getElementById('ef-preview-extrem')?.value || '').trim() || map.extrem;
+    toastLabel = 'Extremidades/Osteoarticular copiado para a Anamnese!';
   } else {
-    textToCopy = (document.getElementById('ef-generated-text')?.value || '').trim() ||
-      [efBuildVitalsText(), efBuildEctoText()].filter(Boolean).join('\n\n');
+    const activeFullTa = document.querySelector('.content-section.active .ef-full-output-textarea');
+    textToCopy = (activeFullTa?.value || '').trim() ||
+      (document.getElementById('ef-generated-text')?.value || '').trim() ||
+      [map.vitals, map.ecto, map.cabeca, map.resp, map.cardio, map.abdome, map.neuro, map.extrem].filter(Boolean).join('\n\n');
+    toastLabel = 'Exame Físico completo copiado para a Anamnese!';
   }
 
   if (!textToCopy) {
-    showClinicalToast('Preencha os sinais vitais ou selecione achados antes de copiar.');
+    showClinicalToast('Preencha ou selecione os achados antes de copiar.');
     return;
   }
 
   try {
     await navigator.clipboard.writeText(textToCopy);
-    const label = mode === 'vitals'
-      ? 'Sinais Vitais copiados para a Anamnese!'
-      : (mode === 'ecto' ? 'Ectoscopia copiada para a Anamnese!' : 'Exame Físico completo copiado para a Anamnese!');
-    showClinicalToast(`📋 ${label}`);
+    showClinicalToast(`📋 ${toastLabel}`);
   } catch (err) {
     showClinicalToast('Não foi possível copiar automaticamente.');
   }
@@ -2535,9 +3306,17 @@ function initExameFisicoBuilder(rootEl) {
   rootEl.dataset.efBound = 'true';
 
   rootEl.querySelectorAll('.ef-input, .ef-select').forEach(el => {
-    if (el.id === 'ef-vitais-preview' || el.id === 'ef-generated-text') return;
+    if (el.id === 'ef-vitais-preview' || el.classList.contains('ef-full-output-textarea') || (el.id && el.id.startsWith('ef-preview-'))) return;
     const evt = el.tagName === 'SELECT' ? 'change' : 'input';
-    el.addEventListener(evt, () => efGenerateTexts());
+    el.addEventListener(evt, () => {
+      if (el.classList.contains('ef-sync-text-style')) {
+        rootEl.querySelectorAll('.ef-sync-text-style').forEach(s => { if (s !== el) s.value = el.value; });
+      }
+      if (el.classList.contains('ef-sync-cross-format')) {
+        rootEl.querySelectorAll('.ef-sync-cross-format').forEach(s => { if (s !== el) s.value = el.value; });
+      }
+      efGenerateTexts();
+    });
   });
 
   const afebrilBtn = rootEl.querySelector('#ef-tax-afebril-btn');
@@ -2585,9 +3364,6 @@ function initExameFisicoBuilder(rootEl) {
       } else {
         if (efState.single[group] === val) {
           delete efState.single[group];
-          if (EF_CROSS_GROUPS.includes(group) && !chip.getAttribute('data-needs-cross')) {
-            // já desmarcado
-          }
         } else {
           efState.single[group] = val;
           if (chip.getAttribute('data-needs-cross') === 'true' && !efState.crosses[group]) {
@@ -2606,6 +3382,12 @@ function initExameFisicoBuilder(rootEl) {
           } else if (group === 'edema' && val !== 'edema presente') {
             efState.multi.edema_local = [];
             delete efState.single.edema_caract;
+          } else if (group === 'cv_sopro_status' && val === 'sem sopros audíveis') {
+            efState.cardioMurmurs = [];
+          } else if (group === 'resp_ra_status' && val === 'sem ruídos adventícios') {
+            efState.respFindings = [];
+          } else if (group === 'neuro_pares_status' && val !== 'alteração em pares cranianos') {
+            efState.multi.neuro_pares_alt = [];
           }
         }
       }
@@ -2620,6 +3402,18 @@ function initExameFisicoBuilder(rootEl) {
       const group = btn.getAttribute('data-group');
       const cross = btn.getAttribute('data-cross');
       efState.crosses[group] = cross;
+      efSyncChipUI();
+      efGenerateTexts();
+    });
+  });
+
+  rootEl.querySelectorAll('.ef-maneuver-card[data-maneuver] .ef-mbtn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const card = btn.closest('.ef-maneuver-card');
+      if (!card) return;
+      const key = card.getAttribute('data-maneuver');
+      const mval = btn.getAttribute('data-mval');
+      efState.maneuvers[key] = (efState.maneuvers[key] === mval) ? '' : mval;
       efSyncChipUI();
       efGenerateTexts();
     });
